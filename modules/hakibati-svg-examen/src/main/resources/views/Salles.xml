@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+  <grid name="Salles-grid" title="list des Salles" editable="true"  model="com.hakibati.svg.examen.db.Salles">
+    <toolbar>
+      <button name="Gestionsales" title="ajoute salles Filière" onClick="action-ajoute-collectif-salles"  css="btn btn-warning label-bold bold large center"/>
+    </toolbar>
+    <field name="name" />
+    <field name="bloc" />
+    <field name="etablissement"/>
+    <button name="btn-delete" title="Supprime" icon="fa-trash" onClick="com.hakibati.svg.examen.web.SallesController:DeleteSalles"
+            prompt="Voulez-vous vraiment supprimer cet enregistrement ?"/>
+  </grid>
+
+  <form name="Salles-form" title="list des Salles"  model="com.hakibati.svg.examen.db.Salles">
+    <panel title="Overview">
+      <field name="name" />
+      <field name="bloc" />
+    </panel>
+  </form>
+
+
+  <form name="salles-collectif-form" title="ajoute salles-filières"  model="com.hakibati.svg.examen.db.Salles" onSave="action-Refresh-salles-collectif" >
+    <panel >
+      <field name="fillier"  title="filière" type="reference" target="com.hakibati.svg.examen.db.Fillier"
+             widget="SuggestBox" showTitle="true" colSpan="5"/>
+      <field name="nombre" title="nombre totol des salles" colSpan="4">
+        <editor x-show-titles="false">
+          <field name="_du" showTitle="false" colSpan="4" widget="Integer" min="0" max="999"/>
+          <field name="_au" showTitle="false" colSpan="4" widget="Integer" min="0" max="999"/>
+        </editor>
+      </field>
+      <button name="createSalles" title="Créer" colSpan="2" onClick="action-ajoute-salles-collectif"/>
+    </panel>
+  </form>
+
+
+  <action-view name="action-dashlet-Salles" title=""
+               model="com.hakibati.svg.examen.db.Salles">
+    <view type="grid" name="Salles-grid"/>
+    <view type="form" name="Salles-form"/>
+    <view-param name="popup" value="reload"/>
+    <view-param name="popup-save" value="true"/>
+    <view-param name="show-toolbar" value="false"/>
+    <view-param name="show-confirm" value="true"/>
+    <view-param name="forceEdit" value="true"/>
+    <view-param name="details-view" value="false"/>
+    <domain>self.etablissement = :_etablissement AND self.isReserve = false AND self.isPermanence = false</domain>
+    <context name="_etablissement" expr="eval: __user__.etablissementSelectionnee"/>
+  </action-view>
+  <action-view name="action-new-Salles" title=""
+               model="com.hakibati.svg.examen.db.Salles">
+    <view type="form" name="Salles-form"/>
+    <view-param name="popup" value="reload"/>
+    <view-param name="popup-save" value="true"/>
+    <view-param name="show-toolbar" value="false"/>
+    <view-param name="show-confirm" value="true"/>
+    <view-param name="forceEdit" value="true"/>
+    <view-param name="details-view" value="false"/>
+  </action-view>
+
+
+
+
+
+
+
+  <action-view name="action-ajoute-collectif-salles" model="com.hakibati.svg.examen.db.Salles" title="ajoute">
+    <view type="form" name="salles-collectif-form"/>
+    <view-param name="popup" value="reload"/>
+    <view-param name="popup-save" value="false"/>
+    <view-param name="popup.maximized" value="false"/>
+    <view-param name="show-toolbar" value="false"/>
+    <view-param name="show-confirm" value="false"/>
+  </action-view>
+
+  <action-method name="action-ajoute-salles-collectif">
+    <call class="com.hakibati.svg.examen.web.SallesController" method="OnAjouteSalleCollectif"/>
+  </action-method>
+
+</object-views>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+
+  <grid name="AnneScolaire-grid" title="Anne Scolaire" model="com.hakibati.gestion.eleves.db.AnneScolaire">
+<!--    <field name="gestioneleves.etablissement" />-->
+    <field name="name" />
+    <field name="anneeMax"/>
+    <field name="anneeMin"/>
+    <field name="idAnnee"/>
+  </grid>
+
+  <form name="AnneScolaire-form" title="Anne Scolaire" model="com.hakibati.gestion.eleves.db.AnneScolaire" width="mini">
+    <panel title="Ajouter ou modifier" showTitle="false" >
+      <field name="name" />
+    </panel>
+  </form>
+
+</object-views>

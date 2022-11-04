@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+    <chart name="chart.eleves.exterieur.depart.niveau.sexe" title="situation de depart" stacked="true" >
+        <dataset type="jpql">
+            <![CDATA[
+  SELECT
+    Count(self.cdMassar) AS amount,
+       CASE self.sexe WHEN 0 THEN 'G' WHEN 1 THEN 'F'  ELSE '' END as sexEleve,
+    _classe.niveau.suffix AS niveauName,
+    _etablissement.name AS etablissement
+
+FROM
+    Eleve self
+LEFT JOIN
+    self.etablissement AS _etablissement
+LEFT JOIN
+    self.classe AS _classe
+WHERE
+      self.etablissement = :_etablissement AND self.situationInitiale =0 AND self.archived = false
+GROUP BY
+    _etablissement.name,
+    _classe.niveau.suffix,
+self.sexe
+  ]]></dataset>
+        <category key="niveauName" type="text"/>
+        <series key="amount" groupBy="sexEleve"  type="bar"/>
+<config name="percent" value="true"/>
+    </chart>
+    <chart name="chart.eleves.exterieur.actuelle.niveau.sexe" title="situation Actuelle" stacked="true">
+        <dataset type="jpql">
+            <![CDATA[
+  SELECT
+    Count(self.cdMassar) AS amount,
+       CASE self.sexe WHEN 0 THEN 'G' WHEN 1 THEN 'F'  ELSE '' END as sexEleve,
+    _classe.niveau.suffix AS niveauName,
+    _etablissement.name AS etablissement
+
+FROM
+    Eleve self
+LEFT JOIN
+    self.etablissement AS _etablissement
+LEFT JOIN
+    self.classe AS _classe
+WHERE
+      self.etablissement = :_etablissement AND self.situationActuelle =0 AND self.archived = false
+GROUP BY
+    _etablissement.name,
+    _classe.niveau.suffix,
+self.sexe
+  ]]></dataset>
+        <category key="niveauName" type="text"/>
+        <series key="amount" groupBy="sexEleve" type="bar"/>
+    </chart>
+    <chart name="chart.eleves.exterieur.depart.sexe" title="situation de depart">
+        <dataset type="jpql">
+            <![CDATA[
+  SELECT
+    Count(self.cdMassar) AS amount,
+       CASE self.sexe WHEN 0 THEN 'G' WHEN 1 THEN 'F'  ELSE '' END as sexEleve,    _etablissement.name AS etablissement
+
+FROM
+    Eleve self
+LEFT JOIN
+    self.etablissement AS _etablissement
+LEFT JOIN
+    self.classe AS _classe
+WHERE
+      self.etablissement = :_etablissement AND self.situationInitiale =0 AND self.archived = false
+GROUP BY
+    _etablissement.name,
+self.sexe
+  ]]></dataset>
+        <category key="sexEleve" type="text"/>
+        <series key="amount"  type="donut"/>
+    </chart>
+    <chart name="chart.eleves.exterieur.actuelle.sexe" title="situation Actuelle">
+        <dataset type="jpql">
+            <![CDATA[
+  SELECT
+    Count(self.cdMassar) AS amount,
+       CASE self.sexe WHEN 0 THEN 'G' WHEN 1 THEN 'F'  ELSE '' END as sexEleve,
+     _etablissement.name AS etablissement
+
+FROM
+    Eleve self
+LEFT JOIN
+    self.etablissement AS _etablissement
+LEFT JOIN
+    self.classe AS _classe
+WHERE
+      self.etablissement = :_etablissement AND self.situationActuelle =0 AND self.archived = false
+GROUP BY
+    _etablissement.name,
+   self.sexe
+  ]]></dataset>
+        <category key="sexEleve" type="text"/>
+        <series key="amount"  type="donut"/>
+    </chart>
+
+    <chart name="chart.eleves.exterieur.actuelle.age.sexe" title="Statistiques par âge" stacked="true"  width="large">
+        <dataset type="jpql"><![CDATA[
+
+  SELECT
+    Count(self.cdMassar) AS amount,
+       CASE self.sexe WHEN 0 THEN 'G' WHEN 1 THEN 'F'  ELSE '' END as sexEleve,
+  YEAR (NOW()) - YEAR( self.dateNaissance) AS _age,
+    _etablissement.name AS etablissement
+
+FROM
+    Eleve self
+LEFT JOIN
+    self.etablissement AS _etablissement
+LEFT JOIN
+    self.classe AS _classe
+WHERE
+      self.etablissement = :_etablissement AND self.situationActuelle =0 AND self.archived = false
+GROUP BY
+    _etablissement.name,
+   YEAR (NOW()) - YEAR( self.dateNaissance),
+self.sexe
+ORDER BY
+     YEAR (NOW()) - YEAR( self.dateNaissance)
+  ]]></dataset>
+        <category key="_age" type="text"/>
+        <series key="amount" groupBy="sexEleve" type="bar"/>
+
+    </chart>
+</object-views>

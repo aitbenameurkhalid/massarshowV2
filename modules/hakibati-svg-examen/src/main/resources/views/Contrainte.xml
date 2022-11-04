@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+    <grid name="contrainte-Permanence-grid" title="Les Contrantes" model="com.hakibati.svg.examen.db.Contrainte">
+        <hilite if="!active" background="danger"/>
+        <hilite if="active" background="success"/>
+        <field name="contrainte"/>
+        <field name="fillier"/>
+        <field name="matiere"/>
+        <field name="profs"  widget="TagSelect" width="60"/>
+        <field name="active" width="60"/>
+        <button name="btn-delete" title="Supprime" icon="fa-trash"
+                onClick="com.hakibati.svg.examen.web.ContrainteController:DeleteContrainte"
+                prompt="Voulez-vous vraiment supprimer cet enregistrement ?"/>
+    </grid>
+
+    <grid name="contrainte-TempsNonDesponible-grid" title="Les Contrantes" orderBy="dateExam"
+          model="com.hakibati.svg.examen.db.Contrainte">
+        <hilite if="!active" background="danger"/>
+        <hilite if="active" background="success"/>
+        <field name="contrainte"/>
+        <field name="dateExam"/>
+        <field name="matin" width="120" title="mati."/>
+        <field name="apresMidi" width="120" title="soi."/>
+        <field name="profs"  widget="TagSelect" width="60"/>
+        <field name="active" width="60"/>
+        <button name="btn-delete" title="Supprime" icon="fa-trash"
+                onClick="com.hakibati.svg.examen.web.ContrainteController:DeleteContrainte"
+                prompt="Voulez-vous vraiment supprimer cet enregistrement ?"/>
+    </grid>
+    <grid name="contrainte-SalleNonDesponible-grid" title="Les Contrantes"
+          model="com.hakibati.svg.examen.db.Contrainte">
+        <hilite if="!active" background="danger"/>
+        <hilite if="active" background="success"/>
+        <field name="contrainte"/>
+        <field name="salle"  width="80"/>
+        <field name="fillier"/>
+        <field name="matiere"  width="100"/>
+        <field name="profs"  widget="TagSelect" width="60"/>
+        <field name="active" width="60"/>
+        <button name="btn-delete" title="Supprime" icon="fa-trash"
+                onClick="com.hakibati.svg.examen.web.ContrainteController:DeleteContrainte"
+                prompt="Voulez-vous vraiment supprimer cet enregistrement ?"/>
+    </grid>
+    <grid name="contrainte-MaxFillierMatiere-grid" title="Les Contrantes" model="com.hakibati.svg.examen.db.Contrainte">
+        <hilite if="!active" background="danger"/>
+        <hilite if="active" background="success"/>
+        <field name="contrainte"/>
+        <field name="fillier"/>
+        <field name="matiere"/>
+        <field name="valeur" width="60"/>
+        <field name="profs"  widget="TagSelect" width="60"/>
+        <field name="active" width="60"/>
+        <button name="btn-delete" title="Supprime" icon="fa-trash"
+                onClick="com.hakibati.svg.examen.web.ContrainteController:DeleteContrainte"
+                prompt="Voulez-vous vraiment supprimer cet enregistrement ?"/>
+    </grid>
+    <grid name="contrainte-grid-prof" title="Les Contrantes" model="com.hakibati.svg.examen.db.Contrainte">
+        <hilite if="!active" background="danger"/>
+        <hilite if="active" background="success"/>
+        <field name="contrainte"/>
+        <field name="prof"/>
+        <field name="valeur" width="60"/>
+        <field name="active" width="60"/>
+        <button name="btn-delete" title="Supprime" icon="fa-trash"
+                onClick="com.hakibati.svg.examen.web.ContrainteController:DeleteContrainte"
+                prompt="Voulez-vous vraiment supprimer cet enregistrement ?"/>
+    </grid>
+
+    <grid name="contrainte-grid-salle" title="Les Contrantes" model="com.hakibati.svg.examen.db.Contrainte">
+        <hilite if="!active" background="danger"/>
+        <hilite if="active" background="success"/>
+        <field name="contrainte"/>
+        <field name="salle"/>
+        <field name="valeur" width="60"/>
+        <field name="active" width="60"/>
+        <button name="btn-delete" title="Supprime" icon="fa-trash"
+                onClick="com.hakibati.svg.examen.web.ContrainteController:DeleteContrainte"
+                prompt="Voulez-vous vraiment supprimer cet enregistrement ?"/>
+    </grid>
+    <grid name="contrainte-grid-fillier" title="Les Contrantes" model="com.hakibati.svg.examen.db.Contrainte">
+        <hilite if="!active" background="danger"/>
+        <hilite if="active" background="success"/>
+        <field name="contrainte"/>
+        <field name="fillier"/>
+        <field name="valeur" width="60"/>
+        <field name="active" width="60"/>
+        <button name="btn-delete" title="Supprime" icon="fa-trash"
+                onClick="com.hakibati.svg.examen.web.ContrainteController:DeleteContrainte"
+                prompt="Voulez-vous vraiment supprimer cet enregistrement ?"/>
+    </grid>
+
+    <grid name="contrainte-grid" title="Les Contrantes" model="com.hakibati.svg.examen.db.Contrainte">
+        <hilite if="!active" background="danger"/>
+        <hilite if="active" background="success"/>
+        <field name="contrainte"/>
+        <field name="prof"/>
+        <field name="salle" />
+        <field name="fillier" />
+        <field name="matiere" />
+        <field name="active" width="60"/>
+        <button name="btn-delete" title="Supprime" icon="fa-trash"
+                onClick="com.hakibati.svg.examen.web.ContrainteController:DeleteContrainte"
+                prompt="Voulez-vous vraiment supprimer cet enregistrement ?"/>
+
+    </grid>
+    <!--    contrainte-Permanence-grid-->
+    <form name="contrainte-Permanence-form" title="Contrainte" model="com.hakibati.svg.examen.db.Contrainte">
+        <panel>
+            <field name="contrainte" colSpan="8" readonly="true"/>
+            <field name="valeur" colSpan="1" hidden="true"/>
+            <spacer name="fff" colSpan="1"/>
+            <field name="active" colSpan="2"/>
+        </panel>
+        <panel title=" " showTitle="false">
+            <field name="fillier" readonly="true"/>
+            <field name="matiere" readonly="true"/>
+            <field name="profs" colSpan="12" widget="TagSelect" x-limit="1000" />
+        </panel>
+        <panel title="" showTitle="false" colSpan="12">
+            <field name="contrainte.commenter" colSpan="12"/>
+        </panel>
+    </form>
+
+    <form name="contrainte-TempsNonDesponible-form" title="Contrainte" model="com.hakibati.svg.examen.db.Contrainte">
+        <panel>
+            <field name="contrainte" colSpan="8" readonly="true"/>
+            <field name="valeur" colSpan="1" hidden="true"/>
+            <spacer name="fff" colSpan="1"/>
+            <field name="active" colSpan="2"/>
+        </panel>
+        <panel title=" " showTitle="false">
+            <field name="dateExam" readonly="true"/>
+            <field name="matin" readonly="true" colSpan="3"/>
+            <field name="apresMidi" readonly="true" colSpan="3"/>
+            <field name="profs" colSpan="12" widget="TagSelect"/>
+        </panel>
+        <panel title="" showTitle="false" colSpan="12">
+            <field name="contrainte.commenter" colSpan="12"/>
+        </panel>
+    </form>
+    <form name="contrainte-SalleNonDesponible-form" title="Contrainte" model="com.hakibati.svg.examen.db.Contrainte">
+        <panel>
+            <field name="contrainte" readonly="true" colSpan="8"/>
+            <field name="valeur" colSpan="1" hidden="true"/>
+            <spacer name="fff" colSpan="1"/>
+            <field name="active" colSpan="2"/>
+        </panel>
+        <panel title=" " showTitle="false">
+            <field name="fillier" readonly="true"/>
+            <field name="matiere" readonly="true" colSpan="4"/>
+            <field name="salle" readonly="true" colSpan="2"/>
+            <field name="profs" colSpan="12" widget="TagSelect"/>
+        </panel>
+        <panel title="" showTitle="false" colSpan="12">
+            <field name="contrainte.commenter" colSpan="12"/>
+        </panel>
+    </form>
+    <form name="contrainte-MaxFillierMatiere-form" title="Contrainte" model="com.hakibati.svg.examen.db.Contrainte">
+        <panel>
+            <field name="contrainte" readonly="true" colSpan="8"/>
+            <field name="valeur" readonly="true" colSpan="1"/>
+            <spacer name="fff" colSpan="1"/>
+            <field name="active" colSpan="2"/>
+        </panel>
+        <panel title=" " showTitle="false">
+            <field name="fillier" readonly="true"/>
+            <field name="matiere" readonly="true" colSpan="6"/>
+            <field name="profs" colSpan="12" widget="TagSelect"/>
+        </panel>
+        <panel title="" showTitle="false" colSpan="12">
+            <field name="contrainte.commenter" colSpan="12"/>
+        </panel>
+    </form>
+
+
+    <form name="contrainte-form" title="Contrainte" model="com.hakibati.svg.examen.db.Contrainte">
+        <panel>
+            <!--            <field name="contrainte" colSpan="8" domain="(self.typeContrainte = :_typeContrainte)  OR (:_typeContrainte = '100')"  x-order="typeContrainte" form-view="zero" onChange="action-contrainte-change" />-->
+            <field name="contrainte" colSpan="8" readonly="true"/>
+            <field name="valeur" colSpan="1" showIf="contrainte.afficherValeur" requiredIf="active"/>
+            <spacer name="fff" colSpan="1"/>
+            <field name="active" colSpan="2"/>
+        </panel>
+        <panel title=" " showTitle="false">
+            <field name="prof" readonly="true" showIf="contrainte.afficherProf" requiredIf="contrainte.afficherProf"
+                   domain="self.etablissement = :_etablissement"/>
+            <field name="salle" readonly="true"
+                   domain="(self.isReserve = false AND self.isPermanence = false AND self.etablissement = :_etablissement)"
+                   showIf="contrainte.afficherSalle" requiredIf="contrainte.afficherSalle"/>
+            <field name="matiere" readonly="true" showIf="contrainte.afficherMatiere"
+                   requiredIf="contrainte.afficherMatiere" domain="self.etablissement = :_etablissement"/>
+            <field name="fillier" readonly="true" showIf="contrainte.afficherFillier"
+                   requiredIf="contrainte.afficherFillier" domain="self.etablissement = :_etablissement"/>
+            <field name="dateExam" readonly="true" showIf="contrainte.afficherDateExam"
+                   requiredIf="contrainte.afficherDateExam" colSpan="3"/>
+            <field name="matin" readonly="true" showIf="contrainte.afficherMatin" colSpan="3"/>
+            <field name="apresMidi" readonly="true" showIf="contrainte.afficherApresMidi" colSpan="3"/>
+        </panel>
+        <panel title="" showTitle="false">
+            <field name="contrainte.commenter" colSpan="12"/>
+        </panel>
+        <panel hidden="true">
+            <field name="contrainte.valeurParDefaut"/>
+            <field name="contrainte.afficherProf"/>
+            <field name="contrainte.afficherSalle"/>
+            <field name="contrainte.afficherMatiere"/>
+            <field name="contrainte.afficherFillier"/>
+            <field name="contrainte.afficherMatin"/>
+            <field name="contrainte.afficherApresMidi"/>
+            <field name="contrainte.afficherValeur"/>
+            <field name="contrainte.afficherDateExam"/>
+        </panel>
+
+    </form>
+
+
+    <action-view name="action-dashlet-Permanence" title="Les contraintes des professeurs"
+                 model="com.hakibati.svg.examen.db.Contrainte">
+        <view type="grid" name="contrainte-Permanence-grid"/>
+        <view type="form" name="contrainte-Permanence-form"/>
+        <view-param name="popup" value="reload"/>
+        <view-param name="popup-save" value="true"/>
+        <view-param name="show-toolbar" value="false"/>
+        <view-param name="show-confirm" value="true"/>
+        <view-param name="forceEdit" value="true"/>
+        <view-param name="details-view" value="false"/>
+        <domain>self.contrainte.typeContrainte = '5' AND self.etablissement = :_etablissement AND
+            self.contrainte.code=1021
+            AND ( self.matiere =:_matiereSelect OR :_matiereSelect = null)
+        </domain>
+        <context name="_typeContrainte" expr="5"/>
+        <context name="_etablissement" expr="eval: __user__.etablissementSelectionnee"/>
+        <context name="_matiereSelect" expr="eval:_matiere"/>
+    </action-view>
+
+
+    <action-view name="action-dashlet-TempsNonDesponible" title="Les contraintes des professeurs"
+                 model="com.hakibati.svg.examen.db.Contrainte">
+        <view type="grid" name="contrainte-TempsNonDesponible-grid"/>
+        <view type="form" name="contrainte-TempsNonDesponible-form"/>
+        <view-param name="popup" value="reload"/>
+        <view-param name="popup-save" value="true"/>
+        <view-param name="show-toolbar" value="false"/>
+        <view-param name="show-confirm" value="true"/>
+        <view-param name="forceEdit" value="true"/>
+        <view-param name="details-view" value="false"/>
+        <domain>self.contrainte.code = 1011 AND self.etablissement = :_etablissement</domain>
+        <context name="_typeContrainte" expr="5"/>
+        <context name="_etablissement" expr="eval: __user__.etablissementSelectionnee"/>
+    </action-view>
+
+
+    <action-view name="action-dashlet-SalleNonDesponible" title="Les contraintes des professeurs"
+                 model="com.hakibati.svg.examen.db.Contrainte">
+        <view type="grid" name="contrainte-SalleNonDesponible-grid"/>
+        <view type="form" name="contrainte-SalleNonDesponible-form"/>
+        <view-param name="popup" value="reload"/>
+        <view-param name="popup-save" value="true"/>
+        <view-param name="show-toolbar" value="false"/>
+        <view-param name="show-confirm" value="true"/>
+        <view-param name="forceEdit" value="true"/>
+        <view-param name="details-view" value="false"/>
+        <domain>self.contrainte.code = 1031 AND self.etablissement = :_etablissement
+            AND ( self.salle =:_salleSelect OR :_salleSelect = null)
+        </domain>
+        <context name="_typeContrainte" expr="5"/>
+        <context name="_etablissement" expr="eval: __user__.etablissementSelectionnee"/>
+        <context name="_salleSelect" expr="eval:_salle"/>
+    </action-view>
+
+
+    <action-view name="action-dashlet-MaxFillierMatiere" title="Les contraintes des professeurs"
+                 model="com.hakibati.svg.examen.db.Contrainte">
+        <view type="grid" name="contrainte-MaxFillierMatiere-grid"/>
+        <view type="form" name="contrainte-MaxFillierMatiere-form"/>
+        <view-param name="popup" value="reload"/>
+        <view-param name="popup-save" value="true"/>
+        <view-param name="show-toolbar" value="false"/>
+        <view-param name="show-confirm" value="true"/>
+        <view-param name="forceEdit" value="true"/>
+        <view-param name="details-view" value="false"/>
+        <domain>self.contrainte.code = 1013 AND self.etablissement = :_etablissement
+            AND ( self.matiere =:_matiereSelect OR :_matiereSelect = null)
+        </domain>
+        <context name="_typeContrainte" expr="5"/>
+        <context name="_etablissement" expr="eval: __user__.etablissementSelectionnee"/>
+        <context name="_matiereSelect" expr="eval:_matiere"/>
+
+    </action-view>
+
+
+    <action-view name="action-dashlet-ContrainteProfs" title="Les contraintes des professeurs"
+                 model="com.hakibati.svg.examen.db.Contrainte">
+        <view type="grid" name="contrainte-grid-prof"/>
+        <view type="form" name="contrainte-form"/>
+        <view-param name="popup" value="reload"/>
+        <view-param name="popup-save" value="true"/>
+        <view-param name="show-toolbar" value="false"/>
+        <view-param name="show-confirm" value="true"/>
+        <view-param name="forceEdit" value="true"/>
+        <view-param name="details-view" value="false"/>
+        <domain>self.contrainte.typeContrainte = '0' AND self.etablissement = :_etablissement</domain>
+        <context name="_typeContrainte" expr="0"/>
+        <context name="_etablissement" expr="eval: __user__.etablissementSelectionnee"/>
+    </action-view>
+
+    <action-view name="action-dashlet-ContrainteProf" title="Les contraintes des professeurs"
+                 model="com.hakibati.svg.examen.db.Contrainte">
+        <view type="grid" name="contrainte-grid-prof"/>
+        <view type="form" name="contrainte-form"/>
+        <view-param name="popup" value="reload"/>
+        <view-param name="popup-save" value="true"/>
+        <view-param name="show-toolbar" value="false"/>
+        <view-param name="show-confirm" value="true"/>
+        <view-param name="forceEdit" value="true"/>
+        <view-param name="details-view" value="false"/>
+        <domain>self.contrainte.typeContrainte = '5' AND self.etablissement = :_etablissement
+        AND self.contrainte.code != 1011  AND self.contrainte.code != 1031
+            AND self.contrainte.code != 1013  AND self.contrainte.code != 1021
+            AND ( self.prof =:_profSelect OR :_profSelect = null)
+        </domain>
+        <context name="_typeContrainte" expr="5"/>
+        <context name="_etablissement" expr="eval: __user__.etablissementSelectionnee"/>
+        <context name="_profSelect" expr="eval:_prof"/>
+
+    </action-view>
+
+
+    <action-view name="action-dashlet-ContrainteSalles" title="Les contraintes des Salles"
+                 model="com.hakibati.svg.examen.db.Contrainte">
+        <view type="grid" name="contrainte-grid-salle"/>
+        <view type="form" name="contrainte-form"/>
+        <view-param name="popup" value="reload"/>
+        <view-param name="popup-save" value="true"/>
+        <view-param name="show-toolbar" value="false"/>
+        <view-param name="show-confirm" value="true"/>
+        <view-param name="forceEdit" value="true"/>
+        <view-param name="details-view" value="false"/>
+        <domain>self.contrainte.typeContrainte = '10' AND self.etablissement = :_etablissement</domain>
+        <context name="_typeContrainte" expr="10"/>
+        <context name="_etablissement" expr="eval: __user__.etablissementSelectionnee"/>
+    </action-view>
+
+    <action-view name="action-dashlet-ContrainteSalle" title="Les contraintes des Salles"
+                 model="com.hakibati.svg.examen.db.Contrainte">
+        <view type="grid" name="contrainte-grid-salle"/>
+        <view type="form" name="contrainte-form"/>
+        <view-param name="popup" value="reload"/>
+        <view-param name="popup-save" value="true"/>
+        <view-param name="show-toolbar" value="false"/>
+        <view-param name="show-confirm" value="true"/>
+        <view-param name="forceEdit" value="true"/>
+        <view-param name="details-view" value="false"/>
+        <domain>self.contrainte.typeContrainte = '15' AND self.etablissement = :_etablissement
+            AND ( self.salle =:_profSelect OR :_profSelect = null)
+        </domain>
+        <context name="_typeContrainte" expr="15"/>
+        <context name="_etablissement" expr="eval: __user__.etablissementSelectionnee"/>
+        <context name="_profSelect" expr="eval:_salle"/>
+    </action-view>
+
+    <action-view name="action-dashlet-ContrainteFilliers" title="Les contraintes des filliers"
+                 model="com.hakibati.svg.examen.db.Contrainte">
+        <view type="grid" name="contrainte-grid-fillier"/>
+        <view type="form" name="contrainte-form"/>
+        <view-param name="popup" value="reload"/>
+        <view-param name="popup-save" value="true"/>
+        <view-param name="show-toolbar" value="false"/>
+        <view-param name="show-confirm" value="true"/>
+        <view-param name="forceEdit" value="true"/>
+        <view-param name="details-view" value="false"/>
+        <domain>self.contrainte.typeContrainte = '25' AND self.etablissement = :_etablissement</domain>
+        <context name="_typeContrainte" expr="25"/>
+        <context name="_etablissement" expr="eval: __user__.etablissementSelectionnee"/>
+    </action-view>
+
+
+    <action-view name="action-dashlet-ContrainteFillier" title="Les contraintes des filliers"
+                 model="com.hakibati.svg.examen.db.Contrainte">
+        <view type="grid" name="contrainte-grid-fillier"/>
+        <view type="form" name="contrainte-form"/>
+        <view-param name="popup" value="reload"/>
+        <view-param name="popup-save" value="true"/>
+        <view-param name="show-toolbar" value="false"/>
+        <view-param name="show-confirm" value="true"/>
+        <view-param name="forceEdit" value="true"/>
+        <view-param name="details-view" value="false"/>
+        <domain>self.contrainte.typeContrainte = '20'AND self.etablissement = :_etablissement
+            AND ( self.fillier =:_fillierSelect OR :_fillierSelect = null)
+        </domain>
+        <context name="_typeContrainte" expr="20"/>
+        <context name="_etablissement" expr="eval: __user__.etablissementSelectionnee"/>
+        <context name="_fillierSelect" expr="eval:_filiere"/>
+    </action-view>
+
+    <action-view name="action-dashlet-ContrainteAll" title="Toutes Les contraintes"
+                 model="com.hakibati.svg.examen.db.Contrainte">
+        <view type="grid" name="contrainte-grid"/>
+        <view type="form" name="contrainte-form"/>
+        <view-param name="popup" value="reload"/>
+        <view-param name="popup-save" value="true"/>
+        <view-param name="show-toolbar" value="false"/>
+        <view-param name="show-confirm" value="true"/>
+        <view-param name="forceEdit" value="true"/>
+        <view-param name="details-view" value="false"/>
+        <domain>self.etablissement = :_etablissement</domain>
+        <context name="_typeContrainte" expr="100"/>
+        <context name="_etablissement" expr="eval: __user__.etablissementSelectionnee"/>
+    </action-view>
+
+
+    <action-record name="action-contrainte-change" model="com.hakibati.svg.examen.db.Contrainte">
+        <field name="salle" expr="eval:null" if="!contrainte.afficherSalle"/>
+        <field name="fillier" expr="eval:null" if="!contrainte.afficherFillier"/>
+        <field name="prof" expr="eval:null" if="!contrainte.afficherProf"/>
+        <field name="matiere" expr="eval:null" if="!contrainte.afficherMatiere"/>
+        <field name="valeur" expr="contrainte.valeurParDefaut" if="!valeur"/>
+    </action-record>
+
+</object-views>

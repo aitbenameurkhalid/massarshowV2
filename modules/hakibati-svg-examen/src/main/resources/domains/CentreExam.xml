@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_5.3.xsd">
+
+  <module name="hakibati-svg-examen" package="com.hakibati.svg.examen.db"/>
+  <entity name="CentreExam" cacheable="true" >
+    <string name="name" title="إسم مركز الامتحان" default=" "/>
+    <string name="nameFr" title="Nom du centre d'examen" />
+    <string name="academie" default=" الاكاديمية الجهوية للتربية والتكوين لجهة : الرباط سلا  القنيطرة" />
+    <string name="direction" default="المديرية الإقليمية : اقليم الخميسات"/>
+    <string name="commun" default="جماعة : ايت يدين"/>
+    <string name="refernceMinistrale" />
+    <string name="sessionExam" default="دورة يونيو 2021" title="Session"/>
+    <string name="typeExam" default="امتحانات لنيل شهادة الباكالوريا" />
+    <string name="directeur" />
+    <many-to-one name="cache" ref="com.axelor.meta.db.MetaFile" title="cache" initParam="true" help="Max size 4MB." />
+    <many-to-one name="logoentete" ref="com.axelor.meta.db.MetaFile" title="logoentete" initParam="true" help="Max size 4MB." />
+    <many-to-one name="createdBy" ref="com.axelor.auth.db.User"/>
+    <one-to-many name="dossierExam" ref="DossierExam" mappedBy="center"/>
+    <many-to-one name="etablissement" ref="com.app.application.db.Etablissement"  >
+      <![CDATA[
+                if (etablissement != null )
+                 return etablissement;
+                 if(createdBy != null)
+                 return createdBy.getEtablissementSelectionnee() ;
+               return null;
+                  ]]>
+    </many-to-one>
+    <string name="enteteCovocationP" title="en tete de page de la convocation" large="true" />
+    <string name="enteteCovocationL" title="en tete de page de la convocation" large="true"/>
+    <string name="piedCovocationP" title="pied de page de la convocation" large="true"
+
+
+    />
+
+    <string name="piedCovocationL" title="pied de page de la convocation" large="true"/>
+    <unique-constraint columns="etablissement"/>
+  </entity>
+
+</domain-models>

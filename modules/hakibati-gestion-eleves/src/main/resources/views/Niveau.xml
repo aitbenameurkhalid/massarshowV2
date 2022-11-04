@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+
+  <grid name="Niveau-grid" title="Niveau" model="com.hakibati.gestion.eleves.db.Niveau">
+    <field name="name" title="name" required="true"/>
+    <field name="nameFr" title="name FR" />
+    <field name="cdCycle" title="cD_CYCLE"/>
+    <field name="suffix" title="Suffix"/>
+    <field name="code" title="Code"/>
+      <field name="anneeScolaire"/>
+  </grid>
+
+  <form name="Niveau-form" title="Niveau" model="com.hakibati.gestion.eleves.db.Niveau">
+    <panel title="Ajouter ou modifier" showTitle="false" >
+      <field name="name" />
+      <field name="code" />
+    </panel>
+
+  </form>
+
+</object-views>

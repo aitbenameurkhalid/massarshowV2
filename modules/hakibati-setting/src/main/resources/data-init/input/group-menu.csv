@@ -1,0 +1,11 @@
+code;menus
+etablissementAdmin;menu-gestion-utilisateurs
+etablissementAdmin;menu-remarques-observations
+etablissementUser;menu-remarques-observations
+demo;menu-remarques-observations
+directionAdmin;menu-gestion-utilisateurs
+directionAdmin;menu-remarques-observations
+directionUser;menu-remarques-observations
+centreLangueAdmin;menu-gestion-utilisateurs
+centreLangueAdmin;menu-remarques-observations
+centreLangueUser;menu-remarques-observations

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+
+    <grid name="ResultatFet-grid" title="Liste dossiers" model="com.hakibati.emploi.db.ResultatFet">
+        <field name="name"/>
+        <field name="createdOn"/>
+        <field name="etablissement"/>
+    </grid>
+
+    <form name="ResultatFet-form" title="dossiers" model="com.hakibati.emploi.db.ResultatFet" width="large" canNew="false" canDelete="false" canArchive="false" canAttach="false">
+        <panel readonly="true" colSpan="12" showTitle="false">
+            <field name="etablissement" form-view="zero" showTitle="false" colSpan="9"
+                   css="btn btn-warning label-bold bold large"/>
+<!--            <label title="id=" colSpan="1" css="btn btn-warning label-bold bold large"/>-->
+            <field name="etablissement.numero" form-view="zero" showTitle="false" colSpan="2"
+                   css="btn btn-warning label-bold bold large"/>
+<!--            <field name="etablissement" colSpan="4" readonly="true" showTitle="false"-->
+<!--                   css="btn btn-warning label-bold bold large center">-->
+<!--                <viewer><![CDATA[-->
+<!--                  <p>{{record.etablissement}} Id= {{record.etablissement.numero}} </p>-->
+<!--                ]]></viewer>-->
+<!--            </field>-->
+
+        </panel>
+        <panel-tabs>
+            <panel title="fichiers FET">
+                <panel name="mainPanel2" title="Importer resulte/timetables  FET">
+                    <field name="$importFileFet" title="File" type="many-to-one" widget="binary-link"
+                           domain="self.fileType = 'text/fet'" target="com.axelor.meta.db.MetaFile" x-accept=".fet"/>
+                    <field name="$logFileFet" title="Log" type="many-to-one" readonly="true" widget="binary-link"
+                           target="com.axelor.meta.db.MetaFile" hidden="true" x-accept=".fet"/>
+                    <button name="importResultFet" title="Import" onClick="action-import-resulte-Fet"
+                            readonlyIf="$importFileFet == null" colSpan="3"/>
+                </panel>
+
+                <spacer name="ffff" colSpan="10"/>
+                <panel title="DossierImportFet" showTitle="false" colSpan="12">
+                    <panel-related field="dossiersImportFet" title="Historiques" colSpan="12"
+                                   grid-view="DossierImportFet-grid"
+                                   canNew="false" canSelect="false"/>
+                </panel>
+            </panel>
+
+            <panel title="List-Jours-heur" itemSpan="12">
+                <panel title="daysFet" showTitle="false">
+                    <panel-related field="dayHoursFet" colSpan="12" grid-view="DayHourFet-grid" canNew="false"
+                                   canSelect="false" canMove="false" canRemove="false"/>
+                </panel>
+            </panel>
+<!--            <panel title="List-heurs" itemSpan="12">-->
+<!--                <panel title="HoursFet" showTitle="false">-->
+<!--                    <panel-related field="hoursFet" colSpan="12" grid-view="HourFet-grid" canNew="false"-->
+<!--                                   canSelect="false" canRemove="false" canMove="false"/>-->
+<!--                </panel>-->
+<!--            </panel>-->
+            <panel title="List-Salles">
+                <panel title="RoomFet" showTitle="false">
+                    <panel-related field="roomsFet" colSpan="12" grid-view="RoomFet-grid" canNew="false"
+                                   canSelect="false" canMove="false" canRemove="false"/>
+                </panel>
+            </panel>
+            <panel title="List-Matieres">
+                <panel title="SubjectFet" showTitle="false">
+                    <panel-related field="subjectsFet" colSpan="12" grid-view="SubjectFet-grid" canNew="false"
+                                   canSelect="false" canMove="false" canRemove="false"/>
+                </panel>
+            </panel>
+            <panel title="List-Professeurs">
+                <panel title="TeacherFet" showTitle="false">
+                    <panel-related field="teachersFet" colSpan="12" grid-view="TeacherFet-grid" canNew="false"
+                                   canSelect="false" canMove="false" canRemove="false"/>
+                </panel>
+            </panel>
+            <panel title="List-Classes">
+                <panel title="StudentFet" showTitle="false">
+                    <panel-related field="studentsFet" colSpan="12" grid-view="StudentFet-grid" canNew="false"
+                                   canSelect="false" canMove="false" canRemove="false"/>
+                </panel>
+            </panel>
+        </panel-tabs>
+    </form>
+    <action-method name="action-import-resulte-Fet">
+        <call class="com.emploi.temps.web.ResultatFetController" method="ImportResulteFet"/>
+    </action-method>
+    <action-method name="action.method.user.role.isImportResulFet">
+        <call class="com.axelor.auth.AuthSecurity" method="hasRole('role.my_manager_role')"/>
+    </action-method>
+    <action-attrs name="action-has-rol">
+        <attribute name="hidden" expr="false" for="takeCharge" if="action:action.method.user.role.isImportResulFet"/>
+    </action-attrs>
+</object-views>

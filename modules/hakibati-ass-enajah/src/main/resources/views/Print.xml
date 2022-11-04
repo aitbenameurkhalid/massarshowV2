@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+
+    <form name="print-ass-enajah-form" title="Les imprimes" model="com.hakibati.ass.enajah.db.AssEnajahInfo" canNew="false" canDelete="false">
+      <panel>
+          <field name="typeImprime" widget="RadioSelect" selection="imprime-type-select" showTitle="false"
+                 default="PDF"/>
+      </panel>
+        <panel>
+            <button name="print-Registre-quotidien-operations" colSpan="4" title="Registre quotidien des opérations"
+                    onClick="action-Registre-quotidien-operations"/>
+            <button name="print-Registre-bancaire" colSpan="4" title="Registre bancaire"
+                    onClick="action-Registre-bancaire"/>
+            <button name="print-Registre-caisse" colSpan="4" title="Registre de caisse"
+                    onClick="action-Registre-caisse"/>
+        </panel>
+        <panel>
+            <field name="du" title="DU" widget="date" showTitle="true" colSpan="6"/>
+            <field name="au" title="AU" widget="date" showTitle="true" colSpan="6"/>
+
+            <field name="type" title="TYPE" type="reference" onChange="action-change-type2"
+                   target="com.hakibati.comptabilite.matier.db.TypeMatiereC"
+                   widget="SuggestBox" showTitle="true" colSpan="6"/>
+
+            <field name="article" title="ACTICLE"  type="reference" domain="self.typeDeMatiere = :type"
+                   target="com.hakibati.comptabilite.matier.db.Mconsommable"
+                   widget="SuggestBox" showTitle="true" colSpan="6"/>
+
+            <field name="pervenance" title="PROVENANCE" type="reference"
+                   target="com.hakibati.comptabilite.matier.db.SourcesM"
+                   widget="SuggestBox" showTitle="true" colSpan="6"/>
+
+            <field name="beneficie" title="BENEFICIE" type="reference"
+                   target="com.hakibati.comptabilite.matier.db.DestinataireM"
+                   widget="SuggestBox" showTitle="true" colSpan="6"/>
+
+<!--            <button name="print-article2" colSpan="3" title="BILAN ENTREES" onClick="action-print-bilan-entrees"/>-->
+<!--            <button name="print-article3" colSpan="3" title="BILAN SORTIES" onClick="action-print-bilan-sorties"/>-->
+
+<!--            <button name="print-operationE" colSpan="3" title="OPERATIONs ENTREES"-->
+<!--                    onClick="action-print-OperationE-archif"/>-->
+<!--            <button name="print-operationS" colSpan="3" title="OPERATIONs SORTIES"-->
+<!--                    onClick="action-print-OperationS-archif"/>-->
+
+        </panel>
+    </form>
+
+</object-views>

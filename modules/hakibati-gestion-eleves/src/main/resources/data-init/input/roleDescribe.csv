@@ -1,0 +1,5 @@
+code;indexGroupe;name;namear;roleRead;roleWrite;roleDelete;language;key
+71;1;APPLICATION GESTION ELEVES EXTERIEUR;مكون تدبير ملفات التلاميذ;role.hakibati.gestion.eleves.exterieur.read;role.hakibati.gestion.eleves.exterieur.write;role.hakibati.gestion.eleves.exterieur.delete;ar;value:APPLICATION GESTION ELEVES EXTERIEUR
+72;1;APPLICATION GESTION ELEVES INTERNAT;مكون تدبير ملفات تلاميذ الداخلية;role.hakibati.gestion.eleves.internat.read;role.hakibati.gestion.eleves.internat.write;role.hakibati.gestion.eleves.internat.delete;ar;value:APPLICATION GESTION ELEVES INTERNAT
+73;1;APPLICATION GESTION ELEVES ARCHIVE;مكون تدبير ملفات تلاميذ الارشيف;role.hakibati.gestion.eleves.archive.read;role.hakibati.gestion.eleves.archive.write;role.hakibati.gestion.eleves.archive.delete;ar;value:APPLICATION GESTION ELEVES ARCHIVE
+74;1;APPLICATION  COMPTABILITE INTERNAT;مكون التدبير المحاسباتي للداخلية;role.hakibati.gestion.eleves.comptabilite.read;role.hakibati.gestion.eleves.comptabilite.write;role.hakibati.gestion.eleves.comptabilite.delete;ar;value:APPLICATION  COMPTABILITE INTERNAT

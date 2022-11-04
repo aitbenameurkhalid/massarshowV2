@@ -1,0 +1,41 @@
+"name";"object";"can_read";"can_write";"can_create";"can_remove";"can_export";"condition";"conditionParams";"roleName"
+
+"perm.hakibati.eau.electricite.ConsommationEau.select.etab.r";"com.hakibati.eau.electricite.db.ConsommationEau";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.eau.electricite.ConsommationEau.select.etab.rwc";"com.hakibati.eau.electricite.db.ConsommationEau";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.eau.electricite.ConsommationEau.select.etab.rwcde";"com.hakibati.eau.electricite.db.ConsommationEau";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.hakibati.eau.electricite.ConsommationElectricite.select.etab.r";"com.hakibati.eau.electricite.db.ConsommationElectricite";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.eau.electricite.ConsommationElectricite.select.etab.rwc";"com.hakibati.eau.electricite.db.ConsommationElectricite";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.eau.electricite.ConsommationElectricite.select.etab.rwcde";"com.hakibati.eau.electricite.db.ConsommationElectricite";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.hakibati.eau.electricite.ControleEau.select.etab.r";"com.hakibati.eau.electricite.db.ControleEau";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.eau.electricite.ControleEau.select.etab.rwc";"com.hakibati.eau.electricite.db.ControleEau";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.eau.electricite.ControleEau.select.etab.rwcde";"com.hakibati.eau.electricite.db.ControleEau";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.hakibati.eau.electricite.ControleElectricite.select.etab.r";"com.hakibati.eau.electricite.db.ControleElectricite";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.eau.electricite.ControleElectricite.select.etab.rwc";"com.hakibati.eau.electricite.db.ControleElectricite";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.eau.electricite.ControleElectricite.select.etab.rwcde";"com.hakibati.eau.electricite.db.ControleElectricite";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.hakibati.eau.electricite.GestionEauElectricite.select.etab.r";"com.hakibati.eau.electricite.db.GestionEauElectricite";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.eau.electricite.GestionEauElectricite.select.etab.rwc";"com.hakibati.eau.electricite.db.GestionEauElectricite";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.eau.electricite.GestionEauElectricite.select.etab.rwcde";"com.hakibati.eau.electricite.db.GestionEauElectricite";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.hakibati.eau.electricite.ConsommationEau.select.direction.r";"com.hakibati.eau.electricite.db.ConsommationEau";"x";;;;;"self.etablissement.etablissementsPrincipal.etablissementPrincipal = ? AND self.etablissement.etablissementsPrincipal.accepter =?";"__user__.etablissementSelectionnee , true";
+"perm.hakibati.eau.electricite.ConsommationEau.select.direction.rwc";"com.hakibati.eau.electricite.db.ConsommationEau";"x";"x";"x";;;"self.etablissement.etablissementsPrincipal.etablissementPrincipal = ? AND self.etablissement.etablissementsPrincipal.accepter =?";"__user__.etablissementSelectionnee, true";
+"perm.hakibati.eau.electricite.ConsommationEau.select.direction.rwcde";"com.hakibati.eau.electricite.db.ConsommationEau";"x";"x";"x";"x";"x";"self.etablissement.etablissementsPrincipal.etablissementPrincipal = ? AND self.etablissement.etablissementsPrincipal.accepter =?";"__user__.etablissementSelectionnee, true";
+
+"perm.hakibati.eau.electricite.ConsommationElectricite.select.direction.r";"com.hakibati.eau.electricite.db.ConsommationElectricite";"x";;;;;"self.etablissement.etablissementsPrincipal.etablissementPrincipal = ? AND self.etablissement.etablissementsPrincipal.accepter =?";"__user__.etablissementSelectionnee, true";
+"perm.hakibati.eau.electricite.ConsommationElectricite.select.direction.rwc";"com.hakibati.eau.electricite.db.ConsommationElectricite";"x";"x";"x";;;"self.etablissement.etablissementsPrincipal.etablissementPrincipal = ? AND self.etablissement.etablissementsPrincipal.accepter =?";"__user__.etablissementSelectionnee, true";
+"perm.hakibati.eau.electricite.ConsommationElectricite.select.direction.rwcde";"com.hakibati.eau.electricite.db.ConsommationElectricite";"x";"x";"x";"x";"x";"self.etablissement.etablissementsPrincipal.etablissementPrincipal = ? AND self.etablissement.etablissementsPrincipal.accepter =?";"__user__.etablissementSelectionnee, true";
+
+"perm.hakibati.eau.electricite.ControleEau.select.direction.r";"com.hakibati.eau.electricite.db.ControleEau";"x";;;;;"self.etablissement.etablissementsPrincipal.etablissementPrincipal = ? AND self.etablissement.etablissementsPrincipal.accepter =?";"__user__.etablissementSelectionnee, true";
+"perm.hakibati.eau.electricite.ControleEau.select.direction.rwc";"com.hakibati.eau.electricite.db.ControleEau";"x";"x";"x";;;"self.etablissement.etablissementsPrincipal.etablissementPrincipal = ? AND self.etablissement.etablissementsPrincipal.accepter =?";"__user__.etablissementSelectionnee, true";
+"perm.hakibati.eau.electricite.ControleEau.select.direction.rwcde";"com.hakibati.eau.electricite.db.ControleEau";"x";"x";"x";"x";"x";"self.etablissement.etablissementsPrincipal.etablissementPrincipal = ? AND self.etablissement.etablissementsPrincipal.accepter =?";"__user__.etablissementSelectionnee, true";
+
+"perm.hakibati.eau.electricite.ControleElectricite.select.direction.r";"com.hakibati.eau.electricite.db.ControleElectricite";"x";;;;;"self.etablissement.etablissementsPrincipal.etablissementPrincipal = ? AND self.etablissement.etablissementsPrincipal.accepter =?";"__user__.etablissementSelectionnee, true";
+"perm.hakibati.eau.electricite.ControleElectricite.select.direction.rwc";"com.hakibati.eau.electricite.db.ControleElectricite";"x";"x";"x";;;"self.etablissement.etablissementsPrincipal.etablissementPrincipal = ? AND self.etablissement.etablissementsPrincipal.accepter =?";"__user__.etablissementSelectionnee, true";
+"perm.hakibati.eau.electricite.ControleElectricite.select.direction.rwcde";"com.hakibati.eau.electricite.db.ControleElectricite";"x";"x";"x";"x";"x";"self.etablissement.etablissementsPrincipal.etablissementPrincipal = ? AND self.etablissement.etablissementsPrincipal.accepter =?";"__user__.etablissementSelectionnee, true";
+
+"perm.hakibati.eau.electricite.GestionEauElectricite.select.direction.r";"com.hakibati.eau.electricite.db.GestionEauElectricite";"x";;;;;"self.etablissement.etablissementsPrincipal.etablissementPrincipal = ? AND self.etablissement.etablissementsPrincipal.accepter =?";"__user__.etablissementSelectionnee, true";
+"perm.hakibati.eau.electricite.GestionEauElectricite.select.direction.rwc";"com.hakibati.eau.electricite.db.GestionEauElectricite";"x";"x";"x";;;"self.etablissement.etablissementsPrincipal.etablissementPrincipal = ? AND self.etablissement.etablissementsPrincipal.accepter =?";"__user__.etablissementSelectionnee, true";
+"perm.hakibati.eau.electricite.GestionEauElectricite.select.direction.rwcde";"com.hakibati.eau.electricite.db.GestionEauElectricite";"x";"x";"x";"x";"x";"self.etablissement.etablissementsPrincipal.etablissementPrincipal = ? AND self.etablissement.etablissementsPrincipal.accepter =?";"__user__.etablissementSelectionnee, true";

@@ -1,0 +1,4 @@
+name;description
+role.hakibati.comptabilite.matier.read;role.hakibati.comptabilite.matier.read
+role.hakibati.comptabilite.matier.write;role.hakibati.comptabilite.matier.write
+role.hakibati.comptabilite.matier.delete;role.hakibati.comptabilite.matier.delete

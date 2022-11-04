@@ -1,0 +1,4 @@
+name;menus
+role.hakibati.eau.electricite.read;menu-eau-electricite
+role.hakibati.eau.electricite.write;menu-eau-electricite
+role.hakibati.eau.electricite.delete;menu-eau-electricite

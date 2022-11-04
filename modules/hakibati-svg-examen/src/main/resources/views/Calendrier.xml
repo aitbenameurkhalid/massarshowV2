@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+  <grid name="Calendrier-grid" title="Calendrier Examine" model="com.hakibati.svg.examen.db.Calendrier" orderBy="dateExamine,du">
+<!--    <field name="name" />-->
+    <field name="fillier"  />
+    <field name="matiere" width="150" />
+    <field name="dateExamine" width="100"/>
+    <field name="du" width="80" x-seconds="false" />
+    <field name="au" width="80" x-seconds="false"/>
+      <button name="btn-delete" title="Supprime" icon="fa-trash" onClick="com.hakibati.svg.examen.web.CalendrierController:DeleteCalendrier"
+              prompt="Voulez-vous vraiment supprimer cet enregistrement ?"/>
+
+  </grid>
+
+  <form name="Calendrier-form" title="Calendrier Examine"  model="com.hakibati.svg.examen.db.Calendrier">
+    <panel title="Overview">
+<!--      <field name="fillier" colSpan="6" domain="self.etablissement = :_etablissement"/>-->
+<!--      <field name="matiere" colSpan="6" domain="self.etablissement = :_etablissement" />-->
+       <field name="fillier" colSpan="6" />
+      <field name="matiere" colSpan="6" />
+      <field name="dateExamine" colSpan="4" />
+      <field name="du" colSpan="4" onChange="action-time-validate"/>
+      <field name="au" colSpan="4" onChange="action-time-validate"/>
+    </panel>
+  </form>
+
+
+    <action-view name="action-dashlet-Calendrier" title=""
+                 model="com.hakibati.svg.examen.db.Calendrier">
+        <view type="grid" name="Calendrier-grid"/>
+        <view type="form" name="Calendrier-form"/>
+        <view-param name="popup" value="reload"/>
+        <view-param name="popup-save" value="true"/>
+        <view-param name="show-toolbar" value="false"/>
+        <view-param name="show-confirm" value="true"/>
+        <view-param name="forceEdit" value="true"/>
+        <view-param name="details-view" value="false"/>
+        <domain>self.etablissement = :_etablissement</domain>
+        <context name="_etablissement" expr="eval: __user__.etablissementSelectionnee"/>
+    </action-view>
+
+    <action-view name="action-new-Calendrier" title=""
+                 model="com.hakibati.svg.examen.db.Calendrier">
+        <view type="form" name="Calendrier-form"/>
+        <view-param name="popup" value="reload"/>
+        <view-param name="popup-save" value="true"/>
+        <view-param name="show-toolbar" value="false"/>
+        <view-param name="show-confirm" value="true"/>
+        <view-param name="forceEdit" value="true"/>
+        <view-param name="details-view" value="false"/>
+    </action-view>
+
+
+
+
+
+
+    <action-validate name="action-time-validate">
+    <error if="(au != null &amp;&amp; du != null) &amp;&amp; (au &lt; du)" message="Invalid heur"/>
+  </action-validate>
+
+</object-views>

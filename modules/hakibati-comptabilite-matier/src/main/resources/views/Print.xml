@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+
+    <form name="print-matiere-form" title="Les imprimes" model="com.app.application.db.Etablissement" canNew="false">
+      <panel>
+          <field name="typeImprime" widget="RadioSelect" selection="imprime-type-select" showTitle="false"
+                 default="PDF"/>
+      </panel>
+        <panel>
+            <field name="ParType" title="TYPE" type="reference" onChange="action-change-type2"
+                   target="com.hakibati.comptabilite.matier.db.TypeMatiereC"
+                   widget="SuggestBox" showTitle="true" colSpan="6"/>
+
+            <field name="ParArticle" title="ARTICLE" domain="self.typeDeMatiere = :ParType" type="reference"
+                   target="com.hakibati.comptabilite.matier.db.Mconsommable"
+                   widget="SuggestBox" showTitle="true" colSpan="6"/>
+
+            <button name="print-article" colSpan="6" title="REGISTRE COMPTABILITE MATIERE"
+                    onClick="action-print-list-ARTICLE"/>
+            <button name="print-rest" colSpan="6" title="RESTE EN MAGASIN" onClick="action-print-list-MAGASIN"/>
+
+        </panel>
+        <panel>
+            <field name="du" title="DU" widget="date" showTitle="true" colSpan="6"/>
+            <field name="au" title="AU" widget="date" showTitle="true" colSpan="6"/>
+
+            <field name="type" title="TYPE" type="reference" onChange="action-change-type2"
+                   target="com.hakibati.comptabilite.matier.db.TypeMatiereC"
+                   widget="SuggestBox" showTitle="true" colSpan="6"/>
+
+            <field name="article" title="ARTICLE"  type="reference" domain="self.typeDeMatiere = :type"
+                   target="com.hakibati.comptabilite.matier.db.Mconsommable"
+                   widget="SuggestBox" showTitle="true" colSpan="6"/>
+
+            <field name="pervenance" title="PROVENANCE" type="reference"
+                   target="com.hakibati.comptabilite.matier.db.SourcesM"
+                   widget="SuggestBox" showTitle="true" colSpan="6"/>
+
+            <field name="beneficie" title="BENEFICIE" type="reference"
+                   target="com.hakibati.comptabilite.matier.db.DestinataireM"
+                   widget="SuggestBox" showTitle="true" colSpan="6"/>
+
+            <button name="print-article2" colSpan="3" title="BILAN ENTREES" onClick="action-print-bilan-entrees"/>
+            <button name="print-article3" colSpan="3" title="BILAN SORTIES" onClick="action-print-bilan-sorties"/>
+
+            <button name="print-operationE" colSpan="3" title="OPERATIONs ENTREES"
+                    onClick="action-print-OperationE-archif"/>
+            <button name="print-operationS" colSpan="3" title="OPERATIONs SORTIES"
+                    onClick="action-print-OperationS-archif"/>
+
+        </panel>
+    </form>
+    <action-method name="action-print-list-ARTICLE">
+        <call class="com.comptabilite.matier.web.OperationPrintController" method="PrintMatiereArticale"/>
+    </action-method>
+
+    <action-method name="action-print-list-MAGASIN">
+        <call class="com.comptabilite.matier.web.OperationPrintController" method="PrintListMagasin"/>
+    </action-method>
+
+    <action-method name="action-print-bilan-entrees">
+        <call class="com.comptabilite.matier.web.OperationPrintController" method="PrintBilanEntrees"/>
+    </action-method>
+    <action-method name="action-print-bilan-sorties">
+        <call class="com.comptabilite.matier.web.OperationPrintController" method="PrintBilanSorties"/>
+    </action-method>
+    <action-method name="action-print-OperationE-archif">
+        <call class="com.comptabilite.matier.web.OperationPrintController" method="PrintOperationEarchif"/>
+    </action-method>
+    <action-method name="action-print-OperationS-archif">
+        <call class="com.comptabilite.matier.web.OperationPrintController" method="PrintOperationSarchif"/>
+    </action-method>
+
+    <action-record name="action-change-type2" model="com.app.application.db.Etablissement">
+        <field name="article" expr="eval:null"/>
+        <field name="ParArticle" expr="eval:null"/>
+    </action-record>
+</object-views>

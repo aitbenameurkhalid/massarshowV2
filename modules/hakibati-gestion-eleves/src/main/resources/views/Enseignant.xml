@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+
+  <grid name="Enseignant-grid" title="Enseignants" model="com.hakibati.gestion.eleves.db.Enseignant">
+    <field name="ppr"/>
+    <field name="matiere"/>
+    <field name="name" title="nomCompletAr"/>
+    <field name="nomCompletFr" title="nomCompletFr"/>
+
+  </grid>
+
+  <form name="Enseignant-form" title="Enseignant" model="com.hakibati.gestion.eleves.db.Enseignant">
+    <panel title="Ajouter ou modifier" showTitle="false" >
+      <field name="ppr"/>
+      <field name="matiere"/>
+      <field name="name" title="nomCompletAr"/>
+      <field name="nomCompletFr" title="nomCompletFr"/>
+    </panel>
+    <panel-related field="affectationEnseignant" colSpan="12"/>
+  </form>
+
+</object-views>

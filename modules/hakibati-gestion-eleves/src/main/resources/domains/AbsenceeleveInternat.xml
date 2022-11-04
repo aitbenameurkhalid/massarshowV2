@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_5.3.xsd">
+
+    <module name="hakibati-gestion-eleves" package="com.hakibati.gestion.eleves.db"/>
+    <entity name="AbsenceeleveInternat" cacheable="true">
+        <many-to-one name="eleveInternat" ref="EleveInternat" required="true"/>
+        <date name="dateabsence" title="Date d'absence" required="true"/>
+        <integer name="typeabsense" title="justifie?" selection="selection-type-absence" default="0"/>
+        <boolean name="etudeDuMain" title="étude du matin"/>
+        <boolean name="petitdejeuner" title="Petit déjeuner"/>
+        <boolean name="dejeuner" title="Déjeuner"/>
+        <boolean name="etudeDuMidi" title="étude du midi"/>
+        <boolean name="diner" title="Dîner"/>
+        <boolean name="etudeDuNuit" title="étude du nuit"/>
+        <many-to-one name="etablissement" ref="com.app.application.db.Etablissement">
+            <![CDATA[
+    if (etablissement == null)
+   return createdBy.getEtablissementSelectionnee() ;
+   return etablissement;
+      ]]>
+        </many-to-one>
+        <many-to-one name="createdBy" ref="com.axelor.auth.db.User"/>
+        <unique-constraint columns="dateabsence,eleveInternat"/>
+
+    </entity>
+</domain-models>

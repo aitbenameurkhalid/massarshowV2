@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csv-inputs xmlns="http://axelor.com/xml/ns/data-import"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/data-import http://axelor.com/xml/ns/data-import/data-import_5.2.xsd">
+
+
+<!--    com.axelor.auth.db.Group-->
+
+
+    <input file="group.csv" separator=";" type="com.axelor.auth.db.Group" search="self.code = :code" update="false">
+        <bind column="name" to="name"/>
+        <bind column="code" to="code"/>
+    </input>
+    <input file="comptabilite_permission.csv" separator=";" type="com.axelor.auth.db.Permission" search="self.name = :name" update="false">
+        <bind to="canRead" eval="can_read == 'x' ? 'true' : 'false'"/>
+        <bind to="canWrite" eval="can_write == 'x' ? 'true' : 'false'"/>
+        <bind to="canCreate" eval="can_create == 'x' ? 'true' : 'false'"/>
+        <bind to="canRemove" eval="can_remove == 'x' ? 'true' : 'false'"/>
+        <bind to="canExport" eval="can_export == 'x' ? 'true' : 'false'"/>
+    </input>
+
+
+
+    <input file="group-perm.csv" separator=";" type="com.axelor.auth.db.Group" search="self.code = :code" update="false">
+        <bind to="permissions" search="self.name = :permissions">
+            <bind to="name" column="permissions"/>
+        </bind>
+    </input>
+    <input file="group-menu.csv" separator=";" type="com.axelor.auth.db.Group" search="self.code = :code" update="false">
+        <bind to="menus" search="self.name = :menus">
+            <bind to="name" column="menus"/>
+        </bind>
+    </input>
+
+
+    <input file="role.csv" separator=";" type="com.axelor.auth.db.Role" search="self.name = :name" update="false">
+        <bind column="name" to="name"/>
+        <bind column="description" to="description"/>
+    </input>
+    <input file="role-perm.csv" separator=";" type="com.axelor.auth.db.Role" search="self.name = :name" update="false">
+        <bind to="permissions" search="self.name = :permissions">
+            <bind to="name" column="permissions"/>
+        </bind>
+    </input>
+    <input file="role-menu.csv" separator=";" type="com.axelor.auth.db.Role" search="self.name = :name" update="false">
+        <bind to="menus" search="self.name = :menus">
+            <bind to="name" column="menus"/>
+        </bind>
+    </input>
+
+    <input file="roleDescribe.csv" separator=";" type="com.hakibati.setting.db.RoleDescribe" search="self.code = :code" update="false">
+        <bind to="roleRead" search="self.name = :roleRead">
+            <bind to="roleRead" column="roleRead"/>
+        </bind>
+        <bind to="roleWrite" search="self.name = :roleWrite">
+            <bind to="roleWrite" column="roleWrite"/>
+        </bind>
+        <bind to="roleDelete" search="self.name = :roleDelete">
+            <bind to="roleDelete" column="roleDelete"/>
+        </bind>
+     </input>
+    <input file="roleDescribe.csv" separator=";" type="com.axelor.meta.db.MetaTranslation" search="self.key = :key" update="false">
+        <bind to="key" column="key"/>
+        <bind to="message" column="namear"/>
+        <bind to="language" column="language"/>
+    </input>
+    <input file="materielType.csv" separator=";" type="com.hakibati.etab.inventaire.db.MaterielType" search="self.name = :name" update="false">
+    </input>
+    <input file="materielType.csv" separator=";" type="com.axelor.meta.db.MetaTranslation" search="self.key = :key" update="false">
+        <bind to="key" column="key"/>
+        <bind to="message" column="namear"/>
+        <bind to="language" column="language"/>
+    </input>
+
+    <input file="materielListe.csv" separator=";" type="com.hakibati.etab.inventaire.db.MaterielListe" search="self.name = :name" update="false">
+    </input>
+    <input file="materielListe.csv" separator=";" type="com.axelor.meta.db.MetaTranslation" search="self.key = :key" update="false">
+        <bind to="key" column="key"/>
+        <bind to="message" column="namear"/>
+        <bind to="language" column="language"/>
+    </input>
+</csv-inputs>

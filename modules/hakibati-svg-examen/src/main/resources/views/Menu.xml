@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+
+    <menuitem name="menu-app-svg-examan" order="-100" title="SURVEILLANT EXAMEN" icon="fa-book"
+              icon-background="green"/>
+    <menuitem name="menu-app-svg-examan-dashboard" parent="menu-app-svg-examan" title="Statistiques" icon="fa-line-chart" icon-background="#FFBF00" action="action-examen-dashboard" />
+    <action-view name="action-examen-dashboard" title="Statistiques" home="true">
+        <view type="dashboard" name="action-examen-dashboard" />
+        <context name="_etablissement" expr="eval: __user__.etablissementSelectionnee"/>
+    </action-view>
+
+    <menuitem name="menu-app-svg-donnes" parent="menu-app-svg-examan" title="Saise des données" icon="fa-database"
+              icon-background="#DE3163"/>
+
+    <menuitem name="menu-app-svg-donnes-centreexamen" parent="menu-app-svg-donnes" title="Centre d'examen"
+              icon="fa-home" icon-background="red" action="action-app-svg-donnes-centreexamen" order="-100"/>
+    <action-method name="action-app-svg-donnes-centreexamen">
+        <call class="com.hakibati.svg.examen.web.CentreExamController" method="OpenCenterExam"/>
+    </action-method>
+    <menuitem name="menu-app-svg-donnes-matiere" parent="menu-app-svg-donnes" title="Les matieres" icon="fa-book"
+              icon-background="green" action="action-app-svg-donnes-matiere" order="-95"/>
+    <action-method name="action-app-svg-donnes-matiere">
+        <call class="com.hakibati.svg.examen.web.CentreExamController" method="OpenMatiere"/>
+    </action-method>
+    <menuitem name="menu-app-svg-donnes-Fillier" parent="menu-app-svg-donnes" title="Les Filières" icon="fa-university"
+              icon-background="#F4D03F" action="action-app-svg-donnes-Fillier" order="-90"/>
+    <action-method name="action-app-svg-donnes-Fillier">
+        <call class="com.hakibati.svg.examen.web.CentreExamController" method="OpenFillier"/>
+    </action-method>
+    <menuitem name="menu-app-svg-donnes-Salles" parent="menu-app-svg-donnes" title="Les Salles" icon="fa-building"
+              icon-background="#D35400" action="action-app-svg-donnes-Salles" order="-85"/>
+    <action-method name="action-app-svg-donnes-Salles">
+        <call class="com.hakibati.svg.examen.web.CentreExamController" method="OpenSalles"/>
+    </action-method>
+    <menuitem name="menu-app-svg-donnes-SalleFillier" parent="menu-app-svg-donnes" title="Salles-Filières"
+              icon="fa-home" icon-background="#A569BD" action="action-app-svg-donnes-SalleFillier" order="-80"/>
+    <action-method name="action-app-svg-donnes-SalleFillier">
+        <call class="com.hakibati.svg.examen.web.CentreExamController" method="OpenSalleFillier"/>
+    </action-method>
+    <menuitem name="menu-app-svg-donnes-prof" parent="menu-app-svg-donnes" title="Les professeurs" icon="fa-users"
+              icon-background="#E74C3C" action="action-app-svg-donnes-prof"/>
+    <action-method name="action-app-svg-donnes-prof">
+        <call class="com.hakibati.svg.examen.web.CentreExamController" method="OpenProf"/>
+    </action-method>
+    <menuitem name="menu-app-svg-donnes-Calendrier" parent="menu-app-svg-donnes" title="Calendrier Examen"
+              icon="fa-calendar" icon-background="teal" action="action-app-svg-donnes-Calendrier"/>
+    <action-method name="action-app-svg-donnes-Calendrier">
+        <call class="com.hakibati.svg.examen.web.CentreExamController" method="OpenCalendrier"/>
+    </action-method>
+
+
+
+    <menuitem name="menu-app-svg-contraint" parent="menu-app-svg-examan" title="Les contraintes" icon="fa-balance-scale"
+              icon-background="#FF7F50"/>
+
+    <menuitem name="menu-app-svg-contraint-permanence" parent="menu-app-svg-contraint" title="Permanence" icon="fa-balance-scale"
+              icon-background="#E74C3C" action="action-app-svg-contraint-permanence"/>
+    <action-method name="action-app-svg-contraint-permanence">
+        <call class="com.hakibati.svg.examen.web.CentreExamController" method="OpenPermanence"/>
+    </action-method>
+
+    <menuitem name="menu-app-svg-contraint-TempsNonDesponible" parent="menu-app-svg-contraint" title="Temps Non Desponible" icon="fa-balance-scale"
+              icon-background="#E74C3C" action="action-app-svg-contraint-TempsNonDesponible"/>
+    <action-method name="action-app-svg-contraint-TempsNonDesponible">
+        <call class="com.hakibati.svg.examen.web.CentreExamController" method="OpenTempsNonDesponible"/>
+    </action-method>
+
+    <menuitem name="menu-app-svg-contraint-SalleNonDesponible" parent="menu-app-svg-contraint" title="Salles Non Desponible" icon="fa-balance-scale"
+              icon-background="#E74C3C" action="action-app-svg-contraint-SalleNonDesponible"/>
+    <action-method name="action-app-svg-contraint-SalleNonDesponible">
+        <call class="com.hakibati.svg.examen.web.CentreExamController" method="OpenSalleNonDesponible"/>
+    </action-method>
+
+
+    <menuitem name="menu-app-svg-contraint-MaxFillierMatiere" parent="menu-app-svg-contraint" title="Max Fillier Matiere" icon="fa-balance-scale"
+              icon-background="#E74C3C" action="action-app-svg-contraint-MaxFillierMatiere"/>
+    <action-method name="action-app-svg-contraint-MaxFillierMatiere">
+        <call class="com.hakibati.svg.examen.web.CentreExamController" method="OpenMaxFillierMatiere"/>
+    </action-method>
+
+
+    <menuitem name="menu-app-svg-generation" parent="menu-app-svg-examan" title="générer" icon="fa-cogs"
+              icon-background="#28B463" action="action-app-svg-generation"/>
+
+
+
+
+    <menuitem name="menu-app-svg-contraint-contrainte-profs" parent="menu-app-svg-contraint" title="Des professeurs"
+              icon="fa-users" icon-background="#C70039" action="action-app-svg-contraint-contrainte-prof"/>
+
+    <action-method name="action-app-svg-contraint-contrainte-prof">
+        <call class="com.hakibati.svg.examen.web.CentreExamController" method="OpenContrainteProfs"/>
+    </action-method>
+
+
+    <menuitem name="menu-app-svg-contraint-contrainte-un-prof" parent="menu-app-svg-contraint" title="Un professeur"
+              icon="fa-user" icon-background="#1CBF41" action="action-app-svg-contraint-contrainte-un-prof"/>
+    <action-method name="action-app-svg-contraint-contrainte-un-prof">
+        <call class="com.hakibati.svg.examen.web.CentreExamController" method="OpenContrainteProf"/>
+    </action-method>
+
+
+
+
+    <menuitem name="menu-app-svg-contraint-contrainte-salles" parent="menu-app-svg-contraint" title="Des salles"
+              icon="fa-building" icon-background="#C70039" action="action-app-svg-contraint-contrainte-salle"/>
+    <action-method name="action-app-svg-contraint-contrainte-salle">
+        <call class="com.hakibati.svg.examen.web.CentreExamController" method="OpenContrainteSalles"/>
+    </action-method>
+
+
+    <menuitem name="menu-app-svg-contraint-contrainte-une-salle" parent="menu-app-svg-contraint" title="Une salle"
+              icon="fa-home" icon-background="#1CBF41" action="action-app-svg-contraint-contrainte-une-salle"/>
+    <action-method name="action-app-svg-contraint-contrainte-une-salle">
+        <call class="com.hakibati.svg.examen.web.CentreExamController" method="OpenContrainteSalle"/>
+    </action-method>
+
+
+    <menuitem name="menu-app-svg-contraint-contrainte-filliers" parent="menu-app-svg-contraint" title="Des Filières"
+              icon="fa-arrows" icon-background="#C70039" action="action-app-svg-contraint-contrainte-fillier"/>
+    <action-method name="action-app-svg-contraint-contrainte-fillier">
+        <call class="com.hakibati.svg.examen.web.CentreExamController" method="OpenContrainteFilliers"/>
+    </action-method>
+
+
+    <menuitem name="menu-app-svg-contraint-contrainte-un-fillier" parent="menu-app-svg-contraint" title="Un Filière"
+              icon="fa-arrow-circle-up" icon-background="#1CBF41" action="action-app-svg-contraint-contrainte-un-fillier"/>
+    <action-method name="action-app-svg-contraint-contrainte-un-fillier">
+        <call class="com.hakibati.svg.examen.web.CentreExamController" method="OpenContrainteFillier"/>
+    </action-method>
+
+
+    <menuitem name="menu-app-svg-contraint-contrainte" parent="menu-app-svg-contraint" title="Toutes"
+              icon="fa-home" icon-background="#2E86C1" action="action-app-svg-contraint-contrainte"/>
+    <action-method name="action-app-svg-contraint-contrainte">
+        <call class="com.hakibati.svg.examen.web.CentreExamController" method="OpenContrainteAll"/>
+    </action-method>
+
+
+    <action-method name="action-app-svg-generation">
+        <call class="com.hakibati.svg.examen.web.CentreExamController" method="OpenCenterExamGenerate"/>
+    </action-method>
+
+
+</object-views>

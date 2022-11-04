@@ -1,0 +1,5 @@
+"name";"object";"can_read";"can_write";"can_create";"can_remove";"can_export";"condition";"conditionParams";"roleName"
+
+"perm.hakibati.ass.enajah.AssEnajahInfo.select.etab.r";"com.hakibati.ass.enajah.db.AssEnajahInfo";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.ass.enajah.AssEnajahInfo.select.etab.rwc";"com.hakibati.ass.enajah.db.AssEnajahInfo";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.ass.enajah.AssEnajahInfo.select.etab.rwcde";"com.hakibati.ass.enajah.db.AssEnajahInfo";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";

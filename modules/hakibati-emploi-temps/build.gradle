@@ -1,0 +1,10 @@
+apply plugin: 'com.axelor.app-module'
+apply plugin: 'kotlin'
+
+axelor {
+    title = "Axelor ::HAKIBATI FET EMPLOI TEMPS"
+    removable = true
+}
+dependencies {
+    api project(':modules:hakibati-setting')
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+  <grid name="DomaineRecette-grid" title="Domaine Recette" model="com.hakibati.ass.enajah.db.DomaineRecette"
+        canDelete="false" orderBy="id">
+    <field name="code"  />
+    <field name="name" />
+  </grid>
+
+  <form name="DomaineRecette-form" title="Domaine Recette" model="com.hakibati.ass.enajah.db.DomaineRecette" >
+    <panel  >
+      <field name="code"  />
+      <field name="name" />
+    </panel>
+  </form>
+</object-views>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_5.3.xsd">
+
+<!--  <module name="app-svg-examan" package="com.app.svg.examan.db"  />-->
+  <module name="hakibati-svg-examen" package="com.hakibati.svg.examen.db"/>
+  <entity name="Calendrier" cacheable="true" >
+
+    <many-to-one name="fillier" title="filière" ref="Fillier"  required="true"/>
+    <many-to-one name="matiere" ref="Matiere" required="true"/>
+    <date name="dateExamine" required="true"/>
+    <time name="du" required="true"/>
+    <time name="au" required="true"/>
+    <string name="name" namecolumn="true" search="fillier,matiere"><![CDATA[
+    if (matiere == null && fillier == null)
+      return null;
+   return fillier.getName() + " - " + matiere.getName();
+      ]]></string>
+    <many-to-one name="createdBy" ref="com.axelor.auth.db.User"/>
+    <many-to-one name="etablissement" ref="com.app.application.db.Etablissement"  >
+      <![CDATA[
+                if (etablissement != null )
+                 return etablissement;
+                 if(createdBy != null)
+                 return createdBy.getEtablissementSelectionnee() ;
+               return null;
+                  ]]>
+    </many-to-one>
+    <unique-constraint columns="fillier,matiere,etablissement"/>
+  </entity>
+
+</domain-models>

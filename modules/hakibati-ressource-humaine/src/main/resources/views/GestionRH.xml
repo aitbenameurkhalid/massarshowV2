@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+
+    <form name="personnel-donnees-form" title="Données des personnels"
+          model="com.hakibati.ressource.humaine.db.GestionRH" helpLink="false"
+          canNew="false" canEdit="false" canSave="false" canDelete="false" canArchive="false" canCopy="false"
+          canAttach="false">
+        <panel showTitle="false" colSpan="12">
+            <panel showTitle="false" colSpan="10">
+                <label title="Gestion du personnel"/>
+            </panel>
+            <panel colSpan="2" sidebar="true">
+                <button name="btn-import" title="Import" onClick="action.import.rh.massar" colSpan="12"/>
+                <!--                <button name="btn-nouveau" title="Nouveau" onClick="action-new"/>-->
+            </panel>
+        </panel>
+        <panel-related field="personnel" onChange="save" form-view="PersonnelRh-form" grid-view="PersonnelRh-grid"
+                       colSpan="12" height="10"/>
+
+    </form>
+
+    <form name="personnel-greve-form" title="Greve"
+          model="com.hakibati.ressource.humaine.db.GestionRH" helpLink="false"
+          canNew="false" canEdit="false" canSave="false" canDelete="false" canArchive="false" canCopy="false"
+          canAttach="false">
+        <panel showTitle="false" colSpan="12">
+            <panel showTitle="false" colSpan="10">
+                <label title="greve du personnel"/>
+            </panel>
+            <panel colSpan="2" sidebar="true">
+                <button name="btn-print" title="Imprimer" onClick="action.greve.print.rh" colSpan="12"/>
+            </panel>
+        </panel>
+        <panel-related field="greveRH" form-view="GreveRH-form" onChange="save" grid-view="GreveRH-grid" colSpan="12"
+                       height="10"/>
+    </form>
+
+
+    <form name="personnel-greve-print-form" title="les Imprimes"
+          model="com.hakibati.ressource.humaine.db.GestionRH" helpLink="false"
+          canNew="false" canEdit="false" canSave="false" canDelete="false" canArchive="false" canCopy="false"
+          canAttach="false">
+        <panel>
+            <field name="typeImprime" showTitle="false" colSpan="8" widget="RadioSelect"
+                   selection="imprime-type-select-gestion-rh" default="PDF"/>
+            <field name="dateGreveMin" title="date du" required="true" widget="date" colSpan="2"/>
+            <field name="dateGreveMax" title="date au" required="true" widget="date" colSpan="2"/>
+            <field name="listCocumentImprimeGreve" showTitle="false" colSpan="10"
+                   selection="selection-list-greve-documents" default="0"
+                   widget="RadioSelect"/>
+            <button name="print-list-greve-all" title="Telecharger"
+                    colSpan="2"
+                    onClick="save,com.ressource.humaine.web.GestionRHController:PrintDocumentsGreve"/>
+        </panel>
+
+
+    </form>
+
+    <form name="GestionRH-import-form" title="Import les eleves"
+          model="com.hakibati.ressource.humaine.db.GestionRH">
+        <panel name="panel-import-direct" title="Importer des données directes dans massar">
+            <label name="messageAr"
+                   title="الطريقة المستخدمة للتواصل مع مسار هي وكيل اعتراض البيانات ، وهي طريقة آمنة ولا يمكن حفظ معلوماتك "
+                   css="label-bold bold large" colSpan="10"/>
+            <label name="messageFr"
+                   title="La méthode utilisée pour communiquer avec MASSAR est le proxy d'interception de données, c'est une méthode sécurisée et vos informations ne peuvent pas être sauvegardées"
+                   css="label-bold bold large" colSpan="10"/>
+            <button name="btn-import-donnes-massar" title="Contunue"
+                    onClick="action-show-import-all-data-massar" colSpan="2"/>
+        </panel>
+        <!--        dep-->
+        <panel title="Information de Massar" name="panel-login-password" colSpan="12" hidden="true">
+            <field name="loginMassar" widget="email" title="Login de Massar" colSpan="6"
+                   css="label-bold bold large center"/>
+            <field name="passwordMassar" widget="password" title="Mote de passe" colSpan="4"
+                   css="label-bold bold large center"/>
+            <button name="btn-connection-massar" title="Connection"
+                    onClick="com.ressource.humaine.web.GestionRHController:ConnectionMassar"
+                    colSpan="2"/>
+        </panel>
+        <panel name="info-login" readonly="true" hidden="true" title="Information de Login Massar" colSpan="12">
+            <field name="NomArabe" title="اسم المستخدم"/>
+            <field name="NomLatine" title="nom utilisateur"/>
+            <!--            <field name="CodeProfile" title="Profile"/>-->
+            <field name="CodeEtablissement" title="Gresa" colSpan="12"/>
+            <field name="nOM_ETABA" title="اسم المؤسسة"/>
+            <field name="nOM_ETABL" title="Nom Etablissement"/>
+
+        </panel>
+        <panel name="panel-import" hidden="true" title="Importez les données suivantes" colSpan="12">
+            <field name="typeimport" showTitle="false" widget="CheckboxSelect"
+                   selection="selection-list-type-import-rh-donnes-massar" colSpan="8"/>
+            <field name="anneScolair" title="Année scolaire" showTitle="true" colSpan="2" type="reference"
+                   placeholder="Sélectionner un Annee" widget="SuggestBox" x-limit="1000" x-order="-idAnnee"
+                   target="com.hakibati.gestion.eleves.db.AnneScolaire" required="true"
+                   domain="self.gestioneleves.id = :id"/>
+            <button name="btn-import-donnes-massar" colSpan="2" title="import"
+                    onClick="com.ressource.humaine.web.GestionRHController:ImportDataMassar"/>
+        </panel>
+        <!--        fn-->
+        <panel name="mainPanel" title="Importer des donnes Esaise (xml)" colSpan="8">
+            <field name="$importEsaiseFile" title="selectionner une Fichier" x-accept=".xml" type="many-to-one"
+                   widget="binary-link"
+                   target="com.axelor.meta.db.MetaFile" colSpan="10"/>
+
+            <button name="btn-ImportDataEsaise" title="Import"
+                    onClick="com.ressource.humaine.web.GestionRHController:ImportDataEsaise"
+                    readonlyIf="$importEsaiseFile == null " colSpan="2"/>
+        </panel>
+
+        <panel name="mainPanel2" title="Export &amp; Importer des donnes Excel (xlsx) ">
+            <spacer colSpan="10"/>
+            <button name="btn-export-excel" title="Export"
+                    onClick="com.ressource.humaine.web.GestionRHController:ExportDataExcel"
+                    colSpan="2"/>
+            <field name="$importrhexcelFile" title="selectionner une Fichier" x-accept=".xlsx" type="many-to-one"
+                   widget="binary-link"
+                   target="com.axelor.meta.db.MetaFile" colSpan="10"/>
+            <button name="importBlockBtn" title="Import"
+                    onClick="com.ressource.humaine.web.GestionRHController:ImportDataExcel"
+                    readonlyIf="$importrhexcelFile == null" colSpan="2"/>
+        </panel>
+
+        <panel name="mainPanel3" title="Suprimmer toutes les données">
+            <field name="anneScolair" title="Année scolaire" showTitle="true" colSpan="2" type="reference"
+                   placeholder="Sélectionner un Annee" widget="SuggestBox" x-limit="1000" x-order="-idAnnee"
+                   target="com.hakibati.gestion.eleves.db.AnneScolaire" required="true"
+                   domain="self.gestioneleves.id = :id"/>
+            <spacer colSpan="8"/>
+            <button name="btn-delete-donnes" colSpan="2" readonlyIf="anneScolair==null" title="Suprimmer"
+                    prompt="Voulez-vous vraiment supprimer toutes les données de cette année scolaire ?"
+                    onClick="com.gestion.eleves.web.GestionelevesController:deleteAllData"/>
+        </panel>
+
+    </form>
+
+
+    <action-view name="action.import.rh.massar" title="Import"
+                 model="com.hakibati.ressource.humaine.db.GestionRH">
+        <view type="form" name="GestionRH-import-form"/>
+        <view-param name="popup" value="reload"/>
+        <view-param name="popup-save" value="false"/>
+        <view-param name="popup.maximized" value="false"/>
+        <view-param name="show-toolbar" value="false"/>
+        <view-param name="show-confirm" value="false"/>
+        <view-param name="forceEdit" value="true"/>
+        <context name="_showRecord" expr="eval:id"/>
+    </action-view>
+
+    <action-view name="action.greve.print.rh" title="Import"
+                 model="com.hakibati.ressource.humaine.db.GestionRH">
+        <view type="form" name="personnel-greve-print-form"/>
+        <view-param name="popup" value="reload"/>
+        <view-param name="popup-save" value="false"/>
+        <view-param name="popup.maximized" value="false"/>
+        <view-param name="show-toolbar" value="false"/>
+        <view-param name="show-confirm" value="false"/>
+        <view-param name="forceEdit" value="true"/>
+        <context name="_showRecord" expr="eval:id"/>
+    </action-view>
+
+    <action-attrs name="action-show-import-all-data-massar">
+        <attribute for="panel-import-direct" name="hidden" expr="true"/>
+        <attribute for="panel-login-password" name="hidden" expr="false"/>
+        <attribute for="mainPanel" name="hidden" expr="true"/>
+        <attribute for="mainPanel2" name="hidden" expr="true"/>
+        <attribute for="mainPanel3" name="hidden" expr="true"/>
+    </action-attrs>
+
+
+    <selection name="selection-list-type-import-rh-donnes-massar">
+        <option value="enseignant">List profs</option>
+        <option value="matieres">List matières</option>
+        <option value="Table Service">Table Service</option>
+        <option value="affectation">Affect profs</option>
+
+    </selection>
+    <selection name="imprime-type-select-gestion-rh">
+        <option value="pdf">PDF</option>
+        <option value="xlsx">EXCEL</option>
+        <option value="docx">WORD</option>
+    </selection>
+
+    <selection name="selection-list-greve-documents">
+        <option value="0">Interrogatoire des personnes en grève</option>
+        <option value="1">List des personnes en grève</option>
+    </selection>
+
+
+</object-views>

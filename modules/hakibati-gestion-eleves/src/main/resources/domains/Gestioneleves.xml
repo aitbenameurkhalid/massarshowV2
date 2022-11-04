@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_5.3.xsd">
+
+    <module name="hakibati-gestion-eleves" package="com.hakibati.gestion.eleves.db"/>
+    <entity name="Gestioneleves" cacheable="true">
+        <many-to-one name="anneScolaireActuele" ref="AnneScolaire" title="Année scolaire"/>
+        <one-to-many name="eleves" ref="Eleve" mappedBy="gestioneleves"/>
+        <one-to-many name="elevesInternat" ref="EleveInternat" mappedBy="gestioneleves"/>
+
+        <one-to-many name="niveau" ref="Niveau" mappedBy="gestioneleves"/>
+        <one-to-many name="classes" ref="Classe" mappedBy="gestioneleves"/>
+        <one-to-many name="anneScolaire" ref="AnneScolaire" mappedBy="gestioneleves"/>
+        <one-to-many name="matiere" ref="MatiereEleve" mappedBy="gestioneleves"/>
+        <one-to-many name="notes" ref="NotesEleve" mappedBy="gestioneleves"/>
+        <one-to-many name="enseignants" ref="Enseignant" mappedBy="gestioneleves"/>
+        <one-to-many name="affectationEnseignants" ref="AffectationEnseignant" mappedBy="gestioneleves"/>
+
+        <string name="name"/>
+        <one-to-one name="etablissement" ref="com.app.application.db.Etablissement">
+            <![CDATA[
+    if (etablissement == null)
+   return createdBy.getEtablissementSelectionnee() ;
+   return etablissement;
+      ]]>
+        </one-to-one>
+        <many-to-one name="createdBy" ref="com.axelor.auth.db.User"/>
+        <unique-constraint columns="etablissement"/>
+    </entity>
+</domain-models>

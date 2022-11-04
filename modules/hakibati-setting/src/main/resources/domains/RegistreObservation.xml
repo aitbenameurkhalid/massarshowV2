@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_5.3.xsd">
+
+  <module name="hakibati-setting" package="com.hakibati.setting.db" />
+  <entity name="RegistreObservation" cacheable="true">
+    <string name="name" required="true" />
+    <string name="ville" title="Ville" />
+<!--    <string name="email"/>-->
+    <string name="tel" title="Telephone"/>
+    <string name="sujet" title="Sujet" />
+    <string name="observation" large="true" title="Observation"/>
+
+    <track>
+      <field name="name"/>
+      <field name="ville"/>
+      <field name="sujet"/>
+      <field name="observation"/>
+    </track>
+  </entity>
+
+
+</domain-models>

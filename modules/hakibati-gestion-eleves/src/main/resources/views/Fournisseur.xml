@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+
+  <grid name="Fournisseur-grid" title="Fournisseur" model="com.hakibati.gestion.eleves.db.Fournisseur">
+    <field name="name" />
+    <field name="telephone" />
+    <field name="email" />
+  </grid>
+
+  <form name="Fournisseur-form" title="Fournisseur" model="com.hakibati.gestion.eleves.db.Fournisseur">
+    <panel title="Ajouter ou modifier" showTitle="false">
+      <field name="name" />
+      <field name="address"/>
+      <field name="telephone" />
+      <field name="fax" />
+      <field name="cnss" />
+      <field name="email" />
+    </panel>
+  </form>
+</object-views>

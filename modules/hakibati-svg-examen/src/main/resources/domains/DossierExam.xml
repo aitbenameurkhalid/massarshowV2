@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_5.3.xsd">
+
+  <module name="hakibati-svg-examen" package="com.hakibati.svg.examen.db"/>
+  <entity name="DossierExam" cacheable="true" >
+
+    <string name="name" required="true" >
+      <![CDATA[
+    if (name == null)
+   return "Exemples " +id ;
+       return name;
+      ]]>
+
+    </string>
+    <integer name="progress" title="Progress (%)" default="5"/>
+    <string name="erreurDosExam" title="Erreur" large="true"/>
+     <integer name="etatDosExam" selection="select.etat.dos.exam" default="0" title="État du générateur"/>
+    <many-to-one name="center" ref="CentreExam"/>
+    <many-to-one name="createdBy" ref="com.axelor.auth.db.User"/>
+    <one-to-many name="resultats" ref="Resultats" mappedBy="dossierExam"/>
+    <many-to-one name="etablissement" ref="com.app.application.db.Etablissement"  >
+      <![CDATA[
+                if (etablissement != null )
+                 return etablissement;
+                 if(createdBy != null)
+                 return createdBy.getEtablissementSelectionnee() ;
+               return null;
+                  ]]>
+    </many-to-one>
+
+  </entity>
+
+
+</domain-models>

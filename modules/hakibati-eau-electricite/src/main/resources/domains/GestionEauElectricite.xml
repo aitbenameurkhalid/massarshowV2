@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_5.3.xsd">
+
+  <module name="hakibati-eau-electricite" package="com.hakibati.eau.electricite.db"/>
+
+  <entity name="GestionEauElectricite" cacheable="true">
+    <string name="codeGresa" title="Gresa"/>
+    <string name="numeroContratEau" title="N° de contrat d'eau"/>
+    <string name="numeroContratElectricite" title="N° de contrat d'électricité"/>
+    <integer name="nombreEleves" title="nombre des éléves"/>
+    <boolean name="iscollege" default="false" title="College"/>
+    <boolean name="isqualifiant" default="false" title="Qualifiant"/>
+    <boolean name="isprimaire" default="false" title="Primaire"/>
+    <boolean name="isannexe" default="false" title="َAnnexe"/>
+    <boolean name="isinternat" default="false" title="Internat"/>
+    <integer name="nombrebatimentsEau" default="1" title="nombre bâtiments"/>
+    <integer name="nombrebatimentsElicricite" default="1" title="nombre bâtiments"/>
+    <one-to-one name="etablissement" ref="com.app.application.db.Etablissement">
+      <![CDATA[
+    if (etablissement == null)
+   return createdBy.getEtablissementSelectionnee() ;
+   return etablissement;
+      ]]>
+    </one-to-one>
+    <many-to-one name="createdBy" ref="com.axelor.auth.db.User"/>
+    <many-to-one name="logoEnTete" ref="com.axelor.meta.db.MetaFile" title="Logo En Tete" initParam="true"/>
+    <finder-method name="findByEtab" using="etablissement" cacheable="true"/>
+    <!--    <unique-constraint columns="name,etablissement"/>-->
+  </entity>
+</domain-models>

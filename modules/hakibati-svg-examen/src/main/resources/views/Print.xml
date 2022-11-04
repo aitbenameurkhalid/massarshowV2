@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+
+
+  <form name="Print-form" title="Les Imprimes"  model="com.hakibati.svg.examen.db.CentreExam" canSave="false" canDelete="false" >
+    <panel title="les profisseurs" readonly="true">
+      <button name="print-prof-list" title="List-AR" onClick="print-list-prof-ar"/>
+      <button name="print-prof-list-fr" title="List-FR" onClick="print-list-prof-fr"/>
+      <button name="print-prof-Badge" title="Badge" onClick="print-list-badge"/>
+      <button name="print-prof-Badge3" title="print methode" onClick="action-List-method"/>
+      <button name="print-prof-pdf" title="print pdf" onClick="action-List-pdf"/>
+    </panel>
+  </form>
+
+
+  <action-report name="print-list-prof-ar"
+                 design="listProf-ar.rptdesign"
+                 output="listProf-ar-${date}${time}"
+                 format="pdf"
+                 attachment="false">
+  </action-report>
+  <action-report name="print-list-prof-fr"
+                 design="listProf-fr.rptdesign"
+                 output="listProf-fr-${date}${time}"
+                 format="pdf"
+                 attachment="false">
+  </action-report>
+  <action-report name="print-list-badge"
+                 design="badge-ar.rptdesign"
+                 output="print-list-badge-ar-${date}${time}"
+                 format="pdf"
+                 attachment="true">
+  </action-report>
+  <action-method name="action-List-method">
+    <call class="com.hakibati.svg.examen.web.PrintController" method="printListFr"/>
+  </action-method>
+  <action-method name="action-List-pdf">
+    <call class="com.hakibati.svg.examen.web.PrintController" method="exportProfPDF"/>
+  </action-method>
+
+    <action-method name="action-generat">
+        <call class="com.hakibati.svg.examen.service.Generate" method="generate"/>
+    </action-method>
+
+
+</object-views>

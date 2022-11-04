@@ -1,0 +1,64 @@
+"key","message","comment","context"
+"Ajouter ou modifier","إضافة أو تعديل",,"resources\views\Inventaire.xml:18
+resources\views\Inventaire.xml:19
+resources\views\MaterielListe.xml:14
+resources\views\MaterielType.xml:14
+resources\views\SuiviMateriel.xml:15"
+"Au","الى",,"resources\domains\SuiviMateriel.xml:11"
+"Code","الرقم",,"resources\domains\MaterielListe.xml:9
+resources\domains\MaterielType.xml:9"
+"Commentaire","ملاحظات",,"resources\domains\Inventaire.xml:26
+resources\views\Inventaire.xml:50"
+"Created by",,,"resources\domains\Inventaire.xml:37
+resources\domains\MaterielListe.xml:18
+resources\domains\MaterielType.xml:18
+resources\domains\SuiviMateriel.xml:20"
+"Date radiation","تاريخ الحذف",,"resources\domains\Inventaire.xml:22"
+"Date recéption","تاريخ التسلم",,"resources\domains\Inventaire.xml:11"
+"Du","من",,"resources\domains\SuiviMateriel.xml:10"
+"Désignation","الوصف",,"resources\domains\Inventaire.xml:10"
+"Etablissement","المؤسسة",,"resources\domains\Inventaire.xml:30
+resources\domains\MaterielListe.xml:11
+resources\domains\MaterielType.xml:11
+resources\domains\SuiviMateriel.xml:13"
+"Fournisseur","الطرف القابض",,"resources\domains\Inventaire.xml:15"
+"Inventaire","الجرد",,"resources\domains\SuiviMateriel.xml:12
+resources\views\Inventaire.xml:14
+resources\views\Inventaire.xml:6
+resources\views\Menu.xml:6"
+"Inventaire de type","نوع العتاد",,"resources\domains\Inventaire.xml:13"
+"Inventaire principale","رقم الجرد الرئيسي",,"resources\domains\Inventaire.xml:12"
+"LES PARAMETRES",,,"resources\views\Menu.xml:14"
+"Liste materiel","قائمة العتاد",,"resources\views\MaterielListe.xml:13
+resources\views\MaterielListe.xml:7
+resources\views\Menu.xml:20"
+"Local","مكان التواجد",,"resources\domains\SuiviMateriel.xml:8"
+"Locale","مكان التواجد",,"resources\domains\Inventaire.xml:18"
+"Marque / Modèle","العلامة التجارية او الطراز",,"resources\domains\Inventaire.xml:14"
+"MaterielListe",,,"resources\views\Menu.xml:21"
+"Matériel informatique","العتاد المعلوماتي",,"resources\views\Menu.xml:16"
+"Max size 4MB.","الحجم الأقصى 4MB",,"resources\domains\Inventaire.xml:8"
+"Motif radiation","سبب الحذف",,"resources\domains\Inventaire.xml:23"
+"Name","الاسم",,"resources\domains\MaterielListe.xml:10
+resources\domains\MaterielType.xml:10"
+"N° serie","الرقم التسلسلي",,"resources\domains\Inventaire.xml:16"
+"PV de designation","محضر الحجز",,"resources\views\Inventaire.xml:35"
+"PV de radiation","محضر الحذف",,"resources\views\Inventaire.xml:46"
+"PV de réception","محضر التسلم",,"resources\views\Inventaire.xml:36"
+"Photo","صورة المدخل أو شعار المؤسسة",,"resources\domains\Inventaire.xml:8"
+"Prix unitaire","ثمن الوحدة",,"resources\domains\Inventaire.xml:17"
+"Radiation","التشطيب",,"resources\views\Inventaire.xml:43"
+"Responsable","المسؤول",,"resources\domains\SuiviMateriel.xml:9"
+"Saisie et suivi","مسك وتتبع",,"resources\views\Menu.xml:8
+resources\views\Menu.xml:9"
+"Suivi","التتبع",,"resources\domains\Inventaire.xml:28
+resources\views\Inventaire.xml:38"
+"Suivi du Materiel","تتبع العتاد",,"resources\views\SuiviMateriel.xml:14
+resources\views\SuiviMateriel.xml:7"
+"Type","الصنف",,"resources\domains\Inventaire.xml:9"
+"Type de materiau","نوع العتاد",,"resources\views\Menu.xml:15"
+"Type materiel","نوع العتاد",,"resources\views\MaterielType.xml:13
+resources\views\MaterielType.xml:7"
+"pvDesignation","محضر الحجز",,"resources\domains\Inventaire.xml:20"
+"pvRadiation","محضر التشطيب",,"resources\domains\Inventaire.xml:24"
+"pvReception","محضر التسلم",,"resources\domains\Inventaire.xml:21"

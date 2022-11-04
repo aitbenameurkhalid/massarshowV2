@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+    <grid name="utilisateurs-grid" title="utilisateurs" model="com.app.application.db.Etablissement">
+        <toolbar>
+            <button name="btnSuivi" title="Suivi Etablissements" onClick="action-etablissement-suive-abonnement"  css="btn btn-warning label-bold bold large center"/>
+        </toolbar>
+        <field name="numero"/>
+        <field name="name"/>
+        <field name="typeEtablissemnt"/>
+        <field name="academie"/>
+        <field name="direction"/>
+        <field name="commun"/>
+        <field name="createdBy"/>
+    </grid>
+
+    <form name="utilisateurs-form" title="Les Utilisateurs" model="com.app.application.db.Etablissement" canNew="false"
+          onSave="save,action-save-etablissement" canArchive="false">
+        <panel showTitle="false" height="800">
+            <panel readonly="true" colSpan="12" showTitle="false">
+                <field name="name" showTitle="false" colSpan="10" css="btn btn-warning label-bold bold large"/>
+                <field name="numero" showTitle="false" colSpan="2" css="btn btn-warning label-bold bold large"/>
+            </panel>
+            <panel title="Liste Des Utilisateurs" colSpan="12" showTitle="false" height="400">
+                <panel-related colSpan="12" field="users" form-view="Etablissement-user-form"
+                               grid-view="Etablissement-user-grid" canSelect="false" canNew="true" canRemove="false"
+                               height="8"/>
+            </panel>
+        </panel>
+    </form>
+
+    <form name="InfoEtablissemnt-form" title="Information etablissement" model="com.app.application.db.Etablissement"
+          canNew="false" canArchive="false" canDelete="false" canCopy="false">
+        <panel readonly="true" colSpan="12" showTitle="false">
+            <field name="name" showTitle="false" colSpan="10" css="btn btn-warning label-bold bold large"/>
+            <field name="numero" showTitle="false" colSpan="2" css="btn btn-warning label-bold bold large"/>
+        </panel>
+        <panel-tabs>
+            <panel title="Overview">
+                <field name="name" onChange="save"/>
+                <field name="academie" onChange="save"/>
+                <field name="direction" onChange="save"/>
+                <field name="commun" onChange="save"/>
+                <field name="tel"/>
+                <field name="adresse"/>
+            </panel>
+            <panel title="Logo En Tete">
+                <panel>
+                    <field name="logoEnTete" widget="Image" colSpan="12" showTitle="true" readonly="true">
+                        <viewer>
+                            <![CDATA[
+              <img ng-show="record.logoEnTete" ng-src="{{$image('logoEnTete', 'content')}}" />
+              <img ng-show="!record.logoEnTete" src="img/logo-ar.png" />
+            ]]>
+                        </viewer>
+                    </field>
+                </panel>
+                <panel>
+                    <field name="ouiNon" default="02" title="changeLgo" showTitle="true" colSpan="4"
+                           widget="RadioSelect" selection="oui-non-select"/>
+                    <field name="logoEnTete" widget="Image" colSpan="12" showTitle="true" showIf="ouiNon==01"
+                           onChange="save"/>
+                </panel>
+            </panel>
+            <panel title="Etablissements Père">
+                <panel-related colSpan="12" field="etablissementsPrincipal" form-view="EtablissementPrincipal-form"
+                               grid-view="EtablissementPrincipal-grid" />
+            </panel>
+            <panel title="Etablissements fils" showIf="etablissementsAnnexe!=nulls">
+                <panel-related colSpan="12" field="etablissementsAnnexe" form-view="EtablissementAnnexe-form"
+                               grid-view="EtablissementAnnexe-grid" canNew="false" />
+            </panel>
+        </panel-tabs>
+        <panel title="Les Role Etablissement" showTitle="false">
+            <panel-related colSpan="12" field="etablissementRolsDescribe" form-view="zero"
+                           grid-view="EtablissementRolsDescribe-Eatblissement-grid" canSelect="false" canNew="false"
+                           canRemove="false" canEdit="false" canMove="false"/>
+        </panel>
+
+    </form>
+
+    <form name="InfoEtablissemnt-admins-form" title="Information etablissement"
+          model="com.app.application.db.Etablissement" canNew="true">
+        <panel-tabs>
+            <panel title="Overview">
+                <field name="numero" colSpan="12"/>
+                <field name="name" onChange="save"/>
+                <field name="academie" onChange="save"/>
+                <field name="direction" onChange="save"/>
+                <field name="commun" onChange="save"/>
+            </panel>
+
+            <panel title="Les Role Etablissement" showTitle="false">
+                <panel-related colSpan="12" field="etablissementRolsDescribe"
+                               form-view="EtablissementRolsDescribe-Eatblissement-form"
+                               grid-view="EtablissementRolsDescribe-Eatblissement-grid"/>
+            </panel>
+            <panel title="Liste Des Utilisateurs" colSpan="12" showTitle="false" height="400">
+                <panel-related colSpan="12" field="users" form-view="Etablissement-user-form"
+                               grid-view="Etablissement-user-grid" canSelect="false" canNew="true" canRemove="false"
+                               height="8"/>
+            </panel>
+            <panel title="Type Établissement">
+                <field name="typeEtablissemnt" widget="RadioSelect" selection="select-type-etablissemnt"/>
+            </panel>
+            <panel title="Etablissements Père">
+                <panel-related colSpan="12" field="etablissementsPrincipal" form-view="EtablissementPrincipal-form"
+                               grid-view="EtablissementPrincipal-grid" />
+            </panel>
+            <panel title="Etablissements fils" showIf="etablissementsAnnexe!=nulls">
+             <panel-related colSpan="12" field="etablissementsAnnexe" form-view="EtablissementAnnexe-form"
+                               grid-view="EtablissementAnnexe-grid" />
+            </panel>
+        </panel-tabs>
+    </form>
+    <form name="activation-compte-etablissement-form" title=" " model="com.app.application.db.Etablissement"
+          canNew="true" >
+        <panel title="Information Etablissement" showTitle="false">
+            <field name="name" colSpan="8" readonly="true" showTitle="false"
+                   css="btn btn-warning label-bold bold large center">
+                <viewer><![CDATA[
+  <p> {{record.name}}</p>
+  ]]></viewer>
+            </field>
+            <field name="numero" colSpan="4" readonly="true" showTitle="false"
+                   css="btn btn-warning label-bold bold large center">
+                <viewer><![CDATA[
+  <p> Id= {{record.numero}}</p>
+  ]]></viewer>
+            </field>
+        </panel>
+        <panel>
+            <field name="logoEnTete" showTitle="false" readonly="true" colSpan="12">
+                <viewer><![CDATA[
+<img src="img/axelor.png" alt="Girl in a jacket" style="width:250px;height:100px;display: block;  margin-left: auto;  margin-right: auto; width: 50%; " />
+<P style="text-align: center; font-weight: bold;color: rgb(0, 34, 34);"><font size="5">هذا المكون غير مفعل المرجو الاتصال بنا</P>
+<P style="text-align: center;"><font size="4">Ce composant n'est pas activé Veuillez nous contacter<P>
+<P style="text-align: center;"><font size="4">massarshow1@gmail.com;khalidtinghir@gmail.com <P>
+<P style="text-align: center;"><font size="4">00212659084748 <P>
+
+                ]]></viewer>
+            </field>
+        </panel>
+
+        <panel>
+            <label name="googleLabel"
+                   title="&lt;a class='fa fa-google' href='http://www.google.com' target='_blank' /&gt;" colSpan="1"/>
+            <label name="facebookLabel"
+                   title="&lt;a class='fa fa-facebook' href='https://facebook.com/profile.php?id=1804555997' target='_blank'/&gt;"
+                   colSpan="1"/>
+            <label name="facebookLabel"
+                   title="&lt;a class='fa fa-facebook' href='https://facebook.com/khalid.aitbenameur.1' target='_blank'/&gt;"
+                   colSpan="1"/>
+            <label name="twitterLabel"
+                   title="&lt;a class='fa fa-twitter' href='http://www.twitter.com' target='_blank' /&gt;" colSpan="1"/>
+            <label name="linkedinLabel"
+                   title="&lt;a class='fa fa-linkedin' href='http://www.linkedin.com' target='_blank' /&gt;"
+                   colSpan="1"/>
+            <label name="youtubeLabel"
+                   title="&lt;a class='fa fa-youtube' href='https://www.youtube.com/channel/UC9tkVzP7lu6jV-_uONVLFWg' target='_blank' /&gt;"
+                   colSpan="1"/>
+            <!--            <button name="btn-methode" onClick="action-print-methode-activation" title="methode"/>-->
+        </panel>
+    </form>
+
+    <selection name="oui-non-select">
+        <option value="01">Oui</option>
+        <option value="02">Non</option>
+    </selection>
+    <selection name="select-type-etablissemnt">
+        <option value="0">établissement scolaire</option>
+        <option value="1">Direction Prov</option>
+<!--                <option value="2">Académie</option>-->
+        <option value="10">Centre de langue</option>
+    </selection>
+
+    <action-method name="action-save-etablissement">
+        <call class="com.setting.web.EtablissementController" method="OnSaveEtablissement"/>
+    </action-method>
+
+    <action-method name="action-etablissement-suive-abonnement">
+        <call class="com.setting.web.EtablissementController" method="ExportSuiviEtablissemnts"/>
+    </action-method>
+    <!--    <action-report name="action-print-methode-activation"-->
+    <!--                   design="" output="">-->
+
+    <!--    </action-report>-->
+
+<!--    <action-report name="action-print-methode-activation"-->
+<!--                   design="print_method_activation.rptdesign"-->
+<!--                   output="method_activation-${date}${time}"-->
+<!--                   format="pdf">-->
+<!--        <param name="download" expr="true"/>-->
+<!--    </action-report>-->
+</object-views>

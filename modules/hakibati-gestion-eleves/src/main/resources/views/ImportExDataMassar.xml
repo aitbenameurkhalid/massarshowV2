@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+
+<!--    <form name="eleve-import-export-massar-men-gov-ma-form" title="Importation Masar"-->
+<!--          model="com.hakibati.gestion.eleves.db.Gestioneleves"-->
+<!--          canNew="false" width="mini">-->
+<!--        <panel title="Information de Massar" showTitle="false">-->
+<!--            <field name="etablissement.name" colSpan="8" readonly="true" showTitle="false"-->
+<!--                   css="btn btn-warning label-bold bold large center"/>-->
+<!--            <field name="etablissement.numero" colSpan="4" readonly="true" showTitle="false"-->
+<!--                   css="btn btn-warning label-bold bold large center"/>-->
+<!--        </panel>-->
+<!--        <panel name="info-login" title="Informations" itemSpan="12">-->
+<!--            <label name="messageAr"-->
+<!--                   title=" الطريقة المستخدمة للتواصل مع المسار هي d'interception proxy-->
+<!-- إنها طريقة آمنة ولا يمكن حفظ معلوماتك-->
+<!-- "-->
+<!--                   css="label-bold bold large"/>-->
+<!--            <label name="messageFr"-->
+<!--                   title="La méthode utilisée pour communiquer avec le chemin est proxy 'interception des donnes-->
+<!-- C'est une méthode sûre et vos informations ne peuvent pas être enregistrées"-->
+<!--                   css="label-bold bold large"/>-->
+<!--            <button name="btn-import-donnes-massar" title="Contunue"-->
+<!--                    onClick="action-open-import-export-all-data-massar"/>-->
+
+<!--        </panel>-->
+<!--    </form>-->
+
+
+<!--    <form name="eleve-import-export-all-data-massar-men-gov-ma-form" title="Import/export"-->
+<!--          model="com.hakibati.gestion.eleves.db.Gestioneleves"-->
+<!--          canNew="false" width="mid">-->
+<!--        <panel title="Information de Massar" colSpan="12">-->
+<!--            <field name="loginMassar" widget="email" title="Login de Massar" colSpan="6"-->
+<!--                   css="label-bold bold large center"/>-->
+<!--            <field name="passwordMassar" widget="password" title="Mote de passe" colSpan="4"-->
+<!--                   css="label-bold bold large center"/>-->
+<!--            <button name="btn-connection-massar" title="Connection" onClick="action-test-connection-massar"-->
+<!--                    colSpan="2"/>-->
+<!--        </panel>-->
+<!--        <panel name="info-login" readonly="true"  hidden="true" title="Information de Login Massar" colSpan="12">-->
+<!--            <field name="NomArabe" title="اسم المستخدم"/>-->
+<!--            <field name="NomLatine" title="nom utilisateur"/>-->
+<!--            <field name="CodeProfile" title="Profile"/>-->
+<!--            <field name="CodeEtablissement" title="Gresa"/>-->
+<!--            <field name="nOM_ETABA" title="اسم المؤسسة"/>-->
+<!--            <field name="nOM_ETABL" title="Nom Etablissement"/>-->
+
+<!--        </panel>-->
+<!--        <panel name="panel-import" hidden="true" title="Importez les données suivantes" colSpan="12">-->
+<!--            <field name="typeimport" showTitle="false" widget="CheckboxSelect"-->
+<!--                   selection="selection-list-type-import-donnes-massar" colSpan="8"/>-->
+<!--            <field name="anneScolair" title="Année scolaire" showTitle="true" colSpan="2" type="reference"-->
+<!--                   placeholder="Sélectionner un Annee" widget="SuggestBox" x-limit="1000" x-order="-idAnnee"-->
+<!--                   target="com.hakibati.gestion.eleves.db.AnneScolaire" required="true"/>-->
+<!--            <button name="btn-import-donnes-massar" colSpan="2" readonlyIf="typeimport==null || anneScolair==null" title="import"-->
+<!--                    onClick="save,action-import-all-data-massar"/>-->
+<!--        </panel>-->
+<!--    </form>-->
+
+
+    <selection name="selection-list-type-import-donnes-massar">
+        <option value="classes">List classes</option>
+        <option value="enseignant">List profs</option>
+        <option value="matieres">List matières</option>
+        <option value="eleves">list élèves</option>
+        <option value="notes">Notes</option>
+        <option value="affectation">Affect profs</option>
+
+    </selection>
+    <selection name="selection-list-type-export-donnes-massar">
+        <option value="4">Absence eleves</option>
+    </selection>
+
+<!--    <action-view name="action-open-import-export-all-data-massar" title="Import/Export"-->
+<!--                 model="com.hakibati.gestion.eleves.db.EleveInternat">-->
+<!--        <view type="form" name="eleve-import-export-all-data-massar-men-gov-ma-form"/>-->
+<!--        &lt;!&ndash;        <view-param name="forceTitle" value="true"/>&ndash;&gt;-->
+<!--        <view-param name="popup" value="reload"/>-->
+<!--        <view-param name="popup-save" value="false"/>-->
+<!--        <view-param name="popup.maximized" value="false"/>-->
+<!--        <view-param name="show-toolbar" value="false"/>-->
+<!--        <view-param name="show-confirm" value="false"/>-->
+<!--        <view-param name="forceEdit" value="true"/>-->
+<!--        <context name="_showRecord" expr="eval:id"/>-->
+
+<!--    </action-view>-->
+
+    <action-method name="action-test-connection-massar">
+        <call class="com.gestion.eleves.web.ImportExDataMassarController" method="TestConnectionMassar"/>
+    </action-method>
+    <action-method name="action-import-all-data-massar">
+        <call class="com.gestion.eleves.web.ImportExDataMassarController" method="ImportAllDataMassar"/>
+    </action-method>
+    <action-method name="action-export-all-data-massar">
+        <call class="com.gestion.eleves.web.ImportExDataMassarController" method="ExportAllDataMassar"/>
+    </action-method>
+
+</object-views>

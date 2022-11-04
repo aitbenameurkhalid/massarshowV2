@@ -1,0 +1,12 @@
+apply plugin: 'com.axelor.app-module'
+apply plugin: 'kotlin'
+
+axelor {
+    title = "Axelor :: HAKIBATI EAU & ELECTRICITE"
+    removable = true
+}
+
+
+dependencies {
+    api project(':modules:hakibati-setting')
+}

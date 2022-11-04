@@ -1,0 +1,4 @@
+name;menus
+role.hakibati.emploi.temps.read;menu-emploi-temps
+role.hakibati.emploi.temps.write;menu-emploi-temps
+role.hakibati.emploi.temps.delete;menu-emploi-temps

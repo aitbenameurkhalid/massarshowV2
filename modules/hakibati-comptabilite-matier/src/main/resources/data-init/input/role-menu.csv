@@ -1,0 +1,4 @@
+name;menus
+role.hakibati.comptabilite.matier.read;menu-Comptabilite-Materiel
+role.hakibati.comptabilite.matier.write;menu-Comptabilite-Materiel
+role.hakibati.comptabilite.matier.delete;menu-Comptabilite-Materiel

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_5.3.xsd">
+
+  <module name="hakibati-eau-electricite" package="com.hakibati.eau.electricite.db"/>
+  <entity name="ControleEau" cacheable="true">
+    <date name="dateControle"  title="Date de contrôle" required="true"/>
+    <integer name="valeurCompteur" title="valeur de compteur" required="true"/>
+    <binary name="imageCompteur" title="image Compteur" help="Max size 4MB." image="true"/>
+    <many-to-one name="etablissement" ref="com.app.application.db.Etablissement"  >
+      <![CDATA[
+    if (etablissement == null)
+   return createdBy.getEtablissementSelectionnee() ;
+   return etablissement;
+      ]]>
+    </many-to-one>-to-one>
+    <string name="codeGresa" title="Gresa"/>
+    <string name="numeroContratEau" title="contrat d'eau"/>
+    <many-to-one name="createdBy" ref="com.axelor.auth.db.User" />
+  </entity>
+</domain-models>

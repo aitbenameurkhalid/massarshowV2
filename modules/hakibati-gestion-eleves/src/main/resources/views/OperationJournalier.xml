@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+
+  <grid name="OperationJournalier-grid" title="Operation Journal" model="com.hakibati.gestion.eleves.db.OperationJournalier" editable="true" orderBy="article.ordre">
+    <field name="article.ordre" readonly="true"/>
+    <field name="article" readonly="true"/>
+    <field name="consommationPetitDejeuner" />
+    <field name="consommationDejeuner" />
+    <field name="consommationDediner" />
+    <field name="entreeDuJorur" />
+  </grid>
+
+  <form name="OperationJournalier-form" title="OperationJournal" model="com.hakibati.gestion.eleves.db.OperationJournalier">
+    <panel title="Ajouter ou modifier" showTitle="false" itemSpan="12">
+      <field name="article"/>
+      <field name="consommationPetitDejeuner" />
+      <field name="consommationDejeuner" />
+      <field name="consommationDediner" />
+      <field name="entreeDuJorur" />
+    </panel>
+  </form>
+</object-views>

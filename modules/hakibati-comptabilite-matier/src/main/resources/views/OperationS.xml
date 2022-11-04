@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+  <grid name="OperationS-grid" title="opération des  Sorties" model="com.hakibati.comptabilite.matier.db.OperationS"
+        canDelete="false" orderBy="-dateDeOperation">
+    <hilite if="statusSelect == 1" background="info"/>
+    <hilite if="statusSelect == 2" background="success"/>
+    <hilite if="statusSelect == 3" background="danger"/>
+    <field name="name"/>
+    <field name="destinataire"/>
+    <field name="dateDeOperation"/>
+    <field name="nomeDePersonne"/>
+    <field name="etablissement"/>
+    <field name="statusSelect" selection="OperationE.status.select"/>
+  </grid>
+
+  <form name="OperationS-form" title="opération des  Sorties" model="com.hakibati.comptabilite.matier.db.OperationS" onNew="action-new-operationS" canSave="false" >
+    <panel title="Overview" readonlyIf="statusSelect != 1">
+      <panel title="Status" showTitle="false" colSpan="12">
+        <field name="statusSelect" showTitle="false" readonly="true" colSpan="12" widget="NavSelect" fgColor=""/>
+      </panel>
+
+      <spacer name="space" colSpan="10"/>
+      <field name="name" colSpan="2" readonly="true"/>
+
+      <field name="destinataire" colSpan="8"/>
+      <field name="nomeDePersonne" colSpan="2"/>
+      <field name="dateDeOperation" colSpan="2"/>
+
+    </panel>
+    <panel name="actionsPanel" colSpan="2" sidebar="true">
+      <button name="deleteBtn" title="Supprime l'operation" hidden="true" showIf="statusSelect == 1" colSpan="12"
+              css="btn-danger" icon="fa-times-circle" prompt="Voulez-vous vraiment Supprime l'operation?"
+              onClick="save,action-deleteOperationS"/>
+      <button name="savetBtn" title="Enregistrer" hidden="true" showIf="statusSelect == 1" colSpan="12"
+              icon="fa-play"  onClick="save"/>
+      <field name="typeImprime" widget="RadioSelect" selection="imprime-type-select" showTitle="false"
+             default="PDF"/>
+      <button name="startBtn" title="Validé et Imprime" hidden="true" showIf="statusSelect == 1" colSpan="12"
+              icon="fa-play" prompt="Voulez-vous vraiment valide l'operation?" onClick="save,get-numero-OperationS,action-operationS-valide,save,action-print-operationS-single"/>
+      <button name="cancel1Btn" title="Annulé l'operation" hidden="true"
+              showIf="statusSelect == 2" colSpan="12" css="btn-danger"
+              icon="fa-times-circle" prompt="Voulez-vous vraiment Annulé l'operation?"
+              onClick="action-operationS-annule0,action-operationS-annule,save"/>
+      <button name="printBtn" title="Imprime" hidden="true" showIf="statusSelect == 2" colSpan="12"
+              icon="fa-angle-double-left" onClick="save,action-print-operationS-single"/>
+
+      <button name="cancelprintbtn" title="Imprime" hidden="false" showIf="statusSelect == 3" colSpan="12"
+              icon="fa-play" onClick="action-operationS-Annule-print"/>
+
+
+    </panel>
+
+    <panel title="list des matieres" showTitle="false">
+      <panel-related field="tablesSorties" colSpan="12" grid-view="TableS-grid" form-view="TableS-form" canView="true"
+                     canNew="true" canSelect="false" canRemove="true" canEdit="true"
+                     readonlyIf="statusSelect == 3||statusSelect == 2"/>
+    </panel>
+    <panel-mail>
+      <mail-messages limit="4" />
+<!--      <mail-followers />-->
+    </panel-mail>
+  </form>
+
+
+<!--  <selection name="OperationE.status.select">-->
+<!--    <option value="1">En cours de réalisation</option>-->
+<!--    <option value="2">confirmation</option>-->
+<!--    <option value="3">Annulé</option>-->
+<!--  </selection>-->
+
+  <action-record name="action-operationS-valide" model="com.hakibati.comptabilite.matier.db.OperationS">
+    <field name="statusSelect" expr="eval: __repo__(OperationS).phase2"/>
+  </action-record>
+  <action-record name="action-operationS-annule0" model="com.hakibati.comptabilite.matier.db.OperationS">
+    <field name="statusSelect" expr="eval: __repo__(OperationS).phase3"/>
+  </action-record>
+  <action-method name="action-operationS-annule">
+    <call class="com.comptabilite.matier.web.OperationEController" method="AnnuleOperations"/>
+  </action-method>
+  <action-method name="get-numero-OperationS">
+    <call class="com.comptabilite.matier.web.OperationEController" method="getNumeroOperationS"/>
+  </action-method>
+  <action-record name="action-new-operationS" model="com.hakibati.comptabilite.matier.db.OperationS">
+    <field name="dateDeOperation" expr="call:com.comptabilite.matier.web.OperationEController:getCurretDate()"/>
+  </action-record>
+  <action-method name="action-deleteOperationS">
+    <call class="com.comptabilite.matier.web.OperationEController" method="deleteOperationS"/>
+  </action-method>
+  <action-method name="action-print-operationS-single">
+    <call class="com.comptabilite.matier.web.OperationPrintController" method="PrintoperationSsingle"/>
+  </action-method>
+
+</object-views>

@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+    <grid name="OperationDepense-grid" title="opération des  Depense"
+          model="com.hakibati.ass.enajah.db.OperationDepense"
+          canDelete="false" orderBy="-dateDeOperation">
+        <hilite if="statusSelectBonCommandeCaisse == 1" background="info"/>
+        <hilite if="statusSelectBonCommandeCaisse == 2" background="success"/>
+        <hilite if="statusSelectBonCommandeCaisse == 3" background="danger"/>
+        <field name="dateDeOperation"/>
+        <field name="sujet"/>
+        <field name="name"/>
+        <field name="selectMethode" selection="Operation.select.methode"/>
+        <field name="fournisseur"/>
+        <field name="statusSelectBonCommandeCaisse" selection="Operation.status.select.Bon"/>
+    </grid>
+
+    <form name="OperationDepense-form" title="opération des  Depense"
+          model="com.hakibati.ass.enajah.db.OperationDepense" onNew="action-getCurretDate" onSave="action-get-somme">
+        <panel showTitle="false">
+            <panel title="Status" showTitle="false" colSpan="12" showIf="selectMethode == 2">
+                <field name="statusSelectBonCommandeCaisse" showTitle="false" readonly="true" colSpan="12"
+                       widget="NavSelect"
+                       fgColor="" selection="Operation.status.select.BonCommande"/>
+            </panel>
+            <panel title="Status" showTitle="false" colSpan="12" showIf="selectMethode == 1">
+                <field name="statusSelectBonCommandeCaisse" showTitle="false" readonly="true" colSpan="12"
+                       widget="NavSelect"
+                       fgColor="" selection="Operation.status.select.BonCaisse"/>
+            </panel>
+            <field name="selectMethode" colSpan="3" onChange="action-change-method"/>
+            <spacer name="space" colSpan="7"/>
+            <field name="name" colSpan="2" readonly="true"/>
+            <field name="sujet" colSpan="8"/>
+            <field name="dateDeOperation" colSpan="2"/>
+            <field name="anneeFinanciere" colSpan="2"/>
+        </panel>
+
+        <panel name="actionsPanel" colSpan="2" itemSpan="12" sidebar="true" showIf="selectMethode == 2">
+            <button name="SavetBtn" title="Enregistrer" hidden="true" showIf="statusSelectBonCommandeCaisse &gt; 0"
+                    icon="fa-play" onClick="action-get-somme,save"/>
+            <button name="validebesoin" title="Validé_Besoines" hidden="true"
+                    showIf="statusSelectBonCommandeCaisse == 1" colSpan="12" icon="fa-play"
+                    prompt="Voulez-vous vraiment valide l'operation?"
+                    onClick="save,action-getnumeroOperationDepense,action-get-somme,action-operationDepense-Valide_Besoines,save"/>
+            <button name="valideDevis" title="Validé_D_Devis" hidden="true" showIf="statusSelectBonCommandeCaisse == 2"
+                    colSpan="12" icon="fa-play" prompt="Voulez-vous vraiment valide l'operation?"
+                    onClick="save,action-get-somme,action-operationDepense-Valide_D_Devis,save"/>
+            <button name="Valide_PV_fournisseur" title="Validé_PV_fournisseur" hidden="true"
+                    showIf="statusSelectBonCommandeCaisse == 3" colSpan="12" icon="fa-play"
+                    prompt="Voulez-vous vraiment valide l'operation?"
+                    onClick="save,action-get-somme,action-operationDepense-Valide_PV_fournisseur,save"/>
+            <button name="Valide_Bon_commande" title="Validé_Bon_Commande" hidden="true"
+                    showIf="statusSelectBonCommandeCaisse == 4" colSpan="12" icon="fa-play"
+                    prompt="Voulez-vous vraiment valide l'operation?"
+                    onClick="save,action-get-somme,action-operationDepense-Valide_Bon_commande,save"/>
+            <button name="Valide_Livraison" title="Validé_Livraison" hidden="true"
+                    showIf="statusSelectBonCommandeCaisse == 5" colSpan="12" icon="fa-play"
+                    prompt="Voulez-vous vraiment valide l'operation?"
+                    onClick="save,action-get-somme,action-operationDepense-Valide_Livraison,save"/>
+            <button name="Valide_Facture" title="Validé_Facture" hidden="true"
+                    showIf="statusSelectBonCommandeCaisse == 6" colSpan="12" icon="fa-play"
+                    prompt="Voulez-vous vraiment valide l'operation?"
+                    onClick="save,action-get-somme,action-operationDepense-Valide_Facture,save"/>
+            <button name="Valide_Paiement" title="Validé_Paiement" hidden="true"
+                    showIf="statusSelectBonCommandeCaisse == 7" colSpan="12" icon="fa-play"
+                    prompt="Voulez-vous vraiment valide l'operation?"
+                    onClick="save,action-get-somme,action-operationDepense-Valide_Paiement,save"/>
+
+            <field name="typeImprime" widget="RadioSelect" selection="imprime-type-select" showTitle="false"
+                   default="PDF"/>
+
+            <button name="btn_Imprime_Besoins" title="Imprimé_Besoins" icon="fa-print"
+                    onClick="save,action-get-somme,action-print-besoines"/>
+            <button name="btn_Imprime_D_Devis" title="Imprimé_D_Devis" hidden="true"
+                    showIf="statusSelectBonCommandeCaisse &gt; 1" icon="fa-print" onClick="save,action-get-somme,action-print-D-Devis"/>
+            <button name="btn_Imprime_PV_fournisseur" title="Imprimé_PV_fournisseur" hidden="true"
+                    showIf="statusSelectBonCommandeCaisse &gt; 2" icon="fa-print" onClick="save,action-print-D-Devis"/>
+            <button name="btn_Imprime_Bon_Commande" title="Imprimé_Bon_Commande" hidden="true"
+                    showIf="statusSelectBonCommandeCaisse &gt; 3" icon="fa-print"
+                    onClick="save,action-get-somme,save,action-print-B-Commande"/>
+            <button name="btn_Imprime_Livraison" title="Imprimé_Bon_Livraison" hidden="true"
+                    showIf="statusSelectBonCommandeCaisse &gt; 4" icon="fa-print"
+                    onClick="save,action-get-somme,save,action-print-B-Livraison"/>
+            <button name="btn_Imprime_Facture" title="Imprimé_Facture" hidden="true"
+                    showIf="statusSelectBonCommandeCaisse &gt; 5" icon="fa-print" onClick="save,action-get-somme,save,action-print-Facture"/>
+            <button name="btn_Imprime_Paiement" title="Imprimé_Paiement" hidden="true"
+                    showIf="statusSelectBonCommandeCaisse &gt; 6" icon="fa-print" onClick="save,action-get-somme,save,action-print-Paiement"/>
+        </panel>
+
+        <panel name="actionsPanel" colSpan="2" itemSpan="12" sidebar="true" showIf="selectMethode == 1">
+            <button name="SavetBtnc" title="Enregistrer" hidden="true" showIf="statusSelectBonCommandeCaisse &gt; 0"
+                    icon="fa-play" onClick="save"/>
+            <button name="validebesoinc" title="Validé_Besoines" hidden="true"
+                    showIf="statusSelectBonCommandeCaisse == 1" colSpan="12" icon="fa-play"
+                    prompt="Voulez-vous vraiment valide l'operation?"
+                    onClick="save,action-getnumeroOperationDepense,action-operationDepense-Valide_Besoines_caisse,save"/>
+            <button name="Valide_Livraisonc" title="Validé_Livraison" hidden="true"
+                    showIf="statusSelectBonCommandeCaisse == 10" colSpan="12" icon="fa-play"
+                    prompt="Voulez-vous vraiment valide l'operation?"
+                    onClick="save,action-operationDepense-Valide_Livraison_caisse,save"/>
+            <button name="Valide_Paiementc" title="Validé_Paiement" hidden="true"
+                    showIf="statusSelectBonCommandeCaisse == 11" colSpan="12" icon="fa-play"
+                    prompt="Voulez-vous vraiment valide l'operation?"
+                    onClick="save,action-operationDepense-Valide_Paiement_caisse,save"/>
+
+            <field name="typeImprime" widget="RadioSelect" selection="imprime-type-select" showTitle="false"
+                   default="PDF"/>
+
+            <button name="btn_Imprime_Besoins" title="Imprimé_Besoins" icon="fa-print"
+                    onClick="save,action-print-besoines"/>
+            <button name="btn_Imprime_Livraison" title="Imprimé_Bon_Livraison" hidden="true"
+                    showIf="statusSelectBonCommandeCaisse &gt; 9" icon="fa-print"
+                    onClick="save,action-print-Bon_Livraison"/>
+            <button name="btn_Imprime_Paiement" title="Imprimé_Paiement" hidden="true"
+                    showIf="statusSelectBonCommandeCaisse &gt; 10" icon="fa-print"
+                    onClick="save,action-print-Paiement"/>
+        </panel>
+        <panel-tabs showIf="selectMethode &gt; 0">
+            <panel title="besoins" showTitle="true" showIf="statusSelectBonCommandeCaisse &lt; 3">
+                <panel-related colSpan="12" field="tablesDepenses" form-view="TableDepense-besoins-form"
+                               grid-view="TableDepense-besoins-grid" canSelect="false" canNew="true" canView="true"
+                               canEdit="true" canRemove="true"/>
+                <label name="message" title="Veuillez vérifier la quantité de besoins, puis imprimer un rapport "
+                       colSpan="12"/>
+                <label name="message" title="المرجو التأكد من كمية الحاجيات ، ثم طبع محضر " colSpan="12"/>
+            </panel>
+            <panel title="fournisseurs/persone" showTitle="true" itemSpan="12"
+                   showIf="statusSelectBonCommandeCaisse &gt; 2 &amp;&amp; selectMethode == 1">
+                <field name="f1" title="Le fournisseur ou la personne qui a effectué le service">
+                    <editor x-show-titles="false">
+                        <field name="fournisseur" showTitle="false" colSpan="5" title="Le nom complet"/>
+                        <field name="adresseFournisseur" colSpan="5"/>
+                    </editor>
+                </field>
+            </panel>
+            <panel title="fournisseurs" showTitle="true" itemSpan="12"
+                   showIf="statusSelectBonCommandeCaisse &gt; 2 &amp;&amp; selectMethode == 2">
+                <field name="f1" title="Le fournisseur qui a remporté la transaction">
+                    <editor x-show-titles="false">
+                        <field name="fournisseur" showTitle="false" colSpan="5"/>
+                        <field name="adresseFournisseur" colSpan="5"/>
+                        <field name="offres" showTitle="true" colSpan="2"/>
+                    </editor>
+                </field>
+                <field name="f2" title="Le 2eme  fournisseur">
+                    <editor x-show-titles="false">
+                        <field name="fournisseurDeux" showTitle="false" colSpan="5"/>
+                        <field name="adresseFournisseurDeux" colSpan="5"/>
+                        <field name="offresDeux" showTitle="true" colSpan="2"/>
+                    </editor>
+                </field>
+                <field name="f2" title="Le 3eme  fournisseur">
+                    <editor x-show-titles="false">
+                        <field name="fournisseurTrois" showTitle="false" colSpan="5"/>
+                        <field name="adresseFournisseurTrois" colSpan="5"/>
+                        <field name="offresTrois" showTitle="true" colSpan="2"/>
+                    </editor>
+                </field>
+                <field name="f2" title="Le 4eme  fournisseur">
+                    <editor x-show-titles="false">
+                        <field name="fournisseurQuatre" showTitle="false" colSpan="5"/>
+                        <field name="adresseFournisseurQuatre" colSpan="5"/>
+                        <field name="offresQuatre" showTitle="true" colSpan="2"/>
+                    </editor>
+                </field>
+                <field name="f2" title="Le 5eme  fournisseur">
+                    <editor x-show-titles="false">
+                        <field name="fournisseurCinq" showTitle="false" colSpan="5"/>
+                        <field name="adresseFournisseurCinq" colSpan="5"/>
+                        <field name="offresCinq" showTitle="true" colSpan="2"/>
+                    </editor>
+                </field>
+            </panel>
+            <panel title="Commandes" showTitle="true"
+                   showIf="statusSelectBonCommandeCaisse &gt; 3 &amp;&amp; selectMethode == 2">
+                <panel-related colSpan="12" field="tablesDepenses" form-view="TableDepense-bon-commande-form"
+                               grid-view="TableDepense-bon-commande-grid" canSelect="false" canNew="true" canView="true"
+                               canEdit="true" canRemove="true"/>
+                <label name="message"
+                       title="Veuillez vérifier la quantité et le prix de Commande, puis imprimer un rapport "
+                       colSpan="12"/>
+                <label name="message" title="المرجو التأكد من ثمن الطليبة ، ثم طبع محضر " colSpan="12"/>
+            </panel>
+            <panel title="Commandes" showTitle="true"
+                   showIf="statusSelectBonCommandeCaisse &gt; 3 &amp;&amp; selectMethode == 1">
+                <panel-related colSpan="12" field="tablesDepenses" form-view="TableDepense-bon-caisse-form"
+                               grid-view="TableDepense-bon-caisse-grid" canSelect="false" canNew="true" canView="true"
+                               canEdit="true" canRemove="true"/>
+                <label name="message"
+                       title="Veuillez vérifier la quantité et le prix de Commande, puis imprimer un rapport "
+                       colSpan="12"/>
+                <label name="message" title="المرجو التأكد من ثمن الطليبة ، ثم طبع محضر " colSpan="12"/>
+            </panel>
+
+            <panel title="Piece Joindre" showTitle="true">
+                <panel-related colSpan="12" field="tablesPieceJoindre" form-view="PieceJoindreDepense-form"
+                               grid-view="PieceJoindreDepense-grid" canSelect="false" canNew="true" canView="true"
+                               canEdit="true" canRemove="true"/>
+            </panel>
+
+            <panel title="Domaine/cheque" showTitle="true"  showIf="statusSelectBonCommandeCaisse &gt; 5 &amp;&amp; selectMethode == 2">
+               <field name="somme" readonly="true" colSpan="2"/>
+                <field name="sommeLettreAr" showTitle="false" readonly="true" colSpan="5"/>
+                <field name="sommeLettreFr" showTitle="false" readonly="true" colSpan="5"/>
+
+                <field name="methodePaiement"  widget="RadioSelect"/>
+                <field name="domainDepense" />
+                <field name="numeroCheque"  showIf="methodePaiement==1" colSpan="12"/>
+                <field name="ribDeFournisseur" showIf="methodePaiement==2" colSpan="12"/>
+
+             </panel>
+
+            <panel title="Domaine De Depens" showTitle="true"  showIf="statusSelectBonCommandeCaisse &gt; 5 &amp;&amp; selectMethode == 1">
+                <field name="domainDepense"/>
+            </panel>
+        </panel-tabs>
+        <panel-mail>
+            <mail-messages limit="4" />
+            <!--      <mail-followers />-->
+        </panel-mail>
+    </form>
+
+    <selection name="Operation.select.methode.paiement">
+        <option value="1">Par chèque</option>
+        <option value="2">Par virement à compte bancaire</option>
+    </selection>
+    <selection name="Operation.select.methode">
+        <option value="1">Bon de Caisse</option>
+        <option value="2">Bon de commande</option>
+    </selection>
+    <selection name="Operation.status.select.BonCommande">
+        <option value="1">Déterminer les besoins</option>
+        <option value="2">Demande de devis</option>
+        <option value="3">Déterminer de fournisseur</option>
+        <option value="4">Bon de commande</option>
+        <option value="5">Livraison</option>
+        <option value="6">Facture</option>
+        <option value="7">Paiement</option>
+    </selection>
+
+    <selection name="Operation.status.select.BonCaisse">
+        <option value="1">Déterminer les besoins</option>
+        <option value="10">Livraison</option>
+        <option value="11">Paiement</option>
+    </selection>
+    <selection name="Operation.status.select.Bon">
+        <option value="1">Déterminer les besoins</option>
+        <option value="2">Demande de devis</option>
+        <option value="3">Déterminer de fournisseur</option>
+        <option value="4">Bon de commande</option>
+        <option value="5">Livraison</option>
+        <option value="6">Facture</option>
+        <option value="7">Paiement</option>
+        <option value="10">Livraison</option>
+        <option value="11">Paiement</option>
+    </selection>
+    <selection name="imprime-type-select">
+        <option value="pdf">PDF</option>
+        <option value="xlsx">EXCEL</option>
+        <option value="docx">WORD</option>
+    </selection>
+
+    <action-record name="action-getCurretDate" model="com.hakibati.ass.enajah.db.OperationDepense">
+        <field name="dateDeOperation" expr="call:com.ass.enajah.service.DateService:getCurretDate()"/>
+        <field name="anneeFinanciere" expr="call:com.ass.enajah.service.DateService:getCurretAnnee()"/>
+    </action-record>
+    <action-method name="action-getnumeroOperationDepense">
+        <call class="com.ass.enajah.web.OperationDepensController" method="GetnumeroOepartion"/>
+    </action-method>
+    <action-method name="action-get-somme">
+        <call class="com.ass.enajah.web.OperationDepensController" method="GetSomme"/>
+    </action-method>
+
+    <action-record name="action-change-method" model="com.hakibati.ass.enajah.db.OperationDepense">
+        <field name="statusSelectBonCommandeCaisse" expr="eval: __repo__(OperationDepense).phase1"/>
+    </action-record>
+    <action-record name="action-operationDepense-Valide_Besoines" model="com.hakibati.ass.enajah.db.OperationDepense">
+        <field name="statusSelectBonCommandeCaisse" expr="eval: __repo__(OperationDepense).phase2"/>
+    </action-record>
+    <action-record name="action-operationDepense-Valide_D_Devis" model="com.hakibati.ass.enajah.db.OperationDepense">
+        <field name="statusSelectBonCommandeCaisse" expr="eval: __repo__(OperationDepense).phase3"/>
+    </action-record>
+    <action-record name="action-operationDepense-Valide_PV_fournisseur"
+                   model="com.hakibati.ass.enajah.db.OperationDepense">
+        <field name="statusSelectBonCommandeCaisse" expr="eval: __repo__(OperationDepense).phase4"/>
+    </action-record>
+    <action-record name="action-operationDepense-Valide_Bon_commande"
+                   model="com.hakibati.ass.enajah.db.OperationDepense">
+        <field name="statusSelectBonCommandeCaisse" expr="eval: __repo__(OperationDepense).phase5"/>
+    </action-record>
+    <action-record name="action-operationDepense-Valide_Livraison" model="com.hakibati.ass.enajah.db.OperationDepense">
+        <field name="statusSelectBonCommandeCaisse" expr="eval: __repo__(OperationDepense).phase6"/>
+    </action-record>
+    <action-record name="action-operationDepense-Valide_Facture" model="com.hakibati.ass.enajah.db.OperationDepense">
+        <field name="statusSelectBonCommandeCaisse" expr="eval: __repo__(OperationDepense).phase7"/>
+    </action-record>
+    <action-record name="action-operationDepense-Valide_Paiement" model="com.hakibati.ass.enajah.db.OperationDepense">
+        <field name="statusSelectBonCommandeCaisse" expr="eval: __repo__(OperationDepense).phase8"/>
+    </action-record>
+
+    <action-record name="action-operationDepense-Valide_Besoines_caisse"
+                   model="com.hakibati.ass.enajah.db.OperationDepense">
+        <field name="statusSelectBonCommandeCaisse" expr="eval: __repo__(OperationDepense).phase10"/>
+    </action-record>
+    <action-record name="action-operationDepense-Valide_Livraison_caisse"
+                   model="com.hakibati.ass.enajah.db.OperationDepense">
+        <field name="statusSelectBonCommandeCaisse" expr="eval: __repo__(OperationDepense).phase11"/>
+    </action-record>
+    <action-record name="action-operationDepense-Valide_Paiement_caisse"
+                   model="com.hakibati.ass.enajah.db.OperationDepense">
+        <field name="statusSelectBonCommandeCaisse" expr="eval: __repo__(OperationDepense).phase12"/>
+    </action-record>
+
+    <action-method name="action-print-besoines">
+        <call class="com.ass.enajah.web.OperationDepensPrint" method="PrintPvBesoines"/>
+    </action-method>
+    <action-method name="action-print-D-Devis">
+        <call class="com.ass.enajah.web.OperationDepensPrint" method="PrintDemmandeDevis"/>
+    </action-method>
+
+    <action-method name="action-print-B-Commande">
+        <call class="com.ass.enajah.web.OperationDepensPrint" method="PrintBonCommande"/>
+    </action-method>
+    <action-method name="action-print-B-Livraison">
+        <call class="com.ass.enajah.web.OperationDepensPrint" method="PrintBonLivraison"/>
+    </action-method>
+
+
+</object-views>

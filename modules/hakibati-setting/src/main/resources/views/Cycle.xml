@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+  <grid name="Cycle-grid" title="les cycles" model="com.hakibati.setting.db.Cycle">
+    <field name="name" />
+    <field name="code" />
+  </grid>
+
+  <form name="Cycle-form" title="type de cycle" cols="2" model="com.hakibati.setting.db.Cycle">
+    <panel title="Overview">
+      <field name="name" />
+      <field name="code" />
+    </panel>
+  </form>
+
+</object-views>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_5.3.xsd">
+
+    <module name="hakibati-ressource-humaine" package="com.hakibati.ressource.humaine.db"/>
+    <entity name="PersonnelRh" cacheable="true">
+        <string name="name">
+            <![CDATA[
+    if (nomA == null)
+   return null ;
+   return ppr +" : " + nomA;
+      ]]>
+        </string>
+        <integer name="idPersonnel" title="idPersonnel"/>
+        <string name="adresse" title="aDRESSE"/>
+        <string name="adresseElec" title="aDRESSE_ELEC"/>
+        <boolean name="affectationPrincipale" title="affectationPrincipale"/>
+        <boolean name="affilie" title="aFFILIE"/>
+        <!--        -->
+        <string name="ancAdm" title="aNC_ADM"/>
+        <string name="ancEchelon" title="aNC_ECHELON"/>
+        <string name="ancGrade" title="aNC_GRADE"/>
+        <!--        -->
+        <integer name="anNais" title="aN_NAIS"/>
+        <string name="cdEtab" title="cdEtab"/>
+        <string name="cdCadre" title="cD_CADRE"/>
+        <string name="cadreAr" title="CADRE"/>
+        <string name="cadreFr" title="CADRE"/>
+        <string name="cdDipp" title="cD_DIPP"/>
+        <string name="cdDips" title="cD_DIPS"/>
+        <string name="cdDiscip" title="cD_DISCIP"/>
+        <string name="cdGrade" title="cD_GRADE"/>
+        <string name="gradeAr" title="GRADE"/>
+        <string name="gradeFr" title="GRADE"/>
+        <string name="cdMatiere" title="cd_matiere"/>
+        <string name="matiereAr" title="cd_matiere"/>
+        <string name="matiereFr" title="cd_matiere"/>
+        <string name="cdNation" title="cD_NATION"/>
+        <string name="cdPosition" title="cD_POSITION"/>
+        <string name="cdStatut" title="cD_STATUT"/>
+        <string name="cin" title="cINA"/>
+        <integer name="codePostal" title="cODE_POSTAL"/>
+        <!--        -->
+        <string name="dateAffil" title="dATEAFFIL"/>
+        <string name="dateModification" title="dateModification"/>
+        <string name="datePosition" title="dATE_POSITION"/>
+        <string name="dateRec" title="dATE_REC"/>
+        <string name="dateSitfam" title="dATE_SITFAM"/>
+        <string name="dateCadre" title="dT_CADRE"/>
+        <string name="dateDipprof" title="dT_DIPPROF"/>
+        <string name="dateDipscol" title="dT_DIPSCOL"/>
+        <string name="dateEchelon" title="dT_ECHELON"/>
+        <string name="dateGrade" title="dT_GRADE"/>
+        <string name="dateSitstat" title="dT_SITSTAT"/>
+        <string name="dateTitul" title="dT_TITUL"/>
+        <!--        -->
+        <integer name="echelon" title="eCHELON"/>
+        <string name="email" title="email"/>
+        <string name="genre" title="gENRE"/>
+        <integer name="idRefpopulation" title="idRefPopulation"/>
+        <integer name="idTypedomaine" title="id_typeDomaine"/>
+        <integer name="jourNais" title="jOUR_NAIS"/>
+        <string name="lieuNais" title="lIEU_NAIS"/>
+        <string name="modavgra" title="mODAVGRA"/>
+        <integer name="moisNais" title="mOIS_NAIS"/>
+        <string name="nomA" title="nOMA"/>
+        <string name="nomL" title="nOML"/>
+        <integer name="numAffil" title="numAFFIL"/>
+        <integer name="numImma" title="numImma"/>
+        <integer name="ppr" title="pPR"/>
+        <string name="prenomA" title="pRENOMA"/>
+        <string name="prenomL" title="pRENOML"/>
+        <string name="sitFam" title="sIT_FAM"/>
+        <string name="telFixe" title="tEL_FIXE"/>
+        <string name="telPortable" title="tEL_PORTABLE"/>
+        <string name="ville" title="vILLE"/>
+        <string name="villeForm" title="vILLEFORM"/>
+        <string name="cdFonc" title="CD_FONC"/>
+        <string name="foncAr" title="FONC AR"/>
+        <string name="foncFr" title="FONC FR"/>
+
+
+
+        <many-to-one name="matiere" title="Matiere" ref="MatiereRh"/>
+
+        <one-to-many name="grevePersonnel" ref="GrevePersonnel" mappedBy="personnelRh"/>
+        <many-to-one name="gestionRH" ref="GestionRH" title="Gestion RH"/>
+        <many-to-one name="etablissement" ref="com.app.application.db.Etablissement">
+            <![CDATA[
+    if (etablissement == null)
+   return createdBy.getEtablissementSelectionnee() ;
+   return etablissement;
+      ]]>
+        </many-to-one>
+        <many-to-one name="createdBy" ref="com.axelor.auth.db.User"/>
+    </entity>
+</domain-models>

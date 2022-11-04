@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+  <menuitem name="menu-centre-langue" title="Gestion Centre de langues" icon="fa-file-text-o" icon-background="violet"/>
+  <menuitem name="menu-centre-langue-matiere" parent="menu-centre-langue" title="Matieres"  action="action-centre-langue-matiere" />
+  <action-view name="action-centre-langue-matiere" title="Matiere" model="com.hakibati.centre.langue.db.MatiereCentre">
+    <view type="grid" name="MatiereCentre-grid"/>
+    <view type="form" name="MatiereCentre-form"/>
+  </action-view>
+  <menuitem name="menu-centre-langue-niveau" parent="menu-centre-langue" title="Niveaux"  action="action-centre-langue-niveau" />
+  <action-view name="action-centre-langue-niveau" title="Niveau" model="com.hakibati.centre.langue.db.NiveauCentre">
+    <view type="grid" name="NiveauCentre-grid"/>
+    <view type="form" name="NiveauCentre-form"/>
+  </action-view>
+
+  <menuitem name="menu-centre-langue-prof" parent="menu-centre-langue" title="Profs"  action="action-centre-langue-prof" />
+    <action-view name="action-centre-langue-prof" title="Profs" model="com.hakibati.centre.langue.db.ProfCentre">
+    <view type="grid" name="ProfCentre-grid"/>
+    <view type="form" name="ProfCentre-form"/>
+  </action-view>
+
+  <menuitem name="menu-centre-langue-eleve" parent="menu-centre-langue" title="Élèves"  action="action-centre-langue-eleve" />
+  <action-view name="action-centre-langue-eleve" title="Élèves" model="com.hakibati.centre.langue.db.EleveCentre">
+    <view type="grid" name="EleveCentre-grid"/>
+    <view type="form" name="EleveCentre-form"/>
+  </action-view>
+
+  <menuitem name="menu-centre-langue-groupe" parent="menu-centre-langue" title="Groupes"  action="action-centre-langue-groupe" />
+  <action-view name="action-centre-langue-groupe" title="Groupe" model="com.hakibati.centre.langue.db.GroupeCentre">
+    <view type="grid" name="GroupeCentre-grid"/>
+    <view type="form" name="GroupeCentre-form"/>
+  </action-view>
+
+</object-views>

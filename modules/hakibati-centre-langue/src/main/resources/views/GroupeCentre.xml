@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+
+    <grid name="GroupeCentre-grid" title="Groupe Centre" model="com.hakibati.centre.langue.db.GroupeCentre">
+        <field name="name"/>
+<!--        <field name="montantMensuel"/>-->
+        <field name="profCentre"/>
+        <field name="matiereCentre"/>
+    </grid>
+
+    <form name="GroupeCentre-form" title="Groupe Centre" model="com.hakibati.centre.langue.db.GroupeCentre">
+        <panel title="Ajouter ou modifier" itemSpan="6">
+            <field name="name" colSpan="12"/>
+<!--            <field name="montantMensuel"/>-->
+            <field name="profCentre"/>
+            <field name="matiereCentre"/>
+            <spacer colSpan="6"/>
+            <button name="btn" title="Imprime Liste des étudiants" onClick="save,action-print-list-etudiant"/>
+        </panel>
+        <panel-tabs>
+            <panel-related field="eleveCentres" form-view="zero" grid-view="EleveCentre-grid" colSpan="12" canNew="false" canEdit="false" canView="false" />
+            <panel-related field="suiviFinancier" form-view="SuiviFinancierCentre-groupe-form"
+                           grid-view="SuiviFinancierCentre-groupe-grid" colSpan="12"/>
+        </panel-tabs>
+
+    </form>
+    <action-method name="action-print-list-etudiant">
+        <call class="com.centre.langue.web.GroupeCentreController" method="PrintListEtudiant"/>
+    </action-method>
+</object-views>

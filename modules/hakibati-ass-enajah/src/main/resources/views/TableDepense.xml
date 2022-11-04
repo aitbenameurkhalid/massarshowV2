@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+  <grid name="TableDepense-besoins-grid" title="Les besoins" model="com.hakibati.ass.enajah.db.TableDepense"
+        canDelete="false" orderBy="id">
+    <field name="designation" width="300"/>
+    <field name="quantite" default="" />
+  </grid>
+
+  <form name="TableDepense-besoins-form" title="Les besoins" model="com.hakibati.ass.enajah.db.OperationDepense" onNew="action-getCurretDate">
+    <panel  >
+      <field name="designation" colSpan="9"/>
+      <field name="quantite" default=""  colSpan="3"/>
+    </panel>
+  </form>
+
+  <grid name="TableDepense-bon-commande-grid" title="Les Commandes" model="com.hakibati.ass.enajah.db.TableDepense"
+        canDelete="false" orderBy="id" canEdit="true"  canSave="true" >
+    <field name="designation" />
+    <field name="quantite" width="100"/>
+    <field name="prixUnitaire" width="100"/>
+    <field name="prixHTVA" width="100"/>
+    <field name="TVA" width="100"/>
+    <field name="totalTTC" width="100"/>
+  </grid>
+
+  <form name="TableDepense-bon-commande-form" title="Les Commandes" model="com.hakibati.ass.enajah.db.OperationDepense" onNew="action-getCurretDate">
+    <panel  >
+      <field name="designation"  colSpan="9" />
+      <field name="quantite" colSpan="3" />
+      <field name="prixUnitaire" colSpan="3"/>
+      <field name="TVA" colSpan="3"/>
+      <field name="prixHTVA" colSpan="3"/>
+      <field name="totalTTC"  colSpan="3"/>
+    </panel>
+  </form>
+  <grid name="TableDepense-bon-caisse-grid" title="Les Commandes" model="com.hakibati.ass.enajah.db.TableDepense"
+        canDelete="false" orderBy="id">
+    <field name="designation" />
+    <field name="quantite" width="100"/>
+    <field name="prixUnitaire" width="100"/>
+    <field name="totalTTC" width="100" title="Prix Total"/>
+  </grid>
+
+  <form name="TableDepense-bon-caisse-form" title="Les Commandes" model="com.hakibati.ass.enajah.db.OperationDepense" onNew="action-getCurretDate">
+    <panel  >
+      <field name="designation"  colSpan="9" />
+      <field name="quantite" colSpan="3" />
+      <field name="prixUnitaire" colSpan="3"/>
+      <field name="totalTTC"  colSpan="3" title="prix Total"/>
+    </panel>
+  </form>
+</object-views>

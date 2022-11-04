@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+    <grid name="Prof-grid" title="List des professeurs" model="com.hakibati.svg.examen.db.Prof" editable="true"
+          canMove="true" canEdit="true" canSave="true" onNew="set-new-prof">
+        <toolbar>
+            <button name="Gestion" title="Import/Export" onClick="action-export-import-Prof"
+                    css="btn btn-warning label-bold bold large center"/>
+        </toolbar>
+        <hilite color="primary" if="sexe.code == 03"/>
+        <hilite if="sexe.code == 02" color="danger"/>
+        <field name="name"/>
+        <field name="doti"/>
+        <field name="sexe"/>
+        <field name="matiere"/>
+        <field name="cycle"/>
+        <field name="fonctionExaman"/>
+        <field name="isEtab"/>
+        <button name="btn-delete" title="Supprime" icon="fa-trash"
+                onClick="com.hakibati.svg.examen.web.ProfController:DeleteProf"
+                prompt="Voulez-vous vraiment supprimer cet enregistrement ?"/>
+    </grid>
+
+    <form name="Prof-form" title="list des prof " model="com.hakibati.svg.examen.db.Prof" onNew="set-new-prof">
+        <panel title="Overview">
+            <field name="name"/>
+            <field name="doti"/>
+            <field name="sexe"/>
+            <field name="matiere"/>
+            <field name="cycle"/>
+            <field name="fonctionExaman"/>
+            <field name="isEtab"/>
+            <field name="etablissementDeOrigine" showIf="isEtab==false"/>
+            <field name="picture" widget="Image" colSpan="12" showTitle="false">
+                <viewer>
+                    <![CDATA[
+              <img ng-show="record.picture" ng-src="{{$image('picture', 'content')}}" />
+              <img ng-show="!record.picture" src="img/user.png" />
+            ]]>
+                </viewer>
+            </field>
+        </panel>
+    </form>
+    <cards name="Prof-cards" title="list des prof " model="com.hakibati.svg.examen.db.Prof" orderBy="name">
+        <field name="name"/>
+        <field name="doti"/>
+        <field name="matiere"/>
+        <field name="hasImage"/>
+        <field name="picture"/>
+        <template><![CDATA[
+      <div class="span4 card-image">
+        <img ng-show="record.picture" ng-src="{{$image('picture', 'content')}}" />
+        <img ng-show="!record.picture" src="img/user.png" />
+        <strong>{{name}}</strong>
+      </div>
+      <div class="span8">
+        <info>
+          <abbr ng-if="doti" title="doti">DOTI:</abbr> {{doti}}<br>
+          <abbr ng-if="matiere" title="matiere">MATIERE:</abbr> {{matiere.name}}<br>
+        </info>
+      </div>
+    ]]></template>
+    </cards>
+
+
+    <form name="prof-ajout-prof-form" title="gestion la list  des professeurs" model="com.hakibati.svg.examen.db.Prof"
+          width="mid" canSave="false" canDelete="false">
+        <panel-tabs>
+            <panel title="Ajouter">
+                <field name="_prefixe" title="préfixe" colSpan="3"/>
+                <field name="nombre" title="nombre totol des prof ">
+                    <editor x-show-titles="false">
+                        <field name="_du" showTitle="false" widget="Integer" min="0" max="999" colSpan="4"/>
+                        <field name="_au" showTitle="false" widget="Integer" min="0" max="999" colSpan="4"/>
+                    </editor>
+                </field>
+                <button name="importBlockBtn" title="Creer" onClick="action-OnAjouteProf" colSpan="2"/>
+            </panel>
+            <panel title="MassarShow">
+                <field name="$_gresa" title="Entre Gresa Etablissement" colSpan="6"
+                       onChange="action-refresh-dashlet-import-massar-show"/>
+                <spacer colSpan="2"/>
+                <button name="recherche" title="recherhce" colSpan="2"
+                        onClick="action-refresh-dashlet-import-massar-show"/>
+                <button name="btn-import-massar-show" title="Import" colSpan="2" onClick="com.hakibati.svg.examen.web.ProfController:ImportMassarshow"/>
+                <panel-dashlet action="action-dashlet-import-massar-show" name="panel-dashlet-import-massar-show"
+                               colSpan="12" height="350"/>
+            </panel>
+            <panel title="Excel">
+                <spacer colSpan="10"/>
+                <button name="export-excel" title="Export Excel" colSpan="2" onClick="action-export-prof-excel"/>
+                <!--      </panel>-->
+                <!--      <panel name="mainPanel" title="Importer le ficher EXCEL">-->
+                <field name="$importFile" title="File" type="many-to-one" widget="binary-link"
+                       target="com.axelor.meta.db.MetaFile" x-accept=".xlsx" colSpan="10"/>
+                <!--                <field name="$logFile" title="Log" type="many-to-one" readonly="true" widget="binary-link"-->
+                <!--                       target="com.axelor.meta.db.MetaFile" hidden="true" x-accept=".xlsx"/>-->
+                <button name="importBlockBtn" title="Import" onClick="action-import-prof-excel"
+                        readonlyIf="$importFile == null" colSpan="2"/>
+            </panel>
+            <panel name="mainPanel2" title="Esise">
+                <field name="$importFileEsise" title="File" type="many-to-one" widget="binary-link"
+                       target="com.axelor.meta.db.MetaFile" x-accept=".xml" colSpan="10"/>
+                <!--                <field name="$logFileEsise" title="Log" type="many-to-one" readonly="true" widget="binary-link"-->
+                <!--                       target="com.axelor.meta.db.MetaFile" hidden="true" x-accept=".xml"/>-->
+                <button name="importBlockBtnEsise" title="Import" onClick="action-import-prof-Esise"
+                        readonlyIf="$importFileEsise == null" colSpan="2"/>
+            </panel>
+
+            <panel title="Supprimer">
+                <spacer colSpan="9"/>
+                <button name="Supprimer-tous" title="Supprimer tous" colSpan="3" onClick="action-supprimer-tous"
+                        prompt="Êtes-vous sûr de vouloir supprimer tous les   Professeurs ?"/>
+            </panel>
+        </panel-tabs>
+    </form>
+    <action-attrs name="action-refresh-dashlet-import-massar-show">
+        <attribute for="panel-dashlet-import-massar-show" name="refresh" expr="true"/>
+    </action-attrs>
+    <action-view name="action-dashlet-import-massar-show" title=""
+                 model="com.hakibati.setting.db.Allpersonnel">
+        <view type="grid" name="Allpersonnel-grid"/>
+        <!--        <view type="form" name="Allpersonnel-form"/>-->
+        <view-param name="popup" value="reload"/>
+        <view-param name="popup-save" value="true"/>
+        <view-param name="show-toolbar" value="false"/>
+        <view-param name="show-confirm" value="true"/>
+        <view-param name="forceEdit" value="true"/>
+        <view-param name="details-view" value="false"/>
+        <domain>self.gresa = :_gresaSelect</domain>
+        <context name="_gresaSelect" expr="eval:_gresa"/>
+    </action-view>
+
+
+    <action-view name="action-dashlet-Prof" title=""
+                 model="com.hakibati.svg.examen.db.Prof">
+        <view type="grid" name="Prof-grid"/>
+        <view type="form" name="Prof-form"/>
+        <view-param name="popup" value="reload"/>
+        <view-param name="popup-save" value="true"/>
+        <view-param name="show-toolbar" value="false"/>
+        <view-param name="show-confirm" value="true"/>
+        <view-param name="forceEdit" value="true"/>
+        <view-param name="details-view" value="false"/>
+        <domain>self.etablissement = :_etablissement</domain>
+        <context name="_etablissement" expr="eval: __user__.etablissementSelectionnee"/>
+    </action-view>
+
+    <action-view name="action-new-Prof" title=""
+                 model="com.hakibati.svg.examen.db.Prof">
+        <view type="form" name="Prof-form"/>
+        <view-param name="popup" value="reload"/>
+        <view-param name="popup-save" value="true"/>
+        <view-param name="show-toolbar" value="false"/>
+        <view-param name="show-confirm" value="true"/>
+        <view-param name="forceEdit" value="true"/>
+        <view-param name="details-view" value="false"/>
+    </action-view>
+
+
+    <action-view name="action-export-import-Prof" model="com.hakibati.svg.examen.db.Prof" title="ajoute">
+        <view type="form" name="prof-ajout-prof-form"/>
+        <view-param name="popup" value="reload"/>
+        <view-param name="show-toolbar" value="false"/>
+        <view-param name="show-confirm" value="false"/>
+        <view-param name="popup-save" value="false"/>
+        <!--    <view-param name="forceEdit" value="true"/>-->
+        <!--    <context name="_showRecord" expr="1"/>-->
+    </action-view>
+
+    <action-method name="action-OnAjouteProf">
+        <call class="com.hakibati.svg.examen.web.ProfController" method="OnAjouteProf"/>
+    </action-method>
+
+    <action-method name="action-export-prof-excel">
+        <call class="com.hakibati.svg.examen.web.ProfController" method="exportProfExcel"/>
+    </action-method>
+    <action-method name="action-import-prof-excel">
+        <call class="com.hakibati.svg.examen.web.ProfController" method="importProfExcel"/>
+    </action-method>
+    <action-method name="action-import-prof-Esise">
+        <call class="com.hakibati.svg.examen.web.ProfController" method="importProfEsise"/>
+    </action-method>
+
+    <action-record name="set-new-prof" model="com.hakibati.svg.examen.db.Prof">
+        <field name="sexe" expr="call:com.hakibati.svg.examen.service.ProfService:getNewSexe()"/>
+        <field name="matiere" expr="call:com.hakibati.svg.examen.service.ProfService:getNewMatiere()"/>
+        <field name="cycle" expr="call:com.hakibati.svg.examen.service.ProfService:getNewCycle()"/>
+        <field name="fonctionExaman" expr="call:com.hakibati.svg.examen.service.ProfService:getNewFonction()"/>
+    </action-record>
+
+    <action-method name="action-supprimer-tous">
+        <call class="com.hakibati.svg.examen.web.ProfController" method="deleteAllTeacher"/>
+    </action-method>
+
+
+</object-views>

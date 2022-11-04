@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+    <grid name="PersonnelRh-grid" title="Personnel" model="com.hakibati.ressource.humaine.db.PersonnelRh"
+          x-selector="checkbox">
+        <field name="ppr" title="pPR"/>
+        <field name="nomA" title="nOMA"/>
+        <field name="nomL" title="nOML"/>
+        <field name="cin" title="cINA"/>
+        <field   name="cdMatier" />
+        <field name="cdMatiere"/>
+        <field name="matiereAr" />
+        <field name="matiereFr" />
+        <field name="foncAr" />
+        <field name="foncFr" />
+        <!--    <field name="prenomA" title="pRENOMA"/>-->
+        <!--    <field name="prenomL" title="pRENOML"/>-->
+        <!--     <field name="numAffil" title="numAFFIL"/>-->
+        <!--    <field name="numImma" title="numImma"/>-->
+        <!--    <field name="idPersonnel" title="idPersonnel"/>-->
+        <!--    <field name="adresse" title="aDRESSE"/>-->
+        <!--    <field name="adresseElec" title="aDRESSE_ELEC"/>-->
+        <!--    <field name="affectationPrincipale" title="affectationPrincipale"/>-->
+        <!--    <field name="affilie" title="aFFILIE"/>-->
+        <!--    <field name="ancAdm" title="aNC_ADM"/>-->
+        <!--    <field name="ancEchelon" title="aNC_ECHELON"/>-->
+        <!--    <field name="ancGrade" title="aNC_GRADE"/>-->
+        <!--    <field name="anNais" title="aN_NAIS"/>-->
+        <!--    <field name="cdEtab" title="cdEtab"/>-->
+        <!--    <field name="cdCadre" title="cD_CADRE"/>-->
+        <!--    <field name="cdDipp" title="cD_DIPP"/>-->
+        <!--    <field name="cdDips" title="cD_DIPS"/>-->
+        <!--    <field name="cdDiscip" title="cD_DISCIP"/>-->
+        <!--    <field name="cdGrade" title="cD_GRADE"/>-->
+        <!--    <field name="cdMatiere" title="cd_matiere"/>-->
+        <!--    <field name="cdNation" title="cD_NATION"/>-->
+        <!--    <field name="cdPosition" title="cD_POSITION"/>-->
+        <!--    <field name="cdStatut" title="cD_STATUT"/>-->
+
+        <!--    <field name="codePostal" title="cODE_POSTAL"/>-->
+        <!--    <field name="dateAffil" title="dATEAFFIL"/>-->
+        <!--    <field name="dateModification" title="dateModification"/>-->
+        <!--    <field name="datePosition" title="dATE_POSITION"/>-->
+        <!--    <field name="dateRec" title="dATE_REC"/>-->
+        <!--    <field name="dateSitfam" title="dATE_SITFAM"/>-->
+        <!--    <field name="dateCadre" title="dT_CADRE"/>-->
+        <!--    <field name="dateDipprof" title="dT_DIPPROF"/>-->
+        <!--    <field name="dateDipscol" title="dT_DIPSCOL"/>-->
+        <!--    <field name="dateEchelon" title="dT_ECHELON"/>-->
+        <!--    <field name="dateGrade" title="dT_GRADE"/>-->
+        <!--    <field name="dateSitstat" title="dT_SITSTAT"/>-->
+        <!--    <field name="dateTitul" title="dT_TITUL"/>-->
+        <!--    <field name="echelon" title="eCHELON"/>-->
+        <!--    <field name="email" title="email"/>-->
+        <!--    <field name="genre" title="gENRE"/>-->
+        <!--    <field name="idRefpopulation" title="idRefPopulation"/>-->
+        <!--    <field name="idTypedomaine" title="id_typeDomaine"/>-->
+        <!--    <field name="jourNais" title="jOUR_NAIS"/>-->
+        <!--    <field name="lieuNais" title="lIEU_NAIS"/>-->
+        <!--    <field name="modavgra" title="mODAVGRA"/>-->
+        <!--    <field name="moisNais" title="mOIS_NAIS"/>-->
+
+        <!--    <field name="sitFam" title="sIT_FAM"/>-->
+        <!--    <field name="telFixe" title="tEL_FIXE"/>-->
+        <!--    <field name="telPortable" title="tEL_PORTABLE"/>-->
+        <!--    <field name="ville" title="vILLE"/>-->
+        <!--    <field name="villeForm" title="vILLEFORM"/>-->
+    </grid>
+
+    <form name="PersonnelRh-form" title="Personnel" model="com.hakibati.ressource.humaine.db.PersonnelRh">
+        <panel readonly="true">
+            <field name="nomA" title="nOMA" colSpan="3" showTitle="false"/>
+            <field name="ppr" title="pPR" colSpan="3" widget="String" showTitle="false"/>
+            <field name="cin" title="cINA" colSpan="3" showTitle="false"/>
+            <field name="nomL" title="nOML" colSpan="3" showTitle="false"/>
+        </panel>
+        <panel-tabs>
+            <panel title="donnees personnelles">
+                <field name="nomA" title="nOMA" />
+                <field name="nomL" title="nOML" />
+                <field name="ppr" title="pPR" />
+                <field name="cin" title="cINA" />
+                <field name="matiereAr" />
+                <field name="matiereFr" />
+                <field name="cadreAr" title="CADRE"/>
+                <field name="cadreFr" title="CADRE"/>
+                <field name="gradeAr" title="GRADE"/>
+                <field name="gradeFr" title="GRADE"/>
+                <field name="foncAr" />
+                <field name="foncFr" />
+            </panel>
+            <panel title="donnes general">
+                <field name="idPersonnel" title="idPersonnel"/>
+                <field name="adresse" title="aDRESSE"/>
+                <field name="adresseElec" title="aDRESSE_ELEC"/>
+                <field name="affectationPrincipale" title="affectationPrincipale"/>
+                <field name="affilie" title="aFFILIE"/>
+                <field name="ancAdm" title="aNC_ADM"/>
+                <field name="ancEchelon" title="aNC_ECHELON"/>
+                <field name="ancGrade" title="aNC_GRADE"/>
+                <field name="anNais" title="aN_NAIS"/>
+                <field name="cdEtab" title="cdEtab"/>
+                <field name="cdCadre" title="cD_CADRE"/>
+                <field name="cdDipp" title="cD_DIPP"/>
+                <field name="cdDips" title="cD_DIPS"/>
+                <field name="cdDiscip" title="cD_DISCIP"/>
+                <field name="cdGrade" title="cD_GRADE"/>
+                <field name="cdMatiere" title="cd_matiere"/>
+                <field name="cdNation" title="cD_NATION"/>
+                <field name="cdPosition" title="cD_POSITION"/>
+                <field name="cdStatut" title="cD_STATUT"/>
+                <field name="cin" title="cINA"/>
+                <field name="codePostal" title="cODE_POSTAL"/>
+                <field name="dateAffil" title="dATEAFFIL"/>
+                <field name="dateModification" title="dateModification"/>
+                <field name="datePosition" title="dATE_POSITION"/>
+                <field name="dateRec" title="dATE_REC"/>
+                <field name="dateSitfam" title="dATE_SITFAM"/>
+                <field name="dateCadre" title="dT_CADRE"/>
+                <field name="dateDipprof" title="dT_DIPPROF"/>
+                <field name="dateDipscol" title="dT_DIPSCOL"/>
+                <field name="dateEchelon" title="dT_ECHELON"/>
+                <field name="dateGrade" title="dT_GRADE"/>
+                <field name="dateSitstat" title="dT_SITSTAT"/>
+                <field name="dateTitul" title="dT_TITUL"/>
+                <field name="echelon" title="eCHELON"/>
+                <field name="email" title="email"/>
+                <field name="genre" title="gENRE"/>
+                <field name="idRefpopulation" title="idRefPopulation"/>
+                <field name="idTypedomaine" title="id_typeDomaine"/>
+                <field name="jourNais" title="jOUR_NAIS"/>
+                <field name="lieuNais" title="lIEU_NAIS"/>
+                <field name="modavgra" title="mODAVGRA"/>
+                <field name="moisNais" title="mOIS_NAIS"/>
+                <field name="nomA" title="nOMA"/>
+                <field name="nomL" title="nOML"/>
+                <field name="numAffil" title="numAFFIL"/>
+                <field name="numImma" title="numImma"/>
+                <field name="ppr" title="pPR"/>
+                <field name="prenomA" title="pRENOMA"/>
+                <field name="prenomL" title="pRENOML"/>
+                <field name="sitFam" title="sIT_FAM"/>
+                <field name="telFixe" title="tEL_FIXE"/>
+                <field name="telPortable" title="tEL_PORTABLE"/>
+                <field name="ville" title="vILLE"/>
+                <field name="villeForm" title="vILLEFORM"/>
+
+            </panel>
+            <panel title="table service">
+
+            </panel>
+            <panel title="donnees professionnelles">
+
+            </panel>
+        </panel-tabs>
+
+        <panel-tabs>
+            <panel-related field="groupeCentre" form-view="zero" grid-view="GroupeCentre-grid" colSpan="12" height="10"
+                           canNew="false" canEdit="false" canView="false"/>
+            <panel-related field="suiviFinancier" form-view="SuiviFinancierCentre-eleve-form"
+                           grid-view="SuiviFinancierCentre-eleve-grid" colSpan="12" height="10"/>
+        </panel-tabs>
+    </form>
+
+</object-views>

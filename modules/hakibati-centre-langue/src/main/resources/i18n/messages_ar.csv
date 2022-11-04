@@ -1,0 +1,104 @@
+"key","message","comment","context"
+"Adressee","العنوان",,"resources\domains\EleveCentre.xml:14
+resources\domains\ProfCentre.xml:13"
+"Ajouter ou modifier","إضافة أو تعديل",,"resources\views\EleveCentre.xml:18
+resources\views\GroupeCentre.xml:15
+resources\views\InfoCentreLangue.xml:13
+resources\views\MatiereCentre.xml:14
+resources\views\NiveauCentre.xml:14
+resources\views\ProfCentre.xml:16
+resources\views\SuiviFinancierCentre.xml:19
+resources\views\SuiviFinancierCentre.xml:45"
+"Année de paiement","السنة",,"resources\domains\SuiviFinancierCentre.xml:11"
+"Commentaire","ملاحظات",,"resources\domains\GroupeCentre.xml:14
+resources\domains\MatiereCentre.xml:10
+resources\domains\NiveauCentre.xml:10
+resources\domains\SuiviFinancierCentre.xml:16"
+"Created by",,,"resources\domains\EleveCentre.xml:25
+resources\domains\GroupeCentre.xml:23
+resources\domains\InfoCentreLangue.xml:16
+resources\domains\MatiereCentre.xml:18
+resources\domains\NiveauCentre.xml:18
+resources\domains\ProfCentre.xml:22
+resources\domains\SuiviFinancierCentre.xml:24"
+"Date de naissance","تاريخ الازدياذ",,"resources\domains\EleveCentre.xml:11
+resources\domains\ProfCentre.xml:10"
+"Date de paiement","تاريخ الدفع",,"resources\domains\SuiviFinancierCentre.xml:12"
+"EleveCentre","التلميذ",,"resources\views\EleveCentre.xml:17
+resources\views\EleveCentre.xml:6"
+"Eleves","التلاميذ",,"resources\domains\GroupeCentre.xml:13
+resources\domains\SuiviFinancierCentre.xml:14"
+"Email",,,"resources\domains\EleveCentre.xml:13
+resources\domains\ProfCentre.xml:12"
+"Etablissement","المؤسسة",,"resources\domains\EleveCentre.xml:18
+resources\domains\GroupeCentre.xml:16
+resources\domains\InfoCentreLangue.xml:9
+resources\domains\MatiereCentre.xml:11
+resources\domains\NiveauCentre.xml:11
+resources\domains\ProfCentre.xml:15
+resources\domains\SuiviFinancierCentre.xml:17"
+"Gestion Centre de langues","تدبير مركز اللغات",,"resources\views\Menu.xml:6"
+"Groupe","المجموعة",,"resources\domains\SuiviFinancierCentre.xml:15
+resources\views\Menu.xml:31"
+"Groupe Centre","المجموعة",,"resources\views\GroupeCentre.xml:14
+resources\views\GroupeCentre.xml:7"
+"Groupes","المجموعات",,"resources\views\Menu.xml:30"
+"Groups","المجموعات",,"resources\domains\EleveCentre.xml:16"
+"Imprime Liste des étudiants","طباعة لائحة الطلاب",,"resources\views\GroupeCentre.xml:21"
+"Imprimer","طباعة",,"resources\views\SuiviFinancierCentre.xml:15
+resources\views\SuiviFinancierCentre.xml:27
+resources\views\SuiviFinancierCentre.xml:41
+resources\views\SuiviFinancierCentre.xml:53"
+"Mai","ماي",,"resources\views\SuiviFinancierCentre.xml:71"
+"Mars","مارس",,"resources\views\SuiviFinancierCentre.xml:69"
+"Matiere","المادة",,"resources\domains\GroupeCentre.xml:12
+resources\views\Menu.xml:8"
+"Matiere Centre","المادة",,"resources\views\MatiereCentre.xml:13
+resources\views\MatiereCentre.xml:7"
+"Matieres","المواد",,"resources\views\Menu.xml:7"
+"Montant mensuel","المبلغ الشهري",,"resources\domains\GroupeCentre.xml:10"
+"Name","الاسم",,"resources\domains\GroupeCentre.xml:9
+resources\domains\InfoCentreLangue.xml:8
+resources\domains\MatiereCentre.xml:9
+resources\domains\NiveauCentre.xml:9"
+"Niveau","المستوى",,"resources\domains\EleveCentre.xml:10
+resources\views\Menu.xml:13"
+"Niveau Centre","المستوى",,"resources\views\NiveauCentre.xml:13
+resources\views\NiveauCentre.xml:7"
+"Niveaux","المستويات",,"resources\views\Menu.xml:12"
+"Octobre","اكثوبر",,"resources\views\SuiviFinancierCentre.xml:76"
+"Photo","الصورة",,"resources\domains\EleveCentre.xml:15
+resources\domains\ProfCentre.xml:14"
+"Prix Payé","الثمن",,"resources\domains\SuiviFinancierCentre.xml:9"
+"Prof","المدرس",,"resources\domains\GroupeCentre.xml:11"
+"ProfCentre","المدرس",,"resources\views\ProfCentre.xml:15
+resources\views\ProfCentre.xml:7"
+"Profs","المدرسون",,"resources\views\Menu.xml:18
+resources\views\Menu.xml:19"
+"Suivi Financier","التتبع المالي",,"resources\views\SuiviFinancierCentre.xml:18
+resources\views\SuiviFinancierCentre.xml:33
+resources\views\SuiviFinancierCentre.xml:44
+resources\views\SuiviFinancierCentre.xml:7"
+"Suivi du Materiel",,,"resources\views\InfoCentreLangue.xml:12
+resources\views\InfoCentreLangue.xml:7"
+"Suivi financier","التتبع المالي",,"resources\domains\EleveCentre.xml:17
+resources\domains\GroupeCentre.xml:15"
+"Telephone","الهاتف",,"resources\domains\EleveCentre.xml:12
+resources\domains\ProfCentre.xml:11"
+"août","غشت",,"resources\views\SuiviFinancierCentre.xml:74"
+"avril","ابريل",,"resources\views\SuiviFinancierCentre.xml:70"
+"décembre","دجنبر",,"resources\views\SuiviFinancierCentre.xml:78"
+"error","خظأ",,"java\com\centre\langue\web\GroupeCentreController.java:55
+java\com\centre\langue\web\SuiviFinancierCentreController.java:63"
+"février","فبراير",,"resources\views\SuiviFinancierCentre.xml:68"
+"janvier","يناير",,"resources\views\SuiviFinancierCentre.xml:67"
+"juillet","يوليوز",,"resources\views\SuiviFinancierCentre.xml:73"
+"juin","يونيو",,"resources\views\SuiviFinancierCentre.xml:72"
+"mois Payé","الشهر",,"resources\domains\SuiviFinancierCentre.xml:10"
+"nom et prénom","الاسم الكامل",,"resources\domains\EleveCentre.xml:8
+resources\domains\ProfCentre.xml:9"
+"novembre","نونبر",,"resources\views\SuiviFinancierCentre.xml:77"
+"numéro d'inscription","رقم التسجيل",,"resources\domains\EleveCentre.xml:9"
+"septembre","شتنبر",,"resources\views\SuiviFinancierCentre.xml:75"
+"Élèves","التلاميذ",,"resources\views\Menu.xml:24
+resources\views\Menu.xml:25"

@@ -1,0 +1,45 @@
+typeContrainte;code;name;namear;language;key;afficherValeur;afficherProf;afficherSalle;afficherMatiere;afficherFillier;afficherMatin;afficherApresMidi;afficherDateExam
+10;1110;Nombre minimum des professeurs hommes dans chaque salle;الحد الأدنى من المراقبين-الذكور  في  جميع القاعات;ar;value:Nombre minimum des professeurs hommes dans chaque salle;true;false;false;false;false;false;false;false
+10;1120;Nombre minimum des professeurs femmes dans chaque salle;الحد الأدنى من المراقبات -الانات  في  جميع القاعات;ar;value:Nombre minimum des professeurs femmes dans chaque salle;true;false;false;false;false;false;false;false
+10;1130;Nombre minimum des professeurs du qualifié dans chaque salle;الحد الأدنى من المراقبين الثانوي التأهيلي  في  جميع القاعات;ar;value:Nombre minimum des professeurs du qualifié dans chaque salle;true;false;false;false;false;false;false;false
+10;1140;Nombre minimum des professeurs du collège dans chaque salle;الحد الأدنى من المراقبين الثانوي الاعدادي  في  جميع القاعات;ar;value:Nombre minimum des professeurs du collège dans chaque salle;true;false;false;false;false;false;false;false
+10;1150;Nombre minimum des professeurs du primaire dans chaque salle;الحد الأدنى من المراقبين التعليم الابتدائي  في  جميع القاعات;ar;value:Nombre minimum des professeurs du primaire dans chaque salle;true;false;false;false;false;false;false;false
+10;1160;Nombre minimum des surveillants dans chaque salle;الحد الأدنى من المراقبين  في جميع القاعات;ar;value:Nombre minimum des surveillants dans chaque salle;true;false;false;false;false;false;false;false
+10;1170;Nombre maximum des surveillants dans chaque salle;الحد الاقصى من المراقبين  في جميع القاعات;ar;value:Nombre maximum des surveillants dans chaque salle;true;false;false;false;false;false;false;false
+
+15;1111;Nombre minimum des professeurs hommes Par salle;الحد الأدنى من المراقبين-الذكور  حسب القاعة;ar;value:Nombre minimum des professeurs hommes Par salle;true;false;true;false;false;false;false;false
+15;1121;Nombre minimum des professeurs femmes Par salle;الحد الأدنى من المراقبات -الانات  حسب القاعة;ar;value:Nombre minimum des professeurs femmes Par salle;true;false;true;false;false;false;false;false
+15;1131;Nombre minimum des professeurs du qualifié Par salle;الحد الأدنى من المراقبين الثانوي التأهيلي  حسب القاعة;ar;value:Nombre minimum des professeurs du qualifié Par salle;true;false;true;false;false;false;false;false
+15;1141;Nombre minimum des professeurs du collège Par salle;الحد الأدنى من المراقبين الثانوي الاعدادي  حسب القاعة;ar;value:Nombre minimum des professeurs du collège Par salle;true;false;true;false;false;false;false;false
+15;1151;Nombre minimum des professeurs du primaire Par salle;الحد الأدنى من المراقبين التعليم الابتدائي  حسب القاعة;ar;value:Nombre minimum des professeurs du primaire Par salle;true;false;true;false;false;false;false;false
+15;1161;Nombre minimum des surveillants Par salle;الحد الأدنى من المراقبين  حسب القاعة;ar;value:Nombre minimum des surveillants Par salle;true;false;true;false;false;false;false;false
+15;1171;Nombre maximum des surveillants Par salle;الحد الاقصى من المراقبين  حسب القاعة;ar;value:Nombre maximum des surveillants Par salle;true;false;true;false;false;false;false;false
+
+0;1040;Nombre maximum de gardes dans la même salle pour chaque professeur;الحد الاقصى من الحراسة في نفس القاعة لكل مراقب;ar;value:Nombre maximum de gardes dans la même salle pour chaque professeur;true;false;false;false;false;false;false;false
+0;1050;Nombre maximum de gardes avec le même professeur pour chaque professeur;الحد الاقصى من الحراسة مع نفس المراقب;ar;value:Nombre maximum de gardes avec le même professeur pour chaque professeur;true;false;false;false;false;false;false;false
+0;1060;Nombre maximum de gardes dans la matiere spécialise pour chaque professeur;الحد الاقصى من الحراسة في مادة التخصص;ar;value:Nombre maximum de gardes dans la matiere spécialise pour chaque professeur;true;false;false;false;false;false;false;false
+0;1070;Nombre maximum de gardes  matin- aprés midi pour chaque professeur;الحد الاقصى من الحراسة صباح-مساء;ar;value:Nombre maximum de gardes  matin- aprés midi pour chaque professeur;true;false;false;false;false;false;false;false
+0;1080;Nombre maximum de réserve pour chaque professeur;الحد الاقصى من الاحتياط خلال الامتحان لكل مراقب;ar;value:Nombre maximum de réserve pour chaque professeur;true;false;false;false;false;false;false;false
+0;1090;Nombre maximum de jours de garde pour chaque professeur;الحد الاقصى من ايام الحراسة لكل مراقب;ar;value:Nombre maximum de jours de garde pour chaque professeur;true;false;false;false;false;false;false;false
+
+
+5;1011;horaire non préférée Par le professeur;الاوقات غير متاحة للمراقب;ar;value:horaire non préférée Par le professeur;false;true;false;false;false;true;true;true
+5;1021;permanences Par le professeure;الاساتذة المداومين;ar;value:permanences Par le professeure;true;true;false;true;true;false;false;false
+5;1031;salle non préférée Par le professeur;القاعة غير متاحة للمراقب;ar;value:salle non préférée Par le professeur;true;true;true;true;true;false;false;false
+5;1012;Nombre maximum de gardes au cours d'examen Par le professeur;الحد الاقصى من الحراسة خلال الامتحان حسب المراقب;ar;value:Nombre maximum de gardes au cours d'examen Par le professeur;true;true;false;false;false;false;false;false
+5;1013;Nombre maximum de gardes selon la matiere et le professeur;الحد الاقصى من الحراسة حسب المادة والمراقب;ar;value:Nombre maximum de gardes selon la matiere et le professeur;true;true;false;true;true;false;false;false
+
+
+5;1041;Nombre maximum de gardes dans la même salle pr le professeur;الحد الاقصى من للحراسة في نفس القاعة حسب المراقب;ar;value:Nombre maximum de gardes dans la même salle pr le professeur;true;true;false;false;false;false;false;false
+5;1051;Nombre maximum de gardes avec le même professeur pr le professeur;الحد الاقصى من للحراسة مع نفس المراقب  حسب المراقب;ar;value:Nombre maximum de gardes avec le même professeur pr le professeur;true;true;false;false;false;false;false;false
+5;1061;Nombre maximum de gardes dans la matiere spécialise pr le professeur;الحد الاقصى من للحراسى في مادة التخصص  حسب المراقب;ar;value:Nombre maximum de gardes dans la matiere spécialise pr le professeur;true;true;false;false;false;false;false;false
+5;1071;Nombre maximum de gardes  matin- aprés midi pr le professeur;الحد الاقصى من للحراسة صباح-مساء  حسب المراقب;ar;value:Nombre maximum de gardes  matin- aprés midi pr le professeur;true;true;false;false;false;false;false;false
+5;1081;Nombre maximum de réserve pr le professeur;الحد الاقصى من الاحتياط حسب المراقب;ar;value:Nombre maximum de réserve pr le professeur;true;true;false;false;false;false;false;false
+5;1091;Nombre maximum de jours de garde pr le professeur;الحد الاقصى من ايام الحراسة حسب المراقب;ar;value:Nombre maximum de jours de garde pr le professeur;true;true;false;false;false;false;false;false
+
+
+
+20;1210;le nombre  minimum des surveillants suppléants dans Le Fillier;الحد الأدنى من المراقبين  الاحتياطيين في المسلك;ar;value:le nombre  minimum des surveillants suppléants dans Le Fillier;true;false;false;false;true;false;false;false
+20;1220;le nombre  maximum des surveillants suppléants dans Le Fillier;الحد الاقصى من المراقبين  الاحتياطيين في المسلك;ar;value:le nombre  maximum des surveillants suppléants dans Le Fillier;true;false;false;false;true;false;false;false
+25;1211;Pourcentage de réserve minimum  pour chaque Fillier;النسبة المئوية الادنى لاحتياط لكل مسلك;ar;value:Pourcentage de réserve minimum  pour chaque Fillier;true;false;false;false;false;false;false;false
+25;1221;Pourcentage de réserve maximum pour chaque Fillier;النسبة المئوية الاقصى لاحتياط لكل مسلك;ar;value:Pourcentage de réserve maximum pour chaque Fillier;true;false;false;false;false;false;false;false

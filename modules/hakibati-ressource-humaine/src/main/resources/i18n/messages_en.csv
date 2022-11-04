@@ -1,0 +1,267 @@
+"key","message","comment","context"
+"A server error occurred. Please contact the administrator.",,,"java\com\ressource\humaine\web\GestionRHController.java:112
+java\com\ressource\humaine\web\GestionRHController.java:136"
+"Affect profs",,,"resources\views\GestionRH.xml:179"
+"Année scolaire",,,"resources\views\GestionRH.xml:100
+resources\views\GestionRH.xml:132"
+"CADRE",,,"resources\domains\PersonnelRh.xml:28
+resources\domains\PersonnelRh.xml:29
+resources\views\PersonnelRh.xml:87
+resources\views\PersonnelRh.xml:88"
+"CD",,,"resources\domains\CadreRh.xml:10
+resources\domains\FonctionRh.xml:8
+resources\domains\GradeRh.xml:9
+resources\domains\MatiereRh.xml:8"
+"CD_FONC",,,"resources\domains\PersonnelRh.xml:79"
+"Cadres",,,"resources\views\MatiereRh.xml:18
+resources\views\Menu.xml:31"
+"Choisissez un fichier au format xml",,,"java\com\ressource\humaine\service\GestionRHService.java:350
+java\com\ressource\humaine\service\GestionRHService.java:372
+java\com\ressource\humaine\service\GestionRHService.java:374"
+"Connection",,,"resources\views\GestionRH.xml:83"
+"Contunue",,,"resources\views\GestionRH.xml:73"
+"Created by",,,"resources\domains\GestionRH.xml:21
+resources\domains\GrevePersonnel.xml:22
+resources\domains\GreveRH.xml:26
+resources\domains\PersonnelRh.xml:96"
+"Date",,,"resources\domains\GreveRH.xml:8"
+"Date greve max",,,"resources\domains\GestionRH.xml:9"
+"Date greve min",,,"resources\domains\GestionRH.xml:8"
+"Dimanche",,,"resources\views\GreveRH.xml:35"
+"Données des personnels",,,"resources\views\GestionRH.xml:10"
+"EXCEL",,,"resources\views\GestionRH.xml:184"
+"Etablissement",,,"resources\domains\GestionRH.xml:14
+resources\domains\GrevePersonnel.xml:15
+resources\domains\GreveRH.xml:19
+resources\domains\PersonnelRh.xml:89"
+"Export",,,"resources\views\GestionRH.xml:119"
+"Export & Importer des donnes Excel (xlsx)",,,"resources\views\GestionRH.xml:115"
+"FONC AR",,,"resources\domains\PersonnelRh.xml:80"
+"FONC FR",,,"resources\domains\PersonnelRh.xml:81"
+"Fonctions",,,"resources\views\MatiereRh.xml:13
+resources\views\Menu.xml:36"
+"GRADE",,,"resources\domains\PersonnelRh.xml:34
+resources\domains\PersonnelRh.xml:35
+resources\views\PersonnelRh.xml:89
+resources\views\PersonnelRh.xml:90"
+"Gestion RH",,,"resources\domains\GrevePersonnel.xml:14
+resources\domains\GreveRH.xml:18
+resources\domains\PersonnelRh.xml:88"
+"Gestion du personnel",,,"resources\views\GestionRH.xml:13"
+"Grades",,,"resources\views\MatiereRh.xml:23
+resources\views\Menu.xml:26"
+"Gresa",,,"resources\views\GestionRH.xml:89"
+"Greve",,,"resources\views\GestionRH.xml:29
+resources\views\GrevePersonnel.xml:19"
+"Greve personnel",,,"resources\domains\GreveRH.xml:16
+resources\domains\PersonnelRh.xml:87"
+"Greve rh",,,"resources\domains\GestionRH.xml:12
+resources\domains\GrevePersonnel.xml:8"
+"GrevePersonnel",,,"resources\views\GrevePersonnel.xml:13
+resources\views\GrevePersonnel.xml:7"
+"GreveRH",,,"resources\views\GreveRH.xml:15
+resources\views\GreveRH.xml:7"
+"Import",,,"resources\views\GestionRH.xml:112
+resources\views\GestionRH.xml:125
+resources\views\GestionRH.xml:143
+resources\views\GestionRH.xml:155
+resources\views\GestionRH.xml:16"
+"Import les eleves",,,"resources\views\GestionRH.xml:64"
+"Importer des donnes Esaise (xml)",,,"resources\views\GestionRH.xml:105"
+"Importer des données directes dans massar",,,"resources\views\GestionRH.xml:65"
+"Importez les données suivantes",,,"resources\views\GestionRH.xml:94"
+"Imprimer",,,"resources\views\GestionRH.xml:35"
+"Information de Login Massar",,,"resources\views\GestionRH.xml:85"
+"Information de Massar",,,"resources\views\GestionRH.xml:76"
+"Interrogatoire des personnes en grève",,,"resources\views\GestionRH.xml:189"
+"Jeudi",,,"resources\views\GreveRH.xml:39"
+"Journee",,,"resources\domains\GreveRH.xml:10"
+"La méthode utilisée pour communiquer avec MASSAR est le proxy d'interception de données, c'est une méthode sécurisée et vos informations ne peuvent pas être sauvegardées",,,"resources\views\GestionRH.xml:71"
+"Les FonctionRh",,,"resources\views\Menu.xml:37"
+"Les etablissements",,,"resources\views\Menu.xml:27
+resources\views\Menu.xml:32"
+"List des personnes en grève",,,"resources\views\GestionRH.xml:190"
+"List matières",,,"resources\views\GestionRH.xml:177"
+"List profs",,,"resources\views\GestionRH.xml:176"
+"Login de Massar",,,"resources\views\GestionRH.xml:78"
+"Lundi",,,"resources\views\GreveRH.xml:36"
+"Mardi",,,"resources\views\GreveRH.xml:37"
+"Matiere",,,"resources\domains\PersonnelRh.xml:85"
+"Matieres",,,"resources\views\MatiereRh.xml:7
+resources\views\Menu.xml:21"
+"Mercredi",,,"resources\views\GreveRH.xml:38"
+"Mote de passe",,,"resources\views\GestionRH.xml:80"
+"Name",,,"resources\domains\GestionRH.xml:13
+resources\domains\PersonnelRh.xml:8"
+"Nom Etablissement",,,"resources\views\GestionRH.xml:91"
+"Observation",,,"resources\domains\GrevePersonnel.xml:12
+resources\domains\GreveRH.xml:15"
+"PDF",,,"resources\views\GestionRH.xml:183"
+"Paramètres",,,"resources\views\Menu.xml:19"
+"Personnel",,,"resources\domains\GestionRH.xml:10
+resources\views\PersonnelRh.xml:7
+resources\views\PersonnelRh.xml:72"
+"Personnel rh",,,"resources\domains\GrevePersonnel.xml:9"
+"Ressource humaine",,,"resources\views\Menu.xml:6"
+"Samedi",,,"resources\views\GreveRH.xml:41"
+"Suprimmer",,,"resources\views\GestionRH.xml:136"
+"Suprimmer toutes les données",,,"resources\views\GestionRH.xml:128"
+"Sélectionner un Annee",,,"resources\views\GestionRH.xml:100
+resources\views\GestionRH.xml:132"
+"Table Service",,,"resources\views\GestionRH.xml:178"
+"Telecharger",,,"resources\views\GestionRH.xml:57"
+"Vendredi",,,"resources\views\GreveRH.xml:40"
+"Voulez-vous vraiment supprimer toutes les données de cette année scolaire ?",,,"resources\views\GestionRH.xml:136"
+"WORD",,,"resources\views\GestionRH.xml:185"
+"aDRESSE",,,"resources\domains\PersonnelRh.xml:16
+resources\views\PersonnelRh.xml:96"
+"aDRESSE_ELEC",,,"resources\domains\PersonnelRh.xml:17
+resources\views\PersonnelRh.xml:97"
+"aFFILIE",,,"resources\domains\PersonnelRh.xml:19
+resources\views\PersonnelRh.xml:99"
+"aNC_ADM",,,"resources\domains\PersonnelRh.xml:21
+resources\views\PersonnelRh.xml:100"
+"aNC_ECHELON",,,"resources\domains\PersonnelRh.xml:22
+resources\views\PersonnelRh.xml:101"
+"aNC_GRADE",,,"resources\domains\PersonnelRh.xml:23
+resources\views\PersonnelRh.xml:102"
+"aN_NAIS",,,"resources\domains\PersonnelRh.xml:25
+resources\views\PersonnelRh.xml:103"
+"affectationPrincipale",,,"resources\domains\PersonnelRh.xml:18
+resources\views\PersonnelRh.xml:98"
+"cD_CADRE",,,"resources\domains\PersonnelRh.xml:27
+resources\views\PersonnelRh.xml:105"
+"cD_DIPP",,,"resources\domains\PersonnelRh.xml:30
+resources\views\PersonnelRh.xml:106"
+"cD_DIPS",,,"resources\domains\PersonnelRh.xml:31
+resources\views\PersonnelRh.xml:107"
+"cD_DISCIP",,,"resources\domains\PersonnelRh.xml:32
+resources\views\PersonnelRh.xml:108"
+"cD_GRADE",,,"resources\domains\PersonnelRh.xml:33
+resources\views\PersonnelRh.xml:109"
+"cD_NATION",,,"resources\domains\PersonnelRh.xml:39
+resources\views\PersonnelRh.xml:111"
+"cD_POSITION",,,"resources\domains\PersonnelRh.xml:40
+resources\views\PersonnelRh.xml:112"
+"cD_STATUT",,,"resources\domains\PersonnelRh.xml:41
+resources\views\PersonnelRh.xml:113"
+"cINA",,,"resources\domains\PersonnelRh.xml:42
+resources\views\PersonnelRh.xml:11
+resources\views\PersonnelRh.xml:114
+resources\views\PersonnelRh.xml:76
+resources\views\PersonnelRh.xml:84"
+"cODE_POSTAL",,,"resources\domains\PersonnelRh.xml:43
+resources\views\PersonnelRh.xml:115"
+"cdEtab",,,"resources\domains\PersonnelRh.xml:26
+resources\views\PersonnelRh.xml:104"
+"cd_matiere",,,"resources\domains\PersonnelRh.xml:36
+resources\domains\PersonnelRh.xml:37
+resources\domains\PersonnelRh.xml:38
+resources\views\PersonnelRh.xml:110"
+"dATEAFFIL",,,"resources\domains\PersonnelRh.xml:45
+resources\views\PersonnelRh.xml:116"
+"dATE_POSITION",,,"resources\domains\PersonnelRh.xml:47
+resources\views\PersonnelRh.xml:118"
+"dATE_REC",,,"resources\domains\PersonnelRh.xml:48
+resources\views\PersonnelRh.xml:119"
+"dATE_SITFAM",,,"resources\domains\PersonnelRh.xml:49
+resources\views\PersonnelRh.xml:120"
+"dT_CADRE",,,"resources\domains\PersonnelRh.xml:50
+resources\views\PersonnelRh.xml:121"
+"dT_DIPPROF",,,"resources\domains\PersonnelRh.xml:51
+resources\views\PersonnelRh.xml:122"
+"dT_DIPSCOL",,,"resources\domains\PersonnelRh.xml:52
+resources\views\PersonnelRh.xml:123"
+"dT_ECHELON",,,"resources\domains\PersonnelRh.xml:53
+resources\views\PersonnelRh.xml:124"
+"dT_GRADE",,,"resources\domains\PersonnelRh.xml:54
+resources\views\PersonnelRh.xml:125"
+"dT_SITSTAT",,,"resources\domains\PersonnelRh.xml:55
+resources\views\PersonnelRh.xml:126"
+"dT_TITUL",,,"resources\domains\PersonnelRh.xml:56
+resources\views\PersonnelRh.xml:127"
+"date au",,,"resources\views\GestionRH.xml:51"
+"date du",,,"resources\views\GestionRH.xml:50"
+"dateModification",,,"resources\domains\PersonnelRh.xml:46
+resources\views\PersonnelRh.xml:117"
+"donnees personnelles",,,"resources\views\PersonnelRh.xml:80"
+"donnees professionnelles",,,"resources\views\PersonnelRh.xml:154"
+"donnes general",,,"resources\views\PersonnelRh.xml:94"
+"données du personnel",,,"resources\views\Menu.xml:8"
+"eCHELON",,,"resources\domains\PersonnelRh.xml:58
+resources\views\PersonnelRh.xml:128"
+"email",,,"resources\domains\PersonnelRh.xml:59
+resources\views\PersonnelRh.xml:129"
+"en grève",,,"resources\domains\GrevePersonnel.xml:11
+resources\views\GrevePersonnel.xml:9"
+"error",,,"java\com\ressource\humaine\web\GestionRHController.java:227"
+"gENRE",,,"resources\domains\PersonnelRh.xml:60
+resources\views\PersonnelRh.xml:130"
+"greve du personnel",,,"resources\views\GestionRH.xml:32
+resources\views\Menu.xml:13"
+"idPersonnel",,,"resources\domains\PersonnelRh.xml:15
+resources\views\PersonnelRh.xml:95"
+"idRefPopulation",,,"resources\domains\PersonnelRh.xml:61
+resources\views\PersonnelRh.xml:131"
+"id_typeDomaine",,,"resources\domains\PersonnelRh.xml:62
+resources\views\PersonnelRh.xml:132"
+"import",,,"resources\views\GestionRH.xml:102"
+"jOUR_NAIS",,,"resources\domains\PersonnelRh.xml:63
+resources\views\PersonnelRh.xml:133"
+"lIEU_NAIS",,,"resources\domains\PersonnelRh.xml:64
+resources\views\PersonnelRh.xml:134"
+"les Imprimes",,,"resources\views\GestionRH.xml:46"
+"mODAVGRA",,,"resources\domains\PersonnelRh.xml:65
+resources\views\PersonnelRh.xml:135"
+"mOIS_NAIS",,,"resources\domains\PersonnelRh.xml:66
+resources\views\PersonnelRh.xml:136"
+"matiere",,,"resources\views\Menu.xml:22"
+"nOMA",,,"resources\domains\PersonnelRh.xml:67
+resources\views\PersonnelRh.xml:137
+resources\views\PersonnelRh.xml:74
+resources\views\PersonnelRh.xml:81
+resources\views\PersonnelRh.xml:9"
+"nOML",,,"resources\domains\PersonnelRh.xml:68
+resources\views\PersonnelRh.xml:10
+resources\views\PersonnelRh.xml:138
+resources\views\PersonnelRh.xml:77
+resources\views\PersonnelRh.xml:82"
+"nameAr",,,"resources\domains\CadreRh.xml:11
+resources\domains\FonctionRh.xml:9
+resources\domains\GradeRh.xml:10
+resources\domains\MatiereRh.xml:9"
+"nameFr",,,"resources\domains\CadreRh.xml:12
+resources\domains\FonctionRh.xml:10
+resources\domains\GradeRh.xml:11
+resources\domains\MatiereRh.xml:10"
+"nom utilisateur",,,"resources\views\GestionRH.xml:87"
+"nombre de personne",,,"resources\domains\GreveRH.xml:9"
+"numAFFIL",,,"resources\domains\PersonnelRh.xml:69
+resources\views\PersonnelRh.xml:139"
+"numImma",,,"resources\domains\PersonnelRh.xml:70
+resources\views\PersonnelRh.xml:140"
+"pPR",,,"resources\domains\PersonnelRh.xml:71
+resources\views\PersonnelRh.xml:141
+resources\views\PersonnelRh.xml:75
+resources\views\PersonnelRh.xml:8
+resources\views\PersonnelRh.xml:83"
+"pRENOMA",,,"resources\domains\PersonnelRh.xml:72
+resources\views\PersonnelRh.xml:142"
+"pRENOML",,,"resources\domains\PersonnelRh.xml:73
+resources\views\PersonnelRh.xml:143"
+"sIT_FAM",,,"resources\domains\PersonnelRh.xml:74
+resources\views\PersonnelRh.xml:144"
+"selectionner une Fichier",,,"resources\views\GestionRH.xml:108
+resources\views\GestionRH.xml:122"
+"tEL_FIXE",,,"resources\domains\PersonnelRh.xml:75
+resources\views\PersonnelRh.xml:145"
+"tEL_PORTABLE",,,"resources\domains\PersonnelRh.xml:76
+resources\views\PersonnelRh.xml:146"
+"table service",,,"resources\views\PersonnelRh.xml:151"
+"vILLE",,,"resources\domains\PersonnelRh.xml:77
+resources\views\PersonnelRh.xml:147"
+"vILLEFORM",,,"resources\domains\PersonnelRh.xml:78
+resources\views\PersonnelRh.xml:148"
+"اسم المؤسسة",,,"resources\views\GestionRH.xml:90"
+"اسم المستخدم",,,"resources\views\GestionRH.xml:86"
+"الطريقة المستخدمة للتواصل مع مسار هي وكيل اعتراض البيانات ، وهي طريقة آمنة ولا يمكن حفظ معلوماتك",,,"resources\views\GestionRH.xml:68"

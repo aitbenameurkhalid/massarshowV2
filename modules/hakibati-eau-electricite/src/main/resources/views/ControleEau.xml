@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+    <grid name="ControleEau-grid" title="Liste Controle de consommation"
+          model="com.hakibati.eau.electricite.db.ControleEau" editable="true" orderBy="dateControle">
+        <field name="etablissement"/>
+        <field name="codeGresa"/>
+        <field name="numeroContratEau"/>
+        <field name="dateControle" colSpan="3"/>
+        <field name="valeurCompteur" colSpan="3"/>
+        <field name="imageCompteur" widget="image"/>
+        <button name="btn-delete-consommation-eau" title="Supprime" icon="fa-trash" onClick="action-delete-control-eau" prompt="Voulez-vous vraiment Supprimez cet enregistrement ?" />
+    </grid>
+
+<!--    <grid name="ControleEau-grid" title="Liste Controle de consommation"-->
+<!--          model="com.hakibati.eau.electricite.db.ControleEau" editable="true" groups="directionAdmin,directionUser"  >-->
+<!--        <field name="etablissement"/>-->
+<!--        <field name="codeGresa"/>-->
+<!--        <field name="numeroContratEau"/>-->
+<!--        <field name="dateControle" colSpan="3"/>-->
+<!--        <field name="valeurCompteur" colSpan="3"/>-->
+<!--        <field name="imageCompteur" widget="image"/>-->
+<!--    </grid>-->
+
+    <form name="ControleEau-form" title="Controle de consommation" model="com.hakibati.eau.electricite.db.ControleEau"
+          width="large" onNew="action-getinformation-Etab">
+        <panel readonly="true" colSpan="12" showTitle="false">
+            <field name="etablissement" form-view="zero" showTitle="false" colSpan="8"
+                   css="btn btn-warning label-bold bold large"/>
+            <field name="codeGresa" showTitle="false" colSpan="2" css="btn btn-warning label-bold bold large"/>
+            <field name="numeroContratEau" showTitle="false" colSpan="2" css="btn btn-warning label-bold bold large"/>
+        </panel>
+        <panel title="Ajouter ou modifier">
+            <field name="dateControle" colSpan="3"/>
+            <field name="valeurCompteur" colSpan="3"/>
+            <field name="imageCompteur" widget="image"/>
+        </panel>
+    </form>
+
+        <action-record name="action-getinformation-Etab" model="com.hakibati.eau.electricite.db.ControleEau">
+          <field name="codeGresa"  expr="call:com.eau.electricite.service.GestionEauElectriciteService:getGresa(etablissement)"/>
+          <field name="numeroContratEau" expr="call:com.eau.electricite.service.GestionEauElectriciteService:getContratEau(etablissement)"/>
+          <field name="numeroContratElectricite"  expr="call:com.eau.electricite.service.GestionEauElectriciteService:getContratElectricite(etablissement)"/>
+        </action-record>
+    <action-method name="action-delete-control-eau">
+        <call class="com.eau.electricite.web.ControleEauController" method="deleteControleEauSelect"/>
+    </action-method>
+</object-views>

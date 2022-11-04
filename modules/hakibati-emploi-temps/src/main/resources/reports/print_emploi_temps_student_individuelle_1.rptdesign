@@ -1,0 +1,964 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.8.0.v201806261756</property>
+    <list-property name="propertyBindings">
+        <structure>
+            <property name="name">queryText</property>
+            <property name="id">5</property>
+        </structure>
+        <structure>
+            <property name="name">queryTimeOut</property>
+            <property name="id">5</property>
+        </structure>
+        <structure>
+            <property name="name">rowFetchSize</property>
+            <property name="id">5</property>
+        </structure>
+    </list-property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">rtl</property>
+    <property name="imageDPI">96</property>
+    <parameters>
+        <scalar-parameter name="IdDoss" id="4616">
+            <property name="hidden">true</property>
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">decimal</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">2</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="UrlLogo" id="4609">
+            <property name="hidden">true</property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">img/logo-ar.png</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="AttachmentPath" id="3849">
+            <property name="hidden">true</property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">C:/Users/khalid/.axelor/attachments/</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="IdEtablissement" id="4615">
+            <property name="hidden">true</property>
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">decimal</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">1</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="IdDossExam" id="4869">
+            <property name="hidden">true</property>
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">decimal</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">70</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="appexam" id="4">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">org.postgresql.Driver</property>
+            <property name="odaURL">jdbc:postgresql://localhost:5432/appexam</property>
+            <property name="odaUser">hakibati</property>
+            <encrypted-property name="odaPassword" encryptionID="base64">SGFraWJhdGlAMjAyMCE=</encrypted-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="EmploiResulta" id="5">
+            <property name="nullsOrdering">nulls lowest</property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">studentname</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">studentname</text-property>
+                    <text-property name="heading">studentname</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">emploi_temps</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">emploi_temps</text-property>
+                    <text-property name="heading">emploi_temps</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">etablisemnt</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">etablisemnt</text-property>
+                    <text-property name="heading">etablisemnt</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">commun</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">commun</text-property>
+                    <text-property name="heading">commun</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">direction</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">direction</text-property>
+                    <text-property name="heading">direction</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">acadimie</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">acadimie</text-property>
+                    <text-property name="heading">acadimie</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">teachers</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">teachers</text-property>
+                    <text-property name="heading">teachers</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">realnamestudent</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">realnamestudent</text-property>
+                    <text-property name="heading">realnamestudent</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">file_path</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">file_path</text-property>
+                    <text-property name="heading">file_path</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">param_1</property>
+                    <property name="paramName">IdDoss</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                    <property name="position">1</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">studentname</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">emploi_temps</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">etablisemnt</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">commun</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">direction</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">acadimie</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">teachers</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">realnamestudent</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">file_path</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">appexam</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">studentname</property>
+                    <property name="nativeName">studentname</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">emploi_temps</property>
+                    <property name="nativeName">emploi_temps</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">etablisemnt</property>
+                    <property name="nativeName">etablisemnt</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">commun</property>
+                    <property name="nativeName">commun</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">direction</property>
+                    <property name="nativeName">direction</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">acadimie</property>
+                    <property name="nativeName">acadimie</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">teachers</property>
+                    <property name="nativeName">teachers</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">realnamestudent</property>
+                    <property name="nativeName">realnamestudent</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">file_path</property>
+                    <property name="nativeName">file_path</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select public.emploi_student_dossier.name_fet as studentName,
+public.emploi_student_dossier.emploi_temps,
+public.application_etablissement.name as etablisemnt,
+public.application_etablissement.commun as commun,
+public.application_etablissement.direction as direction,
+public.application_etablissement.academie as acadimie,
+public.emploi_student_dossier.teachers,
+public.emploi_student_fet.name as realNameStudent,
+public.meta_file.file_path
+from public.emploi_student_dossier
+left join public.emploi_student_fet on public.emploi_student_dossier.student_fet=public.emploi_student_fet.id
+
+left join public.application_etablissement on public.application_etablissement.id=public.emploi_student_dossier.etablissement
+left join public.meta_file on public.meta_file.id= public.application_etablissement.logo_en_tete
+where public.emploi_student_dossier.dossier_import_fet =?
+AND  public.emploi_student_dossier.cd_groupe<>-1 
+and public.emploi_student_dossier.cd_subgroupe=-1]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>id</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-5</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>id</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>id</design:label>
+            <design:formattingHints>
+              <design:displaySize>20</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>archived</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-7</design:nativeDataTypeCode>
+            <design:precision>1</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>archived</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>archived</design:label>
+            <design:formattingHints>
+              <design:displaySize>1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>version</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>version</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>version</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>created_on</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>93</design:nativeDataTypeCode>
+            <design:precision>29</design:precision>
+            <design:scale>6</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>created_on</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>created_on</design:label>
+            <design:formattingHints>
+              <design:displaySize>29</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>updated_on</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>93</design:nativeDataTypeCode>
+            <design:precision>29</design:precision>
+            <design:scale>6</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>updated_on</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>updated_on</design:label>
+            <design:formattingHints>
+              <design:displaySize>29</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>attrs</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1111</design:nativeDataTypeCode>
+            <design:precision>2147483647</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>attrs</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>attrs</design:label>
+            <design:formattingHints>
+              <design:displaySize>2147483647</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>cd</design:name>
+              <design:position>7</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>cd</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>cd</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>duration</design:name>
+              <design:position>8</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>duration</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>duration</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>created_by</design:name>
+              <design:position>9</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-5</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>created_by</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>created_by</design:label>
+            <design:formattingHints>
+              <design:displaySize>20</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>updated_by</design:name>
+              <design:position>10</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-5</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>updated_by</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>updated_by</design:label>
+            <design:formattingHints>
+              <design:displaySize>20</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>day_fet</design:name>
+              <design:position>11</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-5</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>day_fet</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>day_fet</design:label>
+            <design:formattingHints>
+              <design:displaySize>20</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>dossier_import_fet</design:name>
+              <design:position>12</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-5</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>dossier_import_fet</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>dossier_import_fet</design:label>
+            <design:formattingHints>
+              <design:displaySize>20</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>etablissement</design:name>
+              <design:position>13</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-5</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>etablissement</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>etablissement</design:label>
+            <design:formattingHints>
+              <design:displaySize>20</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>hour_fet</design:name>
+              <design:position>14</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-5</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>hour_fet</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>hour_fet</design:label>
+            <design:formattingHints>
+              <design:displaySize>20</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>room_fet</design:name>
+              <design:position>15</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-5</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>room_fet</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>room_fet</design:label>
+            <design:formattingHints>
+              <design:displaySize>20</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>student_fet</design:name>
+              <design:position>16</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-5</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>student_fet</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>student_fet</design:label>
+            <design:formattingHints>
+              <design:displaySize>20</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>subject_fet</design:name>
+              <design:position>17</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-5</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>subject_fet</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>subject_fet</design:label>
+            <design:formattingHints>
+              <design:displaySize>20</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>teacher_fet</design:name>
+              <design:position>18</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-5</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>teacher_fet</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>teacher_fet</design:label>
+            <design:formattingHints>
+              <design:displaySize>20</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="type">a4</property>
+            <property name="orientation">landscape</property>
+            <property name="topMargin">0in</property>
+            <property name="bottomMargin">0in</property>
+            <property name="headerHeight">0in</property>
+            <property name="footerHeight">0in</property>
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <table id="4870">
+            <property name="dataSet">EmploiResulta</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">acadimie</property>
+                    <text-property name="displayName">acadimie</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["acadimie"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">commun</property>
+                    <text-property name="displayName">commun</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["commun"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">direction</property>
+                    <text-property name="displayName">direction</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["direction"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">emploi_temps</property>
+                    <text-property name="displayName">emploi_temps</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["emploi_temps"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">etablisemnt</property>
+                    <text-property name="displayName">etablisemnt</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["etablisemnt"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">studentname</property>
+                    <text-property name="displayName">studentname</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["studentname"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">file_path</property>
+                    <text-property name="displayName">file_path</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["file_path"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Column Binding</property>
+                    <expression name="expression" type="javascript">"استعمال الزمن للقسم: "+row["realnamestudent"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">teachers</property>
+                    <text-property name="displayName">teachers</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["teachers"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">realnamestudent</property>
+                    <text-property name="displayName">realnamestudent</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["realnamestudent"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <column id="4879"/>
+            <detail>
+                <row id="4874">
+                    <property name="height">7.895833333333333in</property>
+                    <cell id="4875">
+                        <property name="borderTopStyle">dashed</property>
+                        <property name="borderTopWidth">thin</property>
+                        <grid id="4880">
+                            <property name="height">2.75in</property>
+                            <column id="4881"/>
+                            <column id="4882"/>
+                            <column id="4883"/>
+                            <column id="4884"/>
+                            <column id="4885"/>
+                            <column id="4886"/>
+                            <column id="4887"/>
+                            <column id="4888"/>
+                            <column id="4889"/>
+                            <row id="4890">
+                                <cell id="4891">
+                                    <property name="colSpan">3</property>
+                                    <property name="rowSpan">1</property>
+                                    <data id="4981">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontSize">12pt</property>
+                                        <property name="textAlign">center</property>
+                                        <property name="resultSetColumn">acadimie</property>
+                                    </data>
+                                    <data id="4982">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontSize">12pt</property>
+                                        <property name="textAlign">center</property>
+                                        <property name="resultSetColumn">direction</property>
+                                    </data>
+                                </cell>
+                                <cell id="4894">
+                                    <property name="colSpan">3</property>
+                                    <property name="rowSpan">1</property>
+                                    <property name="textAlign">center</property>
+                                    <image id="4328">
+                                        <property name="height">70px</property>
+                                        <property name="width">3.1041666666666665in</property>
+                                        <expression name="altText">""</expression>
+                                        <property name="source">file</property>
+                                        <expression name="uri" type="javascript">if(row["file_path"]){&#13;
+params["AttachmentPath"].value+row["file_path"];&#13;
+}else&#13;
+{&#13;
+params["UrlLogo"];&#13;
+}</expression>
+                                    </image>
+                                </cell>
+                                <cell id="4897">
+                                    <property name="colSpan">3</property>
+                                    <property name="rowSpan">1</property>
+                                    <data id="5047">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontSize">12pt</property>
+                                        <property name="textAlign">center</property>
+                                        <property name="resultSetColumn">commun</property>
+                                    </data>
+                                    <data id="5048">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontSize">12pt</property>
+                                        <property name="textAlign">center</property>
+                                        <property name="resultSetColumn">etablisemnt</property>
+                                    </data>
+                                </cell>
+                            </row>
+                            <row id="4930">
+                                <cell id="4931">
+                                    <property name="colSpan">9</property>
+                                    <property name="rowSpan">1</property>
+                                    <data id="4819">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontSize">16pt</property>
+                                        <property name="fontWeight">bold</property>
+                                        <property name="textAlign">center</property>
+                                        <property name="bidiTextDirection">rtl</property>
+                                        <property name="resultSetColumn">Column Binding</property>
+                                    </data>
+                                </cell>
+                            </row>
+                            <row id="5035">
+                                <cell id="5036">
+                                    <property name="colSpan">9</property>
+                                    <property name="rowSpan">1</property>
+                                    <text id="4784">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontSize">14pt</property>
+                                        <property name="bidiTextDirection">rtl</property>
+                                        <property name="contentType">html</property>
+                                        <text-property name="content"><![CDATA[<VALUE-OF format="HTML">row["emploi_temps"]</VALUE-OF>]]></text-property>
+                                    </text>
+                                </cell>
+                            </row>
+                            <row id="5049">
+                                <property name="height">0.2916666666666667in</property>
+                                <cell id="5050"/>
+                                <cell id="5051"/>
+                                <cell id="5052">
+                                    <property name="colSpan">5</property>
+                                    <property name="rowSpan">1</property>
+                                    <label id="5104">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontSize">14pt</property>
+                                        <property name="textAlign">center</property>
+                                        <text-property name="text">اساتــــــــــــــــذة القســـــــــــــــــم</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="5057"/>
+                                <cell id="5058"/>
+                            </row>
+                            <row id="5059">
+                                <cell id="5060">
+                                    <property name="colSpan">9</property>
+                                    <property name="rowSpan">1</property>
+                                    <text id="5102">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="contentType">html</property>
+                                        <text-property name="content"><![CDATA[<VALUE-OF format="HTML">row["teachers"]</VALUE-OF>]]></text-property>
+                                    </text>
+                                </cell>
+                            </row>
+                            <row id="5015">
+                                <cell id="5016"/>
+                                <cell id="5017">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">1</property>
+                                </cell>
+                                <cell id="5019"/>
+                                <cell id="5020"/>
+                                <cell id="5021"/>
+                                <cell id="5022">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">1</property>
+                                    <label id="4868">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontSize">16pt</property>
+                                        <property name="marginTop">5mm</property>
+                                        <property name="marginBottom">1cm</property>
+                                        <property name="textAlign">center</property>
+                                        <text-property name="text">توقيع رئيس المؤسسة </text-property>
+                                    </label>
+                                </cell>
+                                <cell id="5024"/>
+                            </row>
+                        </grid>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="4877">
+                    <cell id="4878"/>
+                </row>
+            </footer>
+        </table>
+    </body>
+</report>

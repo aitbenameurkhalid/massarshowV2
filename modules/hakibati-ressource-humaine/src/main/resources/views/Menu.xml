@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+    <menuitem name="menu-ressource-humaine" title="Ressource humaine" icon="fa-file-text-o" icon-background="violet"/>
+    <menuitem name="menu-ressource-humaine-donne-personnel" parent="menu-ressource-humaine" title="données du personnel"
+              action="action-ressource-humaine-donne-personnel"/>
+    <action-method name="action-ressource-humaine-donne-personnel">
+        <call class="com.ressource.humaine.web.GestionRHController" method="OpenGestionPersonnel"/>
+    </action-method>
+    <menuitem name="menu-ressource-humaine-greve-personnel" parent="menu-ressource-humaine" title="greve du personnel"
+              action="action-ressource-humaine-greve-personnel"/>
+    <action-method name="action-ressource-humaine-greve-personnel">
+        <call class="com.ressource.humaine.web.GestionRHController" method="OpenGestionGrevePersonnel"/>
+    </action-method>
+
+
+    <menuitem name="menu-ressource-humaine-parametre" parent="menu-ressource-humaine" title="Paramètres" groups="admins"/>
+
+    <menuitem name="menu-matiereRh"  title="Matieres" parent="menu-ressource-humaine-parametre" action="action-matiereRh"/>
+    <action-view name="action-matiereRh" title="matiere" model="com.hakibati.ressource.humaine.db.MatiereRh">
+        <view type="grid"  />
+        <view type="form" />
+    </action-view>
+    <menuitem name="menu-GradeRh"  title="Grades" parent="menu-ressource-humaine-parametre" action="action-GradeRh"/>
+    <action-view name="action-GradeRh" title="Les etablissements" model="com.hakibati.ressource.humaine.db.GradeRh">
+        <view type="grid"  />
+        <view type="form" />
+    </action-view>
+    <menuitem name="menu-CadreRh"  title="Cadres" parent="menu-ressource-humaine-parametre" action="action-CadreRh"/>
+    <action-view name="action-CadreRh" title="Les etablissements" model="com.hakibati.ressource.humaine.db.CadreRh">
+        <view type="grid"  />
+        <view type="form" />
+    </action-view>
+    <menuitem name="menu-FonctionRh"  title="Fonctions" parent="menu-ressource-humaine-parametre" action="action-FonctionRh"/>
+    <action-view name="action-FonctionRh" title="Les FonctionRh" model="com.hakibati.ressource.humaine.db.FonctionRh">
+        <view type="grid"  />
+        <view type="form" />
+    </action-view>
+
+</object-views>

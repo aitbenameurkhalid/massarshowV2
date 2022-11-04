@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_5.3.xsd">
+
+  <module name="hakibati-centre-langue" package="com.hakibati.centre.langue.db"/>
+
+  <entity name="GroupeCentre" cacheable="true">
+     <string name="name"/>
+    <integer name="montantMensuel" title="Montant mensuel"/>
+    <many-to-one name="profCentre" ref="ProfCentre" title="Prof" />
+    <many-to-one name="matiereCentre" ref="MatiereCentre" title="Matiere" />
+    <many-to-many name="eleveCentres" ref="EleveCentre" title="Eleves" />
+    <string name="commentaire" />
+    <one-to-many name="suiviFinancier" ref="SuiviFinancierCentre" mappedBy="groupeCentre" title="Suivi financier"/>
+    <many-to-one name="etablissement" ref="com.app.application.db.Etablissement"  >
+      <![CDATA[
+    if (etablissement == null)
+   return createdBy.getEtablissementSelectionnee() ;
+   return etablissement;
+      ]]>
+    </many-to-one>-to-one>
+    <many-to-one name="createdBy" ref="com.axelor.auth.db.User"/>
+  </entity>
+</domain-models>

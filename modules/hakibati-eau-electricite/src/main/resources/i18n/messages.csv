@@ -1,0 +1,214 @@
+"key","message","comment","context"
+"......",,,"resources\views\GestionEauElectricite.xml:23"
+"Ajoute",,,"resources\views\GestionEauElectricite.xml:55
+resources\views\GestionEauElectricite.xml:68
+resources\views\GestionEauElectricite.xml:83
+resources\views\GestionEauElectricite.xml:97"
+"Ajouter ou modifier",,,"resources\views\ConsommationEau.xml:21
+resources\views\ConsommationElectricite.xml:20
+resources\views\ControleEau.xml:34
+resources\views\ControleElectricite.xml:33"
+"COL",,,"java\com\eau\electricite\service\ControlElectriciteService.java:86
+java\com\eau\electricite\service\ControleEauService.java:86"
+"College",,,"resources\domains\GestionEauElectricite.xml:13"
+"Commune",,,"java\com\eau\electricite\service\ConsommationEauService.java:74
+java\com\eau\electricite\service\ConsommationElectriciteService.java:74
+java\com\eau\electricite\service\ControlElectriciteService.java:76
+java\com\eau\electricite\service\ControleEauService.java:76"
+"Compteur",,,"java\com\eau\electricite\service\ControlElectriciteService.java:111
+java\com\eau\electricite\service\ControlElectriciteService.java:117
+java\com\eau\electricite\service\ControleEauService.java:111
+java\com\eau\electricite\service\ControleEauService.java:117"
+"Compteur Du",,,"resources\domains\ConsommationEau.xml:9
+resources\domains\ConsommationElectricite.xml:9"
+"Compteur Fin",,,"resources\domains\ConsommationEau.xml:11
+resources\domains\ConsommationElectricite.xml:11"
+"Consommation",,,"java\com\eau\electricite\service\ControlElectriciteService.java:120
+java\com\eau\electricite\service\ControleEauService.java:120
+resources\views\Menu.xml:14"
+"Consommation d'électricite par etablissement",,,"resources\views\Charts.xml:122"
+"Consommation de l'eau par etablissement",,,"resources\views\Charts.xml:6"
+"Consommation de téléphone par etablissement",,,"resources\views\Charts.xml:203"
+"Consommation/Jour",,,"java\com\eau\electricite\service\ControlElectriciteService.java:122
+java\com\eau\electricite\service\ControleEauService.java:122"
+"Contrat Eau",,,"java\com\eau\electricite\service\ConsommationEauService.java:80"
+"Contrat Electricite",,,"java\com\eau\electricite\service\ConsommationElectriciteService.java:80"
+"Controle Eau",,,"resources\views\GestionEauElectricite.xml:63"
+"Controle de consommation",,,"resources\views\ControleEau.xml:27
+resources\views\ControleElectricite.xml:27"
+"Controle de consommation d'électricite",,,"resources\views\Charts.xml:177"
+"Controle de l'eau",,,"resources\views\Charts.xml:61"
+"Controle Électricité",,,"resources\views\GestionEauElectricite.xml:92"
+"Contrôle",,,"resources\views\Menu.xml:15"
+"Created by",,,"resources\domains\ConsommationEau.xml:17
+resources\domains\ConsommationElectricite.xml:17
+resources\domains\ControleEau.xml:20
+resources\domains\ControleElectricite.xml:20
+resources\domains\GestionEauElectricite.xml:27"
+"Date Au",,,"java\com\eau\electricite\service\ControlElectriciteService.java:114
+java\com\eau\electricite\service\ControleEauService.java:114
+resources\views\Charts.xml:64
+resources\views\GestionEauElectricite.xml:110
+resources\views\GestionEauElectricite.xml:124
+resources\views\GestionEauElectricite.xml:140
+resources\views\GestionEauElectricite.xml:154
+resources\views\GestionEauElectricite.xml:53
+resources\views\GestionEauElectricite.xml:66
+resources\views\GestionEauElectricite.xml:81
+resources\views\GestionEauElectricite.xml:95"
+"Date Du",,,"java\com\eau\electricite\service\ControlElectriciteService.java:108
+java\com\eau\electricite\service\ControleEauService.java:108
+resources\views\Charts.xml:63
+resources\views\GestionEauElectricite.xml:109
+resources\views\GestionEauElectricite.xml:123
+resources\views\GestionEauElectricite.xml:139
+resources\views\GestionEauElectricite.xml:153
+resources\views\GestionEauElectricite.xml:52
+resources\views\GestionEauElectricite.xml:65
+resources\views\GestionEauElectricite.xml:80
+resources\views\GestionEauElectricite.xml:94"
+"Date de contrôle",,,"resources\domains\ControleEau.xml:8
+resources\domains\ControleElectricite.xml:8"
+"Date fin",,,"java\com\eau\electricite\service\ConsommationEauService.java:91
+java\com\eau\electricite\service\ConsommationElectriciteService.java:91"
+"EAU",,,"resources\views\Menu.xml:17
+resources\views\Menu.xml:25"
+"ELECTRICITE",,,"resources\views\Menu.xml:35
+resources\views\Menu.xml:44"
+"Eau Et électricité",,,"resources\views\Menu.xml:6"
+"Etablissement",,,"resources\domains\ConsommationEau.xml:14
+resources\domains\ConsommationElectricite.xml:14
+resources\domains\ControleEau.xml:11
+resources\domains\ControleElectricite.xml:11
+resources\domains\GestionEauElectricite.xml:20"
+"Export",,,"resources\views\GestionEauElectricite.xml:108
+resources\views\GestionEauElectricite.xml:112
+resources\views\GestionEauElectricite.xml:122
+resources\views\GestionEauElectricite.xml:128
+resources\views\GestionEauElectricite.xml:138
+resources\views\GestionEauElectricite.xml:142
+resources\views\GestionEauElectricite.xml:152
+resources\views\GestionEauElectricite.xml:159"
+"Export/Import",,,"resources\views\GestionEauElectricite.xml:57
+resources\views\GestionEauElectricite.xml:70
+resources\views\GestionEauElectricite.xml:85
+resources\views\GestionEauElectricite.xml:99"
+"Gestion Eau",,,"resources\views\GestionEauElectricite.xml:50"
+"Gestion Électricité",,,"resources\views\GestionEauElectricite.xml:78"
+"Gresa",,,"java\com\eau\electricite\service\ConsommationEauService.java:77
+java\com\eau\electricite\service\ConsommationElectriciteService.java:77
+java\com\eau\electricite\service\ControlElectriciteService.java:79
+java\com\eau\electricite\service\ControleEauService.java:79
+resources\domains\ConsommationEau.xml:15
+resources\domains\ConsommationElectricite.xml:15
+resources\domains\ControleEau.xml:18
+resources\domains\ControleElectricite.xml:18
+resources\domains\GestionEauElectricite.xml:9"
+"INTERNAT",,,"java\com\eau\electricite\service\ControlElectriciteService.java:96
+java\com\eau\electricite\service\ControleEauService.java:96"
+"Import",,,"resources\views\GestionEauElectricite.xml:114
+resources\views\GestionEauElectricite.xml:116
+resources\views\GestionEauElectricite.xml:130
+resources\views\GestionEauElectricite.xml:132
+resources\views\GestionEauElectricite.xml:144
+resources\views\GestionEauElectricite.xml:146
+resources\views\GestionEauElectricite.xml:161
+resources\views\GestionEauElectricite.xml:163
+resources\views\GestionEauElectricite.xml:311
+resources\views\GestionEauElectricite.xml:322
+resources\views\GestionEauElectricite.xml:333
+resources\views\GestionEauElectricite.xml:344"
+"Import/Export/Consommation/Eau",,,"resources\views\GestionEauElectricite.xml:107"
+"Import/Export/Control/Eau",,,"resources\views\GestionEauElectricite.xml:121"
+"Import/Export/Électricité",,,"resources\views\GestionEauElectricite.xml:137
+resources\views\GestionEauElectricite.xml:151"
+"InfoEauElectricite",,,"resources\views\GestionEauElectricite.xml:18
+resources\views\GestionEauElectricite.xml:7"
+"Information",,,"java\com\eau\electricite\web\GestionEauElectriciteController.java:122
+java\com\eau\electricite\web\GestionEauElectriciteController.java:154
+java\com\eau\electricite\web\GestionEauElectriciteController.java:186
+java\com\eau\electricite\web\GestionEauElectriciteController.java:58
+java\com\eau\electricite\web\GestionEauElectriciteController.java:90"
+"Internat",,,"resources\domains\GestionEauElectricite.xml:17"
+"LES PARAMETRES",,,"resources\views\Menu.xml:54
+resources\views\Menu.xml:62
+resources\views\Menu.xml:63"
+"Liste Controle de consommation",,,"resources\views\ControleEau.xml:6
+resources\views\ControleElectricite.xml:16
+resources\views\ControleElectricite.xml:7"
+"Liste consommation",,,"resources\views\ConsommationEau.xml:7
+resources\views\ConsommationElectricite.xml:7"
+"Logo En Tete",,,"resources\domains\GestionEauElectricite.xml:28"
+"Max size 4MB.",,,"resources\domains\ControleEau.xml:10
+resources\domains\ControleElectricite.xml:10"
+"Montant de consommation",,,"resources\domains\ConsommationEau.xml:12
+resources\domains\ConsommationElectricite.xml:12"
+"N eleves",,,"java\com\eau\electricite\service\ControlElectriciteService.java:102
+java\com\eau\electricite\service\ControleEauService.java:102"
+"Nom Etablissemnt",,,"java\com\eau\electricite\service\ConsommationEauService.java:71
+java\com\eau\electricite\service\ConsommationElectriciteService.java:71
+java\com\eau\electricite\service\ControlElectriciteService.java:73
+java\com\eau\electricite\service\ControleEauService.java:73"
+"N° de contrat d'eau",,,"resources\domains\GestionEauElectricite.xml:10"
+"N° de contrat d'électricité",,,"resources\domains\GestionEauElectricite.xml:11"
+"Nآ°",,,"java\com\eau\electricite\service\ConsommationEauService.java:68
+java\com\eau\electricite\service\ConsommationElectriciteService.java:68
+java\com\eau\electricite\service\ControlElectriciteService.java:70
+java\com\eau\electricite\service\ControleEauService.java:70"
+"Nآ° Compteur Eau",,,"java\com\eau\electricite\service\ControleEauService.java:105"
+"Nآ° Compteur Electricite",,,"java\com\eau\electricite\service\ControlElectriciteService.java:105"
+"PRI",,,"java\com\eau\electricite\service\ControlElectriciteService.java:90
+java\com\eau\electricite\service\ControleEauService.java:90"
+"Primaire",,,"resources\domains\GestionEauElectricite.xml:15"
+"QUAL",,,"java\com\eau\electricite\service\ControlElectriciteService.java:82
+java\com\eau\electricite\service\ControleEauService.java:82"
+"Qualifiant",,,"resources\domains\GestionEauElectricite.xml:14"
+"Quantité de consommation",,,"resources\domains\ConsommationEau.xml:13
+resources\domains\ConsommationElectricite.xml:13"
+"Statistiques",,,"resources\views\Menu.xml:8
+resources\views\Menu.xml:9"
+"Statistiques!",,,"resources\views\Dashboard.xml:6"
+"Supprime",,,"resources\views\ControleEau.xml:13
+resources\views\ControleElectricite.xml:14"
+"Voulez-vous vraiment Supprimez cet enregistrement ?",,,"resources\views\ControleEau.xml:13
+resources\views\ControleElectricite.xml:14"
+"Vous n'avez pas l'autorisation",,,"java\com\eau\electricite\web\ControlElectriciteController.java:17
+java\com\eau\electricite\web\ControleEauController.java:16"
+"annex",,,"java\com\eau\electricite\service\ControlElectriciteService.java:93
+java\com\eau\electricite\service\ControleEauService.java:93"
+"compteur",,,"java\com\eau\electricite\service\ConsommationEauService.java:88
+java\com\eau\electricite\service\ConsommationEauService.java:94
+java\com\eau\electricite\service\ConsommationElectriciteService.java:88
+java\com\eau\electricite\service\ConsommationElectriciteService.java:94"
+"consommation",,,"resources\views\ConsommationEau.xml:20
+resources\views\ConsommationElectricite.xml:19"
+"consommation d'électricite par mois",,,"resources\views\Charts.xml:151"
+"consommation de l'eau par mois",,,"resources\views\Charts.xml:34"
+"consommation de téléphone par mois",,,"resources\views\Charts.xml:232"
+"contrat d'eau",,,"resources\domains\ConsommationEau.xml:16
+resources\domains\ControleEau.xml:19"
+"contrat d'électricité",,,"resources\domains\ConsommationElectricite.xml:16
+resources\domains\ControleElectricite.xml:19"
+"custion-statistiques",,,"resources\views\GestionEauElectricite.xml:38"
+"date Du",,,"java\com\eau\electricite\service\ConsommationEauService.java:84
+java\com\eau\electricite\service\ConsommationElectriciteService.java:84"
+"date Fin",,,"resources\domains\ConsommationEau.xml:10
+resources\domains\ConsommationElectricite.xml:10"
+"date début",,,"resources\domains\ConsommationEau.xml:8
+resources\domains\ConsommationElectricite.xml:8"
+"dernière données",,,"resources\views\GestionEauElectricite.xml:369"
+"diffأ©rence",,,"java\com\eau\electricite\service\ConsommationEauService.java:97
+java\com\eau\electricite\service\ConsommationElectriciteService.java:97"
+"image Compteur",,,"resources\domains\ControleEau.xml:10
+resources\domains\ControleElectricite.xml:10"
+"montant",,,"java\com\eau\electricite\service\ConsommationEauService.java:100
+java\com\eau\electricite\service\ConsommationElectriciteService.java:100"
+"nombre bâtiments",,,"resources\domains\GestionEauElectricite.xml:18
+resources\domains\GestionEauElectricite.xml:19"
+"nombre de structures bأ©nأ©ficiant de ce compteur",,,"java\com\eau\electricite\service\ControlElectriciteService.java:99
+java\com\eau\electricite\service\ControleEauService.java:99"
+"nombre des éléves",,,"resources\domains\GestionEauElectricite.xml:12"
+"toutes les données",,,"resources\views\GestionEauElectricite.xml:370"
+"valeur de compteur",,,"resources\domains\ControleEau.xml:9
+resources\domains\ControleElectricite.xml:9"
+"َAnnexe",,,"resources\domains\GestionEauElectricite.xml:16"

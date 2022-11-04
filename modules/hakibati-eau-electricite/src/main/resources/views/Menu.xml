@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+  <menuitem name="menu-eau-electricite" title="Eau Et électricité" icon="fa-file-text-o" icon-background="violet"/>
+
+  <menuitem name="menu-eau-electricite-dashboard" parent="menu-eau-electricite" title="Statistiques"  action="action-dashboard" />
+  <action-view name="action-dashboard" title="Statistiques">
+    <view type="dashboard" name="eau-electricite.dashboard" />
+<!--    <context name="_past_month" expr="eval: __date__.minusMonths(1)"/>-->
+  </action-view>
+
+ <menuitem name="menu-eau-electricite-consommation" title="Consommation" icon="fa-file-text-o" icon-background="violet" parent="menu-eau-electricite" groups="admins"/>
+  <menuitem name="menu-eau-electricite-controle" title="Contrôle" icon="fa-file-text-o" icon-background="violet" parent="menu-eau-electricite"/>
+
+  <menuitem name="menu-consommation-eau" title="EAU" parent="menu-eau-electricite-consommation" action="ConsommationEau"/>
+<!--  <action-view name="ConsommationEau" title="Consommation D'eau" model="com.hakibati.eau.electricite.db.ConsommationEau">-->
+<!--    <view type="grid" name="consomationEau-grid"/>-->
+<!--    <view type="form" name="consommationEau-form"/>-->
+<!--  </action-view>-->
+<action-method name="ConsommationEau">
+    <call class="com.eau.electricite.web.GestionEauElectriciteController" method="OpenConsommationEau"/>
+</action-method>
+  <menuitem name="menu-controleConsommation-eau" title="EAU" parent="menu-eau-electricite-controle" action="ControleConsommationEau"/>
+<!--  <action-view name="ControleConsommationEau" title="Controle de consommation d'aeu" model="com.hakibati.eau.electricite.db.ControleEau">-->
+<!--    <view type="grid" name="ControleEau-grid"/>-->
+<!--    <view type="form" name="ControleEau-form"/>-->
+<!--  </action-view>-->
+  <action-method name="ControleConsommationEau">
+    <call class="com.eau.electricite.web.GestionEauElectriciteController" method="OpenControleEau"/>
+  </action-method>
+
+
+  <menuitem name="menu-consommation-electricite" title="ELECTRICITE" parent="menu-eau-electricite-consommation" action="ConsommationElectricite"/>
+<!--  <action-view name="ConsommationElectricite" title="ELECTRICITE" model="com.hakibati.eau.electricite.db.ConsommationElectricite">-->
+<!--    <view type="grid" name="ConsommationElectricite-grid"/>-->
+<!--    <view type="form" name="ConsommationElectricite-form"/>-->
+<!--  </action-view>-->
+  <action-method name="ConsommationElectricite">
+    <call class="com.eau.electricite.web.GestionEauElectriciteController" method="OpenConsommationElectricite"/>
+  </action-method>
+
+  <menuitem name="menu-controleConsommation-electricite" title="ELECTRICITE" parent="menu-eau-electricite-controle" action="ControleElectricite"/>
+<!--  <action-view name="ControleElectricite" title="ELECTRICITE" model="com.hakibati.eau.electricite.db.ControleElectricite">-->
+<!--    <view type="grid" name="ControleElectricite-grid"/>-->
+<!--    <view type="form" name="ControleElectricite-form"/>-->
+<!--  </action-view>-->
+  <action-method name="ControleElectricite">
+    <call class="com.eau.electricite.web.GestionEauElectriciteController" method="OpenControleElectricite"/>
+  </action-method>
+  <menuitem name="menu-eau-electricite-parametre" title="LES PARAMETRES" icon="fa-ban"
+            icon-background="green" parent="menu-eau-electricite"
+            action="action-eau-electricite-parametre" groups="etablissementAdmin,demo,etablissementUser"/>
+  <action-method name="action-eau-electricite-parametre">
+    <call class="com.eau.electricite.web.GestionEauElectriciteController" method="OpenInfoEauElectricite"/>
+  </action-method>
+
+
+  <menuitem name="menu-eau-electricite-parametre-direction" title="LES PARAMETRES" icon="fa-ban"
+            icon-background="green" parent="menu-eau-electricite"
+            action="action-eau-electricite-parametre-direction" groups="directionAdmin,directionUser"/>
+    <action-view name="action-eau-electricite-parametre-direction" title="LES PARAMETRES" model="com.hakibati.eau.electricite.db.GestionEauElectricite">
+      <view type="grid" name="GestionEauElectricite-grid"/>
+      <view type="form" name="GestionEauElectricite-form"/>
+    </action-view>
+</object-views>

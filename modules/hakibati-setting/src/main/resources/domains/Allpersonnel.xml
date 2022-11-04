@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_5.3.xsd">
+
+    <module name="hakibati-setting" package="com.hakibati.setting.db"/>
+    <entity name="Allpersonnel" cacheable="true">
+        <integer name="code" title="PPR"/>
+        <string name="name" title="Nom Ar"/>
+        <string name="nameFr" title="Nom Fr"/>
+        <string name="gresa" title="GRESA"/>
+        <string name="etablissement" title="ETAB"/>
+        <string name="direction" title="Direction"/>
+        <string name="cadre" />
+        <string name="grade"/>
+        <string name="cin" />
+        <many-to-one name="allEtabMassar" ref="AllEtabMassar"/>
+    </entity>
+</domain-models>

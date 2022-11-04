@@ -1,0 +1,1878 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.8.0.v201806261756</property>
+    <list-property name="propertyBindings">
+        <structure>
+            <property name="name">queryText</property>
+            <property name="id">5</property>
+        </structure>
+        <structure>
+            <property name="name">queryTimeOut</property>
+            <property name="id">5</property>
+        </structure>
+        <structure>
+            <property name="name">rowFetchSize</property>
+            <property name="id">5</property>
+        </structure>
+        <structure>
+            <property name="name">queryText</property>
+            <property name="id">592</property>
+        </structure>
+        <structure>
+            <property name="name">queryTimeOut</property>
+            <property name="id">592</property>
+        </structure>
+        <structure>
+            <property name="name">rowFetchSize</property>
+            <property name="id">592</property>
+        </structure>
+    </list-property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <parameters>
+        <scalar-parameter name="dateDu" id="200">
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">dateTime</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">20/10/2044</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="dateAu" id="557">
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">dateTime</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">20/10/2044</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="IdEtablissement" id="556">
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">decimal</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">1</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="IdArticleMin" id="559">
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">decimal</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">1</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="IdArticleMax" id="558">
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">decimal</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">10000000</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="IdAnneeScolaire" id="4701">
+            <property name="hidden">false</property>
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">decimal</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">14</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Hakibati" id="4">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">org.postgresql.Driver</property>
+            <property name="odaURL">jdbc:postgresql://localhost:5432/appexam</property>
+            <property name="odaUser">hakibati</property>
+            <encrypted-property name="odaPassword" encryptionID="base64">SGFraWJhdGlAMjAyMCE=</encrypted-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="opperation-journalier" id="5">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">id</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">id</text-property>
+                    <text-property name="heading">id</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">entree_du_jorur</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">entree_du_jorur</text-property>
+                    <text-property name="heading">entree_du_jorur</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">perime_journaliere</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">perime_journaliere</text-property>
+                    <text-property name="heading">perime_journaliere</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">consommation_dediner</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">consommation_dediner</text-property>
+                    <text-property name="heading">consommation_dediner</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">consommation_dejeuner</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">consommation_dejeuner</text-property>
+                    <text-property name="heading">consommation_dejeuner</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">consommation_petit_dejeuner</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">consommation_petit_dejeuner</text-property>
+                    <text-property name="heading">consommation_petit_dejeuner</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">article</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">article</text-property>
+                    <text-property name="heading">article</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">cahierjournalier</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">cahierjournalier</text-property>
+                    <text-property name="heading">cahierjournalier</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">name</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">name</text-property>
+                    <text-property name="heading">name</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">unite</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">unite</text-property>
+                    <text-property name="heading">unite</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">perime_journaliere_1</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">perime_journaliere</text-property>
+                    <text-property name="heading">perime_journaliere</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">date_operation</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">date_operation</text-property>
+                    <text-property name="heading">date_operation</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">etablissement</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">etablissement</text-property>
+                    <text-property name="heading">etablissement</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">etabl</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">etabl</text-property>
+                    <text-property name="heading">etabl</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">restarticle</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">restarticle</text-property>
+                    <text-property name="heading">restarticle</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">param_1</property>
+                    <property name="paramName">dateDu</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                    <property name="position">1</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">param_2</property>
+                    <property name="paramName">IdEtablissement</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                    <property name="position">2</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">param_3</property>
+                    <property name="paramName">IdArticleMin</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                    <property name="position">3</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">param_4</property>
+                    <property name="paramName">IdArticleMax</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                    <property name="position">4</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">param_5</property>
+                    <property name="paramName">dateDu</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                    <property name="position">5</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">param_6</property>
+                    <property name="paramName">dateAu</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                    <property name="position">6</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">id</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">entree_du_jorur</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">perime_journaliere</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">consommation_dediner</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">consommation_dejeuner</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">consommation_petit_dejeuner</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">article</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">cahierjournalier</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">unite</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">perime_journaliere_1</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">date_operation</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">13</property>
+                        <property name="name">etablissement</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">14</property>
+                        <property name="name">etabl</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">15</property>
+                        <property name="name">restarticle</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Hakibati</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">id</property>
+                    <property name="nativeName">id</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">entree_du_jorur</property>
+                    <property name="nativeName">entree_du_jorur</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">perime_journaliere</property>
+                    <property name="nativeName">perime_journaliere</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">consommation_dediner</property>
+                    <property name="nativeName">consommation_dediner</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">consommation_dejeuner</property>
+                    <property name="nativeName">consommation_dejeuner</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">consommation_petit_dejeuner</property>
+                    <property name="nativeName">consommation_petit_dejeuner</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">article</property>
+                    <property name="nativeName">article</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">cahierjournalier</property>
+                    <property name="nativeName">cahierjournalier</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">name</property>
+                    <property name="nativeName">name</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">unite</property>
+                    <property name="nativeName">unite</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">perime_journaliere_1</property>
+                    <property name="nativeName">perime_journaliere</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">date_operation</property>
+                    <property name="nativeName">date_operation</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                </structure>
+                <structure>
+                    <property name="position">13</property>
+                    <property name="name">etablissement</property>
+                    <property name="nativeName">etablissement</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                </structure>
+                <structure>
+                    <property name="position">14</property>
+                    <property name="name">etabl</property>
+                    <property name="nativeName">etabl</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">15</property>
+                    <property name="name">restarticle</property>
+                    <property name="nativeName">restarticle</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select public.eleves_operation_journalier.id,
+public.eleves_operation_journalier.entree_du_jorur,
+public.eleves_operation_journalier.perime_journaliere,
+public.eleves_operation_journalier.consommation_dediner,
+public.eleves_operation_journalier.consommation_dejeuner,
+public.eleves_operation_journalier.consommation_petit_dejeuner,
+public.eleves_operation_journalier.article,
+public.eleves_operation_journalier.cahierjournalier,
+public.eleves_article.name,
+public.eleves_article.unite,
+public.eleves_operation_journalier.perime_journaliere,
+public.eleves_cahierjournalier.date_operation,
+public.eleves_operation_journalier.etablissement,
+public.application_etablissement.name as etabl,
+rest.restArticle
+from public.eleves_operation_journalier
+LEFT JOIN public.eleves_article ON public.eleves_article.id = public.eleves_operation_journalier.article
+LEFT JOIN public.eleves_cahierjournalier ON public.eleves_cahierjournalier.id = public.eleves_operation_journalier.cahierjournalier
+LEFT JOIN public.application_etablissement ON public.application_etablissement.id =public.eleves_operation_journalier.etablissement
+Left join (select public.eleves_operation_journalier.article,
+			sum(public.eleves_operation_journalier.entree_du_jorur)  restArticle
+			from public.eleves_operation_journalier
+			left join public.eleves_cahierjournalier on public.eleves_cahierjournalier.id=public.eleves_operation_journalier.cahierjournalier
+			where public.eleves_cahierjournalier.date_operation < ?
+			group by public.eleves_operation_journalier.article
+
+            )  rest on rest.article=public.eleves_operation_journalier.article
+where public.eleves_operation_journalier.etablissement = ?
+and public.eleves_operation_journalier.article >= ?
+and public.eleves_operation_journalier.article <= ?
+and public.eleves_cahierjournalier.date_operation >= ?
+and public.eleves_cahierjournalier.date_operation <= ?]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <DataSetParameters>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>5</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>6</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+  </DataSetParameters>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>id</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-5</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>id</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>id</design:label>
+            <design:formattingHints>
+              <design:displaySize>20</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>archived</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-7</design:nativeDataTypeCode>
+            <design:precision>1</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>archived</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>archived</design:label>
+            <design:formattingHints>
+              <design:displaySize>1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>version</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>version</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>version</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>created_on</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>93</design:nativeDataTypeCode>
+            <design:precision>29</design:precision>
+            <design:scale>6</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>created_on</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>created_on</design:label>
+            <design:formattingHints>
+              <design:displaySize>29</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>updated_on</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>93</design:nativeDataTypeCode>
+            <design:precision>29</design:precision>
+            <design:scale>6</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>updated_on</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>updated_on</design:label>
+            <design:formattingHints>
+              <design:displaySize>29</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>attrs</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1111</design:nativeDataTypeCode>
+            <design:precision>2147483647</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>attrs</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>attrs</design:label>
+            <design:formattingHints>
+              <design:displaySize>2147483647</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>consommation_dediner</design:name>
+              <design:position>7</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>consommation_dediner</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>consommation_dediner</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>consommation_dejeuner</design:name>
+              <design:position>8</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>consommation_dejeuner</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>consommation_dejeuner</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>consommation_petit_dejeuner</design:name>
+              <design:position>9</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>consommation_petit_dejeuner</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>consommation_petit_dejeuner</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>consommation_total</design:name>
+              <design:position>10</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>consommation_total</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>consommation_total</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>entree_du_jorur</design:name>
+              <design:position>11</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>entree_du_jorur</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>entree_du_jorur</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>perime_journaliere</design:name>
+              <design:position>12</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>perime_journaliere</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>perime_journaliere</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>created_by</design:name>
+              <design:position>13</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-5</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>created_by</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>created_by</design:label>
+            <design:formattingHints>
+              <design:displaySize>20</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>updated_by</design:name>
+              <design:position>14</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-5</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>updated_by</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>updated_by</design:label>
+            <design:formattingHints>
+              <design:displaySize>20</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>article</design:name>
+              <design:position>15</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-5</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>article</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>article</design:label>
+            <design:formattingHints>
+              <design:displaySize>20</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>cahierjournalier</design:name>
+              <design:position>16</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-5</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>cahierjournalier</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>cahierjournalier</design:label>
+            <design:formattingHints>
+              <design:displaySize>20</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>etablissement</design:name>
+              <design:position>17</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-5</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>etablissement</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>etablissement</design:label>
+            <design:formattingHints>
+              <design:displaySize>20</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Article" id="592">
+            <property name="nullsOrdering">nulls lowest</property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">magasin</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">magasin</text-property>
+                    <text-property name="heading">magasin</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">maxdate</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">maxdate</text-property>
+                    <text-property name="heading">maxdate</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">ordre</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">ordre</text-property>
+                    <text-property name="heading">ordre</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">name_article</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">name_article</text-property>
+                    <text-property name="heading">name_article</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">unite</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">unite</text-property>
+                    <text-property name="heading">unite</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">param_1</property>
+                    <property name="paramName">dateDu</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                    <property name="position">1</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">param_2</property>
+                    <property name="paramName">IdEtablissement</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                    <property name="position">2</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">magasin</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">maxdate</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">ordre</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">name_article</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">unite</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Hakibati</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">magasin</property>
+                    <property name="nativeName">magasin</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">maxdate</property>
+                    <property name="nativeName">maxdate</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">ordre</property>
+                    <property name="nativeName">ordre</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">name_article</property>
+                    <property name="nativeName">name_article</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">unite</property>
+                    <property name="nativeName">unite</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select sum(public.eleves_operation_journalier.entree_du_jorur- 
+public.eleves_operation_journalier.consommation_dediner-
+public.eleves_operation_journalier.consommation_dejeuner-
+public.eleves_operation_journalier.consommation_petit_dejeuner -
+public.eleves_operation_journalier.perime_journaliere) as magasin,
+MAX (public.eleves_cahierjournalier.date_operation) as maxDate,
+public.eleves_article.ordre,
+public.eleves_article.name as name_article,
+public.eleves_article.unite
+
+
+from public.eleves_operation_journalier
+LEFT JOIN public.eleves_article ON public.eleves_article.id = public.eleves_operation_journalier.article
+left join public.eleves_cahierjournalier on public.eleves_cahierjournalier.id = public.eleves_operation_journalier.cahierjournalier
+where public.eleves_cahierjournalier.date_operation <= ?
+and public.eleves_cahierjournalier.etablissement = ?
+GROUP BY  (public.eleves_article.name,public.eleves_article.ordre,
+public.eleves_article.unite)
+]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <DataSetParameters>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>1</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>2</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>-5</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+  </DataSetParameters>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>magasin</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-5</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>magasin</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>magasin</design:label>
+            <design:formattingHints>
+              <design:displaySize>20</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>maxdate</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+            <design:precision>13</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>maxdate</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>maxdate</design:label>
+            <design:formattingHints>
+              <design:displaySize>13</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>ordre</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>ordre</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>ordre</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>name_article</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>255</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>name_article</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>name_article</design:label>
+            <design:formattingHints>
+              <design:displaySize>255</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>unite</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>255</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>unite</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>unite</design:label>
+            <design:formattingHints>
+              <design:displaySize>255</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="headerHeight">0in</property>
+            <property name="footerHeight">0in</property>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <table id="239">
+            <property name="dataSet">opperation-journalier</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">id</property>
+                    <text-property name="displayName">id</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["id"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">entree_du_jorur</property>
+                    <text-property name="displayName">entree_du_jorur</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["entree_du_jorur"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">perime_journaliere</property>
+                    <text-property name="displayName">perime_journaliere</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["perime_journaliere"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">article</property>
+                    <text-property name="displayName">article</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["article"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">cahierjournalier</property>
+                    <text-property name="displayName">cahierjournalier</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["cahierjournalier"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">name</property>
+                    <text-property name="displayName">name</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["name"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">unite</property>
+                    <text-property name="displayName">unite</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["unite"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">perime_journaliere_1</property>
+                    <text-property name="displayName">perime_journaliere</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["perime_journaliere_1"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">date_operation</property>
+                    <text-property name="displayName">date_operation</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["date_operation"]</expression>
+                    <property name="dataType">date</property>
+                </structure>
+                <structure>
+                    <property name="name">Column Binding</property>
+                    <expression name="expression" type="javascript">row["consommation_dediner"]+row["consommation_dejeuner"]+row["consommation_petit_dejeuner"]+row["perime_journaliere"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">Aggregation</property>
+                    <text-property name="displayName">Somme-entree</text-property>
+                    <property name="dataType">float</property>
+                    <simple-property-list name="aggregateOn">
+                        <value>Article</value>
+                    </simple-property-list>
+                    <property name="aggregateFunction">SUM</property>
+                    <list-property name="arguments">
+                        <structure>
+                            <property name="name">Expression</property>
+                            <expression name="value" type="javascript">row["entree_du_jorur"]</expression>
+                        </structure>
+                    </list-property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">Aggregation_1</property>
+                    <text-property name="displayName">somme-sortie</text-property>
+                    <property name="dataType">float</property>
+                    <simple-property-list name="aggregateOn">
+                        <value>Article</value>
+                    </simple-property-list>
+                    <property name="aggregateFunction">SUM</property>
+                    <list-property name="arguments">
+                        <structure>
+                            <property name="name">Expression</property>
+                            <expression name="value" type="javascript">(row["consommation_dediner"]+row["consommation_dejeuner"]+row["consommation_petit_dejeuner"]+row["perime_journaliere"])</expression>
+                        </structure>
+                    </list-property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">Column Binding_1</property>
+                    <expression name="expression" type="javascript">row["Aggregation"]-row["Aggregation_1"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">Aggregation_2</property>
+                    <property name="dataType">float</property>
+                    <simple-property-list name="aggregateOn">
+                        <value>Article</value>
+                    </simple-property-list>
+                    <property name="aggregateFunction">RUNNINGSUM</property>
+                    <list-property name="arguments">
+                        <structure>
+                            <property name="name">Expression</property>
+                            <expression name="value" type="javascript">1</expression>
+                        </structure>
+                    </list-property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">etablissement</property>
+                    <text-property name="displayName">etablissement</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["etablissement"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">etabl</property>
+                    <text-property name="displayName">etabl</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["etabl"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">consommation_dediner</property>
+                    <text-property name="displayName">consommation_dediner</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["consommation_dediner"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">consommation_dejeuner</property>
+                    <text-property name="displayName">consommation_dejeuner</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["consommation_dejeuner"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">consommation_petit_dejeuner</property>
+                    <text-property name="displayName">consommation_petit_dejeuner</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["consommation_petit_dejeuner"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">restarticle</property>
+                    <text-property name="displayName">restarticle</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["restarticle"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+            </list-property>
+            <column id="293"/>
+            <column id="294"/>
+            <column id="295"/>
+            <column id="296"/>
+            <column id="297"/>
+            <column id="298"/>
+            <column id="299"/>
+            <column id="300"/>
+            <column id="301"/>
+            <column id="402"/>
+            <column id="393"/>
+            <column id="384"/>
+            <header>
+                <row id="564">
+                    <list-property name="visibility">
+                        <structure>
+                            <property name="format">all</property>
+                            <expression name="valueExpr" type="javascript">true</expression>
+                        </structure>
+                    </list-property>
+                    <cell id="565">
+                        <property name="fontFamily">"Arial"</property>
+                    </cell>
+                    <cell id="566">
+                        <property name="fontFamily">"Arial"</property>
+                    </cell>
+                    <cell id="567">
+                        <property name="colSpan">8</property>
+                        <property name="rowSpan">1</property>
+                        <property name="fontFamily">"Arial"</property>
+                        <label id="435">
+                            <property name="fontSize">18pt</property>
+                            <property name="textAlign">center</property>
+                            <text-property name="text">Comptabilité matière d'internat</text-property>
+                        </label>
+                    </cell>
+                    <cell id="575">
+                        <property name="colSpan">2</property>
+                        <property name="rowSpan">1</property>
+                        <property name="fontFamily">"Arial"</property>
+                        <data id="555">
+                            <property name="textAlign">center</property>
+                            <property name="resultSetColumn">etabl</property>
+                        </data>
+                    </cell>
+                </row>
+            </header>
+            <group id="325">
+                <property name="groupName">Article</property>
+                <expression name="keyExpr" type="javascript">row["article"]</expression>
+                <structure name="toc">
+                    <expression name="expressionValue" type="javascript">row["article"]</expression>
+                </structure>
+                <property name="hideDetail">false</property>
+                <property name="pageBreakAfter">always</property>
+                <property name="pageBreakBefore">always</property>
+                <header>
+                    <row id="349">
+                        <cell id="350">
+                            <property name="colSpan">1</property>
+                            <property name="rowSpan">1</property>
+                            <property name="fontFamily">"Arial"</property>
+                            <label id="372">
+                                <property name="fontWeight">bold</property>
+                                <property name="textAlign">right</property>
+                                <text-property name="text">Article: </text-property>
+                            </label>
+                        </cell>
+                        <cell id="560">
+                            <property name="colSpan">3</property>
+                            <property name="rowSpan">1</property>
+                            <property name="fontFamily">"Arial"</property>
+                            <data id="371">
+                                <property name="resultSetColumn">name</property>
+                            </data>
+                        </cell>
+                        <cell id="562">
+                            <property name="fontFamily">"Arial"</property>
+                            <label id="373">
+                                <property name="fontWeight">bold</property>
+                                <property name="textAlign">right</property>
+                                <text-property name="text">Unite:</text-property>
+                            </label>
+                        </cell>
+                        <cell id="563">
+                            <property name="fontFamily">"Arial"</property>
+                            <data id="374">
+                                <property name="resultSetColumn">unite</property>
+                            </data>
+                        </cell>
+                        <cell id="356">
+                            <property name="fontFamily">"Arial"</property>
+                            <label id="464">
+                                <text-property name="text">Du </text-property>
+                            </label>
+                        </cell>
+                        <cell id="357">
+                            <property name="fontFamily">"Arial"</property>
+                        </cell>
+                        <cell id="358">
+                            <property name="fontFamily">"Arial"</property>
+                        </cell>
+                        <cell id="397">
+                            <property name="colSpan">1</property>
+                            <property name="rowSpan">1</property>
+                            <property name="fontFamily">"Arial"</property>
+                            <label id="465">
+                                <text-property name="text">Au</text-property>
+                            </label>
+                        </cell>
+                        <cell id="589">
+                            <property name="fontFamily">"Arial"</property>
+                        </cell>
+                        <cell id="590">
+                            <property name="fontFamily">"Arial"</property>
+                        </cell>
+                    </row>
+                    <row id="326">
+                        <cell id="327">
+                            <property name="colSpan">3</property>
+                            <property name="rowSpan">1</property>
+                            <property name="backgroundColor">#DADBD5</property>
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">1px</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">1px</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">1px</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">1px</property>
+                            <property name="textAlign">center</property>
+                            <property name="verticalAlign">middle</property>
+                            <label id="403">
+                                <text-property name="text">ID</text-property>
+                            </label>
+                        </cell>
+                        <cell id="330">
+                            <property name="colSpan">3</property>
+                            <property name="rowSpan">1</property>
+                            <property name="backgroundColor">#DADBD5</property>
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">1px</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">1px</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">1px</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">1px</property>
+                            <property name="textAlign">center</property>
+                            <property name="verticalAlign">middle</property>
+                            <label id="404">
+                                <text-property name="text">Date</text-property>
+                            </label>
+                        </cell>
+                        <cell id="333">
+                            <property name="colSpan">3</property>
+                            <property name="rowSpan">1</property>
+                            <property name="backgroundColor">#DADBD5</property>
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">1px</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">1px</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">1px</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">1px</property>
+                            <property name="textAlign">center</property>
+                            <property name="verticalAlign">middle</property>
+                            <label id="405">
+                                <text-property name="text">Quantité entrée</text-property>
+                            </label>
+                        </cell>
+                        <cell id="398">
+                            <property name="colSpan">3</property>
+                            <property name="rowSpan">1</property>
+                            <property name="backgroundColor">#DADBD5</property>
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">1px</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">1px</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">1px</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">1px</property>
+                            <property name="textAlign">center</property>
+                            <property name="verticalAlign">middle</property>
+                            <label id="406">
+                                <text-property name="text">Quantité sortie</text-property>
+                            </label>
+                        </cell>
+                    </row>
+                    <row id="577">
+                        <cell id="578">
+                            <property name="colSpan">6</property>
+                            <property name="rowSpan">1</property>
+                            <property name="backgroundColor">#FFFFFF</property>
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">1px</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">1px</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">1px</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">1px</property>
+                            <property name="textAlign">center</property>
+                            <property name="verticalAlign">middle</property>
+                            <label id="550">
+                                <text-property name="text">Quantité transfert</text-property>
+                            </label>
+                        </cell>
+                        <cell id="584">
+                            <property name="colSpan">3</property>
+                            <property name="rowSpan">1</property>
+                            <property name="backgroundColor">#FFFFFF</property>
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">1px</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">1px</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">1px</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">1px</property>
+                            <property name="textAlign">center</property>
+                            <property name="verticalAlign">middle</property>
+                            <data id="588">
+                                <property name="resultSetColumn">restarticle</property>
+                            </data>
+                        </cell>
+                        <cell id="587">
+                            <property name="colSpan">3</property>
+                            <property name="rowSpan">1</property>
+                            <property name="backgroundColor">#DADBD5</property>
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">1px</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">1px</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">1px</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">1px</property>
+                            <property name="textAlign">center</property>
+                            <property name="verticalAlign">middle</property>
+                        </cell>
+                    </row>
+                </header>
+                <footer>
+                    <row id="337">
+                        <cell id="338">
+                            <property name="colSpan">1</property>
+                            <property name="rowSpan">1</property>
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="borderBottomStyle">none</property>
+                            <property name="borderLeftStyle">none</property>
+                            <property name="borderRightStyle">none</property>
+                            <property name="borderTopStyle">none</property>
+                        </cell>
+                        <cell id="474">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="borderBottomStyle">none</property>
+                            <property name="borderLeftStyle">none</property>
+                            <property name="borderRightStyle">none</property>
+                            <property name="borderTopStyle">none</property>
+                        </cell>
+                        <cell id="475">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="borderBottomStyle">none</property>
+                            <property name="borderLeftStyle">none</property>
+                            <property name="borderRightStyle">none</property>
+                            <property name="borderTopStyle">none</property>
+                        </cell>
+                        <cell id="476">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="borderBottomStyle">none</property>
+                            <property name="borderLeftStyle">none</property>
+                            <property name="borderRightStyle">none</property>
+                            <property name="borderTopStyle">none</property>
+                        </cell>
+                        <cell id="477">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="borderBottomStyle">none</property>
+                            <property name="borderLeftStyle">none</property>
+                            <property name="borderRightStyle">none</property>
+                            <property name="borderTopStyle">none</property>
+                        </cell>
+                        <cell id="478">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="borderBottomStyle">none</property>
+                            <property name="borderLeftStyle">none</property>
+                            <property name="borderRightStyle">none</property>
+                            <property name="borderTopStyle">none</property>
+                            <label id="408">
+                                <property name="textAlign">right</property>
+                                <text-property name="text">Somme : </text-property>
+                            </label>
+                        </cell>
+                        <cell id="344">
+                            <property name="colSpan">3</property>
+                            <property name="rowSpan">1</property>
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">1px</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">1px</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">1px</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">1px</property>
+                            <property name="textAlign">center</property>
+                            <data id="409">
+                                <property name="resultSetColumn">Aggregation</property>
+                            </data>
+                        </cell>
+                        <cell id="400">
+                            <property name="colSpan">3</property>
+                            <property name="rowSpan">1</property>
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">1px</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">1px</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">1px</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">1px</property>
+                            <data id="410">
+                                <property name="textAlign">center</property>
+                                <property name="resultSetColumn">Aggregation_1</property>
+                            </data>
+                        </cell>
+                    </row>
+                    <row id="519">
+                        <cell id="520">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="borderBottomStyle">none</property>
+                            <property name="borderLeftStyle">none</property>
+                            <property name="borderRightStyle">none</property>
+                            <property name="borderTopStyle">none</property>
+                        </cell>
+                        <cell id="521">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="borderBottomStyle">none</property>
+                            <property name="borderLeftStyle">none</property>
+                            <property name="borderRightStyle">none</property>
+                            <property name="borderTopStyle">none</property>
+                        </cell>
+                        <cell id="522">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="borderBottomStyle">none</property>
+                            <property name="borderLeftStyle">none</property>
+                            <property name="borderRightStyle">none</property>
+                            <property name="borderTopStyle">none</property>
+                        </cell>
+                        <cell id="523">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="borderBottomStyle">none</property>
+                            <property name="borderLeftStyle">none</property>
+                            <property name="borderRightStyle">none</property>
+                            <property name="borderTopStyle">none</property>
+                        </cell>
+                        <cell id="524">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="borderBottomStyle">none</property>
+                            <property name="borderLeftStyle">none</property>
+                            <property name="borderRightStyle">none</property>
+                            <property name="borderTopStyle">none</property>
+                        </cell>
+                        <cell id="525">
+                            <property name="colSpan">4</property>
+                            <property name="rowSpan">1</property>
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontWeight">bold</property>
+                            <property name="borderBottomStyle">none</property>
+                            <property name="borderLeftStyle">none</property>
+                            <property name="borderRightStyle">none</property>
+                            <property name="borderTopStyle">none</property>
+                            <label id="432">
+                                <property name="fontWeight">normal</property>
+                                <property name="textAlign">right</property>
+                                <text-property name="text">Reste en magazin : </text-property>
+                            </label>
+                        </cell>
+                        <cell id="534">
+                            <property name="colSpan">3</property>
+                            <property name="rowSpan">1</property>
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">1px</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">1px</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">1px</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">1px</property>
+                            <property name="textAlign">center</property>
+                            <property name="verticalAlign">middle</property>
+                            <data id="433">
+                                <property name="textAlign">center</property>
+                                <property name="resultSetColumn">Column Binding_1</property>
+                            </data>
+                        </cell>
+                    </row>
+                </footer>
+            </group>
+            <detail>
+                <row id="261">
+                    <cell id="262">
+                        <property name="colSpan">3</property>
+                        <property name="rowSpan">1</property>
+                        <property name="fontFamily">"Arial"</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">1px</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">1px</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">1px</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">1px</property>
+                        <property name="textAlign">center</property>
+                        <property name="verticalAlign">middle</property>
+                        <data id="434">
+                            <property name="resultSetColumn">Aggregation_2</property>
+                        </data>
+                    </cell>
+                    <cell id="268">
+                        <property name="colSpan">3</property>
+                        <property name="rowSpan">1</property>
+                        <property name="fontFamily">"Arial"</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">1px</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">1px</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">1px</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">1px</property>
+                        <property name="textAlign">center</property>
+                        <property name="verticalAlign">middle</property>
+                        <data id="281">
+                            <structure name="dateTimeFormat">
+                                <property name="category">Short Date</property>
+                                <property name="pattern">Short Date</property>
+                                <property name="locale">fr</property>
+                            </structure>
+                            <property name="resultSetColumn">date_operation</property>
+                        </data>
+                    </cell>
+                    <cell id="274">
+                        <property name="colSpan">3</property>
+                        <property name="rowSpan">1</property>
+                        <property name="fontFamily">"Arial"</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">1px</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">1px</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">1px</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">1px</property>
+                        <property name="textAlign">center</property>
+                        <property name="verticalAlign">middle</property>
+                        <data id="267">
+                            <property name="resultSetColumn">entree_du_jorur</property>
+                        </data>
+                    </cell>
+                    <cell id="399">
+                        <property name="colSpan">3</property>
+                        <property name="rowSpan">1</property>
+                        <property name="fontFamily">"Arial"</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">1px</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">1px</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">1px</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">1px</property>
+                        <property name="textAlign">center</property>
+                        <property name="verticalAlign">middle</property>
+                        <data id="407">
+                            <property name="resultSetColumn">Column Binding</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+        </table>
+    </body>
+</report>

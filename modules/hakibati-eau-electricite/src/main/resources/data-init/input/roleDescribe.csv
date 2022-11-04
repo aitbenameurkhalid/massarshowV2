@@ -1,0 +1,2 @@
+code;indexGroupe;name;namear;roleRead;roleWrite;roleDelete;language;key
+8;1;APPLICATION EAU ELECTRICITE;مكون الماء الكهرباء;role.hakibati.eau.electricite.read;role.hakibati.eau.electricite.write;role.hakibati.eau.electricite.delete;ar;value:APPLICATION EAU ELECTRICITE

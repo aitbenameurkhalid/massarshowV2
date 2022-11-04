@@ -1,0 +1,2219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.8.0.v201806261756</property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <parameters>
+        <scalar-parameter name="UrlLogo" id="4609">
+            <property name="hidden">true</property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">img/logo-ar.png</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="IdAnneeScolaire" id="4701">
+            <property name="hidden">false</property>
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">decimal</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">14</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="appexam" id="4">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">org.postgresql.Driver</property>
+            <property name="odaURL">jdbc:postgresql://localhost:5432/appexam</property>
+            <property name="odaUser">hakibati</property>
+            <encrypted-property name="odaPassword" encryptionID="base64">SGFraWJhdGlAMjAyMCE=</encrypted-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="convocation" id="449">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">id</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">id</text-property>
+                    <text-property name="heading">id</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">cd_massar</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">cd_massar</text-property>
+                    <text-property name="heading">cd_massar</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">date_naissance</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">date_naissance</text-property>
+                    <text-property name="heading">date_naissance</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">idclasse</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">idclasse</text-property>
+                    <text-property name="heading">idclasse</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">nom_ar</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">nom_ar</text-property>
+                    <text-property name="heading">nom_ar</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">prenom_ar</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">prenom_ar</text-property>
+                    <text-property name="heading">prenom_ar</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">sexe</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">sexe</text-property>
+                    <text-property name="heading">sexe</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">classe</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">classe</text-property>
+                    <text-property name="heading">classe</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">lieu_naissance_ar</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">lieu_naissance_ar</text-property>
+                    <text-property name="heading">lieu_naissance_ar</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">annee_scolaire</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">annee_scolaire</text-property>
+                    <text-property name="heading">annee_scolaire</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">classname</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">classname</text-property>
+                    <text-property name="heading">classname</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">direction</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">direction</text-property>
+                    <text-property name="heading">direction</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">commun</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">commun</text-property>
+                    <text-property name="heading">commun</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">etablissemntname</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">etablissemntname</text-property>
+                    <text-property name="heading">etablissemntname</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">academie</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">academie</text-property>
+                    <text-property name="heading">academie</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">situation_actuelle</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">situation_actuelle</text-property>
+                    <text-property name="heading">situation_actuelle</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">situation_initiale</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">situation_initiale</text-property>
+                    <text-property name="heading">situation_initiale</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">datesituation_initiale</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">datesituation_initiale</text-property>
+                    <text-property name="heading">datesituation_initiale</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">date_la_situation_actuelle</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">date_la_situation_actuelle</text-property>
+                    <text-property name="heading">date_la_situation_actuelle</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">file_path</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">file_path</text-property>
+                    <text-property name="heading">file_path</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">adresse_tuteur</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">adresse_tuteur</text-property>
+                    <text-property name="heading">adresse_tuteur</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">nomar_tuteur</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">nomar_tuteur</text-property>
+                    <text-property name="heading">nomar_tuteur</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">prenomar_tuteur</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">prenomar_tuteur</text-property>
+                    <text-property name="heading">prenomar_tuteur</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">id</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">cd_massar</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">date_naissance</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">idclasse</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">nom_ar</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">prenom_ar</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">sexe</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">classe</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">lieu_naissance_ar</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">annee_scolaire</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">classname</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">direction</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">13</property>
+                        <property name="name">commun</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">14</property>
+                        <property name="name">etablissemntname</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">15</property>
+                        <property name="name">academie</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">16</property>
+                        <property name="name">situation_actuelle</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">17</property>
+                        <property name="name">situation_initiale</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">18</property>
+                        <property name="name">datesituation_initiale</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">19</property>
+                        <property name="name">date_la_situation_actuelle</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">20</property>
+                        <property name="name">file_path</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">21</property>
+                        <property name="name">adresse_tuteur</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">22</property>
+                        <property name="name">nomar_tuteur</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">23</property>
+                        <property name="name">prenomar_tuteur</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">appexam</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">id</property>
+                    <property name="nativeName">id</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">cd_massar</property>
+                    <property name="nativeName">cd_massar</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">date_naissance</property>
+                    <property name="nativeName">date_naissance</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">idclasse</property>
+                    <property name="nativeName">idclasse</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">nom_ar</property>
+                    <property name="nativeName">nom_ar</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">prenom_ar</property>
+                    <property name="nativeName">prenom_ar</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">sexe</property>
+                    <property name="nativeName">sexe</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">classe</property>
+                    <property name="nativeName">classe</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">lieu_naissance_ar</property>
+                    <property name="nativeName">lieu_naissance_ar</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">annee_scolaire</property>
+                    <property name="nativeName">annee_scolaire</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">classname</property>
+                    <property name="nativeName">classname</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">direction</property>
+                    <property name="nativeName">direction</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">13</property>
+                    <property name="name">commun</property>
+                    <property name="nativeName">commun</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">14</property>
+                    <property name="name">etablissemntname</property>
+                    <property name="nativeName">etablissemntname</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">15</property>
+                    <property name="name">academie</property>
+                    <property name="nativeName">academie</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">16</property>
+                    <property name="name">situation_actuelle</property>
+                    <property name="nativeName">situation_actuelle</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">17</property>
+                    <property name="name">situation_initiale</property>
+                    <property name="nativeName">situation_initiale</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">18</property>
+                    <property name="name">datesituation_initiale</property>
+                    <property name="nativeName">datesituation_initiale</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                </structure>
+                <structure>
+                    <property name="position">19</property>
+                    <property name="name">date_la_situation_actuelle</property>
+                    <property name="nativeName">date_la_situation_actuelle</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                </structure>
+                <structure>
+                    <property name="position">20</property>
+                    <property name="name">file_path</property>
+                    <property name="nativeName">file_path</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">21</property>
+                    <property name="name">adresse_tuteur</property>
+                    <property name="nativeName">adresse_tuteur</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">22</property>
+                    <property name="name">nomar_tuteur</property>
+                    <property name="nativeName">nomar_tuteur</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">23</property>
+                    <property name="name">prenomar_tuteur</property>
+                    <property name="nativeName">prenomar_tuteur</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select 
+public.eleves_eleve.id,
+public.eleves_eleve.cd_massar,
+public.eleves_eleve.date_naissance,
+public.eleves_eleve.idclasse,
+public.eleves_eleve.nom_ar,
+public.eleves_eleve.prenom_ar,
+public.eleves_eleve.sexe,
+public.eleves_eleve.classe,
+public.eleves_eleve.lieu_naissance_ar,
+public.eleves_eleve.annee_scolaire,
+public.eleves_classe.name as className,
+public.application_etablissement.direction,
+public.application_etablissement.commun,
+public.application_etablissement.name as etablissemntName,
+public.application_etablissement.academie,
+public.eleves_eleve.situation_actuelle,
+public.eleves_eleve.situation_initiale,
+public.eleves_eleve.datesituation_initiale,
+public.eleves_eleve.date_la_situation_actuelle,
+public.meta_file.file_path,
+public.eleves_eleve.adresse_tuteur,
+public.eleves_eleve.nomar_tuteur,
+public.eleves_eleve.prenomar_tuteur
+from public.eleves_eleve
+left join public.application_etablissement on public.application_etablissement.id=public.eleves_eleve.etablissement
+left join public.meta_file on public.meta_file.id= public.application_etablissement.logo_en_tete
+left join public.eleves_classe on public.eleves_classe.id=public.eleves_eleve.classe
+]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>id</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-5</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>id</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>id</design:label>
+            <design:formattingHints>
+              <design:displaySize>20</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>cd_massar</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>255</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>cd_massar</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>cd_massar</design:label>
+            <design:formattingHints>
+              <design:displaySize>255</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>date_naissance</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+            <design:precision>13</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>date_naissance</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>date_naissance</design:label>
+            <design:formattingHints>
+              <design:displaySize>13</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>idclasse</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>idclasse</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>idclasse</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>nom_ar</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>255</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>nom_ar</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>nom_ar</design:label>
+            <design:formattingHints>
+              <design:displaySize>255</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>prenom_ar</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>255</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>prenom_ar</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>prenom_ar</design:label>
+            <design:formattingHints>
+              <design:displaySize>255</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>sexe</design:name>
+              <design:position>7</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>sexe</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>sexe</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>classe</design:name>
+              <design:position>8</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-5</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>classe</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>classe</design:label>
+            <design:formattingHints>
+              <design:displaySize>20</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>lieu_naissance_ar</design:name>
+              <design:position>9</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>255</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>lieu_naissance_ar</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>lieu_naissance_ar</design:label>
+            <design:formattingHints>
+              <design:displaySize>255</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>annee_scolaire</design:name>
+              <design:position>10</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>255</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>annee_scolaire</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>annee_scolaire</design:label>
+            <design:formattingHints>
+              <design:displaySize>255</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>classname</design:name>
+              <design:position>11</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>255</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>classname</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>classname</design:label>
+            <design:formattingHints>
+              <design:displaySize>255</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>direction</design:name>
+              <design:position>12</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>255</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>direction</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>direction</design:label>
+            <design:formattingHints>
+              <design:displaySize>255</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>commun</design:name>
+              <design:position>13</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>255</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>commun</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>commun</design:label>
+            <design:formattingHints>
+              <design:displaySize>255</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>etablissemntname</design:name>
+              <design:position>14</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>255</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>etablissemntname</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>etablissemntname</design:label>
+            <design:formattingHints>
+              <design:displaySize>255</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>academie</design:name>
+              <design:position>15</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>255</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>academie</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>academie</design:label>
+            <design:formattingHints>
+              <design:displaySize>255</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>situation_actuelle</design:name>
+              <design:position>16</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>situation_actuelle</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>situation_actuelle</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>situation_initiale</design:name>
+              <design:position>17</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>situation_initiale</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>situation_initiale</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>datesituation_initiale</design:name>
+              <design:position>18</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+            <design:precision>13</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>datesituation_initiale</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>datesituation_initiale</design:label>
+            <design:formattingHints>
+              <design:displaySize>13</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>date_la_situation_actuelle</design:name>
+              <design:position>19</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+            <design:precision>13</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>date_la_situation_actuelle</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>date_la_situation_actuelle</design:label>
+            <design:formattingHints>
+              <design:displaySize>13</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="headerHeight">0in</property>
+            <property name="footerHeight">0in</property>
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <table id="465">
+            <property name="dataSet">convocation</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">id</property>
+                    <text-property name="displayName">id</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["id"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">cd_massar</property>
+                    <text-property name="displayName">cd_massar</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["cd_massar"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">date_naissance</property>
+                    <text-property name="displayName">date_naissance</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["date_naissance"]</expression>
+                    <property name="dataType">date</property>
+                </structure>
+                <structure>
+                    <property name="name">idclasse</property>
+                    <text-property name="displayName">idclasse</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["idclasse"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">nom_ar</property>
+                    <text-property name="displayName">nom_ar</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["nom_ar"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">prenom_ar</property>
+                    <text-property name="displayName">prenom_ar</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["prenom_ar"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">sexe</property>
+                    <text-property name="displayName">sexe</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["sexe"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">classe</property>
+                    <text-property name="displayName">classe</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["classe"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">lieu_naissance_ar</property>
+                    <text-property name="displayName">lieu_naissance_ar</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["lieu_naissance_ar"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">annee_scolaire</property>
+                    <text-property name="displayName">annee_scolaire</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["annee_scolaire"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">classname</property>
+                    <text-property name="displayName">classname</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["classname"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">direction</property>
+                    <text-property name="displayName">direction</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["direction"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">commun</property>
+                    <text-property name="displayName">commun</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["commun"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">etablissemntname</property>
+                    <text-property name="displayName">etablissemntname</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["etablissemntname"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">academie</property>
+                    <text-property name="displayName">academie</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["academie"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">situation_actuelle</property>
+                    <text-property name="displayName">situation_actuelle</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["situation_actuelle"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">situation_initiale</property>
+                    <text-property name="displayName">situation_initiale</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["situation_initiale"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">datesituation_initiale</property>
+                    <text-property name="displayName">datesituation_initiale</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["datesituation_initiale"]</expression>
+                    <property name="dataType">date</property>
+                </structure>
+                <structure>
+                    <property name="name">date_la_situation_actuelle</property>
+                    <text-property name="displayName">date_la_situation_actuelle</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["date_la_situation_actuelle"]</expression>
+                    <property name="dataType">date</property>
+                </structure>
+                <structure>
+                    <property name="name">adresse_tuteur</property>
+                    <text-property name="displayName">adresse_tuteur</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["adresse_tuteur"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">nomar_tuteur</property>
+                    <text-property name="displayName">nomar_tuteur</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["nomar_tuteur"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">prenomar_tuteur</property>
+                    <text-property name="displayName">prenomar_tuteur</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["prenomar_tuteur"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">file_path</property>
+                    <text-property name="displayName">file_path</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["file_path"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <column id="564"/>
+            <header>
+                <row id="466">
+                    <cell id="467"/>
+                </row>
+            </header>
+            <detail>
+                <row id="505">
+                    <cell id="506">
+                        <grid id="60">
+                            <property name="height">12in</property>
+                            <column id="61"/>
+                            <column id="62"/>
+                            <column id="63"/>
+                            <column id="64"/>
+                            <column id="65"/>
+                            <column id="66"/>
+                            <column id="67"/>
+                            <column id="68"/>
+                            <column id="69"/>
+                            <column id="70"/>
+                            <column id="71"/>
+                            <column id="72"/>
+                            <row id="832">
+                                <cell id="833"/>
+                                <cell id="834"/>
+                                <cell id="835"/>
+                                <cell id="836"/>
+                                <cell id="837">
+                                    <property name="colSpan">4</property>
+                                    <property name="rowSpan">1</property>
+                                    <image id="4328">
+                                        <property name="height">53px</property>
+                                        <property name="width">2.5104166666666665in</property>
+                                        <expression name="altText">""</expression>
+                                        <property name="source">file</property>
+                                        <expression name="uri" type="javascript">if(row["file_path"]){&#13;
+params["AttachmentPath"].value+row["file_path"];&#13;
+}else&#13;
+{&#13;
+params["UrlLogo"];&#13;
+}</expression>
+                                    </image>
+                                </cell>
+                                <cell id="841"/>
+                                <cell id="842"/>
+                                <cell id="843"/>
+                                <cell id="844"/>
+                            </row>
+                            <row id="818">
+                                <cell id="819"/>
+                                <cell id="820"/>
+                                <cell id="821"/>
+                                <cell id="822">
+                                    <property name="colSpan">6</property>
+                                    <property name="rowSpan">1</property>
+                                    <data id="831">
+                                        <property name="textAlign">center</property>
+                                        <property name="resultSetColumn">academie</property>
+                                    </data>
+                                </cell>
+                                <cell id="828"/>
+                                <cell id="829"/>
+                                <cell id="830"/>
+                            </row>
+                            <row id="73">
+                                <cell id="74"/>
+                                <cell id="75"/>
+                                <cell id="76"/>
+                                <cell id="77"/>
+                                <cell id="78">
+                                    <property name="colSpan">4</property>
+                                    <property name="rowSpan">1</property>
+                                    <data id="817">
+                                        <property name="textAlign">center</property>
+                                        <property name="resultSetColumn">direction</property>
+                                    </data>
+                                </cell>
+                                <cell id="82"/>
+                                <cell id="83"/>
+                                <cell id="84"/>
+                                <cell id="85"/>
+                            </row>
+                            <row id="86">
+                                <cell id="87"/>
+                                <cell id="88"/>
+                                <cell id="89"/>
+                                <cell id="90"/>
+                                <cell id="91">
+                                    <property name="colSpan">4</property>
+                                    <property name="rowSpan">1</property>
+                                    <data id="816">
+                                        <property name="textAlign">center</property>
+                                        <property name="resultSetColumn">etablissemntname</property>
+                                    </data>
+                                </cell>
+                                <cell id="95"/>
+                                <cell id="96"/>
+                                <cell id="97"/>
+                                <cell id="98"/>
+                            </row>
+                            <row id="99">
+                                <cell id="100"/>
+                                <cell id="101"/>
+                                <cell id="102"/>
+                                <cell id="103"/>
+                                <cell id="104">
+                                    <property name="colSpan">4</property>
+                                    <property name="rowSpan">1</property>
+                                    <text id="229">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontSize">18pt</property>
+                                        <property name="textAlign">center</property>
+                                        <property name="contentType">auto</property>
+                                        <text-property name="content"><![CDATA[من رئيس المؤسسة]]></text-property>
+                                    </text>
+                                </cell>
+                                <cell id="108"/>
+                                <cell id="109"/>
+                                <cell id="110"/>
+                                <cell id="111"/>
+                            </row>
+                            <row id="112">
+                                <cell id="113"/>
+                                <cell id="114">
+                                    <property name="colSpan">1</property>
+                                    <property name="rowSpan">1</property>
+                                    <property name="textAlign">right</property>
+                                </cell>
+                                <cell id="459">
+                                    <property name="colSpan">8</property>
+                                    <property name="rowSpan">1</property>
+                                    <property name="textAlign">center</property>
+                                    <data id="887">
+                                        <property name="fontSize">12pt</property>
+                                        <property name="paddingLeft">3pt</property>
+                                        <property name="paddingRight">3pt</property>
+                                        <property name="display">inline</property>
+                                        <property name="resultSetColumn">nomar_tuteur</property>
+                                    </data>
+                                    <data id="888">
+                                        <property name="fontSize">12pt</property>
+                                        <property name="display">inline</property>
+                                        <property name="resultSetColumn">prenomar_tuteur</property>
+                                    </data>
+                                    <text id="230">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontSize">16pt</property>
+                                        <property name="paddingLeft">2pt</property>
+                                        <property name="paddingRight">2pt</property>
+                                        <property name="textAlign">center</property>
+                                        <property name="display">inline</property>
+                                        <property name="contentType">auto</property>
+                                        <text-property name="content"><![CDATA[  :الى السيد (ة)]]></text-property>
+                                    </text>
+                                </cell>
+                                <cell id="123"/>
+                                <cell id="124"/>
+                            </row>
+                            <row id="125">
+                                <cell id="126"/>
+                                <cell id="127">
+                                    <property name="colSpan">9</property>
+                                    <property name="rowSpan">1</property>
+                                    <property name="textAlign">center</property>
+                                    <data id="886">
+                                        <property name="fontSize">12pt</property>
+                                        <property name="paddingLeft">2pt</property>
+                                        <property name="paddingRight">2pt</property>
+                                        <property name="textAlign">center</property>
+                                        <property name="display">inline</property>
+                                        <property name="resultSetColumn">adresse_tuteur</property>
+                                    </data>
+                                    <text id="4638">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontSize">16pt</property>
+                                        <property name="paddingLeft">2pt</property>
+                                        <property name="paddingRight">2pt</property>
+                                        <property name="textAlign">center</property>
+                                        <property name="display">inline</property>
+                                        <property name="contentType">auto</property>
+                                        <text-property name="content"><![CDATA[  :الساكن ب]]></text-property>
+                                    </text>
+                                </cell>
+                                <cell id="136"/>
+                                <cell id="137"/>
+                            </row>
+                            <row id="138">
+                                <cell id="139"/>
+                                <cell id="140"/>
+                                <cell id="141"/>
+                                <cell id="142"/>
+                                <cell id="143"/>
+                                <cell id="144"/>
+                                <cell id="145"/>
+                                <cell id="146"/>
+                                <cell id="147">
+                                    <property name="colSpan">4</property>
+                                    <property name="rowSpan">1</property>
+                                    <text id="232">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontSize">14pt</property>
+                                        <property name="textAlign">center</property>
+                                        <property name="contentType">auto</property>
+                                        <text-property name="content"><![CDATA[الموضوع  : اشعار بالتشطيب]]></text-property>
+                                    </text>
+                                </cell>
+                            </row>
+                            <row id="151">
+                                <cell id="152"/>
+                                <cell id="153"/>
+                                <cell id="154"/>
+                                <cell id="155">
+                                    <property name="colSpan">6</property>
+                                    <property name="rowSpan">1</property>
+                                    <text id="233">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontSize">12pt</property>
+                                        <property name="textAlign">center</property>
+                                        <property name="contentType">auto</property>
+                                        <text-property name="content"><![CDATA[سلام تام بوجود مولانا الامام المؤيد بالله]]></text-property>
+                                    </text>
+                                </cell>
+                                <cell id="161"/>
+                                <cell id="162"/>
+                                <cell id="163"/>
+                            </row>
+                            <row id="164">
+                                <cell id="165"/>
+                                <cell id="166"/>
+                                <cell id="167"/>
+                                <cell id="168"/>
+                                <cell id="169"/>
+                                <cell id="170"/>
+                                <cell id="171"/>
+                                <cell id="172">
+                                    <property name="colSpan">5</property>
+                                    <property name="rowSpan">1</property>
+                                    <text id="234">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontSize">12pt</property>
+                                        <property name="textAlign">center</property>
+                                        <property name="contentType">auto</property>
+                                        <text-property name="content"><![CDATA[وبعد يؤسفني ان اخبركم ابنكم (ابنتكم)]]></text-property>
+                                    </text>
+                                </cell>
+                            </row>
+                            <row id="177">
+                                <cell id="178">
+                                    <property name="colSpan">3</property>
+                                    <property name="rowSpan">1</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <text id="447">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontWeight">bold</property>
+                                        <property name="textAlign">center</property>
+                                        <property name="contentType">auto</property>
+                                        <text-property name="content"><![CDATA[ملاحظات]]></text-property>
+                                    </text>
+                                </cell>
+                                <cell id="877">
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <text id="4637">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontWeight">bold</property>
+                                        <property name="textAlign">center</property>
+                                        <property name="contentType">auto</property>
+                                        <text-property name="content"><![CDATA[ر ت]]></text-property>
+                                    </text>
+                                </cell>
+                                <cell id="182">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">1</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <text id="237">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontWeight">bold</property>
+                                        <property name="textAlign">center</property>
+                                        <property name="contentType">auto</property>
+                                        <text-property name="content"><![CDATA[القسم]]></text-property>
+                                    </text>
+                                </cell>
+                                <cell id="184">
+                                    <property name="colSpan">3</property>
+                                    <property name="rowSpan">1</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <text id="236">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontWeight">bold</property>
+                                        <property name="textAlign">center</property>
+                                        <property name="contentType">auto</property>
+                                        <text-property name="content"><![CDATA[الاسم الكامل]]></text-property>
+                                    </text>
+                                </cell>
+                                <cell id="187">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">1</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <text id="235">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontWeight">bold</property>
+                                        <property name="fontStyle">normal</property>
+                                        <property name="textUnderline">none</property>
+                                        <property name="textAlign">center</property>
+                                        <property name="contentType">auto</property>
+                                        <text-property name="content"><![CDATA[رمز مسار]]></text-property>
+                                    </text>
+                                </cell>
+                                <cell id="189"/>
+                            </row>
+                            <row id="190">
+                                <cell id="191">
+                                    <property name="colSpan">3</property>
+                                    <property name="rowSpan">1</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                </cell>
+                                <cell id="875">
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <data id="885">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="textAlign">center</property>
+                                        <property name="resultSetColumn">idclasse</property>
+                                    </data>
+                                </cell>
+                                <cell id="195">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">1</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <data id="894">
+                                        <property name="textAlign">center</property>
+                                        <property name="resultSetColumn">classname</property>
+                                    </data>
+                                </cell>
+                                <cell id="197">
+                                    <property name="colSpan">3</property>
+                                    <property name="rowSpan">1</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <property name="textAlign">center</property>
+                                    <data id="895">
+                                        <property name="paddingLeft">5pt</property>
+                                        <property name="paddingRight">5pt</property>
+                                        <property name="textAlign">center</property>
+                                        <property name="display">inline</property>
+                                        <property name="resultSetColumn">nom_ar</property>
+                                    </data>
+                                    <data id="893">
+                                        <property name="paddingLeft">1pt</property>
+                                        <property name="textAlign">center</property>
+                                        <property name="display">inline</property>
+                                        <property name="resultSetColumn">prenom_ar</property>
+                                    </data>
+                                </cell>
+                                <cell id="200">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">1</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <data id="896">
+                                        <property name="textAlign">center</property>
+                                        <property name="resultSetColumn">cd_massar</property>
+                                    </data>
+                                </cell>
+                                <cell id="202"/>
+                            </row>
+                            <row id="203">
+                                <cell id="204"/>
+                                <cell id="205"/>
+                                <cell id="206"/>
+                                <cell id="207"/>
+                                <cell id="208"/>
+                                <cell id="209">
+                                    <property name="colSpan">6</property>
+                                    <property name="rowSpan">1</property>
+                                    <text id="238">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontSize">12pt</property>
+                                        <property name="textAlign">right</property>
+                                        <property name="contentType">auto</property>
+                                        <text-property name="content"><![CDATA[قد شطب على اسمه من لوائح المؤسسة حسب النصوص و القوانين المنظمة]]></text-property>
+                                    </text>
+                                </cell>
+                                <cell id="215"/>
+                            </row>
+                            <row id="216">
+                                <cell id="217"/>
+                                <cell id="218"/>
+                                <cell id="219"/>
+                                <cell id="220"/>
+                                <cell id="221"/>
+                                <cell id="222"/>
+                                <cell id="223"/>
+                                <cell id="224"/>
+                                <cell id="225">
+                                    <text id="239">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontSize">12pt</property>
+                                        <property name="textAlign">center</property>
+                                        <property name="contentType">auto</property>
+                                        <text-property name="content"><![CDATA[والسلام]]></text-property>
+                                    </text>
+                                </cell>
+                                <cell id="226"/>
+                                <cell id="227"/>
+                                <cell id="228"/>
+                            </row>
+                            <row id="240">
+                                <cell id="241">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">1</property>
+                                    <text id="4643">
+                                        <property name="contentType">html</property>
+                                        <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                                    </text>
+                                </cell>
+                                <cell id="243">
+                                    <text id="253">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="contentType">auto</property>
+                                        <text-property name="content"><![CDATA[حرر بتاريخ]]></text-property>
+                                    </text>
+                                </cell>
+                                <cell id="244"/>
+                                <cell id="245"/>
+                                <cell id="246"/>
+                                <cell id="247"/>
+                                <cell id="248"/>
+                                <cell id="249"/>
+                                <cell id="250"/>
+                                <cell id="251"/>
+                                <cell id="252"/>
+                            </row>
+                            <row id="254">
+                                <property name="height">0.4166666666666667in</property>
+                                <cell id="255"/>
+                                <cell id="256">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">1</property>
+                                    <text id="267">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="textAlign">center</property>
+                                        <property name="contentType">auto</property>
+                                        <text-property name="content"><![CDATA[امضاء رئيس الؤسسة]]></text-property>
+                                    </text>
+                                </cell>
+                                <cell id="258"/>
+                                <cell id="259"/>
+                                <cell id="260"/>
+                                <cell id="261"/>
+                                <cell id="262"/>
+                                <cell id="263"/>
+                                <cell id="264"/>
+                                <cell id="265"/>
+                                <cell id="266"/>
+                            </row>
+                            <row id="583">
+                                <property name="height">7.14375mm</property>
+                                <cell id="584">
+                                    <property name="borderBottomColor">#0000FF</property>
+                                    <property name="borderBottomStyle">double</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderTopColor">#0000FF</property>
+                                    <property name="borderTopStyle">double</property>
+                                    <property name="borderTopWidth">thin</property>
+                                </cell>
+                                <cell id="585">
+                                    <property name="borderBottomColor">#0000FF</property>
+                                    <property name="borderBottomStyle">double</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderTopColor">#0000FF</property>
+                                    <property name="borderTopStyle">double</property>
+                                    <property name="borderTopWidth">thin</property>
+                                </cell>
+                                <cell id="586">
+                                    <property name="borderBottomColor">#0000FF</property>
+                                    <property name="borderBottomStyle">double</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderTopColor">#0000FF</property>
+                                    <property name="borderTopStyle">double</property>
+                                    <property name="borderTopWidth">thin</property>
+                                </cell>
+                                <cell id="587">
+                                    <property name="borderBottomColor">#0000FF</property>
+                                    <property name="borderBottomStyle">double</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderTopColor">#0000FF</property>
+                                    <property name="borderTopStyle">double</property>
+                                    <property name="borderTopWidth">thin</property>
+                                </cell>
+                                <cell id="588">
+                                    <property name="borderBottomColor">#0000FF</property>
+                                    <property name="borderBottomStyle">double</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderTopColor">#0000FF</property>
+                                    <property name="borderTopStyle">double</property>
+                                    <property name="borderTopWidth">thin</property>
+                                </cell>
+                                <cell id="589">
+                                    <property name="borderBottomColor">#0000FF</property>
+                                    <property name="borderBottomStyle">double</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderTopColor">#0000FF</property>
+                                    <property name="borderTopStyle">double</property>
+                                    <property name="borderTopWidth">thin</property>
+                                </cell>
+                                <cell id="590">
+                                    <property name="borderBottomColor">#0000FF</property>
+                                    <property name="borderBottomStyle">double</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderTopColor">#0000FF</property>
+                                    <property name="borderTopStyle">double</property>
+                                    <property name="borderTopWidth">thin</property>
+                                </cell>
+                                <cell id="591">
+                                    <property name="borderBottomColor">#0000FF</property>
+                                    <property name="borderBottomStyle">double</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderTopColor">#0000FF</property>
+                                    <property name="borderTopStyle">double</property>
+                                    <property name="borderTopWidth">thin</property>
+                                </cell>
+                                <cell id="592">
+                                    <property name="borderBottomColor">#0000FF</property>
+                                    <property name="borderBottomStyle">double</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderTopColor">#0000FF</property>
+                                    <property name="borderTopStyle">double</property>
+                                    <property name="borderTopWidth">thin</property>
+                                </cell>
+                                <cell id="593">
+                                    <property name="borderBottomColor">#0000FF</property>
+                                    <property name="borderBottomStyle">double</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderTopColor">#0000FF</property>
+                                    <property name="borderTopStyle">double</property>
+                                    <property name="borderTopWidth">thin</property>
+                                </cell>
+                                <cell id="594">
+                                    <property name="borderBottomColor">#0000FF</property>
+                                    <property name="borderBottomStyle">double</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderTopColor">#0000FF</property>
+                                    <property name="borderTopStyle">double</property>
+                                    <property name="borderTopWidth">thin</property>
+                                </cell>
+                                <cell id="595">
+                                    <property name="borderBottomColor">#0000FF</property>
+                                    <property name="borderBottomStyle">double</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderTopColor">#0000FF</property>
+                                    <property name="borderTopStyle">double</property>
+                                    <property name="borderTopWidth">thin</property>
+                                </cell>
+                            </row>
+                            <row id="861">
+                                <cell id="862"/>
+                                <cell id="863"/>
+                                <cell id="864"/>
+                                <cell id="865"/>
+                                <cell id="866">
+                                    <property name="colSpan">4</property>
+                                    <property name="rowSpan">1</property>
+                                    <image id="4329">
+                                        <property name="height">53px</property>
+                                        <property name="width">2.5104166666666665in</property>
+                                        <expression name="altText">""</expression>
+                                        <property name="source">file</property>
+                                        <expression name="uri" type="javascript">if(row["file_path"]){&#13;
+params["AttachmentPath"].value+row["file_path"];&#13;
+}else&#13;
+{&#13;
+params["UrlLogo"];&#13;
+}</expression>
+                                    </image>
+                                </cell>
+                                <cell id="870"/>
+                                <cell id="871"/>
+                                <cell id="872"/>
+                                <cell id="873"/>
+                            </row>
+                            <row id="845">
+                                <cell id="846"/>
+                                <cell id="847"/>
+                                <cell id="848"/>
+                                <cell id="849">
+                                    <property name="colSpan">6</property>
+                                    <property name="rowSpan">1</property>
+                                    <data id="858">
+                                        <property name="textAlign">center</property>
+                                        <property name="resultSetColumn">academie</property>
+                                    </data>
+                                </cell>
+                                <cell id="855"/>
+                                <cell id="856"/>
+                                <cell id="857"/>
+                            </row>
+                            <row id="609">
+                                <cell id="610"/>
+                                <cell id="611"/>
+                                <cell id="612"/>
+                                <cell id="613"/>
+                                <cell id="614">
+                                    <property name="colSpan">4</property>
+                                    <property name="rowSpan">1</property>
+                                    <data id="859">
+                                        <property name="textAlign">center</property>
+                                        <property name="resultSetColumn">direction</property>
+                                    </data>
+                                </cell>
+                                <cell id="618"/>
+                                <cell id="619"/>
+                                <cell id="620"/>
+                                <cell id="621"/>
+                            </row>
+                            <row id="596">
+                                <cell id="597"/>
+                                <cell id="598"/>
+                                <cell id="599"/>
+                                <cell id="600"/>
+                                <cell id="601">
+                                    <property name="colSpan">4</property>
+                                    <property name="rowSpan">1</property>
+                                    <data id="860">
+                                        <property name="textAlign">center</property>
+                                        <property name="resultSetColumn">etablissemntname</property>
+                                    </data>
+                                </cell>
+                                <cell id="605"/>
+                                <cell id="606"/>
+                                <cell id="607"/>
+                                <cell id="608"/>
+                            </row>
+                            <row id="661">
+                                <cell id="662"/>
+                                <cell id="663"/>
+                                <cell id="664"/>
+                                <cell id="665"/>
+                                <cell id="666">
+                                    <property name="colSpan">4</property>
+                                    <property name="rowSpan">1</property>
+                                    <text id="778">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontSize">18pt</property>
+                                        <property name="textAlign">center</property>
+                                        <property name="contentType">auto</property>
+                                        <text-property name="content"><![CDATA[من رئيس المؤسسة]]></text-property>
+                                    </text>
+                                </cell>
+                                <cell id="670"/>
+                                <cell id="671"/>
+                                <cell id="672"/>
+                                <cell id="673"/>
+                            </row>
+                            <row id="648">
+                                <cell id="649"/>
+                                <cell id="650"/>
+                                <cell id="651">
+                                    <property name="colSpan">8</property>
+                                    <property name="rowSpan">1</property>
+                                    <property name="textAlign">center</property>
+                                    <data id="890">
+                                        <property name="fontSize">12pt</property>
+                                        <property name="paddingLeft">3pt</property>
+                                        <property name="paddingRight">3pt</property>
+                                        <property name="display">inline</property>
+                                        <property name="resultSetColumn">nomar_tuteur</property>
+                                    </data>
+                                    <data id="889">
+                                        <property name="fontSize">12pt</property>
+                                        <property name="paddingLeft">1pt</property>
+                                        <property name="paddingRight">1pt</property>
+                                        <property name="display">inline</property>
+                                        <property name="resultSetColumn">prenomar_tuteur</property>
+                                    </data>
+                                    <text id="4639">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontSize">16pt</property>
+                                        <property name="paddingTop">0pt</property>
+                                        <property name="paddingLeft">2pt</property>
+                                        <property name="paddingBottom">0pt</property>
+                                        <property name="paddingRight">2pt</property>
+                                        <property name="textAlign">center</property>
+                                        <property name="display">inline</property>
+                                        <property name="contentType">auto</property>
+                                        <text-property name="content"><![CDATA[  :الى السيد (ة)]]></text-property>
+                                    </text>
+                                </cell>
+                                <cell id="659"/>
+                                <cell id="660"/>
+                            </row>
+                            <row id="635">
+                                <cell id="636"/>
+                                <cell id="637">
+                                    <property name="colSpan">9</property>
+                                    <property name="rowSpan">1</property>
+                                    <property name="textAlign">center</property>
+                                    <data id="891">
+                                        <property name="fontSize">12pt</property>
+                                        <property name="paddingLeft">2pt</property>
+                                        <property name="paddingRight">2pt</property>
+                                        <property name="display">inline</property>
+                                        <property name="resultSetColumn">adresse_tuteur</property>
+                                    </data>
+                                    <text id="4641">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontSize">16pt</property>
+                                        <property name="paddingTop">0pt</property>
+                                        <property name="paddingLeft">2pt</property>
+                                        <property name="paddingBottom">0pt</property>
+                                        <property name="paddingRight">2pt</property>
+                                        <property name="textAlign">center</property>
+                                        <property name="display">inline</property>
+                                        <property name="contentType">auto</property>
+                                        <text-property name="content"><![CDATA[  :الساكن ب]]></text-property>
+                                    </text>
+                                </cell>
+                                <cell id="646"/>
+                                <cell id="647"/>
+                            </row>
+                            <row id="622">
+                                <cell id="623"/>
+                                <cell id="624"/>
+                                <cell id="625"/>
+                                <cell id="626"/>
+                                <cell id="627"/>
+                                <cell id="628"/>
+                                <cell id="629"/>
+                                <cell id="630"/>
+                                <cell id="631">
+                                    <property name="colSpan">4</property>
+                                    <property name="rowSpan">1</property>
+                                    <text id="783">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontSize">14pt</property>
+                                        <property name="textAlign">center</property>
+                                        <property name="contentType">auto</property>
+                                        <text-property name="content"><![CDATA[الموضوع  : اشعار بالتشطيب]]></text-property>
+                                    </text>
+                                </cell>
+                            </row>
+                            <row id="765">
+                                <cell id="766"/>
+                                <cell id="767"/>
+                                <cell id="768"/>
+                                <cell id="769">
+                                    <property name="colSpan">6</property>
+                                    <property name="rowSpan">1</property>
+                                    <text id="784">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontSize">12pt</property>
+                                        <property name="textAlign">center</property>
+                                        <property name="contentType">auto</property>
+                                        <text-property name="content"><![CDATA[سلام تام بوجود مولانا الامام المؤيد بالله]]></text-property>
+                                    </text>
+                                </cell>
+                                <cell id="775"/>
+                                <cell id="776"/>
+                                <cell id="777"/>
+                            </row>
+                            <row id="752">
+                                <cell id="753"/>
+                                <cell id="754"/>
+                                <cell id="755"/>
+                                <cell id="756"/>
+                                <cell id="757"/>
+                                <cell id="758"/>
+                                <cell id="759"/>
+                                <cell id="760">
+                                    <property name="colSpan">5</property>
+                                    <property name="rowSpan">1</property>
+                                    <text id="785">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontSize">12pt</property>
+                                        <property name="textAlign">center</property>
+                                        <property name="contentType">auto</property>
+                                        <text-property name="content"><![CDATA[وبعد يؤسفني ان اخبركم ابنكم (ابنتكم)]]></text-property>
+                                    </text>
+                                </cell>
+                            </row>
+                            <row id="739">
+                                <cell id="740"/>
+                                <cell id="741">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">1</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <text id="787">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontWeight">bold</property>
+                                        <property name="textAlign">center</property>
+                                        <property name="contentType">auto</property>
+                                        <text-property name="content"><![CDATA[ملاحظات]]></text-property>
+                                    </text>
+                                </cell>
+                                <cell id="882">
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <text id="883">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontWeight">bold</property>
+                                        <property name="textAlign">center</property>
+                                        <property name="contentType">auto</property>
+                                        <text-property name="content"><![CDATA[ر ت]]></text-property>
+                                    </text>
+                                </cell>
+                                <cell id="744">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">1</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <text id="788">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontWeight">bold</property>
+                                        <property name="textAlign">center</property>
+                                        <property name="contentType">auto</property>
+                                        <text-property name="content"><![CDATA[القسم]]></text-property>
+                                    </text>
+                                </cell>
+                                <cell id="746">
+                                    <property name="colSpan">3</property>
+                                    <property name="rowSpan">1</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <text id="791">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontWeight">bold</property>
+                                        <property name="textAlign">center</property>
+                                        <property name="contentType">auto</property>
+                                        <text-property name="content"><![CDATA[الاسم الكامل]]></text-property>
+                                    </text>
+                                </cell>
+                                <cell id="749">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">1</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <text id="792">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontWeight">bold</property>
+                                        <property name="fontStyle">normal</property>
+                                        <property name="textUnderline">none</property>
+                                        <property name="textAlign">center</property>
+                                        <property name="contentType">auto</property>
+                                        <text-property name="content"><![CDATA[رمز مسار]]></text-property>
+                                    </text>
+                                </cell>
+                                <cell id="751"/>
+                            </row>
+                            <row id="726">
+                                <cell id="727"/>
+                                <cell id="728">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">1</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                </cell>
+                                <cell id="880">
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <data id="884">
+                                        <property name="textAlign">center</property>
+                                        <property name="resultSetColumn">idclasse</property>
+                                    </data>
+                                </cell>
+                                <cell id="731">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">1</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <property name="textAlign">center</property>
+                                    <data id="900">
+                                        <property name="resultSetColumn">classname</property>
+                                    </data>
+                                </cell>
+                                <cell id="733">
+                                    <property name="colSpan">3</property>
+                                    <property name="rowSpan">1</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <property name="textAlign">center</property>
+                                    <data id="899">
+                                        <property name="paddingLeft">5pt</property>
+                                        <property name="paddingRight">5pt</property>
+                                        <property name="display">inline</property>
+                                        <property name="resultSetColumn">nom_ar</property>
+                                    </data>
+                                    <data id="898">
+                                        <property name="display">inline</property>
+                                        <property name="resultSetColumn">prenom_ar</property>
+                                    </data>
+                                </cell>
+                                <cell id="736">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">1</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <data id="897">
+                                        <property name="textAlign">center</property>
+                                        <property name="resultSetColumn">cd_massar</property>
+                                    </data>
+                                </cell>
+                                <cell id="738"/>
+                            </row>
+                            <row id="713">
+                                <cell id="714"/>
+                                <cell id="715"/>
+                                <cell id="716"/>
+                                <cell id="717"/>
+                                <cell id="718"/>
+                                <cell id="719">
+                                    <property name="colSpan">6</property>
+                                    <property name="rowSpan">1</property>
+                                    <text id="795">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontSize">12pt</property>
+                                        <property name="textAlign">right</property>
+                                        <property name="contentType">auto</property>
+                                        <text-property name="content"><![CDATA[قد شطب على اسمه من لوائح المؤسسة حسب النصوص و القوانين المنظمة]]></text-property>
+                                    </text>
+                                </cell>
+                                <cell id="725"/>
+                            </row>
+                            <row id="700">
+                                <cell id="701"/>
+                                <cell id="702"/>
+                                <cell id="703"/>
+                                <cell id="704"/>
+                                <cell id="705"/>
+                                <cell id="706"/>
+                                <cell id="707"/>
+                                <cell id="708"/>
+                                <cell id="709">
+                                    <text id="796">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontSize">12pt</property>
+                                        <property name="textAlign">center</property>
+                                        <property name="contentType">auto</property>
+                                        <text-property name="content"><![CDATA[والسلام]]></text-property>
+                                    </text>
+                                </cell>
+                                <cell id="710"/>
+                                <cell id="711"/>
+                                <cell id="712"/>
+                            </row>
+                            <row id="687">
+                                <cell id="688"/>
+                                <cell id="689">
+                                    <text id="4642">
+                                        <property name="contentType">html</property>
+                                        <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                                    </text>
+                                </cell>
+                                <cell id="690">
+                                    <text id="798">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="contentType">auto</property>
+                                        <text-property name="content"><![CDATA[حرر بتاريخ]]></text-property>
+                                    </text>
+                                </cell>
+                                <cell id="691"/>
+                                <cell id="692"/>
+                                <cell id="693"/>
+                                <cell id="694"/>
+                                <cell id="695"/>
+                                <cell id="696"/>
+                                <cell id="697"/>
+                                <cell id="698"/>
+                                <cell id="699"/>
+                            </row>
+                            <row id="674">
+                                <property name="height">0.3125in</property>
+                                <cell id="675">
+                                    <property name="colSpan">3</property>
+                                    <property name="rowSpan">1</property>
+                                    <text id="799">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="textAlign">center</property>
+                                        <property name="contentType">auto</property>
+                                        <text-property name="content"><![CDATA[امضاء رئيس الؤسسة]]></text-property>
+                                    </text>
+                                </cell>
+                                <cell id="678"/>
+                                <cell id="679"/>
+                                <cell id="680"/>
+                                <cell id="681"/>
+                                <cell id="682"/>
+                                <cell id="683"/>
+                                <cell id="684"/>
+                                <cell id="685"/>
+                                <cell id="686"/>
+                            </row>
+                        </grid>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="544">
+                    <cell id="545"/>
+                </row>
+            </footer>
+        </table>
+    </body>
+</report>

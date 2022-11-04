@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+  <grid name="PieceJoindreDepense-grid" title="list des Piece Joindre" model="com.hakibati.ass.enajah.db.PieceJoindreDepense"
+        canDelete="false" orderBy="id">
+    <field name="designation"  />
+    <field name="pieceJoindre" widget="binary-link"/>
+  </grid>
+
+  <form name="PieceJoindreDepense-form" title="list des Piece Joindre" model="com.hakibati.ass.enajah.db.PieceJoindreDepense" >
+    <panel  >
+      <field name="designation"  />
+      <field name="pieceJoindre" widget="binary-link"/>
+    </panel>
+  </form>
+</object-views>

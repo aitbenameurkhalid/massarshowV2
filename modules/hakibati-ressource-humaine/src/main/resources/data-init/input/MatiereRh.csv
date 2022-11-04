@@ -1,0 +1,254 @@
+cd;nameFr;nameAr
+0010;LINGUISTIQUES;اللسانيات
+0011;LANGUE ARABE;اللغة العربية
+0012;LANGUE FRANCAISE;اللغة الفرنسية
+0013;LANGUE ANGLAISE;اللغة الإنجليزية
+0014;LANGUE ESPAGNOLE;اللغة الإسبانية
+0015;LANGUE ALLEMANDE;اللغة الألمانية
+0016;LANGUE ITALIENNE;اللغة الإيطالية
+0017;LANGUE AMAZIGHE;الأمازيغية
+0018;HISTOIRE GEOGRAPHIE;الاجتماعيات
+0019;MATHEMATIQUES;الرياضيات
+0020;SC. DE LA VIE ET DE LA TERRE;علوم الحياة والأرض
+0021;ZOOLOGIE ET BOTANIQUE;العلوم النباتية والحيوانية
+0022;SC. ECONOMIQUES ET GESTION;العلوم الاقتصادية والتدبير
+0023;PHYSIQUE CHIMIE;الفيزياء والكيمياء
+0024;INSTRUCTION ISLAMIQUE;التربية الإسلامية
+0025;الفقه الإسلامي;الفقه الإسلامي
+0026;EDUCATION PHYSIQUE;التربية البدنية
+0027;EDUCATION FAMILIALE;التربية الأسرية
+0028;ARTS PALSTIQUES;التربية التشكيلية
+0029;EDUCATION MUSICALE;التربية الموسيقية
+0030;INFORMATIQUE;المعلوميات
+0033;TECHNOLOGIE;التكنولوجيا 
+0034;ACTIVITE SCIENTIFIQUE;النشاط العلمي 
+0035;ARCHIVAGE ET DOCUMENTATION;التوثيق
+0036;PHILOSOPHIE;الفلسفة
+0037;TRADUCTION;الترجمة
+0038;Inconu;Inconu
+0039;Inconu;Inconu
+0060;ASSIDUITE ET CONDUITE ; المواظبة و السلوك 
+0095;DROIT ; القانون 
+0111;CULTURE ARTISTIQUE;الثقافة الفنية
+0112;ART ET INDUSTRIE GRAPHIQUE;الفن والصناعة البيانية
+0113;SC.ET TECHNOLOGIES MECANIQUES;العلوم والتكنولوجيات الميكانيكية
+0114;SC. ET TECHNOLOGIES ELECTRIQUES;العلوم والتكنولوجيات الكهربائية
+0115;Inconu;Inconu
+0116;CHIMIE INDUSTRIELLE;الكمياء الصناعية
+0117;BATIMENT ET GENIE CIVIL;البناء و الهندسة المدنية
+0118;FONDERIE;السبــــــاكة
+0119;ENTREPOT  ET ENTRETIEN;المستودع والصيانة
+0120;ENTRETIEN MATERIEL INFORMATIQUE;صيانة الآلات المعلومياتية
+0121;EXPLICATION DU CORAN ET HADITH ; التفــسيــر و الحــديث 
+0126;SCIENCES DE L'INGENIEUR ; عــلوم المـهـنـدس 
+0127;LANGUE ARABE ET LITTERATURE ; اللغة العربية و آدابها 
+0129;FARAYED ET ASTRONOMIE ; الفرائض و التوقيت 
+0131;COMPTA. ET MATHS. FINANCIERES ; المحاسبة و الرياضيات المالية 
+0132;ECO. GENERALE ET STATISTIQUES ; الإقتصاد العام و الإحصاء 
+0133;ECO. ET ORG. ADMIN. ENTREPRISE; الإقتصاد و التنظيم الإداري للمقاولات 
+0134;INFORMATIQUE DE GESTION ; معلوميات التدبير 
+0135;INFORMATIQUE ET INFOGRAPHIE ; المعلوميات و الأنفوغرافيا 
+0137;CULTURE PLASTIQUE ET HIST. ART ; الثقافة التشكيلية و تاريخ الفن 
+0140;DESIGN DE COM. ET DE MULTIMEDIA ; فن تصميم التواصل و الوسائط المتعددة 
+0141;DESIGN D'ENVIRONNEMENT; فن تصميم المحيط 
+0142;DESIGN DE PRODUIT ; فن تصميم المنتوج 
+0150;SCIENCES DE LA LANGUE ; علوم اللغة 
+0151;LITTERATURE ARABE ; الآداب 
+0152;DROIT MUSULMAN ET SES SOURCES;الفقه والأصول
+0153;VOLUME;الحجم
+0154;DESSIN ET EXPRESSION PLASTIQUE;الرسم والتعبير التشكيلي
+0155;ATRS GRAPHIQUES;فنون الكرافيك
+0156;القرِآن والتفسير ;القرِآن والتفسير 
+0157;الحديث;الحديث
+0158;السيرة النبوية;السيرة النبوية
+0159;الفقه والتوحيد;الفقه والتوحيد
+0310;BIOLOGIE;البيولوجيا
+0311;GEOLOGIE;الجيولوجيا
+0312;TERMINOLOGIE;الترجمة
+0313;COORDINATION;التنسيق
+0314;LEGISLATION;التشريع
+0316;METHODOLOGIE;المنهجية
+0317;PHYSIOLOGIE;علم وظائف الأعضاء
+0318;SCIENCES DE L'EDUCATION;علوم التربية
+0319;ETYMOLOGIE;إتيمولوجيا
+0320;AUDIO-VISUEL;السمعي البصري
+0321;DIDACTIQUE;تعليمي
+0322;SC. ET TECHNIQUE ADMINISTRATIVE;العلوم وتقنيات الادارة
+0323;AUDIO-VISUEL;السمعي البصري
+0324;Inconu;Inconu
+0401;Analyse et programmation;التحليل و البرمجة
+0402;Analyse fonctionnelle ;التحليل الوظيفي
+0403;Architecture des systemes informatiques;هندسة الانظمة المعلومياتية
+0404;Architecture et technologie des applications informatiques;هندسة وتكنلوجيات الانظمة المعلومياتية
+0405;Automatique et automatisme;الألية او التلقائية
+0406;Dessin  du bâtiment;الرسم المعماري
+0407;Dessin des produits techniques;رسم المنتوج التقني
+0408;Développement multimédia;تطوير  الوسائط
+0409;Environnement économique et juridique;المحيط الاقتصادي و القانوني المقاولة
+0410;Techniques d'expression et de communication;تقنيات التعبير والتواصل
+0411;Communication professionnelle;التواصل المهني
+0412;Sciences physiques - chimie appliquée ;العلوم الفيزيائية - الكيمياء التطبيقية
+0413;Physique appliquée;الفيزياء التطبيقية
+0414;Etude de cas: Economie - Droit - Management;دراسة الحالات: الاقتصاد والقانون والتدبير
+0415;Informatique de gestion;معلوميات  التدبير
+0416;Développement d’applications informatiques;تطوير التطبيقات المعلوماتية
+0417;Conception d’applications Informatiques;تصميم التطبيقات المعلوماتية
+0418;Développement et applications informatiques;تطوير وتطبيقات معلومياتية
+0419;Systèmes d’exploitation GNU /LINUX;أنظمة استغلال  GNU /LINUX
+0420;Réseaux informatiques ;الشبكات المعلومياتية
+0421;Systèmes d’exploitation propriétaires;أنظمة استغلال الحاسوب
+0422;Application des Techniques de production Multiméd;تطبيق تقنيات إنتاج الوسائط
+0423;Etude de cas informatique;دراسة حالة معلومياتية
+0424;Etude des systèmes et automatismes;دراسة المناظم والتلقائية
+0425;Essais des systèmes et CAO;تجريب المناظم و CAO
+0426;Association convertisseur machine  et régulation;دراسة المحولات الكهربائية
+0427;Applications sur des Systèmes Techniques;تطبيقات على مناظم تقنية
+0428;Electronique;الكهروبية
+0429;Expression graphique;التعبير الخطي
+0430;Technologie des systèmes graphiques;تكنولوجيا أنساق الطباعة
+0431;Organisation des processus de fabrication;تنظيم صيرورة التصنيع
+0432;Communication et productique graphique;التواصل المطبعي والإنتاجية المطبعية
+0433;Conception du produit audio-visuel ;تصميم المنتوج السمعي البصري 
+0434;Histoire de l’art ;تاريخ الفن
+0435;Infographie;الأنفوغرافيا
+0436;Modes de télédiffusion et maintenance;طرق البث التلفزي والصيانة
+0437;Techniques des moyens audiovisuels  ;تقنيات وسائل السمعي البصري 
+0438;Bureautique;المكتبية
+0439;Gestion comptable et financière ;التسيير المحاسباتي والمالي
+0440;Atelier métier ;ورشة العمل المهني
+0441;Etude de cas : Economie-Droit et Géographie du Tourisme ;دراسة الحالات: الاقتصاد والقانون والجغرافية السياحية 
+0442;Action touristique commerciale ;العمل السياحي التجاري
+0443;Management et contrôle de gestion des unités touristiques ;تدبير ومراقبة تسيير الوحدات السياحية
+0444;Techniques des sciences industrielles ;تقنيات العلوم الصناعية
+0445;Epreuve Technico-commerciale ;الاختبار التقنو - تجاري
+0446;Management  des activités technico-commerciales ;تدبير الأنشطة التقنو - تجارية
+0447;Production des documents comptables et financiers;إنتاج الوثائق المحاسباتية والمالية
+0448;"Analyse des documents financiers; analyse et contrôle des coûts ";تحليل الوثائق المالية وتحليل ومراقبة الكلفة
+0449;Activités professionnelles de synthèse;الأنشطة المهنية التركيبية
+0450;Communication commercial;التواصل التجاري
+0451;Management commercial;التدبير التجاري
+0452;Présentation de projets commerciaux;تقديم المشاريع التجارية
+0453;Épreuve de synthèse de gestion ;الاختبار التركيبي للتدبير
+0454;Activités professionnelles appliquées;الأنشطة المهنية التطبيقية
+0455;Motorisation et commande des systèmes industriels;محركة وتحكم المناظم الصناعية
+0456;Modélisation  et comportement des systèmes industriels; Analyse et spécifications du produit industriel;دراسة ونمذجة المناظم الصناعية؛ تحليل وتحديد المنتوج الصناعي
+0457;Systèmes automatisés de production;المناظم التلقائية للإنتاج
+0458;Gestion de production et qualité;تدبير الإنتاج والجودة
+0459;Etude et analyse de pré-industrialisation des produits mécaniques;دراسة وتحليل ما قبل التصنيع للمنتوجات الميكانيكية
+0460;Processus et procédés d’industrialisation des produits mécaniques;صيرورة تصنيع المنتوجات الميكانيكية
+0461;Préparation et conduite de chantier;تحضير وتتبع الورش
+0462;Production des documents graphiques;إنتاج الوثائق المبيانية
+0463;Techniques de réalisation et de mise en œuvre des ouvrages;تقنيات إنجاز الأوراش
+0464;Calcul des éléments de la structure;حساب مكونات البناء
+0465;Quantification et estimation des ouvrages;تقييم وتقدير الأوراش
+0466;Travaux de laboratoire;أشغال المختبر
+0467;Topographie;المسح الطبوغرافي
+0468;"Analyse; représentation et comportement des systèmes";نمذجة ورسم المناظم و دراسة المناظم
+0469;Productique;الإنتاجياتية
+0470;Commande des systèmes industriels; التحكم في المناظم الصناعية
+0471;Motorisation des systèmes industriels;المناظم الصناعية محركة 
+0472;Conception d’outillage et CAO ;ابتكار المعدات و CAO
+0473;Gestion et suivi de la production;تنظيم وتتبع الإنتاج
+0474;Synthèse des matériaux;استخلاص المواد
+0475;Processus d’industrialisation ;صيرورة التصنيع
+0476;Etude des comportements des systèmes énergétiques;دراسة المناظم الطاقية
+0477;Analyse des systèmes énergétiques et de ses équipements;تحليل المناظم الطاقية وتجهيزاتها
+0478;Mise en œuvre des procédures d’intervention ;تطبيق إجراءات التدخل
+0479;Analyse fonctionnelle et structurelle des mécanismes;التحليل الوظيفي والبنيوي للميكانيزمات
+0480;Automatique;التلقائي
+0481;Génie électrique;الهندسة الكهربائية
+0482;Méthodes de maintenance;طرق الصيانة
+0483;Diagnostic  des systèmes industriels;تشخيص المناظم الصناعية
+0484;Sciences des matériaux;علوم المواد
+0485;Préparation et industrialisation du produit industriel;تهيئة وتصنيع المنتج الصناعي
+0486;Etude du comportement des systèmes motorisés;دراسة الأنظمة ذات المحرك
+0487;Analyse des systèmes motorisés et organisation de leur maintenance;تحليل الأنظمة ذات المحرك وطرق صيانتها
+0488;Travaux pratiques de maintenance;الأشغال التطبيقية في الصيانة
+0489;Projet de fin de formation;مناقشة مشروع نهاية التكوين
+0490;Projet industriel;مناقشة المشروع الصناعي
+0491;Rapport de Stage;مناقشة تقرير التدريب
+0492;Environnement économique et juridique de l'entreprise;المحيط الافتصادي و الفانوني للمقاولة
+0493;Génie thermique;الهندسة الحرارية
+0494;Gestion contrôle et suivi de production ;تنظيم و مراقبة و تتبع الانتاج
+0495;gestion de la maintenance;تنظيم الصيانة
+0496;Industrialisation des produits;تصنيع المنتوجات
+0497;Maintenance- Sécurité-Environnement;صيانة -تأمين-محيط بيئي
+0498;Mécanique et étude des structures en béton armé;الميكانيك و دراسة بنيات الخرسانة المسلحة
+0499;Mécanique industrielle;الميكانيك الصناعية
+0500;Métré et étude des prix;القياس و دراسة التكلفة
+0501;Procédés généraux de construction;الطرق العامة للبناء
+0502;Production multimédia;انتاج الوسائط 
+0503;Productique et maintenance;الانتاجية و الصيانة
+0504;Sciences physiques ;العلوم الفيزيائية 
+0505;Systèmes et réseaux informatiques;الانظمة والشبكات المعلومياتية
+0506;Techniques de représentation;تقنيات المبيان
+0507;Technologie de fabrication;تكنولوجيا التصنيع
+0508;Technologie de l’information appliquée;تكنولوجيا المعلومات التطبيقية
+0509;Technologie et procédés de fabrication;تكنولوجيا و طرق التصنيع
+0510;Travaux pratiques;الأشغال التطبيقية 
+0511;Systèmes énergétiques;النظم الطاقية
+0512;Mécanique appliquée;الميكانيك التطبيقية
+1000;EDUCATION ARTISTIQUE;التربية الفنية 
+1001;التعبير الكتابي;التعبير الكتابي
+1002;القراءة;القراءة
+1003;الإملاء;الإملاء
+1004;الشكل;الشكل
+1005;التراكيب;التراكيب
+1006;الصرف والتحويل;الصرف والتحويل
+1007;Exp. Orale;Exp. Orale
+1008;Activités de prod. écrite;Activités de prod. écrite
+1009;Lexique;Lexique
+1010;Grammaire;Grammaire
+1011;Conjugaison;Conjugaison
+1012;Orthographe/Dictée;Orthographe/Dictée
+1013;Activités de Lecture;Activités de Lecture
+1014;القران الكريم;القران الكريم
+1015;عقائد وعبادات;عقائد وعبادات
+1016;اداب إسلامية;اداب إسلامية
+1017;التاريخ;التاريخ
+1018;الجغرافية;الجغرافية
+1019;التربية المدنية;التربية المدنية
+1020;الخط ;الخط 
+1021;Poésie/chants/comptines;Poésie/chants/comptines
+1022;copie;copie
+1023;التعبير الشفوي ;التعبير الشفوي 
+1024;dictée;dictée
+1025;communication et actes de langage;communication et actes de langage
+1026;النقل;النقل
+1027;فهم المقروء;فهم المقروء
+1028;إنشاء;إنشاء
+1029;écriture;écriture
+1030;Poésie/lecture/diction;Poésie/lecture/diction
+1031;Fikh;الفقه
+1032;القران الكريم;القران الكريم
+1033;Matières professionnelles;المواد المهنية
+1034;القرآن الكريم والتفسير والفقه;القرآن الكريم والتفسير والفقه
+1035;الحديث النبوي الشريف والعقيدة;الحديث النبوي الشريف والعقيدة
+1036;STAGE;التدريب الميداني
+1037;الحديث النبوي و السيرة;الحديث النبوي و السيرة
+1038;Copie/Dictée;Copie/Dictée
+1039;"الإستماع والتحدث
+";"الإستماع والتحدث
+"
+1040;تمارين كتابية;تمارين كتابية
+1041;"التطبيقات الكتابية
+";"التطبيقات الكتابية
+"
+1042;"مشروع الوحدة
+";"مشروع الوحدة
+"
+1043;التواصل الشفهي;التواصل الشفهي
+1044;Comptine/Chant;Comptine/Chant
+1045;Graphisme;Graphisme
+1046;Activités orales;Activités orales
+1047;Poésie;Poésie
+1048;Lecture;Lecture
+1049;Écriture/Copie;Écriture/Copie
+1050;Exercices écrits;Exercices écrits
+1051;Production de l’écrit;Production de l’écrit
+1052;Projet de classe;Projet de classe
+1053;التواصل الشفوي;التواصل الشفوي
+1054;مشروع الوحدة;مشروع الوحدة
+2000;Autres disciplines;Autres disciplines
+9000;2ème langue étrangère;اللغة الأجنبية الثانية
+9999;تخصص آخر;Autres disciplines

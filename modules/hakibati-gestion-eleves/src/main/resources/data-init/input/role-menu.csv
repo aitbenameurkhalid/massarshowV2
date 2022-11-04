@@ -1,0 +1,16 @@
+name;menus
+role.hakibati.gestion.eleves.exterieur.read;menu-gestion-eleves-exterieur
+role.hakibati.gestion.eleves.exterieur.write;menu-gestion-eleves-exterieur
+role.hakibati.gestion.eleves.exterieur.delete;menu-gestion-eleves-exterieur
+
+role.hakibati.gestion.eleves.internat.read;menu-gestion-eleves-internat
+role.hakibati.gestion.eleves.internat.write;menu-gestion-eleves-internat
+role.hakibati.gestion.eleves.internat.delete;menu-gestion-eleves-internat
+
+role.hakibati.gestion.eleves.archive.read;menu-gestion-eleves-archive
+role.hakibati.gestion.eleves.archive.write;menu-gestion-eleves-archive
+role.hakibati.gestion.eleves.archive.delete;menu-gestion-eleves-archive
+
+role.hakibati.gestion.eleves.comptabilite.read;menu-comptabilite-internat
+role.hakibati.gestion.eleves.comptabilite.write;menu-comptabilite-internat
+role.hakibati.gestion.eleves.comptabilite.delete;menu-comptabilite-internat

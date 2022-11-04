@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+
+  <grid name="ControleElectricite-grid" title="Liste Controle de consommation" model="com.hakibati.eau.electricite.db.ControleElectricite" orderBy="dateControle" groups="etablissementAdmin,etablissementUser,admins,demo" id="hakibati-eau-electricite">
+    <field name="etablissement"/>
+    <field name="codeGresa"/>
+    <field name="numeroContratElectricite"/>
+    <field name="dateControle" colSpan="3"/>
+    <field name="valeurCompteur" colSpan="3"/>
+    <field name="imageCompteur" widget="image"/>
+    <button name="btn-delete-consommation-electroicite" title="Supprime" icon="fa-trash" onClick="action-delete-control-electricite" prompt="Voulez-vous vraiment Supprimez cet enregistrement ?" />
+  </grid>
+  <grid name="ControleElectricite-grid" title="Liste Controle de consommation" model="com.hakibati.eau.electricite.db.ControleElectricite" orderBy="dateControle" groups="directionAdmin,directionUser">
+    <field name="etablissement"/>
+    <field name="codeGresa"/>
+    <field name="numeroContratElectricite"/>
+    <field name="dateControle" colSpan="3"/>
+    <field name="valeurCompteur" colSpan="3"/>
+    <field name="imageCompteur" widget="image"/>
+  </grid>
+
+
+
+  <form name="ControleElectricite-form" title="Controle de consommation" model="com.hakibati.eau.electricite.db.ControleElectricite" width="large" onNew="action-getinformation-Etab" >
+    <panel readonly="true" colSpan="12" showTitle="false">
+      <field name="etablissement" form-view="zero"  showTitle="false" colSpan="8"  css="btn btn-warning label-bold bold large" onChange="action-getinformation-Etab"  />
+      <field name="codeGresa" showTitle="false" colSpan="2" css="btn btn-warning label-bold bold large"/>
+      <field name="numeroContratElectricite" showTitle="false" colSpan="2" css="btn btn-warning label-bold bold large"/>
+    </panel>
+    <panel title="Ajouter ou modifier">
+      <field name="dateControle" colSpan="3"/>
+      <field name="valeurCompteur" colSpan="3"/>
+      <field name="imageCompteur" widget="image"/>
+    </panel>
+  </form>
+  <action-method name="action-delete-control-electricite">
+    <call class="com.eau.electricite.web.ControlElectriciteController" method="deleteControleELectriciteSelect"/>
+  </action-method>
+</object-views>

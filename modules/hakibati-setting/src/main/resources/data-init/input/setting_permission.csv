@@ -1,0 +1,90 @@
+"name";"object";"can_read";"can_write";"can_create";"can_remove";"can_export";"condition";"conditionParams";"roleName"
+
+"perm.menu.read";"com.axelor.meta.db.MetaMenu";"x";;;;;;;
+"perm.meta.MetaFile.all.rwcde";"com.axelor.meta.db.MetaFile";"x";"x";"x";"x";"x";;;
+
+
+"perm.hakibati.setting.Allpersonnel.all.r";"com.hakibati.setting.db.Allpersonnel";"x";;;;;;;
+"perm.hakibati.setting.Allpersonnel.all.rwc";"com.hakibati.setting.db.Allpersonnel";"x";"x";"x";;;;;
+"perm.hakibati.setting.Allpersonnel.all.rwcde";"com.hakibati.setting.db.Allpersonnel";"x";"x";"x";"x";"x";;;
+
+"perm.hakibati.setting.Cycle.all.r";"com.hakibati.setting.db.Cycle";"x";;;;;;;
+"perm.hakibati.setting.Cycle.all.rwc";"com.hakibati.setting.db.Cycle";"x";"x";"x";;;;;
+"perm.hakibati.setting.Cycle.all.rwcde";"com.hakibati.setting.db.Cycle";"x";"x";"x";"x";"x";;;
+
+"perm.hakibati.setting.Etablissement.all.r";"com.app.application.db.Etablissement";"x";;;;;;;
+"perm.hakibati.setting.Etablissement.all.rwc";"com.app.application.db.Etablissement";"x";"x";"x";;;;;
+"perm.hakibati.setting.Etablissement.all.rwcde";"com.app.application.db.Etablissement";"x";"x";"x";"x";"x";;;
+
+"perm.hakibati.setting.Etablissement.me.r";"com.app.application.db.Etablissement";"x";;;;;"self.users.users = ?";"__user__";
+"perm.hakibati.setting.Etablissement.me.rwc";"com.app.application.db.Etablissement";"x";"x";"x";;;"self.users.users = ?";"__user__";
+"perm.hakibati.setting.Etablissement.me.rwcde";"com.app.application.db.Etablissement";"x";"x";"x";"x";"x";"self.users.users = ?";"__user__";
+
+"perm.hakibati.setting.Etablissement.select.r";"com.app.application.db.Etablissement";"x";;;;;"self.id = ?";"__user__.etablissementSelectionnee.id";
+"perm.hakibati.setting.Etablissement.select.rwc";"com.app.application.db.Etablissement";"x";"x";"x";;;"self.id = ?";"__user__.etablissementSelectionnee.id";
+"perm.hakibati.setting.Etablissement.select.rwcde";"com.app.application.db.Etablissement";"x";"x";"x";"x";"x";"self.id = ?";"__user__.etablissementSelectionnee.id";
+
+"perm.hakibati.setting.FonctionExaman.all.r";"com.hakibati.setting.db.FonctionExaman";"x";;;;;;;
+"perm.hakibati.setting.FonctionExaman.all.rwc";"com.hakibati.setting.db.FonctionExaman";"x";"x";"x";;;;;
+"perm.hakibati.setting.FonctionExaman.all.rwcde";"com.hakibati.setting.db.FonctionExaman";"x";"x";"x";"x";"x";;;
+
+"perm.hakibati.setting.Listcontraint.all.r";"com.hakibati.setting.db.Listcontraint";"x";;;;;;;
+"perm.hakibati.setting.Listcontraint.all.rwc";"com.hakibati.setting.db.Listcontraint";"x";"x";"x";;;;;
+"perm.hakibati.setting.Listcontraint.all.rwcde";"com.hakibati.setting.db.Listcontraint";"x";"x";"x";"x";"x";;;
+
+"perm.hakibati.setting.RoleDescribe.G1.r";"com.hakibati.setting.db.RoleDescribe";"x";;;;;"indexGroupe = ?";"1";
+"perm.hakibati.setting.RoleDescribe.G1.rwc";"com.hakibati.setting.db.RoleDescribe";"x";"x";"x";;;"indexGroupe = ?";"1";
+"perm.hakibati.setting.RoleDescribe.G1.rwcde";"com.hakibati.setting.db.RoleDescribe";"x";"x";"x";"x";"x";"indexGroupe = ?";"1";
+
+"perm.hakibati.setting.Sexe.all.r";"com.hakibati.setting.db.Sexe";"x";;;;;;;
+"perm.hakibati.setting.Sexe.all.rwc";"com.hakibati.setting.db.Sexe";"x";"x";"x";;;;;
+"perm.hakibati.setting.Sexe.all.rwcde";"com.hakibati.setting.db.Sexe";"x";"x";"x";"x";"x";;;
+
+"perm.hakibati.setting.User.my.r";"com.axelor.auth.db.User";"x";;;;;"self.code = ?";"__user__.code";
+"perm.hakibati.setting.User.my.rw";"com.axelor.auth.db.User";"x";"x";;;;"self.code = ?";"__user__.code";
+"perm.hakibati.setting.User.my.rwcde";"com.axelor.auth.db.User";"x";"x";"x";"x";"x";"self.code = ?";"__user__.code";
+
+"perm.hakibati.setting.User.all.r";"com.axelor.auth.db.User";"x";;;;;;;
+"perm.hakibati.setting.User.all.rwc";"com.axelor.auth.db.User";"x";"x";"x";;;;;
+"perm.hakibati.setting.User.all.rwcde";"com.axelor.auth.db.User";"x";"x";"x";"x";"x";;;
+
+"perm.hakibati.setting.UserEtablissement.all.r";"com.app.application.db.UserEtablissement";"x";;;;;;;
+"perm.hakibati.setting.UserEtablissement.all.rwc";"com.app.application.db.UserEtablissement";"x";"x";"x";;;;;
+"perm.hakibati.setting.UserEtablissement.all.rwcde";"com.app.application.db.UserEtablissement";"x";"x";"x";"x";"x";;;
+
+
+"perm.hakibati.setting.UserEtablissement.select.etab.r";"com.app.application.db.UserEtablissement";"x";;;;;"self.etablissements.id = ?";"__user__.etablissementSelectionnee.id";
+"perm.hakibati.setting.UserEtablissement.select.etab.rwc";"com.app.application.db.UserEtablissement";"x";"x";"x";;;"self.etablissements.id = ?";"__user__.etablissementSelectionnee.id";
+"perm.hakibati.setting.UserEtablissement.select.etab.rwcde";"com.app.application.db.UserEtablissement";"x";"x";"x";"x";"x";"self.users = ?";"__user__";
+
+"perm.hakibati.setting.UserEtablissement.me.r";"com.app.application.db.UserEtablissement";"x";;;;;"self.users = ?";"__user__";
+"perm.hakibati.setting.UserEtablissement.me.rwc";"com.app.application.db.UserEtablissement";"x";"x";"x";;;"self.users = ?";"__user__";
+"perm.hakibati.setting.UserEtablissement.me.rwcde";"com.app.application.db.UserEtablissement";"x";"x";"x";"x";"x";"self.users = ?";"__user__";
+
+"perm.hakibati.setting.UserEtablissementRole.all.r";"com.hakibati.setting.db.UserEtablissementRole";"x";;;;;;;
+"perm.hakibati.setting.UserEtablissementRole.all.rwc";"com.hakibati.setting.db.UserEtablissementRole";"x";"x";"x";;;;;
+"perm.hakibati.setting.UserEtablissementRole.all.rwcde";"com.hakibati.setting.db.UserEtablissementRole";"x";"x";"x";"x";"x";;;
+
+"perm.hakibati.setting.RegistreObservation.all.r";"com.hakibati.setting.db.RegistreObservation";"x";;;;;;;
+"perm.hakibati.setting.RegistreObservation.me.wc";"com.hakibati.setting.db.RegistreObservation";"";"x";"x";;;"self.createdBy = ?";"__user__";
+"perm.hakibati.setting.RegistreObservation.me.de";"com.hakibati.setting.db.RegistreObservation";"";"";"";"x";"x";"self.createdBy = ?";"__user__";
+
+"perm.hakibati.mail.MailMessage.all.r";"com.axelor.mail.db.MailMessage";"x";;;;;;;
+"perm.hakibati.mail.MailMessage.all.rwc";"com.axelor.mail.db.MailMessage";"x";"x";"x";;;;;
+"perm.hakibati.mail.MailMessage.all.rwcde";"com.axelor.mail.db.MailMessage";"x";"x";"x";"x";"x";;;
+
+"perm.hakibati.setting.EtablissementLiaison.all.r";"com.app.application.db.EtablissementLiaison";"x";;;;;;;
+"perm.hakibati.setting.EtablissementLiaison.all.rwc";"com.app.application.db.EtablissementLiaison";"x";"x";"x";;;;;
+"perm.hakibati.setting.EtablissementLiaison.all.rwcde";"com.app.application.db.EtablissementLiaison";"x";"x";"x";"x";"x";;;
+
+"perm.hakibati.setting.Etablissement.select.direction.r";"com.app.application.db.Etablissement";"x";;;;;"self.etablissementsPrincipal.etablissementPrincipal = ? AND self.etablissementsPrincipal.accepter =?";"__user__.etablissementSelectionnee , true";
+"perm.hakibati.setting.Etablissement.select.direction.rwc";"com.app.application.db.Etablissement";"x";"x";"x";;;"self.etablissementsPrincipal.etablissementPrincipal = ? AND self.etablissementsPrincipal.accepter =?";"__user__.etablissementSelectionnee , true";
+"perm.hakibati.setting.Etablissement.select.direction.rwcde";"com.app.application.db.Etablissement";"x";"x";"x";"x";"x";"self.etablissementsPrincipal.etablissementPrincipal = ? AND self.etablissementsPrincipal.accepter =?";"__user__.etablissementSelectionnee , true";
+
+"perm.hakibati.setting.RoleDescribe.G2.r";"com.hakibati.setting.db.RoleDescribe";"x";;;;;"indexGroupe = ?";"2";
+"perm.hakibati.setting.RoleDescribe.G2.rwc";"com.hakibati.setting.db.RoleDescribe";"x";"x";"x";;;"indexGroupe = ?";"2";
+"perm.hakibati.setting.RoleDescribe.G2.rwcde";"com.hakibati.setting.db.RoleDescribe";"x";"x";"x";"x";"x";"indexGroupe = ?";"2";
+
+"perm.hakibati.setting.RoleDescribe.G10.r";"com.hakibati.setting.db.RoleDescribe";"x";;;;;"indexGroupe = ?";"10";
+"perm.hakibati.setting.RoleDescribe.G10.rwc";"com.hakibati.setting.db.RoleDescribe";"x";"x";"x";;;"indexGroupe = ?";"10";
+"perm.hakibati.setting.RoleDescribe.G10.rwcde";"com.hakibati.setting.db.RoleDescribe";"x";"x";"x";"x";"x";"indexGroupe = ?";"10";

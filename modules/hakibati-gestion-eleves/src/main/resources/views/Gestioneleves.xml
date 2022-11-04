@@ -1,0 +1,736 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+
+    <form name="eleve-exterieur-donnees-form" title="Données des élèves"
+          model="com.hakibati.gestion.eleves.db.Gestioneleves" helpLink="false"
+          canNew="false" canEdit="false" canSave="false" canDelete="false" canArchive="false" canCopy="false"
+          canAttach="false">
+        <panel showTitle="false" colSpan="12">
+            <panel showTitle="false" colSpan="10">
+
+                <field name="anneScolaireActuele" colSpan="3"  x-limit="1000" widget="SuggestBox" x-order="-idAnnee" onChange="save,action.eleve.exterieur.change.anneScolaireActuele ,action.refresh.eleve.exterieur.recherche " domain="self.gestioneleves.id = :id"/>
+                <field name="$_niveau" title="Niveau" colSpan="6" type="reference"
+                       placeholder="Sélectionner un niveau" widget="SuggestBox"
+                       onChange="action.change.eleve.exterieur.niveau ,action.refresh.eleve.exterieur.recherche"
+                       target="com.hakibati.gestion.eleves.db.Niveau" domain="self.anneeScolaire = :anneScolaireActuele"/>
+
+                <field name="$_classe" title="Classe"  colSpan="3" type="reference"
+                       placeholder="Sélectionner une classe" widget="SuggestBox"
+                       onChange="action.refresh.eleve.exterieur.recherche"
+                       target="com.hakibati.gestion.eleves.db.Classe" domain="self.niveau = :_niveau"/>
+<!--              depart-->
+<!--                <spacer colSpan="1"/>-->
+<!--                <button name="btn-new-eleve" title="Nouvel élève" colSpan="2"-->
+<!--                        css="btn btn-warning label-bold bold large center"-->
+<!--                        onClick="action-gestion-eleves-exterieur-nouveau"/>-->
+<!--                <button name="btn-import" title="Import" colSpan="2" css="btn btn-warning label-bold bold large center"-->
+<!--                        onClick="action.import.eleves.exterieur.massar"/>-->
+<!--                <field name="sans_initial" title="sans" colSpan="2" css="inline-checkbox" widget="inline-checkbox"-->
+<!--                       onChange="action.refresh.eleve.exterieur.recherche"/>-->
+<!--                <field name="Depart" title="Départ" colSpan="2" css="inline-checkbox" widget="inline-checkbox"-->
+<!--                       onChange="action.refresh.eleve.exterieur.recherche"/>-->
+<!--                <field name="Receptionne" title="Rèceptionne" colSpan="2" css="inline-checkbox" widget="inline-checkbox"-->
+<!--                       onChange="action.refresh.eleve.exterieur.recherche"/>-->
+<!--                <field name="Reintegration" title="Réintégration" colSpan="2" css="inline-checkbox"-->
+<!--                       widget="inline-checkbox" onChange="action.refresh.eleve.exterieur.recherche"/>-->
+<!--                <field name="Reorientation" title="Réorientation" colSpan="2" css="inline-checkbox"-->
+<!--                       widget="inline-checkbox" onChange="action.refresh.eleve.exterieur.recherche"/>-->
+<!--                <field name="Repetition" title="Répétition" colSpan="2" css="inline-checkbox" widget="inline-checkbox"-->
+<!--                       onChange="action.refresh.eleve.exterieur.recherche"/>-->
+<!--                <field name="sans_actuel" title="sans" colSpan="2" css="inline-checkbox" widget="inline-checkbox"-->
+<!--                       onChange="action.refresh.eleve.exterieur.recherche"/>-->
+<!--                <label title="Affiche les eleve exerce selement"/>-->
+                <field name="Exerce" title="Afficher uniquement  les élèves exerce"  colSpan="6" css="inline-checkbox" widget="inline-checkbox"
+                       onChange="action.refresh.eleve.exterieur.recherche"/>
+<!--                <field name="Quitte" title="Quitte" colSpan="2" css="inline-checkbox" widget="inline-checkbox"-->
+<!--                       onChange="action.refresh.eleve.exterieur.recherche"/>-->
+<!--                <field name="Abandonne" title="Abandonné" colSpan="2" css="inline-checkbox" widget="inline-checkbox"-->
+<!--                       onChange="action.refresh.eleve.exterieur.recherche"/>-->
+<!--                <field name="Non_inscrit" title="Non inscrit" colSpan="2" css="inline-checkbox" widget="inline-checkbox"-->
+<!--                       onChange="action.refresh.eleve.exterieur.recherche"/>-->
+<!--                <field name="Exclus" title="Exclus" colSpan="2" css="inline-checkbox" widget="inline-checkbox"-->
+<!--                       onChange="action.refresh.eleve.exterieur.recherche"/>-->
+<!--             fin-->
+<!--                <field name="$_situationInitiale" showTitle="false" widget="CheckboxSelect"-->
+<!--                       selection="selection-situation-initiale" colSpan="12"/>-->
+<!--                <field name="$_situationActuelle" showTitle="false" widget="CheckboxSelect"-->
+<!--                       selection="selection-situation-actuelle" colSpan="12"/>-->
+
+            </panel>
+            <panel colSpan="2" sidebar="true">
+                <button name="btn-new-eleve" title="Nouvel élève" onClick="action-gestion-eleves-exterieur-nouveau"
+                        css="btn btn-warning label-bold bold large center" colSpan="12"/>
+                <button name="btn-import" title="Import" onClick="action.import.eleves.exterieur.massar"
+                        css="btn btn-warning label-bold bold large center" colSpan="12"/>
+            </panel>
+        </panel>
+        <panel-dashlet name="panel-dashlet-rech-eleve" showTitle="false" colSpan="12" height="350"
+                       action="dashlet.eleve.exterieur.recherche" canSearch="true"/>
+    </form>
+    <form name="eleve-notes-donnees-form" title="Données des élèves"
+          model="com.hakibati.gestion.eleves.db.Gestioneleves" helpLink="false"
+          canNew="false" canEdit="false" canSave="false" canDelete="false" canArchive="false" canCopy="false"
+          canAttach="false">
+        <panel showTitle="false" colSpan="12">
+            <panel showTitle="false" colSpan="10">
+
+                <field name="anneScolaireActuele" colSpan="3"  x-limit="1000" widget="SuggestBox" x-order="-idAnnee" onChange="save,action.eleve.exterieur.change.anneScolaireActuele ,action.refresh.eleve.exterieur.recherche " domain="self.gestioneleves.id = :id"/>
+                <field name="$_niveau" title="Niveau"  colSpan="6" type="reference"
+                       placeholder="Sélectionner un niveau" widget="SuggestBox"
+                       onChange="action.change.eleve.exterieur.niveau ,action.refresh.eleve.exterieur.recherche"
+                       target="com.hakibati.gestion.eleves.db.Niveau" domain="self.anneeScolaire = :anneScolaireActuele"/>
+
+                <field name="$_classe" title="Classe" colSpan="3" type="reference"
+                       placeholder="Sélectionner une classe" widget="SuggestBox"
+                       onChange="action.refresh.eleve.exterieur.recherche"
+                       target="com.hakibati.gestion.eleves.db.Classe" domain="self.niveau = :_niveau"/>
+                <field name="_session" title="Session"  colSpan="3"
+                       placeholder="Sélectionner une session"
+                       onChange="action.refresh.eleve.exterieur.recherche"
+                       selection="selection-list-session" />
+
+                <field name="_controlContinu" title="Cntrole"  colSpan="4"
+                       placeholder="Sélectionner une contrile continue"
+                       onChange="action.refresh.eleve.exterieur.recherche"
+                       selection="selection-list-ControlContinu" />
+                <field name="$_matiere" title="Matiere" colSpan="3" type="reference"
+                       placeholder="Sélectionner une matiere" widget="SuggestBox"
+                       onChange="action.refresh.eleve.exterieur.recherche"
+                       target="com.hakibati.gestion.eleves.db.MatiereEleve" domain="self.gestioneleves.id = :id"/>
+
+            </panel>
+            <panel colSpan="2" sidebar="true">
+                <button name="btn-import" title="Import" onClick="action.import.eleves.exterieur.massar"
+                        css="btn btn-warning label-bold bold large center" colSpan="12"/>
+            </panel>
+        </panel>
+        <panel-dashlet name="panel-dashlet-rech-eleve" showTitle="false" colSpan="12" height="350" action="dashlet.eleve.notes.recherche" canSearch="true"/>
+
+    </form>
+
+
+
+    <form name="eleve-exterieur-groupe-form" title="les élèves par groupe"
+          model="com.hakibati.gestion.eleves.db.Gestioneleves"
+          canArchive="false" canAttach="false" canCopy="false" canDelete="false" canEdit="false" canNew="false"
+          canSave="false" helpLink="false">
+        <panel colSpan="12" showTitle="false">
+            <field name="$_niveauGroupe" title="Niveau" type="reference" target="com.hakibati.gestion.eleves.db.Niveau"
+                   widget="SuggestBox" showTitle="false" colSpan="6"
+                   onChange="action.change.eleve.groupe.exterieur.niveau ,action.refresh.eleve.exterieur.groupe"
+                   placeholder="Sélectionner un niveau"/>
+
+            <field name="$_classeGroupe" title="Classe" type="reference" target="com.hakibati.gestion.eleves.db.Classe"
+                   widget="SuggestBox" showTitle="false" colSpan="2" onChange="action.refresh.eleve.exterieur.groupe"
+                   domain="self.niveau = :_niveauGroupe" placeholder="Sélectionner une classe"/>
+            <spacer colSpan="2"/>
+            <label title="L'ordre max de 1er Groupe"/>
+            <field name="_numbre1erG" required="true" showTitle="false" colSpan="2"/>
+            <button name="btn-generate-groupe" title="Génération Groupe"
+                    prompt="Voulez-vous vraiment mettre à jour les groupes ?" onClick="action-generate-groupe"
+                    css="btn btn-warning label-bold bold large center" colSpan="3" readonlyIf="_numbre1erG==null"/>
+        </panel>
+        <panel-dashlet name="panel-dashlet-groupe-eleve" action="dashlet.eleve.exterieur.groupe" height="350"
+                       canSearch="true" colSpan="12" showTitle="false"/>
+
+    </form>
+    <form name="eleve-archive-donnees-form" title="Données des élèves"
+          model="com.hakibati.gestion.eleves.db.Gestioneleves"
+          canArchive="false" canAttach="false" canCopy="false" canDelete="false" canEdit="false" canNew="false"
+          canSave="false" helpLink="false">
+        <panel colSpan="12" showTitle="false">
+            <label title="Gestion des  eleves archive" css="label-bold bold large center" colSpan="9"/>
+<!--            <button name="btn-export-archive" onClick="action.import.export.archive" title="Export/ Import" colSpan="3"-->
+<!--                    css="btn btn-warning label-bold bold large center"/>-->
+        </panel>
+        <panel-dashlet name="panel-dashlet-archive-eleve" action="action-dashlet-archive-eleve" height="350"
+                       canSearch="true" colSpan="12" showTitle="false"/>
+    </form>
+    <form name="eleve-internat-donnees-form" title="Données des élèves"
+          model="com.hakibati.gestion.eleves.db.Gestioneleves"
+          canArchive="false" canAttach="false" canCopy="false" canDelete="false" canEdit="false" canNew="false"
+          canSave="false" helpLink="false">
+        <panel colSpan="12" showTitle="false">
+            <label title="Gestion des fichiers eleves internat" css="label-bold bold large center" colSpan="7"/>
+            <button name="btn-new-eleve" title="Nouvel élève" onClick="action-gestion-eleves-internat-nouveau"
+                    css="btn btn-warning label-bold bold large center" colSpan="2"/>
+            <button name="btn-export-import-internat" css="btn btn-warning label-bold bold large center"
+                    onClick="action.import.export.internat" title="Export/ Import" colSpan="3"/>
+        </panel>
+        <panel-dashlet name="panel-dashlet-internat-eleve" action="action-dashlet-internat-eleve" height="350"
+                       canSearch="true" colSpan="12" showTitle="false"/>
+    </form>
+
+    <form name="eleve-internat-archive-form" title="Données des élèves"
+          model="com.hakibati.gestion.eleves.db.Gestioneleves"
+          canArchive="false" canAttach="false" canCopy="false" canDelete="false" canEdit="false" canNew="false"
+          canSave="false" helpLink="false">
+        <panel colSpan="12" showTitle="false">
+            <label title="Gestion des fichiers eleves internat ARCHIVE" css="label-bold bold large center" colSpan="9"/>
+        </panel>
+        <panel-dashlet name="action-dashlet-internat-archive-eleve" action="action-dashlet-internat-archive-eleve"
+                       height="350"
+                       canSearch="true" colSpan="12" showTitle="false"/>
+    </form>
+
+
+
+    <form name="gestioneleves-exterieur-import-form" title="Import les eleves"
+          model="com.hakibati.gestion.eleves.db.Gestioneleves">
+        <panel name="panel-import-direct" title="Importer des données directes dans massar">
+            <label name="messageAr"
+                   title="الطريقة المستخدمة للتواصل مع مسار هي وكيل اعتراض البيانات ، وهي طريقة آمنة ولا يمكن حفظ معلوماتك "
+                   css="label-bold bold large" colSpan="10"/>
+            <label name="messageFr"
+                   title="La méthode utilisée pour communiquer avec MASSAR est le proxy d'interception de données, c'est une méthode sécurisée et vos informations ne peuvent pas être sauvegardées"
+                   css="label-bold bold large" colSpan="10"/>
+            <button name="btn-import-donnes-massar" title="Contunue"
+                    onClick="action-show-import-export-all-data-massar" colSpan="2"/>
+        </panel>
+<!--        dep-->
+        <panel title="Information de Massar" name="panel-login-password" colSpan="12" hidden="true">
+            <field name="loginMassar" widget="email" title="Login de Massar" colSpan="6"
+                   css="label-bold bold large center"/>
+            <field name="passwordMassar" widget="password" title="Mote de passe" colSpan="4"
+                   css="label-bold bold large center"/>
+            <button name="btn-connection-massar" title="Connection" onClick="action-test-connection-massar"
+                    colSpan="2"/>
+        </panel>
+        <panel name="info-login" readonly="true"  hidden="true" title="Information de Login Massar" colSpan="12">
+            <field name="NomArabe" title="اسم المستخدم"/>
+            <field name="NomLatine" title="nom utilisateur"/>
+<!--            <field name="CodeProfile" title="Profile"/>-->
+            <field name="CodeEtablissement" title="Gresa" colSpan="12"/>
+            <field name="nOM_ETABA" title="اسم المؤسسة"/>
+            <field name="nOM_ETABL" title="Nom Etablissement"/>
+
+        </panel>
+        <panel name="panel-import" hidden="true" title="Importez les données suivantes" colSpan="12">
+            <field name="typeimport" showTitle="false" widget="CheckboxSelect"
+                   selection="selection-list-type-import-donnes-massar" colSpan="8"/>
+            <field name="anneScolair" title="Année scolaire" showTitle="true" colSpan="2" type="reference"
+                   placeholder="Sélectionner un Annee" widget="SuggestBox" x-limit="1000" x-order="-idAnnee"
+                   target="com.hakibati.gestion.eleves.db.AnneScolaire" required="true" domain="self.gestioneleves.id = :id"  />
+            <button name="btn-import-donnes-massar" colSpan="2" readonlyIf="typeimport==null || anneScolair==null" title="import"
+                    onClick="action-import-all-data-massar"/>
+        </panel>
+<!--        fn-->
+        <panel name="mainPanel" title="Importer la Liste des eleves (MASSAR) arabe ou français" colSpan="8">
+            <field name="$imporelevetFile" title="selectionner une Fichier" type="many-to-one" widget="binary-link"
+                   target="com.axelor.meta.db.MetaFile" colSpan="7"/>
+            <field name="typeListImport" showTitle="true" title="Type des listes" colSpan="3" widget="RadioSelect"
+                   selection="selection-type-list-massar-import" default="0"/>
+            <button name="importBlockBtn" title="Import" onClick="action-import-list-eleves-massar"
+                    readonlyIf="$imporelevetFile == null || typeListImport== null" colSpan="2"/>
+        </panel>
+        <!--        <panel colSpan="4" sidebar="true">-->
+        <!--            <label title="Lors de l'importation des listes des eleves  de massar, les eleves de l'année dernière qui n'étaient pas inclus dans les listes seront transférés dans les archives"/>-->
+        <!--        </panel>-->
+        <panel name="mainPanel2" title="Importer la liste tuteur (MASSAR) arabe">
+            <field name="$importuteurtFile" title="selectionner une Fichier" type="many-to-one" widget="binary-link"
+                   target="com.axelor.meta.db.MetaFile" colSpan="10"/>
+            <button name="importBlockBtn" title="Import" onClick="action-import-list-tuteur-massar"
+                    readonlyIf="$importuteurtFile == null" colSpan="2"/>
+        </panel>
+
+        <panel name="mainPanel3" title="Suprimmer toutes les données">
+            <field name="anneScolair" title="Année scolaire" showTitle="true" colSpan="2" type="reference"
+                   placeholder="Sélectionner un Annee" widget="SuggestBox" x-limit="1000" x-order="-idAnnee"
+                   target="com.hakibati.gestion.eleves.db.AnneScolaire" required="true" domain="self.gestioneleves.id = :id"  />
+           <spacer colSpan="8"/>
+            <button name="btn-delete-donnes" colSpan="2" readonlyIf="anneScolair==null" title="Suprimmer"
+                  prompt="Voulez-vous vraiment supprimer toutes les données de cette année scolaire ?"  onClick="com.gestion.eleves.web.GestionelevesController:deleteAllData"/>
+        </panel>
+
+    </form>
+    <form name="gestioneleves-internat-import-export-form" title="Import et Export les Liste (INTERNAT)"
+          model="com.hakibati.gestion.eleves.db.Gestioneleves">
+        <panel name="mainPanel" title="Export la Liste des eleves (INTERNAT)" colSpan="8">
+            <spacer colSpan="9"/>
+            <button name="exportExcelInternat" title="Export" onClick="action-export-eleve-internat" colSpan="3"/>
+        </panel>
+        <panel name="mainPanel2" title="Importer la liste des eleves (INTERNAT)">
+            <field name="$importListInternatFile" title="selectionner une Fichier" type="many-to-one"
+                   widget="binary-link"
+                   target="com.axelor.meta.db.MetaFile" colSpan="9"/>
+            <button name="importInternatBtn" title="Import" onClick="action-import-eleve-internat"
+                    readonlyIf="$importListInternatFile == null" colSpan="3"/>
+        </panel>
+    </form>
+    <form name="gestioneleves-archive-import-export-form" title="Import et Export les Liste (ARCHIVE)"
+          model="com.hakibati.gestion.eleves.db.Gestioneleves">
+        <panel name="mainPanel" title="Export la Liste des eleves (ARCHIVE)" colSpan="8">
+            <spacer colSpan="9"/>
+            <button name="exportExcelarchive" title="Export" onClick="action-export-list-eleves-archive" colSpan="3"/>
+        </panel>
+        <panel name="mainPanel2" title="Importer la liste des eleves (ARCHIVE)">
+            <field name="$importListInternatFile" title="selectionner une Fichier" type="many-to-one"
+                   widget="binary-link"
+                   target="com.axelor.meta.db.MetaFile" colSpan="9"/>
+            <button name="importarchiveBtn" title="Import" onClick="action-export-list-eleves-archive"
+                    readonlyIf="$importListarchiveFile == null" colSpan="3"/>
+        </panel>
+    </form>
+    <form name="eleve-print-form" title="les imprimés" model="com.hakibati.gestion.eleves.db.Gestioneleves">
+        <panel>
+            <field name="typeImprime" showTitle="false" colSpan="9" widget="RadioSelect"
+                   selection="imprime-type-select-gestion-eleves" default="PDF"/>
+            <field name="anneScolaireActuele" colSpan="3"  x-limit="1000" widget="SuggestBox" x-order="-idAnnee" onChange="save" domain="self.gestioneleves.id = :id"/>
+        </panel>
+
+        <panel title="Télécharger la liste des eleves" showTitle="true" colSpan="8">
+            <field name="listImprime" showTitle="false" colSpan="10" selection="selection-list-eleves" default="0"
+                   placeholder="Sélectionner la liste"/>
+            <button name="print-list-eleves-all" title="Telecharger" readonlyIf="listImprime==null" colSpan="2"
+                    onClick="action-print-all-list-eleves"/>
+        </panel>
+        <panel title="Télécharger les documents des eleves" showTitle="true" colSpan="8">
+            <field name="listfeuilleImprime" showTitle="false" colSpan="6" selection="selection-feuille-eleves"
+                   default="0" placeholder="Sélectionner la liste"/>
+            <field name="date_du" title="date_du" widget="date" colSpan="2" hideIf="listfeuilleImprime > 5"/>
+            <field name="date_au" title="date_au" widget="date" colSpan="2" hideIf="listfeuilleImprime > 5"/>
+            <button name="print-list-document-eleves-all" title="Telecharger" readonlyIf="listfeuilleImprime==null"
+                    colSpan="2" onClick="action-print-all-document-eleves"/>
+        </panel>
+        <panel title="Télécharger les statistiques" showTitle="true" colSpan="8">
+            <field name="liststatistiques" showTitle="false" colSpan="6" selection="selection-list-statistiques"
+                   default="0" placeholder="Sélectionner la liste"/>
+            <field name="session" showTitle="false" colSpan="2"
+                   selection="selection-list-session"
+                   default="0" placeholder="Sélectionner une session"/>
+            <field name="evaluation" showTitle="false" colSpan="2"
+                   selection="selection-list-ControlContinu"
+                   default="0" placeholder="Sélectionner une evaluation"/>
+            <button name="print-list-statistiques-eleves-all" title="Telecharger" readonlyIf="liststatistiques==null"
+                    colSpan="2" onClick="action-print-all-statistiques-eleves"/>
+        </panel>
+    </form>
+
+    <form name="gestioneleves-exterieur-parametres-form" title="Import les eleves"
+          model="com.hakibati.gestion.eleves.db.Gestioneleves" canArchive="false" canAttach="false" canCopy="false"
+          canDelete="false" canEdit="false" canNew="false"
+          canSave="true" helpLink="false">
+        <panel-tabs>
+            <panel title="Niveau" colSpan="12">
+                <panel-related field="niveau" height="8" colSpan="12"/>
+            </panel>
+            <panel title="Classes" colSpan="12">
+                <panel-related field="classes" height="8" colSpan="12"/>
+            </panel>
+            <panel title="Années Scolaire" colSpan="12">
+                <panel-related field="anneScolaire" height="8" colSpan="12"/>
+            </panel>
+            <panel title="Matieres" colSpan="12">
+                <panel-related field="matiere" height="8" colSpan="12"/>
+            </panel>
+            <panel title="Enseignants" colSpan="12">
+                <panel-related field="enseignants" height="8" colSpan="12"/>
+            </panel>
+           </panel-tabs>
+    </form>
+    <form name="eleve-internat-print-form" title="les imprimés" model="com.hakibati.gestion.eleves.db.Gestioneleves" canNew="false" canArchive="false" canAttach="false" canCopy="false" canDelete="false" >
+        <panel>
+            <field name="typeImprime" showTitle="false" colSpan="4" widget="RadioSelect"
+                   selection="imprime-type-select-gestion-eleves" default="PDF"/>
+        </panel>
+
+        <panel title="Télécharger la liste des eleves" showTitle="true" colSpan="8">
+            <field name="listImprime" showTitle="false" colSpan="10" selection="selection-list-eleves-internat"
+                   default="0"
+                   placeholder="Sélectionner la liste"/>
+            <button name="print-list-eleves-all" title="Telecharger" readonlyIf="listImprime==null" colSpan="2"
+                    onClick="action-print-all-list-eleves-internat"/>
+        </panel>
+        <panel title="Télécharger les documents des eleves" showTitle="true" colSpan="8">
+            <field name="listfeuilleImprime" showTitle="false" colSpan="6" selection="selection-feuille-eleves-internat"
+                   default="0" placeholder="Sélectionner la liste"/>
+            <field name="date_du" title="date_du" widget="date" colSpan="2" hideIf="listfeuilleImprime > 5"/>
+            <field name="date_au" title="date_au" widget="date" colSpan="2" hideIf="listfeuilleImprime > 5"/>
+            <button name="print-list-document-eleves-all" title="Telecharger" readonlyIf="listfeuilleImprime==null"
+                    colSpan="2" onClick="action-print-all-document-eleves-internat"/>
+        </panel>
+<!--        <panel title="Télécharger les statistiques" showTitle="true" colSpan="8">-->
+<!--            <field name="liststatistiques" showTitle="false" colSpan="6"-->
+<!--                   selection="selection-list-statistiques-internat"-->
+<!--                   default="0" placeholder="Sélectionner la liste"/>-->
+<!--            <button name="print-list-statistiques-eleves-all" title="Telecharger" readonlyIf="liststatistiques==null"-->
+<!--                    colSpan="2" onClick="action-print-all-statistiques-eleves-internat"/>-->
+<!--        </panel>-->
+    </form>
+
+
+    <action-view name="action-gestion-eleves-exterieur-nouveau" title="Nouvel élève"
+                 model="com.hakibati.gestion.eleves.db.Eleve">
+        <view type="form" name="Eleve-form"/>
+        <view-param name="popup" value="reload"/>
+        <view-param name="popup-save" value="true"/>
+        <!--        <view-param name="popup.maximized" value="true"/>-->
+        <view-param name="show-toolbar" value="false"/>
+        <view-param name="show-confirm" value="true"/>
+    </action-view>
+<!--    <action-view name="action-gestion-eleves-exterieur-nouveau-archive" title="Nouvel élève"-->
+<!--                 model="com.hakibati.gestion.eleves.db.Eleve">-->
+<!--        <view type="form" name="Eleve-archive-form"/>-->
+<!--        <view-param name="popup" value="reload"/>-->
+<!--        <view-param name="popup-save" value="true"/>-->
+<!--        &lt;!&ndash;        <view-param name="popup.maximized" value="true"/>&ndash;&gt;-->
+<!--        <view-param name="show-toolbar" value="false"/>-->
+<!--        <view-param name="show-confirm" value="true"/>-->
+
+<!--    </action-view>-->
+
+
+    <action-view name="action.import.eleves.exterieur.massar" title="Import"
+                 model="com.hakibati.gestion.eleves.db.Gestioneleves">
+        <view type="form" name="gestioneleves-exterieur-import-form"/>
+        <view-param name="popup" value="reload"/>
+        <view-param name="popup-save" value="false"/>
+        <view-param name="popup.maximized" value="false"/>
+        <view-param name="show-toolbar" value="false"/>
+        <view-param name="show-confirm" value="false"/>
+        <view-param name="forceEdit" value="true"/>
+        <context name="_showRecord" expr="eval:id"/>
+    </action-view>
+
+    <action-view name="action.import.export.internat" title="Import"
+                 model="com.hakibati.gestion.eleves.db.Gestioneleves">
+        <view type="form" name="gestioneleves-internat-import-export-form"/>
+        <view-param name="popup" value="reload"/>
+        <view-param name="popup-save" value="false"/>
+        <view-param name="popup.maximized" value="false"/>
+        <view-param name="show-toolbar" value="false"/>
+        <view-param name="show-confirm" value="false"/>
+        <view-param name="forceEdit" value="true"/>
+        <context name="_showRecord" expr="eval:id"/>
+    </action-view>
+    <action-view name="action.import.export.archive" title="Import"
+                 model="com.hakibati.gestion.eleves.db.Gestioneleves">
+        <view type="form" name="gestioneleves-archive-import-export-form"/>
+        <view-param name="popup" value="reload"/>
+        <view-param name="popup-save" value="false"/>
+        <view-param name="popup.maximized" value="false"/>
+        <view-param name="show-toolbar" value="false"/>
+        <view-param name="show-confirm" value="false"/>
+        <view-param name="forceEdit" value="true"/>
+        <context name="_showRecord" expr="eval:id"/>
+    </action-view>
+    <form name="eleve-internat-suivi-form" title="Absence collective"
+          model="com.hakibati.gestion.eleves.db.Gestioneleves"
+          canArchive="false" canAttach="false" canCopy="false" canDelete="false" canEdit="false" canNew="false"
+          canSave="false" helpLink="false">
+        <panel colSpan="12" showTitle="false">
+            <field name="_date_absence" title="Date D'absence" widget="date" colSpan="3"
+                   onChange="action-change-date-absence-internat,action.refresh.eleve.exterieur.recherche"/>
+            <spacer colSpan="9"/>
+        </panel>
+        <panel-dashlet name="panel-dashlet-internat-absence-eleve" action="action-dashlet-internat-absence-eleve"
+                       height="350"
+                       canSearch="true" colSpan="12" showTitle="false"/>
+    </form>
+
+
+    <action-view name="action-gestion-eleves-internat-nouveau" title="Nouvel élève"
+                 model="com.hakibati.gestion.eleves.db.EleveInternat">
+        <view type="form" name="EleveInternat-form"/>
+        <view-param name="forceTitle" value="true"/>
+        <view-param name="popup" value="reload"/>
+        <view-param name="popup-save" value="true"/>
+        <!--        <view-param name="popup.maximized" value="true"/>-->
+        <view-param name="show-toolbar" value="false"/>
+        <view-param name="show-confirm" value="true"/>
+    </action-view>
+
+
+    <action-method name="action-import-list-eleves-massar">
+        <call class="com.gestion.eleves.web.GestionelevesController" method="ImportEleveMassar"/>
+    </action-method>
+    <action-method name="action-import-list-tuteur-massar">
+        <call class="com.gestion.eleves.web.GestionelevesController" method="ImportTuteurMassar"/>
+    </action-method>
+
+<!--    <action-method name="dashlet.eleve.exterieur.recherche0">-->
+<!--        <call class="com.gestion.eleves.web.GestionelevesController" method="DashletEleveExterieurRecherche"/>-->
+<!--    </action-method>-->
+
+    <action-view name="dashlet.eleve.exterieur.recherche" title=""
+                 model="com.hakibati.gestion.eleves.db.Eleve">
+        <view type="grid" name="Eleve-grid"/>
+        <view type="form" name="Eleve-form"/>
+        <view-param name="popup" value="reload"/>
+        <view-param name="popup-save" value="true"/>
+        <view-param name="show-toolbar" value="false"/>
+        <view-param name="show-confirm" value="true"/>
+        <view-param name="forceEdit" value="true"/>
+        <view-param name="details-view" value="false"/>
+        <domain>(self.gestioneleves.id =:_gestionelevesId )
+            AND (self.classe = :_classeSelc OR :_classeSelc = null)
+            AND (self.classe.niveau = :_niveauSelc OR :_niveauSelc = null)
+            AND (self.anneeScolaire = :_anneeScolaire)
+            AND (self.situationActuelle = :_Exerce OR :_Exerce = null)
+        </domain>
+        <context name="_classeSelc" expr="eval: _classe"/>
+        <context name="_niveauSelc" expr="eval: _niveau"/>
+        <context name="_gestionelevesId" expr="eval:id"/>
+        <context name="_anneeScolaire" expr="eval:anneScolaireActuele"/>
+        <context if="eval:Exerce == true" name="_Exerce" expr="0"/>
+        <context if="eval:Exerce == false" name="_Exerce" expr="eval:null"/>
+    </action-view>
+
+    <action-view name="dashlet.eleve.notes.recherche" title=""
+                 model="com.hakibati.gestion.eleves.db.NotesEleve">
+        <view type="grid" name="NotesEleve-grid"/>
+        <view type="form" name="NotesEleve-form"/>
+        <view-param name="popup" value="reload"/>
+        <view-param name="popup-save" value="true"/>
+        <view-param name="show-toolbar" value="false"/>
+        <view-param name="show-confirm" value="true"/>
+        <view-param name="forceEdit" value="true"/>
+        <view-param name="details-view" value="false"/>
+        <domain>(self.gestioneleves.id =:_gestionelevesId )
+            AND (self.eleve.classe = :_classeSelc OR :_classeSelc = null)
+            AND (self.eleve.classe.niveau = :_niveauSelc OR :_niveauSelc = null)
+            AND (self.eleve.anneeScolaire = :_anneeScolaire)
+            AND (self.idControlContinu = :_controlContinuSelec OR :_controlContinuSelec = null)
+            AND (self.idSession = :_sessionSelec OR :_sessionSelec = null)
+            AND (self.matiere = :_matiereSelc OR :_matiereSelc = null)
+        </domain>
+        <context name="_classeSelc" expr="eval: _classe"/>
+        <context name="_niveauSelc" expr="eval: _niveau"/>
+        <context name="_gestionelevesId" expr="eval:id"/>
+        <context name="_anneeScolaire" expr="eval:anneScolaireActuele"/>
+        <context name="_controlContinuSelec" expr="eval:_controlContinu"/>
+        <context name="_sessionSelec" expr="eval:_session"/>
+        <context name="_matiereSelc" expr="eval: _matiere"/>
+    </action-view>
+
+    <action-view name="dashlet.eleve.exterieur.groupe" title=""
+                 model="com.hakibati.gestion.eleves.db.Eleve">
+        <view type="grid" name="Eleve-groupe-grid"/>
+        <view type="form" name="Eleve-groupe-form"/>
+        <view-param name="popup" value="reload"/>
+        <view-param name="popup-save" value="true"/>
+        <view-param name="popup.maximized" value="false"/>
+        <view-param name="show-toolbar" value="false"/>
+        <view-param name="show-confirm" value="true"/>
+        <view-param name="forceEdit" value="true"/>
+        <view-param name="details-view" value="false"/>
+        <domain>(self.gestioneleves.id =:_gestionelevesId )
+            AND (self.classe = :_classeGroupe OR :_classeGroupe = null)
+            AND (self.classe.niveau = :_niveauGroupe OR :_niveauGroupe = null)
+            AND(self.situationActuelle=0)
+        </domain>
+        <context name="_gestionelevesId" expr="eval:id"/>
+    </action-view>
+    <action-attrs name="action.refresh.eleve.exterieur.recherche">
+        <attribute for="panel-dashlet-rech-eleve" name="refresh" expr="true"/>
+        <attribute for="panel-dashlet-internat-absence-eleve" name="refresh" expr="true"/>
+    </action-attrs>
+
+    <action-attrs name="action-show-import-export-all-data-massar">
+        <attribute for="panel-import-direct" name="hidden" expr="true"/>
+        <attribute for="panel-login-password" name="hidden" expr="false"/>
+        <attribute for="mainPanel" name="hidden" expr="true"/>
+        <attribute for="mainPanel2" name="hidden" expr="true"/>
+        <attribute for="mainPanel3" name="hidden" expr="true"/>
+    </action-attrs>
+
+
+    <action-attrs name="action.eleve.exterieur.change.anneScolaireActuele">
+        <attribute for="_classe" name="refresh" expr="true"/>
+        <attribute for="$_classe" name="value" expr="eval:null"/>
+        <attribute for="_niveau" name="refresh" expr="true"/>
+        <attribute for="$_niveau" name="value" expr="eval:null"/>
+    </action-attrs>
+    <action-attrs name="action.change.eleve.exterieur.niveau">
+        <attribute for="_classe" name="refresh" expr="true"/>
+        <attribute for="$_classe" name="value" expr="eval:null"/>
+    </action-attrs>
+    <action-attrs name="action.change.eleve.groupe.exterieur.niveau">
+        <attribute for="_classeGroupe" name="refresh" expr="true"/>
+        <attribute for="$_classeGroupe" name="value" expr="eval:null"/>
+    </action-attrs>
+
+    <action-attrs name="action.refresh.eleve.exterieur.groupe">
+        <attribute for="panel-dashlet-groupe-eleve" name="refresh" expr="true"/>
+    </action-attrs>
+    <action-view name="action-dashlet-archive-eleve" title=""
+                 model="com.hakibati.gestion.eleves.db.Eleve">
+        <view type="grid" name="Eleve-archive-grid"/>
+        <view type="form" name="Eleve-form"/>
+        <view-param name="showArchived" value="true"/>
+        <view-param name="popup" value="reload"/>
+        <view-param name="popup-save" value="true"/>
+        <!--        <view-param name="popup.maximized" value="true"/>-->
+        <view-param name="show-toolbar" value="false"/>
+        <view-param name="show-confirm" value="true"/>
+        <view-param name="forceEdit" value="true"/>
+        <domain>self.archived = 'true' AND (self.gestioneleves.id =:_gestionelevesId )</domain>
+        <context name="_gestionelevesId" expr="eval:id"/>
+    </action-view>
+    <action-view name="action-dashlet-internat-eleve" title=""
+                 model="com.hakibati.gestion.eleves.db.EleveInternat">
+        <view type="grid" name="EleveInternat-grid"/>
+        <view type="form" name="EleveInternat-form"/>
+        <view-param name="popup" value="reload"/>
+        <view-param name="popup-save" value="true"/>
+        <!--        <view-param name="popup.maximized" value="true"/>-->
+        <view-param name="show-toolbar" value="false"/>
+        <view-param name="show-confirm" value="true"/>
+        <view-param name="forceEdit" value="true"/>
+        <domain>(self.gestioneleves.id =:_gestionelevesId )</domain>
+        <context name="_gestionelevesId" expr="eval:id"/>
+    </action-view>
+    <action-view name="action-dashlet-internat-archive-eleve" title=""
+                 model="com.hakibati.gestion.eleves.db.EleveInternat">
+        <view type="grid" name="EleveInternat-archive-grid"/>
+        <view type="form" name="EleveInternat-form"/>
+        <view-param name="showArchived" value="true"/>
+        <view-param name="popup" value="reload"/>
+        <view-param name="popup-save" value="true"/>
+        <view-param name="popup.maximized" value="true"/>
+        <view-param name="show-toolbar" value="true"/>
+        <view-param name="show-confirm" value="true"/>
+        <view-param name="forceEdit" value="true"/>
+        <domain>(self.gestioneleves.id =:_gestionelevesId AND self.archived = 'true')</domain>
+        <context name="_gestionelevesId" expr="eval:id"/>
+    </action-view>
+    <action-view name="action-dashlet-internat-absence-eleve" title=""
+                 model="com.hakibati.gestion.eleves.db.AbsenceeleveInternat">
+        <view type="grid" name="AbsenceeleveInternat-Collectif-grid"/>
+        <view type="form" name="AbsenceeleveInternat-Collectif-form"/>
+        <view-param name="popup" value="reload"/>
+        <view-param name="popup-save" value="true"/>
+        <view-param name="popup.maximized" value="true"/>
+        <view-param name="show-toolbar" value="false"/>
+        <view-param name="show-confirm" value="true"/>
+        <view-param name="forceEdit" value="true"/>
+        <domain>(self.eleveInternat.gestioneleves.id =:_gestionelevesId AND self.dateabsence=:_dateAbsence )</domain>
+        <context name="_gestionelevesId" expr="eval:id"/>
+        <context name="_dateAbsence" expr="eval:_date_absence"/>
+
+    </action-view>
+
+
+    <action-method name="action-print-all-list-eleves">
+        <call class="com.gestion.eleves.web.EleveController" method="printAllList"/>
+    </action-method>
+    <action-method name="action-print-all-list-eleves-internat">
+        <call class="com.gestion.eleves.web.EleveInternatController" method="printAllList"/>
+    </action-method>
+
+    <action-method name="action-print-all-document-eleves">
+        <call class="com.gestion.eleves.web.EleveController" method="printAllDocument"/>
+    </action-method>
+    <action-method name="action-print-all-document-eleves-internat">
+        <call class="com.gestion.eleves.web.EleveInternatController" method="printAllDocument"/>
+    </action-method>
+
+    <action-method name="action-print-all-statistiques-eleves">
+        <call class="com.gestion.eleves.web.EleveController" method="printAllStatistiques"/>
+    </action-method>
+    <action-method name="action-print-all-statistiques-eleves-internat">
+        <call class="com.gestion.eleves.web.EleveInternatController" method="printAllStatistiques"/>
+    </action-method>
+    <action-method name="action-generate-groupe">
+        <call class="com.gestion.eleves.web.GestionelevesController" method="generateGroupe"/>
+    </action-method>
+
+    <action-method name="action-export-eleve-internat">
+        <call class="com.gestion.eleves.web.EleveInternatController" method="exportListInternatExcel"/>
+    </action-method>
+
+    <action-method name="action-import-eleve-internat">
+        <call class="com.gestion.eleves.web.EleveInternatController" method="importListInternatExcel"/>
+    </action-method>
+<!--    <action-attrs name="action-attr-default-choix">-->
+<!--        <attribute name="value" expr="eval:true"-->
+<!--                   for="sans_initial,Depart,Receptionne,Reintegration,Reorientation,Repetition"/>-->
+<!--        <attribute name="value" expr="eval:true" for="sans_actuel,Exerce,Quitte,Abandonne,Non_inscrit,Exclus"/>-->
+<!--    </action-attrs>-->
+    <!--    <action-view name="action-dashlet-archive-eleve" title=""-->
+    <!--                 model="com.hakibati.gestion.eleves.db.Eleve">-->
+    <!--        <view type="grid" name="Eleve-grid"/>-->
+    <!--        <view type="form" name="Eleve-form"/>-->
+    <!--        <view-param name="showArchived" value="true"/>-->
+    <!--        <domain>self.archived = 'true'</domain>-->
+    <!--    </action-view>-->
+    <action-method name="action-change-date-absence-internat">
+        <call class="com.gestion.eleves.web.EleveInternatController" method="MiseAjouteDateAbsence"/>
+    </action-method>
+
+    <selection name="selection-type-list-massar-import">
+        <option value="0">départ</option>
+        <option value="1">Mise a jour</option>
+    </selection>
+    <selection name="imprime-type-select-gestion-eleves">
+        <option value="pdf">PDF</option>
+        <option value="xlsx">EXCEL</option>
+        <option value="docx">WORD</option>
+    </selection>
+
+    <selection name="selection-list-eleves">
+        <option value="0">Listes initiales</option>
+        <option value="1">Listes des élèves actuels</option>
+        <option value="2">Listes des élèves actuels (groupe)</option>
+        <option value="3">Listes des élèves Transferès</option>
+        <option value="4">listes des élèves abandon</option>
+        <option value="5">listes des élèves Réceptionnés</option>
+        <option value="6">listes des élèves Réintégration</option>
+        <option value="7">listes des élèves Non inscrit</option>
+    </selection>
+    <selection name="selection-feuille-eleves">
+        <option value="0">feuille d'absence hebdomadaire (paysage)</option>
+        <option value="1">feuille d'absence hebdomadaire (portrait)</option>
+        <option value="2">Feuille d'absences demi-hebdomadaire 1/2</option>
+        <option value="3">Feuille d'absences demi-hebdomadaire 2/2</option>
+        <option value="4">feuille d'absence hebdomadaire par groupe (paysage)</option>
+        <option value="5">feuille des notes(2 evaluations)</option>
+        <option value="6">feuille des notes(3 evaluations)</option>
+        <option value="7">feuille des notes(4 evaluations)</option>
+
+    </selection>
+    <selection name="selection-list-statistiques">
+        <option value="0">affectation des classes</option>
+        <option value="1">affectation des enseignants</option>
+        <option value="2">mouvement élèves</option>
+        <option value="3">Statistiques par classe et sexe</option>
+        <option value="4">Statistiques par âge et sexe</option>
+        <option value="10">Investir les résultats : evaluations</option>
+    </selection>
+
+    <selection name="selection-list-eleves-internat">
+        <option value="0">Listes initiales des élèves Internat</option>
+        <!--        <option value="1">Listes actuels des élèves Internat</option>-->
+        <!--        <option value="2">Listes actuels (groupe)des élèves Internat</option>-->
+        <!--        <option value="3">Listes des élèves Internat Transferès</option>-->
+        <!--        <option value="4">listes des élèves Internat abandon</option>-->
+        <!--        <option value="5">listes des élèves Internat Réceptionnés</option>-->
+        <!--        <option value="6">listes des élèves Internat Réintégration</option>-->
+        <!--        <option value="7">listes des élèves Internat Non inscrit</option>-->
+    </selection>
+    <selection name="selection-feuille-eleves-internat">
+        <option value="0">feuille d'absence hebdomadaire (paysage)</option>
+        <!--        <option value="1">feuille d'absence hebdomadaire (portrait)</option>-->
+        <!--        <option value="2">Feuille d'absences demi-hebdomadaire 1/2</option>-->
+        <!--        <option value="3">Feuille d'absences demi-hebdomadaire 2/2</option>-->
+        <!--        <option value="4">feuille d'absence hebdomadaire par groupe (paysage)</option>-->
+        <!--        <option value="5">feuille des notes(2 evaluations)</option>-->
+        <!--        <option value="6">feuille des notes(3 evaluations)</option>-->
+        <!--        <option value="7">feuille des notes(4 evaluations)</option>-->
+
+    </selection>
+    <selection name="selection-list-statistiques-internat">
+
+        <option value="2">mouvement élèves</option>
+        <option value="3">Statistiques par classe et sexe</option>
+        <option value="4">Statistiques par âge et sexe</option>
+
+    </selection>
+
+
+
+
+</object-views>

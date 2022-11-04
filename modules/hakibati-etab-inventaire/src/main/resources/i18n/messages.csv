@@ -1,0 +1,64 @@
+"key","message","comment","context"
+"Ajouter ou modifier",,,"resources\views\Inventaire.xml:18
+resources\views\Inventaire.xml:19
+resources\views\MaterielListe.xml:14
+resources\views\MaterielType.xml:14
+resources\views\SuiviMateriel.xml:15"
+"Au",,,"resources\domains\SuiviMateriel.xml:11"
+"Code",,,"resources\domains\MaterielListe.xml:9
+resources\domains\MaterielType.xml:9"
+"Commentaire",,,"resources\domains\Inventaire.xml:26
+resources\views\Inventaire.xml:50"
+"Created by",,,"resources\domains\Inventaire.xml:37
+resources\domains\MaterielListe.xml:18
+resources\domains\MaterielType.xml:18
+resources\domains\SuiviMateriel.xml:20"
+"Date radiation",,,"resources\domains\Inventaire.xml:22"
+"Date recéption",,,"resources\domains\Inventaire.xml:11"
+"Du",,,"resources\domains\SuiviMateriel.xml:10"
+"Désignation",,,"resources\domains\Inventaire.xml:10"
+"Etablissement",,,"resources\domains\Inventaire.xml:30
+resources\domains\MaterielListe.xml:11
+resources\domains\MaterielType.xml:11
+resources\domains\SuiviMateriel.xml:13"
+"Fournisseur",,,"resources\domains\Inventaire.xml:15"
+"Inventaire",,,"resources\domains\SuiviMateriel.xml:12
+resources\views\Inventaire.xml:14
+resources\views\Inventaire.xml:6
+resources\views\Menu.xml:6"
+"Inventaire de type",,,"resources\domains\Inventaire.xml:13"
+"Inventaire principale",,,"resources\domains\Inventaire.xml:12"
+"LES PARAMETRES",,,"resources\views\Menu.xml:14"
+"Liste materiel",,,"resources\views\MaterielListe.xml:13
+resources\views\MaterielListe.xml:7
+resources\views\Menu.xml:20"
+"Local",,,"resources\domains\SuiviMateriel.xml:8"
+"Locale",,,"resources\domains\Inventaire.xml:18"
+"Marque / Modèle",,,"resources\domains\Inventaire.xml:14"
+"MaterielListe",,,"resources\views\Menu.xml:21"
+"Matériel informatique",,,"resources\views\Menu.xml:16"
+"Max size 4MB.",,,"resources\domains\Inventaire.xml:8"
+"Motif radiation",,,"resources\domains\Inventaire.xml:23"
+"Name",,,"resources\domains\MaterielListe.xml:10
+resources\domains\MaterielType.xml:10"
+"N° serie",,,"resources\domains\Inventaire.xml:16"
+"PV de designation",,,"resources\views\Inventaire.xml:35"
+"PV de radiation",,,"resources\views\Inventaire.xml:46"
+"PV de réception",,,"resources\views\Inventaire.xml:36"
+"Photo",,,"resources\domains\Inventaire.xml:8"
+"Prix unitaire",,,"resources\domains\Inventaire.xml:17"
+"Radiation",,,"resources\views\Inventaire.xml:43"
+"Responsable",,,"resources\domains\SuiviMateriel.xml:9"
+"Saisie et suivi",,,"resources\views\Menu.xml:8
+resources\views\Menu.xml:9"
+"Suivi",,,"resources\domains\Inventaire.xml:28
+resources\views\Inventaire.xml:38"
+"Suivi du Materiel",,,"resources\views\SuiviMateriel.xml:14
+resources\views\SuiviMateriel.xml:7"
+"Type",,,"resources\domains\Inventaire.xml:9"
+"Type de materiau",,,"resources\views\Menu.xml:15"
+"Type materiel",,,"resources\views\MaterielType.xml:13
+resources\views\MaterielType.xml:7"
+"pvDesignation",,,"resources\domains\Inventaire.xml:20"
+"pvRadiation",,,"resources\domains\Inventaire.xml:24"
+"pvReception",,,"resources\domains\Inventaire.xml:21"

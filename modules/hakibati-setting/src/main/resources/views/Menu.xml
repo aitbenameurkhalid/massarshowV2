@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+  <menuitem name="menu-classification" title="TABLES CLASSIFICATION" icon="fa-key" />
+  <menuitem name="menu-gestion-utilisateurs" title="Information Etablissement" icon="fa-key"  icon-background="red" order="50"/>
+  <menuitem name="menu-info-etab" parent="menu-gestion-utilisateurs"  title="Information Etablissement" action="action-info-etab"/>
+  <action-method name="action-info-etab">
+    <call class="com.setting.web.EtablissementController" method="OpenInfoEtab"/>
+  </action-method>
+  <menuitem name="menu-utilisateurs" parent="menu-gestion-utilisateurs"  title="les utilisateurs" action="action-utilisateurs"/>
+<action-method name="action-utilisateurs">
+  <call class="com.setting.web.EtablissementController" method="OpenUtilisateur"/>
+</action-method>
+
+  <menuitem name="menu-etablissemnt" parent="menu-classification"  title="Les etablissements" action="action-etablissement"/>
+  <action-view name="action-etablissement" title="Les etablissements" model="com.app.application.db.Etablissement">
+    <view type="grid"  />
+    <view type="form" name="InfoEtablissemnt-admins-form"  />
+  </action-view>
+
+  <menuitem name="menu-cycle-table" parent="menu-classification"  title="Les Cycles" action="action-cycle-table"/>
+  <action-view name="action-cycle-table" title="Les Cycles" model="com.hakibati.setting.db.Cycle">
+    <view type="grid" name="Cycle-grid" />
+    <view type="form" name="Cycle-form" />
+  </action-view>
+
+  <menuitem name="menu-Allpersonnel-table" parent="menu-classification"  title="Allpersonnel" action="action-Allpersonnel-table"/>
+  <action-view name="action-Allpersonnel-table" title="Allpersonnel" model="com.hakibati.setting.db.Allpersonnel">
+    <view type="grid" name="Allpersonnel-grid" />
+    <view type="form" name="Allpersonnel-form" />
+  </action-view>
+
+  <menuitem name="menu-AllEtabMassar-table" parent="menu-classification"  title="AllEtabMassar" action="action-AllEtabMassar-table"/>
+  <action-view name="action-AllEtabMassar-table" title="AllEtabMassar" model="com.hakibati.setting.db.AllEtabMassar">
+    <view type="grid" name="AllEtabMassar-grid" />
+    <view type="form" name="AllEtabMassar-form" />
+  </action-view>
+
+  <menuitem name="menu-FonctionExaman-table" parent="menu-classification"  title="Les Fonction Examan" action="action-FonctionExaman-table"/>
+  <action-view name="action-FonctionExaman-table" title="Les Fonctions en Examan" model="com.hakibati.setting.db.FonctionExaman">
+    <view type="grid" name="FonctionExaman-grid" />
+    <view type="form" name="FonctionExaman-form" />
+  </action-view>
+
+  <menuitem name="menu-sexe-table" parent="menu-classification"  title="Les Types de Sexe" action="action-sexe-table"/>
+  <action-view name="action-sexe-table" title="Les Types de Sexe" model="com.hakibati.setting.db.Sexe">
+    <view type="grid" name="Sexe-grid" />
+    <view type="form" name="Sexe-form" />
+  </action-view>
+  <menuitem name="menu-contraint-table" parent="menu-classification"  title="Les  Contrainte" action="action-list-contranit-table"/>
+  <action-view name="action-list-contranit-table" title="Les Types de Contraint" model="com.hakibati.setting.db.Listcontraint">
+    <view type="grid" name="ListConraint-grid" />
+    <view type="form" name="ListConraint-form" />
+  </action-view>
+
+  <menuitem name="menu-Role-Describe" parent="menu-classification"  title="Les Roles Describe" action="action-list-role-Describe"/>
+  <action-view name="action-list-role-Describe" title="Les Roles Describe" model="com.hakibati.setting.db.RoleDescribe">
+    <view type="grid" name="RoleDescribe-grid" />
+    <view type="form" name="RoleDescribe-form" />
+  </action-view>
+
+  <menuitem name="menu-client" parent="menu-classification"  title="Test register" action="action-client"/>
+  <action-view name="action-client" title="register" model="com.axelor.auth.db.User">
+    <view type="form" name="register-form" />
+  </action-view>
+
+  <action-view name="action-client-home" title="register" model="com.axelor.auth.db.User" home="true">
+    <view type="form" name="register-form"/>
+  </action-view>
+
+  <action-view name="action-Etablissement-Zero-home" title="Préférences" model="com.axelor.auth.db.User" home="true">
+    <view type="form" name="user-preferences-zero-etablissement-form"/>
+    <view-param name="forceEdit" value="true"/>
+    <domain>self.id =:__user__.id" </domain>
+    <context name="_showRecord" expr="eval:__user__.id" />
+  </action-view>
+
+
+  <menuitem name="menu-remarques-observations" title="ٌRemarques et Observations" icon="fa-book"  icon-background="green" order="60"/>
+  <menuitem name="menu-remarques-observations-nouveau" title="Nouvelle Observation" icon="fa-plus"
+            icon-background="green" parent="menu-remarques-observations"
+            action="action-remarques-observations-nouveau"/>
+  <action-view name="action-remarques-observations-nouveau" title="Les opérations"
+               model="com.hakibati.setting.db.RegistreObservation">
+    <view type="form" name="RegistreObservation-form"/>
+  </action-view>
+  <menuitem name="menu-remarques-observations-list" title="Les observations" icon="fa-list-ul"
+            icon-background="green" parent="menu-remarques-observations"
+            action="action-remarques-observations-list"/>
+  <action-view name="action-remarques-observations-list" title="Les Observations"
+               model="com.hakibati.setting.db.RegistreObservation">
+    <view type="grid" name="RegistreObservation-grid"/>
+    <view type="form" name="RegistreObservation-form"/>
+  </action-view>
+
+</object-views>

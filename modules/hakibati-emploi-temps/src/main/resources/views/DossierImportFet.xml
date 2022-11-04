@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+
+    <grid name="DossierImportFet-grid" title="Liste des dossiers" model="com.hakibati.emploi.db.DossierImportFet"
+          orderBy="-createdOn">
+        <button name="btn-apercu" onClick="action-apercu-table" title="Aperçu"  icon="fa-search"/>
+        <button name="btn-dowload" onClick="action-dowload-table" title="Telecharge"  icon="fa-print"/>
+        <field name="name"/>
+        <field name="createdOn"/>
+        <field name="fileName"/>
+        <field name="progressTime" aggregate="avg" widget="Progress"/>
+        <field name="progressRoom" aggregate="avg" widget="Progress"/>
+        </grid>
+
+    <form name="DossierImportFet-form" title="Résultats" model="com.hakibati.emploi.db.DossierImportFet" width="large">
+        <panel-tabs>
+            <panel title="imprimer/modifier" colSpan="12" itemSpan="12">
+                <panel colSpan="12">
+                    <field name="typeImprime" widget="RadioSelect" selection="imprime-type-select-emploi-temps"
+                           showTitle="false"
+                           default="PDF" colSpan="4"/>
+                    <field name="documentImprime" selection="imprime-document-select-emploi-temps" colSpan="6"
+                           showTitle="false" placeholder="Sélectionner la liste"/>
+                    <button name="print-all" title="Telecharger"
+                            onClick="save,action-save-edt-emploi-temps,action-emploi-temps-print-all"
+                            colSpan="2" readonlyIf="documentImprime==null"/>
+                </panel>
+                <panel title="daysFet" showTitle="false">
+                    <panel-related field="activityResultesFet" title="Détails" colSpan="12"
+                                   grid-view="ActivityResulteFet-grid" canNew="true"
+                                   canSelect="true"/>
+                </panel>
+            </panel>
+            <panel title="Aperçu" colSpan="12" itemSpan="12">
+                <panel title="find" showTitle="false">
+                    <field name="professeurSelect" title="professeur" type="reference"
+                           target="com.hakibati.emploi.db.TeacherDossier" target-name="teacherFet.name"
+                           domain="(self.dossierImportFet = :id)"
+                           widget="SuggestBox" showTitle="true" colSpan="3"
+                           onChange="action-clean-teacher-select,action-change-select-teacher"
+                           x-limit="1000" x-order="teacherFet"/>
+                    <field name="studntSelect" title="classe" type="reference" target-name="nameFet"
+                           domain="(self.dossierImportFet = :id)"
+                           target="com.hakibati.emploi.db.StudentDossier" x-order="cd"
+                           widget="SuggestBox" showTitle="true" colSpan="3"
+                           onChange="action-clean-student-select,action-change-select-student"
+                           x-limit="1000"/>
+                    <field name="roomSelect" title="salle" type="reference" target-name="nameFet"
+                           domain="(self.dossierImportFet = :id)"
+                           target="com.hakibati.emploi.db.RoomDossier"
+                           widget="SuggestBox" showTitle="true" colSpan="3"
+                           onChange="action-clean-room-select,action-change-select-room"
+                           x-limit="1000" x-order="nameFet"/>
+                    <!--                    <button name="btn-save-edt" title="enregistre" onClick="action-save-edt-emploi-temps" colSpan="2"/>-->
+                </panel>
+                <panel title="reselta" showTitle="false">
+                    <field name="resulta" widget="html" colSpan="12" readonly="true" showTitle="false"/>
+                </panel>
+            </panel>
+            <!--            <panel title="modifier">-->
+            <!--                <panel-dashlet name="custom.update.table.time" colSpan="12" action="custom:update-table-time"-->
+            <!--                               height="350" title="Modifier"/>-->
+            <!--            </panel>-->
+
+        </panel-tabs>
+    </form>
+    <form name="DossierImportFet-apercu-form" title="Aperçu" model="com.hakibati.emploi.db.DossierImportFet" width="large" >
+            <panel title="Aperçu" colSpan="12" itemSpan="12" showTitle="false">
+                <panel title="find" showTitle="false">
+                    <field name="professeurSelect" title="professeur" type="reference"
+                           target="com.hakibati.emploi.db.TeacherDossier" target-name="teacherFet.name"
+                           domain="(self.dossierImportFet = :id)"
+                           widget="SuggestBox" showTitle="true" colSpan="3"
+                           onChange="action-clean-teacher-select,action-change-select-teacher"
+                           x-limit="1000" x-order="teacherFet"/>
+                    <field name="studntSelect" title="classe" type="reference" target-name="nameFet"
+                           domain="(self.dossierImportFet = :id)"
+                           target="com.hakibati.emploi.db.StudentDossier" x-order="cd"
+                           widget="SuggestBox" showTitle="true" colSpan="3"
+                           onChange="action-clean-student-select,action-change-select-student"
+                           x-limit="1000"/>
+                    <field name="roomSelect" title="salle" type="reference" target-name="nameFet"
+                           domain="(self.dossierImportFet = :id)"
+                           target="com.hakibati.emploi.db.RoomDossier"
+                           widget="SuggestBox" showTitle="true" colSpan="3"
+                           onChange="action-clean-room-select,action-change-select-room"
+                           x-limit="1000" x-order="nameFet"/>
+                    <!--                    <button name="btn-save-edt" title="enregistre" onClick="action-save-edt-emploi-temps" colSpan="2"/>-->
+                </panel>
+                <panel title="reselta" showTitle="false">
+                    <field name="resulta" widget="html" colSpan="12" readonly="true" showTitle="false"/>
+                </panel>
+            </panel>
+
+    </form>
+    <form name="DossierImportFet-dowload-form" title="Imprimer" model="com.hakibati.emploi.db.DossierImportFet" width="large">
+            <panel title="imprimer/modifier" colSpan="12" itemSpan="12" showTitle="false">
+                <panel colSpan="12">
+                    <field name="typeImprime" widget="RadioSelect" selection="imprime-type-select-emploi-temps"
+                           showTitle="false"
+                           default="PDF" colSpan="4"/>
+                    <field name="documentImprime" selection="imprime-document-select-emploi-temps" colSpan="6"
+                           showTitle="false" placeholder="Sélectionner la liste"/>
+                    <button name="print-all" title="Telecharger"
+                            onClick="save,action-save-edt-emploi-temps,action-emploi-temps-print-all"
+                            colSpan="2" readonlyIf="documentImprime==null"/>
+                </panel>
+                <panel title="daysFet" showTitle="false">
+                    <panel-related field="activityResultesFet" title="Détails" colSpan="12"
+                                   grid-view="ActivityResulteFet-grid" canNew="true"
+                                   canSelect="true"/>
+                </panel>
+            </panel>
+
+    </form>
+
+
+    <custom name="update-table-time" title="Modifier table service" css="report-box">
+        <dataset type="jpql">
+            <![CDATA[
+  select sum(self.id) as total from DayFet self
+  ]]>
+        </dataset>
+        <template>
+            <![CDATA[
+  <div class="report-data">
+    <h1>{{first.total}}</h1>
+    <small>Total sale</small>
+    <div class="report-percent font-bold text-info pull-right">20% <i class="fa fa-level-up"></i></div>
+    <div class="report-tags"><span class="label label-important">Monthly</span></div>
+  </div>
+  ]]>
+        </template>
+    </custom>
+    <gantt name="DossierImportFet-gantt" title="DossierImportFet" model="com.hakibati.emploi.db.DossierImportFet"
+           taskStart="plannedStartDate"
+           taskDuration="plannedDuration"
+           taskParent="parentTask"
+           taskSequence="sequence"
+           taskProgress="plannedProgress"
+           x-finish-to-start="finishToStartTaskSet"
+           x-start-to-start="startToStartTaskSet"
+           x-finish-to-finish="finishToFinishTaskSet"
+           x-start-to-finish="startToFinishaskSet">
+        <field name="name"/>
+        <field name="project"/>
+        <field name="user"/>
+    </gantt>
+
+
+    <selection name="imprime-type-select-emploi-temps">
+        <option value="pdf">PDF</option>
+        <option value="xlsx">EXCEL</option>
+        <option value="docx">WORD</option>
+    </selection>
+
+    <selection name="imprime-document-select-emploi-temps">
+        <option value="1">table services profs individuelle(1/1)</option>
+        <option value="2">table services profs individuelle(2/1)</option>
+        <option value="3">table services profs individuelle(3/1)</option>
+        <option value="4">table services profs collectif(1/1)</option>
+        <option value="21">table services profs par jour</option>
+        <option value="5">emploi temps eleves individuelle(1/1)</option>
+        <option value="6">emploi temps eleves individuelle(2/1)</option>
+        <option value="7">emploi temps eleves individuelle(3/1)</option>
+        <option value="8">emploi temps eleves collectif(1/1)</option>
+        <option value="105">emploi temps eleves individuelle(1/1 prof)</option>
+        <option value="22">َemploi temps eleves par jour</option>
+        <option value="9">emploi temps salles individuelle(3/1)</option>
+        <option value="10">َemploi temps salles collectif(1/1)</option>
+        <option value="23">َemploi temps salles par jour</option>
+        <option value="24">la Table des salles Libre</option>
+    </selection>
+
+    <selection name="select.etat.dos.fet">
+        <option value="0">En cours du importation</option>
+        <option value="1">Fin du importation</option>
+        <option value="2">Erreur du importation</option>
+    </selection>
+
+    <action-view name="action-apercu-table" model="com.hakibati.emploi.db.DossierImportFet" title="Aperçu des tables">
+        <view type="form" name="DossierImportFet-apercu-form"/>
+        <view-param name="popup" value="reload"/>
+        <view-param name="popup-save" value="false"/>
+        <view-param name="popup.maximized" value="true"/>
+        <view-param name="show-toolbar" value="false"/>
+        <view-param name="show-confirm" value="false"/>
+        <view-param name="forceEdit" value="true"/>
+        <domain>self.id =:_showRecord</domain>
+        <context name="_showRecord" expr="eval:id"/>
+    </action-view>
+    <action-view name="action-dowload-table" model="com.hakibati.emploi.db.DossierImportFet" title="Aperçu des tables">
+        <view type="form" name="DossierImportFet-dowload-form"/>
+        <view-param name="popup" value="reload"/>
+        <view-param name="popup-save" value="false"/>
+        <view-param name="popup.maximized" value="false"/>
+        <view-param name="show-toolbar" value="false"/>
+        <view-param name="show-confirm" value="false"/>
+        <view-param name="forceEdit" value="true"/>
+        <domain>self.id =:_showRecord</domain>
+        <context name="_showRecord" expr="eval:id"/>
+    </action-view>
+
+
+    <action-method name="action-emploi-temps-print-all">
+        <call class="com.emploi.temps.web.DossierImportFetController" method="printAll"/>
+    </action-method>
+    <!--<action-view name="action-apercu-emploi-temps-all" title="aperçu">-->
+    <!--    <view type="form" name="DossierImportFet-Edt-form"/>-->
+    <!--    <view-param name="popup" value="reload"/>-->
+    <!--    <view-param name="popup-save" value="false"/>-->
+    <!--    <view-param name="popup.maximized" value="false"/>-->
+    <!--    <view-param name="show-toolbar" value="false"/>-->
+    <!--    <view-param name="show-confirm" value="false"/>-->
+    <!--</action-view>-->
+    <action-method name="action-save-edt-emploi-temps">
+        <call class="com.emploi.temps.web.DossierImportFetController" method="SaveEdt"/>
+    </action-method>
+    <action-method name="action-change-select-teacher">
+        <call class="com.emploi.temps.web.DossierImportFetController" method="ChangeSelectTeacher"/>
+    </action-method>
+    <action-method name="action-change-select-student">
+        <call class="com.emploi.temps.web.DossierImportFetController" method="ChangeSelectStudent"/>
+    </action-method>
+    <action-method name="action-change-select-room">
+        <call class="com.emploi.temps.web.DossierImportFetController" method="ChangeSelectRoom"/>
+    </action-method>
+    <!--    <action-method name="action.method.user.role.isImportResulFet">-->
+    <!--        <call class="com.axelor.auth.AuthSecurity" method="hasRole('role.my_manager_role')"/>-->
+    <!--    </action-method>-->
+    <action-attrs name="action-clean-teacher-select">
+        <attribute for="roomSelect" name="value" expr=""/>
+        <attribute for="studntSelect" name="value" expr=""/>
+    </action-attrs>
+    <action-attrs name="action-clean-student-select">
+        <attribute for="professeurSelect" name="value" expr=""/>
+        <attribute for="roomSelect" name="value" expr=""/>
+    </action-attrs>
+    <action-attrs name="action-clean-room-select">
+        <attribute for="professeurSelect" name="value" expr=""/>
+        <attribute for="studntSelect" name="value" expr=""/>
+    </action-attrs>
+</object-views>

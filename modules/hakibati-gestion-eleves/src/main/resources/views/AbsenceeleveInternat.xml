@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+
+  <grid name="AbsenceeleveInternat-grid" title="Absence" model="com.hakibati.gestion.eleves.db.AbsenceeleveInternat" editable="true" canEdit="true" canSave="true" >
+    <field name="dateabsence"/>
+    <field name="typeabsense" />
+    <field name="etudeDuMain" />
+    <field name="petitdejeuner"/>
+    <field name="dejeuner" />
+    <field name="etudeDuMidi" />
+    <field name="diner" />
+    <field name="etudeDuNuit" />
+  </grid>
+  <grid name="AbsenceeleveInternat-Collectif-grid" title="Absence" model="com.hakibati.gestion.eleves.db.AbsenceeleveInternat" editable="true" canEdit="true" canSave="true" >
+    <field name="eleveInternat.nomAr"/>
+    <field name="eleveInternat.prenomAr"/>
+    <field name="dateabsence"/>
+    <field name="typeabsense" />
+    <field name="etudeDuMain" />
+    <field name="petitdejeuner"/>
+    <field name="dejeuner" />
+    <field name="etudeDuMidi" />
+    <field name="diner" />
+    <field name="etudeDuNuit" />
+  </grid>
+  <form name="AbsenceeleveInternat-Collectif-form" title="Absence" model="com.hakibati.gestion.eleves.db.AbsenceeleveInternat">
+    <panel title="Ajouter ou modifier">
+      <field name="eleveInternat.nomAr"/>
+      <field name="eleveInternat.prenomAr"/>
+      <field name="dateabsence"/>
+      <field name="typeabsense" />
+      <field name="etudeDuMain" />
+      <field name="petitdejeuner"/>
+      <field name="dejeuner" />
+      <field name="etudeDuMidi" />
+      <field name="diner" />
+      <field name="etudeDuNuit" />
+    </panel>
+  </form>
+  <form name="AbsenceeleveInternat-form" title="Absence" model="com.hakibati.gestion.eleves.db.AbsenceeleveInternat">
+    <panel title="Ajouter ou modifier">
+      <field name="dateabsence"/>
+      <field name="typeabsense" />
+      <field name="etudeDuMain" />
+      <field name="petitdejeuner"/>
+      <field name="dejeuner" />
+      <field name="etudeDuMidi" />
+      <field name="diner" />
+      <field name="etudeDuNuit" />
+    </panel>
+  </form>
+  <selection name="selection-type-absence">
+    <option value="0">non justifie</option>
+    <option value="1">justifie</option>
+  </selection>
+
+</object-views>

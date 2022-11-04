@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+
+  <grid name="ProfCentre-grid" title="ProfCentre" model="com.hakibati.centre.langue.db.ProfCentre">
+    <field name="name" />
+    <field name="datenaissance"/>
+    <field name="tel"/>
+    <field name="email" />
+    <field name="picture" widget="Image" />
+  </grid>
+
+  <form name="ProfCentre-form" title="ProfCentre" model="com.hakibati.centre.langue.db.ProfCentre">
+    <panel title="Ajouter ou modifier">
+      <panel colSpan="9" itemSpan="12">
+        <field name="name" />
+        <field name="datenaissance"/>
+        <field name="tel"/>
+        <field name="email" />
+        <field name="adresse" />
+      </panel>
+      <panel colSpan="3">
+        <field name="picture" widget="Image" colSpan="12" showTitle="false" />
+      </panel>
+    </panel>
+
+  </form>
+
+</object-views>

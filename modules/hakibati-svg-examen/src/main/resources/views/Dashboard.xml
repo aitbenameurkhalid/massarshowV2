@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+  <dashboard name="action-examen-dashboard" title="Statistiques!">
+    <dashlet action="chart:chart.prof.per.sexe"/>
+    <dashlet action="chart:chart.prof.per.cycle"/>
+    <dashlet action="chart:chart.prof.per.fonction"/>
+    <dashlet action="chart:chart.prof.per.matiere"/>
+    <dashlet action="chart:chart.fillier.per.salles"/>
+  </dashboard>
+
+</object-views>

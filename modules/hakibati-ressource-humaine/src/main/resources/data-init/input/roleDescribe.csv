@@ -1,0 +1,2 @@
+code;indexGroupe;name;namear;roleRead;roleWrite;roleDelete;language;key
+10;10;APPLICATION CENTRE LANGUE;مكون تدبير مركز اللغات;role.hakibati.centre.langue.read;role.hakibati.centre.langue.write;role.hakibati.centre.langue.delete;ar;value:APPLICATION CENTRE LANGUE

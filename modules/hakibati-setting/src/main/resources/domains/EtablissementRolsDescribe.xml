@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_5.3.xsd">
+
+  <module name="hakibati-setting" package="com.hakibati.setting.db" />
+  <entity name="EtablissementRolsDescribe" cacheable="true">
+    <boolean name="actif" default="false"/>
+    <date name="datePeremption" title="date de péremption" />
+    <string name="observation" title="Observation" />
+    <many-to-one name="etablissements" ref="com.app.application.db.Etablissement" required="true"/>
+    <many-to-one name="roleDescribes" title="Les Role Describe" ref="com.hakibati.setting.db.RoleDescribe" required="true"/>
+    <unique-constraint columns="roleDescribes,etablissements"/>
+  </entity>
+</domain-models>

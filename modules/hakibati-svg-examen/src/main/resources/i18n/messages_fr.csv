@@ -1,0 +1,366 @@
+"key","message","comment","context"
+"Academie",,,"resources\domains\CentreExam.xml:10"
+"Ajout rأ©ussi",,,"java\com\hakibati\svg\examen\web\SallesController.java:69"
+"Ajouter  des Professeurs",,,"resources\views\Prof.xml:73"
+"Appartient au centre",,,"resources\domains\Prof.xml:13"
+"Au",,,"resources\domains\Calendrier.xml:14
+resources\domains\Resultats.xml:12"
+"Badge",,,"resources\views\Print.xml:12"
+"Badges 149mm/105mm",,,"resources\views\DossierExam.xml:60"
+"Badges 86mm/54mm",,,"resources\views\DossierExam.xml:59"
+"Bloc",,,"resources\domains\Salles.xml:10"
+"Calendrier",,,"resources\views\CentreExam.xml:143
+resources\views\CentreExam.xml:145"
+"Calendrier Examen",,,"resources\views\Menu.xml:121"
+"Calendrier Examine",,,"resources\views\Calendrier.xml:19
+resources\views\Calendrier.xml:6"
+"Ce processus est terminأ©",,,"java\com\hakibati\svg\examen\web\CentreExamController.java:519"
+"Center",,,"resources\domains\DossierExam.xml:20"
+"Centre d'examen",,,"resources\views\CentreExam.xml:102
+resources\views\CentreExam.xml:116
+resources\views\CentreExam.xml:130
+resources\views\CentreExam.xml:20
+resources\views\CentreExam.xml:6
+resources\views\CentreExam.xml:75
+resources\views\CentreExam.xml:88
+resources\views\Menu.xml:134"
+"Choisissez un fichier au format XML",,,"java\com\hakibati\svg\examen\service\ProfService.java:145"
+"Choisissez un fichier au format xlsx",,,"java\com\hakibati\svg\examen\service\ProfService.java:56"
+"Code","Code",,"resources\domains\Fillier.xml:9
+resources\domains\Matiere.xml:9"
+"Commun",,,"resources\domains\CentreExam.xml:12"
+"Contrainte",,,"resources\views\Contrainte.xml:108
+resources\views\Contrainte.xml:125
+resources\views\Contrainte.xml:142
+resources\views\Contrainte.xml:159
+resources\views\Contrainte.xml:177"
+"Contrainte Prof",,,"resources\views\CentreExam.xml:225"
+"Contrainte des Profs",,,"resources\views\CentreExam.xml:205"
+"Contrainte des Salles",,,"resources\views\CentreExam.xml:239"
+"Contrainte un Prof",,,"resources\views\CentreExam.xml:223"
+"Contrainte un Salle",,,"resources\views\CentreExam.xml:253"
+"Contrainte un salle",,,"resources\views\CentreExam.xml:251"
+"Contrainte un salles",,,"resources\views\CentreExam.xml:237"
+"ContrainteAll",,,"resources\views\CentreExam.xml:292
+resources\views\CentreExam.xml:294"
+"ContrainteFillier",,,"resources\views\CentreExam.xml:278
+resources\views\CentreExam.xml:280"
+"ContrainteFilliers",,,"resources\views\CentreExam.xml:265
+resources\views\CentreExam.xml:267"
+"ContrainteProfs",,,"resources\views\CentreExam.xml:207"
+"Convocation (Direc)",,,"resources\views\DossierExam.xml:53"
+"Convocation (Etab)",,,"resources\views\DossierExam.xml:52"
+"Convocation Local",,,"resources\views\CentreExam.xml:64"
+"Convocation prevential",,,"resources\views\CentreExam.xml:56"
+"Created by",,,"resources\domains\Calendrier.xml:20
+resources\domains\CentreExam.xml:19
+resources\domains\Contrainte.xml:25
+resources\domains\DossierExam.xml:21
+resources\domains\Fillier.xml:10
+resources\domains\Matiere.xml:10
+resources\domains\Prof.xml:18
+resources\domains\Resultats.xml:18
+resources\domains\SalleFillier.xml:11
+resources\domains\Salles.xml:9"
+"Creer",,,"resources\views\Prof.xml:81"
+"Créer",,,"resources\views\Salles.xml:35"
+"Cycle",,,"resources\domains\Prof.xml:16"
+"Date",,,"resources\domains\Contrainte.xml:13"
+"Date et heure",,,"resources\views\DossierExam.xml:54"
+"Date examine",,,"resources\domains\Calendrier.xml:12
+resources\domains\Resultats.xml:13"
+"Des Filières",,,"resources\views\Menu.xml:202"
+"Des professeurs",,,"resources\views\Menu.xml:142"
+"Des salles",,,"resources\views\Menu.xml:174"
+"Directeur",,,"resources\domains\CentreExam.xml:16"
+"Direction",,,"resources\domains\CentreExam.xml:11"
+"Dossier exam",,,"resources\domains\CentreExam.xml:20
+resources\domains\Resultats.xml:17"
+"Doti",,,"resources\domains\Prof.xml:10"
+"Du",,,"resources\domains\Calendrier.xml:13
+resources\domains\Resultats.xml:11"
+"Démarrer",,,"resources\views\CentreExam.xml:314"
+"Détails",,,"resources\views\DossierExam.xml:32"
+"Dأ©solأ©, le compte de votre أ©tablissement n'est pas activأ©
+            // ,Contactez-nous أ  : <p>%s</p> si vous أھtes intأ©ressأ©s",,,"java\com\hakibati\svg\examen\web\CentreExamController.java:403"
+"Dأ©solأ©, vous n'avez pas la permission de le faire",,,"java\com\hakibati\svg\examen\web\CentreExamController.java:530
+java\com\hakibati\svg\examen\web\CentreExamController.java:540"
+"EXCEL",,,"resources\views\DossierExam.xml:47"
+"En cours du générateur",,,"resources\views\DossierExam.xml:40"
+"Erreur",,,"resources\domains\DossierExam.xml:18"
+"Erreur du générateur",,,"resources\views\DossierExam.xml:42"
+"Erreurs lors de la génération",,,"resources\views\DossierExam.xml:19"
+"Etablissement",,,"resources\domains\Calendrier.xml:21
+resources\domains\CentreExam.xml:21
+resources\domains\Contrainte.xml:26
+resources\domains\DossierExam.xml:23
+resources\domains\Fillier.xml:11
+resources\domains\Matiere.xml:11
+resources\domains\Prof.xml:19
+resources\domains\Resultats.xml:19
+resources\domains\SalleFillier.xml:12
+resources\domains\Salles.xml:13"
+"Etablissement de origine",,,"resources\domains\Prof.xml:9"
+"Export Excel",,,"resources\views\Prof.xml:84"
+"Export/Import",,,"resources\views\CentreExam.xml:106
+resources\views\CentreExam.xml:120
+resources\views\CentreExam.xml:79
+resources\views\CentreExam.xml:92"
+"Exporter la liste des Profs",,,"resources\views\Prof.xml:83"
+"File",,,"resources\views\Prof.xml:88
+resources\views\Prof.xml:96"
+"Filières",,,"resources\views\Fillier.xml:13"
+"Fillier",,,"resources\domains\Contrainte.xml:23
+resources\domains\Resultats.xml:9
+resources\domains\SalleFillier.xml:8"
+"Fin du générateur",,,"resources\views\DossierExam.xml:41"
+"Fonction",,,"resources\domains\Prof.xml:17"
+"Génération",,,"resources\views\CentreExam.xml:311"
+"Historiques",,,"resources\views\CentreExam.xml:319
+resources\views\CentreExam.xml:321"
+"Image",,,"resources\views\Prof.xml:20"
+"Import",,,"resources\views\Prof.xml:100
+resources\views\Prof.xml:92"
+"Import/Export",,,"resources\views\CentreExam.xml:134
+resources\views\CentreExam.xml:147
+resources\views\CentreExam.xml:209
+resources\views\CentreExam.xml:227
+resources\views\CentreExam.xml:241
+resources\views\CentreExam.xml:255
+resources\views\CentreExam.xml:269
+resources\views\CentreExam.xml:282
+resources\views\CentreExam.xml:296
+resources\views\Prof.xml:9"
+"Importer XML Esise",,,"resources\views\Prof.xml:94"
+"Importer le ficher EXCEL",,,"resources\views\Prof.xml:86"
+"Invalid heur",,,"resources\views\Calendrier.xml:63"
+"Is permanence",,,"resources\domains\Salles.xml:12"
+"Is reserve",,,"resources\domains\Salles.xml:11"
+"La liste des enseignants a أ©tأ© importأ©e avec succأ¨s",,,"java\com\hakibati\svg\examen\service\ProfService.java:136"
+"La liste des profs a أ©tأ© importأ©e avec succأ¨s",,,"java\com\hakibati\svg\examen\service\ProfService.java:245"
+"Les Contrantes",,,"resources\views\Contrainte.xml:19
+resources\views\Contrainte.xml:32
+resources\views\Contrainte.xml:44
+resources\views\Contrainte.xml:56
+resources\views\Contrainte.xml:6
+resources\views\Contrainte.xml:68
+resources\views\Contrainte.xml:79
+resources\views\Contrainte.xml:92"
+"Les Filières",,,"resources\views\Menu.xml:96"
+"Les Fillier",,,"resources\views\CentreExam.xml:90"
+"Les Imprimes",,,"resources\views\Print.xml:8"
+"Les Profs",,,"resources\views\CentreExam.xml:132"
+"Les SalleFillier",,,"resources\views\CentreExam.xml:118"
+"Les Salles",,,"resources\views\CentreExam.xml:104
+resources\views\Menu.xml:109"
+"Les contraintes",,,"resources\views\Menu.xml:32"
+"Les contraintes des Salles",,,"resources\views\Contrainte.xml:318
+resources\views\Contrainte.xml:333"
+"Les contraintes des filliers",,,"resources\views\Contrainte.xml:348
+resources\views\Contrainte.xml:362"
+"Les contraintes des professeurs",,,"resources\views\Contrainte.xml:219
+resources\views\Contrainte.xml:237
+resources\views\Contrainte.xml:253
+resources\views\Contrainte.xml:269
+resources\views\Contrainte.xml:285
+resources\views\Contrainte.xml:300"
+"Les matieres",,,"resources\views\CentreExam.xml:77
+resources\views\Menu.xml:83"
+"Les professeurs",,,"resources\views\Menu.xml:70"
+"Les professeurs par fonction",,,"resources\views\Charts.xml:60"
+"Les surveillants par cycle",,,"resources\views\Charts.xml:34"
+"Les surveillants par matières",,,"resources\views\Charts.xml:85"
+"Les surveillants par sexe",,,"resources\views\Charts.xml:6"
+"List des professeurs",,,"resources\views\Prof.xml:7"
+"List-AR",,,"resources\views\Print.xml:10"
+"List-FR",,,"resources\views\Print.xml:11"
+"Log",,,"resources\views\Prof.xml:90
+resources\views\Prof.xml:98"
+"Logo",,,"resources\views\CentreExam.xml:38"
+"Matiere",,,"resources\domains\Calendrier.xml:11
+resources\domains\Contrainte.xml:22
+resources\domains\Prof.xml:11
+resources\domains\Resultats.xml:10
+resources\views\Matiere.xml:15"
+"Matin",,,"resources\domains\Contrainte.xml:14"
+"Max Fillier Matiere",,,"resources\views\CentreExam.xml:190
+resources\views\CentreExam.xml:192
+resources\views\Menu.xml:54"
+"Max size 4MB.","Taile max : 4MB",,"resources\domains\CentreExam.xml:17
+resources\domains\CentreExam.xml:18
+resources\domains\Prof.xml:12"
+"N projet College",,,"resources\views\CentreExam.xml:27"
+"N projet Lycee",,,"resources\views\CentreExam.xml:29"
+"Name","Nom",,"resources\domains\Calendrier.xml:15
+resources\domains\DossierExam.xml:9
+resources\domains\Fillier.xml:8
+resources\domains\Matiere.xml:8
+resources\domains\Prof.xml:8
+resources\domains\Salles.xml:8"
+"Nom du centre d'examen",,,"resources\domains\CentreExam.xml:9"
+"Nouveau",,,"resources\views\CentreExam.xml:105
+resources\views\CentreExam.xml:119
+resources\views\CentreExam.xml:133
+resources\views\CentreExam.xml:146
+resources\views\CentreExam.xml:208
+resources\views\CentreExam.xml:226
+resources\views\CentreExam.xml:240
+resources\views\CentreExam.xml:254
+resources\views\CentreExam.xml:268
+resources\views\CentreExam.xml:281
+resources\views\CentreExam.xml:295
+resources\views\CentreExam.xml:78
+resources\views\CentreExam.xml:91"
+"Nouvelle recherche",,,"resources\views\CentreExam.xml:312"
+"Nu",,,"resources\views\Resultats.xml:13"
+"Obligé",,,"resources\domains\Resultats.xml:15"
+"Opأ©ration terminأ©e",,,"java\com\hakibati\svg\examen\web\SallesController.java:68"
+"Overview","Général",,"resources\views\Calendrier.xml:20
+resources\views\CentreExam.xml:22
+resources\views\DossierExam.xml:14
+resources\views\Fillier.xml:14
+resources\views\Matiere.xml:16
+resources\views\Prof.xml:27
+resources\views\Resultats.xml:17
+resources\views\SalleFillier.xml:18
+resources\views\Salles.xml:18"
+"PDF",,,"resources\views\DossierExam.xml:46"
+"Permanence",,,"resources\views\CentreExam.xml:156
+resources\views\CentreExam.xml:158
+resources\views\Menu.xml:35"
+"Photo","Photo",,"resources\domains\Prof.xml:12
+resources\domains\Prof.xml:14"
+"Poids",,,"resources\domains\Contrainte.xml:11"
+"Prof",,,"resources\domains\Contrainte.xml:17
+resources\domains\Resultats.xml:16"
+"Professeurs",,,"resources\views\DossierExam.xml:55"
+"Profs",,,"resources\domains\Contrainte.xml:19"
+"Progress (%)",,,"resources\domains\DossierExam.xml:17"
+"Refernce ministrale",,,"resources\domains\CentreExam.xml:13"
+"Resultats",,,"resources\domains\DossierExam.xml:22"
+"Résultat",,,"resources\views\DossierExam.xml:13"
+"Résultats de recherche",,,"resources\views\DossierExam.xml:31"
+"SURVEILLANT EXAMEN",,,"resources\views\Menu.xml:8"
+"Saise des données",,,"resources\views\Menu.xml:16"
+"Salle",,,"resources\domains\Contrainte.xml:20"
+"Salles",,,"resources\domains\Resultats.xml:8
+resources\domains\SalleFillier.xml:9
+resources\views\DossierExam.xml:56"
+"Salles Non Desponible",,,"resources\views\CentreExam.xml:178
+resources\views\CentreExam.xml:180
+resources\views\Menu.xml:47"
+"Salles-Filières",,,"resources\views\Menu.xml:252
+resources\views\SalleFillier.xml:17
+resources\views\SalleFillier.xml:6"
+"Session",,,"resources\domains\CentreExam.xml:14"
+"Statistiques",,,"resources\views\Menu.xml:10
+resources\views\Menu.xml:9"
+"Statistiques!",,,"resources\views\Dashboard.xml:6"
+"Suivi présences",,,"resources\views\DossierExam.xml:57"
+"Supprime",,,"resources\views\Calendrier.xml:15
+resources\views\Contrainte.xml:104
+resources\views\Contrainte.xml:15
+resources\views\Contrainte.xml:29
+resources\views\Contrainte.xml:42
+resources\views\Contrainte.xml:54
+resources\views\Contrainte.xml:65
+resources\views\Contrainte.xml:77
+resources\views\Contrainte.xml:89
+resources\views\Fillier.xml:11
+resources\views\Matiere.xml:12
+resources\views\Prof.xml:23
+resources\views\SalleFillier.xml:13
+resources\views\Salles.xml:14"
+"Supprimer tous les   Professeurs",,,"resources\views\Prof.xml:70"
+"Supprimer tousl",,,"resources\views\Prof.xml:71"
+"Svg indice",,,"resources\domains\Resultats.xml:14"
+"Telecharger",,,"resources\views\DossierExam.xml:28"
+"Temps Non Desponible",,,"resources\views\CentreExam.xml:167
+resources\views\CentreExam.xml:169
+resources\views\Menu.xml:41"
+"Toutes",,,"resources\views\Menu.xml:229"
+"Toutes Les contraintes",,,"resources\views\Contrainte.xml:377"
+"Type exam",,,"resources\domains\CentreExam.xml:15"
+"Un Filière",,,"resources\views\Menu.xml:215"
+"Un professeur",,,"resources\views\Menu.xml:157"
+"Une erreur s'est produite lors de l'importation du fichier Esise",,,"java\com\hakibati\svg\examen\service\ProfService.java:236
+java\com\hakibati\svg\examen\service\ProfService.java:242"
+"Une erreur s'est produite lors de l'importation du fichier Excel",,,"java\com\hakibati\svg\examen\service\ProfService.java:125"
+"Une salle",,,"resources\views\Menu.xml:187"
+"Valeur",,,"resources\domains\Contrainte.xml:12"
+"Voulez-vous vraiment démarrer le générateur?",,,"resources\views\CentreExam.xml:314"
+"Voulez-vous vraiment supprimer cet enregistrement ?",,,"resources\views\Calendrier.xml:15
+resources\views\Contrainte.xml:104
+resources\views\Contrainte.xml:15
+resources\views\Contrainte.xml:29
+resources\views\Contrainte.xml:42
+resources\views\Contrainte.xml:54
+resources\views\Contrainte.xml:65
+resources\views\Contrainte.xml:77
+resources\views\Contrainte.xml:89
+resources\views\Fillier.xml:11
+resources\views\Matiere.xml:12
+resources\views\Prof.xml:23
+resources\views\SalleFillier.xml:13
+resources\views\Salles.xml:14"
+"Vous n'avez pas l'autorisation",,,"java\com\hakibati\svg\examen\web\CalendrierController.java:19
+java\com\hakibati\svg\examen\web\ContrainteController.java:19
+java\com\hakibati\svg\examen\web\FillierController.java:16
+java\com\hakibati\svg\examen\web\MatiereController.java:16
+java\com\hakibati\svg\examen\web\ProfController.java:130
+java\com\hakibati\svg\examen\web\SalleFillierController.java:17
+java\com\hakibati\svg\examen\web\SallesController.java:80"
+"Vraiment envie de rafraîchir la convocation",,,"resources\views\CentreExam.xml:60
+resources\views\CentreExam.xml:68"
+"WORD",,,"resources\views\DossierExam.xml:48"
+"active",,,"resources\domains\Contrainte.xml:16"
+"ajoute",,,"resources\views\Prof.xml:136
+resources\views\Salles.xml:71"
+"ajoute salles Filière",,,"resources\views\SalleFillier.xml:8
+resources\views\Salles.xml:8"
+"ajoute salles-filières",,,"resources\views\Salles.xml:25"
+"après midi",,,"resources\domains\Contrainte.xml:15"
+"cache",,,"resources\domains\CentreExam.xml:17"
+"contrainte",,,"resources\domains\Contrainte.xml:9"
+"en tete de page de la convocation",,,"resources\domains\CentreExam.xml:28
+resources\domains\CentreExam.xml:29"
+"filière",,,"resources\domains\Calendrier.xml:10
+resources\views\Salles.xml:28"
+"gestion la list  des professeurs",,,"resources\views\Prof.xml:69"
+"générer",,,"resources\views\Menu.xml:65"
+"les profisseurs",,,"resources\views\Print.xml:9"
+"les résultats",,,"resources\views\DossierExam.xml:6"
+"list des Filières",,,"resources\views\Fillier.xml:6"
+"list des Matieres",,,"resources\views\Matiere.xml:6"
+"list des Salles",,,"resources\views\Resultats.xml:16
+resources\views\Resultats.xml:6
+resources\views\Salles.xml:17
+resources\views\Salles.xml:6"
+"list des prof",,,"resources\views\Prof.xml:26
+resources\views\Prof.xml:46"
+"logoentete",,,"resources\domains\CentreExam.xml:18"
+"mise a jour",,,"resources\views\CentreExam.xml:60
+resources\views\CentreExam.xml:68"
+"nomber salles par filière",,,"resources\views\Charts.xml:109"
+"nombre totol des prof",,,"resources\views\Prof.xml:75"
+"nombre totol des salles",,,"resources\views\Salles.xml:29"
+"opأ©ration rأ©ussie",,,"java\com\hakibati\svg\examen\service\ProfService.java:273"
+"pied de page de la convocation",,,"resources\domains\CentreExam.xml:33
+resources\domains\CentreExam.xml:35"
+"print methode",,,"resources\views\Print.xml:13"
+"print pdf",,,"resources\views\Print.xml:14"
+"préfixe",,,"resources\views\Prof.xml:74"
+"save",,,"resources\views\CentreExam.xml:58
+resources\views\CentreExam.xml:66"
+"sexe",,,"resources\domains\Prof.xml:15"
+"soir",,,"resources\views\Contrainte.xml:25"
+"statistiques",,,"resources\views\DossierExam.xml:58"
+"État du générateur",,,"resources\domains\DossierExam.xml:19"
+"Êtes-vous sûr de vouloir créer un nouveau projet ? Les données actuelles seront perdues. voulez-vous continuer",,,"resources\views\CentreExam.xml:27
+resources\views\CentreExam.xml:29"
+"Êtes-vous sûr de vouloir supprimer tous les   Professeurs ?",,,"resources\views\Prof.xml:71"
+"إسم مركز الامتحان",,,"resources\domains\CentreExam.xml:8"
+"ط§ظ„ط¥ط­طھظٹط§ط·",,,"java\com\hakibati\svg\examen\service\Generate.java:217"
+"ط§ظ„ظ…ط¯ط§ظˆظ…ط©",,,"java\com\hakibati\svg\examen\service\Generate.java:280"
+"ط§ظ„ظ…ط±ط§ظ‚ط¨",,,"resources\views\Resultats.xml:27"
+"َAttestation Presence",,,"resources\views\DossierExam.xml:61"

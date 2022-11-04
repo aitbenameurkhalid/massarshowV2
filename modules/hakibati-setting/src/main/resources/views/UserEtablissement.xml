@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+    <grid name="Etablissement-user-grid" title="UsersEtablissement" model="com.app.application.db.UserEtablissement"  >
+        <field name="users"/>
+        <field name="fonction" widget="RadioSelect" selection="fonction-type-select"/>
+        <button name="btn-delete" title="Supprime" icon="fa-trash" onClick="action-delete-user-etab" prompt="Êtes-vous sûr de vouloir supprimer ce(s) enregistrement(s) ?"/>
+    </grid>
+
+    <form name="Etablissement-user-form" title="Gérer un utilisateur" model="com.app.application.db.UserEtablissement" onSave="action-rol-save" onLoad="action-is-user" >
+        <panel itemSpan="12" name="panalUserEtabs">
+            <panel showTitle="true" showIf="users==nulls">
+                <field name="nomDeUser" colSpan="8" title="nom d'utilisateur"/>
+                <button name="FindUser" title="Chercher" colSpan="2" onClick="action-ajoute-userEtab"/>
+            </panel>
+            <field name="users" readonly="true" title="nom d'utilisateur" widget="SuggestBox" form-view="zero"/>
+            <panel showTitle="false" showIf="users!=nulls" colSpan="12">
+                <field name="fonction" colSpan="12" widget="RadioSelect" selection="fonction-type-select"  />
+                <panel title="Permission" showIf="fonction==02" itemSpan="12" colSpan=" 12" showTitle="false">
+                    <panel-related colSpan="12" field="userEtablissementRole"  grid-view="UserEtablissementRole-grid" canSelect="false" canNew="true" canRemove="true" />
+                </panel>
+            </panel>
+        </panel>
+    </form>
+    <grid name="UsersEtablissement-grid" title="UsersEtablissement" model="com.app.application.db.UserEtablissement">
+        <field name="etablissements"/>
+        <field name="fonction" widget="RadioSelect" selection="fonction-type-select"/>
+        <button name="btn-delete2" title="Supprime" icon="fa-trash" onClick="action-delete-user-etab" prompt="Êtes-vous sûr de vouloir supprimer ce(s) enregistrement(s) ?"/>
+    </grid>
+
+    <form name="UsersEtablissement-form" title="UsersEtablissement" model="com.app.application.db.UserEtablissement">
+        <panel>
+            <field name="etablissements"/>
+            <field name="fonction" widget="RadioSelect" selection="fonction-type-select"/>
+        </panel>
+    </form>
+    <selection name="fonction-type-select">
+        <option value="01">Administrateur</option>
+        <option value="02">Adjoint</option>
+    </selection>
+    <action-method name="action-ajoute-userEtab">
+        <call class="com.setting.web.UserEtablissementController" method="addUserEtab"/>
+    </action-method>
+    <action-method name="action-change-permission">
+        <call class="com.setting.web.UserEtablissementController" method="onChangePermission"/>
+    </action-method>
+    <action-method name="action-delete-user-etab">
+        <call class="com.setting.web.UserEtablissementController" method="onDeleteUserEtab"/>
+    </action-method>
+    <action-method name="action-rol-save">
+        <call class="com.setting.web.UserEtablissementController" method="OnSaveRoleUser"/>
+    </action-method>
+
+<!--    <action-attrs name="action-is-user">-->
+<!--        <attribute for="panalUserEtabs" name="readonly" expr="call:com.setting.service.UserService:IsCurrentUser()"/>-->
+<!--    </action-attrs>-->
+
+    <action-method name="action-is-user">
+        <call class="com.setting.web.UserEtablissementController" method="IsCurrentUser"/>
+    </action-method>
+</object-views>

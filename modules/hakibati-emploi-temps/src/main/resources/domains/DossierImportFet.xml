@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_5.3.xsd">
+
+    <module name="hakibati-emploi-temps" package="com.hakibati.emploi.db"/>
+    <entity name="DossierImportFet" cacheable="true">
+        <string name="name" required="true">
+            <![CDATA[
+    if (name == null)
+   return "Exemples " +id ;
+       return name;
+      ]]>
+        </string>
+        <string name="fileName" title="Nom fichier"/>
+        <one-to-many name="daysFet" ref="DayFet" mappedBy="dossierImportFet" title="jours"/>
+        <one-to-many name="hoursFet" ref="HourFet" mappedBy="dossierImportFet" title="heurs"/>
+        <one-to-many name="teacherDossiers" ref="TeacherDossier" mappedBy="dossierImportFet" title="Teaches Dossier"/>
+        <one-to-many name="roomDossiers" ref="RoomDossier" mappedBy="dossierImportFet" title="salles Dossier"/>
+        <one-to-many name="studentDossiers" ref="StudentDossier" mappedBy="dossierImportFet" title="Students Dossier"/>
+
+        <integer name="progressTime" title="Import-Temps(%)" default="5"/>
+        <integer name="progressRoom" title="Import-Salles(%)" default="5"/>
+
+        <string name="erreurDosFet" title="Erreur" large="true"/>
+<!--        <integer name="etatDossier" selection="select.etat.dos.fet" default="0" title="État du Dossier"/>-->
+        <one-to-many name="activityResultesFet" ref="ActivityResulteFet" mappedBy="dossierImportFet"/>
+
+        <many-to-one name="resultatFet" ref="ResultatFet"/>
+        <many-to-one name="etablissement" ref="com.app.application.db.Etablissement">
+            <![CDATA[
+    if (etablissement == null)
+   return createdBy.getEtablissementSelectionnee() ;
+   return etablissement;
+      ]]>
+        </many-to-one>-to-one>
+        <many-to-one name="createdBy" ref="com.axelor.auth.db.User"/>
+    </entity>
+</domain-models>

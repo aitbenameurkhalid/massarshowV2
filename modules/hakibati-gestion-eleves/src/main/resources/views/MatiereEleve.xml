@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+
+  <grid name="MatiereEleve-grid" title="Matieres" model="com.hakibati.gestion.eleves.db.MatiereEleve">
+    <field name="cd_matiere"/>
+    <field name="name"/>
+    <field name="matiereFr" />
+  </grid>
+
+  <form name="MatiereEleve-form" title="Matiere" model="com.hakibati.gestion.eleves.db.MatiereEleve">
+    <panel title="Ajouter ou modifier" showTitle="false" >
+      <field name="cd_matiere"/>
+      <field name="name"/>
+      <field name="matiereFr" />
+    </panel>
+  </form>
+
+</object-views>

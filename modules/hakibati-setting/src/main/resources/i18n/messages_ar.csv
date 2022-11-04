@@ -1,0 +1,248 @@
+"key","message","comment","context"
+"(الحروف الصغيرة)أدخل عنوان بريدك الإلكتروني إذا نسيت كلمة المرور أو ترغب في إنشاء حساب جديد ، ثم انقر فوق التالي",,,"resources\views\Register.xml:13"
+"<a class='fa fa-facebook' href='https://facebook.com/khalid.aitbenameur.1' target='_blank'/>",,,"resources\views\Etablissement.xml:155"
+"<a class='fa fa-facebook' href='https://facebook.com/profile.php?id=1804555997' target='_blank'/>",,,"resources\views\Etablissement.xml:152"
+"<a class='fa fa-google' href='http://www.google.com' target='_blank' />",,,"resources\views\Etablissement.xml:149"
+"<a class='fa fa-linkedin' href='http://www.linkedin.com' target='_blank' />",,,"resources\views\Etablissement.xml:160"
+"<a class='fa fa-twitter' href='http://www.twitter.com' target='_blank' />",,,"resources\views\Etablissement.xml:157"
+"<a class='fa fa-youtube' href='https://www.youtube.com/channel/UC9tkVzP7lu6jV-_uONVLFWg' target='_blank' />",,,"resources\views\Etablissement.xml:163"
+"A server error occurred. Please contact the administrator.",,,"java\com\setting\web\EtablissementController.java:119
+java\com\setting\web\EtablissementController.java:89"
+"Academie","الأكاديمية",,"resources\domains\Etablissement.xml:17"
+"Actif","مفعل",,"java\com\setting\service\EtablissementService.java:134
+resources\domains\EtablissementRolsDescribe.xml:8
+resources\domains\UserEtablissement.xml:8"
+"Activation Etablissement","تفيل المؤسسة",,"java\com\setting\service\PermissionEtablissemntService.java:50"
+"Adjoint","مساعد",,"resources\views\UserEtablissement.xml:41"
+"Administrateur","مشرف",,"resources\views\UserEtablissement.xml:40"
+"Adresse",,,"resources\domains\Etablissement.xml:20
+resources\views\User.xml:68"
+"An error occurs while opening the connection. Please verify the following URL : %s.",,,"java\com\setting\service\report\IExceptionMessage.java:14"
+"Can not opening the connection to a empty URL.",,,"java\com\setting\service\report\IExceptionMessage.java:10"
+"Centre de langue","مركز دعم اللغات",,"resources\views\Etablissement.xml:176"
+"Change password?","غير كلمة السر؟",,"resources\views\User.xml:16"
+"Chercher","بحث",,"resources\views\EtablissementLiaison.xml:16
+resources\views\UserEtablissement.xml:16"
+"Code","رمز",,"resources\domains\Cycle.xml:9
+resources\domains\FonctionExaman.xml:10
+resources\domains\ListContraint.xml:10
+resources\domains\RoleDescribe.xml:9
+resources\domains\Sexe.xml:9"
+"Code D'activation","رمز التفعيل",,"resources\views\Register.xml:31"
+"Commun","الجماعة",,"resources\domains\Etablissement.xml:19"
+"Confirm password","تأكيد كلمة المرور",,"resources\views\User.xml:24"
+"Confirmer le mot de passe","تأكيد كلمة المرور",,"resources\views\Register.xml:37"
+"Connexion","تسجيل الدخول",,"resources\views\Register.xml:54"
+"Creation une Etablissement","إنشاء مؤسسة",,"resources\views\User.xml:62"
+"Current password","كلمة المرور الحالي",,"resources\views\User.xml:19"
+"DateTime","التاريخ والتوقيت",,"resources\domains\ActivationUser.xml:10"
+"Direction","المديرية",,"resources\domains\Etablissement.xml:18"
+"Direction Prov","المديرية الاقليمية",,"resources\views\Etablissement.xml:174"
+"Email","Email",,"resources\domains\ActivationUser.xml:8"
+"Entrez votre adresse e-mail (Lettres miniscules) si vous avez oublié le mot de passe ou souhaitez créer un nouveau compte puis cliquez sur Suivant",,,"resources\views\Register.xml:10"
+"Erreur ! Vérifiez l'e-mail, le code de confirmation ou le mot de passe",,,"resources\views\Register.xml:45"
+"Etablissement","المؤسسة",,"resources\domains\EtablissementLiaison.xml:10
+resources\domains\User.xml:11"
+"Etablissement Annexe","المؤسسة الفرعية",,"resources\domains\Etablissement.xml:30"
+"Etablissement Principal","المؤسسة الرئيسية",,"resources\domains\Etablissement.xml:27"
+"Etablissement principal","المؤسسة الرئيسية",,"resources\domains\EtablissementLiaison.xml:11"
+"EtablissementLiaison","المؤسسات المرتبطة",,"resources\views\EtablissementLiaison.xml:13
+resources\views\EtablissementLiaison.xml:25
+resources\views\EtablissementLiaison.xml:33
+resources\views\EtablissementLiaison.xml:7"
+"EtablissementRolsDescribe","صلاحيات المؤسسة",,"resources\views\EtablissementRoleDescribe.xml:13
+resources\views\EtablissementRoleDescribe.xml:6"
+"Etablissements","المؤسسات",,"resources\domains\EtablissementRolsDescribe.xml:11
+resources\domains\User.xml:10
+resources\domains\UserEtablissement.xml:11"
+"Etablissements Père","الاكاديمية/المديرية",,"resources\views\Etablissement.xml:108
+resources\views\Etablissement.xml:67"
+"Etablissements fils","المؤسسات التعليمية التابعة",,"resources\views\Etablissement.xml:112
+resources\views\Etablissement.xml:71"
+"Fillier","المسلك",,"resources\views\ListContraint.xml:36"
+"Filliers","المسالك",,"resources\views\ListContraint.xml:37"
+"Fonction","المهمة",,"resources\domains\UserEtablissement.xml:9"
+"Gérer un utilisateur","إدارة المستخدم",,"resources\views\UserEtablissement.xml:12"
+"Il n'y a aucun utilisateur avec ce nom","لا يوجد مستخدم بهذا الاسم",,"java\com\setting\web\UserEtablissementController.java:30"
+"Il n'y a pas d'أ©tablissement avec ce code",,,"java\com\setting\web\EtablissementLiaisonController.java:19
+java\com\setting\web\EtablissementLiaisonController.java:24"
+"Index de Groupe",,,"resources\domains\RoleDescribe.xml:11"
+"Information Etablissement","معلومات المؤسسة",,"resources\views\Etablissement.xml:120
+resources\views\Menu.xml:7
+resources\views\Menu.xml:8"
+"Information etablissement","معلومات المؤسسة",,"resources\views\Etablissement.xml:35
+resources\views\Etablissement.xml:85"
+"L'opération a réussi, cliquez sur Connexion pour continuer",,,"resources\views\Register.xml:41"
+"Le code d'activation et le lien ont été envoyés à votre e-mail, entrez le code d'activation et le mot de passe, puis cliquez sur Suivant ou cliquez sur le lien dans votre e-mail",,,"resources\views\Register.xml:25"
+"Les  Contrainte","القيود",,"resources\views\Menu.xml:40"
+"Les Cycles","الأسلاك",,"resources\views\Menu.xml:23
+resources\views\Menu.xml:24"
+"Les Fonction Examan","المهمة",,"resources\views\Menu.xml:29"
+"Les Fonctions en Examan","المهمة",,"resources\views\Menu.xml:30"
+"Les Observations","ملاحطات",,"resources\views\Menu.xml:81"
+"Les Role Describe","الصلاحية",,"java\com\setting\service\EtablissementService.java:130
+resources\domains\EtablissementRolsDescribe.xml:12"
+"Les Role Etablissement","صلاحية المؤسسة",,"resources\views\Etablissement.xml:76
+resources\views\Etablissement.xml:95"
+"Les Roles Describe","الصلاحيات",,"resources\views\Menu.xml:46
+resources\views\Menu.xml:47"
+"Les Rols Describe","الصلاحية",,"resources\domains\RoleDescribe.xml:15"
+"Les Types de Contraint","نوع القيد",,"resources\views\Menu.xml:41"
+"Les Types de Sexe","نوع الجنس",,"resources\views\Menu.xml:35
+resources\views\Menu.xml:36"
+"Les Utilisateurs","المستخدمون",,"java\com\setting\service\EtablissementService.java:126
+resources\domains\Etablissement.xml:23
+resources\domains\UserEtablissement.xml:12
+resources\views\Etablissement.xml:20"
+"Les contrainte","القيد",,"resources\domains\ListContraint.xml:11"
+"Les etablissements","المؤسسات",,"resources\views\Menu.xml:17
+resources\views\Menu.xml:18"
+"Les observations","ملاحظات",,"resources\views\Menu.xml:79"
+"Les opérations","العمليات",,"resources\views\Menu.xml:74"
+"Les permissions etablissement","صلاحيات المؤسسة",,"resources\domains\Etablissement.xml:25"
+"List contraint","لائحة القيود",,"resources\views\ListContraint.xml:12
+resources\views\ListContraint.xml:6"
+"Liste Des Utilisateurs","لائحة المستخدمين",,"resources\views\Etablissement.xml:100
+resources\views\Etablissement.xml:26"
+"Logo En Tete","رأس اللوكو",,"resources\domains\Etablissement.xml:22
+resources\views\Etablissement.xml:49"
+"Mes Etablissements","مؤسساتي",,"resources\views\User.xml:27
+resources\views\User.xml:53"
+"Mes etablissements?","?مؤسساتي",,"resources\views\User.xml:26
+resources\views\User.xml:52"
+"Name","الاسم",,"resources\domains\Cycle.xml:8
+resources\domains\FonctionExaman.xml:9
+resources\domains\ListContraint.xml:9
+resources\domains\RegistreObservation.xml:8
+resources\domains\RoleDescribe.xml:8
+resources\domains\Sexe.xml:8"
+"New password","كلمة مرور جديدة",,"resources\views\User.xml:22"
+"No such template","لا يوجد مثل هذا القالب",,"java\com\setting\service\report\IExceptionMessage.java:17"
+"Nom De Academie","اسم الاكاديمة",,"resources\views\User.xml:67"
+"Nom De Commun","اسم الجماعة",,"resources\views\User.xml:65"
+"Nom De Direction","اسم المديرية",,"resources\views\User.xml:66"
+"Nom De Etablissement","إسم المؤسسة",,"resources\views\User.xml:64"
+"Nom Etablissement",,,"java\com\setting\service\EtablissementService.java:123"
+"Non","لا",,"resources\views\Etablissement.xml:170"
+"Nouvelle Observation","ملاحظة جديدة",,"resources\views\Menu.xml:72"
+"Number de test",,,"resources\domains\ActivationUser.xml:11"
+"Numero","الرقم",,"resources\domains\Etablissement.xml:9"
+"Nآ° Etablissement",,,"java\com\setting\service\EtablissementService.java:120"
+"Observation","ملاحظات",,"java\com\setting\service\EtablissementService.java:140
+resources\domains\EtablissementRolsDescribe.xml:10
+resources\domains\RegistreObservation.xml:13"
+"Ou créer une nouvelle établissement","او قم بانشاء مؤسسة جديدة",,"resources\views\User.xml:47"
+"Oui","نعم",,"resources\views\Etablissement.xml:169"
+"Overview","Général","عامة","resources\views\Cycle.xml:12
+resources\views\Etablissement.xml:41
+resources\views\Etablissement.xml:87
+resources\views\EtablissementRoleDescribe.xml:14
+resources\views\FonctionExaman.xml:12
+resources\views\User.xml:63"
+"Permission","الصلاحية",,"resources\views\UserEtablissement.xml:21"
+"Phone","Téléphone",,"resources\domains\User.xml:9"
+"Preferences","الملف الشخصي",,"resources\views\User.xml:39
+resources\views\User.xml:7"
+"Préférences","الملف الشخصي",,"resources\views\Menu.xml:61"
+"Role Ecrir","الكتابة",,"resources\domains\RoleDescribe.xml:13"
+"Role Lir","القراءة",,"resources\domains\RoleDescribe.xml:12"
+"Role Supprimer","الجدف",,"resources\domains\RoleDescribe.xml:14"
+"RoleDescribe","الصلاحية",,"resources\views\RoleDescribe.xml:15
+resources\views\RoleDescribe.xml:6"
+"Répétez votre mot de passe","اعادة كلمة المرور",,"resources\views\Register.xml:37"
+"Save","حفظ",,"resources\views\RegistreObservation.xml:22"
+"Suivant","التالي",,"resources\views\Register.xml:16
+resources\views\Register.xml:39"
+"Suivi Etablissements",,,"resources\views\Etablissement.xml:8"
+"Sujet","الموضوع",,"resources\domains\RegistreObservation.xml:12"
+"Supprime","حذف",,"resources\views\UserEtablissement.xml:30
+resources\views\UserEtablissement.xml:9"
+"Supprimer","حذف",,"resources\domains\UserEtablissementRole.xml:12"
+"Sélectionnez une établissement","اختر مؤسسة",,"resources\views\User.xml:41"
+"TABLES CLASSIFICATION","جداول التصنيف",,"resources\views\Menu.xml:6"
+"Tapez le code  D'activation",,,"resources\views\Register.xml:31"
+"Tapez votre mot de passe",,,"resources\views\Register.xml:34"
+"Tel","الهاتف",,"resources\views\User.xml:69"
+"Telephone","الهاتف",,"resources\domains\Etablissement.xml:21
+resources\domains\RegistreObservation.xml:11"
+"Templating can not be empty",,,"java\com\setting\service\report\IExceptionMessage.java:19"
+"Test register",,,"resources\views\Menu.xml:52"
+"The parameter copyNumber should be superior to 0.",,,"java\com\setting\service\report\IExceptionMessage.java:25"
+"This field needs to be unique.",,,"java\com\setting\service\report\IExceptionMessage.java:21"
+"Type d'etablissemnt","نوع المؤسسة",,"resources\views\User.xml:71"
+"Type etablissemnt","نوع المؤسسة",,"resources\domains\Etablissement.xml:16"
+"Type Établissement","نوع المؤسسة",,"resources\views\Etablissement.xml:105"
+"Typse sexe","نوع الجنس",,"resources\views\Sexe.xml:11
+resources\views\Sexe.xml:6"
+"Url %s is malformed.",,,"java\com\setting\service\report\IExceptionMessage.java:12"
+"User preferences","خيارات المستخدم",,"resources\views\User.xml:40
+resources\views\User.xml:8"
+"UserEtablissementRole","صلاحيات  المؤسسة",,"resources\views\UserEtablissementRole.xml:6"
+"UsersEtablissement","مستخدمي المؤسسة",,"resources\views\UserEtablissement.xml:27
+resources\views\UserEtablissement.xml:33
+resources\views\UserEtablissement.xml:6"
+"Ville","المدينة",,"resources\domains\RegistreObservation.xml:9"
+"Votre email est invalide","الاكيل غير صحيح ",,"resources\views\Register.xml:19"
+"Years in 360 days","سنة في 360 يوم ",,"java\com\setting\service\report\IExceptionMessage.java:6"
+"accepter","السماح",,"resources\domains\EtablissementLiaison.xml:9"
+"afficher Aprés Midi","عرض  بعد الزوال",,"resources\domains\ListContraint.xml:18"
+"afficher Dtae Exam","عرض تاريخ الاختبار",,"resources\domains\ListContraint.xml:19"
+"afficher Fillier","عرض المسلك",,"resources\domains\ListContraint.xml:16"
+"afficher Matiere","عرض المادة",,"resources\domains\ListContraint.xml:15"
+"afficher Matin","عرض الصباح",,"resources\domains\ListContraint.xml:17"
+"afficher Salle","عرض القاعات",,"resources\domains\ListContraint.xml:14"
+"afficher Valeur","عرض القيمة",,"resources\domains\ListContraint.xml:12"
+"afficher prof","عرض الاستاذ",,"resources\domains\ListContraint.xml:13"
+"aperçu","معاينة",,"resources\domains\UserEtablissementRole.xml:10"
+"autorisé","موافق",,"resources\domains\EtablissementLiaison.xml:8"
+"changeLgo","تغيير اللوكو",,"resources\views\Etablissement.xml:62"
+"code d'activation","رمز التفعبل",,"resources\domains\ActivationUser.xml:9"
+"code d'etablissement","رمو المؤسسة",,"resources\views\EtablissementLiaison.xml:15"
+"commenter","تعليمات",,"resources\domains\ListContraint.xml:21"
+"confirm password","تأكيد كلمة المرور",,"resources\views\User.xml:24"
+"creation une etablissement","إنشاء مؤسسة",,"resources\views\User.xml:86"
+"créer","انشاء",,"resources\views\User.xml:33
+resources\views\User.xml:50
+resources\views\User.xml:74"
+"current password","كلمة المرور الحالي",,"resources\views\User.xml:19"
+"date de péremption","تاريخ انتهاء الصلاحية ",,"resources\domains\EtablissementRolsDescribe.xml:9"
+"date de pأ©remption",,,"java\com\setting\service\EtablissementService.java:137"
+"les Autorisations","الصلاحيات",,"resources\domains\UserEtablissement.xml:10"
+"les Types des fonctons","لائحة مهام الامتحان",,"resources\views\FonctionExaman.xml:6"
+"les cycles","المسالك",,"resources\views\Cycle.xml:6"
+"les observations","الملاحظات",,"resources\views\RegistreObservation.xml:6"
+"les roles","المهام",,"resources\domains\UserEtablissementRole.xml:9"
+"les utilisateurs","المستخدمون",,"java\com\setting\web\EtablissementController.java:58
+java\com\setting\web\EtablissementController.java:73
+resources\views\Menu.xml:12"
+"les utilisateurs d établissement","مستخدمي المؤسسة",,"resources\domains\UserEtablissementRole.xml:8"
+"modifier","تعديل",,"resources\domains\UserEtablissementRole.xml:11"
+"mot de passe","كلمة المرور",,"resources\views\Register.xml:34"
+"name","الاسم",,"resources\domains\Etablissement.xml:8"
+"new password","كلمة المرور الجديد",,"resources\views\User.xml:22"
+"nom d'utilisateur","إسم المستخدم",,"resources\views\UserEtablissement.xml:15
+resources\views\UserEtablissement.xml:18"
+"observation ou remarque","الملاحظات والاقتراحات",,"resources\views\RegistreObservation.xml:13"
+"profisseur","الاستاذ",,"resources\views\ListContraint.xml:31"
+"profisseurs","الاساتذة",,"resources\views\ListContraint.xml:30"
+"register",,,"resources\views\Menu.xml:53
+resources\views\Menu.xml:57
+resources\views\Register.xml:6"
+"salle","القاعة",,"resources\views\ListContraint.xml:34"
+"salles","القاعات",,"resources\views\ListContraint.xml:33"
+"save","حفظ",,"resources\views\User.xml:45"
+"sendredirect",,,"resources\views\Register.xml:49"
+"type de cycle","نوع المسلك",,"resources\views\Cycle.xml:11"
+"type de fonction","نوع المهام",,"resources\views\FonctionExaman.xml:11"
+"utilisateurs","المستخدمون",,"resources\views\Etablissement.xml:6"
+"valeur par défaut","القيمة الافتراضية",,"resources\domains\ListContraint.xml:20"
+"votre remarques et observations","ملاحظاتكم واقتراحاتكم",,"resources\views\RegistreObservation.xml:15"
+"Écrivez votre email","اكت الاميل الخاص بك",,"resources\views\Register.xml:15"
+"Êtes-vous sûr de vouloir supprimer ce(s) enregistrement(s) ?","هل تريد بالفعل مسح السلاجلات(s) المسجلة(s) ?",,"resources\views\UserEtablissement.xml:30
+resources\views\UserEtablissement.xml:9"
+"établissement scolaire","مؤسسة تعليمية",,"resources\views\Etablissement.xml:173"
+"بريدك الإلكتروني غير صحيح",,,"resources\views\Register.xml:21"
+"تم إرسال رمز التفعيل والرابط إلى بريدك الإلكتروني ، أدخل رمز التفعيل وكلمة المرور ثم انقر فوق التالي ، أو انقر فوق الرابط الموجود في بريدك الإلكتروني",,,"resources\views\Register.xml:28"
+"تمت العملية بنجاح ، انقر فوق اتصال  للمتابعة",,,"resources\views\Register.xml:42"
+"خطأ ! تحقق من البريد الإلكتروني أو رمز التأكيد أو كلمة المرور",,,"resources\views\Register.xml:47"
+"ٌRemarques et Observations","ملاحظاتكم واقتراحاتكم",,"resources\views\Menu.xml:69"

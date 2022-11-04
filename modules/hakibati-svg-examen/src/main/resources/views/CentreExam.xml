@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+    <grid name="CentreExam-grid" title="Centre d'examen" model="com.hakibati.svg.examen.db.CentreExam">
+        <field name="name"/>
+        <field name="nameFr"/>
+        <field name="academie"/>
+        <field name="direction"/>
+        <field name="commun"/>
+        <field name="refernceMinistrale"/>
+        <field name="sessionExam"/>
+        <field name="directeur"/>
+        <field name="cache"/>
+        <field name="logoentete"/>
+    </grid>
+
+
+    <form name="CentreExam-form" title="Centre d'examen" model="com.hakibati.svg.examen.db.CentreExam" >
+        <panel-tabs>
+            <panel title="Overview">
+                <field name="name" onChange="save"/>
+                <spacer name="ffff" colSpan="2"/>
+                <button name="btn-vew-college" onClick="save,action-create-new-college" title="N projet College"
+                        colSpan="2"
+                        prompt="Êtes-vous sûr de vouloir créer un nouveau projet ? Les données actuelles seront perdues. voulez-vous continuer"/>
+                <button name="btn-vew-lycee" onClick="save,action-create-new-lycee" title="N projet Lycee" colSpan="2"
+                        prompt="Êtes-vous sûr de vouloir créer un nouveau projet ? Les données actuelles seront perdues. voulez-vous continuer"/>
+
+                <field name="academie" onChange="save"/>
+                <field name="direction" onChange="save"/>
+                <field name="commun" onChange="save"/>
+                <field name="refernceMinistrale" onChange="save"/>
+                <field name="typeExam" onChange="save"/>
+                <field name="sessionExam" onChange="save"/>
+            </panel>
+            <panel title="Logo">
+                <field name="logoentete" widget="Image" colSpan="12" showTitle="true"  onChange="save">
+                    <viewer>
+                        <![CDATA[
+              <img ng-show="record.logoentete" ng-src="{{$image('logoentete', 'content')}}" />
+              <img ng-show="!record.logoentete" src="img/user.png" />
+            ]]>
+                    </viewer>
+                </field>
+                <field name="cache" widget="Image" colSpan="12" showTitle="true"  onChange="save">
+                    <viewer>
+                        <![CDATA[
+              <img ng-show="record.cache" ng-src="{{$image('cache', 'content')}}" />
+              <img ng-show="!record.cache" src="img/user.png" />
+            ]]>
+                    </viewer>
+                </field>
+            </panel>
+            <panel title="Convocation prevential">
+                <spacer colSpan="8"/>
+                <button name="btn-save" onClick="save" title="save" colSpan="2"/>
+                <button name="btn-miseAjour-convocationP" onClick="save,action-mise-ajour-convocationP,save"
+                        title="mise a jour" colSpan="2" prompt="Vraiment envie de rafraîchir la convocation"/>
+                <field name="enteteCovocationP" widget="html" colSpan="12"  onChange="save"/>
+                <field name="piedCovocationP" widget="html" colSpan="12"  onChange="save"/>
+            </panel>
+            <panel title="Convocation Local">
+                <spacer colSpan="8"/>
+                <button name="btn-save" onClick="save" title="save" colSpan="2" />
+                <button name="btn-miseAjour-convocationL" onClick="save,action-mise-ajour-convocationL,save"
+                        title="mise a jour" colSpan="2" prompt="Vraiment envie de rafraîchir la convocation"/>
+                <field name="enteteCovocationL" widget="html" colSpan="12"  onChange="save"/>
+                <field name="piedCovocationL" widget="html" colSpan="12"  onChange="save"/>
+            </panel>
+        </panel-tabs>
+    </form>
+    <form name="CentreExam-matiere-form" title="Les matieres" model="com.hakibati.svg.examen.db.CentreExam"
+          width="large">
+        <panel colSpan="12">
+            <label title="Les matieres" colSpan="8"/>
+            <button name="btn-new" title="Nouveau" onClick="action-new-Matiere" colSpan="2"/>
+            <button name="btn-export" title="Export/Import" onClick="action-export-import-Matiere" colSpan="2"/>
+        </panel>
+        <panel colSpan="12">
+            <panel-dashlet name="panel-dashlet-Matiere" showTitle="false" colSpan="12" height="350"
+                           action="action-dashlet-Matiere" canSearch="true"  />
+        </panel>
+    </form>
+
+    <form name="CentreExam-Fillier-form" title="Les Filliers" model="com.hakibati.svg.examen.db.CentreExam"
+          width="large">
+        <panel colSpan="12">
+            <label title="Les Filliers" colSpan="8"/>
+            <button name="btn-new" title="Nouveau" onClick="action-new-Fillier" colSpan="2"/>
+            <button name="btn-export" title="Export/Import" onClick="action-export-import-Fillier" colSpan="2"/>
+        </panel>
+        <panel colSpan="12">
+            <panel-dashlet name="panel-dashlet-Fillier" showTitle="false" colSpan="12" height="350"
+                           action="action-dashlet-Fillier" canSearch="true"/>
+        </panel>
+    </form>
+
+
+    <form name="CentreExam-Salles-form" title="Les Salles" model="com.hakibati.svg.examen.db.CentreExam"
+          width="large">
+        <panel colSpan="12">
+            <label title="Les Salles" colSpan="8"/>
+            <button name="btn-new" title="Nouveau" onClick="action-new-Salles" colSpan="2"/>
+            <button name="btn-export" title="Export/Import" onClick="action-ajoute-collectif-salles" colSpan="2"/>
+        </panel>
+        <panel colSpan="12">
+            <panel-dashlet name="panel-dashlet-Salles" showTitle="false" colSpan="12" height="350"
+                           action="action-dashlet-Salles" canSearch="true"/>
+        </panel>
+    </form>
+
+
+    <form name="CentreExam-SalleFillier-form" title="Salles-Filières" model="com.hakibati.svg.examen.db.CentreExam"
+          width="large">
+        <panel colSpan="12">
+            <label title="Salles-Filières" colSpan="8"/>
+            <button name="btn-new" title="Nouveau" onClick="action-new-SalleFillier" colSpan="2"/>
+            <button name="btn-add-all" title="ajoute salles Filière" onClick="action-ajoute-collectif-salles"  css="btn btn-warning label-bold bold large center" colSpan="2"/>
+
+        </panel>
+        <panel colSpan="12">
+            <panel-dashlet name="panel-dashlet-SalleFillier" showTitle="false" colSpan="12" height="350"
+                           action="action-dashlet-SalleFillier" canSearch="true"/>
+        </panel>
+    </form>
+
+
+    <form name="CentreExam-Prof-form" title="Les professeurs" model="com.hakibati.svg.examen.db.CentreExam"
+          width="large">
+        <panel colSpan="12">
+            <label title="Les professeurs" colSpan="8"/>
+            <button name="btn-new" title="Nouveau" onClick="action-new-Prof" colSpan="2"/>
+            <button name="btn-export" title="Import/Export" onClick="action-export-import-Prof" css="btn btn-warning label-bold bold large center" colSpan="2"/>
+        </panel>
+        <panel colSpan="12">
+            <panel-dashlet name="panel-dashlet-Prof" showTitle="false" colSpan="12" height="350"
+                           action="action-dashlet-Prof" canSearch="true"/>
+        </panel>
+    </form>
+
+    <form name="CentreExam-Calendrier-form" title="Calendrier Examen" model="com.hakibati.svg.examen.db.CentreExam"
+          width="large">
+        <panel colSpan="12">
+            <label title="Calendrier Examen" colSpan="8"/>
+            <button name="btn-new" title="Nouveau" onClick="action-new-Calendrier" colSpan="2"/>
+            <button name="btn-export" title="Import/Export" onClick="action-export-import-Calendrier" css="btn btn-warning label-bold bold large center" colSpan="2"/>
+        </panel>
+        <panel colSpan="12">
+            <panel-dashlet name="panel-dashlet-Calendrier" showTitle="false" colSpan="12" height="350"
+                           action="action-dashlet-Calendrier" canSearch="true"/>
+        </panel>
+    </form>
+
+    <form name="CentreExam-Permanence-form" title="Permanence" model="com.hakibati.svg.examen.db.CentreExam"
+          width="large">
+        <panel colSpan="12">
+            <label title="Permanence" colSpan="6"/>
+            <field name="$_matiere" title="Matiere"  colSpan="6" type="reference"
+                   placeholder="Sélectionner une matiere" widget="SuggestBox"
+                   onChange="action-refresh-dashlet-Permanence"
+                   target="com.hakibati.svg.examen.db.Matiere" x-limit="1000"/>
+
+        </panel>
+        <panel colSpan="12">
+            <panel-dashlet name="panel-dashlet-Permanence" showTitle="false" colSpan="12" height="350"
+                           action="action-dashlet-Permanence" canSearch="true"/>
+        </panel>
+    </form>
+    <action-attrs name="action-refresh-dashlet-Permanence">
+        <attribute for="panel-dashlet-Permanence" name="refresh" expr="true"/>
+    </action-attrs>
+
+    <form name="CentreExam-TempsNonDesponible-form" title="Temps Non Desponible" model="com.hakibati.svg.examen.db.CentreExam"
+          width="large">
+        <panel colSpan="12">
+            <label title="Temps Non Desponible" colSpan="8"/>
+        </panel>
+        <panel colSpan="12">
+            <panel-dashlet name="panel-dashlet-TempsNonDesponible" showTitle="false" colSpan="12" height="350"
+                           action="action-dashlet-TempsNonDesponible" canSearch="true"/>
+        </panel>
+    </form>
+
+    <form name="CentreExam-SalleNonDesponible-form" title="Salles Non Desponible" model="com.hakibati.svg.examen.db.CentreExam"
+          width="large">
+        <panel colSpan="12">
+            <label title="Salles Non Desponible" colSpan="6"/>
+            <field name="$_salle" title="Salle"  colSpan="6" type="reference"
+                   placeholder="Sélectionner une salle" widget="SuggestBox"
+                   onChange="action-refresh-dashlet-SalleNonDesponible"
+                   target="com.hakibati.svg.examen.db.Salles"/>
+
+        </panel>
+        <panel colSpan="12">
+            <panel-dashlet name="panel-dashlet-SalleNonDesponible" showTitle="false" colSpan="12" height="350"
+                           action="action-dashlet-SalleNonDesponible" canSearch="true"/>
+        </panel>
+    </form>
+    <action-attrs name="action-refresh-dashlet-SalleNonDesponible">
+        <attribute for="panel-dashlet-SalleNonDesponible" name="refresh" expr="true"/>
+    </action-attrs>
+
+    <form name="CentreExam-MaxFillierMatiere-form" title="Max Fillier Matiere" model="com.hakibati.svg.examen.db.CentreExam"
+          width="large">
+        <panel colSpan="12">
+            <label title="Max Fillier Matiere" colSpan="6"/>
+            <field name="$_matiere" title="Matiere"  colSpan="6" type="reference"
+                   placeholder="Sélectionner une matiere" widget="SuggestBox"
+                   onChange="action-refresh-dashlet-MaxFillierMatiere"
+                   target="com.hakibati.svg.examen.db.Matiere"/>
+        </panel>
+        <panel colSpan="12">
+            <panel-dashlet name="panel-dashlet-MaxFillierMatiere" showTitle="false" colSpan="12" height="350"
+                           action="action-dashlet-MaxFillierMatiere" canSearch="true"/>
+        </panel>
+    </form>
+
+    <action-attrs name="action-refresh-dashlet-MaxFillierMatiere">
+        <attribute for="panel-dashlet-MaxFillierMatiere" name="refresh" expr="true"/>
+    </action-attrs>
+
+
+
+
+    <form name="CentreExam-ContrainteProfs-form" title="Contrainte des Profs" model="com.hakibati.svg.examen.db.CentreExam"
+          width="large">
+        <panel colSpan="12">
+            <label title="Contrainte des Profs" colSpan="8"/>
+        </panel>
+        <panel colSpan="12">
+            <panel-dashlet name="panel-dashlet-ContrainteProfs" showTitle="false" colSpan="12" height="350"
+                           action="action-dashlet-ContrainteProfs" canSearch="true"/>
+        </panel>
+    </form>
+
+
+    <form name="CentreExam-ContrainteProf-form" title="Contrainte un Prof" model="com.hakibati.svg.examen.db.CentreExam"
+          width="large">
+        <panel colSpan="12">
+            <label title="Contrainte De Prof" colSpan="6"/>
+            <field name="$_prof" title="Prof"  colSpan="6" type="reference"
+                   placeholder="Sélectionner un Prof" widget="SuggestBox"
+                   onChange="action-refresh-dashlet-ContrainteProf"
+                   target="com.hakibati.svg.examen.db.Prof" x-limit="1000"/>
+        </panel>
+        <panel colSpan="12">
+            <panel-dashlet name="panel-dashlet-ContrainteProf" showTitle="false" colSpan="12" height="350"
+                           action="action-dashlet-ContrainteProf" canSearch="true"/>
+        </panel>
+    </form>
+
+    <action-attrs name="action-refresh-dashlet-ContrainteProf">
+        <attribute for="panel-dashlet-ContrainteProf" name="refresh" expr="true"/>
+    </action-attrs>
+
+    <form name="CentreExam-ContrainteSalles-form" title="Contrainte un salles" model="com.hakibati.svg.examen.db.CentreExam"
+          width="large">
+        <panel colSpan="12">
+            <label title="Contrainte des Salles " colSpan="8"/>
+        </panel>
+        <panel colSpan="12">
+            <panel-dashlet name="panel-dashlet-ContrainteSalles" showTitle="false" colSpan="12" height="350"
+                           action="action-dashlet-ContrainteSalles" canSearch="true"/>
+        </panel>
+    </form>
+
+
+    <form name="CentreExam-ContrainteSalle-form" title="Contrainte un salle" model="com.hakibati.svg.examen.db.CentreExam"
+          width="large">
+        <panel colSpan="12">
+            <label title="Contrainte une Salle " colSpan="6"/>
+            <field name="$_salle" title="Salle"  colSpan="6" type="reference"
+                   placeholder="Sélectionner une salle" widget="SuggestBox"
+                   onChange="action-refresh-dashlet-ContrainteSalle"
+                   target="com.hakibati.svg.examen.db.Salles" x-limit="1000"/>
+        </panel>
+        <panel colSpan="12">
+            <panel-dashlet name="panel-dashlet-ContrainteSalle" showTitle="false" colSpan="12" height="350"
+                           action="action-dashlet-ContrainteSalle" canSearch="true"/>
+        </panel>
+    </form>
+    <action-attrs name="action-refresh-dashlet-ContrainteSalle">
+        <attribute for="panel-dashlet-ContrainteSalle" name="refresh" expr="true"/>
+    </action-attrs>
+
+    <form name="CentreExam-ContrainteFilliers-form" title="Contrainte Des Filières" model="com.hakibati.svg.examen.db.CentreExam"
+          width="large">
+        <panel colSpan="12">
+            <label title="Contrainte Des Filières" colSpan="8"/>
+        </panel>
+        <panel colSpan="12">
+            <panel-dashlet name="panel-dashlet-ContrainteFilliers" showTitle="false" colSpan="12" height="350"
+                           action="action-dashlet-ContrainteFilliers" canSearch="true"/>
+        </panel>
+    </form>
+
+    <form name="CentreExam-ContrainteFillier-form" title="Contrainte De Filière" model="com.hakibati.svg.examen.db.CentreExam"
+          width="large">
+        <panel colSpan="12">
+            <label title="Contrainte De Filière" colSpan="6"/>
+            <field name="$_filiere" title="Filière"  colSpan="6" type="reference"
+                   placeholder="Sélectionner une Filière" widget="SuggestBox"
+                   onChange="action-refresh-dashlet-ContrainteFillier"
+                   target="com.hakibati.svg.examen.db.Fillier" x-limit="1000"/>
+        </panel>
+        <panel colSpan="12">
+            <panel-dashlet name="panel-dashlet-ContrainteFillier" showTitle="false" colSpan="12" height="350"
+                           action="action-dashlet-ContrainteFillier" canSearch="true"/>
+        </panel>
+    </form>
+    <action-attrs name="action-refresh-dashlet-ContrainteFillier">
+        <attribute for="panel-dashlet-ContrainteFillier" name="refresh" expr="true"/>
+    </action-attrs>
+
+    <form name="CentreExam-ContrainteAll-form" title="ContrainteAll" model="com.hakibati.svg.examen.db.CentreExam"
+          width="large">
+        <panel colSpan="12">
+            <label title="ContrainteAll" colSpan="8"/>
+        </panel>
+        <panel colSpan="12">
+            <panel-dashlet name="panel-dashlet-ContrainteAll" showTitle="false" colSpan="12" height="350"
+                           action="action-dashlet-ContrainteAll" canSearch="true"/>
+        </panel>
+    </form>
+
+
+
+
+
+
+
+    <form name="generation-form" title="Génération" model="com.hakibati.svg.examen.db.CentreExam" canSave="true"
+          canDelete="false" width="large">
+        <panel title="Nouvelle recherche" showTitle="false">
+            <spacer name="ffff" colSpan="9"/>
+            <button name="generate-new" title="Démarrer" prompt="Voulez-vous vraiment démarrer le générateur?"
+                    onClick="action-new-generat" colSpan="3"/>
+
+        </panel>
+        <panel title="Historiques" showTitle="false">
+            <panel-related field="dossierExam" title="Historiques" colSpan="12" form-view="DossierExam-form"
+                           grid-view="DossierExam-grid" canNew="false" canSelect="false"/>
+        </panel>
+
+    </form>
+
+    <action-group name="action-new-generat">
+        <action name="save"/>
+        <action name="action-star-generat"/>
+    </action-group>
+    <action-method name="action-checked-generat">
+        <call class="com.hakibati.svg.examen.web.CentreExamController" method="checkedGenerat"/>
+    </action-method>
+    <action-method name="action-star-generat">
+        <call class="com.hakibati.svg.examen.web.CentreExamController" method="Generate"/>
+    </action-method>
+    <action-method name="action-create-new-college">
+        <call class="com.hakibati.svg.examen.web.CentreExamController" method="CreatNewProjetCollege"/>
+    </action-method>
+    <action-method name="action-create-new-lycee">
+        <call class="com.hakibati.svg.examen.web.CentreExamController" method="CreatNewProjetLycee"/>
+    </action-method>
+
+    <action-method name="action-mise-ajour-convocationP">
+        <call class="com.hakibati.svg.examen.web.CentreExamController" method="MiseAjourConvocationP"/>
+    </action-method>
+    <action-method name="action-mise-ajour-convocationL">
+        <call class="com.hakibati.svg.examen.web.CentreExamController" method="MiseAjourConvocationL"/>
+    </action-method>
+</object-views>

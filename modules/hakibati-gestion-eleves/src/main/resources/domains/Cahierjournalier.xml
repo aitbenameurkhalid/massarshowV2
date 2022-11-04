@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_5.3.xsd">
+
+    <module name="hakibati-gestion-eleves" package="com.hakibati.gestion.eleves.db"/>
+    <entity name="Cahierjournalier" cacheable="true">
+        <date name="dateOperation" title="Date" required="true"/>
+        <integer name="dayOfWeek" selection="selection-list-journee-MenuHebdomadaire">
+            <![CDATA[
+   return dateOperation.getDayOfWeek().getValue();
+      ]]>
+        </integer>
+        <string name="observation" title="Observation" large="true"/>
+        <string name="menupetitdejeuner" title="Petit déjeuner" large="true"/>
+        <string name="menudejeuner" title="Déjeuner" large="true"/>
+        <string name="menudiner" title="Dîner" large="true"/>
+        <one-to-many name="personnesnourriesJournalier" ref="PersonnesnourriesJournalier" mappedBy="cahierjournalier" title="personnes Nourries"/>
+        <one-to-many name="operationsJournalier" ref="OperationJournalier" mappedBy="cahierjournalier" title="Opérations Articles"/>
+        <many-to-one name="etablissement" ref="com.app.application.db.Etablissement">
+            <![CDATA[
+    if (etablissement == null)
+   return createdBy.getEtablissementSelectionnee() ;
+   return etablissement;
+      ]]>
+        </many-to-one>
+        <many-to-one name="createdBy" ref="com.axelor.auth.db.User"/>
+        <unique-constraint columns="dateOperation,etablissement"/>
+    </entity>
+</domain-models>

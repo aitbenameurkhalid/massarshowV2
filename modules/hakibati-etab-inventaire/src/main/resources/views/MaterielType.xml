@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+
+  <grid name="MaterielType-grid" title="Type materiel" model="com.hakibati.etab.inventaire.db.MaterielType">
+    <field name="code"/>
+    <field name="name"/>
+    <field name="etablissement"/>
+  </grid>
+
+  <form name="MaterielType-form" title="Type materiel" model="com.hakibati.etab.inventaire.db.MaterielType">
+    <panel title="Ajouter ou modifier">
+      <field name="code"/>
+      <field name="name"/>
+    </panel>
+  </form>
+
+</object-views>

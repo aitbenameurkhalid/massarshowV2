@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+  <grid name="AllEtabMassar-grid" title="AllEtabMassar" model="com.hakibati.setting.db.AllEtabMassar" x-selector="checkbox">
+    <toolbar>
+      <button name="btn-refresh" title="Import" prompt="Voulez-vous importer ?" onClick="com.setting.web.AllpersonnelController:ImportDataEtabMassar" css="btn btn-warning label-bold bold large center"/>
+    </toolbar>
+    <field name="cdETAB" title="Gresa"  />
+    <field name="nnomA" title="nOM_ETABA "/>
+    <field name="nomL"  title="nOM_ETABL" />
+    <field name="cDbr" title="cD_etabr"/>
+    <field name="typeEtab" title="typeEtab"/>
+    <field name="direction" title="Direction"/>
+    <field name="ensPrimG" title="ensPrimG"/>
+    <field name="ensPrimO" title="ensPrimO"/>
+    <field name="ensColG" title="ensColG"/>
+    <field name="ensColO" title="ensColO"/>
+    <field name="ensQualG" title="ensQualG"/>
+    <field name="ensQualO" title="ensQualO"/>
+    <field name="ensQualT" title="ensQualT"/>
+    <field name="ensPrescoM" title="ensPrescoM"/>
+    <field name="ensPrescoC" title="ensPrescoC"/>
+    <field name="ensBts" title="ensBts"/>
+    <field name="ensCPGE" title="ensCPGE"/>
+  </grid>
+
+  <form name="AllEtabMassar-form" title="AllEtabMassar" cols="2" model="com.hakibati.setting.db.AllEtabMassar">
+    <panel title="Overview">
+      <field name="cdETAB" title="Gresa"  />
+      <field name="nnomA" title="nOM_ETABA "/>
+      <field name="nomL"  title="nOM_ETABL" />
+      <field name="typeEtab" title="typeEtab"/>
+      <field name="cDbr" title="cD_etabr"/>
+      <field name="direction" title="Direction"/>
+      <field name="ensPrimG" title="ensPrimG"/>
+      <field name="ensPrimO" title="ensPrimO"/>
+      <field name="ensColG" title="ensColG"/>
+      <field name="ensColO" title="ensColO"/>
+      <field name="ensQualG" title="ensQualG"/>
+      <field name="ensQualO" title="ensQualO"/>
+      <field name="ensQualT" title="ensQualT"/>
+      <field name="ensPrescoM" title="ensPrescoM"/>
+      <field name="ensPrescoC" title="ensPrescoC"/>
+      <field name="ensBts" title="ensBts"/>
+      <field name="ensCPGE" title="ensCPGE"/>
+    </panel>
+  </form>
+
+</object-views>

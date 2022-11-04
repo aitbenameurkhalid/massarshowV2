@@ -1,0 +1,3 @@
+code;indexGroupe;name;namear;roleRead;roleWrite;roleDelete;language;key
+0;0;TOUS LES APPLICATIONS + limité;جميع المكونات + محدود;role.hakibati.svg.examen.read;role.hakibati.svg.examen.write;role.hakibati.svg.examen.delete;ar;value:TOUS LES APPLICATIONS + limité
+-1;-1;TOUS LES APPLICATIONS + illimité;جميع المكونات + غير محدودة;role.hakibati.svg.examen.read;role.hakibati.svg.examen.write;role.hakibati.svg.examen.delete;ar;value:TOUS LES APPLICATIONS + illimité

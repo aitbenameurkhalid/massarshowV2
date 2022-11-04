@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_5.3.xsd">
+
+  <module name="hakibati-setting" package="com.hakibati.setting.db" />
+  <entity name="RoleDescribe" cacheable="true">
+    <string name="name" required="true" translatable="true"/>
+    <integer name="code" required="true" unique="true"/>
+<!--    <integer name="code"  />-->
+    <integer name="indexGroupe" title="Index de Groupe"/>
+    <many-to-one name="roleRead" title="Role Lir" ref="com.axelor.auth.db.Role" required="true"/>
+    <many-to-one name="roleWrite" title="Role Ecrir" ref="com.axelor.auth.db.Role" required="true"/>
+    <many-to-one name="roleDelete" title="Role Supprimer" ref="com.axelor.auth.db.Role" required="true"/>
+    <one-to-many name="etablissementRolsDescribe" title="Les Rols Describe" ref="EtablissementRolsDescribe" mappedBy="roleDescribes"/>
+
+  </entity>
+</domain-models>

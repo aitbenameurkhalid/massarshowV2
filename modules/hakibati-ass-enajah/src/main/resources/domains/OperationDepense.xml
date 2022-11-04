@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_5.3.xsd">
+
+  <module name="hakibati-ass-enajah" package="com.hakibati.ass.enajah.db"  />
+
+  <entity name="OperationDepense" cacheable="true" >
+    <integer name="selectMethode" title="Méthode de Depense" selection="Operation.select.methode" required="true"  />
+    <integer name="statusSelectBonCommandeCaisse" title="Status"  required="true" readonly="true" default="1"/>
+    <boolean name="archiveOperation" title="archif" default="false" readonly="true"/>
+    <string name="sujet" title="Sujet du Opération"/>
+    <string name="name" title="Numero" readonly="true"/>
+    <string name="fournisseur"/>
+    <string name="adresseFournisseur" title="adresse de fournisseur"/>
+    <decimal name="offres" title="Offres financières"/>
+    <string name="fournisseurDeux" title="2eme fournisseur" />
+    <string name="adresseFournisseurDeux" title="adresse de 2eme fournisseur"/>
+    <decimal name="offresDeux" title="Offres financières "/>
+    <string name="fournisseurTrois" title="3eme fournisseur"/>
+    <string name="adresseFournisseurTrois" title="adresse de 3eme fournisseur"/>
+    <decimal name="offresTrois" title="Offres financières"/>
+    <string name="fournisseurQuatre" title="4eme fournisseur"/>
+    <string name="adresseFournisseurQuatre" title="adresse de 4eme fournisseur"/>
+    <decimal name="offresQuatre" title="Offres financières"/>
+    <string name="fournisseurCinq" title="5eme fournisseur"/>
+    <string name="adresseFournisseurCinq" title="adresse de 5eme fournisseur"/>
+    <decimal name="offresCinq" title="Offres financières"/>
+    <string name="nomeDepresident" title="Prèsident"/>
+    <string name="nomeDeTresorier" title="Trésorier"/>
+    <date name="dateDeOperation" title="Date" required="true"/>
+    <string name="anneeFinanciere" title="année financière" required="true" readonly="true">
+      <![CDATA[
+   return dateDeOperation.getYear() + "";
+      ]]>
+     </string>
+    <string name="sommeLettreAr" title="Somme En Lettre"/>
+    <string name="sommeLettreFr" title="Somme En Lettre"/>
+    <string name="somme" title="Somme"/>
+    <integer name="methodePaiement" title="Methode de paiement"  selection="Operation.select.methode.paiement" default="1"/>
+    <string name="numeroCheque" title="Numéro du chèque"/>
+    <string name="ribDeFournisseur" title="RIB De Fournisseur"/>
+    <many-to-one name="domainDepense" ref="DomaineDepens" />
+    <one-to-many name="tablesDepenses" ref="TableDepense" mappedBy="operation" title="Liste des besoins" />
+    <one-to-many name="tablesPieceJoindre" ref="PieceJoindreDepense" mappedBy="operation" title="Liste des Piece Joindre de Depense"/>
+    <many-to-one name="etablissement" ref="com.app.application.db.Etablissement"  >
+      <![CDATA[
+    if (etablissement == null)
+   return createdBy.getEtablissementSelectionnee() ;
+   return etablissement;
+      ]]>
+    </many-to-one>
+    <many-to-one name="createdBy" ref="com.axelor.auth.db.User"/>
+      <extra-code>
+          <![CDATA[
+         public static final Integer phase1 = 1;
+         public static final Integer phase2 = 2;
+         public static final Integer phase3 = 3;
+         public static final Integer phase4 = 4;
+         public static final Integer phase5 = 5;
+         public static final Integer phase6 = 6;
+         public static final Integer phase7 = 7;
+         public static final Integer phase8 = 8;
+
+         public static final Integer phase10 = 10;
+         public static final Integer phase11 = 11;
+         public static final Integer phase12 = 12;
+
+       ]]>
+      </extra-code>
+    <track>
+      <field name="name"/>
+      <field name="sujet"/>
+      <field name="dateDeOperation"/>
+    </track>
+
+
+  </entity>
+
+</domain-models>

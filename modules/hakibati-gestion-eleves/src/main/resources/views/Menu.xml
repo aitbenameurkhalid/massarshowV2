@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+  <menuitem name="menu-gestion-eleves-exterieur" parent="menu-gestion-eleves" title="Fiches élèves" icon="fa-graduation-cap"/>
+  <menuitem name="menu-gestion-eleves-exterieur-dashboard" parent="menu-gestion-eleves-exterieur" title="Statistiques" icon="fa-line-chart" icon-background="#FFBF00" action="action-gestion-eleves-exterieur-dashboard" />
+  <action-view name="action-gestion-eleves-exterieur-dashboard" title="Statistiques" home="true">
+    <view type="dashboard" name="dashboard-gestion-eleves-exterieur" />
+    <context name="_etablissement" expr="eval: __user__.etablissementSelectionnee"/>
+  </action-view>
+
+  <menuitem name="menu-gestion-eleves-exterieur-donnees" parent="menu-gestion-eleves-exterieur" title="Données des élèves"
+            action="action-gestion-eleves-exterieur-donnees" icon="fa-database"
+            icon-background="#DE3163"/>
+  <action-method name="action-gestion-eleves-exterieur-donnees">
+    <call class="com.gestion.eleves.web.GestionelevesController" method="OpenGestionEleve"/>
+  </action-method>
+
+  <menuitem name="menu-gestion-eleves-notes-donnees" parent="menu-gestion-eleves-exterieur" title="Notes élèves"
+            action="action-gestion-eleves-notes-donnees" icon="fa-database"
+            icon-background="#DE3163"/>
+  <action-method name="action-gestion-eleves-notes-donnees">
+    <call class="com.gestion.eleves.web.GestionelevesController" method="OpenGestionEleveNotes"/>
+  </action-method>
+
+  <menuitem name="menu-gestion-eleves-exterieur-grpupe" parent="menu-gestion-eleves-exterieur" title="Distribution Des groupes"
+            action="action-gestion-eleves-exterieur-goupe"  />
+  <action-method name="action-gestion-eleves-exterieur-goupe">
+    <call class="com.gestion.eleves.web.GestionelevesController" method="OpenGestionEleveGroupe"/>
+  </action-method>
+
+  <menuitem name="menu-gestion-eleves-exterieur-imprimes" parent="menu-gestion-eleves-exterieur" title="Imprimés"
+            action="action-gestion-eleves-exterieur-imprimes"/>
+
+  <action-method name="action-gestion-eleves-exterieur-imprimes">
+    <call class="com.gestion.eleves.web.GestionelevesController" method="OpenPrintEleve"/>
+  </action-method>
+
+  <menuitem name="menu-gestion-eleves-exterieur-parametres" parent="menu-gestion-eleves-exterieur" title="Paramétres" action="action-gestion-eleves-exterieur-parametres"/>
+  <action-method name="action-gestion-eleves-exterieur-parametres">
+    <call class="com.gestion.eleves.web.GestionelevesController" method="OpenParametresEleve"/>
+  </action-method>
+  <menuitem name="menu-gestion-eleves-archive-donnees" parent="menu-gestion-eleves-exterieur" title="Elèves Archive"
+            action="action-gestion-eleves-archive-donnees" icon="fa-inbox"
+            icon-background="#e6550d"/>
+  <action-method name="action-gestion-eleves-archive-donnees">
+    <call class="com.gestion.eleves.web.GestionelevesController" method="OpenGestionEleveArchive"/>
+  </action-method>
+
+  <!-- menu internat-->
+  <menuitem name="menu-gestion-eleves-internat" parent="menu-gestion-eleves" title="Fiches élèves Internat" icon="fa-american-sign-language-interpreting" icon-background="#FFC300"/>
+  <menuitem name="menu-gestion-eleves-internat-donnees" parent="menu-gestion-eleves-internat" title="Données des élèves"
+            action="action-gestion-eleves-internat-donnees" icon="fa-database"
+            icon-background="#FFC300"/>
+  <action-method name="action-gestion-eleves-internat-donnees">
+    <call class="com.gestion.eleves.web.GestionelevesController" method="OpenGestionEleveInternat"/>
+  </action-method>
+
+<!--  <menuitem name="menu-gestion-eleves-internat-nouveau" parent="menu-gestion-eleves-internat" title="Nouvel élève"-->
+<!--            action="action-gestion-eleves-internat-nouveau"  icon="fa-plus"-->
+<!--            icon-background="#FFC300"/>-->
+<!--  <action-view name="action-gestion-eleves-internat-nouveau" title="Nouvel élève"-->
+<!--               model="com.hakibati.gestion.eleves.db.EleveInternat">-->
+<!--    <view type="form" name="EleveInternat-form"/>-->
+<!--  </action-view>-->
+  <menuitem name="menu-gestion-eleves-internat-absence" parent="menu-gestion-eleves-internat" title="Suivi des élèves"
+            action="action-gestion-eleves-internat-suivi"/>
+  <action-method name="action-gestion-eleves-internat-suivi">
+    <call class="com.gestion.eleves.web.GestionelevesController" method="OpenGestionEleveInternatsuivi"/>
+  </action-method>
+  <menuitem name="menu-gestion-eleves-internat-rapport" parent="menu-gestion-eleves-internat" title="Rapport journalier"
+            action="action-gestion-eleves-internat-rapport"/>
+  <action-view name="action-gestion-eleves-internat-rapport" title="Rapport journalier"
+               model="com.hakibati.gestion.eleves.db.RapportjournalierInternat">
+    <view type="grid" name="RapportjournalierInternat-grid"/>
+    <view type="form" name="RapportjournalierInternat-form"/>
+  </action-view>
+  <menuitem name="menu-gestion-eleves-internat-imprimes" parent="menu-gestion-eleves-internat" title="Imprimés"
+            action="action-gestion-eleves-internat-imprimes"/>
+  <action-view name="action-gestion-eleves-internat-imprimes" title="Imprimés"
+               model="com.hakibati.gestion.eleves.db.Gestioneleves">
+    <view type="form" name="eleve-internat-print-form"/>
+  </action-view>
+  <menuitem name="menu-gestion-eleves-internat-parametres" parent="menu-gestion-eleves-internat" title="Paramétres" action="action-gestion-eleves-internat-parametres"/>
+  <action-method name="action-gestion-eleves-internat-parametres">
+    <call class="com.gestion.eleves.web.GestionelevesController" method="OpenParametresEleveinternat"/>
+  </action-method>
+  <menuitem name="menu-gestion-eleves-internat-archive" parent="menu-gestion-eleves-internat" title="archive Internat" action="action-gestion-eleves-internat-archive"/>
+  <action-method name="action-gestion-eleves-internat-archive">
+    <call class="com.gestion.eleves.web.GestionelevesController" method="OpenGestionEleveInternatArchive"/>
+  </action-method>
+
+  <!--menu archive-->
+
+
+
+  <menuitem name="menu-comptabilite-internat" title="Comptabilité Internat"/>
+  <menuitem name="menu-comptabilite-internat-CahierJournalier" title="Cahier Journalière"
+            parent="menu-comptabilite-internat" action="action-comptabilite-internat-Cahierjournalier"/>
+  <action-view name="action-comptabilite-internat-Cahierjournalier" title=""
+               model="com.hakibati.gestion.eleves.db.Cahierjournalier">
+    <view type="grid" name="Cahierjournalier-grid"/>
+    <view type="form" name="Cahierjournalier-form"/>
+  </action-view>
+  <menuitem name="menu-comptabilite-internat-parametres-MenuHebdomadaire" title="Menu Hebdomadaire"
+            parent="menu-comptabilite-internat" action="action-comptabilite-internat-parametres-MenuHebdomadaire"/>
+  <action-view name="action-comptabilite-internat-parametres-MenuHebdomadaire" title="MenuHebdomadaire"
+               model="com.hakibati.gestion.eleves.db.MenuHebdomadaire">
+    <view type="grid" name="MenuHebdomadaire-grid"/>
+    <view type="form" name="MenuHebdomadaire-form"/>
+  </action-view>
+
+
+  <menuitem name="menu-comptabilite-internat-imprime" title="Imprimés" parent="menu-comptabilite-internat"
+            action="action-comptabilite-internat-imprime"/>
+  <action-view name="action-comptabilite-internat-imprime" title="Imprime"
+               model="com.hakibati.gestion.eleves.db.Cahierjournalier">
+    <view type="form" name="CahierJournalier-imprime-form"/>
+  </action-view>
+  <menuitem name="menu-comptabilite-internat-parametres" title="Paramètres" parent="menu-comptabilite-internat"/>
+
+  <menuitem name="menu-comptabilite-internat-parametres-Fournisseur" title="Fournisseurs"
+            parent="menu-comptabilite-internat-parametres"
+            action="action-comptabilite-internat-parametres-Fournisseur"/>
+  <action-view name="action-comptabilite-internat-parametres-Fournisseur" title="Fournisseurs"
+               model="com.hakibati.gestion.eleves.db.Fournisseur">
+    <view type="grid" name="Fournisseur-grid"/>
+    <view type="form" name="Fournisseur-form"/>
+  </action-view>
+  <menuitem name="menu-comptabilite-internat-parametres-TypeArticle" title="Types d'articles"
+            parent="menu-comptabilite-internat-parametres"
+            action="action-comptabilite-internat-parametres-TypeArticle"/>
+  <action-view name="action-comptabilite-internat-parametres-TypeArticle" title="Types d'articles"
+               model="com.hakibati.gestion.eleves.db.TypeArticle">
+    <view type="grid" name="TypeArticle-grid"/>
+    <view type="form" name="TypeArticle-form"/>
+  </action-view>
+  <menuitem name="menu-comptabilite-internat-parametres-Article" title="Article"
+            parent="menu-comptabilite-internat-parametres" action="action-comptabilite-internat-parametres-Article"/>
+  <action-view name="action-comptabilite-internat-parametres-Article" title="Article"
+               model="com.hakibati.gestion.eleves.db.Article">
+    <view type="grid" name="Article-grid"/>
+    <view type="form" name="Article-form"/>
+  </action-view>
+<!--    <menuitem name="menu-import-export-eleves-massar-men-gov-ma" parent="menu-gestion-eleves-exterieur" title="Import/Export de Massar"-->
+<!--              action="action-open-mport-export-eleves-massar-men-gov-ma" icon="fa-database"-->
+<!--              icon-background="#DE3163"/>-->
+<!--    <action-method name="action-open-mport-export-eleves-massar-men-gov-ma">-->
+<!--        <call class="com.gestion.eleves.web.ImportExDataMassarController" method="OpenImportExportMassarMenGovMa"/>-->
+<!--    </action-method>-->
+</object-views>

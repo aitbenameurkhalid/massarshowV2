@@ -1,0 +1,11 @@
+code;permissions
+etablissementAdmin;perm.comptabilite.matier.DateDepart.select.etab.rwcde
+etablissementAdmin;perm.comptabilite.matier.DestinataireM.select.etab.rwcde
+etablissementAdmin;perm.comptabilite.matier.Mconsommable.select.etab.rwcde
+etablissementAdmin;perm.comptabilite.matier.OperationE.select.etab.rwcde
+etablissementAdmin;perm.comptabilite.matier.OperationS.select.etab.rwcde
+etablissementAdmin;perm.comptabilite.matier.SourcesM.select.etab.rwcde
+etablissementAdmin;perm.comptabilite.matier.TableE.select.etab.rwcde
+etablissementAdmin;perm.comptabilite.matier.TableS.select.etab.rwcde
+etablissementAdmin;perm.comptabilite.matier.TypeMatiereC.select.etab.rwcde
+
