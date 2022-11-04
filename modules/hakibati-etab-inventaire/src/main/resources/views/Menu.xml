@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+  <menuitem name="menu-etab-inventaire" title="Inventaire" icon="fa-file-text-o" icon-background="violet"/>
+
+  <menuitem name="menu-etab-inventaire-materielInformatique" parent="menu-etab-inventaire" title="Saisie et suivi"  action="action-Saisie-suivi" />
+    <action-view name="action-Saisie-suivi" title="Saisie et suivi" model="com.hakibati.etab.inventaire.db.Inventaire">
+    <view type="grid" name="Inventaire-grid"/>
+    <view type="form" name="Inventaire-form"/>
+  </action-view>
+
+  <menuitem name="menu-etab-inventaire-parametre" parent="menu-etab-inventaire" title="LES PARAMETRES"  />
+  <menuitem name="menu-etab-inventaire-parametre-MaterielType" parent="menu-etab-inventaire-parametre" title="Type de materiau"  action="action-inventaire-parametre-MaterielType" />
+  <action-view name="action-inventaire-parametre-MaterielType" title="Matériel informatique" model="com.hakibati.etab.inventaire.db.MaterielType">
+    <view type="grid" name="MaterielType-grid"/>
+    <view type="form" name="MaterielType-form"/>
+  </action-view>
+  <menuitem name="menu-etab-inventaire-parametre-MaterielListe" parent="menu-etab-inventaire-parametre" title="Liste materiel"  action="action-inventaire-parametre-MaterielListe" />
+  <action-view name="action-inventaire-parametre-MaterielListe" title="MaterielListe" model="com.hakibati.etab.inventaire.db.MaterielListe">
+    <view type="grid" name="MaterielListe-grid"/>
+    <view type="form" name="MaterielListe-form"/>
+  </action-view>
+
+
+</object-views>

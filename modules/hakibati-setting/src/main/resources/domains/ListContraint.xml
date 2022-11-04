@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_5.3.xsd">
+
+<!--  <module name="app-svg" package="com.app.svg.db" />-->
+  <module name="hakibati-setting" package="com.hakibati.setting.db" />
+  <entity name="Listcontraint" cacheable="true">
+    <string name="name" required="true" translatable="true" unique="true"/>
+    <integer name="code" required="true" unique="true"/>
+    <integer name="typeContrainte" title="Les contrainte" selection="select.contraint.type" default="1" />
+    <boolean name="afficherValeur" title="afficher Valeur"/>
+    <boolean name="afficherProf" title="afficher prof"/>
+    <boolean name="afficherSalle" title="afficher Salle"/>
+    <boolean name="afficherMatiere" title="afficher Matiere"/>
+    <boolean name="afficherFillier" title="afficher Fillier"/>
+    <boolean name="afficherMatin" title="afficher Matin"/>
+    <boolean name="afficherApresMidi" title="afficher Aprés Midi"/>
+    <boolean name="afficherDateExam" title="afficher Dtae Exam"/>
+    <integer name="valeurParDefaut" title="valeur par défaut"/>
+    <string name="commenter" title="commenter"/>
+  </entity>
+</domain-models>

@@ -1,0 +1,241 @@
+"key","message","comment","context"
+"2eme class",,,"resources\domains\ActivityResulteFet.xml:14"
+"2eme prof",,,"resources\domains\ActivityResulteFet.xml:17"
+"Activity resultes fet",,,"resources\domains\DossierImportFet.xml:27"
+"Aperçu",,,"resources\views\DossierImportFet.xml:37
+resources\views\DossierImportFet.xml:70
+resources\views\DossierImportFet.xml:71
+resources\views\DossierImportFet.xml:9"
+"Aperçu des tables",,,"resources\views\DossierImportFet.xml:184
+resources\views\DossierImportFet.xml:195"
+"Apres-midi","Après-midi",,"java\com\emploi\temps\service\DossierImportFetService.java:373
+java\com\emploi\temps\service\DossierImportFetService.java:73
+java\com\emploi\temps\service\ExportEmpoiExcel.java:226"
+"Choisissez un fichier au format fet",,,"java\com\emploi\temps\service\ResultaFetService.java:51"
+"Classes Fet",,,"resources\domains\ResultatFet.xml:15"
+"Created by",,,"resources\domains\ActivityResulteFet.xml:26
+resources\domains\DayFet.xml:20
+resources\domains\DayHourFet.xml:23
+resources\domains\DossierImportFet.xml:37
+resources\domains\HourFet.xml:20
+resources\domains\ResultatFet.xml:23
+resources\domains\RoomDossier.xml:20
+resources\domains\RoomFet.xml:20
+resources\domains\StudentDossier.xml:26
+resources\domains\StudentFet.xml:19
+resources\domains\SubjectFet.xml:19
+resources\domains\TeacherDossier.xml:21
+resources\domains\TeacherFet.xml:20"
+"DIMANCHE",,,"java\com\emploi\temps\web\IReport.java:42"
+"Dossier import fet",,,"resources\domains\ActivityResulteFet.xml:18
+resources\domains\DayFet.xml:12
+resources\domains\HourFet.xml:12
+resources\domains\RoomDossier.xml:11
+resources\domains\StudentDossier.xml:18
+resources\domains\TeacherDossier.xml:12"
+"DossierImportFet",,,"resources\views\DossierImportFet.xml:147
+resources\views\ResultatFet.xml:40"
+"Dossiers Fet",,,"resources\domains\ResultatFet.xml:14"
+"Doti",,,"resources\domains\TeacherFet.xml:10"
+"Détails",,,"resources\views\DossierImportFet.xml:114
+resources\views\DossierImportFet.xml:34"
+"EXCEL",,,"resources\views\DossierImportFet.xml:156"
+"Emploi Du Temps de toutes les classes",,,"java\com\emploi\temps\web\IReport.java:53"
+"Emploi Du Temps de toutes les professeurs",,,"java\com\emploi\temps\web\IReport.java:55"
+"Emploi Du Temps de toutes les salles",,,"java\com\emploi\temps\web\IReport.java:51"
+"Emploi Du temps des Salles",,,"java\com\emploi\temps\web\DossierImportFetController.java:148"
+"Emploi Du temps des Salles par Jour",,,"java\com\emploi\temps\web\DossierImportFetController.java:186"
+"Emploi Du temps des classes",,,"java\com\emploi\temps\web\DossierImportFetController.java:125"
+"Emploi Du temps des eleves par Jour",,,"java\com\emploi\temps\web\DossierImportFetController.java:171"
+"Emploi du Temps Service",,,"resources\domains\StudentDossier.xml:8"
+"Emploi du temps",,,"resources\domains\RoomDossier.xml:8
+resources\views\Menu.xml:8"
+"En cours du importation",,,"resources\views\DossierImportFet.xml:179"
+"Erreur",,,"resources\domains\DossierImportFet.xml:25"
+"Erreur du importation",,,"resources\views\DossierImportFet.xml:181"
+"Etablissement",,,"resources\domains\ActivityResulteFet.xml:19
+resources\domains\DayFet.xml:13
+resources\domains\DayHourFet.xml:16
+resources\domains\DossierImportFet.xml:30
+resources\domains\HourFet.xml:13
+resources\domains\ResultatFet.xml:16
+resources\domains\RoomDossier.xml:13
+resources\domains\RoomFet.xml:13
+resources\domains\StudentDossier.xml:19
+resources\domains\StudentFet.xml:12
+resources\domains\SubjectFet.xml:12
+resources\domains\TeacherDossier.xml:14
+resources\domains\TeacherFet.xml:13"
+"File",,,"resources\views\ResultatFet.xml:32"
+"Fin du importation",,,"resources\views\DossierImportFet.xml:180"
+"H",,,"java\com\emploi\temps\service\ExportEmpoiExcel.java:152
+java\com\emploi\temps\service\ExportEmpoiExcel.java:156"
+"Heur",,,"resources\domains\ActivityResulteFet.xml:11"
+"Historiques",,,"resources\views\ResultatFet.xml:43"
+"Import",,,"resources\views\ResultatFet.xml:36"
+"Import-Salles(%)",,,"resources\domains\DossierImportFet.xml:23"
+"Import-Temps(%)",,,"resources\domains\DossierImportFet.xml:22"
+"Importer Résultats FET",,,"resources\views\Menu.xml:10"
+"Importer resulte/timetables  FET",,,"resources\views\ResultatFet.xml:30"
+"Imprimer",,,"resources\views\DossierImportFet.xml:99"
+"JEUDI",,,"java\com\emploi\temps\web\IReport.java:46"
+"Jour",,,"resources\domains\ActivityResulteFet.xml:10"
+"LUNDI",,,"java\com\emploi\temps\web\IReport.java:43"
+"List des activities",,,"resources\views\ActivityResulteFet.xml:7"
+"List-Classes",,,"resources\views\ResultatFet.xml:77"
+"List-Jours-heur",,,"resources\views\ResultatFet.xml:47"
+"List-Matieres",,,"resources\views\ResultatFet.xml:65"
+"List-Professeurs",,,"resources\views\ResultatFet.xml:71"
+"List-Salles",,,"resources\views\ResultatFet.xml:59"
+"Liste des Matieres",,,"resources\views\SubjectFet.xml:7"
+"Liste des classes",,,"resources\views\StudentDossier.xml:7
+resources\views\StudentFet.xml:7"
+"Liste des dossiers",,,"resources\views\DossierImportFet.xml:8"
+"Liste des heurs",,,"resources\views\DayHourFet.xml:7
+resources\views\HourFet.xml:7"
+"Liste des jours",,,"resources\views\DayFet.xml:7"
+"Liste des profs",,,"resources\views\RoomDossier.xml:7
+resources\views\TeacherDossier.xml:7
+resources\views\TeacherFet.xml:7"
+"Liste des salles",,,"resources\views\RoomFet.xml:7"
+"Liste dossiers",,,"resources\views\ResultatFet.xml:7"
+"Log",,,"resources\views\ResultatFet.xml:34"
+"MARDI",,,"java\com\emploi\temps\web\IReport.java:44"
+"MERCREDI",,,"java\com\emploi\temps\web\IReport.java:45"
+"Matin",,,"java\com\emploi\temps\service\DossierImportFetService.java:366
+java\com\emploi\temps\service\DossierImportFetService.java:66
+java\com\emploi\temps\service\ExportEmpoiExcel.java:217"
+"Modifier table service",,,"resources\views\DossierImportFet.xml:121"
+"Name",,,"resources\domains\DossierImportFet.xml:8
+resources\domains\ResultatFet.xml:8"
+"Nom court",,,"resources\domains\SubjectFet.xml:10"
+"Nom fichier",,,"resources\domains\DossierImportFet.xml:15"
+"Nombre Globale",,,"java\com\emploi\temps\web\IReport.java:56"
+"Numero",,,"resources\domains\RoomFet.xml:10"
+"PDF",,,"resources\views\DossierImportFet.xml:155"
+"Resultat fet",,,"resources\domains\DayHourFet.xml:15
+resources\domains\DossierImportFet.xml:29
+resources\domains\RoomFet.xml:11
+resources\domains\StudentFet.xml:11
+resources\domains\SubjectFet.xml:11
+resources\domains\TeacherFet.xml:12"
+"Room fet",,,"resources\domains\RoomDossier.xml:12"
+"RoomFet",,,"resources\views\ResultatFet.xml:60"
+"Résultats",,,"resources\views\DossierImportFet.xml:18"
+"SAMEDI",,,"java\com\emploi\temps\web\IReport.java:48"
+"Student fet",,,"resources\domains\StudentDossier.xml:17"
+"StudentFet",,,"resources\views\ResultatFet.xml:78"
+"Students Dossier",,,"resources\domains\DossierImportFet.xml:20"
+"SubjectFet",,,"resources\views\ResultatFet.xml:66"
+"Sélectionner la liste",,,"resources\views\DossierImportFet.xml:106
+resources\views\DossierImportFet.xml:26"
+"Table Service",,,"resources\domains\TeacherDossier.xml:8"
+"Table service des professeur par Jour",,,"java\com\emploi\temps\web\DossierImportFetController.java:156"
+"Tables services des Professeurs",,,"java\com\emploi\temps\web\DossierImportFetController.java:90"
+"Teacher fet",,,"resources\domains\TeacherDossier.xml:13"
+"TeacherFet",,,"resources\views\ResultatFet.xml:72"
+"Teaches Dossier",,,"resources\domains\DossierImportFet.xml:18"
+"Telecharge",,,"resources\views\DossierImportFet.xml:10"
+"Telecharger",,,"resources\views\DossierImportFet.xml:109
+resources\views\DossierImportFet.xml:29"
+"Toutes les salles sont disponibles",,,"java\com\emploi\temps\service\DossierImportFetService.java:1085"
+"VENDREDI",,,"java\com\emploi\temps\web\IReport.java:47"
+"WORD",,,"resources\views\DossierImportFet.xml:157"
+"aucune salle  disponible",,,"java\com\emploi\temps\service\DossierImportFetService.java:1084"
+"classe",,,"resources\domains\ActivityResulteFet.xml:13
+resources\domains\StudentFet.xml:8
+resources\views\DossierImportFet.xml:50
+resources\views\DossierImportFet.xml:84"
+"classe ds Fet",,,"resources\domains\StudentFet.xml:9"
+"classes",,,"java\com\emploi\temps\service\ExportEmpoiExcel.java:146
+java\com\emploi\temps\service\ExportEmpoiExcel.java:166
+resources\domains\TeacherDossier.xml:9"
+"daysFet",,,"resources\views\DossierImportFet.xml:111
+resources\views\DossierImportFet.xml:31
+resources\views\ResultatFet.xml:48"
+"dossiers",,,"resources\views\ResultatFet.xml:13"
+"durée",,,"resources\domains\ActivityResulteFet.xml:9"
+"emploi temps eleves collectif(1/1)",,,"resources\views\DossierImportFet.xml:169"
+"emploi temps eleves individuelle(1/1 prof)",,,"resources\views\DossierImportFet.xml:170"
+"emploi temps eleves individuelle(1/1)",,,"resources\views\DossierImportFet.xml:166"
+"emploi temps eleves individuelle(2/1)",,,"resources\views\DossierImportFet.xml:167"
+"emploi temps eleves individuelle(3/1)",,,"resources\views\DossierImportFet.xml:168"
+"emploi temps salles individuelle(3/1)",,,"resources\views\DossierImportFet.xml:172"
+"fichiers FET",,,"resources\views\ResultatFet.xml:29"
+"find",,,"resources\views\DossierImportFet.xml:38
+resources\views\DossierImportFet.xml:72"
+"heur",,,"resources\domains\HourFet.xml:8"
+"heur ds Fet",,,"resources\domains\DayHourFet.xml:10
+resources\domains\HourFet.xml:9
+resources\views\DayHourFet.xml:10"
+"heurs",,,"resources\domains\DossierImportFet.xml:17"
+"hex color",,,"resources\domains\StudentFet.xml:10
+resources\domains\TeacherFet.xml:11"
+"id",,,"resources\domains\ActivityResulteFet.xml:8
+resources\domains\StudentDossier.xml:12"
+"id class",,,"resources\domains\StudentDossier.xml:15"
+"id groupe",,,"resources\domains\StudentDossier.xml:16"
+"id niveau",,,"resources\domains\StudentDossier.xml:14"
+"id parent",,,"resources\domains\StudentDossier.xml:13"
+"imprimer/modifier",,,"resources\views\DossierImportFet.xml:100
+resources\views\DossierImportFet.xml:20"
+"jour",,,"resources\domains\DayFet.xml:8"
+"jour ds Fet",,,"resources\domains\DayFet.xml:9
+resources\domains\DayHourFet.xml:9
+resources\views\DayHourFet.xml:9"
+"jour réel",,,"resources\domains\DayHourFet.xml:12
+resources\views\DayHourFet.xml:11"
+"jours",,,"resources\domains\DossierImportFet.xml:16"
+"jours-heur",,,"resources\domains\ResultatFet.xml:9"
+"la Table des salles Libre",,,"resources\views\DossierImportFet.xml:175"
+"la table des salles disponible",,,"java\com\emploi\temps\web\DossierImportFetController.java:201"
+"ltr",,,"java\com\emploi\temps\service\DossierImportFetService.java:335
+java\com\emploi\temps\service\DossierImportFetService.java:35
+java\com\emploi\temps\service\DossierImportFetService.java:658
+java\com\emploi\temps\service\DossierImportFetService.java:782
+java\com\emploi\temps\service\ExportEmpoiExcel.java:71
+java\com\emploi\temps\web\IReport.java:37"
+"matiere",,,"resources\domains\SubjectFet.xml:8"
+"matiere ds Fet",,,"resources\domains\SubjectFet.xml:9"
+"matieres",,,"resources\domains\TeacherDossier.xml:10"
+"matiers",,,"resources\domains\ResultatFet.xml:11"
+"matière",,,"resources\domains\ActivityResulteFet.xml:15"
+"nom Reel",,,"resources\domains\RoomDossier.xml:10
+resources\domains\StudentDossier.xml:11"
+"nom ds Fet",,,"resources\domains\RoomDossier.xml:9
+resources\domains\StudentDossier.xml:10
+resources\domains\TeacherDossier.xml:11"
+"order",,,"resources\domains\DayFet.xml:10
+resources\domains\DayHourFet.xml:11
+resources\domains\HourFet.xml:10
+resources\views\DayHourFet.xml:8"
+"professeur",,,"resources\domains\ActivityResulteFet.xml:16
+resources\domains\TeacherFet.xml:8
+resources\views\DossierImportFet.xml:44
+resources\views\DossierImportFet.xml:78"
+"professeur ds Fet",,,"resources\domains\TeacherFet.xml:9"
+"professeurs",,,"java\com\emploi\temps\service\ExportEmpoiExcel.java:145
+java\com\emploi\temps\service\ExportEmpoiExcel.java:165
+resources\domains\ResultatFet.xml:12
+resources\domains\StudentDossier.xml:9"
+"reselta",,,"resources\views\DossierImportFet.xml:59
+resources\views\DossierImportFet.xml:93"
+"salle",,,"resources\domains\ActivityResulteFet.xml:12
+resources\domains\RoomFet.xml:8
+resources\views\DossierImportFet.xml:56
+resources\views\DossierImportFet.xml:90"
+"salle ds Fet",,,"resources\domains\RoomFet.xml:9"
+"salles",,,"java\com\emploi\temps\service\ExportEmpoiExcel.java:147
+java\com\emploi\temps\service\ExportEmpoiExcel.java:167
+resources\domains\ResultatFet.xml:13"
+"salles Dossier",,,"resources\domains\DossierImportFet.xml:19"
+"séance réel",,,"resources\domains\DayHourFet.xml:13
+resources\views\DayHourFet.xml:12"
+"table services profs collectif(1/1)",,,"resources\views\DossierImportFet.xml:164"
+"table services profs individuelle(1/1)",,,"resources\views\DossierImportFet.xml:161"
+"table services profs individuelle(2/1)",,,"resources\views\DossierImportFet.xml:162"
+"table services profs individuelle(3/1)",,,"resources\views\DossierImportFet.xml:163"
+"table services profs par jour",,,"resources\views\DossierImportFet.xml:165"
+"َemploi temps eleves par jour",,,"resources\views\DossierImportFet.xml:171"
+"َemploi temps salles collectif(1/1)",,,"resources\views\DossierImportFet.xml:173"
+"َemploi temps salles par jour",,,"resources\views\DossierImportFet.xml:174"

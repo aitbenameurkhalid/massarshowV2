@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_5.1.xsd">
+
+    <module name="hakibati-setting" package="com.axelor.auth.db" />
+
+    <entity name="User" cacheable="true" sequential="true">
+        <string name="phone"/>
+        <one-to-many name="etablissements" ref="com.app.application.db.UserEtablissement" mappedBy="users"/>
+        <many-to-one name="etablissementSelectionnee" title="Etablissement" ref="com.app.application.db.Etablissement"/>
+    </entity>
+
+</domain-models>

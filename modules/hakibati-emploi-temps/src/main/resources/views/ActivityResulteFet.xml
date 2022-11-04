@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+
+  <grid name="ActivityResulteFet-grid" title="List des activities" model="com.hakibati.emploi.db.ActivityResulteFet" editable="true" >
+   <field name="dossierImportFet" hidden="true" />
+    <field name="cd" width="80" />
+    <field name="teacherFet"  />
+      <field name="teacherFet2"  />
+    <field name="studentDossier" width="80" />
+    <field name="studentDossier2" width="80" />
+    <field name="duration" width="40"  />
+    <field name="subjectFet" />
+    <field name="dayFet"  width="100" domain="(self.dossierImportFet = :dossierImportFet)"  />
+    <field name="hourFet" width="80" domain="(self.dossierImportFet = :dossierImportFet)"/>
+    <field name="roomDossier" width="80" domain="(self.dossierImportFet = :dossierImportFet)" target-name="name" />
+     </grid>
+<!--    self.id IN (:stockLocationLineIdList)-->
+  <action-method name="action-change-spacetime">
+    <call class="com.emploi.temps.web.ActivityResulteFetController" method="OnchangeSpacetime"/>
+  </action-method>
+</object-views>

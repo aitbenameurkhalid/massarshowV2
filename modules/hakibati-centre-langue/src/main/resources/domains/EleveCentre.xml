@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_5.3.xsd">
+
+    <module name="hakibati-centre-langue" package="com.hakibati.centre.langue.db"/>
+    <entity name="EleveCentre" cacheable="true">
+        <string name="name" title="nom et prénom"/>
+        <string name="numeroInscription" title="numéro d'inscription"/>
+        <many-to-one name="niveau" ref="NiveauCentre"/>
+        <date name="datenaissance" title="Date de naissance"/>
+        <string name="tel" title="Telephone"/>
+        <string name="email" title="Email"/>
+        <string name="adresse" title="Adressee"/>
+        <many-to-one name="picture" ref="com.axelor.meta.db.MetaFile" title="Photo" initParam="true"/>
+        <many-to-many name="groupeCentre" ref="GroupeCentre" title="Groups" mappedBy="eleveCentres"/>
+        <one-to-many name="suiviFinancier" ref="SuiviFinancierCentre" mappedBy="eleveCentres" title="Suivi financier"/>
+        <many-to-one name="etablissement" ref="com.app.application.db.Etablissement">
+            <![CDATA[
+    if (etablissement == null)
+   return createdBy.getEtablissementSelectionnee() ;
+   return etablissement;
+      ]]>
+        </many-to-one>-to-one>
+        <many-to-one name="createdBy" ref="com.axelor.auth.db.User"/>
+    </entity>
+</domain-models>

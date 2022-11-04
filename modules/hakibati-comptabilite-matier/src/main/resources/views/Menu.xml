@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+  <menuitem name="menu-Comptabilite-Materiel" title="COMPTABILITE MATIERE" icon="fa-exchange"/>
+  <menuitem name="menu-Comptabilite-Materiel-entrees" title="ENTREES" icon="fa-compress" icon-background="green"
+            parent="menu-Comptabilite-Materiel"/>
+  <menuitem name="menu-Comptabilite-Materiel-sorties" title="SORTIES" icon="fa-expand" icon-background="red"
+            parent="menu-Comptabilite-Materiel"/>
+  <menuitem name="menu-Comptabilite-Materiel-imprimes" title="Imprimés" icon="fa-print" icon-background="orange"
+            parent="menu-Comptabilite-Materiel" action="action-Comptabilite-Materiel-imprimes"/>
+  <action-view name="action-Comptabilite-Materiel-imprimes" title="Imprimés"
+               model="com.app.application.db.Etablissement">
+    <view type="form" name="print-matiere-form"/>
+  </action-view>
+  <menuitem name="menu-Comptabilite-Materiel-parametres" title="Paramètres" icon="fa-wrench" icon-background="pink"
+            parent="menu-Comptabilite-Materiel"/>
+  <menuitem name="menu-Comptabilite-Materiel-entrees-nouveau" title="nouvelle opération" icon="fa-plus"
+            icon-background="green" parent="menu-Comptabilite-Materiel-entrees"
+            action="action-Comptabilite-Materiel-entrees-nouveau"/>
+  <action-view name="action-Comptabilite-Materiel-entrees-nouveau" title="Les opérations"
+               model="com.hakibati.comptabilite.matier.db.OperationE">
+    <view type="form" name="OperationE-form"/>
+  </action-view>
+  <menuitem name="menu-Comptabilite-Materiel-entrees-operation" title="Les opérations" icon="fa-list-ul"
+            icon-background="green" parent="menu-Comptabilite-Materiel-entrees"
+            action="action-Comptabilite-Materiel-entrees-operation"/>
+  <action-view name="action-Comptabilite-Materiel-entrees-operation" title="Les opérations"
+               model="com.hakibati.comptabilite.matier.db.OperationE">
+    <view type="grid" name="OperationE-grid"/>
+    <view type="form" name="OperationE-form"/>
+    <domain>self.archiveOperation = false</domain>
+  </action-view>
+  <menuitem name="menu-Comptabilite-Materiel-sorties-nouveau" title="nouvelle opération" icon="fa-plus"
+            icon-background="red" parent="menu-Comptabilite-Materiel-sorties"
+            action="action-Comptabilite-Materiel-sorties-nouveau"/>
+  <action-view name="action-Comptabilite-Materiel-sorties-nouveau" title="Les opérations"
+               model="com.hakibati.comptabilite.matier.db.OperationS">
+    <view type="form" name="OperationS-form"/>
+  </action-view>
+  <menuitem name="menu-Comptabilite-Materiel-sorties-operation" title="Les opérations" icon="fa-list-ul"
+            icon-background="red" parent="menu-Comptabilite-Materiel-sorties"
+            action="action-Comptabilite-Materiel-sorties-operation"/>
+  <action-view name="action-Comptabilite-Materiel-sorties-operation" title="Les opérations"
+               model="com.hakibati.comptabilite.matier.db.OperationS">
+    <view type="grid" name="OperationS-grid"/>
+    <view type="form" name="OperationS-form"/>
+    <domain>self.archiveOperation = false</domain>
+  </action-view>
+  <menuitem name="menu-Comptabilite-Materiel-parametres-mise" title="GENERER REPORT" icon="fa-ban"
+            icon-background="green" parent="menu-Comptabilite-Materiel-parametres"
+            action="action-Comptabilite-Materiel-parametres-mise"/>
+  <action-method name="action-Comptabilite-Materiel-parametres-mise">
+    <call class="com.comptabilite.matier.web.OperationEController" method="OpenUDateDepart"/>
+  </action-method>
+  <menuitem name="menu-Comptabilite-Materiel-parametres-source" title="PREVENANCES" icon="fa-angle-double-right"
+            icon-background="green" parent="menu-Comptabilite-Materiel-parametres"
+            action="action-Comptabilite-Materiel-parametres-source"/>
+  <action-view name="action-Comptabilite-Materiel-parametres-source" title="PREVENANCES"
+               model="com.hakibati.comptabilite.matier.db.SourcesM">
+    <view type="grid" name="SourcesM-grid"/>
+    <view type="form" name="SourcesM-form"/>
+  </action-view>
+  <menuitem name="menu-Comptabilite-Materiel-parametres-destinataire" title="BENEFICIES" icon="fa-angle-double-left"
+            icon-background="green" parent="menu-Comptabilite-Materiel-parametres"
+            action="action-Comptabilite-Materiel-parametres-destinataire"/>
+  <action-view name="action-Comptabilite-Materiel-parametres-destinataire" title="BENEFICIES"
+               model="com.hakibati.comptabilite.matier.db.DestinataireM">
+    <view type="grid" name="DestinataireM-grid"/>
+    <view type="form" name="DestinataireM-form"/>
+  </action-view>
+
+  <menuitem name="menu-Comptabilite-Materiel-parametres-typeMatiere" title="TYPES ARTICLE" icon="fa-text-width"
+            icon-background="green" parent="menu-Comptabilite-Materiel-parametres"
+            action="action-Comptabilite-Materiel-parametres-TypeMatiereC"/>
+  <action-view name="action-Comptabilite-Materiel-parametres-TypeMatiereC" title="TYPES MATIERES"
+               model="com.hakibati.comptabilite.matier.db.TypeMatiereC">
+    <view type="grid" name="TypeMatiereC-grid"/>
+    <view type="form" name="TypeMatiereC-form"/>
+  </action-view>
+  <menuitem name="menu-Comptabilite-Materiel-parametres-materiel" title="ARTICLES" icon="fa-map" icon-background="green"
+            parent="menu-Comptabilite-Materiel-parametres" action="action-Comptabilite-Materiel-parametres-materiel"/>
+  <action-view name="action-Comptabilite-Materiel-parametres-materiel" title="ARTICLES"
+               model="com.hakibati.comptabilite.matier.db.Mconsommable">
+    <view type="grid" name="Mconsommable-grid"/>
+    <view type="form" name="Mconsommable-form"/>
+  </action-view>
+</object-views>

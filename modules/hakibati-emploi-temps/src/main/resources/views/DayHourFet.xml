@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+
+  <grid name="DayHourFet-grid" title="Liste des heurs" model="com.hakibati.emploi.db.DayHourFet" editable="true" orderBy="cd">
+    <field name="cd" title="order" readonly="true" />
+    <field name="dayFet" title="jour ds Fet" readonly="true"  />
+    <field name="hourFet" title="heur ds Fet" readonly="true"  />
+    <field name="realDay" title="jour réel" onChange="save" />
+    <field name="realhour" title="séance réel" onChange="save" />
+  </grid>
+</object-views>

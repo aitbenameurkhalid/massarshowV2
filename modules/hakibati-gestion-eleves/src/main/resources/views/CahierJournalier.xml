@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+    <grid name="Cahierjournalier-grid" title="CahierJournalier" model="com.hakibati.gestion.eleves.db.Cahierjournalier">
+        <field name="dateOperation"/>
+        <field name="dayOfWeek"/>
+        <button name="btnCahierJournale" onClick="action-print-cahier-journalier" title="Imprime" icon="fa-print"/>
+    </grid>
+
+    <form name="Cahierjournalier-form" title="Cahier Journalier"
+          model="com.hakibati.gestion.eleves.db.Cahierjournalier" onNew="action-cahier-journal-new ">
+        <panel-tabs>
+
+            <panel title="Consommation" showTitle="false" itemSpan="12">
+                <field name="dateOperation" colSpan="3" onChange="save,action-cahier-mise-ajour"/>
+                <field name="dayOfWeek" colSpan="3"/>
+                <spacer colSpan="2"/>
+                <button name="btnCahierJournale" onClick="save,action-print-cahier-journalier" title="Imprime"
+                        colSpan="2"
+                        icon="fa-print"/>
+                <button name="btnmiseAjour" onClick="save,action-cahier-mise-ajour" title="Mise Ajour" colSpan="2"
+                        icon="fa-refresh"/>
+                <panel title="Menu Du jour" name="panelMenu">
+                    <field name="menupetitdejeuner" colSpan="4"/>
+                    <field name="menudejeuner" colSpan="4"/>
+                    <field name="menudiner" colSpan="4"/>
+                </panel>
+                <panel-related field="personnesnourriesJournalier" colSpan="12" form-view="zero" canNew="false"
+                               canRemove="false"/>
+                <panel-related field="operationsJournalier" colSpan="12" form-view="zero" canNew="false"
+                               canRemove="false"/>
+                <field name="observation" colSpan="12"/>
+            </panel>
+
+            <panel title="Périmé">
+                <panel-related field="operationsJournalier" colSpan="12" form-view="zero" canNew="false"
+                               canRemove="false" orderBy="article.ordre" editable="true">
+                    <field name="article.ordre" readonly="true"/>
+                    <field name="article" readonly="true"/>
+                    <field name="article.unite" readonly="true"/>
+                    <field name="article.prixUnite" readonly="true"/>
+                    <field name="perimeJournaliere" title="Quantité périmé"/>
+                </panel-related>
+            </panel>
+        </panel-tabs>
+    </form>
+
+    <form name="CahierJournalier-imprime-form" title="Imprime" model="com.hakibati.gestion.eleves.db.Cahierjournalier">
+        <panel>
+            <field name="typeImprime" showTitle="false" colSpan="4" widget="RadioSelect"
+                   selection="imprime-type-select-gestion-eleves" default="PDF"/>
+        </panel>
+        <panel title="RESTE EN MAGASIN">
+            <field name="dateRestMagasin" title="date" widget="date" showTitle="true" colSpan="6"/>
+            <button name="btn2" onClick="action-print-reste-en-magasin" title="Imprimer"/>
+        </panel>
+        <panel title="COMPTABILITE MATIERE">
+            <field name="article" title="ARTICLE" type="reference" target="com.hakibati.gestion.eleves.db.Article"
+                   widget="SuggestBox" showTitle="true" colSpan="12"/>
+            <field name="dateDuComptabilite" title="DU" widget="date" showTitle="true" colSpan="3"/>
+            <field name="dateAuComptabilite" title="AU" widget="date" showTitle="true" colSpan="3"/>
+            <button name="btn2" onClick="action-print-comptabilite-matiere" title="Imprimer"/>
+        </panel>
+        <panel title="CAHIER JOURNALIER">
+            <field name="dateDuCahier" title="DU" widget="date" showTitle="true" colSpan="3"/>
+            <field name="dateAuCahier" title="AU" widget="date" showTitle="true" colSpan="3"/>
+            <button name="btn2" onClick="action-print-cahier-journalier-many" title="Imprimer"/>
+        </panel>
+    </form>
+
+    <action-method name="action-cahier-journal-new">
+        <call class="com.gestion.eleves.web.CahierJournalierController" method="OnNewCahierJournalier"/>
+    </action-method>
+    <action-method name="action-cahier-mise-ajour">
+        <call class="com.gestion.eleves.web.CahierJournalierController" method="OnMiseAjourCahierJournalier"/>
+    </action-method>
+    <action-method name="action-print-cahier-journalier">
+        <call class="com.gestion.eleves.web.CahierJournalierController" method="printCahierConsommation"/>
+    </action-method>
+
+    <action-method name="action-print-comptabilite-matiere">
+        <call class="com.gestion.eleves.web.CahierJournalierController" method="printComptabiliteMatiere"/>
+    </action-method>
+    <action-method name="action-print-reste-en-magasin">
+        <call class="com.gestion.eleves.web.CahierJournalierController" method="printRestEnMagasin"/>
+    </action-method>
+    <action-method name="action-print-cahier-journalier-many">
+        <call class="com.gestion.eleves.web.CahierJournalierController" method="printCahierConsommationMany"/>
+    </action-method>
+    <selection name="selection-list-journee-MenuHebdomadaire">
+        <option value="7">Dimanche</option>
+        <option value="1">Lundi</option>
+        <option value="2">Mardi</option>
+        <option value="3">Mercredi</option>
+        <option value="4">Jeudi</option>
+        <option value="5">Vendredi</option>
+        <option value="6">Samedi</option>
+    </selection>
+
+</object-views>

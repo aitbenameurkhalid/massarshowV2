@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+
+  <grid name="SuiviFinancierCentre-eleve-grid" title="Suivi Financier" model="com.hakibati.centre.langue.db.SuiviFinancierCentre" onNew="action-new-suiveFinancier-centre">
+    <field name="groupeCentre" />
+    <field name="groupeCentre.profCentre" />
+    <field name="groupeCentre.matiereCentre" width="80" />
+    <field name="anneePaiement" width="50" />
+    <field name="moisPaye" width="50" />
+    <field name="datePaiement" width="100" />
+    <field name="prixPaye" width="80" />
+    <button onClick="save,action-print-recu-centre" name="btn-print-recu" title="Imprimer" icon="fa-print" />
+  </grid>
+
+  <form name="SuiviFinancierCentre-eleve-form" title="Suivi Financier" model="com.hakibati.centre.langue.db.SuiviFinancierCentre" width="mini" onNew="action-new-suiveFinancier-centre">
+    <panel title="Ajouter ou modifier" itemSpan="12">
+      <field name="groupeCentre" />
+      <field name="groupeCentre.profCentre" />
+      <field name="groupeCentre.matiereCentre" />
+      <field name="anneePaiement"/>
+      <field name="moisPaye" />
+      <field name="datePaiement" />
+      <field name="prixPaye" />
+      <button onClick="save,action-print-recu-centre" name="btn-print-recu" title="Imprimer" icon="fa-print"  />
+
+    </panel>
+<!--    <panel> <field name="commentaire"/> </panel>-->
+  </form>
+
+  <grid name="SuiviFinancierCentre-groupe-grid" title="Suivi Financier" model="com.hakibati.centre.langue.db.SuiviFinancierCentre" onNew="action-new-suiveFinancier-centre">
+    <field name="eleveCentres" />
+    <field name="groupeCentre.profCentre" />
+    <field name="groupeCentre.matiereCentre" width="80"/>
+    <field name="anneePaiement" width="50"/>
+    <field name="moisPaye" width="50"/>
+    <field name="datePaiement" width="100"/>
+    <field name="prixPaye" width="80"/>
+<button onClick="save,action-print-recu-centre" name="btn-print-recu" title="Imprimer" icon="fa-print"  />
+  </grid>
+
+  <form name="SuiviFinancierCentre-groupe-form" title="Suivi Financier" model="com.hakibati.centre.langue.db.SuiviFinancierCentre" width="mini" onNew="action-new-suiveFinancier-centre">
+    <panel title="Ajouter ou modifier" itemSpan="12">
+      <field name="eleveCentres" />
+      <field name="groupeCentre.profCentre" />
+      <field name="groupeCentre.matiereCentre" />
+      <field name="anneePaiement"/>
+      <field name="moisPaye" />
+      <field name="datePaiement" />
+      <field name="prixPaye" />
+      <button onClick="save,action-print-recu-centre" name="btn-print-recu" title="Imprimer" icon="fa-print"  />
+
+    </panel>
+<!--    <panel> <field name="commentaire"/> </panel>-->
+  </form>
+<action-method name="action-print-recu-centre">
+  <call class="com.centre.langue.web.SuiviFinancierCentreController" method="PrintRecu"/>
+</action-method>
+  <action-method name="action-new-suiveFinancier-centre">
+    <call class="com.centre.langue.web.SuiviFinancierCentreController" method="onNewsuiveFinancier"/>
+  </action-method>
+
+
+  <selection name="centre-langue-mois-select">
+    <option value="1">janvier</option>
+    <option value="2">février</option>
+    <option value="3">Mars</option>
+    <option value="4">avril</option>
+    <option value="5">Mai</option>
+    <option value="6">juin</option>
+    <option value="7">juillet</option>
+    <option value="8">août</option>
+    <option value="9">septembre</option>
+    <option value="10">Octobre</option>
+    <option value="11">novembre</option>
+    <option value="12">décembre</option>
+  </selection>
+</object-views>

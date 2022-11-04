@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+  <chart name="chart.eau.per.etablissement" title="Consommation de l'eau par etablissement">
+    <dataset type="jpql">
+    <![CDATA[
+    SELECT
+      SUM(self.quantiteConsommation) AS amount,
+      MONTH(self.dateDu) AS month,
+      _etablissement.name AS etablissement
+  FROM
+      ConsommationEau self
+  LEFT JOIN
+      self.etablissement AS _etablissement
+  WHERE
+      YEAR(self.dateDu) = YEAR(current_date)
+  GROUP BY
+      _etablissement.name,
+      MONTH(self.dateDu)
+  ORDER BY
+      month
+
+  ]]></dataset>
+    <category key="month" type="month"/>
+    <series key="amount" groupBy="etablissement" type="bar"/>
+
+  </chart>
+
+
+
+
+  <chart name="chart.eau.per.month" title="consommation de l'eau par mois">
+    <dataset type="jpql">
+      <![CDATA[
+    SELECT
+      SUM(self.quantiteConsommation) AS amount,
+      MONTH(self.dateDu) AS month,
+      _etablissement.name AS etablissement
+  FROM
+      ConsommationEau self
+  LEFT JOIN
+      self.etablissement AS _etablissement
+  WHERE
+      YEAR(self.dateDu) = YEAR(current_date)
+  GROUP BY
+      _etablissement.name,
+      MONTH(self.dateDu)
+  ORDER BY
+      month
+
+  ]]></dataset>
+    <category key="etablissement" type="text"/>
+    <series key="amount" groupBy="month" type="bar"/>
+
+
+  </chart>
+
+
+  <chart name="chart.eau.per.controle" title="Controle de l'eau">
+    <search-fields>
+      <field type="date" name="fromDateT" title="Date Du" x-required="true" />
+      <field type="date" name="toDateT" title="Date Au" x-required="true"/>
+    </search-fields>
+    <dataset type="jpql">
+      <![CDATA[
+    SELECT
+      SUM(self.valeurCompteur) AS amount,
+      self.dateControle AS date,
+      _etablissement.name AS etablissement
+  FROM
+      ControleEau self
+  LEFT JOIN
+      self.etablissement AS _etablissement
+
+  WHERE
+      self.dateControle BETWEEN DATE(:fromDateT) AND DATE(:toDateT)
+  GROUP BY
+      _etablissement.name,
+      self.dateControle
+  ORDER BY
+      date
+
+  ]]></dataset>
+    <category key="date" type="date"/>
+    <series key="amount" groupBy="etablissement" type="line"/>
+  </chart>
+
+<!--  <chart name="chart.eau.per.day" title="Controle de consommation par jour">-->
+<!--    <dataset type="sql">-->
+<!--      <![CDATA[-->
+<!--    SELECT-->
+<!--      SUM(self.valeurContour) AS val1,-->
+<!--      (select TOP 1  valeurContour from ControleConsommation  as Temp   where ControleConsommation.dateControle > Temp.dateControle order by Temp.dateControle desc) as val2,-->
+<!--      self.dateControle AS date1,-->
+<!--      (select TOP 1  dateControle from ControleConsommation  as Temp   where ControleConsommation.dateControle > Temp.dateControle order by Temp.dateControle desc) as date2,-->
+<!--      (val1-val2) AS defVal,-->
+<!--      (date1-date2) AS defDat1,-->
+<!--      (defVal/defDat1) As taux,-->
+<!--      _etablissement.codeGresa AS etablissement-->
+<!--  FROM-->
+<!--      ControleConsommation self-->
+<!--  LEFT JOIN-->
+<!--      self.etablissement AS _etablissement-->
+<!--  WHERE-->
+<!--      YEAR(self.dateControle) = YEAR(current_date)-->
+<!--      AND(self.type.code) = '01'-->
+<!--  GROUP BY-->
+<!--      _etablissement.codeGresa,-->
+<!--      self.dateControle-->
+<!--  ORDER BY-->
+<!--      date1-->
+
+<!--  ]]></dataset>-->
+<!--    <category key="date1" type="date"/>-->
+<!--    <series key="taux" groupBy="etablissement" type="line"/>-->
+<!--    <config name="colors" value="#1988b6"/>-->
+<!--  </chart>-->
+
+
+  <chart name="chart.electricite.per.etablissement" title="Consommation d'électricite par etablissement">
+    <dataset type="jpql">
+      <![CDATA[
+    SELECT
+      SUM(self.quantiteConsommation) AS amount,
+      MONTH(self.dateDu) AS month,
+      _etablissement.name AS etablissement
+  FROM
+      ConsommationElectricite self
+  LEFT JOIN
+      self.etablissement AS _etablissement
+  WHERE
+      YEAR(self.dateDu) = YEAR(current_date)
+  GROUP BY
+      _etablissement.name,
+      MONTH(self.dateDu)
+  ORDER BY
+      month
+
+  ]]></dataset>
+    <category key="month" type="month"/>
+    <series key="amount" groupBy="etablissement" type="bar"/>
+    <config name="colors" value="#FF3267"/>
+
+  </chart>
+
+
+
+
+  <chart name="chart.electricite.per.month" title="consommation d'électricite par mois">
+    <dataset type="jpql">
+      <![CDATA[
+    SELECT
+      SUM(self.quantiteConsommation) AS amount,
+      MONTH(self.dateDu) AS month,
+      _etablissement.name AS etablissement
+  FROM
+      ConsommationElectricite self
+  LEFT JOIN
+      self.etablissement AS _etablissement
+  WHERE
+      YEAR(self.dateDu) = YEAR(current_date)
+  GROUP BY
+      _etablissement.name,
+      MONTH(self.dateDu)
+  ORDER BY
+      month
+
+  ]]></dataset>
+    <category key="etablissement" type="text"/>
+    <series key="amount" groupBy="month" type="bar"/>
+    <config name="colors" value="#FF3267"/>
+
+  </chart>
+
+  <chart name="chart.electricite.per.controle" title="Controle de consommation d'électricite">
+    <dataset type="jpql">
+      <![CDATA[
+    SELECT
+      SUM(self.valeurCompteur) AS amount,
+      self.dateControle AS date,
+      _etablissement.name AS etablissement
+  FROM
+      ControleElectricite self
+  LEFT JOIN
+      self.etablissement AS _etablissement
+  WHERE
+      YEAR(self.dateControle) = YEAR(current_date)
+  GROUP BY
+      _etablissement.name,
+      self.dateControle
+  ORDER BY
+      date
+
+  ]]></dataset>
+    <category key="date" type="date"/>
+    <series key="amount" groupBy="etablissement" type="line"/>
+    <config name="colors" value="#FF3267"/>
+  </chart>
+
+
+  <chart name="chart.telephone.per.etablissement" title="Consommation de téléphone par etablissement">
+    <dataset type="jpql">
+      <![CDATA[
+    SELECT
+      SUM(self.quantiteConsommation) AS amount,
+      MONTH(self.dateDu) AS month,
+      _etablissement.name AS etablissement
+  FROM
+      Consommation self
+  LEFT JOIN
+      self.etablissement AS _etablissement
+  WHERE
+      YEAR(self.dateDu) = YEAR(current_date)
+      AND(self.type.code) = '03'
+  GROUP BY
+      _etablissement.name,
+      MONTH(self.dateDu)
+  ORDER BY
+      month
+
+  ]]></dataset>
+    <category key="month" type="month"/>
+    <series key="amount" groupBy="etablissement" type="bar"/>
+    <config name="colors" value="#FF9F33"/>
+  </chart>
+
+
+
+
+  <chart name="chart.telephone.per.month" title="consommation de téléphone par mois">
+    <dataset type="jpql">
+      <![CDATA[
+    SELECT
+      SUM(self.quantiteConsommation) AS amount,
+      MONTH(self.dateDu) AS month,
+      _etablissement.name AS etablissement
+  FROM
+      Consommation self
+  LEFT JOIN
+      self.etablissement AS _etablissement
+  WHERE
+      YEAR(self.dateDu) = YEAR(current_date)
+      AND(self.type.code) = '03'
+  GROUP BY
+      _etablissement.name,
+      MONTH(self.dateDu)
+  ORDER BY
+      month
+
+  ]]></dataset>
+    <category key="etablissement" type="text"/>
+    <series key="amount" groupBy="month" type="bar"/>
+    <config name="colors" value="#FF9F33"/>
+  </chart>
+
+</object-views>

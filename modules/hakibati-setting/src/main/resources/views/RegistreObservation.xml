@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+  <grid name="RegistreObservation-grid" title="les observations" model="com.hakibati.setting.db.RegistreObservation" orderBy="-createdOn">
+    <field name="name" required="true" />
+    <field name="ville" />
+    <field name="sujet" />
+    <field name="createdOn"/>
+  </grid>
+
+  <form name="RegistreObservation-form" title="observation ou remarque"  model="com.hakibati.setting.db.RegistreObservation" width="mini">
+    <panel itemSpan="12" >
+      <label title="votre remarques et observations"/>
+      <field name="name" required="true" />
+      <field name="ville" colSpan="6" />
+<!--      <field name="email" widget="email"/>-->
+      <field name="tel" widget="phone" colSpan="6"/>
+      <field name="sujet" />
+      <field  name="observation" widget="html" colSpan="12" />
+      <button name="btn-save" title="Save" onClick="save"/>
+    </panel>
+    <panel-mail>
+      <mail-messages limit="10" />
+    </panel-mail>
+  </form>
+
+</object-views>

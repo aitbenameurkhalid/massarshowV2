@@ -1,0 +1,248 @@
+"key","message","comment","context"
+"(الحروف الصغيرة)أدخل عنوان بريدك الإلكتروني إذا نسيت كلمة المرور أو ترغب في إنشاء حساب جديد ، ثم انقر فوق التالي",,,"resources\views\Register.xml:13"
+"<a class='fa fa-facebook' href='https://facebook.com/khalid.aitbenameur.1' target='_blank'/>",,,"resources\views\Etablissement.xml:155"
+"<a class='fa fa-facebook' href='https://facebook.com/profile.php?id=1804555997' target='_blank'/>",,,"resources\views\Etablissement.xml:152"
+"<a class='fa fa-google' href='http://www.google.com' target='_blank' />",,,"resources\views\Etablissement.xml:149"
+"<a class='fa fa-linkedin' href='http://www.linkedin.com' target='_blank' />",,,"resources\views\Etablissement.xml:160"
+"<a class='fa fa-twitter' href='http://www.twitter.com' target='_blank' />",,,"resources\views\Etablissement.xml:157"
+"<a class='fa fa-youtube' href='https://www.youtube.com/channel/UC9tkVzP7lu6jV-_uONVLFWg' target='_blank' />",,,"resources\views\Etablissement.xml:163"
+"A server error occurred. Please contact the administrator.",,,"java\com\setting\web\EtablissementController.java:119
+java\com\setting\web\EtablissementController.java:89"
+"Academie",,,"resources\domains\Etablissement.xml:17"
+"Actif",,,"java\com\setting\service\EtablissementService.java:134
+resources\domains\EtablissementRolsDescribe.xml:8
+resources\domains\UserEtablissement.xml:8"
+"Activation Etablissement",,,"java\com\setting\service\PermissionEtablissemntService.java:50"
+"Adjoint",,,"resources\views\UserEtablissement.xml:41"
+"Administrateur",,,"resources\views\UserEtablissement.xml:40"
+"Adresse",,,"resources\domains\Etablissement.xml:20
+resources\views\User.xml:68"
+"An error occurs while opening the connection. Please verify the following URL : %s.",,,"java\com\setting\service\report\IExceptionMessage.java:14"
+"Can not opening the connection to a empty URL.",,,"java\com\setting\service\report\IExceptionMessage.java:10"
+"Centre de langue",,,"resources\views\Etablissement.xml:176"
+"Change password?",,,"resources\views\User.xml:16"
+"Chercher",,,"resources\views\EtablissementLiaison.xml:16
+resources\views\UserEtablissement.xml:16"
+"Code","Code",,"resources\domains\Cycle.xml:9
+resources\domains\FonctionExaman.xml:10
+resources\domains\ListContraint.xml:10
+resources\domains\RoleDescribe.xml:9
+resources\domains\Sexe.xml:9"
+"Code D'activation",,,"resources\views\Register.xml:31"
+"Commun",,,"resources\domains\Etablissement.xml:19"
+"Confirm password",,,"resources\views\User.xml:24"
+"Confirmer le mot de passe",,,"resources\views\Register.xml:37"
+"Connexion",,,"resources\views\Register.xml:54"
+"Creation une Etablissement",,,"resources\views\User.xml:62"
+"Current password",,,"resources\views\User.xml:19"
+"DateTime",,,"resources\domains\ActivationUser.xml:10"
+"Direction",,,"resources\domains\Etablissement.xml:18"
+"Direction Prov",,,"resources\views\Etablissement.xml:174"
+"Email","Email",,"resources\domains\ActivationUser.xml:8"
+"Entrez votre adresse e-mail (Lettres miniscules) si vous avez oublié le mot de passe ou souhaitez créer un nouveau compte puis cliquez sur Suivant",,,"resources\views\Register.xml:10"
+"Erreur ! Vérifiez l'e-mail, le code de confirmation ou le mot de passe",,,"resources\views\Register.xml:45"
+"Etablissement",,,"resources\domains\EtablissementLiaison.xml:10
+resources\domains\User.xml:11"
+"Etablissement Annexe",,,"resources\domains\Etablissement.xml:30"
+"Etablissement Principal",,,"resources\domains\Etablissement.xml:27"
+"Etablissement principal",,,"resources\domains\EtablissementLiaison.xml:11"
+"EtablissementLiaison",,,"resources\views\EtablissementLiaison.xml:13
+resources\views\EtablissementLiaison.xml:25
+resources\views\EtablissementLiaison.xml:33
+resources\views\EtablissementLiaison.xml:7"
+"EtablissementRolsDescribe",,,"resources\views\EtablissementRoleDescribe.xml:13
+resources\views\EtablissementRoleDescribe.xml:6"
+"Etablissements",,,"resources\domains\EtablissementRolsDescribe.xml:11
+resources\domains\User.xml:10
+resources\domains\UserEtablissement.xml:11"
+"Etablissements Père",,,"resources\views\Etablissement.xml:108
+resources\views\Etablissement.xml:67"
+"Etablissements fils",,,"resources\views\Etablissement.xml:112
+resources\views\Etablissement.xml:71"
+"Fillier",,,"resources\views\ListContraint.xml:36"
+"Filliers",,,"resources\views\ListContraint.xml:37"
+"Fonction",,,"resources\domains\UserEtablissement.xml:9"
+"Gérer un utilisateur",,,"resources\views\UserEtablissement.xml:12"
+"Il n'y a aucun utilisateur avec ce nom",,,"java\com\setting\web\UserEtablissementController.java:30"
+"Il n'y a pas d'أ©tablissement avec ce code",,,"java\com\setting\web\EtablissementLiaisonController.java:19
+java\com\setting\web\EtablissementLiaisonController.java:24"
+"Index de Groupe",,,"resources\domains\RoleDescribe.xml:11"
+"Information Etablissement",,,"resources\views\Etablissement.xml:120
+resources\views\Menu.xml:7
+resources\views\Menu.xml:8"
+"Information etablissement",,,"resources\views\Etablissement.xml:35
+resources\views\Etablissement.xml:85"
+"L'opération a réussi, cliquez sur Connexion pour continuer",,,"resources\views\Register.xml:41"
+"Le code d'activation et le lien ont été envoyés à votre e-mail, entrez le code d'activation et le mot de passe, puis cliquez sur Suivant ou cliquez sur le lien dans votre e-mail",,,"resources\views\Register.xml:25"
+"Les  Contrainte",,,"resources\views\Menu.xml:40"
+"Les Cycles",,,"resources\views\Menu.xml:23
+resources\views\Menu.xml:24"
+"Les Fonction Examan",,,"resources\views\Menu.xml:29"
+"Les Fonctions en Examan",,,"resources\views\Menu.xml:30"
+"Les Observations",,,"resources\views\Menu.xml:81"
+"Les Role Describe",,,"java\com\setting\service\EtablissementService.java:130
+resources\domains\EtablissementRolsDescribe.xml:12"
+"Les Role Etablissement",,,"resources\views\Etablissement.xml:76
+resources\views\Etablissement.xml:95"
+"Les Roles Describe",,,"resources\views\Menu.xml:46
+resources\views\Menu.xml:47"
+"Les Rols Describe",,,"resources\domains\RoleDescribe.xml:15"
+"Les Types de Contraint",,,"resources\views\Menu.xml:41"
+"Les Types de Sexe",,,"resources\views\Menu.xml:35
+resources\views\Menu.xml:36"
+"Les Utilisateurs",,,"java\com\setting\service\EtablissementService.java:126
+resources\domains\Etablissement.xml:23
+resources\domains\UserEtablissement.xml:12
+resources\views\Etablissement.xml:20"
+"Les contrainte",,,"resources\domains\ListContraint.xml:11"
+"Les etablissements",,,"resources\views\Menu.xml:17
+resources\views\Menu.xml:18"
+"Les observations",,,"resources\views\Menu.xml:79"
+"Les opérations",,,"resources\views\Menu.xml:74"
+"Les permissions etablissement",,,"resources\domains\Etablissement.xml:25"
+"List contraint",,,"resources\views\ListContraint.xml:12
+resources\views\ListContraint.xml:6"
+"Liste Des Utilisateurs",,,"resources\views\Etablissement.xml:100
+resources\views\Etablissement.xml:26"
+"Logo En Tete",,,"resources\domains\Etablissement.xml:22
+resources\views\Etablissement.xml:49"
+"Mes Etablissements",,,"resources\views\User.xml:27
+resources\views\User.xml:53"
+"Mes etablissements?",,,"resources\views\User.xml:26
+resources\views\User.xml:52"
+"Name","Nom",,"resources\domains\Cycle.xml:8
+resources\domains\FonctionExaman.xml:9
+resources\domains\ListContraint.xml:9
+resources\domains\RegistreObservation.xml:8
+resources\domains\RoleDescribe.xml:8
+resources\domains\Sexe.xml:8"
+"New password",,,"resources\views\User.xml:22"
+"No such template",,,"java\com\setting\service\report\IExceptionMessage.java:17"
+"Nom De Academie",,,"resources\views\User.xml:67"
+"Nom De Commun",,,"resources\views\User.xml:65"
+"Nom De Direction",,,"resources\views\User.xml:66"
+"Nom De Etablissement",,,"resources\views\User.xml:64"
+"Nom Etablissement",,,"java\com\setting\service\EtablissementService.java:123"
+"Non",,,"resources\views\Etablissement.xml:170"
+"Nouvelle Observation",,,"resources\views\Menu.xml:72"
+"Number de test",,,"resources\domains\ActivationUser.xml:11"
+"Numero",,,"resources\domains\Etablissement.xml:9"
+"Nآ° Etablissement",,,"java\com\setting\service\EtablissementService.java:120"
+"Observation",,,"java\com\setting\service\EtablissementService.java:140
+resources\domains\EtablissementRolsDescribe.xml:10
+resources\domains\RegistreObservation.xml:13"
+"Ou créer une nouvelle établissement",,,"resources\views\User.xml:47"
+"Oui",,,"resources\views\Etablissement.xml:169"
+"Overview","Général",,"resources\views\Cycle.xml:12
+resources\views\Etablissement.xml:41
+resources\views\Etablissement.xml:87
+resources\views\EtablissementRoleDescribe.xml:14
+resources\views\FonctionExaman.xml:12
+resources\views\User.xml:63"
+"Permission",,,"resources\views\UserEtablissement.xml:21"
+"Phone","Téléphone",,"resources\domains\User.xml:9"
+"Preferences",,,"resources\views\User.xml:39
+resources\views\User.xml:7"
+"Préférences",,,"resources\views\Menu.xml:61"
+"Role Ecrir",,,"resources\domains\RoleDescribe.xml:13"
+"Role Lir",,,"resources\domains\RoleDescribe.xml:12"
+"Role Supprimer",,,"resources\domains\RoleDescribe.xml:14"
+"RoleDescribe",,,"resources\views\RoleDescribe.xml:15
+resources\views\RoleDescribe.xml:6"
+"Répétez votre mot de passe",,,"resources\views\Register.xml:37"
+"Save",,,"resources\views\RegistreObservation.xml:22"
+"Suivant",,,"resources\views\Register.xml:16
+resources\views\Register.xml:39"
+"Suivi Etablissements",,,"resources\views\Etablissement.xml:8"
+"Sujet",,,"resources\domains\RegistreObservation.xml:12"
+"Supprime",,,"resources\views\UserEtablissement.xml:30
+resources\views\UserEtablissement.xml:9"
+"Supprimer",,,"resources\domains\UserEtablissementRole.xml:12"
+"Sélectionnez une établissement",,,"resources\views\User.xml:41"
+"TABLES CLASSIFICATION",,,"resources\views\Menu.xml:6"
+"Tapez le code  D'activation",,,"resources\views\Register.xml:31"
+"Tapez votre mot de passe",,,"resources\views\Register.xml:34"
+"Tel",,,"resources\views\User.xml:69"
+"Telephone",,,"resources\domains\Etablissement.xml:21
+resources\domains\RegistreObservation.xml:11"
+"Templating can not be empty",,,"java\com\setting\service\report\IExceptionMessage.java:19"
+"Test register",,,"resources\views\Menu.xml:52"
+"The parameter copyNumber should be superior to 0.",,,"java\com\setting\service\report\IExceptionMessage.java:25"
+"This field needs to be unique.",,,"java\com\setting\service\report\IExceptionMessage.java:21"
+"Type d'etablissemnt",,,"resources\views\User.xml:71"
+"Type etablissemnt",,,"resources\domains\Etablissement.xml:16"
+"Type Établissement",,,"resources\views\Etablissement.xml:105"
+"Typse sexe",,,"resources\views\Sexe.xml:11
+resources\views\Sexe.xml:6"
+"Url %s is malformed.",,,"java\com\setting\service\report\IExceptionMessage.java:12"
+"User preferences",,,"resources\views\User.xml:40
+resources\views\User.xml:8"
+"UserEtablissementRole",,,"resources\views\UserEtablissementRole.xml:6"
+"UsersEtablissement",,,"resources\views\UserEtablissement.xml:27
+resources\views\UserEtablissement.xml:33
+resources\views\UserEtablissement.xml:6"
+"Ville",,,"resources\domains\RegistreObservation.xml:9"
+"Votre email est invalide",,,"resources\views\Register.xml:19"
+"Years in 360 days",,,"java\com\setting\service\report\IExceptionMessage.java:6"
+"accepter",,,"resources\domains\EtablissementLiaison.xml:9"
+"afficher Aprés Midi",,,"resources\domains\ListContraint.xml:18"
+"afficher Dtae Exam",,,"resources\domains\ListContraint.xml:19"
+"afficher Fillier",,,"resources\domains\ListContraint.xml:16"
+"afficher Matiere",,,"resources\domains\ListContraint.xml:15"
+"afficher Matin",,,"resources\domains\ListContraint.xml:17"
+"afficher Salle",,,"resources\domains\ListContraint.xml:14"
+"afficher Valeur",,,"resources\domains\ListContraint.xml:12"
+"afficher prof",,,"resources\domains\ListContraint.xml:13"
+"aperçu",,,"resources\domains\UserEtablissementRole.xml:10"
+"autorisé",,,"resources\domains\EtablissementLiaison.xml:8"
+"changeLgo",,,"resources\views\Etablissement.xml:62"
+"code d'activation",,,"resources\domains\ActivationUser.xml:9"
+"code d'etablissement",,,"resources\views\EtablissementLiaison.xml:15"
+"commenter",,,"resources\domains\ListContraint.xml:21"
+"confirm password",,,"resources\views\User.xml:24"
+"creation une etablissement",,,"resources\views\User.xml:86"
+"créer",,,"resources\views\User.xml:33
+resources\views\User.xml:50
+resources\views\User.xml:74"
+"current password",,,"resources\views\User.xml:19"
+"date de péremption",,,"resources\domains\EtablissementRolsDescribe.xml:9"
+"date de pأ©remption",,,"java\com\setting\service\EtablissementService.java:137"
+"les Autorisations",,,"resources\domains\UserEtablissement.xml:10"
+"les Types des fonctons",,,"resources\views\FonctionExaman.xml:6"
+"les cycles",,,"resources\views\Cycle.xml:6"
+"les observations",,,"resources\views\RegistreObservation.xml:6"
+"les roles",,,"resources\domains\UserEtablissementRole.xml:9"
+"les utilisateurs",,,"java\com\setting\web\EtablissementController.java:58
+java\com\setting\web\EtablissementController.java:73
+resources\views\Menu.xml:12"
+"les utilisateurs d établissement",,,"resources\domains\UserEtablissementRole.xml:8"
+"modifier",,,"resources\domains\UserEtablissementRole.xml:11"
+"mot de passe",,,"resources\views\Register.xml:34"
+"name",,,"resources\domains\Etablissement.xml:8"
+"new password",,,"resources\views\User.xml:22"
+"nom d'utilisateur",,,"resources\views\UserEtablissement.xml:15
+resources\views\UserEtablissement.xml:18"
+"observation ou remarque",,,"resources\views\RegistreObservation.xml:13"
+"profisseur",,,"resources\views\ListContraint.xml:31"
+"profisseurs",,,"resources\views\ListContraint.xml:30"
+"register",,,"resources\views\Menu.xml:53
+resources\views\Menu.xml:57
+resources\views\Register.xml:6"
+"salle",,,"resources\views\ListContraint.xml:34"
+"salles",,,"resources\views\ListContraint.xml:33"
+"save",,,"resources\views\User.xml:45"
+"sendredirect",,,"resources\views\Register.xml:49"
+"type de cycle",,,"resources\views\Cycle.xml:11"
+"type de fonction",,,"resources\views\FonctionExaman.xml:11"
+"utilisateurs",,,"resources\views\Etablissement.xml:6"
+"valeur par défaut",,,"resources\domains\ListContraint.xml:20"
+"votre remarques et observations",,,"resources\views\RegistreObservation.xml:15"
+"Écrivez votre email",,,"resources\views\Register.xml:15"
+"Êtes-vous sûr de vouloir supprimer ce(s) enregistrement(s) ?",,,"resources\views\UserEtablissement.xml:30
+resources\views\UserEtablissement.xml:9"
+"établissement scolaire",,,"resources\views\Etablissement.xml:173"
+"بريدك الإلكتروني غير صحيح",,,"resources\views\Register.xml:21"
+"تم إرسال رمز التفعيل والرابط إلى بريدك الإلكتروني ، أدخل رمز التفعيل وكلمة المرور ثم انقر فوق التالي ، أو انقر فوق الرابط الموجود في بريدك الإلكتروني",,,"resources\views\Register.xml:28"
+"تمت العملية بنجاح ، انقر فوق اتصال  للمتابعة",,,"resources\views\Register.xml:42"
+"خطأ ! تحقق من البريد الإلكتروني أو رمز التأكيد أو كلمة المرور",,,"resources\views\Register.xml:47"
+"ٌRemarques et Observations","Remarques & Obervations",,"resources\views\Menu.xml:69"

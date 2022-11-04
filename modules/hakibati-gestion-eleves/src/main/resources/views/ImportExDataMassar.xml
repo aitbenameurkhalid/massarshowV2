@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+
+    <selection name="selection-list-type-import-donnes-massar">
+        <option value="classes">List classes</option>
+        <option value="enseignant">List profs</option>
+        <option value="matieres">List matières</option>
+        <option value="eleves">list élèves</option>
+        <option value="notes">Notes</option>
+        <option value="affectation">Affect profs</option>
+
+    </selection>
+    <selection name="selection-list-type-export-donnes-massar">
+        <option value="4">Absence eleves</option>
+    </selection>
+
+    <action-method name="action-test-connection-massar">
+        <call class="com.gestion.eleves.web.ImportExDataMassarController" method="TestConnectionMassar"/>
+    </action-method>
+    <action-method name="action-import-all-data-massar">
+        <call class="com.gestion.eleves.web.ImportExDataMassarController" method="ImportAllDataMassar"/>
+    </action-method>
+    <action-method name="action-export-all-data-massar">
+        <call class="com.gestion.eleves.web.ImportExDataMassarController" method="ExportAllDataMassar"/>
+    </action-method>
+
+</object-views>

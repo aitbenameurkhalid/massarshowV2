@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_5.3.xsd">
+
+    <module name="hakibati-setting" package="com.app.application.db"/>
+    <entity name="Etablissement" cacheable="true" sequential="true">
+        <string name="name" required="true" title="name" translatable="true"/>
+        <string name="numero">
+            <![CDATA[
+    if (numero == null)
+   return "" +id ;
+       return numero;
+      ]]>
+        </string>
+        <integer name="typeEtablissemnt" default="0" selection="select-type-etablissemnt"/>
+        <string name="academie" default=" الاكاديمية الجهوية للتربية والتكوين لجهة : الرباط سلا  القنيطرة"/>
+        <string name="direction" default="المديرية الإقليمية : اقليم الخميسات"/>
+        <string name="commun" default="ايت يدين"/>
+        <string name="adresse"/>
+        <string name="tel" title="Telephone"/>
+        <many-to-one name="logoEnTete" ref="com.axelor.meta.db.MetaFile" title="Logo En Tete" initParam="true"/>
+        <one-to-many name="users" title="Les Utilisateurs" ref="UserEtablissement" mappedBy="etablissements"/>
+        <one-to-many name="etablissementRolsDescribe" title="Les permissions etablissement"
+                     ref="com.hakibati.setting.db.EtablissementRolsDescribe" mappedBy="etablissements"/>
+        <one-to-many name="etablissementsPrincipal" title="Etablissement Principal" ref="EtablissementLiaison"
+                     mappedBy="etablissement"/>
+        <!--    <one-to-many name="etablissementsAnnexe"  title="Etablissement Annexe" ref="EtablissementAnnexe" mappedBy="etablissement"/>-->
+        <one-to-many name="etablissementsAnnexe" title="Etablissement Annexe" ref="EtablissementLiaison"
+                     mappedBy="etablissementPrincipal"/>
+
+    </entity>
+</domain-models>

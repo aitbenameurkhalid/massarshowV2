@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+  <grid name="Resultats-grid" title="list des Salles" model="com.hakibati.svg.examen.db.Resultats" editable="true" orderBy="salles">
+    <field name="salles" width="80"/>
+    <field name="fillier" />
+    <field name="matiere" width="100"/>
+    <field name="dateExamine" width="100" />
+    <field name="du" width="50" />
+    <field name="au"  width="50"/>
+    <field name="svgIndice" title="Nu"  width="50"/>
+    <field name="prof" />
+  </grid>
+  <form name="Resultats-form" title="list des Salles"  model="com.hakibati.svg.examen.db.Resultats">
+    <panel title="Overview">
+      <field name="salles" />
+      <field name="fillier" />
+      <field name="matiere" />
+      <field name="dateExamine" />
+      <field name="du" />
+      <field name="au" />
+      <field name="svgIndice" showTitle="false" colSpan="6">
+        <viewer depends="svgIndice"><![CDATA[
+          <dl class="dl-horizontal">
+            <dt x-translate>المراقب</dt>
+            <dd>{{record.svgIndice}}</dd>
+          </dl>
+          ]]></viewer>
+      </field>
+
+
+      <field name="prof" />
+
+    </panel>
+  </form>
+
+</object-views>

@@ -1,0 +1,17 @@
+"name";"object";"can_read";"can_write";"can_create";"can_remove";"can_export";"condition";"conditionParams";"roleName"
+
+"perm.hakibati.ressource.humaine.GestionRH.select.etab.r";"com.hakibati.ressource.humaine.db.GestionRH";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.ressource.humaine.GestionRH.select.etab.rwc";"com.hakibati.ressource.humaine.db.GestionRH";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.ressource.humaine.GestionRH.select.etab.rwcde";"com.hakibati.ressource.humaine.db.GestionRH";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.hakibati.ressource.humaine.GrevePersonnel.select.etab.r";"com.hakibati.ressource.humaine.db.GrevePersonnel";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.ressource.humaine.GrevePersonnel.select.etab.rwc";"com.hakibati.ressource.humaine.db.GrevePersonnel";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.ressource.humaine.GrevePersonnel.select.etab.rwcde";"com.hakibati.ressource.humaine.db.GrevePersonnel";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.hakibati.ressource.humaine.GreveRH.select.etab.r";"com.hakibati.ressource.humaine.db.GreveRH";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.ressource.humaine.GreveRH.select.etab.rwc";"com.hakibati.ressource.humaine.db.GreveRH";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.ressource.humaine.GreveRH.select.etab.rwcde";"com.hakibati.ressource.humaine.db.GreveRH";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.hakibati.ressource.humaine.PersonnelRh.select.etab.r";"com.hakibati.ressource.humaine.db.PersonnelRh";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.ressource.humaine.PersonnelRh.select.etab.rwc";"com.hakibati.ressource.humaine.db.PersonnelRh";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.ressource.humaine.PersonnelRh.select.etab.rwcde";"com.hakibati.ressource.humaine.db.PersonnelRh";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";

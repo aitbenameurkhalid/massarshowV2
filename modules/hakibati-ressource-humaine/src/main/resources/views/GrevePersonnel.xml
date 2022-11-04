@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+
+  <grid name="GrevePersonnel-grid" title="GrevePersonnel" model="com.hakibati.ressource.humaine.db.GrevePersonnel" editable="true"  >
+    <field name="personnelRh" readonly="true" />
+    <field   name="isGreve" title="en grève" width="80" />
+    <field name="observation"  width="150"/>
+  </grid>
+
+  <form name="GrevePersonnel-form" title="GrevePersonnel" model="com.hakibati.ressource.humaine.db.GrevePersonnel">
+    <panel >
+      <field name="personnelRh" target-name="ppr" />
+      <field name="personnelRh.cin" />
+      <field name="personnelRh" target-name="nomA" />
+      <field name="personnelRh" target-name="nomL" />
+      <field   name="isGreve" title="Greve" />
+      <field name="observation" colSpan="3"/>
+    </panel>
+  </form>
+
+</object-views>

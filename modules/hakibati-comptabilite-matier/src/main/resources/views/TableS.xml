@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+  <grid name="TableS-grid" title="list des matériel" model="com.hakibati.comptabilite.matier.db.TableS" >
+    <field name="mConsommable"/>
+    <field name="quantite" />
+      </grid>
+
+  <form name="TableS-form" title="list des matieres"  model="com.hakibati.comptabilite.matier.db.TableS">
+    <panel title="Overview">
+      <field name="mConsommable" onChange="action-change-TableS"/>
+      <field name="quantite" />
+      <field name="restEnMagasin" title="RESTE MAGASIN"  hidden="true"/>
+    </panel>
+    <panel colSpan="12" css="order-subtotal" readonly="true">
+      <field name="totalAmount" showTitle="false" colSpan="12">
+        <viewer depends="restEnMagasin"><![CDATA[
+          <dl class="dl-horizontal">
+            <dt x-translate>Reste En magasin</dt>
+            <dd>{{record.restEnMagasin}}</dd>
+          </dl>
+          ]]></viewer>
+      </field>
+    </panel>
+  </form>
+  <action-method name="action-change-TableS">
+    <call class="com.comptabilite.matier.web.OperationEController" method="OnChangeTableS"/>
+  </action-method>
+</object-views>

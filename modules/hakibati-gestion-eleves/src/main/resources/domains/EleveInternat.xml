@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_5.3.xsd">
+
+    <module name="hakibati-gestion-eleves" package="com.hakibati.gestion.eleves.db"/>
+    <entity name="EleveInternat" cacheable="true">
+
+        <boolean name="isMassar" default="false"/>
+        <string name="cdMassar" title="code Massar" />
+        <many-to-one name="image" ref="com.axelor.meta.db.MetaFile" title="Photo" initParam="true"/>
+        <date name="dateNaissance" title="Date de naissance"/>
+        <string name="nomAr" title="Nom en Arab"/>
+        <string name="prenomAr" title="Prénom arab"/>
+        <string name="nomFr" title="Nom en Français"/>
+        <string name="prenomFr" title="Prénom enFrançais"/>
+        <integer name="idclasse" title="Ordre Classe"/>
+        <integer name="sexe" selection="selection-sexe-eleve" title="Genre"/>
+        <string name="lieuNaissanceAr" title="Lieu de Naissance arab"/>
+       <string name="etablissementetudie"/>
+        <string name="classe"/>
+        <string name="niveau"/>
+
+        <string name="numeroBourse" title="Numero Bourse" />
+        <date name="dateBourse" title="Date de Bourse"/>
+        <integer name="typeBourse" title="Type De Bourse" selection="selection-type-bourse" default="0" />
+        <string name="numeroInternat" title="Numero Internat"/>
+        <integer name="idinternat" title="Ordre Internat"/>
+        <integer name="situationActuelle"  required="true" default="0" title="La situation actuelle"
+                 selection="selection-situation-actuelle-internat"/>
+        <date name="dateLaSituationActuelle" title="Date situation"/>
+        <integer name="situationInitiale" required="true" default="0" title="situation initiale"
+                 selection="selection-situation-initiale-internat"/>
+<!--        <string name="anneeScolaire" title="L'année scolaire" />-->
+        <many-to-one name="anneeScolaire" ref="AnneScolaire" title="Année scolaire" required="true" default="0"/>
+
+        // information tuteur
+        <string name="cinTuteur" title="CIN Tuteur"/>
+        <string name="nomarTuteur" title="Nom En arab"/>
+        <string name="prenomarTuteur" title="Prénom en Arab"/>
+        <string name="fonctionTuteur"/>
+        <string name="telTuteur" title="Telephone Tuteur"/>
+        <string name="adresseTuteur"/>
+
+// information Reporter
+        <string name="cinReporter" title="CIN Reporter"/>
+        <string name="nomarReporter" title="Nom Reporter"/>
+        <string name="prenomarReporter" title="Prénom Reporter"/>
+       <string name="fonctionReporter" title="Fonction Reporter"/>
+        <string name="telReporter" title="Tel Reporter"/>
+        <string name="adresseReporter" title="Adresse Reporter"/>
+
+        // avis absence
+        // CONVOCATION
+        // suive medical
+        // PieceJointEleve
+        <one-to-many name="absenceeleveInternat" ref="AbsenceeleveInternat" mappedBy="eleveInternat"/>
+        <one-to-many name="pieceJointElevesInternat" ref="PieceJointEleveInternat" mappedBy="eleveInternat"/>
+        <many-to-one name="gestioneleves" ref="Gestioneleves"/>
+
+        <many-to-one name="etablissement" ref="com.app.application.db.Etablissement">
+            <![CDATA[
+    if (etablissement == null)
+   return createdBy.getEtablissementSelectionnee() ;
+   return etablissement;
+      ]]>
+        </many-to-one>
+        <many-to-one name="createdBy" ref="com.axelor.auth.db.User"/>
+<!--        <unique-constraint columns="cdMassar,etablissement"/>-->
+        <finder-method name="findBycdMassar" using="cdMassar" cacheable="true"/>
+        <finder-method name="findByEtablissemntAndMassar" using="Long:etablissemntId,String:cdMassar"
+                       filter="self.etablissement[].id = :etablissemntId AND self.cdMassar= :cdMassar" cacheable="true"
+                       all="false"/>
+        <finder-method name="findByEtablissemntAndMassarAndAnnee" using="Long:etablissemntId,String:cdMassar,Long:anneeScolaireId"
+                       filter="self.etablissement[].id = :etablissemntId AND self.cdMassar= :cdMassar AND self.anneeScolaire= :anneeScolaireId" cacheable="true"
+                       all="false"/>
+    </entity>
+</domain-models>

@@ -1,0 +1,2 @@
+code;indexGroupe;name;namear;roleRead;roleWrite;roleDelete;language;key
+3;1;APPLICATION ASSOCIATION ENAJAH;تطبيق جمعية دعم نجاح;role.hakibati.ass.enajah.read;role.hakibati.ass.enajah.write;role.hakibati.ass.enajah.delete;ar;value:APPLICATION ASSOCIATION ENAJAH

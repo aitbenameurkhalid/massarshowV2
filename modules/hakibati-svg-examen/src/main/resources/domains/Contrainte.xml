@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_5.3.xsd">
+
+    <module name="hakibati-svg-examen" package="com.hakibati.svg.examen.db"/>
+    <entity name="Contrainte" cacheable="true">
+
+        <many-to-one name="contrainte" title="contrainte" ref="com.hakibati.setting.db.Listcontraint"/>
+
+        <integer name="poids" default="95"/>
+        <integer name="valeur" title="Valeur" default=""/>
+        <date name="dateExam" title="Date"/>
+        <boolean name="matin" title="Matin"/>
+        <boolean name="apresMidi" title="après midi"/>
+        <boolean name="active" title="activé" default="false"/>
+        <many-to-one name="prof" ref="Prof"/>
+        <!--        <one-to-many name="contraintProfs" ref="ContraintProf" mappedBy="contrainte"/>-->
+        <many-to-many name="profs" ref="Prof"/>
+        <many-to-one name="salle" ref="Salles"/>
+        <!--        <many-to-many name="salles" ref="Salles"/>-->
+        <many-to-one name="matiere" ref="Matiere"/>
+        <many-to-one name="fillier" ref="Fillier"/>
+
+        <many-to-one name="createdBy" ref="com.axelor.auth.db.User"/>
+        <many-to-one name="etablissement" ref="com.app.application.db.Etablissement">
+            <![CDATA[
+                if (etablissement != null )
+                 return etablissement;
+                 if(createdBy != null)
+                 return createdBy.getEtablissementSelectionnee() ;
+               return null;
+                  ]]>
+        </many-to-one>
+        <!--      <unique-constraint columns="contrainte,etablissement,dateExam,matin,apresMidi,prof,salle,matiere,fillier"/>-->
+    </entity>
+
+</domain-models>

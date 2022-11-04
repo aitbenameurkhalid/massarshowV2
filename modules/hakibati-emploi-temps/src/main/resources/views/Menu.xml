@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+
+
+  <menuitem name="menu-emploi-temps" title="Emploi du temps" icon="fa-table" icon-background="violet"/>
+<!--    <menuitem name="menu-emploi-temps-creat-fet" parent="menu-emploi-temps" title="Creation Dossier FET" action="action-emploi-temps-import-fet-resultat" />-->
+    <menuitem name="menu-emploi-temps-import-fet" icon="fa-upload" icon-background="#008000" parent="menu-emploi-temps" title="Importer Résultats FET" action="action-emploi-temps-import-fet-resultat" />
+      <action-method name="action-emploi-temps-import-fet-resultat">
+        <call class="com.emploi.temps.web.ResultatFetController" method="OpenImportResultaFet"/>
+    </action-method>
+
+</object-views>

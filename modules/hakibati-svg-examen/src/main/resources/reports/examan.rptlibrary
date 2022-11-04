@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.8.0.v201806261756</property>
+    <property name="units">in</property>
+    <property name="theme">defaultTheme</property>
+    <themes>
+        <theme name="defaultTheme" id="4">
+            <styles>
+                <style name="fintStyle" id="5">
+                    <property name="backgroundColor">#80FF00</property>
+                    <property name="fontFamily">"Arabic Typesetting"</property>
+                    <property name="color">#000000</property>
+                    <property name="textLineThrough">none</property>
+                    <property name="textOverline">none</property>
+                    <property name="textUnderline">none</property>
+                </style>
+            </styles>
+        </theme>
+    </themes>
+    <components>
+        <grid name="NewGrid" id="6">
+            <column id="7"/>
+            <column id="8"/>
+            <column id="9"/>
+            <row id="10">
+                <cell id="11"/>
+                <cell id="12"/>
+                <cell id="13"/>
+            </row>
+            <row id="14">
+                <cell id="15"/>
+                <cell id="16"/>
+                <cell id="17"/>
+            </row>
+            <row id="18">
+                <cell id="19"/>
+                <cell id="20"/>
+                <cell id="21"/>
+            </row>
+        </grid>
+    </components>
+    <page-setup>
+        <simple-master-page name="NewSimpleMasterPage" id="3"/>
+    </page-setup>
+</library>

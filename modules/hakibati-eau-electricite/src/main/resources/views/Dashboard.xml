@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+  <dashboard name="eau-electricite.dashboard" title="Statistiques!">
+    <dashlet action="chart:chart.eau.per.etablissement"/>
+    <dashlet action="chart:chart.eau.per.month"/>
+    <dashlet action="chart:chart.eau.per.controle"/>
+    <dashlet action="chart:chart.electricite.per.etablissement"/>
+    <dashlet action="chart:chart.electricite.per.month"/>
+    <dashlet action="chart:chart.electricite.per.controle"/>
+<!--    <dashlet action="chart:chart.telephone.per.etablissement"/>-->
+<!--    <dashlet action="chart:chart.telephone.per.month"/>-->
+  </dashboard>
+
+
+</object-views>

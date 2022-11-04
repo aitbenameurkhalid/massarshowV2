@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+
+  <grid name="PersonnesnourriesJournalier-grid" title="Personnes nourries Journalier Journal" model="com.hakibati.gestion.eleves.db.PersonnesnourriesJournalier" editable="true" orderBy="typePersonnes">
+    <field name="typePersonnes" readonly="true" />
+    <field name="petitDejeuner" readonlyIf="typePersonnes==2" />
+    <field name="dejeuner" />
+    <field name="diner" readonlyIf="typePersonnes==2" />
+
+  </grid>
+
+  <form name="PersonnesnourriesJournalier-form" title="Personnes nourries Journalier" model="com.hakibati.gestion.eleves.db.PersonnesnourriesJournalier">
+    <panel title="Ajouter ou modifier" showTitle="false">
+      <field name="typePersonnes" />
+      <field name="petitDejeuner" />
+      <field name="dejeuner" />
+      <field name="diner" />
+    </panel>
+  </form>
+
+  <selection name="selection-list-type-Personnes-nourries">
+    <option value="1">Pensionnaires</option>
+    <option value="2">Demi-Pensionnaires</option>
+    <option value="3">Maîtres d'internat </option>
+    <option value="4">Agents domestiques</option>
+    <option value="5">Table commune</option>
+  </selection>
+</object-views>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+  <grid name="OperationE-grid" title="opération des  entrées" model="com.hakibati.comptabilite.matier.db.OperationE"
+        canDelete="false" orderBy="-dateDeOperation">
+    <hilite if="statusSelect == 1" background="info"/>
+    <hilite if="statusSelect == 2" background="success"/>
+    <hilite if="statusSelect == 3" background="danger"/>
+    <field name="name"/>
+    <field name="source"/>
+    <field name="dateDeOperation"/>
+    <field name="nomeDePersonne"/>
+    <field name="etablissement"/>
+    <field name="statusSelect" selection="OperationE.status.select"/>
+  </grid>
+
+  <form name="OperationE-form" title="opération des  entrées" model="com.hakibati.comptabilite.matier.db.OperationE" onNew="action-new-operationE" canSave="false">
+    <panel title="Overview" readonlyIf="statusSelect != 1">
+      <panel title="Status" showTitle="false" colSpan="12">
+        <field name="statusSelect" showTitle="false" readonly="true" colSpan="12" widget="NavSelect" fgColor=""/>
+      </panel>
+
+      <spacer name="space" colSpan="10"/>
+      <field name="name" colSpan="2" readonly="true"/>
+
+      <field name="source" colSpan="8"/>
+      <field name="nomeDePersonne" colSpan="2"/>
+      <field name="dateDeOperation" colSpan="2"/>
+      <field name="isPositionDepart" colSpan="2" hidden="true"/>
+    </panel>
+    <panel name="actionsPanel" colSpan="2" sidebar="true">
+
+      <button name="deleteBtn" title="Supprime l'operation" hidden="true" showIf="statusSelect == 1" colSpan="12"
+              css="btn-danger" icon="fa-times-circle" prompt="Voulez-vous vraiment Supprime l'operation?"
+              onClick="save,action-deleteOperationE"/>
+      <button name="SavetBtn" title="Enregistrer" hidden="true" showIf="statusSelect == 1" colSpan="12"
+              icon="fa-play"  onClick="save"/>
+      <field name="typeImprime" widget="RadioSelect" selection="imprime-type-select" showTitle="false"
+             default="PDF"/>
+      <button name="startBtn" title="Validé et Imprime" hidden="true" showIf="statusSelect == 1" colSpan="12"
+              icon="fa-play" prompt="Voulez-vous vraiment valide l'operation?" onClick="save,get-numero-OperationE,action-operationE-valide,save,action-print-operationE-single"/>
+      <button name="cancel1Btn" title="Annulé l'operation" hidden="true"
+              showIf="statusSelect == 2 &amp;&amp; isPositionDepart == false" colSpan="12" css="btn-danger"
+              icon="fa-times-circle" prompt="Voulez-vous vraiment Annulé l'operation?"
+              onClick="action-operationE-annule0,save,action-operationE-annule"/>
+      <button name="printBtn" title="Imprime" hidden="true" showIf="statusSelect == 2" colSpan="12"
+              icon="fa-angle-double-left" onClick="save,action-print-operationE-single"/>
+
+      <button name="cancelprintbtn" title="Imprime" hidden="false" showIf="statusSelect == 3" colSpan="12"
+              icon="fa-play" onClick="action-operationE-Annule-print"/>
+
+
+    </panel>
+
+    <panel title="list des matieres" showTitle="false">
+      <panel-related field="tablesEntres" colSpan="12" grid-view="TableE-grid" form-view="TableE-form" canView="true"
+                     canNew="true" canSelect="false" canRemove="true" canEdit="true"
+                     readonlyIf="statusSelect == 3||statusSelect == 2"/>
+    </panel>
+    <panel-mail>
+      <mail-messages limit="4" />
+<!--      <mail-followers />-->
+    </panel-mail>
+  </form>
+
+  <selection name="OperationE.status.select">
+    <option value="1">En cours de réalisation</option>
+    <option value="2">confirmation</option>
+    <option value="3">Annulé</option>
+  </selection>
+  <selection name="imprime-type-select">
+    <option value="pdf">PDF</option>
+    <option value="xlsx">EXCEL</option>
+    <option value="docx">WORD</option>
+  </selection>
+
+
+  <action-record name="action-operationE-valide" model="com.hakibati.comptabilite.matier.db.OperationE">
+    <field name="statusSelect" expr="eval: __repo__(OperationE).phase2"/>
+  </action-record>
+  <action-record name="action-operationE-annule0" model="com.hakibati.comptabilite.matier.db.OperationE">
+    <field name="statusSelect" expr="eval: __repo__(OperationE).phase3"/>
+  </action-record>
+  <action-method name="action-operationE-annule">
+    <call class="com.comptabilite.matier.web.OperationEController" method="AnnuleOperationE"/>
+  </action-method>
+
+  <action-method name="get-numero-OperationE">
+    <call class="com.comptabilite.matier.web.OperationEController" method="getNumeroOperationE"/>
+  </action-method>
+  <action-record name="action-new-operationE" model="com.hakibati.comptabilite.matier.db.OperationE">
+    <field name="dateDeOperation" expr="call:com.comptabilite.matier.web.OperationEControllergetCurretDate()"/>
+  </action-record>
+  <action-method name="action-deleteOperationE">
+    <call class="com.comptabilite.matier.web.OperationEController" method="deleteOperationE"/>
+  </action-method>
+  <action-method name="action-print-operationE-single">
+    <call class="com.comptabilite.matier.web.OperationPrintController" method="PrintoperationEsingle"/>
+  </action-method>
+
+
+</object-views>

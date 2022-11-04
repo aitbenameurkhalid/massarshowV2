@@ -1,0 +1,104 @@
+"key","message","comment","context"
+"Adressee",,,"resources\domains\EleveCentre.xml:14
+resources\domains\ProfCentre.xml:13"
+"Ajouter ou modifier",,,"resources\views\EleveCentre.xml:18
+resources\views\GroupeCentre.xml:15
+resources\views\InfoCentreLangue.xml:13
+resources\views\MatiereCentre.xml:14
+resources\views\NiveauCentre.xml:14
+resources\views\ProfCentre.xml:16
+resources\views\SuiviFinancierCentre.xml:19
+resources\views\SuiviFinancierCentre.xml:45"
+"Année de paiement",,,"resources\domains\SuiviFinancierCentre.xml:11"
+"Commentaire",,,"resources\domains\GroupeCentre.xml:14
+resources\domains\MatiereCentre.xml:10
+resources\domains\NiveauCentre.xml:10
+resources\domains\SuiviFinancierCentre.xml:16"
+"Created by",,,"resources\domains\EleveCentre.xml:25
+resources\domains\GroupeCentre.xml:23
+resources\domains\InfoCentreLangue.xml:16
+resources\domains\MatiereCentre.xml:18
+resources\domains\NiveauCentre.xml:18
+resources\domains\ProfCentre.xml:22
+resources\domains\SuiviFinancierCentre.xml:24"
+"Date de naissance",,,"resources\domains\EleveCentre.xml:11
+resources\domains\ProfCentre.xml:10"
+"Date de paiement",,,"resources\domains\SuiviFinancierCentre.xml:12"
+"EleveCentre",,,"resources\views\EleveCentre.xml:17
+resources\views\EleveCentre.xml:6"
+"Eleves",,,"resources\domains\GroupeCentre.xml:13
+resources\domains\SuiviFinancierCentre.xml:14"
+"Email",,,"resources\domains\EleveCentre.xml:13
+resources\domains\ProfCentre.xml:12"
+"Etablissement",,,"resources\domains\EleveCentre.xml:18
+resources\domains\GroupeCentre.xml:16
+resources\domains\InfoCentreLangue.xml:9
+resources\domains\MatiereCentre.xml:11
+resources\domains\NiveauCentre.xml:11
+resources\domains\ProfCentre.xml:15
+resources\domains\SuiviFinancierCentre.xml:17"
+"Gestion Centre de langues",,,"resources\views\Menu.xml:6"
+"Groupe",,,"resources\domains\SuiviFinancierCentre.xml:15
+resources\views\Menu.xml:31"
+"Groupe Centre",,,"resources\views\GroupeCentre.xml:14
+resources\views\GroupeCentre.xml:7"
+"Groupes",,,"resources\views\Menu.xml:30"
+"Groups",,,"resources\domains\EleveCentre.xml:16"
+"Imprime Liste des étudiants",,,"resources\views\GroupeCentre.xml:21"
+"Imprimer",,,"resources\views\SuiviFinancierCentre.xml:15
+resources\views\SuiviFinancierCentre.xml:27
+resources\views\SuiviFinancierCentre.xml:41
+resources\views\SuiviFinancierCentre.xml:53"
+"Mai",,,"resources\views\SuiviFinancierCentre.xml:71"
+"Mars",,,"resources\views\SuiviFinancierCentre.xml:69"
+"Matiere",,,"resources\domains\GroupeCentre.xml:12
+resources\views\Menu.xml:8"
+"Matiere Centre",,,"resources\views\MatiereCentre.xml:13
+resources\views\MatiereCentre.xml:7"
+"Matieres",,,"resources\views\Menu.xml:7"
+"Montant mensuel",,,"resources\domains\GroupeCentre.xml:10"
+"Name",,,"resources\domains\GroupeCentre.xml:9
+resources\domains\InfoCentreLangue.xml:8
+resources\domains\MatiereCentre.xml:9
+resources\domains\NiveauCentre.xml:9"
+"Niveau",,,"resources\domains\EleveCentre.xml:10
+resources\views\Menu.xml:13"
+"Niveau Centre",,,"resources\views\NiveauCentre.xml:13
+resources\views\NiveauCentre.xml:7"
+"Niveaux",,,"resources\views\Menu.xml:12"
+"Octobre",,,"resources\views\SuiviFinancierCentre.xml:76"
+"Photo",,,"resources\domains\EleveCentre.xml:15
+resources\domains\ProfCentre.xml:14"
+"Prix Payé",,,"resources\domains\SuiviFinancierCentre.xml:9"
+"Prof",,,"resources\domains\GroupeCentre.xml:11"
+"ProfCentre",,,"resources\views\ProfCentre.xml:15
+resources\views\ProfCentre.xml:7"
+"Profs",,,"resources\views\Menu.xml:18
+resources\views\Menu.xml:19"
+"Suivi Financier",,,"resources\views\SuiviFinancierCentre.xml:18
+resources\views\SuiviFinancierCentre.xml:33
+resources\views\SuiviFinancierCentre.xml:44
+resources\views\SuiviFinancierCentre.xml:7"
+"Suivi du Materiel",,,"resources\views\InfoCentreLangue.xml:12
+resources\views\InfoCentreLangue.xml:7"
+"Suivi financier",,,"resources\domains\EleveCentre.xml:17
+resources\domains\GroupeCentre.xml:15"
+"Telephone",,,"resources\domains\EleveCentre.xml:12
+resources\domains\ProfCentre.xml:11"
+"août",,,"resources\views\SuiviFinancierCentre.xml:74"
+"avril",,,"resources\views\SuiviFinancierCentre.xml:70"
+"décembre",,,"resources\views\SuiviFinancierCentre.xml:78"
+"error",,,"java\com\centre\langue\web\GroupeCentreController.java:55
+java\com\centre\langue\web\SuiviFinancierCentreController.java:63"
+"février",,,"resources\views\SuiviFinancierCentre.xml:68"
+"janvier",,,"resources\views\SuiviFinancierCentre.xml:67"
+"juillet",,,"resources\views\SuiviFinancierCentre.xml:73"
+"juin",,,"resources\views\SuiviFinancierCentre.xml:72"
+"mois Payé",,,"resources\domains\SuiviFinancierCentre.xml:10"
+"nom et prénom",,,"resources\domains\EleveCentre.xml:8
+resources\domains\ProfCentre.xml:9"
+"novembre",,,"resources\views\SuiviFinancierCentre.xml:77"
+"numéro d'inscription",,,"resources\domains\EleveCentre.xml:9"
+"septembre",,,"resources\views\SuiviFinancierCentre.xml:75"
+"Élèves",,,"resources\views\Menu.xml:24
+resources\views\Menu.xml:25"

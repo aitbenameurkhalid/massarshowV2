@@ -1,0 +1,2589 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.8.0.v201806261756</property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <parameters>
+        <scalar-parameter name="cahierJournalIdMin" id="847">
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">decimal</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">1</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="cahierJournalIdMax" id="915">
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">decimal</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">1000000</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="dateCahierJournalierMin" id="916">
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">dateTime</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">2000-10-23</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="dateCahierJournalierMax" id="917">
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">dateTime</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">2029-10-23</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="IdAnneeScolaire" id="4701">
+            <property name="hidden">false</property>
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">decimal</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">14</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Hakibati" id="4">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">org.postgresql.Driver</property>
+            <property name="odaURL">jdbc:postgresql://localhost:5432/appexam</property>
+            <property name="odaUser">hakibati</property>
+            <encrypted-property name="odaPassword" encryptionID="base64">SGFraWJhdGlAMjAyMCE=</encrypted-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="CahierJournalier" id="5">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">date_operation</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">date_operation</text-property>
+                    <text-property name="heading">date_operation</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">menudejeuner</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">menudejeuner</text-property>
+                    <text-property name="heading">menudejeuner</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">menudiner</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">menudiner</text-property>
+                    <text-property name="heading">menudiner</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">menupetitdejeuner</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">menupetitdejeuner</text-property>
+                    <text-property name="heading">menupetitdejeuner</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">etablissement</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">etablissement</text-property>
+                    <text-property name="heading">etablissement</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">observation</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">observation</text-property>
+                    <text-property name="heading">observation</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">id</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">id</text-property>
+                    <text-property name="heading">id</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">effictif_petit_dejeuner</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">effictif_petit_dejeuner</text-property>
+                    <text-property name="heading">effictif_petit_dejeuner</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">effictif_dejeuner</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">effictif_dejeuner</text-property>
+                    <text-property name="heading">effictif_dejeuner</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">effictif_diner</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">effictif_diner</text-property>
+                    <text-property name="heading">effictif_diner</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">total_petit_dejeuner</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">total_petit_dejeuner</text-property>
+                    <text-property name="heading">total_petit_dejeuner</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">total_dejeuner</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">total_dejeuner</text-property>
+                    <text-property name="heading">total_dejeuner</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">total_diner</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">total_diner</text-property>
+                    <text-property name="heading">total_diner</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">cahierJournalId</property>
+                    <property name="paramName">dateCahierJournalierMin</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                    <property name="position">1</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">param_1</property>
+                    <property name="paramName">dateCahierJournalierMax</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                    <property name="position">2</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">date_operation</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">menudejeuner</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">menudiner</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">menupetitdejeuner</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">etablissement</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">observation</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">id</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">effictif_petit_dejeuner</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">effictif_dejeuner</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">effictif_diner</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">total_petit_dejeuner</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">total_dejeuner</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">13</property>
+                        <property name="name">total_diner</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Hakibati</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">date_operation</property>
+                    <property name="nativeName">date_operation</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">menudejeuner</property>
+                    <property name="nativeName">menudejeuner</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">menudiner</property>
+                    <property name="nativeName">menudiner</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">menupetitdejeuner</property>
+                    <property name="nativeName">menupetitdejeuner</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">etablissement</property>
+                    <property name="nativeName">etablissement</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">observation</property>
+                    <property name="nativeName">observation</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">id</property>
+                    <property name="nativeName">id</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">effictif_petit_dejeuner</property>
+                    <property name="nativeName">effictif_petit_dejeuner</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">effictif_dejeuner</property>
+                    <property name="nativeName">effictif_dejeuner</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">effictif_diner</property>
+                    <property name="nativeName">effictif_diner</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">total_petit_dejeuner</property>
+                    <property name="nativeName">total_petit_dejeuner</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">total_dejeuner</property>
+                    <property name="nativeName">total_dejeuner</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+                <structure>
+                    <property name="position">13</property>
+                    <property name="name">total_diner</property>
+                    <property name="nativeName">total_diner</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select 
+public.eleves_cahierjournalier.date_operation,
+public.eleves_cahierjournalier.menudejeuner,
+public.eleves_cahierjournalier.menudiner,
+public.eleves_cahierjournalier.menupetitdejeuner,
+public.eleves_cahierjournalier.etablissement,
+public.eleves_cahierjournalier.observation,
+public.eleves_cahierjournalier.id,
+
+personnes.effictif_petit_dejeuner , 
+personnes.effictif_dejeuner ,
+personnes.effictif_diner ,
+consommation.Total_petit_dejeuner,
+consommation.Total_dejeuner,
+consommation.Total_diner
+from public.eleves_cahierjournalier
+left join (select 
+       sum(public.eleves_personnesnourries_journalier.petit_dejeuner)  effictif_petit_dejeuner ,
+      sum(public.eleves_personnesnourries_journalier.dejeuner)  effictif_dejeuner ,
+      sum(public.eleves_personnesnourries_journalier.diner)  effictif_diner ,
+       public.eleves_personnesnourries_journalier.cahierjournalier 
+       from public.eleves_personnesnourries_journalier
+       group by  public.eleves_personnesnourries_journalier.cahierjournalier)  personnes on  personnes.cahierjournalier=public.eleves_cahierjournalier.id
+
+       
+left join (select 
+		sum(public.eleves_operation_journalier.consommation_petit_dejeuner*public.eleves_article.prix_unite) Total_petit_dejeuner,
+		sum(public.eleves_operation_journalier.consommation_dejeuner*public.eleves_article.prix_unite) Total_dejeuner,
+		sum(public.eleves_operation_journalier.consommation_dediner*public.eleves_article.prix_unite) Total_diner,
+		public.eleves_operation_journalier.cahierjournalier
+		from 	public.eleves_operation_journalier
+		left join public.eleves_article on public.eleves_article.id = public.eleves_operation_journalier.article
+		group by public.eleves_operation_journalier.cahierjournalier) consommation	on consommation.cahierjournalier=public.eleves_cahierjournalier.id
+  
+where public.eleves_cahierjournalier.date_operation >= ?
+AND public.eleves_cahierjournalier.date_operation <= ?
+]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>date_operation</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+            <design:precision>13</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>date_operation</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>date_operation</design:label>
+            <design:formattingHints>
+              <design:displaySize>13</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>menudejeuner</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>2147483647</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>menudejeuner</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>menudejeuner</design:label>
+            <design:formattingHints>
+              <design:displaySize>2147483647</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>menudiner</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>2147483647</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>menudiner</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>menudiner</design:label>
+            <design:formattingHints>
+              <design:displaySize>2147483647</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>menupetitdejeuner</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>2147483647</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>menupetitdejeuner</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>menupetitdejeuner</design:label>
+            <design:formattingHints>
+              <design:displaySize>2147483647</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>etablissement</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-5</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>etablissement</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>etablissement</design:label>
+            <design:formattingHints>
+              <design:displaySize>20</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>observation</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>2147483647</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>observation</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>observation</design:label>
+            <design:formattingHints>
+              <design:displaySize>2147483647</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="PersonnesNouris" id="6">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">dejeuner</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">dejeuner</text-property>
+                    <text-property name="heading">dejeuner</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">diner</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">diner</text-property>
+                    <text-property name="heading">diner</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">petit_dejeuner</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">petit_dejeuner</text-property>
+                    <text-property name="heading">petit_dejeuner</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">type_personnes</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">type_personnes</text-property>
+                    <text-property name="heading">type_personnes</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">cahierjournalier</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">cahierjournalier</text-property>
+                    <text-property name="heading">cahierjournalier</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">param_1</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                    <property name="position">1</property>
+                    <property name="isInput">true</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">dejeuner</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">diner</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">petit_dejeuner</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">type_personnes</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">cahierjournalier</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Hakibati</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">dejeuner</property>
+                    <property name="nativeName">dejeuner</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">diner</property>
+                    <property name="nativeName">diner</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">petit_dejeuner</property>
+                    <property name="nativeName">petit_dejeuner</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">type_personnes</property>
+                    <property name="nativeName">type_personnes</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">cahierjournalier</property>
+                    <property name="nativeName">cahierjournalier</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select public.eleves_personnesnourries_journalier.dejeuner,
+public.eleves_personnesnourries_journalier.diner,
+public.eleves_personnesnourries_journalier.petit_dejeuner,
+public.eleves_personnesnourries_journalier.type_personnes,
+public.eleves_personnesnourries_journalier.cahierjournalier
+from public.eleves_personnesnourries_journalier
+where public.eleves_personnesnourries_journalier.cahierjournalier = ?]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <DataSetParameters>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>1</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>-5</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+  </DataSetParameters>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>dejeuner</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>dejeuner</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>dejeuner</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>diner</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>diner</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>diner</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>petit_dejeuner</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>petit_dejeuner</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>petit_dejeuner</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>type_personnes</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>type_personnes</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>type_personnes</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="OperationJournal" id="494">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">consommation_dediner</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">consommation_dediner</text-property>
+                    <text-property name="heading">consommation_dediner</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">consommation_dejeuner</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">consommation_dejeuner</text-property>
+                    <text-property name="heading">consommation_dejeuner</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">consommation_petit_dejeuner</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">consommation_petit_dejeuner</text-property>
+                    <text-property name="heading">consommation_petit_dejeuner</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">entree_du_jorur</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">entree_du_jorur</text-property>
+                    <text-property name="heading">entree_du_jorur</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">article</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">article</text-property>
+                    <text-property name="heading">article</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">namearticle</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">namearticle</text-property>
+                    <text-property name="heading">namearticle</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">prix_unite</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">prix_unite</text-property>
+                    <text-property name="heading">prix_unite</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">unite</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">unite</text-property>
+                    <text-property name="heading">unite</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">cahierjournalier</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">cahierjournalier</text-property>
+                    <text-property name="heading">cahierjournalier</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">param_1</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                    <property name="position">1</property>
+                    <property name="isInput">true</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">consommation_dediner</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">consommation_dejeuner</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">consommation_petit_dejeuner</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">entree_du_jorur</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">article</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">namearticle</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">prix_unite</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">unite</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">cahierjournalier</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Hakibati</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">consommation_dediner</property>
+                    <property name="nativeName">consommation_dediner</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">consommation_dejeuner</property>
+                    <property name="nativeName">consommation_dejeuner</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">consommation_petit_dejeuner</property>
+                    <property name="nativeName">consommation_petit_dejeuner</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">entree_du_jorur</property>
+                    <property name="nativeName">entree_du_jorur</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">article</property>
+                    <property name="nativeName">article</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">namearticle</property>
+                    <property name="nativeName">namearticle</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">prix_unite</property>
+                    <property name="nativeName">prix_unite</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">unite</property>
+                    <property name="nativeName">unite</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">cahierjournalier</property>
+                    <property name="nativeName">cahierjournalier</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select public.eleves_operation_journalier.consommation_dediner,
+public.eleves_operation_journalier.consommation_dejeuner,
+public.eleves_operation_journalier.consommation_petit_dejeuner,
+public.eleves_operation_journalier.entree_du_jorur,
+public.eleves_operation_journalier.article,
+public.eleves_article.name as nameArticle,
+public.eleves_article.prix_unite,
+public.eleves_article.unite,
+public.eleves_operation_journalier.cahierjournalier
+from public.eleves_operation_journalier
+left join public.eleves_article on public.eleves_article.id = public.eleves_operation_journalier.article
+where public.eleves_operation_journalier.cahierjournalier = ?]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>article</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-5</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>article</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>article</design:label>
+            <design:formattingHints>
+              <design:displaySize>20</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>consommation_dejeuner</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>consommation_dejeuner</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>consommation_dejeuner</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>consommation_dinner</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>consommation_dinner</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>consommation_dinner</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>consommation_petit_dejeuner</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>consommation_petit_dejeuner</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>consommation_petit_dejeuner</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>entree_jour</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>entree_jour</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>entree_jour</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>cahierjournalier</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-5</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>cahierjournalier</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>cahierjournalier</design:label>
+            <design:formattingHints>
+              <design:displaySize>20</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="headerHeight">0in</property>
+            <property name="footerHeight">0in</property>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <table id="7">
+            <property name="fontFamily">"Arial"</property>
+            <property name="dataSet">CahierJournalier</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">date_operation</property>
+                    <text-property name="displayName">date_operation</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["date_operation"]</expression>
+                    <property name="dataType">date</property>
+                </structure>
+                <structure>
+                    <property name="name">menudejeuner</property>
+                    <text-property name="displayName">menudejeuner</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["menudejeuner"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">menudiner</property>
+                    <text-property name="displayName">menudiner</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["menudiner"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">menupetitdejeuner</property>
+                    <text-property name="displayName">menupetitdejeuner</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["menupetitdejeuner"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">id</property>
+                    <text-property name="displayName">id</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["id"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">effictif_petit_dejeuner</property>
+                    <text-property name="displayName">effictif_petit_dejeuner</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["effictif_petit_dejeuner"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">effictif_diner</property>
+                    <text-property name="displayName">effictif_diner</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["effictif_diner"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">effictif_dejeuner</property>
+                    <text-property name="displayName">effictif_dejeuner</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["effictif_dejeuner"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">total_petit_dejeuner</property>
+                    <text-property name="displayName">total_petit_dejeuner</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["total_petit_dejeuner"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">total_diner</property>
+                    <text-property name="displayName">total_diner</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["total_diner"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">total_dejeuner</property>
+                    <text-property name="displayName">total_dejeuner</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["total_dejeuner"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">Column Binding</property>
+                    <expression name="expression" type="javascript">if(row["effictif_petit_dejeuner"]==0 &amp;&amp; row["total_petit_dejeuner"] !=0 ){&#13;
+"erreur";&#13;
+}else if(row["total_petit_dejeuner"] == 0){&#13;
+""}else{&#13;
+row["total_petit_dejeuner"]/row["effictif_petit_dejeuner"]&#13;
+}</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">Column Binding_1</property>
+                    <expression name="expression" type="javascript">if(row["effictif_dejeuner"]==0 &amp;&amp; row["total_dejeuner"] !=0 ){&#13;
+"erreur";&#13;
+}else if(row["total_dejeuner"] == 0){&#13;
+""}else{&#13;
+row["total_dejeuner"]/row["effictif_dejeuner"]&#13;
+}</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">Column Binding_2</property>
+                    <expression name="expression" type="javascript">if(row["effictif_diner"]==0 &amp;&amp; row["total_diner"] !=0 ){&#13;
+"erreur";&#13;
+}else if(row["total_diner"] == 0){&#13;
+""}else{&#13;
+row["total_diner"]/row["effictif_diner"]&#13;
+}</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">Column Binding_3</property>
+                    <expression name="expression" type="javascript">row["total_dejeuner"]+row["total_diner"]+row["total_petit_dejeuner"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">Column Binding_4</property>
+                    <expression name="expression" type="javascript">(row["total_petit_dejeuner"]/row["effictif_petit_dejeuner"])&#13;
++(row["total_dejeuner"]/row["effictif_dejeuner"])&#13;
++(row["total_diner"]/row["effictif_diner"])</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">Column Binding_5</property>
+                    <expression name="expression" type="javascript">row["effictif_dejeuner"]+row["effictif_diner"]+row["effictif_petit_dejeuner"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+            </list-property>
+            <property name="pageBreakInterval">4000</property>
+            <column id="16"/>
+            <detail>
+                <row id="11">
+                    <property name="pageBreakAfter">auto</property>
+                    <property name="pageBreakBefore">always</property>
+                    <cell id="12">
+                        <grid id="186">
+                            <column id="187">
+                                <property name="width">5mm</property>
+                            </column>
+                            <column id="889"/>
+                            <column id="188"/>
+                            <column id="189"/>
+                            <column id="190"/>
+                            <column id="191"/>
+                            <column id="192"/>
+                            <column id="193"/>
+                            <column id="194"/>
+                            <column id="195"/>
+                            <column id="196"/>
+                            <column id="197"/>
+                            <column id="198">
+                                <property name="width">5mm</property>
+                            </column>
+                            <row id="212">
+                                <cell id="213"/>
+                                <cell id="866">
+                                    <property name="colSpan">7</property>
+                                    <property name="rowSpan">1</property>
+                                    <property name="textAlign">right</property>
+                                    <label id="361">
+                                        <property name="fontSize">12pt</property>
+                                        <property name="fontWeight">bold</property>
+                                        <text-property name="text">Carnet de consommation journalière du mois:</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="359">
+                                    <property name="colSpan">3</property>
+                                    <property name="rowSpan">1</property>
+                                    <data id="365">
+                                        <property name="fontSize">12pt</property>
+                                        <property name="fontWeight">bold</property>
+                                        <structure name="dateTimeFormat">
+                                            <property name="category">Custom</property>
+                                            <property name="pattern">MMMM yyyy</property>
+                                            <property name="locale">fr_FR</property>
+                                        </structure>
+                                        <property name="textAlign">center</property>
+                                        <property name="resultSetColumn">date_operation</property>
+                                    </data>
+                                </cell>
+                                <cell id="223"/>
+                                <cell id="224"/>
+                            </row>
+                            <row id="225">
+                                <cell id="226"/>
+                                <cell id="867"/>
+                                <cell id="227"/>
+                                <cell id="228">
+                                    <property name="colSpan">5</property>
+                                    <property name="rowSpan">1</property>
+                                    <label id="371">
+                                        <property name="fontSize">12pt</property>
+                                        <property name="fontWeight">normal</property>
+                                        <property name="textAlign">right</property>
+                                        <text-property name="text"> Consommation journalière du jour: </text-property>
+                                    </label>
+                                </cell>
+                                <cell id="369">
+                                    <property name="colSpan">3</property>
+                                    <property name="rowSpan">1</property>
+                                    <data id="372">
+                                        <structure name="dateTimeFormat">
+                                            <property name="category">Short Date</property>
+                                            <property name="pattern">Short Date</property>
+                                            <property name="locale">fr_FR</property>
+                                        </structure>
+                                        <property name="textAlign">center</property>
+                                        <property name="resultSetColumn">date_operation</property>
+                                    </data>
+                                </cell>
+                                <cell id="236"/>
+                                <cell id="237"/>
+                            </row>
+                            <row id="251">
+                                <cell id="252"/>
+                                <cell id="869">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">2</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <property name="verticalAlign">middle</property>
+                                    <label id="374">
+                                        <property name="textAlign">center</property>
+                                        <text-property name="text"> Menu du jour</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="904">
+                                    <property name="colSpan">3</property>
+                                    <property name="rowSpan">1</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <property name="verticalAlign">middle</property>
+                                    <label id="376">
+                                        <property name="textAlign">center</property>
+                                        <text-property name="text">Petit déjeuner</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="257">
+                                    <property name="colSpan">3</property>
+                                    <property name="rowSpan">1</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <label id="378">
+                                        <property name="textAlign">center</property>
+                                        <text-property name="text">Déjeuner</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="913">
+                                    <property name="colSpan">3</property>
+                                    <property name="rowSpan">1</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <label id="379">
+                                        <property name="textAlign">center</property>
+                                        <text-property name="text">Diner</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="263"/>
+                            </row>
+                            <row id="303">
+                                <cell id="304"/>
+                                <cell id="909">
+                                    <property name="colSpan">3</property>
+                                    <property name="rowSpan">1</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <property name="verticalAlign">top</property>
+                                    <data id="900">
+                                        <property name="resultSetColumn">menupetitdejeuner</property>
+                                    </data>
+                                </cell>
+                                <cell id="309">
+                                    <property name="colSpan">3</property>
+                                    <property name="rowSpan">1</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <property name="verticalAlign">top</property>
+                                    <data id="901">
+                                        <property name="resultSetColumn">menudejeuner</property>
+                                    </data>
+                                </cell>
+                                <cell id="914">
+                                    <property name="colSpan">3</property>
+                                    <property name="rowSpan">1</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <property name="verticalAlign">top</property>
+                                    <data id="902">
+                                        <property name="resultSetColumn">menudiner</property>
+                                    </data>
+                                </cell>
+                                <cell id="315"/>
+                            </row>
+                            <row id="316">
+                                <cell id="317"/>
+                                <cell id="874">
+                                    <property name="colSpan">11</property>
+                                    <property name="rowSpan">1</property>
+                                    <label id="441">
+                                        <property name="textAlign">center</property>
+                                        <text-property name="text">Effectifs des personnes nourries</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="328"/>
+                            </row>
+                            <row id="329">
+                                <cell id="330"/>
+                                <cell id="875">
+                                    <property name="colSpan">11</property>
+                                    <property name="rowSpan">1</property>
+                                    <table id="460">
+                                        <property name="dataSet">PersonnesNouris</property>
+                                        <list-property name="paramBindings">
+                                            <structure>
+                                                <property name="paramName">param_1</property>
+                                                <simple-property-list name="expression">
+                                                    <value type="javascript">row["id"]</value>
+                                                </simple-property-list>
+                                            </structure>
+                                        </list-property>
+                                        <list-property name="boundDataColumns">
+                                            <structure>
+                                                <property name="name">dejeuner</property>
+                                                <text-property name="displayName">dejeuner</text-property>
+                                                <expression name="expression" type="javascript">dataSetRow["dejeuner"]</expression>
+                                                <property name="dataType">integer</property>
+                                            </structure>
+                                            <structure>
+                                                <property name="name">diner</property>
+                                                <text-property name="displayName">diner</text-property>
+                                                <expression name="expression" type="javascript">dataSetRow["diner"]</expression>
+                                                <property name="dataType">integer</property>
+                                            </structure>
+                                            <structure>
+                                                <property name="name">petit_dejeuner</property>
+                                                <text-property name="displayName">petit_dejeuner</text-property>
+                                                <expression name="expression" type="javascript">dataSetRow["petit_dejeuner"]</expression>
+                                                <property name="dataType">integer</property>
+                                            </structure>
+                                            <structure>
+                                                <property name="name">type_personnes</property>
+                                                <text-property name="displayName">type_personnes</text-property>
+                                                <expression name="expression" type="javascript">dataSetRow["type_personnes"]</expression>
+                                                <property name="dataType">integer</property>
+                                            </structure>
+                                            <structure>
+                                                <property name="name">Column Binding</property>
+                                                <expression name="expression" type="javascript">if(row["type_personnes"] == 1){&#13;
+"Pensionnaires";&#13;
+}else if(row["type_personnes"] == 2){&#13;
+"Demi-Pensionnaires";&#13;
+}else if(row["type_personnes"] == 3){&#13;
+"Maîtres d'internat";&#13;
+}else if(row["type_personnes"] == 4){&#13;
+"Agents domestiques";&#13;
+}else{&#13;
+"Table commune";&#13;
+}</expression>
+                                                <property name="dataType">string</property>
+                                                <property name="allowExport">true</property>
+                                            </structure>
+                                        </list-property>
+                                        <column id="484">
+                                            <property name="width">7cm</property>
+                                        </column>
+                                        <column id="485"/>
+                                        <column id="486"/>
+                                        <column id="487"/>
+                                        <header>
+                                            <row id="461">
+                                                <property name="fontFamily">"Arial Baltic"</property>
+                                                <property name="borderBottomStyle">solid</property>
+                                                <property name="borderBottomWidth">thin</property>
+                                                <property name="borderLeftStyle">solid</property>
+                                                <property name="borderLeftWidth">thin</property>
+                                                <property name="borderRightStyle">solid</property>
+                                                <property name="borderRightWidth">thin</property>
+                                                <property name="borderTopStyle">solid</property>
+                                                <property name="borderTopWidth">thin</property>
+                                                <property name="verticalAlign">middle</property>
+                                                <cell id="462">
+                                                    <property name="borderBottomStyle">solid</property>
+                                                    <property name="borderBottomWidth">thin</property>
+                                                    <property name="borderLeftStyle">solid</property>
+                                                    <property name="borderLeftWidth">thin</property>
+                                                    <property name="borderRightStyle">solid</property>
+                                                    <property name="borderRightWidth">thin</property>
+                                                    <property name="borderTopStyle">solid</property>
+                                                    <property name="borderTopWidth">thin</property>
+                                                    <label id="469">
+                                                        <text-property name="text">personnes</text-property>
+                                                    </label>
+                                                </cell>
+                                                <cell id="464">
+                                                    <property name="borderBottomStyle">solid</property>
+                                                    <property name="borderBottomWidth">thin</property>
+                                                    <property name="borderLeftStyle">solid</property>
+                                                    <property name="borderLeftWidth">thin</property>
+                                                    <property name="borderRightStyle">solid</property>
+                                                    <property name="borderRightWidth">thin</property>
+                                                    <property name="borderTopStyle">solid</property>
+                                                    <property name="borderTopWidth">thin</property>
+                                                    <label id="467">
+                                                        <text-property name="text">Petit dejeuner</text-property>
+                                                    </label>
+                                                </cell>
+                                                <cell id="466">
+                                                    <property name="borderBottomStyle">solid</property>
+                                                    <property name="borderBottomWidth">thin</property>
+                                                    <property name="borderLeftStyle">solid</property>
+                                                    <property name="borderLeftWidth">thin</property>
+                                                    <property name="borderRightStyle">solid</property>
+                                                    <property name="borderRightWidth">thin</property>
+                                                    <property name="borderTopStyle">solid</property>
+                                                    <property name="borderTopWidth">thin</property>
+                                                    <label id="463">
+                                                        <text-property name="text">Dejeuner</text-property>
+                                                    </label>
+                                                </cell>
+                                                <cell id="468">
+                                                    <property name="borderBottomStyle">solid</property>
+                                                    <property name="borderBottomWidth">thin</property>
+                                                    <property name="borderLeftStyle">solid</property>
+                                                    <property name="borderLeftWidth">thin</property>
+                                                    <property name="borderRightStyle">solid</property>
+                                                    <property name="borderRightWidth">thin</property>
+                                                    <property name="borderTopStyle">solid</property>
+                                                    <property name="borderTopWidth">thin</property>
+                                                    <label id="465">
+                                                        <property name="fontFamily">"Arial"</property>
+                                                        <text-property name="text">Diner</text-property>
+                                                    </label>
+                                                </cell>
+                                            </row>
+                                        </header>
+                                        <detail>
+                                            <row id="470">
+                                                <property name="fontFamily">"Arial Baltic"</property>
+                                                <property name="borderBottomStyle">solid</property>
+                                                <property name="borderBottomWidth">thin</property>
+                                                <property name="borderLeftStyle">solid</property>
+                                                <property name="borderLeftWidth">thin</property>
+                                                <property name="borderRightStyle">solid</property>
+                                                <property name="borderRightWidth">thin</property>
+                                                <property name="borderTopStyle">solid</property>
+                                                <property name="borderTopWidth">thin</property>
+                                                <property name="verticalAlign">middle</property>
+                                                <cell id="471">
+                                                    <property name="borderBottomStyle">solid</property>
+                                                    <property name="borderBottomWidth">thin</property>
+                                                    <property name="borderLeftStyle">solid</property>
+                                                    <property name="borderLeftWidth">thin</property>
+                                                    <property name="borderRightStyle">solid</property>
+                                                    <property name="borderRightWidth">thin</property>
+                                                    <property name="borderTopStyle">solid</property>
+                                                    <property name="borderTopWidth">thin</property>
+                                                    <data id="489">
+                                                        <property name="fontFamily">"Arial"</property>
+                                                        <property name="resultSetColumn">Column Binding</property>
+                                                    </data>
+                                                </cell>
+                                                <cell id="473">
+                                                    <property name="borderBottomStyle">solid</property>
+                                                    <property name="borderBottomWidth">thin</property>
+                                                    <property name="borderLeftStyle">solid</property>
+                                                    <property name="borderLeftWidth">thin</property>
+                                                    <property name="borderRightStyle">solid</property>
+                                                    <property name="borderRightWidth">thin</property>
+                                                    <property name="borderTopStyle">solid</property>
+                                                    <property name="borderTopWidth">thin</property>
+                                                    <data id="476">
+                                                        <property name="textAlign">center</property>
+                                                        <property name="resultSetColumn">petit_dejeuner</property>
+                                                    </data>
+                                                </cell>
+                                                <cell id="475">
+                                                    <property name="borderBottomStyle">solid</property>
+                                                    <property name="borderBottomWidth">thin</property>
+                                                    <property name="borderLeftStyle">solid</property>
+                                                    <property name="borderLeftWidth">thin</property>
+                                                    <property name="borderRightStyle">solid</property>
+                                                    <property name="borderRightWidth">thin</property>
+                                                    <property name="borderTopStyle">solid</property>
+                                                    <property name="borderTopWidth">thin</property>
+                                                    <data id="472">
+                                                        <property name="textAlign">center</property>
+                                                        <property name="resultSetColumn">dejeuner</property>
+                                                    </data>
+                                                </cell>
+                                                <cell id="477">
+                                                    <property name="borderBottomStyle">solid</property>
+                                                    <property name="borderBottomWidth">thin</property>
+                                                    <property name="borderLeftStyle">solid</property>
+                                                    <property name="borderLeftWidth">thin</property>
+                                                    <property name="borderRightStyle">solid</property>
+                                                    <property name="borderRightWidth">thin</property>
+                                                    <property name="borderTopStyle">solid</property>
+                                                    <property name="borderTopWidth">thin</property>
+                                                    <data id="474">
+                                                        <property name="fontFamily">"Arial"</property>
+                                                        <property name="textAlign">center</property>
+                                                        <property name="resultSetColumn">diner</property>
+                                                    </data>
+                                                </cell>
+                                            </row>
+                                        </detail>
+                                        <footer>
+                                            <row id="479">
+                                                <cell id="480"/>
+                                                <cell id="481"/>
+                                                <cell id="482"/>
+                                                <cell id="483"/>
+                                            </row>
+                                        </footer>
+                                    </table>
+                                </cell>
+                                <cell id="341"/>
+                            </row>
+                            <row id="508">
+                                <cell id="509"/>
+                                <cell id="880">
+                                    <property name="colSpan">11</property>
+                                    <property name="rowSpan">1</property>
+                                    <table id="565">
+                                        <property name="dataSet">OperationJournal</property>
+                                        <list-property name="paramBindings">
+                                            <structure>
+                                                <property name="paramName">param_1</property>
+                                                <simple-property-list name="expression">
+                                                    <value type="javascript">row["id"]</value>
+                                                </simple-property-list>
+                                            </structure>
+                                        </list-property>
+                                        <list-property name="boundDataColumns">
+                                            <structure>
+                                                <property name="name">consommation_dediner</property>
+                                                <text-property name="displayName">consommation_dediner</text-property>
+                                                <expression name="expression" type="javascript">dataSetRow["consommation_dediner"]</expression>
+                                                <property name="dataType">integer</property>
+                                            </structure>
+                                            <structure>
+                                                <property name="name">consommation_dejeuner</property>
+                                                <text-property name="displayName">consommation_dejeuner</text-property>
+                                                <expression name="expression" type="javascript">dataSetRow["consommation_dejeuner"]</expression>
+                                                <property name="dataType">integer</property>
+                                            </structure>
+                                            <structure>
+                                                <property name="name">consommation_petit_dejeuner</property>
+                                                <text-property name="displayName">consommation_petit_dejeuner</text-property>
+                                                <expression name="expression" type="javascript">dataSetRow["consommation_petit_dejeuner"]</expression>
+                                                <property name="dataType">integer</property>
+                                            </structure>
+                                            <structure>
+                                                <property name="name">entree_du_jorur</property>
+                                                <text-property name="displayName">entree_du_jorur</text-property>
+                                                <expression name="expression" type="javascript">dataSetRow["entree_du_jorur"]</expression>
+                                                <property name="dataType">integer</property>
+                                            </structure>
+                                            <structure>
+                                                <property name="name">article</property>
+                                                <text-property name="displayName">article</text-property>
+                                                <expression name="expression" type="javascript">dataSetRow["article"]</expression>
+                                                <property name="dataType">decimal</property>
+                                            </structure>
+                                            <structure>
+                                                <property name="name">cahierjournalier</property>
+                                                <text-property name="displayName">cahierjournalier</text-property>
+                                                <expression name="expression" type="javascript">dataSetRow["cahierjournalier"]</expression>
+                                                <property name="dataType">decimal</property>
+                                            </structure>
+                                            <structure>
+                                                <property name="name">namearticle</property>
+                                                <text-property name="displayName">namearticle</text-property>
+                                                <expression name="expression" type="javascript">dataSetRow["namearticle"]</expression>
+                                                <property name="dataType">string</property>
+                                            </structure>
+                                            <structure>
+                                                <property name="name">prix_unite</property>
+                                                <text-property name="displayName">prix_unite</text-property>
+                                                <expression name="expression" type="javascript">dataSetRow["prix_unite"]</expression>
+                                                <property name="dataType">decimal</property>
+                                            </structure>
+                                            <structure>
+                                                <property name="name">unite</property>
+                                                <text-property name="displayName">unite</text-property>
+                                                <expression name="expression" type="javascript">dataSetRow["unite"]</expression>
+                                                <property name="dataType">string</property>
+                                            </structure>
+                                            <structure>
+                                                <property name="name">Column Binding</property>
+                                                <expression name="expression" type="javascript">row["consommation_petit_dejeuner"] + row["consommation_dejeuner"]+row["consommation_dediner"]</expression>
+                                                <property name="dataType">string</property>
+                                                <property name="allowExport">true</property>
+                                            </structure>
+                                            <structure>
+                                                <property name="name">Column Binding_1</property>
+                                                <expression name="expression" type="javascript">(row["consommation_petit_dejeuner"]+row["consommation_dejeuner"]+row["consommation_dediner"])*row["prix_unite"]</expression>
+                                                <property name="dataType">string</property>
+                                                <property name="allowExport">true</property>
+                                            </structure>
+                                            <structure>
+                                                <property name="name">Aggregation</property>
+                                                <property name="dataType">float</property>
+                                                <property name="aggregateFunction">SUM</property>
+                                                <list-property name="arguments">
+                                                    <structure>
+                                                        <property name="name">Expression</property>
+                                                        <expression name="value" type="javascript">row["Column Binding_1"]</expression>
+                                                    </structure>
+                                                </list-property>
+                                                <property name="allowExport">true</property>
+                                            </structure>
+                                        </list-property>
+                                        <property name="pageBreakInterval">4000</property>
+                                        <column id="599">
+                                            <property name="width">8cm</property>
+                                        </column>
+                                        <column id="600"/>
+                                        <column id="601"/>
+                                        <column id="602"/>
+                                        <column id="603"/>
+                                        <column id="604"/>
+                                        <column id="609"/>
+                                        <column id="619"/>
+                                        <column id="624"/>
+                                        <header>
+                                            <row id="848">
+                                                <cell id="849">
+                                                    <property name="colSpan">1</property>
+                                                    <property name="rowSpan">2</property>
+                                                    <property name="borderBottomStyle">solid</property>
+                                                    <property name="borderBottomWidth">1px</property>
+                                                    <property name="borderLeftStyle">solid</property>
+                                                    <property name="borderLeftWidth">1px</property>
+                                                    <property name="borderRightStyle">solid</property>
+                                                    <property name="borderRightWidth">1px</property>
+                                                    <property name="borderTopStyle">solid</property>
+                                                    <property name="borderTopWidth">1px</property>
+                                                    <property name="textAlign">center</property>
+                                                    <property name="verticalAlign">middle</property>
+                                                    <label id="576">
+                                                        <text-property name="text">Article</text-property>
+                                                    </label>
+                                                </cell>
+                                                <cell id="850">
+                                                    <property name="colSpan">1</property>
+                                                    <property name="rowSpan">2</property>
+                                                    <property name="borderBottomStyle">solid</property>
+                                                    <property name="borderBottomWidth">1px</property>
+                                                    <property name="borderLeftStyle">solid</property>
+                                                    <property name="borderLeftWidth">1px</property>
+                                                    <property name="borderRightStyle">solid</property>
+                                                    <property name="borderRightWidth">1px</property>
+                                                    <property name="borderTopStyle">solid</property>
+                                                    <property name="borderTopWidth">1px</property>
+                                                    <property name="textAlign">center</property>
+                                                    <property name="verticalAlign">middle</property>
+                                                    <label id="614">
+                                                        <text-property name="text">Unité</text-property>
+                                                    </label>
+                                                </cell>
+                                                <cell id="851">
+                                                    <property name="colSpan">1</property>
+                                                    <property name="rowSpan">2</property>
+                                                    <property name="borderBottomStyle">solid</property>
+                                                    <property name="borderBottomWidth">1px</property>
+                                                    <property name="borderLeftStyle">solid</property>
+                                                    <property name="borderLeftWidth">1px</property>
+                                                    <property name="borderRightStyle">solid</property>
+                                                    <property name="borderRightWidth">1px</property>
+                                                    <property name="borderTopStyle">solid</property>
+                                                    <property name="borderTopWidth">1px</property>
+                                                    <property name="textAlign">center</property>
+                                                    <property name="verticalAlign">middle</property>
+                                                    <label id="610">
+                                                        <text-property name="text">Prix Unité</text-property>
+                                                    </label>
+                                                </cell>
+                                                <cell id="852">
+                                                    <property name="colSpan">1</property>
+                                                    <property name="rowSpan">2</property>
+                                                    <property name="borderBottomStyle">solid</property>
+                                                    <property name="borderBottomWidth">1px</property>
+                                                    <property name="borderLeftStyle">solid</property>
+                                                    <property name="borderLeftWidth">1px</property>
+                                                    <property name="borderRightStyle">solid</property>
+                                                    <property name="borderRightWidth">1px</property>
+                                                    <property name="borderTopStyle">solid</property>
+                                                    <property name="borderTopWidth">1px</property>
+                                                    <property name="textAlign">center</property>
+                                                    <property name="verticalAlign">middle</property>
+                                                    <label id="574">
+                                                        <text-property name="text">Entrée</text-property>
+                                                    </label>
+                                                </cell>
+                                                <cell id="853">
+                                                    <property name="colSpan">5</property>
+                                                    <property name="rowSpan">1</property>
+                                                    <property name="borderBottomStyle">solid</property>
+                                                    <property name="borderBottomWidth">1px</property>
+                                                    <property name="borderLeftStyle">solid</property>
+                                                    <property name="borderLeftWidth">1px</property>
+                                                    <property name="borderRightStyle">solid</property>
+                                                    <property name="borderRightWidth">1px</property>
+                                                    <property name="borderTopStyle">solid</property>
+                                                    <property name="borderTopWidth">1px</property>
+                                                    <property name="textAlign">center</property>
+                                                    <property name="verticalAlign">middle</property>
+                                                    <label id="858">
+                                                        <text-property name="text">Sortie</text-property>
+                                                    </label>
+                                                </cell>
+                                            </row>
+                                            <row id="566">
+                                                <cell id="575">
+                                                    <property name="borderBottomStyle">solid</property>
+                                                    <property name="borderBottomWidth">1px</property>
+                                                    <property name="borderLeftStyle">solid</property>
+                                                    <property name="borderLeftWidth">1px</property>
+                                                    <property name="borderRightStyle">solid</property>
+                                                    <property name="borderRightWidth">1px</property>
+                                                    <property name="borderTopStyle">solid</property>
+                                                    <property name="borderTopWidth">1px</property>
+                                                    <property name="textAlign">center</property>
+                                                    <property name="verticalAlign">middle</property>
+                                                    <label id="572">
+                                                        <text-property name="text">P. déj.</text-property>
+                                                    </label>
+                                                </cell>
+                                                <cell id="577">
+                                                    <property name="borderBottomStyle">solid</property>
+                                                    <property name="borderBottomWidth">1px</property>
+                                                    <property name="borderLeftStyle">solid</property>
+                                                    <property name="borderLeftWidth">1px</property>
+                                                    <property name="borderRightStyle">solid</property>
+                                                    <property name="borderRightWidth">1px</property>
+                                                    <property name="borderTopStyle">solid</property>
+                                                    <property name="borderTopWidth">1px</property>
+                                                    <property name="textAlign">center</property>
+                                                    <property name="verticalAlign">middle</property>
+                                                    <label id="570">
+                                                        <text-property name="text">Déjeuner</text-property>
+                                                    </label>
+                                                </cell>
+                                                <cell id="606">
+                                                    <property name="borderBottomStyle">solid</property>
+                                                    <property name="borderBottomWidth">1px</property>
+                                                    <property name="borderLeftStyle">solid</property>
+                                                    <property name="borderLeftWidth">1px</property>
+                                                    <property name="borderRightStyle">solid</property>
+                                                    <property name="borderRightWidth">1px</property>
+                                                    <property name="borderTopStyle">solid</property>
+                                                    <property name="borderTopWidth">1px</property>
+                                                    <property name="textAlign">center</property>
+                                                    <property name="verticalAlign">middle</property>
+                                                    <label id="568">
+                                                        <text-property name="text">Dîner</text-property>
+                                                    </label>
+                                                </cell>
+                                                <cell id="616">
+                                                    <property name="borderBottomStyle">solid</property>
+                                                    <property name="borderBottomWidth">1px</property>
+                                                    <property name="borderLeftStyle">solid</property>
+                                                    <property name="borderLeftWidth">1px</property>
+                                                    <property name="borderRightStyle">solid</property>
+                                                    <property name="borderRightWidth">1px</property>
+                                                    <property name="borderTopStyle">solid</property>
+                                                    <property name="borderTopWidth">1px</property>
+                                                    <property name="textAlign">center</property>
+                                                    <property name="verticalAlign">middle</property>
+                                                    <label id="620">
+                                                        <text-property name="text">Total </text-property>
+                                                    </label>
+                                                </cell>
+                                                <cell id="621">
+                                                    <property name="borderBottomStyle">solid</property>
+                                                    <property name="borderBottomWidth">1px</property>
+                                                    <property name="borderLeftStyle">solid</property>
+                                                    <property name="borderLeftWidth">1px</property>
+                                                    <property name="borderRightStyle">solid</property>
+                                                    <property name="borderRightWidth">1px</property>
+                                                    <property name="borderTopStyle">solid</property>
+                                                    <property name="borderTopWidth">1px</property>
+                                                    <property name="textAlign">center</property>
+                                                    <property name="verticalAlign">middle</property>
+                                                    <label id="625">
+                                                        <text-property name="text">Valeur </text-property>
+                                                    </label>
+                                                </cell>
+                                            </row>
+                                        </header>
+                                        <detail>
+                                            <row id="579">
+                                                <cell id="580">
+                                                    <property name="borderBottomStyle">solid</property>
+                                                    <property name="borderBottomWidth">1px</property>
+                                                    <property name="borderLeftStyle">solid</property>
+                                                    <property name="borderLeftWidth">1px</property>
+                                                    <property name="borderRightStyle">solid</property>
+                                                    <property name="borderRightWidth">1px</property>
+                                                    <property name="borderTopStyle">solid</property>
+                                                    <property name="borderTopWidth">1px</property>
+                                                    <property name="textAlign">left</property>
+                                                    <property name="verticalAlign">middle</property>
+                                                    <data id="605">
+                                                        <property name="resultSetColumn">namearticle</property>
+                                                    </data>
+                                                </cell>
+                                                <cell id="582">
+                                                    <property name="borderBottomStyle">solid</property>
+                                                    <property name="borderBottomWidth">1px</property>
+                                                    <property name="borderLeftStyle">solid</property>
+                                                    <property name="borderLeftWidth">1px</property>
+                                                    <property name="borderRightStyle">solid</property>
+                                                    <property name="borderRightWidth">1px</property>
+                                                    <property name="borderTopStyle">solid</property>
+                                                    <property name="borderTopWidth">1px</property>
+                                                    <property name="textAlign">center</property>
+                                                    <property name="verticalAlign">middle</property>
+                                                    <data id="615">
+                                                        <property name="resultSetColumn">unite</property>
+                                                    </data>
+                                                </cell>
+                                                <cell id="584">
+                                                    <property name="borderBottomStyle">solid</property>
+                                                    <property name="borderBottomWidth">1px</property>
+                                                    <property name="borderLeftStyle">solid</property>
+                                                    <property name="borderLeftWidth">1px</property>
+                                                    <property name="borderRightStyle">solid</property>
+                                                    <property name="borderRightWidth">1px</property>
+                                                    <property name="borderTopStyle">solid</property>
+                                                    <property name="borderTopWidth">1px</property>
+                                                    <property name="textAlign">center</property>
+                                                    <property name="verticalAlign">middle</property>
+                                                    <data id="611">
+                                                        <property name="resultSetColumn">prix_unite</property>
+                                                    </data>
+                                                </cell>
+                                                <cell id="586">
+                                                    <property name="borderBottomStyle">solid</property>
+                                                    <property name="borderBottomWidth">1px</property>
+                                                    <property name="borderLeftStyle">solid</property>
+                                                    <property name="borderLeftWidth">1px</property>
+                                                    <property name="borderRightStyle">solid</property>
+                                                    <property name="borderRightWidth">1px</property>
+                                                    <property name="borderTopStyle">solid</property>
+                                                    <property name="borderTopWidth">1px</property>
+                                                    <property name="textAlign">center</property>
+                                                    <property name="verticalAlign">middle</property>
+                                                    <data id="587">
+                                                        <property name="resultSetColumn">entree_du_jorur</property>
+                                                    </data>
+                                                </cell>
+                                                <cell id="588">
+                                                    <property name="borderBottomStyle">solid</property>
+                                                    <property name="borderBottomWidth">1px</property>
+                                                    <property name="borderLeftStyle">solid</property>
+                                                    <property name="borderLeftWidth">1px</property>
+                                                    <property name="borderRightStyle">solid</property>
+                                                    <property name="borderRightWidth">1px</property>
+                                                    <property name="borderTopStyle">solid</property>
+                                                    <property name="borderTopWidth">1px</property>
+                                                    <property name="textAlign">center</property>
+                                                    <property name="verticalAlign">middle</property>
+                                                    <data id="585">
+                                                        <property name="resultSetColumn">consommation_petit_dejeuner</property>
+                                                    </data>
+                                                </cell>
+                                                <cell id="590">
+                                                    <property name="borderBottomStyle">solid</property>
+                                                    <property name="borderBottomWidth">1px</property>
+                                                    <property name="borderLeftStyle">solid</property>
+                                                    <property name="borderLeftWidth">1px</property>
+                                                    <property name="borderRightStyle">solid</property>
+                                                    <property name="borderRightWidth">1px</property>
+                                                    <property name="borderTopStyle">solid</property>
+                                                    <property name="borderTopWidth">1px</property>
+                                                    <property name="textAlign">center</property>
+                                                    <property name="verticalAlign">middle</property>
+                                                    <data id="583">
+                                                        <property name="resultSetColumn">consommation_dejeuner</property>
+                                                    </data>
+                                                </cell>
+                                                <cell id="607">
+                                                    <property name="borderBottomStyle">solid</property>
+                                                    <property name="borderBottomWidth">1px</property>
+                                                    <property name="borderLeftStyle">solid</property>
+                                                    <property name="borderLeftWidth">1px</property>
+                                                    <property name="borderRightStyle">solid</property>
+                                                    <property name="borderRightWidth">1px</property>
+                                                    <property name="borderTopStyle">solid</property>
+                                                    <property name="borderTopWidth">1px</property>
+                                                    <property name="textAlign">center</property>
+                                                    <property name="verticalAlign">middle</property>
+                                                    <data id="581">
+                                                        <property name="resultSetColumn">consommation_dediner</property>
+                                                    </data>
+                                                </cell>
+                                                <cell id="617">
+                                                    <property name="borderBottomStyle">solid</property>
+                                                    <property name="borderBottomWidth">1px</property>
+                                                    <property name="borderLeftStyle">solid</property>
+                                                    <property name="borderLeftWidth">1px</property>
+                                                    <property name="borderRightStyle">solid</property>
+                                                    <property name="borderRightWidth">1px</property>
+                                                    <property name="borderTopStyle">solid</property>
+                                                    <property name="borderTopWidth">1px</property>
+                                                    <property name="textAlign">center</property>
+                                                    <property name="verticalAlign">middle</property>
+                                                    <data id="626">
+                                                        <property name="resultSetColumn">Column Binding</property>
+                                                    </data>
+                                                </cell>
+                                                <cell id="622">
+                                                    <property name="borderBottomStyle">solid</property>
+                                                    <property name="borderBottomWidth">1px</property>
+                                                    <property name="borderLeftStyle">solid</property>
+                                                    <property name="borderLeftWidth">1px</property>
+                                                    <property name="borderRightStyle">solid</property>
+                                                    <property name="borderRightWidth">1px</property>
+                                                    <property name="borderTopStyle">solid</property>
+                                                    <property name="borderTopWidth">1px</property>
+                                                    <property name="textAlign">center</property>
+                                                    <property name="verticalAlign">middle</property>
+                                                    <data id="627">
+                                                        <structure name="numberFormat">
+                                                            <property name="category">Fixed</property>
+                                                            <property name="pattern">###0.00{RoundingMode=HALF_UP}</property>
+                                                        </structure>
+                                                        <property name="resultSetColumn">Column Binding_1</property>
+                                                    </data>
+                                                </cell>
+                                            </row>
+                                        </detail>
+                                        <footer>
+                                            <row id="628">
+                                                <cell id="629"/>
+                                                <cell id="630"/>
+                                                <cell id="631"/>
+                                                <cell id="632"/>
+                                                <cell id="633"/>
+                                                <cell id="634">
+                                                    <property name="colSpan">3</property>
+                                                    <property name="rowSpan">1</property>
+                                                    <property name="borderBottomStyle">solid</property>
+                                                    <property name="borderBottomWidth">1px</property>
+                                                    <property name="borderLeftStyle">solid</property>
+                                                    <property name="borderLeftWidth">1px</property>
+                                                    <property name="borderRightStyle">solid</property>
+                                                    <property name="borderRightWidth">1px</property>
+                                                    <label id="642">
+                                                        <property name="fontFamily">"@Adobe Song Std L"</property>
+                                                        <property name="fontWeight">bold</property>
+                                                        <property name="textAlign">center</property>
+                                                        <text-property name="text">Somme en dirhames :</text-property>
+                                                    </label>
+                                                </cell>
+                                                <cell id="637">
+                                                    <property name="fontSize">10px</property>
+                                                    <property name="borderBottomStyle">solid</property>
+                                                    <property name="borderBottomWidth">1px</property>
+                                                    <property name="borderLeftStyle">solid</property>
+                                                    <property name="borderLeftWidth">1px</property>
+                                                    <property name="borderRightStyle">solid</property>
+                                                    <property name="borderRightWidth">1px</property>
+                                                    <property name="textAlign">center</property>
+                                                    <property name="verticalAlign">middle</property>
+                                                    <data id="640">
+                                                        <structure name="numberFormat">
+                                                            <property name="category">Fixed</property>
+                                                            <property name="pattern">###0.00{RoundingMode=HALF_UP}</property>
+                                                        </structure>
+                                                        <property name="resultSetColumn">Aggregation</property>
+                                                    </data>
+                                                </cell>
+                                            </row>
+                                        </footer>
+                                    </table>
+                                </cell>
+                                <cell id="520"/>
+                            </row>
+                            <row id="643">
+                                <cell id="644"/>
+                                <cell id="882"/>
+                                <cell id="645">
+                                    <property name="colSpan">1</property>
+                                    <property name="rowSpan">1</property>
+                                </cell>
+                                <cell id="896"/>
+                                <cell id="897">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">1</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <property name="textAlign">center</property>
+                                    <property name="verticalAlign">middle</property>
+                                    <label id="834">
+                                        <property name="color">#000000</property>
+                                        <property name="textAlign">center</property>
+                                        <text-property name="text">Petit déj.</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="829">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">1</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <property name="textAlign">center</property>
+                                    <property name="verticalAlign">middle</property>
+                                    <label id="835">
+                                        <property name="color">#000000</property>
+                                        <property name="textAlign">center</property>
+                                        <text-property name="text">Déjeuner</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="831">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">1</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <property name="textAlign">center</property>
+                                    <property name="verticalAlign">middle</property>
+                                    <label id="836">
+                                        <property name="color">#000000</property>
+                                        <property name="textAlign">center</property>
+                                        <text-property name="text">Dîner</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="653">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">1</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <property name="textAlign">center</property>
+                                    <property name="verticalAlign">middle</property>
+                                    <label id="860">
+                                        <property name="color">#000000</property>
+                                        <property name="textAlign">center</property>
+                                        <text-property name="text">Total</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="655"/>
+                            </row>
+                            <row id="656">
+                                <cell id="657"/>
+                                <cell id="883">
+                                    <property name="colSpan">3</property>
+                                    <property name="rowSpan">1</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <label id="832">
+                                        <text-property name="text">effectif des repas</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="891">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">1</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">1px</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">1px</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">1px</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">1px</property>
+                                    <property name="textAlign">center</property>
+                                    <property name="verticalAlign">middle</property>
+                                    <data id="838">
+                                        <property name="textAlign">center</property>
+                                        <property name="resultSetColumn">effictif_petit_dejeuner</property>
+                                    </data>
+                                </cell>
+                                <cell id="750">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">1</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <property name="textAlign">center</property>
+                                    <property name="verticalAlign">middle</property>
+                                    <data id="840">
+                                        <property name="textAlign">center</property>
+                                        <property name="resultSetColumn">effictif_dejeuner</property>
+                                    </data>
+                                </cell>
+                                <cell id="752">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">1</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <property name="textAlign">center</property>
+                                    <property name="verticalAlign">middle</property>
+                                    <data id="839">
+                                        <property name="textAlign">center</property>
+                                        <property name="resultSetColumn">effictif_diner</property>
+                                    </data>
+                                </cell>
+                                <cell id="666">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">1</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <property name="textAlign">center</property>
+                                    <property name="verticalAlign">middle</property>
+                                    <data id="864">
+                                        <property name="textAlign">center</property>
+                                        <property name="resultSetColumn">Column Binding_5</property>
+                                    </data>
+                                </cell>
+                                <cell id="668"/>
+                            </row>
+                            <row id="342">
+                                <cell id="343"/>
+                                <cell id="884">
+                                    <property name="colSpan">3</property>
+                                    <property name="rowSpan">1</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <label id="833">
+                                        <text-property name="text">valeur de consommation</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="893">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">1</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">1px</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">1px</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">1px</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">1px</property>
+                                    <property name="textAlign">center</property>
+                                    <property name="verticalAlign">middle</property>
+                                    <data id="841">
+                                        <property name="textAlign">center</property>
+                                        <property name="resultSetColumn">total_petit_dejeuner</property>
+                                    </data>
+                                </cell>
+                                <cell id="757">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">1</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <property name="textAlign">center</property>
+                                    <property name="verticalAlign">middle</property>
+                                    <data id="843">
+                                        <property name="textAlign">center</property>
+                                        <property name="resultSetColumn">total_dejeuner</property>
+                                    </data>
+                                </cell>
+                                <cell id="759">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">1</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <property name="textAlign">center</property>
+                                    <property name="verticalAlign">middle</property>
+                                    <data id="842">
+                                        <property name="textAlign">center</property>
+                                        <property name="resultSetColumn">total_diner</property>
+                                    </data>
+                                </cell>
+                                <cell id="352">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">1</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <property name="textAlign">center</property>
+                                    <property name="verticalAlign">middle</property>
+                                    <data id="862">
+                                        <property name="resultSetColumn">Column Binding_3</property>
+                                    </data>
+                                </cell>
+                                <cell id="354"/>
+                            </row>
+                            <row id="708">
+                                <cell id="709"/>
+                                <cell id="885">
+                                    <property name="colSpan">3</property>
+                                    <property name="rowSpan">1</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <label id="837">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <text-property name="text">Prix du repas par personne</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="895">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">1</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">1px</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">1px</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">1px</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">1px</property>
+                                    <property name="textAlign">center</property>
+                                    <property name="verticalAlign">middle</property>
+                                    <data id="844">
+                                        <property name="textAlign">center</property>
+                                        <property name="resultSetColumn">Column Binding</property>
+                                    </data>
+                                </cell>
+                                <cell id="714">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">1</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <property name="textAlign">center</property>
+                                    <property name="verticalAlign">middle</property>
+                                    <data id="845">
+                                        <property name="textAlign">center</property>
+                                        <property name="resultSetColumn">Column Binding_1</property>
+                                    </data>
+                                </cell>
+                                <cell id="716">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">1</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <property name="textAlign">center</property>
+                                    <property name="verticalAlign">middle</property>
+                                    <data id="846">
+                                        <property name="textAlign">center</property>
+                                        <property name="resultSetColumn">Column Binding_2</property>
+                                    </data>
+                                </cell>
+                                <cell id="718">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">1</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <property name="textAlign">center</property>
+                                    <property name="verticalAlign">middle</property>
+                                    <data id="863">
+                                        <property name="textAlign">center</property>
+                                        <property name="resultSetColumn">Column Binding_4</property>
+                                    </data>
+                                </cell>
+                                <cell id="720"/>
+                            </row>
+                            <row id="695">
+                                <cell id="696"/>
+                                <cell id="886"/>
+                                <cell id="697"/>
+                                <cell id="698"/>
+                                <cell id="699">
+                                    <property name="textAlign">center</property>
+                                    <property name="verticalAlign">middle</property>
+                                </cell>
+                                <cell id="700">
+                                    <property name="textAlign">center</property>
+                                    <property name="verticalAlign">middle</property>
+                                </cell>
+                                <cell id="701">
+                                    <property name="textAlign">center</property>
+                                    <property name="verticalAlign">middle</property>
+                                </cell>
+                                <cell id="702">
+                                    <property name="textAlign">center</property>
+                                    <property name="verticalAlign">middle</property>
+                                </cell>
+                                <cell id="703">
+                                    <property name="textAlign">center</property>
+                                    <property name="verticalAlign">middle</property>
+                                </cell>
+                                <cell id="704">
+                                    <property name="textAlign">center</property>
+                                    <property name="verticalAlign">middle</property>
+                                </cell>
+                                <cell id="705">
+                                    <property name="textAlign">center</property>
+                                    <property name="verticalAlign">middle</property>
+                                </cell>
+                                <cell id="706">
+                                    <property name="textAlign">center</property>
+                                    <property name="verticalAlign">middle</property>
+                                </cell>
+                                <cell id="707"/>
+                            </row>
+                            <row id="682">
+                                <cell id="683"/>
+                                <cell id="887">
+                                    <property name="colSpan">5</property>
+                                    <property name="rowSpan">1</property>
+                                    <label id="898">
+                                        <property name="textAlign">center</property>
+                                        <text-property name="text">Le gérant des services économiques</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="688"/>
+                                <cell id="689">
+                                    <property name="colSpan">5</property>
+                                    <property name="rowSpan">1</property>
+                                    <label id="899">
+                                        <property name="textAlign">center</property>
+                                        <text-property name="text">Le chef d'établissement</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="694"/>
+                            </row>
+                            <row id="669">
+                                <cell id="670"/>
+                                <cell id="888"/>
+                                <cell id="671"/>
+                                <cell id="672"/>
+                                <cell id="673"/>
+                                <cell id="674"/>
+                                <cell id="675"/>
+                                <cell id="676"/>
+                                <cell id="677"/>
+                                <cell id="678"/>
+                                <cell id="679"/>
+                                <cell id="680"/>
+                                <cell id="681"/>
+                            </row>
+                        </grid>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="14">
+                    <cell id="15"/>
+                </row>
+            </footer>
+        </table>
+    </body>
+</report>

@@ -1,0 +1,167 @@
+"key","message","comment","context"
+"ARTICLE",,,"resources\views\Print.xml:19
+resources\views\Print.xml:36"
+"ARTICLES",,,"resources\views\Menu.xml:82
+resources\views\Menu.xml:84"
+"AU",,,"resources\views\Print.xml:28"
+"Annulé",,,"resources\views\OperationE.xml:71"
+"Annulé l'operation",,,"resources\views\OperationE.xml:47
+resources\views\OperationS.xml:46"
+"BENEFICIE",,,"resources\views\Print.xml:44"
+"BENEFICIES",,,"resources\views\Menu.xml:66
+resources\views\Menu.xml:68"
+"BILAN ENTREES",,,"resources\views\Print.xml:46"
+"BILAN SORTIES",,,"resources\views\Print.xml:47"
+"COMPTABILITE MATIERE",,,"resources\views\Menu.xml:5"
+"Code",,,"resources\domains\DestinataireM.xml:9
+resources\domains\Mconsommable.xml:9
+resources\domains\SourcesM.xml:9"
+"Created by",,,"resources\domains\DateDepart.xml:17
+resources\domains\DestinataireM.xml:17
+resources\domains\Mconsommable.xml:19
+resources\domains\OperationE.xml:23
+resources\domains\OperationS.xml:22
+resources\domains\SourcesM.xml:17
+resources\domains\TableE.xml:18
+resources\domains\TableS.xml:18
+resources\domains\TypeMatiereC.xml:17"
+"DU",,,"resources\views\Print.xml:27"
+"Date",,,"resources\domains\OperationE.xml:14
+resources\domains\OperationS.xml:13"
+"Destinataire",,,"resources\domains\OperationS.xml:11"
+"Destinataires Matériel",,,"resources\views\DestinataireM.xml:12
+resources\views\DestinataireM.xml:6"
+"ENTREES",,,"resources\views\Menu.xml:7"
+"EXCEL",,,"resources\views\OperationE.xml:75"
+"En cours de réalisation",,,"resources\views\OperationE.xml:69"
+"Enregistrer",,,"resources\views\OperationE.xml:39
+resources\views\OperationS.xml:38"
+"Etablissement",,,"resources\domains\DateDepart.xml:10
+resources\domains\DestinataireM.xml:10
+resources\domains\Mconsommable.xml:12
+resources\domains\OperationE.xml:16
+resources\domains\OperationS.xml:15
+resources\domains\SourcesM.xml:10
+resources\domains\TableE.xml:11
+resources\domains\TableS.xml:11
+resources\domains\TypeMatiereC.xml:10"
+"GENERER REPORT",,,"java\com\comptabilite\matier\web\OperationEController.java:129
+resources\views\DateDepart.xml:23
+resources\views\DateDepart.xml:8
+resources\views\Menu.xml:52"
+"Générer le report signifie Suppression de toutes les opérations effectuées avant la date actuelle; et transferer le reste, voulez-vous continuer?",,,"resources\views\DateDepart.xml:12"
+"Imprime",,,"resources\views\OperationE.xml:49
+resources\views\OperationE.xml:52
+resources\views\OperationS.xml:48
+resources\views\OperationS.xml:51"
+"Imprimés",,,"resources\views\Menu.xml:11
+resources\views\Menu.xml:13"
+"L'opأ©ration a rأ©ussi",,,"java\com\comptabilite\matier\web\OperationEController.java:317"
+"L'opأ©ration a أ©chouأ© car il y a des Operations sont en cours",,,"java\com\comptabilite\matier\web\OperationEController.java:228"
+"Les imprimes",,,"resources\views\Print.xml:7"
+"Les opérations",,,"resources\views\Menu.xml:22
+resources\views\Menu.xml:27
+resources\views\Menu.xml:29
+resources\views\Menu.xml:38
+resources\views\Menu.xml:43
+resources\views\Menu.xml:45"
+"Max size 4MB.",,,"resources\domains\Mconsommable.xml:10"
+"Name",,,"resources\domains\DestinataireM.xml:8
+resources\domains\Mconsommable.xml:8
+resources\domains\SourcesM.xml:8
+resources\domains\TypeMatiereC.xml:9"
+"Nom de personne",,,"resources\domains\OperationE.xml:13
+resources\domains\OperationS.xml:12"
+"Non",,,"resources\views\DateDepart.xml:29"
+"Numero",,,"resources\domains\OperationE.xml:11
+resources\domains\OperationS.xml:10"
+"OPERATIONs ENTREES",,,"resources\views\Print.xml:50"
+"OPERATIONs SORTIES",,,"resources\views\Print.xml:52"
+"Operation",,,"resources\domains\TableE.xml:10
+resources\domains\TableS.xml:10"
+"Operation Entree Annule",,,"java\com\comptabilite\matier\web\OperationEController.java:336
+java\com\comptabilite\matier\web\OperationEController.java:366"
+"Oui",,,"resources\views\DateDepart.xml:28"
+"Overview",,,"resources\views\DestinataireM.xml:13
+resources\views\Mconsommable.xml:15
+resources\views\OperationE.xml:20
+resources\views\OperationS.xml:20
+resources\views\SourcesM.xml:13
+resources\views\TableS.xml:12
+resources\views\TypeMatiereC.xml:12"
+"PDF",,,"resources\views\OperationE.xml:74"
+"PREVENANCES",,,"resources\views\Menu.xml:58
+resources\views\Menu.xml:60"
+"PROVENANCE",,,"resources\views\Print.xml:40"
+"Paramètres",,,"resources\views\Menu.xml:17"
+"Photo",,,"resources\domains\Mconsommable.xml:10"
+"Quantité",,,"resources\domains\DateDepart.xml:9
+resources\domains\TableE.xml:9
+resources\domains\TableS.xml:9"
+"REGISTRE COMPTABILITE MATIERE",,,"resources\views\Print.xml:22"
+"RESTE EN MAGASIN",,,"resources\views\Print.xml:23"
+"RESTE MAGASIN",,,"resources\views\TableE.xml:15
+resources\views\TableS.xml:15"
+"Reste En magasin",,,"resources\views\TableE.xml:21
+resources\views\TableS.xml:21"
+"SORTIES",,,"resources\views\Menu.xml:9"
+"Source",,,"resources\domains\OperationE.xml:12"
+"Sources matiere",,,"resources\views\SourcesM.xml:12
+resources\views\SourcesM.xml:6"
+"Status",,,"resources\domains\OperationE.xml:8
+resources\domains\OperationS.xml:8
+resources\views\OperationE.xml:21
+resources\views\OperationS.xml:21"
+"Supprime l'operation",,,"resources\views\OperationE.xml:37
+resources\views\OperationS.xml:36"
+"TYPE",,,"resources\views\Print.xml:15
+resources\views\Print.xml:32"
+"TYPES ARTICLE",,,"resources\views\Menu.xml:75"
+"TYPES MATIERES",,,"resources\views\Menu.xml:77"
+"Type de matiere",,,"resources\domains\Mconsommable.xml:11"
+"Validé et Imprime",,,"resources\views\OperationE.xml:43
+resources\views\OperationS.xml:42"
+"Voulez-vous vraiment Annulé l'operation?",,,"resources\views\OperationE.xml:47
+resources\views\OperationS.xml:46"
+"Voulez-vous vraiment Créer une position de départ?",,,"resources\views\DateDepart.xml:23"
+"Voulez-vous vraiment Supprime l'operation?",,,"resources\views\OperationE.xml:37
+resources\views\OperationS.xml:36"
+"Voulez-vous vraiment valide l'operation?",,,"resources\views\OperationE.xml:43
+resources\views\OperationS.xml:42"
+"WORD",,,"resources\views\OperationE.xml:76"
+"archif",,,"resources\domains\OperationE.xml:9
+resources\domains\OperationS.xml:9"
+"confirmation",,,"resources\views\OperationE.xml:70"
+"error",,,"java\com\comptabilite\matier\web\OperationPrintController.java:131
+java\com\comptabilite\matier\web\OperationPrintController.java:165
+java\com\comptabilite\matier\web\OperationPrintController.java:199
+java\com\comptabilite\matier\web\OperationPrintController.java:282
+java\com\comptabilite\matier\web\OperationPrintController.java:365
+java\com\comptabilite\matier\web\OperationPrintController.java:411
+java\com\comptabilite\matier\web\OperationPrintController.java:457
+java\com\comptabilite\matier\web\OperationPrintController.java:74"
+"la Date de REPORT",,,"resources\views\DateDepart.xml:19"
+"list des matieres",,,"resources\domains\OperationE.xml:15
+resources\domains\OperationS.xml:14
+resources\views\OperationE.xml:57
+resources\views\OperationS.xml:56
+resources\views\TableE.xml:11
+resources\views\TableE.xml:6
+resources\views\TableS.xml:11
+resources\views\TypeMatiereC.xml:11
+resources\views\TypeMatiereC.xml:6"
+"list des matériel",,,"resources\views\TableS.xml:6"
+"matériel consommable",,,"resources\domains\TableE.xml:8
+resources\domains\TableS.xml:8
+resources\views\Mconsommable.xml:14
+resources\views\Mconsommable.xml:6"
+"nouvelle opération",,,"resources\views\Menu.xml:20
+resources\views\Menu.xml:36"
+"opération des  Sorties",,,"resources\views\OperationS.xml:19
+resources\views\OperationS.xml:7"
+"opération des  entrées",,,"resources\views\OperationE.xml:19
+resources\views\OperationE.xml:7"
+"opأ©ration des  entrأ©es",,,"java\com\comptabilite\matier\web\OperationEController.java:90"
+"opأ©ration des  sorties",,,"java\com\comptabilite\matier\web\OperationEController.java:107"
+"position de depart",,,"resources\domains\OperationE.xml:10"
+"إنشاء المنقول يعني حذف جميع العمليات التي تم تنفيذها قبل التاريخ الحالي ؛ وتحويل الباقي هل تريد الاستمرار؟",,,"resources\views\DateDepart.xml:13"

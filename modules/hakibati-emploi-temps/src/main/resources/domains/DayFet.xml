@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_5.3.xsd">
+
+  <module name="hakibati-emploi-temps" package="com.hakibati.emploi.db"/>
+  <entity name="DayFet" cacheable="true">
+    <string name="name" title="jour"  />
+    <string name="nameFet" title="jour ds Fet" readonly="true"  />
+    <integer name="cd" title="order" />
+<!--    <many-to-one name="resultatFet" ref="ResultatFet"  />-->
+    <many-to-one name="dossierImportFet" ref="DossierImportFet"/>
+        <many-to-one name="etablissement" ref="com.app.application.db.Etablissement"  >
+      <![CDATA[
+    if (etablissement == null)
+   return createdBy.getEtablissementSelectionnee() ;
+   return etablissement;
+      ]]>
+    </many-to-one>-to-one>
+    <many-to-one name="createdBy" ref="com.axelor.auth.db.User" />
+  </entity>
+</domain-models>

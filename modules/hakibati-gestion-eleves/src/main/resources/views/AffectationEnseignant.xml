@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+
+  <grid name="AffectationEnseignant-grid" title="AffectationEnseignant" model="com.hakibati.gestion.eleves.db.AffectationEnseignant">
+    <field name="enseignant"/>
+    <field name="classe" />
+    <field name="matiere"/>
+    <field name="classe.anneeScolaire" />
+  </grid>
+
+  <form name="AffectationEnseignant-form" title="AffectationEnseignant" model="com.hakibati.gestion.eleves.db.AffectationEnseignant">
+    <panel title="Ajouter ou modifier" showTitle="false" >
+      <field name="enseignant"/>
+      <field name="classe" />
+      <field name="matiere"/>
+      <field name="classe.anneeScolaire" />
+    </panel>
+  </form>
+</object-views>

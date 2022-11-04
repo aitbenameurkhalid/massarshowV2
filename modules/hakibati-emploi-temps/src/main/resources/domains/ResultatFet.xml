@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_5.3.xsd">
+
+    <module name="hakibati-emploi-temps" package="com.hakibati.emploi.db"/>
+    <entity name="ResultatFet" cacheable="true">
+        <string name="name" />
+        <one-to-many name="dayHoursFet" ref="DayHourFet" mappedBy="resultatFet" title="jours-heur"/>
+<!--        <one-to-many name="hoursFet" ref="HourFet" mappedBy="resultatFet" title="heurs"/>-->
+        <one-to-many name="subjectsFet" ref="SubjectFet" mappedBy="resultatFet" title="matiers"/>
+        <one-to-many name="teachersFet" ref="TeacherFet" mappedBy="resultatFet" title="professeurs"/>
+        <one-to-many name="roomsFet" ref="RoomFet" mappedBy="resultatFet" title="salles"/>
+        <one-to-many name="dossiersImportFet" ref="DossierImportFet" mappedBy="resultatFet" title="Dossiers Fet"/>
+        <one-to-many name="studentsFet" ref="StudentFet" mappedBy="resultatFet" title="Classes Fet"/>
+        <one-to-one name="etablissement" ref="com.app.application.db.Etablissement">
+            <![CDATA[
+    if (etablissement == null)
+   return createdBy.getEtablissementSelectionnee() ;
+   return etablissement;
+      ]]>
+        </one-to-one>-to-one>
+        <many-to-one name="createdBy" ref="com.axelor.auth.db.User"/>
+
+    </entity>
+</domain-models>

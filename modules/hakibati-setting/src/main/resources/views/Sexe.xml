@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+  <grid name="Sexe-grid" title="Typse sexe" model="com.hakibati.setting.db.Sexe">
+    <field name="name" />
+    <field name="code" />
+  </grid>
+
+  <form name="Sexe-form" title="Typse sexe"  model="com.hakibati.setting.db.Sexe">
+    <panel >
+      <field name="name" />
+      <field name="code" />
+    </panel>
+  </form>
+
+</object-views>

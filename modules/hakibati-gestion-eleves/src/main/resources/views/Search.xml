@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+<search title="eleve search" name="eleve-search" limit="100" >
+  <search-fields>
+    <field name="classe" type="string"/>
+    <field name="cdMassar" type="string"/>
+    <field name="idclasse" type="string"/>
+    <field name="nomAr" type="string" />
+    <field name="nomFr" type="string"/>
+  </search-fields>
+
+  <result-fields>
+    <field name="classe" type="string"/>
+    <field name="cdMassar" type="string"/>
+    <field name="idclasse" type="string"/>
+    <field name="nomAr" type="string" />
+    <field name="nomFr" type="string"/>
+
+  </result-fields>
+
+  <select model="com.hakibati.gestion.eleves.db.Eleve" >
+    <field name="cdMassar" as="cdMassar"/>
+    <field name="nomAr" as="nomAr"/>
+    <where match="any">
+      <input name="nomAr" field="nomAr"/>
+    </where>
+  </select>
+</search>
+
+</object-views>

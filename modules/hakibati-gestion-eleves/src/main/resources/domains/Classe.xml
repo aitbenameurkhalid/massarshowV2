@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_5.3.xsd">
+
+  <module name="hakibati-gestion-eleves" package="com.hakibati.gestion.eleves.db"/>
+
+  <entity name="Classe" cacheable="true">
+    <string name="name"  />
+    <string name="idClasse"/>
+    <many-to-one name="niveau" ref="Niveau"/>
+    <many-to-one name="anneeScolaire" ref="AnneScolaire" title="L'année scolaire" />
+    <boolean name="isMassar" default="false" />
+    <one-to-many name="affectationEnseignant" ref="AffectationEnseignant" mappedBy="classe"/>
+    <many-to-one name="gestioneleves" ref="Gestioneleves"/>
+    <many-to-one name="etablissement" ref="com.app.application.db.Etablissement"  >
+      <![CDATA[
+    if (etablissement == null)
+   return createdBy.getEtablissementSelectionnee() ;
+   return etablissement;
+      ]]>
+    </many-to-one>
+    <many-to-one name="createdBy" ref="com.axelor.auth.db.User"/>
+<!--    <unique-constraint columns="name,etablissement"/>-->
+    <unique-constraint columns="name,etablissement,anneeScolaire"/>
+        <finder-method name="findByEtablissemntAndName" using="Long:etablissemntId,String:name" filter="self.etablissement[].id = :etablissemntId AND self.name= :name" cacheable="true" all="false"/>
+  </entity>
+</domain-models>

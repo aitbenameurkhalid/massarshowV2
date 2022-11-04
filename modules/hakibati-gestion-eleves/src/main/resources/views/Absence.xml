@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+
+  <grid name="Absence-grid" title="Absence" model="com.hakibati.gestion.eleves.db.Absence">
+    <field name="etablissement"/>
+  </grid>
+
+  <form name="Absence-form" title="Absence" model="com.hakibati.gestion.eleves.db.Absence">
+    <panel title="Ajouter ou modifier">
+      <field name="etablissement"/>
+    </panel>
+  </form>
+</object-views>

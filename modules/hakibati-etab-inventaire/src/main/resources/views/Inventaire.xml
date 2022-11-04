@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+  <grid name="Inventaire-grid" title="Inventaire" model="com.hakibati.etab.inventaire.db.Inventaire">
+    <field name="etablissement"/>
+    <field name="type"/>
+    <field name="name" />
+    <field name="dateReception"/>
+    <field name="dateRadiation"/>
+  </grid>
+
+  <form name="Inventaire-form" title="Inventaire" model="com.hakibati.etab.inventaire.db.Inventaire" width="large">
+    <panel readonly="true" colSpan="12" showTitle="false">
+      <field name="etablissement" form-view="zero"  showTitle="false" colSpan="12"  css="btn btn-warning label-bold bold large"  />
+    </panel>
+    <panel-tabs title="Ajouter ou modifier">
+      <panel title="Ajouter ou modifier">
+        <panel colSpan="2">
+          <field name="image" showTitle="false" colSpan="12"/>
+        </panel>
+        <panel colSpan="8">
+          <field name="type" colSpan="8" widget="SuggestBox"/>
+          <field name="name" colSpan="12" widget="SuggestBox"/>
+        </panel>
+        <field name="dateReception"  colSpan="3"/>
+        <field name="inventairePrincipale" colSpan="3" />
+        <field name="inventaireType" colSpan="3"/>
+        <field name="marqueModele" colSpan="3"/>
+        <field name="fournisseur" colSpan="3"/>
+        <field name="nSerie" colSpan="3"/>
+        <field name="prixUni" colSpan="3"/>
+        <field name="locale" colSpan="3" />
+        <field name="pvDesignation" title="PV de designation" widget="binary-link"/>
+        <field name="pvReception" title="PV de réception" widget="binary-link"/>
+      </panel>
+      <panel title="Suivi">
+        <panel-related field="suivi" colSpan="12" grid-view="SuiviMateriel-grid" form-view="SuiviMateriel-form" canView="true"
+                       canNew="true" canSelect="false" canRemove="true" canEdit="true"/>
+
+      </panel>
+        <panel title="Radiation">
+        <field name="dateRadiation" colSpan="6"/>
+        <field name="motifRadiation" colSpan="6"/>
+        <field name="pvScane" title="PV de radiation" widget="binary-link"/>
+
+      </panel>
+    </panel-tabs>
+    <panel title="Commentaire" showTitle="false"  colSpan="12">
+      <field name="commentaire" colSpan="12" widget="html"/>
+    </panel>
+
+
+    <panel-mail>
+      <mail-messages limit="4" />
+      <mail-followers />
+    </panel-mail>
+  </form>
+
+
+</object-views>

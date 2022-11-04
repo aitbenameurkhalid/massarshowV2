@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+
+    <grid name="consomationEau-grid" title="Liste consommation" model="com.hakibati.eau.electricite.db.ConsommationEau">
+        <field name="etablissement"/>
+        <field name="codeGresa"/>
+        <field name="numeroContratEau"/>
+        <field name="dateDu"/>
+        <field name="compteurDu"/>
+        <field name="dateFin"/>
+        <field name="compteurFin"/>
+        <field name="montantConsommation"/>
+        <field name="quantiteConsommation"/>
+    </grid>
+
+    <form name="consommationEau-form" title="consommation" model="com.hakibati.eau.electricite.db.ConsommationEau"
+          width="large">
+        <panel title="Ajouter ou modifier">
+            <field name="etablissement" colSpan="8" onChange="action-getinformation-Etab" form-view="zero" />
+            <field name="codeGresa" colSpan="2" readonly="true"/>
+            <field name="numeroContratEau" colSpan="2" readonly="true"/>
+            <field name="dateDu" colSpan="2"/>
+            <field name="compteurDu" colSpan="2"/>
+            <field name="dateFin" colSpan="2"/>
+            <field name="compteurFin" colSpan="2"/>
+            <field name="montantConsommation" colSpan="2"/>
+            <field name="quantiteConsommation" colSpan="2"/>
+        </panel>
+    </form>
+
+
+</object-views>

@@ -1,0 +1,16 @@
+name;description
+role.hakibati.gestion.eleves.exterieur.read;role.hakibati.gestion.eleves.exterieur.read
+role.hakibati.gestion.eleves.exterieur.write;role.hakibati.gestion.eleves.exterieur.write
+role.hakibati.gestion.eleves.exterieur.delete;role.hakibati.gestion.eleves.exterieur.delete
+
+role.hakibati.gestion.eleves.internat.read;role.hakibati.gestion.eleves.internat.read
+role.hakibati.gestion.eleves.internat.write;role.hakibati.gestion.eleves.internat.write
+role.hakibati.gestion.eleves.internat.delete;role.hakibati.gestion.eleves.internat.delete
+
+role.hakibati.gestion.eleves.archive.read;role.hakibati.gestion.eleves.archive.read
+role.hakibati.gestion.eleves.archive.write;role.hakibati.gestion.eleves.archive.write
+role.hakibati.gestion.eleves.archive.delete;role.hakibati.gestion.eleves.archive.delete
+
+role.hakibati.gestion.eleves.comptabilite.read;role.hakibati.gestion.eleves.comptabilite.read
+role.hakibati.gestion.eleves.comptabilite.write;role.hakibati.gestion.eleves.comptabilite.write
+role.hakibati.gestion.eleves.comptabilite.delete;role.hakibati.gestion.eleves.comptabilite.delete

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_5.3.xsd">
+
+  <module name="hakibati-ass-enajah" package="com.hakibati.ass.enajah.db"  />
+
+  <entity name="TableDepense" cacheable="true" >
+    <string name="designation" title="Désignation" required="true"/>
+    <decimal name="quantite" title="Quantité" default="0" required="true"/>
+    <decimal name="prixUnitaire" title="Prix unitaire"/>
+    <decimal name="prixHTVA" title="prix hors TVA" readonly="true">
+      <![CDATA[
+   return quantite.multiply(prixUnitaire);
+      ]]>
+    </decimal>
+    <decimal name="TVA" title="TVA %" default="20"/>
+    <decimal name="totalTTC" title="Total TTC" readonly="true">
+      <![CDATA[
+      if(operation.getSelectMethode()==2)
+     return quantite.multiply(prixUnitaire).add((TVA.multiply(prixHTVA.divide(new BigDecimal("100")))));
+     return quantite.multiply(prixUnitaire);
+      ]]>
+    </decimal>
+
+    <many-to-one name="operation" ref="OperationDepense" required="true"/>
+    <many-to-one name="etablissement" ref="com.app.application.db.Etablissement">
+      <![CDATA[
+    if (etablissement == null)
+   return createdBy.getEtablissementSelectionnee() ;
+   return etablissement;
+      ]]>
+    </many-to-one>
+    <many-to-one name="createdBy" ref="com.axelor.auth.db.User"/>
+  </entity>
+</domain-models>

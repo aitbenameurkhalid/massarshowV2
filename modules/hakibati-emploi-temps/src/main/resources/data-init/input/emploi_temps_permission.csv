@@ -1,0 +1,61 @@
+"name";"object";"can_read";"can_write";"can_create";"can_remove";"can_export";"condition";"conditionParams";"roleName"
+
+"perm.hakibati.emploi.temps.ActivityResulteFet.select.etab.r";"com.hakibati.emploi.db.ActivityResulteFet";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.emploi.temps.ActivityResulteFet.select.etab.rwc";"com.hakibati.emploi.db.ActivityResulteFet";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.emploi.temps.ActivityResulteFet.select.etab.rwcde";"com.hakibati.emploi.db.ActivityResulteFet";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.hakibati.emploi.temps.DayFet.select.etab.r";"com.hakibati.emploi.db.DayFet";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.emploi.temps.DayFet.select.etab.rwc";"com.hakibati.emploi.db.DayFet";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.emploi.temps.DayFet.select.etab.rwcde";"com.hakibati.emploi.db.DayFet";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.hakibati.emploi.temps.DayHourFet.select.etab.r";"com.hakibati.emploi.db.DayHourFet";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.emploi.temps.DayHourFet.select.etab.rwc";"com.hakibati.emploi.db.DayHourFet";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.emploi.temps.DayHourFet.select.etab.rwcde";"com.hakibati.emploi.db.DayHourFet";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.hakibati.emploi.temps.DossierImportFet.select.etab.r";"com.hakibati.emploi.db.DossierImportFet";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.emploi.temps.DossierImportFet.select.etab.rwc";"com.hakibati.emploi.db.DossierImportFet";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.emploi.temps.DossierImportFet.select.etab.rwcde";"com.hakibati.emploi.db.DossierImportFet";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.hakibati.emploi.temps.DossierExam.select.etab.r";"com.hakibati.emploi.db.DossierExam";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.emploi.temps.DossierExam.select.etab.rwc";"com.hakibati.emploi.db.DossierExam";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.emploi.temps.DossierExam.select.etab.rwcde";"com.hakibati.emploi.db.DossierExam";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.hakibati.emploi.temps.HourFet.select.etab.r";"com.hakibati.emploi.db.HourFet";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.emploi.temps.HourFet.select.etab.rwc";"com.hakibati.emploi.db.HourFet";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.emploi.temps.HourFet.select.etab.rwcde";"com.hakibati.emploi.db.HourFet";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.hakibati.emploi.temps.ResultatFet.select.etab.r";"com.hakibati.emploi.db.ResultatFet";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.emploi.temps.ResultatFet.select.etab.rwc";"com.hakibati.emploi.db.ResultatFet";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.emploi.temps.ResultatFet.select.etab.rwcde";"com.hakibati.emploi.db.ResultatFet";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.hakibati.emploi.temps.RoomDossier.select.etab.r";"com.hakibati.emploi.db.RoomDossier";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.emploi.temps.RoomDossier.select.etab.rwc";"com.hakibati.emploi.db.RoomDossier";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.emploi.temps.RoomDossier.select.etab.rwcde";"com.hakibati.emploi.db.RoomDossier";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.hakibati.emploi.temps.RoomFet.select.etab.r";"com.hakibati.emploi.db.RoomFet";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.emploi.temps.RoomFet.select.etab.rwc";"com.hakibati.emploi.db.RoomFet";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.emploi.temps.RoomFet.select.etab.rwcde";"com.hakibati.emploi.db.RoomFet";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.hakibati.emploi.temps.Resultats.select.etab.r";"com.hakibati.emploi.db.Resultats";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.emploi.temps.Resultats.select.etab.rwc";"com.hakibati.emploi.db.Resultats";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.emploi.temps.Resultats.select.etab.rwcde";"com.hakibati.emploi.db.Resultats";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.hakibati.emploi.temps.StudentDossier.select.etab.r";"com.hakibati.emploi.db.StudentDossier";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.emploi.temps.StudentDossier.select.etab.rwc";"com.hakibati.emploi.db.StudentDossier";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.emploi.temps.StudentDossier.select.etab.rwcde";"com.hakibati.emploi.db.StudentDossier";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.hakibati.emploi.temps.StudentFet.select.etab.r";"com.hakibati.emploi.db.StudentFet";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.emploi.temps.StudentFet.select.etab.rwc";"com.hakibati.emploi.db.StudentFet";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.emploi.temps.StudentFet.select.etab.rwcde";"com.hakibati.emploi.db.StudentFet";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.hakibati.emploi.temps.SubjectFet.select.etab.r";"com.hakibati.emploi.db.SubjectFet";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.emploi.temps.SubjectFet.select.etab.rwc";"com.hakibati.emploi.db.SubjectFet";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.emploi.temps.SubjectFet.select.etab.rwcde";"com.hakibati.emploi.db.SubjectFet";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.hakibati.emploi.temps.TeacherDossier.select.etab.r";"com.hakibati.emploi.db.TeacherDossier";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.emploi.temps.TeacherDossier.select.etab.rwc";"com.hakibati.emploi.db.TeacherDossier";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.emploi.temps.TeacherDossier.select.etab.rwcde";"com.hakibati.emploi.db.TeacherDossier";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.hakibati.emploi.temps.TeacherFet.select.etab.r";"com.hakibati.emploi.db.TeacherFet";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.emploi.temps.TeacherFet.select.etab.rwc";"com.hakibati.emploi.db.TeacherFet";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.emploi.temps.TeacherFet.select.etab.rwcde";"com.hakibati.emploi.db.TeacherFet";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";

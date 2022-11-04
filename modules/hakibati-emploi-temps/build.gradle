@@ -1,0 +1,10 @@
+plugins {
+    id 'com.axelor.app'
+}
+axelor {
+    title = "Axelor ::HAKIBATI FET EMPLOI TEMPS"
+//    removable = true
+}
+dependencies {
+    api project(':modules:hakibati-setting')
+}

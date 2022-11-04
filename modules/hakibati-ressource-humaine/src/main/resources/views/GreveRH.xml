@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+
+  <grid name="GreveRH-grid" title="GreveRH" model="com.hakibati.ressource.humaine.db.GreveRH">
+    <field name="dateGreve" />
+    <field name="journee" />
+    <field name="nombrePersonne" />
+    <field name="observation"/>
+  </grid>
+
+  <form name="GreveRH-form" title="GreveRH" model="com.hakibati.ressource.humaine.db.GreveRH"
+  onLoad="action-greveRH-form-onLoad" >
+    <panel >
+      <field name="dateGreve" colSpan="3" onChange="save,action-date-greve-onSelect"/>
+      <field name="journee" colSpan="3" />
+      <field name="nombrePersonne" colSpan="3" />
+      <field name="observation" colSpan="3"/>
+      <panel-related field="grevePersonnel" form-view="zero" grid-view="GrevePersonnel-grid" colSpan="12" height="10" />
+    </panel>
+  </form>
+
+  <action-method name="action-greveRH-form-onLoad">
+    <call class="com.ressource.humaine.web.GreveRHController" method="OnLoadGreveRH"/>
+  </action-method>
+
+  <action-method name="action-date-greve-onSelect">
+    <call class="com.ressource.humaine.web.GreveRHController" method="OnSelectDateGreveRH"/>
+  </action-method>
+
+
+  <selection name="selection-list-journee-GreveRH">
+    <option value="7">Dimanche</option>
+    <option value="1">Lundi</option>
+    <option value="2">Mardi</option>
+    <option value="3">Mercredi</option>
+    <option value="4">Jeudi</option>
+    <option value="5">Vendredi</option>
+    <option value="6">Samedi</option>
+  </selection>
+
+
+</object-views>

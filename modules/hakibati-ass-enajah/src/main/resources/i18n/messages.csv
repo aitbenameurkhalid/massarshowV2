@@ -1,0 +1,246 @@
+"key","message","comment","context"
+"2eme fournisseur",,,"resources\domains\OperationDepense.xml:17"
+"3eme fournisseur",,,"resources\domains\OperationDepense.xml:20"
+"4eme fournisseur",,,"resources\domains\OperationDepense.xml:23"
+"5eme fournisseur",,,"resources\domains\OperationDepense.xml:26"
+"ACTICLE",,,"resources\views\Print.xml:30"
+"ADMINISTRATIF",,,"resources\views\Menu.xml:9"
+"ASS-ENNAJAH",,,"resources\views\Menu.xml:5"
+"AU",,,"resources\views\Print.xml:22"
+"Addres",,,"resources\domains\AssEnajahInfo.xml:14"
+"Alimentation de la caisse",,,"resources\views\TransfertDeSolde.xml:28"
+"BENEFICIE",,,"resources\views\Print.xml:38"
+"BUDGET",,,"resources\views\Menu.xml:7"
+"Bon de Caisse",,,"resources\views\OperationDepense.xml:231"
+"Bon de commande",,,"resources\views\OperationDepense.xml:232
+resources\views\OperationDepense.xml:238
+resources\views\OperationDepense.xml:253"
+"Code",,,"resources\domains\DomaineDepens.xml:9
+resources\domains\DomaineRecette.xml:9"
+"Commandes",,,"resources\views\OperationDepense.xml:178
+resources\views\OperationDepense.xml:188"
+"Created by",,,"resources\domains\AssEnajahInfo.xml:23
+resources\domains\DomaineDepens.xml:19
+resources\domains\DomaineRecette.xml:19
+resources\domains\OperationDepense.xml:53
+resources\domains\PieceJoindreDepense.xml:19
+resources\domains\PieceJoindreRecette.xml:20
+resources\domains\PieceJoindreTransfertSolde.xml:20
+resources\domains\TableDepens.xml:34
+resources\domains\TableRecettes.xml:23
+resources\domains\TransfertDeSolde.xml:22"
+"DEPENSES",,,"resources\views\Menu.xml:18"
+"DU",,,"resources\views\Print.xml:21"
+"Date",,,"resources\domains\OperationDepense.xml:31
+resources\domains\TableRecettes.xml:9
+resources\domains\TransfertDeSolde.xml:11"
+"Date de creatoion",,,"resources\domains\AssEnajahInfo.xml:15"
+"Demande de devis",,,"resources\views\OperationDepense.xml:236
+resources\views\OperationDepense.xml:251"
+"Domain depense",,,"resources\domains\OperationDepense.xml:43"
+"Domaine De Depens",,,"resources\views\OperationDepense.xml:216"
+"Domaine De Recette",,,"resources\domains\TableRecettes.xml:15"
+"Domaine Recette",,,"resources\views\DomaineRecettes.xml:12
+resources\views\DomaineRecettes.xml:7
+resources\views\Menu.xml:76
+resources\views\Menu.xml:78"
+"Domaine/cheque",,,"resources\views\OperationDepense.xml:204"
+"Donateur",,,"resources\domains\TableRecettes.xml:10"
+"Désignation",,,"resources\domains\PieceJoindreDepense.xml:9
+resources\domains\PieceJoindreRecette.xml:9
+resources\domains\PieceJoindreTransfertSolde.xml:9
+resources\domains\TableDepens.xml:9"
+"Déterminer de fournisseur",,,"resources\views\OperationDepense.xml:237
+resources\views\OperationDepense.xml:252"
+"Déterminer les besoins",,,"resources\views\OperationDepense.xml:235
+resources\views\OperationDepense.xml:245
+resources\views\OperationDepense.xml:250"
+"EXCEL",,,"resources\views\OperationDepense.xml:262"
+"Email",,,"resources\domains\AssEnajahInfo.xml:12"
+"Enregistrer",,,"resources\views\OperationDepense.xml:43
+resources\views\OperationDepense.xml:95"
+"Etablissement",,,"resources\domains\AssEnajahInfo.xml:16
+resources\domains\DomaineDepens.xml:12
+resources\domains\DomaineRecette.xml:12
+resources\domains\OperationDepense.xml:46
+resources\domains\PieceJoindreDepense.xml:12
+resources\domains\PieceJoindreRecette.xml:13
+resources\domains\PieceJoindreTransfertSolde.xml:13
+resources\domains\TableDepens.xml:27
+resources\domains\TableRecettes.xml:16
+resources\domains\TransfertDeSolde.xml:15"
+"Facture",,,"resources\views\OperationDepense.xml:240
+resources\views\OperationDepense.xml:255"
+"Fax",,,"resources\domains\AssEnajahInfo.xml:11"
+"Fournisseur",,,"resources\domains\OperationDepense.xml:14"
+"INFORMATION ASS",,,"resources\views\Menu.xml:85"
+"Imprimé_Besoins",,,"resources\views\OperationDepense.xml:113
+resources\views\OperationDepense.xml:76"
+"Imprimé_Bon_Commande",,,"resources\views\OperationDepense.xml:83"
+"Imprimé_Bon_Livraison",,,"resources\views\OperationDepense.xml:116
+resources\views\OperationDepense.xml:86"
+"Imprimé_D_Devis",,,"resources\views\OperationDepense.xml:78"
+"Imprimé_Facture",,,"resources\views\OperationDepense.xml:88"
+"Imprimé_PV_fournisseur",,,"resources\views\OperationDepense.xml:80"
+"Imprimé_Paiement",,,"resources\views\OperationDepense.xml:119
+resources\views\OperationDepense.xml:90"
+"Imprimés",,,"resources\views\Menu.xml:11
+resources\views\Menu.xml:13"
+"Information",,,"java\com\ass\enajah\web\OperationDepensController.java:20
+resources\views\AssEnajahInfo.xml:8"
+"Le 2eme  fournisseur",,,"resources\views\OperationDepense.xml:148"
+"Le 3eme  fournisseur",,,"resources\views\OperationDepense.xml:155"
+"Le 4eme  fournisseur",,,"resources\views\OperationDepense.xml:162"
+"Le 5eme  fournisseur",,,"resources\views\OperationDepense.xml:169"
+"Le fournisseur ou la personne qui a effectué le service",,,"resources\views\OperationDepense.xml:132"
+"Le fournisseur qui a remporté la transaction",,,"resources\views\OperationDepense.xml:141"
+"Le nom complet",,,"resources\views\OperationDepense.xml:134"
+"Les Commandes",,,"resources\views\TableDepense.xml:20
+resources\views\TableDepense.xml:29
+resources\views\TableDepense.xml:40
+resources\views\TableDepense.xml:47"
+"Les besoins",,,"resources\views\TableDepense.xml:12
+resources\views\TableDepense.xml:7"
+"Les imprimes",,,"resources\views\Print.xml:7"
+"Les opération",,,"resources\views\Menu.xml:40
+resources\views\Menu.xml:57"
+"Les opérations",,,"resources\views\Menu.xml:34
+resources\views\Menu.xml:42
+resources\views\Menu.xml:51
+resources\views\Menu.xml:59"
+"Liste des Piece Joindre",,,"resources\domains\TransfertDeSolde.xml:13"
+"Liste des Piece Joindre de Depense",,,"resources\domains\OperationDepense.xml:45"
+"Liste des Piece Joindre des Recettes",,,"resources\domains\TableRecettes.xml:14"
+"Liste des besoins",,,"resources\domains\OperationDepense.xml:44"
+"Livraison",,,"resources\views\OperationDepense.xml:239
+resources\views\OperationDepense.xml:246
+resources\views\OperationDepense.xml:254
+resources\views\OperationDepense.xml:257"
+"Logo En Tete",,,"resources\domains\AssEnajahInfo.xml:24"
+"Methode de paiement",,,"resources\domains\OperationDepense.xml:40"
+"Montant",,,"resources\domains\TableRecettes.xml:11
+resources\domains\TransfertDeSolde.xml:10"
+"Motif De transfert",,,"resources\domains\TransfertDeSolde.xml:12"
+"Méthode de Depense",,,"resources\domains\OperationDepense.xml:9"
+"Nom",,,"resources\domains\DomaineDepens.xml:10
+resources\domains\DomaineRecette.xml:10"
+"Nom de association",,,"resources\domains\AssEnajahInfo.xml:9"
+"Numero",,,"resources\domains\OperationDepense.xml:13"
+"Numéro de cheque",,,"resources\domains\TableRecettes.xml:13"
+"Numéro du chèque",,,"resources\domains\OperationDepense.xml:41"
+"Offres financières",,,"resources\domains\OperationDepense.xml:16
+resources\domains\OperationDepense.xml:19
+resources\domains\OperationDepense.xml:22
+resources\domains\OperationDepense.xml:25
+resources\domains\OperationDepense.xml:28"
+"Operation",,,"resources\domains\PieceJoindreDepense.xml:11
+resources\domains\TableDepens.xml:26"
+"PARAMETRES",,,"resources\views\Menu.xml:65"
+"PDF",,,"resources\views\OperationDepense.xml:261"
+"PROVENANCE",,,"resources\views\Print.xml:34"
+"Paiement",,,"resources\views\OperationDepense.xml:241
+resources\views\OperationDepense.xml:247
+resources\views\OperationDepense.xml:256
+resources\views\OperationDepense.xml:258"
+"Par chèque",,,"resources\views\OperationDepense.xml:227"
+"Par virement à compte bancaire",,,"resources\views\OperationDepense.xml:228"
+"Piece Joindre",,,"resources\domains\PieceJoindreDepense.xml:10
+resources\domains\PieceJoindreRecette.xml:10
+resources\domains\PieceJoindreTransfertSolde.xml:10
+resources\views\OperationDepense.xml:198
+resources\views\PieceJoindreRecette.xml:12
+resources\views\PieceJoindreRecette.xml:7
+resources\views\TableRecettes.xml:16
+resources\views\TableRecettes.xml:25
+resources\views\TableRecettes.xml:7
+resources\views\TransfertDeSolde.xml:21"
+"Prix Total",,,"resources\views\TableDepense.xml:44"
+"Prix unitaire",,,"resources\domains\TableDepens.xml:11"
+"Prèsident",,,"resources\domains\OperationDepense.xml:29"
+"Quantité",,,"resources\domains\TableDepens.xml:10"
+"RECETTES",,,"resources\views\Menu.xml:20"
+"RIB De Fournisseur",,,"resources\domains\OperationDepense.xml:42"
+"Registre bancaire",,,"resources\views\Print.xml:16"
+"Registre de caisse",,,"resources\views\Print.xml:18"
+"Registre quotidien des opérations",,,"resources\views\Print.xml:14"
+"Somme",,,"resources\domains\OperationDepense.xml:39"
+"Somme En Lettre",,,"resources\domains\OperationDepense.xml:37
+resources\domains\OperationDepense.xml:38"
+"Status",,,"resources\domains\OperationDepense.xml:10
+resources\views\OperationDepense.xml:23
+resources\views\OperationDepense.xml:28"
+"Sujet du Opération",,,"resources\domains\OperationDepense.xml:12"
+"TRANS DE SOLDE",,,"resources\views\Menu.xml:22"
+"TVA %",,,"resources\domains\TableDepens.xml:17"
+"TYPE",,,"resources\views\Print.xml:26"
+"Table recette",,,"resources\domains\PieceJoindreRecette.xml:11"
+"Table transfert solde",,,"resources\domains\PieceJoindreTransfertSolde.xml:11"
+"Telephone",,,"resources\domains\AssEnajahInfo.xml:10"
+"Total TTC",,,"resources\domains\TableDepens.xml:18"
+"Transfert De Solde",,,"resources\views\Menu.xml:25
+resources\views\TransfertDeSolde.xml:14
+resources\views\TransfertDeSolde.xml:7"
+"Transfert à la banque depuis la caisse",,,"resources\views\TransfertDeSolde.xml:29"
+"Trésorier",,,"resources\domains\OperationDepense.xml:30"
+"Type De Transfert",,,"resources\domains\TransfertDeSolde.xml:9"
+"Type de Montant",,,"resources\domains\TableRecettes.xml:12"
+"Validé_Besoines",,,"resources\views\OperationDepense.xml:47
+resources\views\OperationDepense.xml:99"
+"Validé_Bon_Commande",,,"resources\views\OperationDepense.xml:58"
+"Validé_D_Devis",,,"resources\views\OperationDepense.xml:50"
+"Validé_Facture",,,"resources\views\OperationDepense.xml:66"
+"Validé_Livraison",,,"resources\views\OperationDepense.xml:103
+resources\views\OperationDepense.xml:62"
+"Validé_PV_fournisseur",,,"resources\views\OperationDepense.xml:54"
+"Validé_Paiement",,,"resources\views\OperationDepense.xml:107
+resources\views\OperationDepense.xml:70"
+"Veuillez vérifier la quantité de besoins, puis imprimer un rapport",,,"resources\views\OperationDepense.xml:127"
+"Veuillez vérifier la quantité et le prix de Commande, puis imprimer un rapport",,,"resources\views\OperationDepense.xml:184
+resources\views\OperationDepense.xml:194"
+"Voulez-vous vraiment valide l'operation?",,,"resources\views\OperationDepense.xml:103
+resources\views\OperationDepense.xml:107
+resources\views\OperationDepense.xml:47
+resources\views\OperationDepense.xml:50
+resources\views\OperationDepense.xml:54
+resources\views\OperationDepense.xml:58
+resources\views\OperationDepense.xml:62
+resources\views\OperationDepense.xml:66
+resources\views\OperationDepense.xml:70
+resources\views\OperationDepense.xml:99"
+"WORD",,,"resources\views\OperationDepense.xml:263"
+"Web",,,"resources\domains\AssEnajahInfo.xml:13"
+"adresse de 2eme fournisseur",,,"resources\domains\OperationDepense.xml:18"
+"adresse de 3eme fournisseur",,,"resources\domains\OperationDepense.xml:21"
+"adresse de 4eme fournisseur",,,"resources\domains\OperationDepense.xml:24"
+"adresse de 5eme fournisseur",,,"resources\domains\OperationDepense.xml:27"
+"adresse de fournisseur",,,"resources\domains\OperationDepense.xml:15"
+"année financière",,,"resources\domains\OperationDepense.xml:32"
+"archif",,,"resources\domains\OperationDepense.xml:11"
+"besoins",,,"resources\views\OperationDepense.xml:122"
+"change Logo",,,"resources\views\AssEnajahInfo.xml:30"
+"chèque",,,"resources\views\TableRecettes.xml:34"
+"domaine depense",,,"resources\views\Menu.xml:68
+resources\views\Menu.xml:70"
+"error",,,"java\com\ass\enajah\web\OperationDepensPrint.java:129
+java\com\ass\enajah\web\OperationDepensPrint.java:170
+java\com\ass\enajah\web\OperationDepensPrint.java:53
+java\com\ass\enajah\web\OperationDepensPrint.java:91"
+"espèces",,,"resources\views\TableRecettes.xml:35"
+"fournisseurs",,,"resources\views\OperationDepense.xml:140"
+"fournisseurs/persone",,,"resources\views\OperationDepense.xml:131"
+"list des Domaine Depens",,,"resources\views\DomaineDepens.xml:12
+resources\views\DomaineDepens.xml:7"
+"list des Piece Joindre",,,"resources\views\PieceJoindreDepense.xml:12
+resources\views\PieceJoindreDepense.xml:7
+resources\views\PieceJoindreTransfertSolde.xml:12
+resources\views\PieceJoindreTransfertSolde.xml:7"
+"nouvelle opération",,,"resources\views\Menu.xml:32
+resources\views\Menu.xml:49"
+"opération des  Depense",,,"resources\views\OperationDepense.xml:21
+resources\views\OperationDepense.xml:8"
+"prix Total",,,"resources\views\TableDepense.xml:52"
+"prix hors TVA",,,"resources\domains\TableDepens.xml:12"
+"virement à compte bancaire",,,"resources\views\TableRecettes.xml:33"
+"المرجو التأكد من ثمن الطليبة ، ثم طبع محضر",,,"resources\views\OperationDepense.xml:185
+resources\views\OperationDepense.xml:195"
+"المرجو التأكد من كمية الحاجيات ، ثم طبع محضر",,,"resources\views\OperationDepense.xml:128"

@@ -1,0 +1,14 @@
+plugins {
+    id 'com.axelor.app'
+}
+//apply plugin: 'kotlin'
+
+axelor {
+    title = "Axelor ::HAKIBATI SVG EXAMEN"
+//    removable = true
+}
+
+
+dependencies {
+    api project(':modules:hakibati-setting')
+}

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+
+    <grid name="NotesEleve-grid" title="Matieres" model="com.hakibati.gestion.eleves.db.NotesEleve">
+        <field name="eleve.anneeScolaire"/>
+        <field name="classe" width="100"/>
+        <field name="eleve.idclasse"  width="40"/>
+        <field name="eleve.nomAr"/>
+        <field name="eleve.prenomAr"/>
+        <field name="idSession" selection="selection-list-session"/>
+        <field name="matiere"/>
+        <field name="idControlContinu" selection="selection-list-ControlContinu"/>
+        <field name="note" width="50"/>
+        <field name="observation"/>
+    </grid>
+
+    <form name="NotesEleve-form" title="Matiere" model="com.hakibati.gestion.eleves.db.NotesEleve">
+        <panel title="Ajouter ou modifier" showTitle="false" readonly="true">
+            <field name="classe"/>
+            <field name="eleve.nomAr"/>
+            <field name="eleve.prenomAr"/>
+            <field name="idSession" selection="selection-list-session"/>
+            <field name="matiere"/>
+            <field name="idControlContinu" selection="selection-list-ControlContinu"/>
+            <field name="coefficient"/>
+            <field name="note"/>
+            <field name="observation"/>
+        </panel>
+    </form>
+    <selection name="selection-list-session">
+        <option value="1">1ere semestre</option>
+        <option value="2">2eme semestre</option>
+
+    </selection>
+    <selection name="selection-list-ControlContinu">
+        <option value="1">1ere contrôle</option>
+        <option value="2">2eme contrôle</option>
+        <option value="3">3eme contrôle</option>
+        <option value="5">4eme contrôle</option>
+        <option value="4">Activités intégrées</option>
+    </selection>
+</object-views>

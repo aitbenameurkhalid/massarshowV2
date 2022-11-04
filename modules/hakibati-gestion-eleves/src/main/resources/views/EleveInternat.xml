@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+    <grid name="EleveInternat-grid" title="Liste des élèves" model="com.hakibati.gestion.eleves.db.EleveInternat"
+          orderBy="typeBourse ,idinternat">
+        <field name="idinternat" width="50"/>
+        <field name="cdMassar"/>
+        <field name="numeroBourse"/>
+        <field name="nomAr"/>
+        <field name="prenomAr"/>
+        <field name="typeBourse"/>
+        <field name="situationActuelle"/>
+        <button name="btn-archived-eleve" title="Archived" icon="fa-trash" onClick="action-archevid-eleve-internat"
+                prompt="Voulez-vous vraiment archiver cet enregistrement ?"/>
+
+    </grid>
+    <grid name="EleveInternat-archive-grid" title="Liste des élèves" model="com.hakibati.gestion.eleves.db.EleveInternat"
+          orderBy="typeBourse ,idinternat">
+        <field name="idinternat" width="50"/>
+        <field name="cdMassar"/>
+        <field name="numeroBourse"/>
+        <field name="nomAr"/>
+        <field name="prenomAr"/>
+        <field name="typeBourse"/>
+        <field name="situationActuelle"/>
+        <button name="btn-restaurer-eleve" title="restaurer" icon="fa-reply" onClick="action-restaurer-internat"
+                prompt="Voulez-vous vraiment restaurer cet enregistrement ?"/>
+        <button name="btn-archived-eleve" title="Supprime" icon="fa-trash" onClick="action-supprimer-internat"
+                prompt="Voulez-vous vraiment supprimer cet enregistrement ?"/>
+
+    </grid>
+
+    <form name="EleveInternat-form" title="Information d'un élève" model="com.hakibati.gestion.eleves.db.EleveInternat"
+          width="large"
+          onNew="action-new-eleve-internat">
+        <panel-tabs>
+
+            <panel title="information ُEleve" colSpan="12">
+                <panel colSpan="10">
+                    <field name="cdMassar" colSpan="4" onChange="action-eleve-internat-majuscule"/>
+                    <button name="btnUpdat" colSpan="1" icon="fa-search"
+                            onClick="save,com.gestion.eleves.web.EleveInternatController:RecharcheEleveParMassar,action-updat-massar-eleve-internat-remplace"/>
+                    <spacer colSpan="1"/>
+                    <field name="numeroInternat" colSpan="6"/>
+                    <field name="numeroBourse" colSpan="6"/>
+                    <field name="dateBourse" colSpan="6"/>
+                    <field name="typeBourse" colSpan="6"/>
+                    <field name="idinternat" colSpan="6"/>
+                </panel>
+                <panel colSpan="2">
+                    <field name="image" widget="Image" colSpan="12" showTitle="false">
+                        <viewer>
+                            <![CDATA[
+              <img ng-show="record.image" ng-src="{{$image('image', 'content')}}" />
+              <img ng-show="!record.image" src="img/user.png" />
+            ]]>
+                        </viewer>
+                    </field>
+                </panel>
+                <field name="nomAr" colSpan="6"/>
+                <field name="prenomAr" colSpan="6"/>
+                <field name="nomFr" colSpan="6" onChange="action-eleve-internat-majuscule"/>
+                <field name="prenomFr" colSpan="6" onChange="action-eleve-internat-majuscule"/>
+                <field name="sexe" colSpan="6"/>
+                <field name="anneeScolaire" colSpan="6" readonlyIf="isMassar"/>
+                <field name="dateNaissance" colSpan="6"/>
+                <field name="lieuNaissanceAr" colSpan="6"/>
+                <field name="situationActuelle"/>
+                <field name="dateLaSituationActuelle"/>
+                <field name="classe" colSpan="6"/>
+                <field name="idclasse" colSpan="6"/>
+                <field name="etablissementetudie" colSpan="6"/>
+
+            </panel>
+
+            <panel title="information tuteur" colSpan="12">
+                <field name="nomAr" readonly="true" showTitle="false" css="center"/>
+                <field name="prenomAr" readonly="true" showTitle="false" css="center"/>
+
+                <field name="nomarTuteur"/>
+                <field name="prenomarTuteur"/>
+                <field name="cinTuteur"/>
+                <field name="telTuteur"/>
+                <field name="fonctionTuteur"/>
+                <field name="adresseTuteur"/>
+            </panel>
+            <panel title="information Reporter" colSpan="12">
+                <field name="nomAr" readonly="true" showTitle="false" css="center"/>
+                <field name="prenomAr" readonly="true" showTitle="false" css="center"/>
+
+                <field name="nomarReporter"/>
+                <field name="prenomarReporter"/>
+                <field name="cinReporter"/>
+                <field name="telReporter"/>
+                <field name="fonctionReporter"/>
+                <field name="adresseReporter"/>
+            </panel>
+            <panel title="suivi quotidien" colSpan="12">
+                <field name="nomAr" readonly="true"/>
+                <field name="prenomAr" readonly="true"/>
+                <panel-related field="absenceeleveInternat" form-view="AbsenceeleveInternat-form"
+                               grid-view="AbsenceeleveInternat-grid" height="350" colSpan="12"/>
+            </panel>
+            <panel title="Infractions" colSpan="12">
+                <field name="nomAr" readonly="true"/>
+                <field name="prenomAr" readonly="true"/>
+            </panel>
+            <panel title="Suivi médical" colSpan="12">
+                <field name="nomAr" showTitle="false" readonly="true" colSpan="6"/>
+                <field name="prenomAr" showTitle="false" readonly="true" colSpan="6"/>
+            </panel>
+
+            <panel title="pièces jointes">
+                <panel-related field="pieceJointElevesInternat" height="350" colSpan="12"/>
+            </panel>
+
+        </panel-tabs>
+
+    </form>
+
+    <action-record name="action-new-eleve-internat" model="com.hakibati.gestion.eleves.db.EleveInternat">
+        <field name="gestioneleves"
+               expr="call:com.gestion.eleves.service.GestionelevesService:getCurretGestioneleves()"/>
+    </action-record>
+    <action-record name="action-new-Eleve-internat-archive" model="com.hakibati.gestion.eleves.db.Eleve">
+        <field name="gestioneleves"
+               expr="call:com.gestion.eleves.service.GestionelevesService:getCurretGestioneleves()"/>
+        <field name="archived" expr="eval:true"/>
+    </action-record>
+
+    <action-method name="action-archevid-eleve-internat">
+        <call class="com.gestion.eleves.web.EleveInternatController" method="ArchivedEleveInternatArchevid"/>
+    </action-method>
+    <action-method name="action-restaurer-internat">
+        <call class="com.gestion.eleves.web.EleveInternatController" method="ArchivedEleveInternatRestaurer"/>
+    </action-method>
+    <action-method name="action-supprimer-internat">
+        <call class="com.gestion.eleves.web.EleveInternatController" method="ArchivedEleveInternatSupprimer"/>
+    </action-method>
+
+    <action-method name="action-updat-massar-eleve-internat-remplace">
+        <call class="com.gestion.eleves.web.EleveInternatController" method="RemplaceEleveParMassar"/>
+    </action-method>
+    <action-record name="action-eleve-internat-majuscule" model="com.hakibati.gestion.eleves.db.EleveInternat">
+        <field name="cdMassar"          expr="call:com.gestion.eleves.service.GestionelevesService:UppercaseTransfert(cdMassar)"/>
+        <field name="nomFr"          expr="call:com.gestion.eleves.service.GestionelevesService:UppercaseTransfert(nomFr)"/>
+        <field name="prenomFr"          expr="call:com.gestion.eleves.service.GestionelevesService:UppercaseTransfert(prenomFr)"/>
+    </action-record>
+
+    <selection name="selection-situation-initiale-internat">
+        <option value="-1">sans</option>
+        <option value="0">départ</option>
+        <option value="1">Arrivée</option>
+        <option value="2">Réintégration</option>
+        <option value="3">réorientation</option>
+        <option value="4">Répétition</option>
+    </selection>
+    <selection name="selection-situation-actuelle-internat">
+         <option value="0">Exerce</option>
+        <option value="1">Quitte</option>
+        <option value="2">Abandonné</option>
+        <option value="3">Non inscrit</option>
+        <option value="4">Exclus</option>
+        <option value="5">Transert Bourse</option>
+    </selection>
+    <selection name="selection-type-bourse">
+        <option value="0">bourse complète</option>
+        <option value="1">demi-bourse</option>
+        <option value="2">وحبة غداء</option>
+        <option value="3">معلم داخلية</option>
+    </selection>
+
+
+</object-views>

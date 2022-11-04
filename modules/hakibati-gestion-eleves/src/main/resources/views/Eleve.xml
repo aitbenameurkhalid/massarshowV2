@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+    <grid name="Eleve-grid" title="Liste des élèves" model="com.hakibati.gestion.eleves.db.Eleve"
+          orderBy="classe.niveau , classe ,idclasse">
+        <hilite if="situationActuelle==3" background="danger"/>
+        <hilite if="situationActuelle==0" background="success"/>
+        <field name="cdMassar"/>
+        <field name="situationInitiale"/>
+        <field name="nomAr"/>
+        <field name="prenomAr"/>
+        <field name="classe"/>
+        <field name="idclasse" width="40"/>
+        <field name="situationActuelle"/>
+        <button name="btn-archived-eleve" title="Archived" icon="fa-trash" onClick="action-archevid-eleve"
+                prompt="Voulez-vous vraiment archiver cet enregistrement ?"/>
+    </grid>
+    <grid name="Eleve-groupe-grid" title="Liste des élèves par groupe" model="com.hakibati.gestion.eleves.db.Eleve"
+          orderBy="classe.niveau , classe ,idclasse" editable="true" onNew="false" edit-icon="false">
+        <hilite if="idgroupe==2" background="primary"/>
+        <hilite if="idgroupe==1" background="success"/>
+        <field name="idgroupe"/>
+        <field name="idclasse" width="40" readonly="true"/>
+        <field name="classe" readonly="true"/>
+        <field name="cdMassar" readonly="true"/>
+        <field name="nomAr" readonly="true"/>
+        <field name="prenomAr" readonly="true"/>
+    </grid>
+    <grid name="Eleve-archive-grid" title="Liste des élèves" model="com.hakibati.gestion.eleves.db.Eleve"
+          orderBy="anneeScolaire" canSave="true" editable="true">
+        <field name="cdMassar"/>
+        <field name="nomAr"/>
+        <field name="prenomAr"/>
+        <field name="dateNaissance"/>
+        <field name="anneeScolaire"/>
+
+        <button name="btn-restaurer-eleve" title="restaurer" icon="fa-reply" onClick="action-restaurer-eleve"
+                prompt="Voulez-vous vraiment restaurer cet enregistrement ?"/>
+        <button name="btn-archived-eleve" title="Supprime" icon="fa-trash" onClick="action-supprimer-eleve"
+                prompt="Voulez-vous vraiment supprimer cet enregistrement ?"/>
+    </grid>
+
+    <form name="Eleve-form" title="Information d'un élève" model="com.hakibati.gestion.eleves.db.Eleve" width="large"
+          onNew="action-new-eleve-exterieur">
+        <panel-tabs>
+            <panel title="information ُEleve" colSpan="12">
+                <field name="cdMassar" colSpan="6" readonlyIf="isMassar" onChange="action-eleve-majuscule"/>
+                <field name="anneeScolaire" colSpan="6" readonlyIf="isMassar" x-limit="1000" widget="SuggestBox"
+                       x-order="-idAnnee" onChange="action.eleve.change.anneScolaireActuele"/>
+                <field name="classe" colSpan="6" domain="self.anneeScolaire = :anneeScolaire" x-limit="1000"/>
+                <field name="idclasse" colSpan="6"/>
+                <field name="situationInitiale" colSpan="6"/>
+                <field name="datesituationInitiale" colSpan="6"/>
+                <field name="situationActuelle" colSpan="6"/>
+                <field name="dateLaSituationActuelle" colSpan="6"/>
+
+                <field name="nomAr" colSpan="6"/>
+                <field name="prenomAr" colSpan="6"/>
+                <field name="nomFr" colSpan="6" onChange="action-eleve-majuscule"/>
+                <field name="prenomFr" colSpan="6" onChange="action-eleve-majuscule"/>
+                <field name="sexe" colSpan="6"/>
+                <field name="dateNaissance" colSpan="6"/>
+                <field name="lieuNaissanceAr" colSpan="6"/>
+                <field name="lieuNaissanceFr" colSpan="6"/>
+                <field name="isMassar" colSpan="12" hidden="true"/>
+                <panel title="information d'oregine" colSpan="12" showIf="situationInitiale==1">
+                    <field name="etablissementOrigine"/>
+                    <field name="directionOrigine"/>
+                    <field name="dateArrivee"/>
+                    <field name="numerocertificatarr"/>
+                    <field name="anneescolairArrive"/>
+                    <field name="numeroCertificat"/>
+                    <field name="datePrDemande"/>
+                    <field name="numeroEnvPrDemande"/>
+                    <field name="dateDeDemande"/>
+                    <field name="numeroEnvDeDemande"/>
+                    <field name="dateTrDemande"/>
+                    <field name="numeroEnvDemande"/>
+                    <field name="datemsgIntervention"/>
+                    <field name="numeromsgIntervention"/>
+                    <field name="dateReception"/>
+                    <field name="observationReption"/>
+                    <button name="btnDemandedossier" title="Demande de dossier" onClick="action-Demande-de-dossier"/>
+                </panel>
+                <panel title="information ets reception" colSpan="12" showIf="situationActuelle==1">
+                    <field name="etablissementreception"/>
+                    <field name="directionreception"/>
+                    <field name="dateQuittant"/>
+                    <field name="numeroCertificatQuittant"/>
+                    <field name="numeroDemandQuittant"/>
+                    <field name="dateDemandQuittant"/>
+                    <field name="numeroEnvDemandQuittant"/>
+                    <field name="dateEnvDemandQuittant"/>
+                    <button name="btnEnvoyerdossier" title="Envoyer le dossier" onClick="action-Envoyer-le-dossier"/>
+                </panel>
+
+            </panel>
+            <panel title="information tuteur" colSpan="12">
+                <field name="nomAr" readonly="true" showTitle="false" css="center"/>
+                <field name="prenomAr" readonly="true" showTitle="false" css="center"/>
+                <field name="typetuteur"/>
+                <panel title="tuteur" colSpan="12">
+                    <field name="cinTuteur"/>
+                    <field name="nomarTuteur"/>
+                    <field name="prenomarTuteur"/>
+                    <field name="nomfrTuteur"/>
+                    <field name="prenomfrTuteur"/>
+                    <field name="fonctionTuteur"/>
+                    <field name="telTuteur"/>
+                    <field name="adresseTuteur"/>
+                </panel>
+                <panel title="Pere" colSpan="12">
+                    <field name="cinPere"/>
+                    <field name="nomarPere"/>
+                    <field name="prenomarPere"/>
+                    <field name="nomfrPere"/>
+                    <field name="prenomfrPere"/>
+                    <field name="fonctionPere"/>
+                    <field name="telPere"/>
+                    <field name="adressePere"/>
+                </panel>
+                <panel title="Mere" colSpan="12">
+                    <field name="cinMere"/>
+                    <field name="nomarMere"/>
+                    <field name="prenomarMere"/>
+                    <field name="nomfrMere"/>
+                    <field name="prenomfrMere"/>
+                    <field name="fonctionMere"/>
+                    <field name="telMere"/>
+                    <field name="adresseMere"/>
+                </panel>
+            </panel>
+            <panel title="Absence" colSpan="12">
+                <field name="nomAr" readonly="true"/>
+                <field name="prenomAr" readonly="true"/>
+                <button name="btn.aves.absence" title="avis absence" onClick="action-avis-absence"/>
+            </panel>
+            <panel title="convocation" colSpan="12">
+                <field name="nomAr" readonly="true"/>
+                <field name="prenomAr" readonly="true"/>
+            </panel>
+            <panel title="Suivi médical" colSpan="12">
+                <field name="nomAr" showTitle="false" readonly="true" colSpan="6"/>
+                <field name="prenomAr" showTitle="false" readonly="true" colSpan="6"/>
+            </panel>
+            <panel title="Notes" colSpan="12">
+                <panel-related field="notes" height="350" colSpan="12"/>
+            </panel>
+            <panel title="pièces jointes">
+                <panel-related field="pieceJointEleves" height="350" colSpan="12"/>
+            </panel>
+        </panel-tabs>
+
+    </form>
+    <form name="Eleve-groupe-form" title="Information d'un élève" model="com.hakibati.gestion.eleves.db.Eleve"
+          width="large" onNew="action-new-eleve-archive">
+        <panel colSpan="12">
+            <field name="idgroupe" colSpan="3"/>
+            <field name="idclasse" title="Ordre" colSpan="3"/>
+            <field name="nomAr" readonly="true" colSpan="3"/>
+            <field name="prenomAr" readonly="true" colSpan="3"/>
+        </panel>
+    </form>
+    <action-record name="action-new-eleve-exterieur" model="com.hakibati.gestion.eleves.db.Eleve">
+        <field name="gestioneleves"
+               expr="call:com.gestion.eleves.service.GestionelevesService:getCurretGestioneleves()"/>
+    </action-record>
+    <action-record name="action-new-eleve-archive" model="com.hakibati.gestion.eleves.db.Eleve">
+        <field name="gestioneleves"
+               expr="call:com.gestion.eleves.service.GestionelevesService:getCurretGestioneleves()"/>
+        <field name="archived" expr="eval:true"/>
+    </action-record>
+    <action-method name="action-archevid-eleve">
+        <call class="com.gestion.eleves.web.EleveController" method="ArchivedEleveSelect"/>
+    </action-method>
+
+    <action-method name="action-restaurer-eleve">
+        <call class="com.gestion.eleves.web.EleveController" method="RestoreEleveSelect"/>
+    </action-method>
+    <action-method name="action-supprimer-eleve">
+        <call class="com.gestion.eleves.web.EleveController" method="DeleteEleveSelect"/>
+    </action-method>
+
+    <action-record name="action-eleve-majuscule" model="com.hakibati.gestion.eleves.db.Eleve">
+        <field name="cdMassar"
+               expr="call:com.gestion.eleves.service.GestionelevesService:UppercaseTransfert(cdMassar)"/>
+        <field name="nomFr" expr="call:com.gestion.eleves.service.GestionelevesService:UppercaseTransfert(nomFr)"/>
+        <field name="prenomFr"
+               expr="call:com.gestion.eleves.service.GestionelevesService:UppercaseTransfert(prenomFr)"/>
+    </action-record>
+
+
+    <action-attrs name="action.eleve.change.anneScolaireActuele">
+        <attribute for="classe" name="refresh" expr="true"/>
+        <attribute for="classe" name="value" expr="eval:null"/>
+    </action-attrs>
+    <selection name="selection-situation-initiale">
+        <option value="-1">sans</option>
+        <option value="0">Départ</option>
+        <option value="1">Rèceptionne</option>
+        <option value="2">Réintégration</option>
+        <option value="3">Réorientation</option>
+        <option value="4">Répétition</option>
+    </selection>
+    <selection name="selection-situation-actuelle">
+        <option value="-1">Sans</option>
+        <option value="0">Exerce</option>
+        <option value="1">Quitte</option>
+        <option value="2">Abandonné</option>
+        <option value="3">Non inscrit</option>
+        <option value="4">Exclus</option>
+    </selection>
+    <selection name="selection-sexe-eleve">
+        <option value="0">Garçon</option>
+        <option value="1">Fille</option>
+    </selection>
+    <selection name="selection-type-tuteur">
+        <option value="0">Pére</option>
+        <option value="1">Mére</option>
+        <option value="2">Tuteur</option>
+    </selection>
+
+    <selection name="selection-groupe-eleve">
+        <option value="1">Groupe 1</option>
+        <option value="2">Groupe 2</option>
+    </selection>
+
+    <action-report name="action-avis-absence"
+                   design="avis_absence.rptdesign"
+                   output="invoice-${date}${time}"
+                   format="pdf">
+        <param name="IdEleve" expr="eval: id"/>
+    </action-report>
+
+
+</object-views>

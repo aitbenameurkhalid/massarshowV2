@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+  <grid name="EleveCentre-grid" title="EleveCentre" model="com.hakibati.centre.langue.db.EleveCentre">
+    <field name="numeroInscription"/>
+    <field name="name" />
+    <field name="datenaissance"/>
+    <field name="tel"/>
+    <field name="email" />
+    <field name="adresse" />
+    <field name="picture" widget="Image" />
+
+  </grid>
+
+  <form name="EleveCentre-form" title="EleveCentre" model="com.hakibati.centre.langue.db.EleveCentre" >
+    <panel  title="Ajouter ou modifier">
+      <panel colSpan="10" itemSpan="6">
+        <field name="name" />
+        <field name="numeroInscription"/>
+        <field name="niveau"/>
+        <field name="datenaissance"/>
+        <field name="tel"/>
+        <field name="email" />
+        <field name="adresse" />
+      </panel>
+      <panel colSpan="2">
+        <field name="picture" widget="Image" colSpan="12" showTitle="false" />
+      </panel>
+    </panel >
+    <panel-tabs>
+      <panel-related field="groupeCentre" form-view="zero" grid-view="GroupeCentre-grid" colSpan="12" height="10" canNew="false" canEdit="false" canView="false"/>
+      <panel-related field="suiviFinancier" form-view="SuiviFinancierCentre-eleve-form" grid-view="SuiviFinancierCentre-eleve-grid" colSpan="12" height="10"/>
+    </panel-tabs>
+  </form>
+
+
+</object-views>

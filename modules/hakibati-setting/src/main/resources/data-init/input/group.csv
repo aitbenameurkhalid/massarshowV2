@@ -1,0 +1,13 @@
+code;homeAction;name
+creatnoveaucompte;action-client-home;creatnoveaucompte
+etablissementAdmin;;etablissementAdmin
+userEtablissementZero;action-Etablissement-Zero-home;userEtablissementZero
+etablissementUser;;etablissementUser
+demo;action-examen-dashboard;demo
+directionAdmin;;directionAdmin
+directionUser;;directionUser
+academieAdmin;;academieAdmin
+academieUser;;academieUser
+
+centreLangueAdmin;;centreLangueAdmin
+centreLangueUser;;centreLangueUser

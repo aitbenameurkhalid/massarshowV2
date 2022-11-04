@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+  <form name="user-preferences-form" title="Preferences" model="com.axelor.auth.db.User" id="app-svg"
+        onSave="save,action-save-user-preference">
+    <panel title="User preferences" itemSpan="12">
+      <field name="image" showTitle="false"/>
+      <field name="etablissementSelectionnee" form-view="zero" widget="SuggestBox"/>
+      <field name="email" widget="Email"/>
+      <field name="language"/>
+      <field name="theme" widget="theme-select"/>
+      <field name="singleTab" widget="inline-checkbox"/>
+      <field name="noHelp" widget="inline-checkbox"/>
+      <field name="change" title="Change password?" widget="inline-checkbox"/>
+      <panel showIf="change" itemSpan="12">
+        <field name="oldPassword" title="Current password" placeholder="current password" widget="password"
+               requiredIf="change"/>
+        <field name="newPassword" title="New password" placeholder="new password" widget="password"
+               onChange="action-condition-user-password" requiredIf="change"
+               validIf="!change || newPassword.length >= 4"/>
+        <field name="chkPassword" title="Confirm password" placeholder="confirm password" widget="password"
+               requiredIf="change" validIf="chkPassword === newPassword"/>
+      </panel>
+      <field name="myEtab" title="Mes etablissements?" widget="inline-checkbox"/>
+      <panel title="Mes Etablissements" showIf="myEtab" showTitle="false">
+        <panel-related field="etablissements" colSpan="12" grid-view="UsersEtablissement-grid"
+                       form-view="zero" canNew="false" canSelect="false" canRemove="false"
+                       canEdit="false" canMove="false" canView="false" canSuggest="false"/>
+        <spacer colSpan="10"/>
+        <button name="btn-create-etab" title="créer" onClick="action-create-etab-preferences"
+                colSpan="2" css="btn btn-warning label-bold bold large"/>
+      </panel>
+    </panel>
+  </form>
+
+  <form name="user-preferences-zero-etablissement-form" title="Preferences" model="com.axelor.auth.db.User"
+        onSave="save,action-save-user-preference,action-app-refresh">
+    <panel title="User preferences" itemSpan="12" showTitle="false">
+      <panel title="Sélectionnez une établissement">
+        <field name="etablissementSelectionnee" widget="SuggestBox" form-view="zero" colSpan="6"/>
+        <spacer colSpan="4"/>
+        <button name="save" onClick="save,action-save-user-preference,action-app-refresh" title="save"
+                colSpan="2" css="btn btn-warning label-bold bold large"/>
+      </panel>
+      <panel title="Ou créer une nouvelle établissement">
+        <spacer colSpan="10"/>
+        <button name="btn-create-etab" title="créer" onClick="action-create-etab-preferences"
+                colSpan="2" css="btn btn-warning label-bold bold large"/>
+      </panel>
+      <field name="myEtab" title="Mes etablissements?" widget="inline-checkbox"/>
+      <panel title="Mes Etablissements" showIf="myEtab" showTitle="false">
+        <panel-related field="etablissements" colSpan="12" grid-view="UsersEtablissement-grid"
+                       form-view="UsersEtablissement-form" canNew="false" canSelect="false" canRemove="false"
+                       canEdit="false" canMove="false" canView="false" canSuggest="false"/>
+      </panel>
+    </panel>
+  </form>
+
+  <form name="creeEtablissemnt-form" title="Creation une Etablissement" model="com.axelor.auth.db.User"
+        canSave="false" canEdit="false" canDelete="false" canNew="false" canAttach="false" canArchive="false" onLoad="action-load-creation-etablissemnt" onNew="action-load-creation-etablissemnt">
+    <panel title="Overview">
+      <field name="NomDeEtablissement" title="Nom De Etablissement" required="true" colSpan="12"/>
+      <field name="NomDecommun" title="Nom De Commun" required="true"  colSpan="12"/>
+      <field name="NomDedirection" hideIf="typeEtab==1" title="Nom De Direction" required="true" colSpan="12"/>
+      <field name="NomDeacademie" title="Nom De Academie" required="true" colSpan="12"/>
+      <field name="Adresse" title="Adresse"  colSpan="12"/>
+      <field name="Tel" title="Tel"  colSpan="12"/>
+
+      <field name="typeEtab" title="Type d'etablissemnt" selection="select-type-etablissemnt" widget="RadioSelect" colSpan="12"/>
+      <spacer colSpan="10"/>
+      <button name="btnSave" onClick="action-create-etablissement" title="créer" colSpan="2"
+              readonlyIf="!NomDeEtablissement" css="btn btn-warning label-bold bold large"/>
+    </panel>
+  </form>
+  <action-attrs name="action-load-creation-etablissemnt">
+    <attribute for="NomDecommun" name="value" expr="ايت يدين"/>
+    <attribute for="NomDedirection" name="value" expr="المديرية الإقليمية : اقليم الخميسات"/>
+    <attribute for="NomDeacademie" name="value" expr="الاكاديمية الجهوية للتربية والتكوين لجهة : الرباط سلا  القنيطرة"/>
+  </action-attrs>
+
+
+
+  <action-view name="action-create-etab-preferences" title="creation une etablissement"
+               model="com.axelor.auth.db.User">
+    <view type="form" name="creeEtablissemnt-form"/>
+    <view-param name="popup" value="true"/>
+    <view-param name="show-toolbar" value="false"/>
+    <view-param name="show-confirm" value="false"/>
+    <view-param name="popup-save" value="false"/>
+    <view-param name="forceEdit" value="true"/>
+    <domain>self.id =:__user__.id"</domain>
+    <context name="_showRecord" expr="eval:__user__.id"/>
+  </action-view>
+
+  <action-method name="action-save-user-preference">
+    <call class="com.setting.web.UserController" method="OnSavePreferenceUser"/>
+  </action-method>
+
+  <action-method name="action-app-refresh">
+    <call class="com.setting.web.EtablissementController" method="OnAppRefresh"/>
+  </action-method>
+
+  <action-method name="action-create-etablissement">
+    <call class="com.setting.web.EtablissementController" method="OnCreateEtablissement"/>
+  </action-method>
+
+</object-views>

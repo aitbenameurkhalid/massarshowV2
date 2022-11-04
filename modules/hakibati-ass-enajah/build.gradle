@@ -1,0 +1,11 @@
+plugins {
+    id 'com.axelor.app'
+}
+axelor {
+    title = "Axelor :: HAKIBATI ASS ENAJAH"
+//    removable = true
+}
+
+dependencies {
+    api project(':modules:hakibati-setting')
+}

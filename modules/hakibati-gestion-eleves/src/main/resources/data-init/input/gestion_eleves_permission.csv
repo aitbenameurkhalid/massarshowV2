@@ -1,0 +1,105 @@
+"name";"object";"can_read";"can_write";"can_create";"can_remove";"can_export";"condition";"conditionParams";"roleName"
+
+"perm.hakibati.gestion.eleves.Absence.select.etab.r";"com.hakibati.gestion.eleves.db.Absence";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.gestion.eleves.Absence.select.etab.rwc";"com.hakibati.gestion.eleves.db.Absence";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.gestion.eleves.Absence.select.etab.rwcde";"com.hakibati.gestion.eleves.db.Absence";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.hakibati.gestion.eleves.AbsenceeleveInternat.select.etab.r";"com.hakibati.gestion.eleves.db.AbsenceeleveInternat";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.gestion.eleves.AbsenceeleveInternat.select.etab.rwc";"com.hakibati.gestion.eleves.db.AbsenceeleveInternat";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.gestion.eleves.AbsenceeleveInternat.select.etab.rwcde";"com.hakibati.gestion.eleves.db.AbsenceeleveInternat";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.hakibati.gestion.eleves.AffectationEnseignant.select.etab.r";"com.hakibati.gestion.eleves.db.AffectationEnseignant";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.gestion.eleves.AffectationEnseignant.select.etab.rwc";"com.hakibati.gestion.eleves.db.AffectationEnseignant";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.gestion.eleves.AffectationEnseignant.select.etab.rwcde";"com.hakibati.gestion.eleves.db.AffectationEnseignant";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.hakibati.gestion.eleves.AnneScolaire.select.etab.r";"com.hakibati.gestion.eleves.db.AnneScolaire";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.gestion.eleves.AnneScolaire.select.etab.rwc";"com.hakibati.gestion.eleves.db.AnneScolaire";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.gestion.eleves.AnneScolaire.select.etab.rwcde";"com.hakibati.gestion.eleves.db.AnneScolaire";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.hakibati.gestion.eleves.Article.select.etab.r";"com.hakibati.gestion.eleves.db.Article";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.gestion.eleves.Article.select.etab.rwc";"com.hakibati.gestion.eleves.db.Article";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.gestion.eleves.Article.select.etab.rwcde";"com.hakibati.gestion.eleves.db.Article";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.hakibati.gestion.eleves.Avisabsence.select.etab.r";"com.hakibati.gestion.eleves.db.Avisabsence";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.gestion.eleves.Avisabsence.select.etab.rwc";"com.hakibati.gestion.eleves.db.Avisabsence";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.gestion.eleves.Avisabsence.select.etab.rwcde";"com.hakibati.gestion.eleves.db.Avisabsence";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.hakibati.gestion.eleves.Cahierjournalier.select.etab.r";"com.hakibati.gestion.eleves.db.Cahierjournalier";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.gestion.eleves.Cahierjournalier.select.etab.rwc";"com.hakibati.gestion.eleves.db.Cahierjournalier";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.gestion.eleves.Cahierjournalier.select.etab.rwcde";"com.hakibati.gestion.eleves.db.Cahierjournalier";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.hakibati.gestion.eleves.Classe.select.etab.r";"com.hakibati.gestion.eleves.db.Classe";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.gestion.eleves.Classe.select.etab.rwc";"com.hakibati.gestion.eleves.db.Classe";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.gestion.eleves.Classe.select.etab.rwcde";"com.hakibati.gestion.eleves.db.Classe";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.hakibati.gestion.eleves.ControleleveInternat.select.etab.r";"com.hakibati.gestion.eleves.db.ControleleveInternat";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.gestion.eleves.ControleleveInternat.select.etab.rwc";"com.hakibati.gestion.eleves.db.ControleleveInternat";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.gestion.eleves.ControleleveInternat.select.etab.rwcde";"com.hakibati.gestion.eleves.db.ControleleveInternat";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.hakibati.gestion.eleves.Convocationtuteur.select.etab.r";"com.hakibati.gestion.eleves.db.Convocationtuteur";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.gestion.eleves.Convocationtuteur.select.etab.rwc";"com.hakibati.gestion.eleves.db.Convocationtuteur";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.gestion.eleves.Convocationtuteur.select.etab.rwcde";"com.hakibati.gestion.eleves.db.Convocationtuteur";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.hakibati.gestion.eleves.Eleve.select.etab.r";"com.hakibati.gestion.eleves.db.Eleve";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.gestion.eleves.Eleve.select.etab.rwc";"com.hakibati.gestion.eleves.db.Eleve";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.gestion.eleves.Eleve.select.etab.rwcde";"com.hakibati.gestion.eleves.db.Eleve";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.hakibati.gestion.eleves.EleveInternat.select.etab.r";"com.hakibati.gestion.eleves.db.EleveInternat";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.gestion.eleves.EleveInternat.select.etab.rwc";"com.hakibati.gestion.eleves.db.EleveInternat";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.gestion.eleves.EleveInternat.select.etab.rwcde";"com.hakibati.gestion.eleves.db.EleveInternat";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.hakibati.gestion.eleves.Enseignant.select.etab.r";"com.hakibati.gestion.eleves.db.Enseignant";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.gestion.eleves.Enseignant.select.etab.rwc";"com.hakibati.gestion.eleves.db.Enseignant";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.gestion.eleves.Enseignant.select.etab.rwcde";"com.hakibati.gestion.eleves.db.Enseignant";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.hakibati.gestion.eleves.Fournisseur.select.etab.r";"com.hakibati.gestion.eleves.db.Fournisseur";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.gestion.eleves.Fournisseur.select.etab.rwc";"com.hakibati.gestion.eleves.db.Fournisseur";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.gestion.eleves.Fournisseur.select.etab.rwcde";"com.hakibati.gestion.eleves.db.Fournisseur";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.hakibati.gestion.eleves.Gestioneleves.select.etab.r";"com.hakibati.gestion.eleves.db.Gestioneleves";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.gestion.eleves.Gestioneleves.select.etab.rwc";"com.hakibati.gestion.eleves.db.Gestioneleves";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.gestion.eleves.Gestioneleves.select.etab.rwcde";"com.hakibati.gestion.eleves.db.Gestioneleves";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.hakibati.gestion.eleves.MatiereEleve.select.etab.r";"com.hakibati.gestion.eleves.db.MatiereEleve";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.gestion.eleves.MatiereEleve.select.etab.rwc";"com.hakibati.gestion.eleves.db.MatiereEleve";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.gestion.eleves.MatiereEleve.select.etab.rwcde";"com.hakibati.gestion.eleves.db.MatiereEleve";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.hakibati.gestion.eleves.MenuHebdomadaire.select.etab.r";"com.hakibati.gestion.eleves.db.MenuHebdomadaire";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.gestion.eleves.MenuHebdomadaire.select.etab.rwc";"com.hakibati.gestion.eleves.db.MenuHebdomadaire";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.gestion.eleves.MenuHebdomadaire.select.etab.rwcde";"com.hakibati.gestion.eleves.db.MenuHebdomadaire";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.hakibati.gestion.eleves.Niveau.select.etab.r";"com.hakibati.gestion.eleves.db.Niveau";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.gestion.eleves.Niveau.select.etab.rwc";"com.hakibati.gestion.eleves.db.Niveau";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.gestion.eleves.Niveau.select.etab.rwcde";"com.hakibati.gestion.eleves.db.Niveau";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.hakibati.gestion.eleves.NotesEleve.select.etab.r";"com.hakibati.gestion.eleves.db.NotesEleve";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.gestion.eleves.NotesEleve.select.etab.rwc";"com.hakibati.gestion.eleves.db.NotesEleve";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.gestion.eleves.NotesEleve.select.etab.rwcde";"com.hakibati.gestion.eleves.db.NotesEleve";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.hakibati.gestion.eleves.OperationJournalier.select.etab.r";"com.hakibati.gestion.eleves.db.OperationJournalier";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.gestion.eleves.OperationJournalier.select.etab.rwc";"com.hakibati.gestion.eleves.db.OperationJournalier";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.gestion.eleves.OperationJournalier.select.etab.rwcde";"com.hakibati.gestion.eleves.db.OperationJournalier";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.hakibati.gestion.eleves.PersonnesnourriesJournalier.select.etab.r";"com.hakibati.gestion.eleves.db.PersonnesnourriesJournalier";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.gestion.eleves.PersonnesnourriesJournalier.select.etab.rwc";"com.hakibati.gestion.eleves.db.PersonnesnourriesJournalier";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.gestion.eleves.PersonnesnourriesJournalier.select.etab.rwcde";"com.hakibati.gestion.eleves.db.PersonnesnourriesJournalier";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.hakibati.gestion.eleves.PieceJointEleve.select.etab.r";"com.hakibati.gestion.eleves.db.PieceJointEleve";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.gestion.eleves.PieceJointEleve.select.etab.rwc";"com.hakibati.gestion.eleves.db.PieceJointEleve";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.gestion.eleves.PieceJointEleve.select.etab.rwcde";"com.hakibati.gestion.eleves.db.PieceJointEleve";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.hakibati.gestion.eleves.PieceJointEleveInternat.select.etab.r";"com.hakibati.gestion.eleves.db.PieceJointEleveInternat";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.gestion.eleves.PieceJointEleveInternat.select.etab.rwc";"com.hakibati.gestion.eleves.db.PieceJointEleveInternat";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.gestion.eleves.PieceJointEleveInternat.select.etab.rwcde";"com.hakibati.gestion.eleves.db.PieceJointEleveInternat";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.hakibati.gestion.eleves.RapportjournalierInternat.select.etab.r";"com.hakibati.gestion.eleves.db.RapportjournalierInternat";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.gestion.eleves.RapportjournalierInternat.select.etab.rwc";"com.hakibati.gestion.eleves.db.RapportjournalierInternat";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.gestion.eleves.RapportjournalierInternat.select.etab.rwcde";"com.hakibati.gestion.eleves.db.RapportjournalierInternat";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.hakibati.gestion.eleves.SuiviMedical.select.etab.r";"com.hakibati.gestion.eleves.db.SuiviMedical";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.gestion.eleves.SuiviMedical.select.etab.rwc";"com.hakibati.gestion.eleves.db.SuiviMedical";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.gestion.eleves.SuiviMedical.select.etab.rwcde";"com.hakibati.gestion.eleves.db.SuiviMedical";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.hakibati.gestion.eleves.TypeArticle.select.etab.r";"com.hakibati.gestion.eleves.db.TypeArticle";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.gestion.eleves.TypeArticle.select.etab.rwc";"com.hakibati.gestion.eleves.db.TypeArticle";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.gestion.eleves.TypeArticle.select.etab.rwcde";"com.hakibati.gestion.eleves.db.TypeArticle";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";

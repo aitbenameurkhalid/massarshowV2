@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+    <grid name="GestionEauElectricite-grid" title="InfoEauElectricite"
+          model="com.hakibati.eau.electricite.db.GestionEauElectricite">
+        <field name="etablissement"/>
+        <field name="codeGresa"/>
+        <field name="codeGresa"/>
+        <field name="numeroContratEau"/>
+        <field name="numeroContratElectricite"/>
+        <field name="nombreEleves"/>
+
+    </grid>
+    <form name="GestionEauElectricite-form" title="InfoEauElectricite"
+          model="com.hakibati.eau.electricite.db.GestionEauElectricite" width="large"
+          onSave="save,action-save-gestion-eau-electricite">
+        <panel readonly="true" colSpan="12" showTitle="false">
+            <field name="etablissement" form-view="zero" showTitle="false" colSpan="12"
+                   css="btn btn-warning label-bold bold large"/>
+        </panel>
+        <panel title="......" itemSpan="12" showTitle="false">
+            <field name="codeGresa"/>
+            <field name="numeroContratEau"/>
+            <field name="numeroContratElectricite"/>
+            <field name="nombreEleves"/>
+            <field name="iscollege" widget="boolean-switch" colSpan="3"/>
+            <field name="isqualifiant" widget="boolean-switch" colSpan="3"/>
+            <field name="isprimaire" widget="boolean-switch" colSpan="3"/>
+            <field name="isannexe" widget="boolean-switch" colSpan="3"/>
+            <field name="isinternat" widget="boolean-switch" colSpan="3"/>
+            <field name="nombrebatimentsEau" colSpan="3"/>
+            <field name="nombrebatimentsElicricite" colSpan="3"/>
+        </panel>
+<!--        <panel-dashlet name="custom.update.table.time" colSpan="12" action="custom:custion-statistiques" height="350" title="Modifier"/>-->
+    </form>
+    <custom name="custion-statistiques" title="custion-statistiques" >
+        <dataset type="jpql"><![CDATA[
+   select (self.valeurCompteur) as total , self.etablissement.name as customer from ControleEau self
+      ]]></dataset>
+        <template>
+            <![CDATA[
+  <report-table data='data' columns='total,customer,total' sums='total'></report-table>
+  ]]>
+        </template>
+    </custom>
+
+    <form name="GestionEau-form" title="Gestion Eau" model="com.hakibati.eau.electricite.db.GestionEauElectricite"
+          width="large">
+        <panel colSpan="12" showTitle="false">
+            <field name="_date_du" title="Date Du" widget="date" colSpan="2"/>
+            <field name="_date_fin" title="Date Au" widget="date" colSpan="2"/>
+            <spacer colSpan="3"/>
+            <button name="btn-add" colSpan="2" title="Ajoute" onClick="action.ajoute.gestion.eau"/>
+            <button name="btn-export-import" colSpan="3" title="Export/Import"
+                    onClick="action.imprt.export.gestion-eau"/>
+        </panel>
+        <panel-dashlet name="panel-dashlet-gestion-eau" action="action.dashlet.gestion.eau" height="350"
+                       canSearch="true" colSpan="12" showTitle="false"/>
+    </form>
+    <form name="ControlEau-form" title="Controle Eau" model="com.hakibati.eau.electricite.db.GestionEauElectricite"
+          width="large" onLoad="action-hidden-delete-consommation">
+        <panel colSpan="12" showTitle="false">
+            <field name="_date_du" title="Date Du" widget="date" colSpan="2"/>
+            <field name="_date_fin" title="Date Au" widget="date" colSpan="2"/>
+            <spacer colSpan="3"/>
+            <button name="btn-add" colSpan="2" title="Ajoute" onClick="action.ajoute.controle.eau"/>
+            <button name="btn-export-import" colSpan="3" title="Export/Import"
+                    onClick="action.imprt.export.controle-eau" />
+        </panel>
+        <panel-dashlet name="panel-dashlet-control-eau" action="action.dashlet.control.eau" height="350"
+                       canSearch="true" colSpan="12" showTitle="false"/>
+    </form>
+
+    <form name="GestionElectricite-form" title="Gestion Électricité"
+          model="com.hakibati.eau.electricite.db.GestionEauElectricite"
+          width="large">
+        <panel colSpan="12" showTitle="false">
+            <field name="_date_du" title="Date Du" widget="date" colSpan="2"/>
+            <field name="_date_fin" title="Date Au" widget="date" colSpan="2"/>
+            <spacer colSpan="3"/>
+            <button name="btn-add" colSpan="2" title="Ajoute" onClick="action.ajoute.gestion.electricite"/>
+            <button name="btn-export-import" colSpan="3" title="Export/Import"
+                    onClick="action.imprt.export.gestion-electricite"/>
+        </panel>
+        <panel-dashlet name="panel-dashlet-gestion-eau" action="action.dashlet.gestion.electricite" height="350"
+                       canSearch="true" colSpan="12" showTitle="false"/>
+    </form>
+    <form name="ControlElectricite-form" title="Controle Électricité"
+          model="com.hakibati.eau.electricite.db.GestionEauElectricite"
+          width="large">
+        <panel colSpan="12" showTitle="false">
+            <field name="_date_du" title="Date Du" widget="date" colSpan="2"/>
+            <field name="_date_fin" title="Date Au" widget="date" colSpan="2"/>
+            <spacer colSpan="3"/>
+            <button name="btn-add" colSpan="2" title="Ajoute" onClick="action.ajoute.controle.electricite"/>
+            <button name="btn-export-import" colSpan="3" title="Export/Import"
+                    onClick="action.imprt.export.controle-electricite"/>
+        </panel>
+        <panel-dashlet name="panel-dashlet-gestion-eau" action="action.dashlet.controle.electricite" height="350"
+                       canSearch="true" colSpan="12" showTitle="false"/>
+    </form>
+
+    <form name="GestionEau-import-export-form" title="Import/Export/Consommation/Eau"
+          model="com.hakibati.eau.electricite.db.GestionEauElectricite"
+          width="large">
+        <panel colSpan="12" title="Export">
+            <field name="_date_du" title="Date Du" widget="date" colSpan="2" required="true"/>
+            <field name="_date_fin" title="Date Au" widget="date" colSpan="2" required="true"/>
+            <spacer colSpan="6"/>
+            <button name="btn-export" colSpan="2" title="Export" onClick="action-export-gestion-eau"/>
+        </panel>
+        <panel colSpan="12" title="Import">
+            <spacer colSpan="10"/>
+            <button name="btn-import" colSpan="2" title="Import" onClick="action-import-gestion-eau"/>
+        </panel>
+    </form>
+    <form name="ControleEau-import-export-form" title="Import/Export/Control/Eau"
+          model="com.hakibati.eau.electricite.db.GestionEauElectricite"
+          width="large">
+        <panel colSpan="12" title="Export">
+            <field name="_date_du" title="Date Du" widget="date" colSpan="2" required="true"/>
+            <field name="_date_fin" title="Date Au" widget="date" colSpan="2" required="true"/>
+            <spacer colSpan="6"/>
+<!--            <field name="typeExport" showTitle="true" title="Type des Données " colSpan="3" widget="RadioSelect"-->
+<!--                   selection="selection-eau-electricite-type-list-export" default="0"/>-->
+            <button name="btn-export" colSpan="2" title="Export" onClick="action-export-controle-eau"/>
+        </panel>
+        <panel colSpan="12" title="Import">
+            <spacer colSpan="10"/>
+            <button name="btn-import" colSpan="2" title="Import" onClick="action-import-controle-eau"/>
+        </panel>
+    </form>
+    <form name="GestionElectricite-import-export-form" title="Import/Export/Électricité"
+          model="com.hakibati.eau.electricite.db.GestionEauElectricite"
+          width="large">
+        <panel colSpan="12" title="Export">
+            <field name="_date_du" title="Date Du" widget="date" colSpan="2" required="true"/>
+            <field name="_date_fin" title="Date Au" widget="date" colSpan="2" required="true"/>
+            <spacer colSpan="6"/>
+            <button name="btn-export" colSpan="2" title="Export" onClick="action-export-gestion-electricte"/>
+        </panel>
+        <panel colSpan="12" title="Import">
+            <spacer colSpan="10"/>
+            <button name="btn-import" colSpan="2" title="Import" onClick="action-import-gestion-electricte"/>
+        </panel>
+    </form>
+    <form name="ControleElectricite-import-export-form" title="Import/Export/Électricité"
+          model="com.hakibati.eau.electricite.db.GestionEauElectricite"
+          width="large">
+        <panel colSpan="12" title="Export">
+            <field name="_date_du" title="Date Du" widget="date" colSpan="2" required="true"/>
+            <field name="_date_fin" title="Date Au" widget="date" colSpan="2" required="true"/>
+            <spacer colSpan="6"/>
+<!--            <field name="typeExport" showTitle="true" title="Type des Données " colSpan="3" widget="RadioSelect"-->
+<!--                   selection="selection-eau-electricite-type-list-export" default="0"/>-->
+
+            <button name="btn-export" colSpan="2" title="Export" onClick="action-export-controle-electricte"/>
+        </panel>
+        <panel colSpan="12" title="Import">
+            <spacer colSpan="10"/>
+            <button name="btn-import" colSpan="2" title="Import" onClick="action-import-controle-electricte"/>
+        </panel>
+    </form>
+
+    <action-method name="action-save-gestion-eau-electricite">
+        <call class="com.eau.electricite.web.GestionEauElectriciteController" method="OnsaveGestion"/>
+    </action-method>
+    <action-view name="action.dashlet.gestion.eau" title=""
+                 model="com.hakibati.eau.electricite.db.ConsommationEau">
+        <view type="grid" name="consomationEau-grid"/>
+        <view type="form" name="consommationEau-form"/>
+        <view-param name="popup" value="reload"/>
+        <view-param name="popup-save" value="true"/>
+        <view-param name="popup.maximized" value="false"/>
+        <view-param name="show-toolbar" value="false"/>
+        <view-param name="show-confirm" value="true"/>
+        <view-param name="forceEdit" value="true"/>
+        <view-param name="details-view" value="false"/>
+        <!--    <domain>(self.gestioneleves.id =:_gestionelevesId )-->
+        <!--      AND (self.classe = :_classeSelc OR :_classeSelc = null)-->
+        <!--      AND (self.classe.niveau = :_niveauSelc OR :_niveauSelc = null)-->
+        <!--      AND (-->
+        <!--      self.situationInitiale = :_sans_initial-->
+        <!--      OR self.situationInitiale = :_depart-->
+        <!--      OR self.situationInitiale = :_Receptionne-->
+        <!--      OR self.situationInitiale = :_Reintegration-->
+        <!--      OR self.situationInitiale = :_Reorientation-->
+        <!--      OR self.situationInitiale = :_Repetition-->
+        <!--      )-->
+        <!--      AND (-->
+        <!--      self.situationActuelle = :_sans_actuel-->
+        <!--      OR self.situationActuelle = :_Exerce-->
+        <!--      OR self.situationActuelle = :_Quitte-->
+        <!--      OR self.situationActuelle = :_Abandonne-->
+        <!--      OR self.situationActuelle = :_Non_inscrit-->
+        <!--      OR self.situationActuelle = :_Exclus-->
+        <!--      )-->
+        <!--    </domain>-->
+        <context name="_classeSelc" expr="eval: _classe"/>
+        <context name="_niveauSelc" expr="eval: _niveau"/>
+        <context name="_gestionelevesId" expr="eval:id"/>
+        <context name="_sans_initial" expr="-2" if="eval:sans_initial == false"/>
+        <context name="_sans_initial" expr="-1" if="eval:sans_initial == true"/>
+        <context name="_depart" expr="-2" if="eval:Depart == false"/>
+        <context name="_depart" expr="0" if="eval:Depart == true"/>
+        <context name="_Receptionne" expr="1" if="eval:Receptionne == true"/>
+        <context name="_Receptionne" expr="-2" if="eval:Receptionne == false"/>
+        <context name="_Reintegration" expr="2" if="eval:Reintegration == true"/>
+        <context name="_Reorientation" expr="3" if="eval:Reorientation == true"/>
+        <context name="_Reorientation" expr="-2" if="eval:Reorientation == false"/>
+        <context name="_Repetition" expr="-2" if="eval:Repetition == false"/>
+        <context name="_Repetition" expr="4" if="eval:Repetition == true"/>
+        <context name="_sans_actuel" expr="-1" if="eval:sans_actuel == true"/>
+        <context name="_sans_actuel" expr="-2" if="eval:sans_actuel == false"/>
+        <context name="_Exerce" expr="0" if="eval:Exerce == true"/>
+        <context name="_Exerce" expr="-2" if="eval:Exerce == false"/>
+        <context name="_Quitte" expr="1" if="eval:Quitte == true"/>
+        <context name="_Quitte" expr="-2" if="eval:Quitte == false"/>
+        <context name="_Abandonne" expr="2" if="eval:Abandonne == true"/>
+        <context name="_Abandonne" expr="-2" if="eval:Abandonne == false"/>
+        <context name="_Non_inscrit" expr="3" if="eval:Non_inscrit == true"/>
+        <context name="_Non_inscrit" expr="-2" if="eval:Non_inscrit == false"/>
+        <context name="_Exclus" expr="4" if="eval:Exclus == true"/>
+        <context name="_Exclus" expr="-2" if="eval:Exclus == false"/>
+    </action-view>
+
+    <action-view name="action.dashlet.control.eau" title=""
+                 model="com.hakibati.eau.electricite.db.ControleEau">
+        <view type="grid" name="ControleEau-grid"/>
+        <view type="form" name="ControleEau-form"/>
+        <view-param name="popup" value="reload"/>
+        <view-param name="popup-save" value="true"/>
+        <view-param name="popup.maximized" value="false"/>
+        <view-param name="show-toolbar" value="false"/>
+        <view-param name="show-confirm" value="true"/>
+        <view-param name="forceEdit" value="true"/>
+        <view-param name="details-view" value="false"/>
+    </action-view>
+
+    <action-view name="action.dashlet.gestion.electricite" title=""
+                 model="com.hakibati.eau.electricite.db.ConsommationElectricite">
+        <view type="grid" name="ConsommationElectricite-grid"/>
+        <view type="form" name="ConsommationElectricite-form"/>
+        <view-param name="popup" value="reload"/>
+        <view-param name="popup-save" value="true"/>
+        <view-param name="popup.maximized" value="false"/>
+        <view-param name="show-toolbar" value="false"/>
+        <view-param name="show-confirm" value="true"/>
+        <view-param name="forceEdit" value="true"/>
+        <view-param name="details-view" value="false"/>
+    </action-view>
+
+    <action-view name="action.dashlet.controle.electricite" title=""
+                 model="com.hakibati.eau.electricite.db.ControleElectricite">
+        <view type="grid" name="ControleElectricite-grid"/>
+        <view type="form" name="ControleElectricite-form"/>
+        <view-param name="popup" value="reload"/>
+        <view-param name="popup-save" value="true"/>
+        <view-param name="popup.maximized" value="false"/>
+        <view-param name="show-toolbar" value="false"/>
+        <view-param name="show-confirm" value="true"/>
+        <view-param name="forceEdit" value="true"/>
+        <view-param name="details-view" value="false"/>
+    </action-view>
+
+    <action-view name="action.ajoute.gestion.eau" title=""
+                 model="com.hakibati.eau.electricite.db.ConsommationEau">
+        <view type="form" name="consommationEau-form"/>
+        <view-param name="popup" value="reload"/>
+        <view-param name="popup-save" value="true"/>
+        <view-param name="popup.maximized" value="false"/>
+        <view-param name="show-toolbar" value="false"/>
+        <view-param name="show-confirm" value="true"/>
+        <view-param name="forceEdit" value="true"/>
+    </action-view>
+
+    <action-view name="action.ajoute.controle.eau" title=""
+                 model="com.hakibati.eau.electricite.db.ControleEau">
+        <view type="form" name="ControleEau-form"/>
+        <view-param name="popup" value="reload"/>
+        <view-param name="popup-save" value="true"/>
+        <view-param name="popup.maximized" value="false"/>
+        <view-param name="show-toolbar" value="false"/>
+        <view-param name="show-confirm" value="true"/>
+        <view-param name="forceEdit" value="true"/>
+    </action-view>
+
+    <action-view name="action.ajoute.gestion.electricite" title=""
+                 model="com.hakibati.eau.electricite.db.ConsommationElectricite">
+        <view type="form" name="ConsommationElectricite-form"/>
+        <view-param name="popup" value="reload"/>
+        <view-param name="popup-save" value="true"/>
+        <view-param name="popup.maximized" value="false"/>
+        <view-param name="show-toolbar" value="false"/>
+        <view-param name="show-confirm" value="true"/>
+        <view-param name="forceEdit" value="true"/>
+    </action-view>
+    <action-view name="action.ajoute.controle.electricite" title=""
+                 model="com.hakibati.eau.electricite.db.ControleElectricite">
+        <view type="form" name="ControleElectricite-form"/>
+        <view-param name="popup" value="reload"/>
+        <view-param name="popup-save" value="true"/>
+        <view-param name="popup.maximized" value="false"/>
+        <view-param name="show-toolbar" value="false"/>
+        <view-param name="show-confirm" value="true"/>
+        <view-param name="forceEdit" value="true"/>
+    </action-view>
+    <action-view name="action.imprt.export.gestion-eau" title="Import"
+                 model="com.hakibati.eau.electricite.db.GestionEauElectricite">
+        <view type="form" name="GestionEau-import-export-form"/>
+        <view-param name="popup" value="reload"/>
+        <view-param name="popup-save" value="false"/>
+        <view-param name="popup.maximized" value="false"/>
+        <view-param name="show-toolbar" value="false"/>
+        <view-param name="show-confirm" value="false"/>
+        <view-param name="forceEdit" value="true"/>
+        <context name="_showRecord" expr="eval:id"/>
+    </action-view>
+    <action-view name="action.imprt.export.controle-eau" title="Import"
+                 model="com.hakibati.eau.electricite.db.GestionEauElectricite">
+        <view type="form" name="ControleEau-import-export-form"/>
+        <view-param name="popup" value="reload"/>
+        <view-param name="popup-save" value="false"/>
+        <view-param name="popup.maximized" value="false"/>
+        <view-param name="show-toolbar" value="false"/>
+        <view-param name="show-confirm" value="false"/>
+        <view-param name="forceEdit" value="true"/>
+        <context name="_showRecord" expr="eval:id"/>
+    </action-view>
+    <action-view name="action.imprt.export.gestion-electricite" title="Import"
+                 model="com.hakibati.eau.electricite.db.GestionEauElectricite">
+        <view type="form" name="GestionElectricite-import-export-form"/>
+        <view-param name="popup" value="reload"/>
+        <view-param name="popup-save" value="false"/>
+        <view-param name="popup.maximized" value="false"/>
+        <view-param name="show-toolbar" value="false"/>
+        <view-param name="show-confirm" value="false"/>
+        <view-param name="forceEdit" value="true"/>
+        <context name="_showRecord" expr="eval:id"/>
+    </action-view>
+    <action-view name="action.imprt.export.controle-electricite" title="Import"
+                 model="com.hakibati.eau.electricite.db.GestionEauElectricite">
+        <view type="form" name="ControleElectricite-import-export-form"/>
+        <view-param name="popup" value="reload"/>
+        <view-param name="popup-save" value="false"/>
+        <view-param name="popup.maximized" value="false"/>
+        <view-param name="show-toolbar" value="false"/>
+        <view-param name="show-confirm" value="false"/>
+        <view-param name="forceEdit" value="true"/>
+        <context name="_showRecord" expr="eval:id"/>
+    </action-view>
+    <action-method name="action-export-gestion-eau">
+        <call class="com.eau.electricite.web.GestionEauElectriciteController" method="ExportConsommationEau"/>
+    </action-method>
+    <action-method name="action-export-controle-eau">
+        <call class="com.eau.electricite.web.GestionEauElectriciteController" method="ExportControleEau"/>
+    </action-method>
+    <action-method name="action-export-gestion-electricte">
+        <call class="com.eau.electricite.web.GestionEauElectriciteController" method="ExportConsommationElectricite"/>
+    </action-method>
+    <action-method name="action-export-controle-electricte">
+        <call class="com.eau.electricite.web.GestionEauElectriciteController" method="ExportControleElectricite"/>
+    </action-method>
+
+
+    <selection name="selection-eau-electricite-type-list-export">
+        <option value="0">dernière données</option>
+        <option value="1">toutes les données</option>
+    </selection>
+
+</object-views>

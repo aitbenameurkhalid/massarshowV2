@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+
+  <form name="MiseEnEtatIni-form" title="GENERER REPORT"
+        model="com.hakibati.comptabilite.matier.db.DateDepart" width="mini" canSave="false">
+    <panel>
+      <label name="message"
+             title="Générer le report signifie Suppression de toutes les opérations effectuées avant la date actuelle; et transferer le reste, voulez-vous continuer?"
+             colSpan="12"/>
+      <label name="message" title="إنشاء المنقول يعني حذف جميع العمليات التي تم تنفيذها قبل التاريخ الحالي ؛ وتحويل الباقي هل تريد الاستمرار؟" colSpan="12"/>
+      <field name="ouiNon" showTitle="false" colSpan="12" widget="RadioSelect" selection="oui-non-select"/>
+
+    </panel>
+
+    <panel showIf="ouiNon==01">
+      <field name="dateDepart" title="la Date de REPORT" widget="date" required="true"/>
+
+      <button name="btn-MiseEnEtatIni" title="GENERER REPORT" readonlyIf="dateEtat != nulls" colSpan="12"
+              css="btn-danger" icon="fa-times-circle" prompt="Voulez-vous vraiment Créer une position de départ?"
+              onClick="save,action-cree-possition-depart"/>
+
+    </panel>
+  </form>
+  <selection name="oui-non-select">
+    <option value="01">Oui</option>
+    <option value="02">Non</option>
+  </selection>
+
+
+  <action-method name="action-cree-possition-depart">
+    <call class="com.comptabilite.matier.web.OperationEController" method="creePositionDepart"/>
+  </action-method>
+</object-views>

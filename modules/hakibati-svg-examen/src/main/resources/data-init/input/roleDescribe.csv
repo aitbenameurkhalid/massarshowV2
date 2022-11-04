@@ -1,0 +1,2 @@
+code;indexGroupe;name;namear;roleRead;roleWrite;roleDelete;language;key
+2;1;APPLICATION SURVEILLANT EXAMEN;مكون حراسة الامتحان;role.hakibati.svg.examen.read;role.hakibati.svg.examen.write;role.hakibati.svg.examen.delete;ar;value:APPLICATION SURVEILLANT EXAMEN

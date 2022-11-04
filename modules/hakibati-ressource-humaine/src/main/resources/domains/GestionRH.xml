@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_5.3.xsd">
+
+    <module name="hakibati-ressource-humaine" package="com.hakibati.ressource.humaine.db"/>
+    <entity name="GestionRH" cacheable="true">
+        <date name="dateGreveMin"/>
+        <date name="dateGreveMax"/>
+        <one-to-many name="personnel" ref="PersonnelRh" mappedBy="gestionRH"/>
+<!--        <one-to-many name="matiereRh" ref="MatiereRh" mappedBy="gestionRH"/>-->
+        <one-to-many name="greveRH" ref="GreveRH" mappedBy="gestionRH"/>
+        <string name="name"/>
+        <one-to-one name="etablissement" ref="com.app.application.db.Etablissement">
+            <![CDATA[
+    if (etablissement == null)
+   return createdBy.getEtablissementSelectionnee() ;
+   return etablissement;
+      ]]>
+        </one-to-one>
+        <many-to-one name="createdBy" ref="com.axelor.auth.db.User"/>
+        <unique-constraint columns="etablissement"/>
+    </entity>
+</domain-models>

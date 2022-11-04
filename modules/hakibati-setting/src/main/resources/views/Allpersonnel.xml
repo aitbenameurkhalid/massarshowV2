@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+  <grid name="Allpersonnel-grid" title="Allpersonnel" model="com.hakibati.setting.db.Allpersonnel">
+    <toolbar>
+      <button name="btn-refresh" title="Import" prompt="Voulez-vous importer ?" onClick="action-import-Allpersonnel-massar" css="btn btn-warning label-bold bold large center"/>
+    </toolbar>
+    <field name="code" title="PPR"  />
+    <field name="name" title="Nom Ar" unique="true"/>
+    <field name="nameFr"  title="Nom Fr" unique="true"/>
+    <field name="gresa" title="GRESA"/>
+    <field name="etablissement" title="ETAB"/>
+    <field name="direction" title="Direction"/>
+  </grid>
+
+  <form name="Allpersonnel-form" title="Allpersonnel"  model="com.hakibati.setting.db.Allpersonnel" width="large">
+    <panel title="Overview">
+      <field name="code" title="PPR"  />
+<!--      <button name="btn-refresh" title="refresh" onClick="com.setting.web.AllpersonnelController:ImportDataMassar"/>-->
+      <field name="name" title="Nom Ar" unique="true"/>
+      <field name="nameFr"  title="Nom Fr" unique="true"/>
+      <field name="gresa" title="GRESA"/>
+      <field name="etablissement" title="ETAB"/>
+    </panel>
+  </form>
+
+  <form name="Allpersonnel-import-form" title="Import"  model="com.hakibati.setting.db.Allpersonnel" width="large">
+    <panel >
+      <field name="typeimport" showTitle="false" widget="CheckboxSelect"
+             selection="selection-list-type-import-Allpersonnel-massar" colSpan="10"/>
+      <button name="btn-refresh" title="Import" prompt="Voulez-vous importer ?" onClick="com.setting.web.AllpersonnelController:ImportDataMassar" css="btn btn-warning label-bold bold large center" colSpan="2"/>
+      <button name="btn-exportExel" title="ExportExcel" prompt="Voulez-vous export ?" onClick="com.setting.web.AllpersonnelController:ExporDataMassarExcel" css="btn btn-warning label-bold bold large center" colSpan="2"/>
+
+
+
+    </panel>
+  </form>
+
+  <action-view name="action-import-Allpersonnel-massar" title="Toutes Les contraintes"
+               model="com.hakibati.setting.db.Allpersonnel">
+    <view type="form" name="Allpersonnel-import-form"/>
+    <view-param name="popup" value="reload"/>
+    <view-param name="popup-save" value="false"/>
+    <view-param name="show-toolbar" value="false"/>
+    <view-param name="show-confirm" value="false"/>
+    <view-param name="forceEdit" value="false"/>
+    <view-param name="details-view" value="false"/>
+  </action-view>
+
+
+  <selection name="selection-list-type-import-Allpersonnel-massar">
+    <option value="ensPrimG">ensPrimG</option>
+    <option value="ensPrimO">ensPrimO</option>
+    <option value="ensColG">ensColG</option>
+
+    <option value="ensColO">ensColO</option>
+    <option value="ensQualG">ensQualG</option>
+    <option value="ensQualO">ensQualO</option>
+
+    <option value="ensQualT">ensQualT</option>
+    <option value="ensPrescoM">ensPrescoM</option>
+    <option value="ensPrescoC">ensPrescoC</option>
+    <option value="ensBts">ensBts</option>
+    <option value="ensPrescoM">ensPrescoM</option>
+    <option value="ensCPGE">ensCPGE</option>
+
+    <option value="Public">Public</option>
+    <option value="ENF">ENF</option>
+    <option value="Prive">Prive</option>
+    <option value="PART">PART</option>
+    <option value="NS">NS</option>
+
+  </selection>
+
+</object-views>

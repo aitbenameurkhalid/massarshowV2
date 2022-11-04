@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+  <grid name="SalleFillier-grid" title="Salles-Filières" editable="true" model="com.hakibati.svg.examen.db.SalleFillier">
+    <toolbar>
+      <button name="Gestionsales" title="ajoute salles Filière" onClick="action-ajoute-collectif-salles"  css="btn btn-warning label-bold bold large center"/>
+    </toolbar>
+    <field name="fillier" />
+    <field name="salles" />
+    <button name="btn-delete" title="Supprime" icon="fa-trash" onClick="com.hakibati.svg.examen.web.SalleFillierController:DeleteSalleFillier"
+            prompt="Voulez-vous vraiment supprimer cet enregistrement ?"/>
+
+  </grid>
+
+  <form name="SalleFillier-form" title="Salles-Filières"  model="com.hakibati.svg.examen.db.SalleFillier">
+    <panel title="Overview">
+<!--      <field name="fillier" colSpan="6" domain="self.etablissement = :_etablissement"/>-->
+<!--      <field name="salles" colSpan="6"  domain="(self.isReserve = false AND self.isPermanence = false AND self.etablissement = :_etablissement)"/>-->
+      <field name="fillier" colSpan="6" />
+      <field name="salles" colSpan="6"  domain="(self.isReserve = false AND self.isPermanence = false )"/>
+    </panel>
+  </form>
+
+  <action-view name="action-dashlet-SalleFillier" title=""
+               model="com.hakibati.svg.examen.db.SalleFillier">
+    <view type="grid" name="SalleFillier-grid"/>
+    <view type="form" name="SalleFillier-form"/>
+    <view-param name="popup" value="reload"/>
+    <view-param name="popup-save" value="true"/>
+    <view-param name="show-toolbar" value="false"/>
+    <view-param name="show-confirm" value="true"/>
+    <view-param name="forceEdit" value="true"/>
+    <view-param name="details-view" value="false"/>
+    <domain>self.etablissement = :_etablissement</domain>
+    <context name="_etablissement" expr="eval: __user__.etablissementSelectionnee"/>
+  </action-view>
+
+  <action-view name="action-new-SalleFillier" title=""
+               model="com.hakibati.svg.examen.db.SalleFillier">
+    <view type="form" name="SalleFillier-form"/>
+    <view-param name="popup" value="reload"/>
+    <view-param name="popup-save" value="true"/>
+    <view-param name="show-toolbar" value="false"/>
+    <view-param name="show-confirm" value="true"/>
+    <view-param name="forceEdit" value="true"/>
+    <view-param name="details-view" value="false"/>
+  </action-view>
+
+
+</object-views>

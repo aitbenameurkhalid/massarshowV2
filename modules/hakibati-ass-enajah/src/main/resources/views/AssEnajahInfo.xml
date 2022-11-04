@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+
+
+  <form name="AssEnajahInfo-form" title="Information" model="com.hakibati.ass.enajah.db.AssEnajahInfo" >
+    <panel>
+      <field name="name"/>
+      <field name="dateCreation"/>
+      <field name="addres" colSpan="12"/>
+      <field name="tel" widget="phone"/>
+      <field name="fax" widget="phone"/>
+      <field name="email" widget="email"/>
+      <field name="web"/>
+    </panel>
+    <panel>
+      <field name="logoEnTete" widget="Image" colSpan="12" showTitle="true" readonly="true">
+        <viewer>
+          <![CDATA[
+              <img ng-show="record.logoEnTete" ng-src="{{$image('logoEnTete', 'content')}}" />
+              <img ng-show="!record.logoEnTete" src="img/Logo_enajah.png" />
+            ]]>
+        </viewer>
+      </field>
+    </panel>
+    <panel>
+      <field name="ouiNon" default="02" title="change Logo" showTitle="true" colSpan="4" widget="RadioSelect"
+             selection="oui-non-select"/>
+      <field name="logoEnTete" widget="Image" colSpan="12" showTitle="true" showIf="ouiNon==01" onChange="save"/>
+    </panel>
+  </form>
+
+
+</object-views>

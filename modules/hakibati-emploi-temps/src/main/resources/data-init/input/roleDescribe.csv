@@ -1,0 +1,2 @@
+code;indexGroupe;name;namear;roleRead;roleWrite;roleDelete;language;key
+6;1;APPLICATION EMPLOI TEMPS;مكون استعمال الزمن;role.hakibati.emploi.temps.read;role.hakibati.emploi.temps.write;role.hakibati.emploi.temps.delete;ar;value:APPLICATION EMPLOI TEMPS

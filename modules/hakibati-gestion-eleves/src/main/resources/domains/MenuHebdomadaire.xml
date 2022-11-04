@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_5.3.xsd">
+
+    <module name="hakibati-gestion-eleves" package="com.hakibati.gestion.eleves.db"/>
+    <entity name="MenuHebdomadaire" cacheable="true">
+        <date name="deteDu" title="Du" required="true"/>
+        <date name="deteAu" title="Au" required="true"/>
+        <string name="name"  title="période">
+            <![CDATA[
+   return deteDu +" ==> "+ deteAu;
+      ]]>
+        </string>-to-one>
+
+        <string name="petitdejeunerd" title="Petit déjeuner" large="true"/>
+        <string name="dejeunerd" title="déjeuner" large="true"/>
+        <string name="dinerd" title="dîner" large="true"/>
+
+        <string name="petitdejeunerl" title="Petit déjeuner" large="true"/>
+        <string name="dejeunerl" title="déjeuner" large="true"/>
+        <string name="dinerl" title="dîner" large="true"/>
+
+        <string name="petitdejeunerma" title="Petit déjeuner" large="true"/>
+        <string name="dejeunerma" title="déjeuner" large="true"/>
+        <string name="dinerma" title="dîner" large="true"/>
+
+        <string name="petitdejeunerme" title="Petit déjeuner" large="true"/>
+        <string name="dejeunerme" title="déjeuner" large="true"/>
+        <string name="dinerme" title="dîner" large="true"/>
+
+        <string name="petitdejeunerj" title="Petit déjeuner" large="true"/>
+        <string name="dejeunerj" title="déjeuner" large="true"/>
+        <string name="dinerj" title="dîner" large="true"/>
+
+        <string name="petitdejeunerv" title="Petit déjeuner" large="true"/>
+        <string name="dejeunerv" title="déjeuner" large="true"/>
+        <string name="dinerv" title="dîner" large="true"/>
+
+        <string name="petitdejeuners" title="Petit déjeuner" large="true"/>
+        <string name="dejeuners" title="déjeuner" large="true"/>
+        <string name="diners" title="dîner" large="true"/>
+
+
+        <many-to-one name="etablissement" ref="com.app.application.db.Etablissement">
+            <![CDATA[
+    if (etablissement == null)
+   return createdBy.getEtablissementSelectionnee() ;
+   return etablissement;
+      ]]>
+        </many-to-one>
+        <many-to-one name="createdBy" ref="com.axelor.auth.db.User"/>
+        <unique-constraint columns="etablissement,deteDu"/>
+    </entity>
+</domain-models>

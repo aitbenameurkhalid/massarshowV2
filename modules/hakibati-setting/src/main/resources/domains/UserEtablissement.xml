@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_5.3.xsd">
+
+  <module name="hakibati-setting" package="com.app.application.db" />
+  <entity name="UserEtablissement" cacheable="true">
+    <boolean name="actif" default="true"/>
+    <string name="fonction" default="02"/>
+    <one-to-many name="userEtablissementRole" title="les Autorisations" ref="com.hakibati.setting.db.UserEtablissementRole" mappedBy="userEtablissement"/>
+    <many-to-one name="etablissements" ref="Etablissement" required="true"/>
+    <many-to-one name="users" title="Les Utilisateurs" ref="com.axelor.auth.db.User" required="true"/>
+    <unique-constraint columns="users,etablissements"/>
+  </entity>
+</domain-models>

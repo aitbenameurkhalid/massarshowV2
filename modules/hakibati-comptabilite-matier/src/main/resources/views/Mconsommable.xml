@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+  <grid name="Mconsommable-grid" title="matériel consommable" model="com.hakibati.comptabilite.matier.db.Mconsommable">
+    <field name="name" />
+    <field name="code" />
+    <field name="typeDeMatiere"/>
+    <field name="etablissement"/>
+    <field name="image"/>
+  </grid>
+
+  <form name="Mconsommable-form" title="matériel consommable"  model="com.hakibati.comptabilite.matier.db.Mconsommable" width="mini">
+    <panel title="Overview" itemSpan="12">
+      <field name="name" />
+      <field name="code" />
+      <field name="typeDeMatiere"/>
+      <field name="image"/>
+    </panel>
+  </form>
+
+</object-views>

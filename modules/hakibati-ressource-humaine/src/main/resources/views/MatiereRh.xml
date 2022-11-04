@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+
+  <grid name="MatiereRh-grid" editable="true" x-selector="checkbox" title="Matieres" model="com.hakibati.ressource.humaine.db.MatiereRh">
+    <field name="cd" />
+    <field name="nameAr" />
+    <field name="nameFr" />
+  </grid>
+
+  <grid name="FonctionRh-grid"  editable="true" x-selector="checkbox"  title="Fonctions" model="com.hakibati.ressource.humaine.db.FonctionRh">
+    <field name="cd" />
+    <field name="nameAr" />
+    <field name="nameFr" />
+  </grid>
+  <grid name="CadreRh-grid"  editable="true" x-selector="checkbox"  title="Cadres" model="com.hakibati.ressource.humaine.db.CadreRh">
+    <field name="cd" />
+    <field name="nameAr" />
+    <field name="nameFr" />
+  </grid>
+  <grid name="GradeRh-grid"  editable="true" x-selector="checkbox"  title="Grades" model="com.hakibati.ressource.humaine.db.GradeRh">
+    <field name="cd" />
+    <field name="nameAr" />
+    <field name="nameFr" />
+  </grid>
+
+</object-views>

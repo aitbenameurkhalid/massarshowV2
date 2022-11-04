@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_5.3.xsd">
+
+<!--  <module name="app-comptabilite-materiel" package="com.hakibati.comptabilite.matier.db"  />-->
+  <module name="hakibati-comptabilite-matier" package="com.hakibati.comptabilite.matier.db"  />
+  <entity name="DateDepart" cacheable="true" >
+    <date name="dateDepart" title="Quantité"/>
+    <one-to-one name="etablissement" ref="com.app.application.db.Etablissement"  >
+      <![CDATA[
+    if (etablissement == null)
+   return createdBy.getEtablissementSelectionnee() ;
+   return etablissement;
+      ]]>
+    </one-to-one>
+    <many-to-one name="createdBy" ref="com.axelor.auth.db.User" />
+    <finder-method name="findByEtab" using="etablissement" cacheable="true" />
+<!--    <unique-constraint columns="name,etablissement"/>-->
+  </entity>
+</domain-models>

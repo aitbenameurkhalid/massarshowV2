@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+    <grid name="EtablissementPrincipal-grid" title="EtablissementLiaison"
+          model="com.app.application.db.EtablissementLiaison">
+        <field name="etablissementPrincipal"/>
+        <field name="autorise"/>
+    </grid>
+
+    <form name="EtablissementPrincipal-form" title="EtablissementLiaison"
+          model="com.app.application.db.EtablissementLiaison">
+        <panel showTitle="true" showIf="etablissementPrincipal==nulls">
+            <field name="codeEtab" colSpan="2" title="code d'etablissement"/>
+            <button name="FindEtabs" title="Chercher" colSpan="2" onClick="action-ajoute-etabs-principal"/>
+        </panel>
+        <panel showTitle="false" showIf="etablissementPrincipal!=nulls" colSpan="12">
+            <field name="etablissementPrincipal" readonly="true" widget="SuggestBox" form-view="zero"/>
+            <field name="autorise"/>
+        </panel>
+    </form>
+
+    <grid name="EtablissementAnnexe-grid" title="EtablissementLiaison"
+          model="com.app.application.db.EtablissementLiaison">
+        <field name="etablissement"/>
+        <field name="etablissement.numero"/>
+        <field name="etablissement.commun"/>
+        <field name="accepter"/>
+    </grid>
+
+    <form name="EtablissementAnnexe-form" title="EtablissementLiaison"
+          model="com.app.application.db.EtablissementLiaison" canNew="false" >
+        <panel>
+            <field name="etablissement" colSpan="4" readonly="true" form-view="zero"/>
+            <field name="etablissement.numero" colSpan="2"/>
+            <field name="etablissement.commun" colSpan="4"/>
+            <field name="accepter" colSpan="2"/>
+        </panel>
+    </form>
+    <action-method name="action-ajoute-etabs-principal">
+        <call class="com.setting.web.EtablissementLiaisonController" method="addEtabPrincipal"/>
+    </action-method>
+
+</object-views>

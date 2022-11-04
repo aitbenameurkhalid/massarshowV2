@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+  <grid name="ListConraint-grid" title="List contraint" model="com.hakibati.setting.db.Listcontraint" orderBy="code">
+    <field name="name" />
+    <field name="typeContrainte" width="100"/>
+    <field name="code" width="50" />
+  </grid>
+
+  <form name="ListConraint-form" title="List contraint"  model="com.hakibati.setting.db.Listcontraint">
+    <panel >
+      <field name="name"  colSpan="8"/>
+      <field name="code" colSpan="2" />
+      <field name="typeContrainte" colSpan="2"/>
+      <field name="afficherProf" colSpan="3" />
+      <field name="afficherSalle"  colSpan="3" />
+      <field name="afficherMatiere"  colSpan="3" />
+      <field name="afficherFillier"  colSpan="3" />
+      <field name="afficherMatin"  colSpan="3" />
+      <field name="afficherDateExam" colSpan="3"/>
+      <field name="afficherApresMidi"  colSpan="3" />
+      <field name="afficherValeur"  colSpan="3" />
+      <field name="valeurParDefaut" />
+      <field name="commenter" />
+    </panel>
+  </form>
+  <selection name="select.contraint.type">
+    <option value="0">profisseurs</option>
+    <option value="5">profisseur</option>
+
+    <option value="10">salles</option>
+    <option value="15">salle</option>
+
+    <option value="20">Fillier</option>
+    <option value="25">Filliers</option>
+
+  </selection>
+</object-views>

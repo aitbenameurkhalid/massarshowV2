@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_5.3.xsd">
+
+  <module name="hakibati-comptabilite-matier" package="com.hakibati.comptabilite.matier.db"  />
+  <entity name="OperationE" cacheable="true" >
+    <integer name="statusSelect" title="Status" selection="OperationE.status.select" required="true" readonly="true" default="1"/>
+    <boolean name="archiveOperation" title="archif" default="false" readonly="true"/>
+    <boolean name="isPositionDepart" title="position de depart"  default="false"  />
+    <string name="name" title="Numero" />
+    <many-to-one name="source" ref="SourcesM"/>
+     <string name="nomeDePersonne" title="Nom de personne"/>
+    <date name="dateDeOperation" title="Date" required="true"/>
+    <one-to-many name="tablesEntres" ref="TableE" mappedBy="operation" title="list des matieres"/>
+    <many-to-one name="etablissement" ref="com.app.application.db.Etablissement"  >
+      <![CDATA[
+    if (etablissement == null)
+   return createdBy.getEtablissementSelectionnee() ;
+   return etablissement;
+      ]]>
+    </many-to-one>
+    <many-to-one name="createdBy" ref="com.axelor.auth.db.User"/>
+
+
+    <extra-code>
+      <![CDATA[
+         public static final Integer phase1 = 1;
+         public static final Integer phase2 = 2;
+         public static final Integer phase3 = 3;
+       ]]>
+    </extra-code>
+
+    <track>
+      <field name="name"/>
+      <field name="source"/>
+      <field name="nomeDePersonne"/>
+      <field name="dateDeOperation"/>
+      <field name="tablesEntres"/>
+    </track>
+  </entity>
+
+
+
+</domain-models>

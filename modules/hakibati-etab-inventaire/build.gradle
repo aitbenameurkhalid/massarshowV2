@@ -1,0 +1,12 @@
+plugins {
+    id 'com.axelor.app'
+}
+axelor {
+    title = "Axelor :: HAKIBATI INVENTAIRE"
+  //  removable = true
+}
+
+
+dependencies {
+    api project(':modules:hakibati-setting')
+}

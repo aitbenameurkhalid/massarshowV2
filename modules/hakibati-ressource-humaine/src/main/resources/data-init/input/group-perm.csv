@@ -1,0 +1,8 @@
+code;permissions
+etablissementAdmin;perm.hakibati.ressource.humaine.GestionRH.select.etab.rwcde
+etablissementAdmin;perm.hakibati.ressource.humaine.GrevePersonnel.select.etab.rwcde
+etablissementAdmin;perm.hakibati.ressource.humaine.GreveRH.select.etab.rwcde
+etablissementAdmin;perm.hakibati.ressource.humaine.PersonnelRh.select.etab.rwcde
+
+
+

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_5.3.xsd">
+
+  <module name="hakibati-emploi-temps" package="com.hakibati.emploi.db"/>
+  <entity name="ActivityResulteFet" cacheable="true">
+    <integer name="cd" title="id" readonly="true"  />
+    <integer name="duration" title="durée"  readonly="true" />
+    <many-to-one name="dayFet" title="Jour" ref="DayFet"   />
+    <many-to-one name="hourFet" title="Heur" ref="HourFet"  />
+    <many-to-one name="roomDossier" title="salle" ref="RoomDossier"  />
+    <many-to-one name="studentDossier" title="classe" ref="StudentDossier" readonly="true" />
+    <many-to-one name="studentDossier2" title="2eme class" ref="StudentDossier" readonly="true" />
+    <many-to-one name="subjectFet" title="matière" ref="SubjectFet" readonly="true" />
+    <many-to-one name="teacherFet" title="professeur" ref="TeacherFet" readonly="true" />
+    <many-to-one name="teacherFet2" title="2eme prof" ref="TeacherFet" readonly="true" />
+    <many-to-one name="dossierImportFet" ref="DossierImportFet"  />
+    <many-to-one name="etablissement" ref="com.app.application.db.Etablissement"  >
+      <![CDATA[
+    if (etablissement == null)
+   return createdBy.getEtablissementSelectionnee() ;
+   return etablissement;
+      ]]>
+    </many-to-one>-to-one>
+    <many-to-one name="createdBy" ref="com.axelor.auth.db.User" />
+  </entity>
+</domain-models>

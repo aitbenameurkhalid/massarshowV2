@@ -1,0 +1,11 @@
+code;menus
+etablissementAdmin;menu-gestion-eleves
+etablissementAdmin;menu-gestion-eleves-exterieur
+etablissementAdmin;menu-gestion-eleves-internat
+etablissementAdmin;menu-gestion-eleves-archive
+etablissementAdmin;menu-comptabilite-internat
+demo;menu-gestion-eleves
+demo;menu-gestion-eleves-exterieur
+demo;menu-gestion-eleves-internat
+demo;menu-gestion-eleves-archive
+demo;menu-comptabilite-internat

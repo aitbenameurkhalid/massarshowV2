@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+
+    <grid name="MenuHebdomadaire-grid" title="Menu Hebdomadaire"
+          model="com.hakibati.gestion.eleves.db.MenuHebdomadaire">
+        <field name="name"/>
+        <field name="deteDu"/>
+        <field name="deteAu"/>
+        <button name="btn-print-menu-hebddomadire" onClick="save,action-print-menu-hebddomadaire" title="Imprime"
+                icon="fa-print"
+                colSpan="2"/>
+    </grid>
+
+    <form name="MenuHebdomadaire-form" title="Menu Hebdomadaire"
+          model="com.hakibati.gestion.eleves.db.MenuHebdomadaire">
+        <panel title="Ajouter ou modifier" showTitle="false" colSpan="12">
+            <field name="deteDu" colSpan="3"/>
+            <field name="deteAu" colSpan="3"/>
+            <field name="name" colSpan="4"/>
+            <button name="save,btn-print-menu-hebddomadire" onClick="action-print-menu-hebddomadaire" title="Imprime"
+                    icon="fa-print"
+                    colSpan="2"/>
+            <label title="recopier Menu Du Période ?" colSpan="3"/>
+            <field name="ouiNon" default="02" title="recopier Menu Du Période ?" showTitle="false" colSpan="3"
+                   widget="RadioSelect" selection="oui-non-select"/>
+            <field name="recopierMenuDuPeriode" type="reference" placeholder="Sélectionnez une période"
+                   target="com.hakibati.gestion.eleves.db.MenuHebdomadaire"
+                   widget="SuggestBox" showTitle="false" colSpan="4" showIf="ouiNon==01"/>
+            <button name="btn" onClick="save,action-recopier-menu-hebddomadaire" title="Recopier" colSpan="2"
+                    showIf="ouiNon==01"/>
+        </panel>
+        <panel title="Menu du Dimanche" colSpan="12">
+            <field name="petitdejeunerd" colSpan="4"/>
+            <field name="dejeunerd" colSpan="4"/>
+            <field name="dinerd" colSpan="4"/>
+        </panel>
+
+
+        <panel title="Menu du Lundi" colSpan="12">
+            <field name="petitdejeunerl" colSpan="4"/>
+            <field name="dejeunerl" colSpan="4"/>
+            <field name="dinerl" colSpan="4"/>
+
+        </panel>
+        <panel title="Menu du Mardi" colSpan="12">
+            <field name="petitdejeunerma" colSpan="4"/>
+            <field name="dejeunerma" colSpan="4"/>
+            <field name="dinerma" colSpan="4"/>
+
+        </panel>
+        <panel title="Menu du Mercredi" colSpan="12">
+            <field name="petitdejeunerme" colSpan="4"/>
+            <field name="dejeunerme" colSpan="4"/>
+            <field name="dinerme" colSpan="4"/>
+        </panel>
+        <panel title="Menu du Jeudi">
+            <field name="petitdejeunerj" colSpan="4"/>
+            <field name="dejeunerj" colSpan="4"/>
+            <field name="dinerj" colSpan="4"/>
+        </panel>
+        <panel title="Menu du Vendredi" colSpan="12">
+            <field name="petitdejeunerv" colSpan="4"/>
+            <field name="dejeunerv" colSpan="4"/>
+            <field name="dinerv" colSpan="4"/>
+
+        </panel>
+        <panel title="Menu du Samedi" colSpan="12">
+            <field name="petitdejeuners" colSpan="4"/>
+            <field name="dejeuners" colSpan="4"/>
+            <field name="diners" colSpan="4"/>
+        </panel>
+
+    </form>
+    <action-method name="action-print-menu-hebddomadaire">
+        <call class="com.gestion.eleves.web.MenuHebdomadaireController" method="PrintMenuHebddomadaire"/>
+    </action-method>
+
+    <action-method name="action-recopier-menu-hebddomadaire">
+        <call class="com.gestion.eleves.web.MenuHebdomadaireController" method="RecopierMenuHebddomadaire"/>
+    </action-method>
+
+
+</object-views>

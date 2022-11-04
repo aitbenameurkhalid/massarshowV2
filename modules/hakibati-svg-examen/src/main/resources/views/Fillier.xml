@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+  <grid name="Fillier-grid" title="list des Filières" editable="true" model="com.hakibati.svg.examen.db.Fillier" onNew="action-edit-Fillier" >
+    <field name="code" />
+    <field name="name" />
+    <button name="btn-delete" title="Supprime" icon="fa-trash" onClick="com.hakibati.svg.examen.web.FillierController:DeleteFillier"
+            prompt="Voulez-vous vraiment supprimer cet enregistrement ?"/>
+  </grid>
+  <form name="Fillier-form" title="Filières"  model="com.hakibati.svg.examen.db.Fillier">
+    <panel title="Overview">
+      <field name="code" />
+      <field name="name" />
+    </panel>
+  </form>
+
+  <action-view name="action-dashlet-Fillier" title=""
+               model="com.hakibati.svg.examen.db.Fillier">
+    <view type="grid" name="Fillier-grid"/>
+    <view type="form" name="Fillier-form"/>
+    <view-param name="popup" value="reload"/>
+    <view-param name="popup-save" value="true"/>
+    <view-param name="show-toolbar" value="false"/>
+    <view-param name="show-confirm" value="true"/>
+    <view-param name="forceEdit" value="true"/>
+    <view-param name="details-view" value="false"/>
+    <domain>self.etablissement = :_etablissement</domain>
+    <context name="_etablissement" expr="eval: __user__.etablissementSelectionnee"/>
+  </action-view>
+
+  <action-view name="action-new-Fillier" title=""
+               model="com.hakibati.svg.examen.db.Fillier">
+    <view type="form" name="Fillier-form"/>
+    <view-param name="popup" value="reload"/>
+    <view-param name="popup-save" value="true"/>
+    <view-param name="show-toolbar" value="false"/>
+    <view-param name="show-confirm" value="true"/>
+    <view-param name="forceEdit" value="true"/>
+    <view-param name="details-view" value="false"/>
+  </action-view>
+
+
+
+
+
+
+</object-views>

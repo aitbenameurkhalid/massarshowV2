@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+
+    <grid name="Article-grid" title="Article" model="com.hakibati.gestion.eleves.db.Article" editable="true">
+        <toolbar>
+            <button name="exportImport" title="Import/Export" onClick="action-export-impoert-article"
+                    css="btn btn-warning label-bold bold large center"/>
+        </toolbar>
+        <field name="ordre"/>
+        <field name="name"/>
+        <field name="unite"/>
+        <field name="prixUnite"/>
+        <field name="typeArticle"/>
+        <field name="isExerce"/>
+    </grid>
+
+    <form name="Article-form" title="Article" model="com.hakibati.gestion.eleves.db.Article">
+        <panel title="Ajouter ou modifier" showTitle="false">
+            <field name="ordre"/>
+            <field name="name"/>
+            <field name="unite"/>
+            <field name="prixUnite"/>
+            <field name="typeArticle"/>
+            <field name="isExerce"/>
+        </panel>
+    </form>
+    <form name="Article-export-import-form" title="Import et Export Article Internat" model="com.hakibati.gestion.eleves.db.Article">
+        <panel title="mise a jour la liste des Articles" showTitle="true">
+            <spacer colSpan="9"/>
+            <button name="btn-importall" title="mise a jour" onClick="action-mise-ajour-article" colSpan="3" prompt="Voulez-vous vraiment mettre à jour les articles ?"/>
+        </panel>
+        <panel title="Export la liste des Articles" showTitle="true">
+            <spacer colSpan="9"/>
+            <button name="btn-export" title="Export" onClick="action-export-article" colSpan="3"/>
+        </panel>
+        <panel name="mainPanel2" title="Importer la liste des Articles">
+            <field name="$importListArticleFile" title="selectionner une Fichier" type="many-to-one"
+                   widget="binary-link"
+                   target="com.axelor.meta.db.MetaFile" colSpan="9"/>
+            <button name="importarticleBtn" title="Import" onClick="action-import-article"
+                    readonlyIf="$importListArticleFile == null" colSpan="3"/>
+        </panel>
+    </form>
+    <action-view name="action-export-impoert-article" title="Import/Export"
+                 model="com.hakibati.gestion.eleves.db.Article">
+        <view type="form" name="Article-export-import-form"/>
+        <view-param name="popup" value="reload"/>
+        <view-param name="popup-save" value="false"/>
+        <view-param name="show-toolbar" value="false"/>
+        <view-param name="show-confirm" value="false"/>
+    </action-view>
+
+    <action-method name="action-export-article">
+        <call class="com.gestion.eleves.web.ArticleController" method="exportListArticle"/>
+    </action-method>
+    <action-method name="action-mise-ajour-article">
+        <call class="com.gestion.eleves.web.ArticleController" method="MiseAjourListArticle"/>
+    </action-method>
+    <action-method name="action-import-article">
+        <call class="com.gestion.eleves.web.ArticleController" method="ImporttListArticle"/>
+    </action-method>
+</object-views>

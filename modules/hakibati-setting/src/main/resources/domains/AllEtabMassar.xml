@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_5.3.xsd">
+
+  <module name="hakibati-setting" package="com.hakibati.setting.db" />
+  <entity name="AllEtabMassar" cacheable="true">
+    <string name="cdETAB" title="Gresa"  />
+    <string name="nnomA" title="nOM_ETABA "/>
+    <string name="nomL"  title="nOM_ETABL" />
+    <string name="cDbr" title="cD_etabr"/>
+    <string name="direction" title="Direction"/>
+    <string name="typeEtab" title="typeEtab" default="Public" />
+
+    <boolean name="ensPrimG" title="ensPrimG"/>
+    <boolean name="ensPrimO" title="ensPrimO"/>
+    <boolean name="ensColG" title="ensColG"/>
+    <boolean name="ensColO" title="ensColO"/>
+    <boolean name="ensQualG" title="ensQualG"/>
+    <boolean name="ensQualO" title="ensQualO"/>
+    <boolean name="ensQualT" title="ensQualT"/>
+    <boolean name="ensPrescoM" title="ensPrescoM"/>
+    <boolean name="ensPrescoC" title="ensPrescoC"/>
+    <boolean name="ensBts" title="ensBts"/>
+    <boolean name="ensCPGE" title="ensCPGE"/>
+    <one-to-many  name="allpersonnels" ref="Allpersonnel"/>
+    </entity>
+</domain-models>

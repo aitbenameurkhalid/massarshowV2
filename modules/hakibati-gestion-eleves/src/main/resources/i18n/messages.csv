@@ -1,0 +1,827 @@
+"key","message","comment","context"
+"1ere contrôle",,,"resources\views\NotesEleve.xml:39"
+"1ere semestre",,,"resources\views\NotesEleve.xml:34"
+"2eme contrôle",,,"resources\views\NotesEleve.xml:40"
+"2eme semestre",,,"resources\views\NotesEleve.xml:35"
+"3eme contrôle",,,"resources\views\NotesEleve.xml:41"
+"4eme contrôle",,,"resources\views\NotesEleve.xml:42"
+"A server error occurred. Please contact the administrator.",,,"java\com\gestion\eleves\web\ImportExDataMassarController.java:133
+java\com\gestion\eleves\web\ImportExDataMassarController.java:41"
+"ARTICLE",,,"resources\views\CahierJournalier.xml:61"
+"AU",,,"resources\views\CahierJournalier.xml:63
+resources\views\CahierJournalier.xml:68"
+"Abandonné",,,"resources\views\Eleve.xml:278
+resources\views\EleveInternat.xml:163"
+"Abandonnأ©",,,"java\com\gestion\eleves\service\EleveInternatService.java:313"
+"Absence",,,"resources\views\Absence.xml:11
+resources\views\Absence.xml:7
+resources\views\AbsenceeleveInternat.xml:17
+resources\views\AbsenceeleveInternat.xml:29
+resources\views\AbsenceeleveInternat.xml:43
+resources\views\AbsenceeleveInternat.xml:7
+resources\views\Eleve.xml:135
+resources\views\RapportjournalierInternat.xml:12
+resources\views\RapportjournalierInternat.xml:7"
+"Absence collective",,,"resources\views\Gestioneleves.xml:423"
+"Absence eleves",,,"resources\views\ImportExDataMassar.xml:75"
+"Absenceeleve internat",,,"resources\domains\EleveInternat.xml:57"
+"Activités intégrées",,,"resources\views\NotesEleve.xml:43"
+"Address",,,"resources\domains\Fournisseur.xml:9"
+"Adresse Reporter",,,"java\com\gestion\eleves\service\EleveInternatService.java:175
+resources\domains\EleveInternat.xml:51"
+"Adresse Tuteur",,,"java\com\gestion\eleves\service\EleveInternatService.java:157"
+"Adresse mere",,,"resources\domains\Eleve.xml:61"
+"Adresse pere",,,"resources\domains\Eleve.xml:53"
+"Adresse tuteur",,,"resources\domains\Eleve.xml:45
+resources\domains\EleveInternat.xml:43"
+"Affect profs",,,"resources\views\ImportExDataMassar.xml:71"
+"Affectation enseignant",,,"resources\domains\Classe.xml:14
+resources\domains\Enseignant.xml:13"
+"Affectation enseignants",,,"resources\domains\Gestioneleves.xml:18"
+"AffectationEnseignant",,,"resources\views\AffectationEnseignant.xml:14
+resources\views\AffectationEnseignant.xml:7"
+"Afficher uniquement  les élèves exerce",,,"resources\views\Gestioneleves.xml:47"
+"Agents domestiques",,,"resources\views\PersonnesnourriesJournalier.xml:28"
+"Ajouter ou modifier",,,"resources\views\Absence.xml:12
+resources\views\AbsenceeleveInternat.xml:30
+resources\views\AbsenceeleveInternat.xml:44
+resources\views\AffectationEnseignant.xml:15
+resources\views\AnneScolaire.xml:16
+resources\views\Article.xml:21
+resources\views\Classe.xml:17
+resources\views\Enseignant.xml:16
+resources\views\Fournisseur.xml:14
+resources\views\MatiereEleve.xml:14
+resources\views\MenuHebdomadaire.xml:19
+resources\views\Niveau.xml:17
+resources\views\NotesEleve.xml:21
+resources\views\OperationJournalier.xml:17
+resources\views\PersonnesnourriesJournalier.xml:16
+resources\views\RapportjournalierInternat.xml:13
+resources\views\TypeArticle.xml:15"
+"Anne Scolaire",,,"resources\views\AnneScolaire.xml:15
+resources\views\AnneScolaire.xml:7"
+"Anne scolaire",,,"resources\domains\Gestioneleves.xml:14"
+"Annee max",,,"resources\domains\AnneScolaire.xml:10"
+"Annee min",,,"resources\domains\AnneScolaire.xml:11"
+"Année scolaire",,,"resources\domains\Eleve.xml:35
+resources\domains\EleveInternat.xml:35
+resources\domains\Gestioneleves.xml:8
+resources\domains\Niveau.xml:15
+resources\views\Gestioneleves.xml:216
+resources\views\Gestioneleves.xml:242"
+"Années Scolaire",,,"resources\views\Gestioneleves.xml:323"
+"Archive",,,"resources\domains\Eleve.xml:8"
+"Archived",,,"resources\views\Eleve.xml:18
+resources\views\EleveInternat.xml:16"
+"Arrivée",,,"resources\views\EleveInternat.xml:155"
+"Article",,,"java\com\gestion\eleves\service\ArticleService.java:81
+resources\domains\OperationJournalier.xml:16
+resources\views\Article.xml:20
+resources\views\Article.xml:7
+resources\views\Menu.xml:140
+resources\views\Menu.xml:142"
+"Au",,,"resources\domains\MenuHebdomadaire.xml:9"
+"Avisabsences",,,"resources\domains\Eleve.xml:92"
+"CAHIER JOURNALIER",,,"resources\views\CahierJournalier.xml:66"
+"CD",,,"resources\domains\Enseignant.xml:8
+resources\domains\MatiereEleve.xml:8"
+"CIN Mère",,,"resources\domains\Eleve.xml:54"
+"CIN Père",,,"resources\domains\Eleve.xml:46"
+"CIN Reporter",,,"java\com\gestion\eleves\service\EleveInternatService.java:160
+resources\domains\EleveInternat.xml:46"
+"CIN Tuteur",,,"java\com\gestion\eleves\service\EleveInternatService.java:142
+resources\domains\Eleve.xml:38
+resources\domains\EleveInternat.xml:38"
+"CNSS",,,"resources\domains\Fournisseur.xml:12"
+"COMPTABILITE MATIERE",,,"resources\views\CahierJournalier.xml:59"
+"Cahier Journalier",,,"resources\views\CahierJournalier.xml:13"
+"Cahier Journalière",,,"resources\views\Menu.xml:100"
+"CahierJournalier",,,"resources\views\CahierJournalier.xml:6"
+"Cahierjournalier",,,"resources\domains\OperationJournalier.xml:17
+resources\domains\PersonnesnourriesJournalier.xml:13"
+"Choisissez un fichier au format xls",,,"java\com\gestion\eleves\service\EleveService.java:48"
+"Choisissez un fichier au format xlsx",,,"java\com\gestion\eleves\service\ArticleService.java:158
+java\com\gestion\eleves\service\EleveInternatService.java:403
+java\com\gestion\eleves\service\EleveService.java:386"
+"Classe",,,"resources\domains\AffectationEnseignant.xml:9
+resources\domains\Eleve.xml:24
+resources\domains\EleveInternat.xml:21
+resources\domains\NotesEleve.xml:10
+resources\views\Classe.xml:16
+resources\views\Gestioneleves.xml:128
+resources\views\Gestioneleves.xml:23
+resources\views\Gestioneleves.xml:89"
+"Classes",,,"resources\domains\Gestioneleves.xml:13
+resources\views\Classe.xml:7
+resources\views\Gestioneleves.xml:320"
+"Cntrole",,,"resources\views\Gestioneleves.xml:98"
+"Code",,,"resources\domains\Niveau.xml:13
+resources\views\Niveau.xml:12"
+"Coefficient",,,"resources\domains\NotesEleve.xml:9"
+"Comptabilité Internat",,,"resources\views\Menu.xml:98"
+"Connection",,,"resources\views\Gestioneleves.xml:200"
+"Consommation",,,"resources\views\CahierJournalier.xml:16"
+"ControlContinu",,,"resources\domains\NotesEleve.xml:11"
+"Contunue",,,"resources\views\Gestioneleves.xml:191"
+"Convocationtuteurs",,,"resources\domains\Eleve.xml:94"
+"Created by",,,"resources\domains\Absence.xml:29
+resources\domains\AbsenceeleveInternat.xml:24
+resources\domains\AffectationEnseignant.xml:20
+resources\domains\AnneScolaire.xml:21
+resources\domains\Article.xml:21
+resources\domains\Avisabsence.xml:18
+resources\domains\Cahierjournalier.xml:27
+resources\domains\Classe.xml:23
+resources\domains\Convocationtuteur.xml:19
+resources\domains\Eleve.xml:109
+resources\domains\EleveInternat.xml:68
+resources\domains\Enseignant.xml:22
+resources\domains\Fournisseur.xml:22
+resources\domains\Gestioneleves.xml:28
+resources\domains\MatiereEleve.xml:19
+resources\domains\MenuHebdomadaire.xml:52
+resources\domains\Niveau.xml:24
+resources\domains\NotesEleve.xml:26
+resources\domains\OperationJournalier.xml:25
+resources\domains\PersonnesnourriesJournalier.xml:21
+resources\domains\PieceJointEleve.xml:19
+resources\domains\PieceJointEleveInternat.xml:19
+resources\domains\RapportjournalierInternat.xml:18
+resources\domains\SuiviMedical.xml:18
+resources\domains\TypeArticle.xml:19"
+"DU",,,"resources\views\CahierJournalier.xml:62
+resources\views\CahierJournalier.xml:67"
+"Date",,,"resources\domains\Cahierjournalier.xml:8
+resources\domains\RapportjournalierInternat.xml:8"
+"Date  situation actuelle",,,"resources\domains\Eleve.xml:33"
+"Date D'absence",,,"resources\views\Gestioneleves.xml:426"
+"Date arrivee",,,"resources\domains\Eleve.xml:65"
+"Date avis",,,"resources\domains\Avisabsence.xml:10"
+"Date convocation",,,"resources\domains\Convocationtuteur.xml:10"
+"Date d'absence",,,"resources\domains\Absence.xml:9
+resources\domains\AbsenceeleveInternat.xml:9"
+"Date de Bourse",,,"java\com\gestion\eleves\service\EleveInternatService.java:121
+resources\domains\EleveInternat.xml:25"
+"Date de naissance",,,"java\com\gestion\eleves\service\EleveInternatService.java:84
+resources\domains\Eleve.xml:13
+resources\domains\EleveInternat.xml:12"
+"Date de situation Depart",,,"resources\domains\Eleve.xml:29"
+"Date demand quittant",,,"resources\domains\Eleve.xml:87"
+"Date env demand quittant",,,"resources\domains\Eleve.xml:89"
+"Date quittant",,,"resources\domains\Eleve.xml:84"
+"Date situation",,,"java\com\gestion\eleves\service\EleveInternatService.java:133
+resources\domains\EleveInternat.xml:31"
+"Datesuivimedical",,,"resources\domains\SuiviMedical.xml:10"
+"Day of week",,,"resources\domains\Cahierjournalier.xml:9"
+"Demande de dossier",,,"resources\views\Eleve.xml:85"
+"Demi-Pensionnaires",,,"resources\views\PersonnesnourriesJournalier.xml:26"
+"Dimanche",,,"resources\views\CahierJournalier.xml:93"
+"Diner",,,"resources\domains\OperationJournalier.xml:10
+resources\domains\PersonnesnourriesJournalier.xml:10"
+"Direction de réception",,,"resources\domains\Eleve.xml:83"
+"Direction origine",,,"resources\domains\Eleve.xml:64"
+"Distribution Des groupes",,,"resources\views\Menu.xml:28"
+"Données des élèves",,,"resources\views\Gestioneleves.xml:10
+resources\views\Gestioneleves.xml:143
+resources\views\Gestioneleves.xml:155
+resources\views\Gestioneleves.xml:170
+resources\views\Gestioneleves.xml:76
+resources\views\Menu.xml:15
+resources\views\Menu.xml:55"
+"Du",,,"resources\domains\MenuHebdomadaire.xml:8"
+"Déjeuner",,,"resources\domains\AbsenceeleveInternat.xml:13
+resources\domains\Cahierjournalier.xml:16
+resources\domains\OperationJournalier.xml:9
+resources\domains\PersonnesnourriesJournalier.xml:9"
+"Départ",,,"resources\views\Eleve.xml:268"
+"Désignation",,,"resources\domains\PieceJointEleve.xml:8
+resources\domains\PieceJointEleveInternat.xml:8"
+"Dîner",,,"resources\domains\AbsenceeleveInternat.xml:15
+resources\domains\Cahierjournalier.xml:17"
+"EXCEL",,,"resources\views\Gestioneleves.xml:670"
+"Eleve",,,"resources\domains\Absence.xml:8
+resources\domains\Avisabsence.xml:8
+resources\domains\Convocationtuteur.xml:9
+resources\domains\NotesEleve.xml:13
+resources\domains\PieceJointEleve.xml:10
+resources\domains\SuiviMedical.xml:8"
+"Eleve internat",,,"resources\domains\AbsenceeleveInternat.xml:8
+resources\domains\PieceJointEleveInternat.xml:10"
+"Eleves",,,"resources\domains\Gestioneleves.xml:9"
+"Eleves internat",,,"resources\domains\Gestioneleves.xml:10"
+"Elèves Archive",,,"resources\views\Menu.xml:46"
+"Email",,,"resources\domains\Fournisseur.xml:13"
+"Enseignant",,,"resources\domains\AffectationEnseignant.xml:8
+resources\views\Enseignant.xml:15"
+"Enseignants",,,"resources\domains\Gestioneleves.xml:17
+resources\views\Enseignant.xml:7
+resources\views\Gestioneleves.xml:329"
+"Entrée du jour",,,"resources\domains\OperationJournalier.xml:15"
+"Envoyer le dossier",,,"resources\views\Eleve.xml:96"
+"Erreur de lecture du fichier",,,"java\com\gestion\eleves\service\ArticleService.java:160
+java\com\gestion\eleves\service\ArticleService.java:167
+java\com\gestion\eleves\service\EleveInternatService.java:405
+java\com\gestion\eleves\service\EleveInternatService.java:412
+java\com\gestion\eleves\service\EleveService.java:390
+java\com\gestion\eleves\service\EleveService.java:401"
+"Etablissement",,,"resources\domains\Absence.xml:22
+resources\domains\AbsenceeleveInternat.xml:17
+resources\domains\AffectationEnseignant.xml:13
+resources\domains\AnneScolaire.xml:14
+resources\domains\Article.xml:14
+resources\domains\Avisabsence.xml:11
+resources\domains\Cahierjournalier.xml:20
+resources\domains\Classe.xml:16
+resources\domains\Convocationtuteur.xml:12
+resources\domains\Eleve.xml:102
+resources\domains\EleveInternat.xml:61
+resources\domains\Enseignant.xml:15
+resources\domains\Fournisseur.xml:15
+resources\domains\Gestioneleves.xml:21
+resources\domains\MatiereEleve.xml:12
+resources\domains\MenuHebdomadaire.xml:45
+resources\domains\Niveau.xml:17
+resources\domains\NotesEleve.xml:19
+resources\domains\OperationJournalier.xml:18
+resources\domains\PersonnesnourriesJournalier.xml:14
+resources\domains\PieceJointEleve.xml:12
+resources\domains\PieceJointEleveInternat.xml:12
+resources\domains\RapportjournalierInternat.xml:11
+resources\domains\SuiviMedical.xml:11
+resources\domains\TypeArticle.xml:12"
+"Etablissement de réception",,,"resources\domains\Eleve.xml:82"
+"Etablissement origine",,,"resources\domains\Eleve.xml:63"
+"Etablissementetudie",,,"resources\domains\EleveInternat.xml:20"
+"Exclus",,,"java\com\gestion\eleves\service\EleveInternatService.java:315
+resources\views\Eleve.xml:280
+resources\views\EleveInternat.xml:165"
+"Exerce",,,"java\com\gestion\eleves\service\EleveInternatService.java:311
+resources\views\Eleve.xml:276
+resources\views\EleveInternat.xml:161"
+"Exerce?",,,"resources\domains\Article.xml:12"
+"Export",,,"resources\views\Article.xml:37
+resources\views\Gestioneleves.xml:253
+resources\views\Gestioneleves.xml:267"
+"Export la Liste des eleves (ARCHIVE)",,,"resources\views\Gestioneleves.xml:265"
+"Export la Liste des eleves (INTERNAT)",,,"resources\views\Gestioneleves.xml:251"
+"Export la liste des Articles",,,"resources\views\Article.xml:35"
+"Export/ Import",,,"resources\views\Gestioneleves.xml:161"
+"Fax",,,"resources\domains\Fournisseur.xml:11"
+"Feuille d'absences demi-hebdomadaire 1/2",,,"resources\views\Gestioneleves.xml:687"
+"Feuille d'absences demi-hebdomadaire 2/2",,,"resources\views\Gestioneleves.xml:688"
+"Fiches élèves",,,"resources\views\Menu.xml:6"
+"Fiches élèves Internat",,,"resources\views\Menu.xml:52"
+"Fille",,,"java\com\gestion\eleves\service\EleveInternatService.java:271
+resources\views\Eleve.xml:284"
+"Fonction Reporter",,,"java\com\gestion\eleves\service\EleveInternatService.java:169
+resources\domains\EleveInternat.xml:49"
+"Fonction mere",,,"resources\domains\Eleve.xml:59"
+"Fonction pere",,,"resources\domains\Eleve.xml:51"
+"Fonction tuteur",,,"resources\domains\Eleve.xml:43
+resources\domains\EleveInternat.xml:41"
+"Fournisseur",,,"resources\domains\TypeArticle.xml:11
+resources\views\Fournisseur.xml:13
+resources\views\Fournisseur.xml:7"
+"Fournisseurs",,,"resources\views\Menu.xml:125
+resources\views\Menu.xml:127"
+"Garçon",,,"resources\views\Eleve.xml:283"
+"Garأ§on",,,"java\com\gestion\eleves\service\EleveInternatService.java:270"
+"Genre",,,"java\com\gestion\eleves\service\EleveInternatService.java:103
+resources\domains\Eleve.xml:20
+resources\domains\EleveInternat.xml:18"
+"Gestion des  eleves archive",,,"resources\views\Gestioneleves.xml:145"
+"Gestion des fichiers eleves internat",,,"resources\views\Gestioneleves.xml:157"
+"Gestion des fichiers eleves internat ARCHIVE",,,"resources\views\Gestioneleves.xml:172"
+"Gestioneleves",,,"resources\domains\AffectationEnseignant.xml:12
+resources\domains\AnneScolaire.xml:13
+resources\domains\Classe.xml:15
+resources\domains\Eleve.xml:101
+resources\domains\EleveInternat.xml:59
+resources\domains\Enseignant.xml:14
+resources\domains\MatiereEleve.xml:11
+resources\domains\Niveau.xml:16
+resources\domains\NotesEleve.xml:18"
+"Gresa",,,"resources\views\Gestioneleves.xml:206"
+"Groupe",,,"resources\domains\Eleve.xml:19"
+"Groupe 1",,,"resources\views\Eleve.xml:293"
+"Groupe 2",,,"resources\views\Eleve.xml:294"
+"Génération Groupe",,,"resources\views\Gestioneleves.xml:134"
+"Id annee",,,"resources\domains\AnneScolaire.xml:12"
+"Id classe",,,"resources\domains\Classe.xml:10"
+"Import",,,"resources\views\Article.xml:44
+resources\views\Gestioneleves.xml:107
+resources\views\Gestioneleves.xml:227
+resources\views\Gestioneleves.xml:236
+resources\views\Gestioneleves.xml:260
+resources\views\Gestioneleves.xml:274
+resources\views\Gestioneleves.xml:387
+resources\views\Gestioneleves.xml:399
+resources\views\Gestioneleves.xml:410
+resources\views\Gestioneleves.xml:67"
+"Import et Export Article Internat",,,"resources\views\Article.xml:30"
+"Import et Export les Liste (ARCHIVE)",,,"resources\views\Gestioneleves.xml:264"
+"Import et Export les Liste (INTERNAT)",,,"resources\views\Gestioneleves.xml:250"
+"Import les eleves",,,"resources\views\Gestioneleves.xml:182
+resources\views\Gestioneleves.xml:315"
+"Import/Export",,,"resources\views\Article.xml:10
+resources\views\Article.xml:48"
+"Importation terminأ©e avec succأ¨s :",,,"java\com\gestion\eleves\web\ImportExDataMassarController.java:700"
+"Importer des données directes dans massar",,,"resources\views\Gestioneleves.xml:183"
+"Importer la Liste des eleves (MASSAR) arabe ou français",,,"resources\views\Gestioneleves.xml:221"
+"Importer la liste des Articles",,,"resources\views\Article.xml:39"
+"Importer la liste des eleves (ARCHIVE)",,,"resources\views\Gestioneleves.xml:269"
+"Importer la liste des eleves (INTERNAT)",,,"resources\views\Gestioneleves.xml:255"
+"Importer la liste tuteur (MASSAR) arabe",,,"resources\views\Gestioneleves.xml:232"
+"Importez les données suivantes",,,"resources\views\Gestioneleves.xml:211"
+"Imprime",,,"resources\views\CahierJournalier.xml:22
+resources\views\CahierJournalier.xml:50
+resources\views\CahierJournalier.xml:9
+resources\views\Menu.xml:118
+resources\views\MenuHebdomadaire.xml:14
+resources\views\MenuHebdomadaire.xml:25"
+"Imprimer",,,"resources\views\CahierJournalier.xml:57
+resources\views\CahierJournalier.xml:64
+resources\views\CahierJournalier.xml:69"
+"Imprimés",,,"resources\views\Menu.xml:116
+resources\views\Menu.xml:34
+resources\views\Menu.xml:80
+resources\views\Menu.xml:82"
+"Information d'un élève",,,"resources\views\Eleve.xml:158
+resources\views\Eleve.xml:46
+resources\views\EleveInternat.xml:37"
+"Information de Login Massar",,,"resources\views\Gestioneleves.xml:202"
+"Information de Massar",,,"resources\views\Gestioneleves.xml:194"
+"Infractions",,,"resources\views\EleveInternat.xml:106"
+"Investir les résultats : evaluations",,,"resources\views\Gestioneleves.xml:701"
+"Is massar",,,"resources\domains\AnneScolaire.xml:9
+resources\domains\Classe.xml:13
+resources\domains\Eleve.xml:9
+resources\domains\EleveInternat.xml:9
+resources\domains\Niveau.xml:11"
+"Jeudi",,,"resources\views\CahierJournalier.xml:97"
+"Jourcomplet",,,"resources\domains\Absence.xml:10"
+"Justifie",,,"resources\domains\Absence.xml:11"
+"L'année scolaire",,,"resources\domains\Classe.xml:12"
+"L'année scolaire arrive",,,"resources\domains\Eleve.xml:67"
+"L'annأ©e scolaire",,,"java\com\gestion\eleves\service\EleveInternatService.java:139"
+"L'opأ©ration a rأ©ussi",,,"java\com\gestion\eleves\web\GestionelevesController.java:186"
+"L'ordre max de 1er Groupe",,,"resources\views\Gestioneleves.xml:130"
+"La liste des Article Internat a أ©tأ© importأ©e avec succأ¨s",,,"java\com\gestion\eleves\service\ArticleService.java:220"
+"La liste des eleves Internat a أ©tأ© importأ©e avec succأ¨s",,,"java\com\gestion\eleves\service\EleveInternatService.java:547"
+"La liste des elأ©ves a أ©tأ© importأ©e avec succأ¨s : nomber total mettre أ  jour est",,,"java\com\gestion\eleves\service\EleveService.java:374"
+"La liste des tuteur a أ©tأ© importأ©e avec succأ¨s",,,"java\com\gestion\eleves\service\EleveService.java:465"
+"La méthode utilisée pour communiquer avec MASSAR est le proxy d'interception de données, c'est une méthode sécurisée et vos informations ne peuvent pas être sauvegardées",,,"resources\views\Gestioneleves.xml:189"
+"La situation actuelle",,,"java\com\gestion\eleves\service\EleveInternatService.java:130
+resources\domains\Eleve.xml:32
+resources\domains\EleveInternat.xml:30"
+"Lieu Naissance français",,,"resources\domains\Eleve.xml:22"
+"Lieu de Naissance arab",,,"java\com\gestion\eleves\service\EleveInternatService.java:106
+resources\domains\Eleve.xml:21
+resources\domains\EleveInternat.xml:19"
+"List classes",,,"resources\views\ImportExDataMassar.xml:66"
+"List matières",,,"resources\views\ImportExDataMassar.xml:68"
+"List profs",,,"resources\views\ImportExDataMassar.xml:67"
+"Liste des élèves",,,"resources\views\Eleve.xml:32
+resources\views\Eleve.xml:7
+resources\views\EleveInternat.xml:20
+resources\views\EleveInternat.xml:7"
+"Liste des élèves par groupe",,,"resources\views\Eleve.xml:21"
+"Listes des élèves Transferès",,,"resources\views\Gestioneleves.xml:678"
+"Listes des élèves actuels",,,"resources\views\Gestioneleves.xml:676"
+"Listes des élèves actuels (groupe)",,,"resources\views\Gestioneleves.xml:677"
+"Listes initiales",,,"resources\views\Gestioneleves.xml:675"
+"Listes initiales des élèves Internat",,,"resources\views\Gestioneleves.xml:705"
+"Login de Massar",,,"resources\views\Gestioneleves.xml:196"
+"Lundi",,,"resources\views\CahierJournalier.xml:94"
+"Mardi",,,"resources\views\CahierJournalier.xml:95"
+"Matiere",,,"resources\domains\AffectationEnseignant.xml:10
+resources\domains\Enseignant.xml:12
+resources\domains\Gestioneleves.xml:15
+resources\domains\NotesEleve.xml:8
+resources\views\Gestioneleves.xml:102
+resources\views\MatiereEleve.xml:13
+resources\views\NotesEleve.xml:20"
+"MatiereAr",,,"resources\domains\MatiereEleve.xml:9"
+"MatiereFr",,,"resources\domains\MatiereEleve.xml:10"
+"Matieres",,,"resources\views\Gestioneleves.xml:326
+resources\views\MatiereEleve.xml:7
+resources\views\NotesEleve.xml:7"
+"Max size 4MB.",,,"resources\domains\Eleve.xml:12"
+"Maîtres d'internat",,,"resources\views\PersonnesnourriesJournalier.xml:27"
+"Menu Du jour",,,"resources\views\CahierJournalier.xml:25"
+"Menu Du jour : DIMANCHE",,,"java\com\gestion\eleves\service\CahierjournalierService.java:104
+java\com\gestion\eleves\web\CahierJournalierController.java:111
+java\com\gestion\eleves\web\CahierJournalierController.java:241"
+"Menu Du jour : JEUDI",,,"java\com\gestion\eleves\service\CahierjournalierService.java:86
+java\com\gestion\eleves\web\CahierJournalierController.java:223
+java\com\gestion\eleves\web\CahierJournalierController.java:93"
+"Menu Du jour : LUNDI",,,"java\com\gestion\eleves\service\CahierjournalierService.java:68
+java\com\gestion\eleves\web\CahierJournalierController.java:205
+java\com\gestion\eleves\web\CahierJournalierController.java:75"
+"Menu Du jour : MARDI",,,"java\com\gestion\eleves\service\CahierjournalierService.java:74
+java\com\gestion\eleves\web\CahierJournalierController.java:211
+java\com\gestion\eleves\web\CahierJournalierController.java:81"
+"Menu Du jour : MERCREDI",,,"java\com\gestion\eleves\service\CahierjournalierService.java:80
+java\com\gestion\eleves\web\CahierJournalierController.java:217
+java\com\gestion\eleves\web\CahierJournalierController.java:87"
+"Menu Du jour : SAMEDI",,,"java\com\gestion\eleves\service\CahierjournalierService.java:98
+java\com\gestion\eleves\web\CahierJournalierController.java:105
+java\com\gestion\eleves\web\CahierJournalierController.java:235"
+"Menu Du jour : VENDREDI",,,"java\com\gestion\eleves\service\CahierjournalierService.java:92
+java\com\gestion\eleves\web\CahierJournalierController.java:229
+java\com\gestion\eleves\web\CahierJournalierController.java:99"
+"Menu Hebdomadaire",,,"resources\views\Menu.xml:107
+resources\views\MenuHebdomadaire.xml:18
+resources\views\MenuHebdomadaire.xml:8"
+"Menu du Dimanche",,,"resources\views\MenuHebdomadaire.xml:35"
+"Menu du Jeudi",,,"resources\views\MenuHebdomadaire.xml:59"
+"Menu du Lundi",,,"resources\views\MenuHebdomadaire.xml:42"
+"Menu du Mardi",,,"resources\views\MenuHebdomadaire.xml:48"
+"Menu du Mercredi",,,"resources\views\MenuHebdomadaire.xml:54"
+"Menu du Samedi",,,"resources\views\MenuHebdomadaire.xml:70"
+"Menu du Vendredi",,,"resources\views\MenuHebdomadaire.xml:64"
+"MenuHebdomadaire",,,"resources\views\Menu.xml:109"
+"Mercredi",,,"resources\views\CahierJournalier.xml:96"
+"Mere",,,"resources\views\Eleve.xml:124"
+"Mise Ajour",,,"resources\views\CahierJournalier.xml:24"
+"Mise a jour",,,"resources\views\Gestioneleves.xml:666"
+"Mise أ  jour des articles Internat terminأ©e",,,"java\com\gestion\eleves\service\ArticleService.java:266"
+"Mise أ  jour terminأ©e",,,"java\com\gestion\eleves\web\EleveInternatController.java:145"
+"Mote de passe",,,"resources\views\Gestioneleves.xml:198"
+"Mére",,,"resources\views\Eleve.xml:288"
+"Name",,,"resources\domains\Article.xml:9
+resources\domains\Classe.xml:9
+resources\domains\Fournisseur.xml:8
+resources\domains\Gestioneleves.xml:20
+resources\domains\TypeArticle.xml:9"
+"Niveau",,,"resources\domains\Classe.xml:11
+resources\domains\EleveInternat.xml:22
+resources\domains\Gestioneleves.xml:12
+resources\views\Gestioneleves.xml:124
+resources\views\Gestioneleves.xml:18
+resources\views\Gestioneleves.xml:317
+resources\views\Gestioneleves.xml:84
+resources\views\Niveau.xml:16
+resources\views\Niveau.xml:7"
+"Niveau nom",,,"resources\domains\Eleve.xml:25"
+"Nom En Français",,,"resources\domains\Eleve.xml:41
+resources\domains\Eleve.xml:49
+resources\domains\Eleve.xml:57"
+"Nom En arab",,,"resources\domains\Eleve.xml:39
+resources\domains\Eleve.xml:47
+resources\domains\Eleve.xml:55
+resources\domains\EleveInternat.xml:39"
+"Nom Etablissement",,,"resources\views\Gestioneleves.xml:208"
+"Nom Reporter",,,"java\com\gestion\eleves\service\EleveInternatService.java:163
+resources\domains\EleveInternat.xml:47"
+"Nom en Arab",,,"java\com\gestion\eleves\service\EleveInternatService.java:88
+resources\domains\Eleve.xml:14
+resources\domains\EleveInternat.xml:13"
+"Nom en Français",,,"resources\domains\Eleve.xml:16
+resources\domains\EleveInternat.xml:15"
+"Nom en Franأ§ais",,,"java\com\gestion\eleves\service\EleveInternatService.java:94"
+"Nomar Tuteur",,,"java\com\gestion\eleves\service\EleveInternatService.java:145"
+"Non inscrit",,,"java\com\gestion\eleves\service\EleveInternatService.java:314
+resources\views\Eleve.xml:279
+resources\views\EleveInternat.xml:164"
+"Note",,,"resources\domains\NotesEleve.xml:14"
+"Notes",,,"resources\domains\Eleve.xml:98
+resources\domains\Gestioneleves.xml:16
+resources\views\Eleve.xml:148
+resources\views\ImportExDataMassar.xml:70"
+"Notes élèves",,,"resources\views\Menu.xml:22"
+"Nouvel élève",,,"resources\views\Gestioneleves.xml:159
+resources\views\Gestioneleves.xml:366
+resources\views\Gestioneleves.xml:436
+resources\views\Gestioneleves.xml:65"
+"Numero Bourse",,,"java\com\gestion\eleves\service\EleveInternatService.java:118
+resources\domains\EleveInternat.xml:24"
+"Numero Internat",,,"java\com\gestion\eleves\service\EleveInternatService.java:127
+resources\domains\EleveInternat.xml:27"
+"Numero avis",,,"resources\domains\Avisabsence.xml:9"
+"Numero certificat quittant",,,"resources\domains\Eleve.xml:85"
+"Numero demand quittant",,,"resources\domains\Eleve.xml:86"
+"Numero env demand quittant",,,"resources\domains\Eleve.xml:88"
+"Numerosuivimedical",,,"resources\domains\SuiviMedical.xml:9"
+"Numéro Transaction",,,"resources\domains\TypeArticle.xml:10"
+"N°",,,"resources\domains\Eleve.xml:18"
+"Nآ°",,,"java\com\gestion\eleves\service\ArticleService.java:78
+java\com\gestion\eleves\service\EleveInternatService.java:78"
+"Observation",,,"resources\domains\Cahierjournalier.xml:14
+resources\domains\NotesEleve.xml:15
+resources\domains\RapportjournalierInternat.xml:9"
+"Observation reption",,,"resources\domains\Eleve.xml:80"
+"Operation Journal",,,"resources\views\OperationJournalier.xml:7"
+"OperationJournal",,,"resources\views\OperationJournalier.xml:16"
+"Opérations Articles",,,"resources\domains\Cahierjournalier.xml:19"
+"Ordre",,,"resources\domains\Article.xml:8
+resources\domains\TypeArticle.xml:8
+resources\views\Eleve.xml:161"
+"Ordre Classe",,,"java\com\gestion\eleves\service\EleveInternatService.java:100
+resources\domains\EleveInternat.xml:17"
+"Ordre Internat",,,"resources\domains\EleveInternat.xml:28"
+"PDF",,,"resources\views\Gestioneleves.xml:669"
+"Paramètres",,,"resources\views\Menu.xml:121"
+"Paramétres",,,"resources\views\Menu.xml:40
+resources\views\Menu.xml:85"
+"Pensionnaires",,,"resources\views\PersonnesnourriesJournalier.xml:25"
+"Pere",,,"resources\views\Eleve.xml:114"
+"Perime",,,"resources\domains\OperationJournalier.xml:14"
+"Personnes nourries Journalier",,,"resources\views\PersonnesnourriesJournalier.xml:15"
+"Personnes nourries Journalier Journal",,,"resources\views\PersonnesnourriesJournalier.xml:7"
+"Petit déjeuner",,,"resources\domains\AbsenceeleveInternat.xml:12
+resources\domains\Cahierjournalier.xml:15
+resources\domains\MenuHebdomadaire.xml:16
+resources\domains\MenuHebdomadaire.xml:20
+resources\domains\MenuHebdomadaire.xml:24
+resources\domains\MenuHebdomadaire.xml:28
+resources\domains\MenuHebdomadaire.xml:32
+resources\domains\MenuHebdomadaire.xml:36
+resources\domains\MenuHebdomadaire.xml:40
+resources\domains\OperationJournalier.xml:8
+resources\domains\PersonnesnourriesJournalier.xml:8"
+"Photo",,,"resources\domains\Eleve.xml:12
+resources\domains\EleveInternat.xml:11"
+"Piece Joindre",,,"resources\domains\PieceJointEleve.xml:9
+resources\domains\PieceJointEleveInternat.xml:9"
+"Piece joint eleves",,,"resources\domains\Eleve.xml:100"
+"Piece joint eleves internat",,,"resources\domains\EleveInternat.xml:58"
+"Ppr",,,"resources\domains\Enseignant.xml:11"
+"Prenomar Tuteur",,,"java\com\gestion\eleves\service\EleveInternatService.java:148"
+"Prix Unite",,,"java\com\gestion\eleves\service\ArticleService.java:88"
+"Prix unite",,,"resources\domains\Article.xml:11"
+"Prénom En Français",,,"resources\domains\Eleve.xml:42
+resources\domains\Eleve.xml:50
+resources\domains\Eleve.xml:58"
+"Prénom Reporter",,,"resources\domains\EleveInternat.xml:48"
+"Prénom arab",,,"resources\domains\Eleve.xml:15
+resources\domains\EleveInternat.xml:14"
+"Prénom en Arab",,,"resources\domains\Eleve.xml:40
+resources\domains\Eleve.xml:48
+resources\domains\Eleve.xml:56
+resources\domains\EleveInternat.xml:40"
+"Prénom enFrançais",,,"resources\domains\Eleve.xml:17
+resources\domains\EleveInternat.xml:16"
+"Prأ©nom Reporter",,,"java\com\gestion\eleves\service\EleveInternatService.java:166"
+"Prأ©nom arab",,,"java\com\gestion\eleves\service\EleveInternatService.java:91"
+"Prأ©nom enFranأ§ais",,,"java\com\gestion\eleves\service\EleveInternatService.java:97"
+"Pére",,,"resources\views\Eleve.xml:287"
+"Périmé",,,"resources\views\CahierJournalier.xml:37"
+"Quantité périmé",,,"resources\views\CahierJournalier.xml:44"
+"Quitte",,,"java\com\gestion\eleves\service\EleveInternatService.java:312
+resources\views\Eleve.xml:277
+resources\views\EleveInternat.xml:162"
+"RESTE EN MAGASIN",,,"resources\views\CahierJournalier.xml:55"
+"Rapport journalier",,,"resources\views\Menu.xml:73
+resources\views\Menu.xml:75"
+"Recopier",,,"resources\views\MenuHebdomadaire.xml:33"
+"Rèceptionne",,,"resources\views\Eleve.xml:269"
+"Réintégration",,,"resources\views\Eleve.xml:270
+resources\views\EleveInternat.xml:156"
+"Réorientation",,,"resources\views\Eleve.xml:271"
+"Répétition",,,"resources\views\Eleve.xml:272
+resources\views\EleveInternat.xml:158"
+"Samedi",,,"resources\views\CahierJournalier.xml:99"
+"Sans",,,"resources\views\Eleve.xml:275"
+"Seance1",,,"resources\domains\Absence.xml:12"
+"Seance10",,,"resources\domains\Absence.xml:21"
+"Seance2",,,"resources\domains\Absence.xml:13"
+"Seance3",,,"resources\domains\Absence.xml:14"
+"Seance4",,,"resources\domains\Absence.xml:15"
+"Seance5",,,"resources\domains\Absence.xml:16"
+"Seance6",,,"resources\domains\Absence.xml:17"
+"Seance7",,,"resources\domains\Absence.xml:18"
+"Seance8",,,"resources\domains\Absence.xml:19"
+"Seance9",,,"resources\domains\Absence.xml:20"
+"Session",,,"resources\domains\NotesEleve.xml:12
+resources\views\Gestioneleves.xml:93"
+"Statistiques",,,"resources\views\Menu.xml:7
+resources\views\Menu.xml:8"
+"Statistiques par classe et sexe",,,"resources\views\Gestioneleves.xml:699
+resources\views\Gestioneleves.xml:728"
+"Statistiques par âge",,,"resources\views\Charts.xml:103"
+"Statistiques par âge et sexe",,,"resources\views\Gestioneleves.xml:700
+resources\views\Gestioneleves.xml:729"
+"Statistiques!",,,"resources\views\Dashboard.xml:6"
+"Suffix",,,"resources\domains\Niveau.xml:12
+resources\views\Niveau.xml:11"
+"Suivi des élèves",,,"resources\views\Menu.xml:68"
+"Suivi medicals",,,"resources\domains\Eleve.xml:96"
+"Suivi médical",,,"resources\views\Eleve.xml:144
+resources\views\EleveInternat.xml:110"
+"Supprime",,,"resources\views\Eleve.xml:42
+resources\views\EleveInternat.xml:31"
+"Suprimmer",,,"resources\views\Gestioneleves.xml:245"
+"Suprimmer toutes les données",,,"resources\views\Gestioneleves.xml:239"
+"Sélectionner la liste",,,"resources\views\Gestioneleves.xml:286
+resources\views\Gestioneleves.xml:292
+resources\views\Gestioneleves.xml:300
+resources\views\Gestioneleves.xml:343
+resources\views\Gestioneleves.xml:349"
+"Sélectionner un Annee",,,"resources\views\Gestioneleves.xml:216
+resources\views\Gestioneleves.xml:242"
+"Sélectionner un niveau",,,"resources\views\Gestioneleves.xml:124
+resources\views\Gestioneleves.xml:18
+resources\views\Gestioneleves.xml:84"
+"Sélectionner une classe",,,"resources\views\Gestioneleves.xml:128
+resources\views\Gestioneleves.xml:23
+resources\views\Gestioneleves.xml:89"
+"Sélectionner une contrile continue",,,"resources\views\Gestioneleves.xml:98"
+"Sélectionner une evaluation",,,"resources\views\Gestioneleves.xml:306"
+"Sélectionner une matiere",,,"resources\views\Gestioneleves.xml:102"
+"Sélectionner une session",,,"resources\views\Gestioneleves.xml:303
+resources\views\Gestioneleves.xml:93"
+"Sélectionnez une période",,,"resources\views\MenuHebdomadaire.xml:31"
+"Table commune",,,"resources\views\PersonnesnourriesJournalier.xml:29"
+"Tel Reporter",,,"java\com\gestion\eleves\service\EleveInternatService.java:172
+resources\domains\EleveInternat.xml:50"
+"Tel mere",,,"resources\domains\Eleve.xml:60"
+"Telecharger",,,"resources\views\Gestioneleves.xml:288
+resources\views\Gestioneleves.xml:296
+resources\views\Gestioneleves.xml:308
+resources\views\Gestioneleves.xml:345
+resources\views\Gestioneleves.xml:353"
+"Telephone Père",,,"resources\domains\Eleve.xml:52"
+"Telephone Tuteur",,,"resources\domains\Eleve.xml:44
+resources\domains\EleveInternat.xml:42"
+"Transert Bourse",,,"java\com\gestion\eleves\service\EleveInternatService.java:316
+resources\views\EleveInternat.xml:166"
+"Tu veux dire l'أ©leve ? : <p>%s</p> Voulez-vous continuer
+  // ?",,,"java\com\gestion\eleves\web\EleveInternatController.java:200"
+"Tu veux dire l'أ©leve ? : <p>%s</p> Voulez-vous continuer ?",,,"java\com\gestion\eleves\web\EleveInternatController.java:249"
+"Tuteur",,,"resources\views\Eleve.xml:289"
+"Type Article",,,"resources\views\TypeArticle.xml:14
+resources\views\TypeArticle.xml:7"
+"Type De Bourse",,,"java\com\gestion\eleves\service\EleveInternatService.java:124
+resources\domains\EleveInternat.xml:26"
+"Type article",,,"resources\domains\Article.xml:13"
+"Type des listes",,,"resources\views\Gestioneleves.xml:225"
+"Type personnes",,,"resources\domains\PersonnesnourriesJournalier.xml:11"
+"Type tuteur",,,"resources\domains\Eleve.xml:37"
+"Types d'articles",,,"resources\views\Menu.xml:133
+resources\views\Menu.xml:135"
+"Télécharger la liste des eleves",,,"resources\views\Gestioneleves.xml:284
+resources\views\Gestioneleves.xml:340"
+"Télécharger les documents des eleves",,,"resources\views\Gestioneleves.xml:290
+resources\views\Gestioneleves.xml:347"
+"Télécharger les statistiques",,,"resources\views\Gestioneleves.xml:298"
+"Téléphone",,,"resources\domains\Fournisseur.xml:10"
+"Une erreur s'est produite lors de l'importation du fichier Excel",,,"java\com\gestion\eleves\service\ArticleService.java:215
+java\com\gestion\eleves\service\EleveInternatService.java:542
+java\com\gestion\eleves\service\EleveService.java:367
+java\com\gestion\eleves\service\EleveService.java:460"
+"Unite",,,"java\com\gestion\eleves\service\ArticleService.java:84
+resources\domains\Article.xml:10"
+"Url photo",,,"resources\domains\Eleve.xml:23"
+"Vendredi",,,"resources\views\CahierJournalier.xml:98"
+"Voulez-vous vraiment archiver cet enregistrement ?",,,"resources\views\Eleve.xml:18
+resources\views\EleveInternat.xml:16"
+"Voulez-vous vraiment mettre à jour les articles ?",,,"resources\views\Article.xml:33"
+"Voulez-vous vraiment mettre à jour les groupes ?",,,"resources\views\Gestioneleves.xml:134"
+"Voulez-vous vraiment restaurer cet enregistrement ?",,,"resources\views\Eleve.xml:40
+resources\views\EleveInternat.xml:29"
+"Voulez-vous vraiment supprimer cet enregistrement ?",,,"resources\views\Eleve.xml:42
+resources\views\EleveInternat.xml:31"
+"Voulez-vous vraiment supprimer toutes les données de cette année scolaire ?",,,"resources\views\Gestioneleves.xml:245"
+"Vous n'avez pas l'autorisation",,,"java\com\gestion\eleves\web\EleveController.java:290
+java\com\gestion\eleves\web\EleveController.java:306
+java\com\gestion\eleves\web\EleveController.java:322
+java\com\gestion\eleves\web\GestionelevesController.java:136"
+"WORD",,,"resources\views\Gestioneleves.xml:671"
+"affectation des classes",,,"resources\views\Gestioneleves.xml:696"
+"affectation des enseignants",,,"resources\views\Gestioneleves.xml:697"
+"archive Internat",,,"resources\views\Menu.xml:89"
+"avis absence",,,"resources\views\Eleve.xml:138"
+"bourse complète",,,"resources\views\EleveInternat.xml:169"
+"bourse complأ¨te",,,"java\com\gestion\eleves\service\EleveInternatService.java:299"
+"cD_CYCLE",,,"resources\domains\Niveau.xml:10
+resources\views\Niveau.xml:10"
+"classe",,,"java\com\gestion\eleves\service\EleveInternatService.java:112"
+"code Massar",,,"java\com\gestion\eleves\service\EleveInternatService.java:81
+resources\domains\Eleve.xml:10
+resources\domains\EleveInternat.xml:10"
+"convocation",,,"resources\views\Eleve.xml:140"
+"date",,,"resources\views\CahierJournalier.xml:56"
+"date  Message d'intervention",,,"resources\domains\Eleve.xml:75"
+"date Deuxième Demande",,,"resources\domains\Eleve.xml:71"
+"date Première Demande",,,"resources\domains\Eleve.xml:69"
+"date réception dossier",,,"resources\domains\Eleve.xml:79"
+"date troisième Demande",,,"resources\domains\Eleve.xml:73"
+"date_au",,,"resources\views\Gestioneleves.xml:294
+resources\views\Gestioneleves.xml:351"
+"date_du",,,"resources\views\Gestioneleves.xml:293
+resources\views\Gestioneleves.xml:350"
+"demi-bourse",,,"java\com\gestion\eleves\service\EleveInternatService.java:300
+resources\views\EleveInternat.xml:170"
+"déjeuner",,,"resources\domains\MenuHebdomadaire.xml:17
+resources\domains\MenuHebdomadaire.xml:21
+resources\domains\MenuHebdomadaire.xml:25
+resources\domains\MenuHebdomadaire.xml:29
+resources\domains\MenuHebdomadaire.xml:33
+resources\domains\MenuHebdomadaire.xml:37
+resources\domains\MenuHebdomadaire.xml:41"
+"départ",,,"resources\views\EleveInternat.xml:154
+resources\views\Gestioneleves.xml:665"
+"dîner",,,"resources\domains\MenuHebdomadaire.xml:18
+resources\domains\MenuHebdomadaire.xml:22
+resources\domains\MenuHebdomadaire.xml:26
+resources\domains\MenuHebdomadaire.xml:30
+resources\domains\MenuHebdomadaire.xml:34
+resources\domains\MenuHebdomadaire.xml:38
+resources\domains\MenuHebdomadaire.xml:42"
+"eleve search",,,"resources\views\Search.xml:6"
+"etablissement",,,"java\com\gestion\eleves\service\ArticleService.java:94
+java\com\gestion\eleves\service\EleveInternatService.java:109"
+"feuille d'absence hebdomadaire (paysage)",,,"resources\views\Gestioneleves.xml:685
+resources\views\Gestioneleves.xml:715"
+"feuille d'absence hebdomadaire (portrait)",,,"resources\views\Gestioneleves.xml:686"
+"feuille d'absence hebdomadaire par groupe (paysage)",,,"resources\views\Gestioneleves.xml:689"
+"feuille des notes(2 evaluations)",,,"resources\views\Gestioneleves.xml:690"
+"feuille des notes(3 evaluations)",,,"resources\views\Gestioneleves.xml:691"
+"feuille des notes(4 evaluations)",,,"resources\views\Gestioneleves.xml:692"
+"fonction Tuteur",,,"java\com\gestion\eleves\service\EleveInternatService.java:151"
+"id_eleve",,,"resources\domains\Eleve.xml:11"
+"import",,,"resources\views\Gestioneleves.xml:218"
+"information Reporter",,,"resources\views\EleveInternat.xml:89"
+"information d'oregine",,,"resources\views\Eleve.xml:68"
+"information ets reception",,,"resources\views\Eleve.xml:87"
+"information tuteur",,,"resources\views\Eleve.xml:100
+resources\views\EleveInternat.xml:78"
+"information ُEleve",,,"resources\views\Eleve.xml:48
+resources\views\EleveInternat.xml:40"
+"justifie",,,"resources\views\AbsenceeleveInternat.xml:57"
+"justifie?",,,"resources\domains\AbsenceeleveInternat.xml:10"
+"les imprimés",,,"resources\views\Gestioneleves.xml:277
+resources\views\Gestioneleves.xml:334"
+"les élèves par groupe",,,"resources\views\Gestioneleves.xml:119"
+"list élèves",,,"resources\views\ImportExDataMassar.xml:69"
+"listes des élèves Non inscrit",,,"resources\views\Gestioneleves.xml:682"
+"listes des élèves Réceptionnés",,,"resources\views\Gestioneleves.xml:680"
+"listes des élèves Réintégration",,,"resources\views\Gestioneleves.xml:681"
+"listes des élèves abandon",,,"resources\views\Gestioneleves.xml:679"
+"mise a jour",,,"resources\views\Article.xml:33"
+"mise a jour la liste des Articles",,,"resources\views\Article.xml:31"
+"mouvement élèves",,,"resources\views\Gestioneleves.xml:698
+resources\views\Gestioneleves.xml:727"
+"name",,,"resources\domains\AnneScolaire.xml:8
+resources\domains\Niveau.xml:8
+resources\views\Niveau.xml:8"
+"name FR",,,"resources\domains\Niveau.xml:9
+resources\views\Niveau.xml:9"
+"niveau",,,"java\com\gestion\eleves\service\EleveInternatService.java:115"
+"nom utilisateur",,,"resources\views\Gestioneleves.xml:204"
+"nomCompletAr",,,"resources\domains\Enseignant.xml:9
+resources\views\Enseignant.xml:10
+resources\views\Enseignant.xml:19"
+"nomCompletFr",,,"resources\domains\Enseignant.xml:10
+resources\views\Enseignant.xml:11
+resources\views\Enseignant.xml:20"
+"non justifie",,,"resources\views\AbsenceeleveInternat.xml:56"
+"numéro Certificat",,,"resources\domains\Eleve.xml:66
+resources\domains\Eleve.xml:68"
+"numéro envoyer  Message d'intervention",,,"resources\domains\Eleve.xml:76"
+"numéro envoyer Deuxième Demande",,,"resources\domains\Eleve.xml:72"
+"numéro envoyer Première Demande",,,"resources\domains\Eleve.xml:70"
+"numéro envoyer troisième Demande",,,"resources\domains\Eleve.xml:74"
+"personnes Nourries",,,"resources\domains\Cahierjournalier.xml:18"
+"pièces jointes",,,"resources\views\Eleve.xml:151
+resources\views\EleveInternat.xml:115
+resources\views\PieceJointEleve.xml:12
+resources\views\PieceJointEleve.xml:7
+resources\views\PieceJointEleveInternat.xml:12
+resources\views\PieceJointEleveInternat.xml:7"
+"période",,,"resources\domains\MenuHebdomadaire.xml:10"
+"recopier Menu Du Période ?",,,"resources\views\MenuHebdomadaire.xml:26
+resources\views\MenuHebdomadaire.xml:28"
+"restaurer",,,"resources\views\Eleve.xml:40
+resources\views\EleveInternat.xml:29"
+"réorientation",,,"resources\views\EleveInternat.xml:157"
+"sans",,,"resources\views\Eleve.xml:267
+resources\views\EleveInternat.xml:153"
+"selectionner une Fichier",,,"resources\views\Article.xml:42
+resources\views\Gestioneleves.xml:223
+resources\views\Gestioneleves.xml:234
+resources\views\Gestioneleves.xml:258
+resources\views\Gestioneleves.xml:272"
+"situation Actuelle",,,"resources\views\Charts.xml:32
+resources\views\Charts.xml:79"
+"situation de depart",,,"resources\views\Charts.xml:57
+resources\views\Charts.xml:6"
+"situation initiale",,,"java\com\gestion\eleves\service\EleveInternatService.java:136
+resources\domains\Eleve.xml:28
+resources\domains\EleveInternat.xml:33"
+"suivi quotidien",,,"resources\views\EleveInternat.xml:100"
+"tel Tuteur",,,"java\com\gestion\eleves\service\EleveInternatService.java:154"
+"tuteur",,,"resources\views\Eleve.xml:104"
+"typeArticle",,,"java\com\gestion\eleves\service\ArticleService.java:91"
+"étude du matin",,,"resources\domains\AbsenceeleveInternat.xml:11"
+"étude du midi",,,"resources\domains\AbsenceeleveInternat.xml:14"
+"étude du nuit",,,"resources\domains\AbsenceeleveInternat.xml:16"
+"اسم المؤسسة",,,"resources\views\Gestioneleves.xml:207"
+"اسم المستخدم",,,"resources\views\Gestioneleves.xml:203"
+"الطريقة المستخدمة للتواصل مع مسار هي وكيل اعتراض البيانات ، وهي طريقة آمنة ولا يمكن حفظ معلوماتك",,,"resources\views\Gestioneleves.xml:186"
+"ظˆط­ط¨ط© ط؛ط¯ط§ط،",,,"java\com\gestion\eleves\service\EleveInternatService.java:301"
+"ظ…ط¹ظ„ظ… ط¯ط§ط®ظ„ظٹط©",,,"java\com\gestion\eleves\service\EleveInternatService.java:302"
+"معلم داخلية",,,"resources\views\EleveInternat.xml:172"
+"وحبة غداء",,,"resources\views\EleveInternat.xml:171"

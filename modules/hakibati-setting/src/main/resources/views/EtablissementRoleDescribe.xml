@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+    <grid name="EtablissementRolsDescribe-Eatblissement-grid" title="EtablissementRolsDescribe" model="com.hakibati.setting.db.EtablissementRolsDescribe" canEdit="false" canNew="false"  canMove="false">
+        <field name="roleDescribes" />
+         <field name="datePeremption"  />
+        <field name="observation"  />
+        <field name="actif" />
+    </grid>
+
+    <form name="EtablissementRolsDescribe-Eatblissement-form" title="EtablissementRolsDescribe" model="com.hakibati.setting.db.EtablissementRolsDescribe" >
+        <panel title="Overview">
+        <field name="roleDescribes" />
+        <field name="datePeremption"  />
+        <field name="observation"  />
+        <field name="actif" />
+        </panel>
+    </form>
+
+</object-views>

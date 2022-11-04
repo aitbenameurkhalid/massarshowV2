@@ -1,0 +1,1529 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.8.0.v201806261756</property>
+    <list-property name="propertyBindings">
+        <structure>
+            <property name="name">queryText</property>
+            <property name="id">5</property>
+        </structure>
+        <structure>
+            <property name="name">queryTimeOut</property>
+            <property name="id">5</property>
+        </structure>
+        <structure>
+            <property name="name">rowFetchSize</property>
+            <property name="id">5</property>
+        </structure>
+    </list-property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <parameters>
+        <scalar-parameter name="AttachmentPath" id="3849">
+            <property name="hidden">true</property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">C:/Users/Admin/.axelor/attachments/</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="IdEtablissement" id="4615">
+            <property name="hidden">true</property>
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">decimal</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">1</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="IdDossExam" id="4616">
+            <property name="hidden">true</property>
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">decimal</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">70</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="appexam" id="4">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">org.postgresql.Driver</property>
+            <property name="odaURL">jdbc:postgresql://localhost:5432/hakibati</property>
+            <property name="odaUser">gesmab</property>
+            <encrypted-property name="odaPassword" encryptionID="base64">Z2VzbWFi</encrypted-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="ResultatData" id="5">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">id</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">id</text-property>
+                    <text-property name="heading">id</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">dossier_exam</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">dossier_exam</text-property>
+                    <text-property name="heading">dossier_exam</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">au</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">au</text-property>
+                    <text-property name="heading">au</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">date_examine</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">date_examine</text-property>
+                    <text-property name="heading">date_examine</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">svg_indice</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">svg_indice</text-property>
+                    <text-property name="heading">svg_indice</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">du</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">du</text-property>
+                    <text-property name="heading">du</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">salles</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">salles</text-property>
+                    <text-property name="heading">salles</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">matier_num</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">matier_num</text-property>
+                    <text-property name="heading">matier_num</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">profnum</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">profnum</text-property>
+                    <text-property name="heading">profnum</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">fillier_num</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">fillier_num</text-property>
+                    <text-property name="heading">fillier_num</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">salle_num</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">salle_num</text-property>
+                    <text-property name="heading">salle_num</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">is_reserve</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">is_reserve</text-property>
+                    <text-property name="heading">is_reserve</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">is_permanence</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">is_permanence</text-property>
+                    <text-property name="heading">is_permanence</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">dossExam</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                    <property name="position">1</property>
+                    <expression name="defaultValue" type="javascript">params["IdDossExam"].value</expression>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">id</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">dossier_exam</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">au</property>
+                        <property name="dataType">time</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">date_examine</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">svg_indice</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">du</property>
+                        <property name="dataType">time</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">salles</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">matier_num</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">profnum</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">fillier_num</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">salle_num</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">is_reserve</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">13</property>
+                        <property name="name">is_permanence</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">appexam</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">id</property>
+                    <property name="nativeName">id</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">dossier_exam</property>
+                    <property name="nativeName">dossier_exam</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">au</property>
+                    <property name="nativeName">au</property>
+                    <property name="dataType">time</property>
+                    <property name="nativeDataType">92</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">date_examine</property>
+                    <property name="nativeName">date_examine</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">svg_indice</property>
+                    <property name="nativeName">svg_indice</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">du</property>
+                    <property name="nativeName">du</property>
+                    <property name="dataType">time</property>
+                    <property name="nativeDataType">92</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">salles</property>
+                    <property name="nativeName">salles</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">matier_num</property>
+                    <property name="nativeName">matier_num</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">profnum</property>
+                    <property name="nativeName">profnum</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">fillier_num</property>
+                    <property name="nativeName">fillier_num</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">salle_num</property>
+                    <property name="nativeName">salle_num</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">is_reserve</property>
+                    <property name="nativeName">is_reserve</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">-7</property>
+                </structure>
+                <structure>
+                    <property name="position">13</property>
+                    <property name="name">is_permanence</property>
+                    <property name="nativeName">is_permanence</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">-7</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select public.examen_resultats.id,
+public.examen_resultats.dossier_exam,
+public.examen_resultats.au,
+public.examen_resultats.date_examine,
+public.examen_resultats.svg_indice,
+public.examen_resultats.du,
+public.examen_resultats.salles,
+public.examen_matiere.name as matier_num,
+public.examen_prof.name as profNum,
+public.examen_fillier.name as fillier_num,
+public.examen_salles.name as Salle_num,
+public.examen_salles.is_reserve,
+public.examen_salles.is_permanence
+
+from public.examen_resultats
+left join public.examen_prof on  public.examen_prof.id=public.examen_resultats.prof
+left join public.examen_matiere on public.examen_matiere.id=public.examen_resultats.matiere
+left join public.examen_fillier on public.examen_fillier.id=public.examen_resultats.fillier
+left join public.examen_salles on public.examen_salles.id=public.examen_resultats.salles
+
+where public.examen_resultats.dossier_exam = ?
+order by public.examen_salles.is_reserve , public.examen_salles.is_permanence , public.examen_salles.name ,public.examen_resultats.date_examine, public.examen_resultats.du]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>id</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-5</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>id</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>id</design:label>
+            <design:formattingHints>
+              <design:displaySize>20</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>archived</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-7</design:nativeDataTypeCode>
+            <design:precision>1</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>archived</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>archived</design:label>
+            <design:formattingHints>
+              <design:displaySize>1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>version</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>version</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>version</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>created_on</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>93</design:nativeDataTypeCode>
+            <design:precision>29</design:precision>
+            <design:scale>6</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>created_on</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>created_on</design:label>
+            <design:formattingHints>
+              <design:displaySize>29</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>updated_on</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>93</design:nativeDataTypeCode>
+            <design:precision>29</design:precision>
+            <design:scale>6</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>updated_on</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>updated_on</design:label>
+            <design:formattingHints>
+              <design:displaySize>29</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>attrs</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1111</design:nativeDataTypeCode>
+            <design:precision>2147483647</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>attrs</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>attrs</design:label>
+            <design:formattingHints>
+              <design:displaySize>2147483647</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>au</design:name>
+              <design:position>7</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>92</design:nativeDataTypeCode>
+            <design:precision>15</design:precision>
+            <design:scale>6</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>au</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>au</design:label>
+            <design:formattingHints>
+              <design:displaySize>15</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>date_examine</design:name>
+              <design:position>8</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+            <design:precision>13</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>date_examine</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>date_examine</design:label>
+            <design:formattingHints>
+              <design:displaySize>13</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>du</design:name>
+              <design:position>9</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>92</design:nativeDataTypeCode>
+            <design:precision>15</design:precision>
+            <design:scale>6</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>du</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>du</design:label>
+            <design:formattingHints>
+              <design:displaySize>15</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>is_obligated</design:name>
+              <design:position>10</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-7</design:nativeDataTypeCode>
+            <design:precision>1</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>is_obligated</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>is_obligated</design:label>
+            <design:formattingHints>
+              <design:displaySize>1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>svg_indice</design:name>
+              <design:position>11</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>svg_indice</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>svg_indice</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>created_by</design:name>
+              <design:position>12</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-5</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>created_by</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>created_by</design:label>
+            <design:formattingHints>
+              <design:displaySize>20</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>updated_by</design:name>
+              <design:position>13</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-5</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>updated_by</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>updated_by</design:label>
+            <design:formattingHints>
+              <design:displaySize>20</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>dossier_exam</design:name>
+              <design:position>14</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-5</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>dossier_exam</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>dossier_exam</design:label>
+            <design:formattingHints>
+              <design:displaySize>20</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>etablissement</design:name>
+              <design:position>15</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-5</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>etablissement</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>etablissement</design:label>
+            <design:formattingHints>
+              <design:displaySize>20</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>fillier</design:name>
+              <design:position>16</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-5</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>fillier</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>fillier</design:label>
+            <design:formattingHints>
+              <design:displaySize>20</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>matiere</design:name>
+              <design:position>17</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-5</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>matiere</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>matiere</design:label>
+            <design:formattingHints>
+              <design:displaySize>20</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>prof</design:name>
+              <design:position>18</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-5</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>prof</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>prof</design:label>
+            <design:formattingHints>
+              <design:displaySize>20</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>salles</design:name>
+              <design:position>19</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-5</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>salles</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>salles</design:label>
+            <design:formattingHints>
+              <design:displaySize>20</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="type">a4</property>
+            <property name="bottomMargin">0.25in</property>
+            <property name="headerHeight">0in</property>
+            <property name="footerHeight">0in</property>
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <table id="6">
+            <property name="dataSet">ResultatData</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">au</property>
+                    <text-property name="displayName">au</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["au"]</expression>
+                    <property name="dataType">time</property>
+                </structure>
+                <structure>
+                    <property name="name">date_examine</property>
+                    <text-property name="displayName">date_examine</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["date_examine"]</expression>
+                    <property name="dataType">date</property>
+                </structure>
+                <structure>
+                    <property name="name">du</property>
+                    <text-property name="displayName">du</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["du"]</expression>
+                    <property name="dataType">time</property>
+                </structure>
+                <structure>
+                    <property name="name">svg_indice</property>
+                    <text-property name="displayName">svg_indice</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["svg_indice"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">salles</property>
+                    <text-property name="displayName">salles</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["salles"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">profnum</property>
+                    <text-property name="displayName">profnum</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["profnum"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">matier_num</property>
+                    <text-property name="displayName">matier_num</text-property>
+                    <expression name="expression" type="javascript">if(row["is_reserve"]){&#13;
+"****";&#13;
+}else if(row["is_permanence"]){&#13;
+"****";&#13;
+}else&#13;
+{&#13;
+dataSetRow["matier_num"]&#13;
+}</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">fillier_num</property>
+                    <text-property name="displayName">fillier_num</text-property>
+                    <expression name="expression" type="javascript">if(row["is_reserve"]){&#13;
+"****";&#13;
+}else if(row["is_permanence"]){&#13;
+"****";&#13;
+}else&#13;
+{&#13;
+dataSetRow["fillier_num"]&#13;
+}</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">salle_num</property>
+                    <text-property name="displayName">salle_num</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["salle_num"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">dossier_exam</property>
+                    <text-property name="displayName">dossier_exam</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["dossier_exam"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">is_reserve</property>
+                    <text-property name="displayName">is_reserve</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["is_reserve"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">is_permanence</property>
+                    <text-property name="displayName">is_permanence</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["is_permanence"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">Aggregation</property>
+                    <text-property name="displayName">count</text-property>
+                    <property name="dataType">integer</property>
+                    <simple-property-list name="aggregateOn">
+                        <value>groupeDu</value>
+                    </simple-property-list>
+                    <property name="aggregateFunction">COUNT</property>
+                    <list-property name="arguments">
+                        <structure>
+                            <property name="name">Expression</property>
+                            <expression name="value" type="javascript">row["date_examine"]</expression>
+                        </structure>
+                    </list-property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">Column Binding</property>
+                    <text-property name="displayName">date_time_name</text-property>
+                    <expression name="expression" type="javascript">if(row["date_examine"].getDay()==0){&#13;
+"الأحد " + row["date_examine"] +" ابتداء من " +row["du"];&#13;
+}&#13;
+if(row["date_examine"].getDay()==1){&#13;
+" الإثنين " + row["date_examine"]+" ابتداء من " +row["du"];&#13;
+}&#13;
+if(row["date_examine"].getDay()==2){&#13;
+" الثلاثاء " + row["date_examine"]+" ابتداء من " +row["du"];&#13;
+}&#13;
+if(row["date_examine"].getDay()==3){&#13;
+" الأربعاء " + row["date_examine"]+" ابتداء من " +row["du"];&#13;
+}&#13;
+if(row["date_examine"].getDay()==4){&#13;
+" الخميس " + row["date_examine"]+" ابتداء من " +row["du"];&#13;
+}&#13;
+if(row["date_examine"].getDay()==5){&#13;
+" الجمعة " + row["date_examine"]+" ابتداء من " +row["du"];&#13;
+}&#13;
+if(row["date_examine"].getDay()==6){&#13;
+" السبت " + row["date_examine"]+" ابتداء من " +row["du"];&#13;
+}</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">DayName</property>
+                    <text-property name="displayName">idDayOfDate</text-property>
+                    <expression name="expression" type="javascript">if(row["date_examine"].getDay()==0){&#13;
+"الأحد " ;&#13;
+}&#13;
+if(row["date_examine"].getDay()==1){&#13;
+"الإثنين" ;&#13;
+}&#13;
+if(row["date_examine"].getDay()==2){&#13;
+"الثلاثاء" ;&#13;
+}&#13;
+if(row["date_examine"].getDay()==3){&#13;
+"الأربعاء" ;&#13;
+}&#13;
+if(row["date_examine"].getDay()==4){&#13;
+"الخميس" ;&#13;
+}&#13;
+if(row["date_examine"].getDay()==5){&#13;
+"الجمعة";&#13;
+}&#13;
+if(row["date_examine"].getDay()==6){&#13;
+"السبت";&#13;
+}</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">MounthOfDay</property>
+                    <expression name="expression" type="javascript">if(row["date_examine"].getMonth()==0){&#13;
+"يناير";&#13;
+}&#13;
+if(row["date_examine"].getMonth()==1){&#13;
+"فبراير";&#13;
+}&#13;
+if(row["date_examine"].getMonth()==2){&#13;
+"مارس";&#13;
+}&#13;
+if(row["date_examine"].getMonth()==3){&#13;
+"ابريل";&#13;
+}&#13;
+if(row["date_examine"].getMonth()==4){&#13;
+"ماي";&#13;
+}&#13;
+if(row["date_examine"].getMonth()==5){&#13;
+"يونيو";&#13;
+}&#13;
+if(row["date_examine"].getMonth()==6){&#13;
+"يوليوز";&#13;
+}&#13;
+if(row["date_examine"].getMonth()==7){&#13;
+"غشت";&#13;
+}&#13;
+if(row["date_examine"].getMonth()==8){&#13;
+"شتنبر";&#13;
+}if(row["date_examine"].getMonth()==9){&#13;
+"أكثوبر";&#13;
+}if(row["date_examine"].getMonth()==10){&#13;
+"نونير";&#13;
+}if(row["date_examine"].getMonth()==11){&#13;
+"دجنبر";&#13;
+}</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">DayName2</property>
+                    <expression name="expression" type="javascript">if(row["date_examine"].getDay()==0){&#13;
+" الأحد ";&#13;
+}&#13;
+if(row["date_examine"].getDay()==1){&#13;
+" الإثنين" ;&#13;
+}&#13;
+if(row["date_examine"].getDay()==2){&#13;
+" الثلاثاء";&#13;
+}&#13;
+if(row["date_examine"].getDay()==3){&#13;
+" الأربعاء " ;&#13;
+}&#13;
+if(row["date_examine"].getDay()==4){&#13;
+" الخميس ";&#13;
+}&#13;
+if(row["date_examine"].getDay()==5){&#13;
+" الجمعة " ;&#13;
+}&#13;
+if(row["date_examine"].getDay()==6){&#13;
+" السبت " ;&#13;
+&#13;
+}</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+            </list-property>
+            <column id="4646">
+                <property name="width">45mm</property>
+            </column>
+            <column id="4667">
+                <property name="width">15mm</property>
+            </column>
+            <column id="60">
+                <property name="width">13mm</property>
+            </column>
+            <column id="61">
+                <property name="width">13mm</property>
+            </column>
+            <column id="62">
+                <property name="width">2cm</property>
+            </column>
+            <column id="65">
+                <property name="width">15mm</property>
+            </column>
+            <column id="66"/>
+            <column id="298">
+                <property name="width">2cm</property>
+            </column>
+            <header>
+                <row id="7">
+                    <cell id="4637"/>
+                    <cell id="4658"/>
+                    <cell id="8"/>
+                    <cell id="10"/>
+                    <cell id="12"/>
+                    <cell id="18"/>
+                    <cell id="20"/>
+                    <cell id="286"/>
+                </row>
+            </header>
+            <group id="261">
+                <property name="groupName">GroupDossExam</property>
+                <expression name="keyExpr" type="javascript">row["dossier_exam"]</expression>
+                <structure name="toc">
+                    <expression name="expressionValue" type="javascript">row["dossier_exam"]</expression>
+                </structure>
+                <property name="hideDetail">false</property>
+                <header>
+                    <row id="262">
+                        <cell id="4638"/>
+                        <cell id="4659"/>
+                        <cell id="263"/>
+                        <cell id="264"/>
+                        <cell id="265"/>
+                        <cell id="268"/>
+                        <cell id="269"/>
+                        <cell id="287"/>
+                    </row>
+                </header>
+            </group>
+            <group id="73">
+                <property name="groupName">DateExam</property>
+                <expression name="keyExpr" type="javascript">row["date_examine"]</expression>
+                <structure name="toc">
+                    <expression name="expressionValue" type="javascript">row["date_examine"]</expression>
+                </structure>
+                <property name="hideDetail">false</property>
+                <property name="pageBreakAfter">always-excluding-last</property>
+                <property name="pageBreakBefore">always-excluding-first</property>
+                <header>
+                    <row id="74">
+                        <cell id="4639"/>
+                        <cell id="4660"/>
+                        <cell id="75"/>
+                        <cell id="76"/>
+                        <cell id="77"/>
+                        <cell id="80"/>
+                        <cell id="81"/>
+                        <cell id="288"/>
+                    </row>
+                </header>
+            </group>
+            <group id="108">
+                <property name="groupName">groupeDu</property>
+                <property name="sortDirection">desc</property>
+                <expression name="keyExpr" type="javascript">row["du"]</expression>
+                <structure name="toc">
+                    <expression name="expressionValue" type="javascript">row["du"]</expression>
+                </structure>
+                <property name="hideDetail">false</property>
+                <property name="pageBreakAfter">always-excluding-last</property>
+                <property name="pageBreakBefore">always-excluding-first</property>
+                <list-property name="sort">
+                    <structure>
+                        <expression name="key" type="javascript">row["du"]</expression>
+                        <property name="direction">asc</property>
+                        <property name="strength">-1</property>
+                    </structure>
+                </list-property>
+                <header>
+                    <row id="314">
+                        <cell id="4640">
+                            <property name="colSpan">8</property>
+                            <property name="rowSpan">1</property>
+                            <label id="259">
+                                <property name="fontFamily">"Arial"</property>
+                                <property name="fontSize">16pt</property>
+                                <property name="fontWeight">bold</property>
+                                <property name="textAlign">center</property>
+                                <text-property name="text">تتبع حضورالأساتذة المراقبين في الامتحان ليوم</text-property>
+                            </label>
+                        </cell>
+                    </row>
+                    <row id="109">
+                        <property name="backgroundColor">#C0C0C0</property>
+                        <cell id="4641"/>
+                        <cell id="4662">
+                            <data id="4617">
+                                <property name="fontWeight">bold</property>
+                                <property name="textAlign">center</property>
+                                <property name="resultSetColumn">Aggregation</property>
+                            </data>
+                        </cell>
+                        <cell id="110"/>
+                        <cell id="111">
+                            <property name="colSpan">4</property>
+                            <property name="rowSpan">1</property>
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="textAlign">center</property>
+                            <data id="4633">
+                                <property name="fontWeight">bold</property>
+                                <property name="marginLeft">1pt</property>
+                                <property name="marginRight">1pt</property>
+                                <property name="paddingLeft">1pt</property>
+                                <property name="paddingRight">1pt</property>
+                                <structure name="dateTimeFormat">
+                                    <property name="category">Custom</property>
+                                    <property name="pattern">yyyy</property>
+                                    <property name="locale">fr_FR</property>
+                                </structure>
+                                <property name="display">inline</property>
+                                <property name="resultSetColumn">date_examine</property>
+                            </data>
+                            <data id="4629">
+                                <property name="fontWeight">bold</property>
+                                <property name="marginLeft">1pt</property>
+                                <property name="marginRight">1pt</property>
+                                <property name="paddingLeft">1pt</property>
+                                <property name="paddingRight">1pt</property>
+                                <structure name="dateTimeFormat">
+                                    <property name="category">Unformatted</property>
+                                    <property name="locale">fil</property>
+                                </structure>
+                                <property name="display">inline</property>
+                                <property name="resultSetColumn">MounthOfDay</property>
+                            </data>
+                            <data id="4636">
+                                <property name="fontWeight">bold</property>
+                                <property name="marginLeft">1pt</property>
+                                <property name="marginRight">1pt</property>
+                                <property name="paddingLeft">1pt</property>
+                                <property name="paddingRight">1pt</property>
+                                <structure name="dateTimeFormat">
+                                    <property name="category">Custom</property>
+                                    <property name="pattern">dd</property>
+                                    <property name="locale">fr_FR</property>
+                                </structure>
+                                <property name="display">inline</property>
+                                <property name="resultSetColumn">date_examine</property>
+                            </data>
+                            <data id="4634">
+                                <property name="fontWeight">bold</property>
+                                <property name="marginLeft">1pt</property>
+                                <property name="marginRight">1pt</property>
+                                <property name="paddingLeft">1pt</property>
+                                <property name="paddingRight">1pt</property>
+                                <property name="display">inline</property>
+                                <property name="resultSetColumn">DayName2</property>
+                            </data>
+                        </cell>
+                        <cell id="289"/>
+                    </row>
+                    <row id="132">
+                        <property name="fontSize">12pt</property>
+                        <property name="fontWeight">bold</property>
+                        <cell id="4642">
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">thin</property>
+                            <property name="textAlign">center</property>
+                            <label id="4668">
+                                <property name="fontFamily">"Arial"</property>
+                                <text-property name="text">ملاحظة</text-property>
+                            </label>
+                        </cell>
+                        <cell id="4663">
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">thin</property>
+                            <property name="textAlign">center</property>
+                            <label id="4647">
+                                <property name="fontFamily">"Arial"</property>
+                                <text-property name="text">الحضور</text-property>
+                            </label>
+                        </cell>
+                        <cell id="133">
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">thin</property>
+                            <property name="textAlign">center</property>
+                            <label id="9">
+                                <property name="fontFamily">"Arial"</property>
+                                <text-property name="text">إلى</text-property>
+                            </label>
+                        </cell>
+                        <cell id="134">
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">thin</property>
+                            <property name="textAlign">center</property>
+                            <label id="13">
+                                <property name="fontFamily">"Arial"</property>
+                                <text-property name="text">من</text-property>
+                            </label>
+                        </cell>
+                        <cell id="135">
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">thin</property>
+                            <property name="textAlign">center</property>
+                            <label id="23">
+                                <property name="fontFamily">"Arial"</property>
+                                <text-property name="text">مادة الاختبار</text-property>
+                            </label>
+                        </cell>
+                        <cell id="138">
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">thin</property>
+                            <property name="textAlign">center</property>
+                            <label id="27">
+                                <property name="fontFamily">"Arial"</property>
+                                <text-property name="text">القاعة</text-property>
+                            </label>
+                        </cell>
+                        <cell id="303">
+                            <property name="colSpan">2</property>
+                            <property name="rowSpan">1</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">thin</property>
+                            <property name="textAlign">center</property>
+                            <label id="25">
+                                <property name="fontFamily">"Arial"</property>
+                                <text-property name="text">المراقب</text-property>
+                            </label>
+                        </cell>
+                    </row>
+                </header>
+            </group>
+            <group id="185">
+                <property name="groupName">GroupeSalles</property>
+                <expression name="keyExpr" type="javascript">row["salles"]</expression>
+                <structure name="toc">
+                    <expression name="expressionValue" type="javascript">row["salles"]</expression>
+                </structure>
+                <property name="hideDetail">false</property>
+                <property name="pageBreakAfter">avoid</property>
+                <property name="pageBreakBefore">avoid</property>
+                <property name="pageBreakInside">avoid</property>
+                <list-property name="sort">
+                    <structure>
+                        <expression name="key" type="javascript">row["is_permanence"]</expression>
+                        <property name="direction">asc</property>
+                        <property name="strength">-1</property>
+                    </structure>
+                    <structure>
+                        <expression name="key" type="javascript">row["is_reserve"]</expression>
+                        <property name="direction">asc</property>
+                        <property name="strength">-1</property>
+                    </structure>
+                    <structure>
+                        <expression name="key" type="javascript">row["salle_num"]</expression>
+                        <property name="direction">asc</property>
+                        <property name="strength">-1</property>
+                    </structure>
+                </list-property>
+                <header>
+                    <row id="186">
+                        <cell id="4643">
+                            <property name="drop">none</property>
+                            <property name="borderBottomStyle">none</property>
+                            <property name="borderLeftStyle">none</property>
+                            <property name="borderRightStyle">none</property>
+                            <property name="borderTopStyle">none</property>
+                            <property name="textAlign">center</property>
+                        </cell>
+                        <cell id="4664">
+                            <property name="drop">none</property>
+                            <property name="borderBottomStyle">none</property>
+                            <property name="borderLeftStyle">none</property>
+                            <property name="borderRightStyle">none</property>
+                            <property name="borderTopStyle">none</property>
+                            <property name="textAlign">center</property>
+                        </cell>
+                        <cell id="188">
+                            <property name="drop">detail</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="textAlign">center</property>
+                            <data id="30">
+                                <property name="fontFamily">"Arial"</property>
+                                <structure name="dateTimeFormat">
+                                    <property name="category">Short Time</property>
+                                    <property name="pattern">Short Time</property>
+                                    <property name="locale">fr</property>
+                                </structure>
+                                <property name="resultSetColumn">au</property>
+                            </data>
+                        </cell>
+                        <cell id="189">
+                            <property name="drop">detail</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="textAlign">center</property>
+                            <data id="34">
+                                <property name="fontFamily">"Arial"</property>
+                                <structure name="dateTimeFormat">
+                                    <property name="category">Short Time</property>
+                                    <property name="pattern">Short Time</property>
+                                    <property name="locale">fr</property>
+                                </structure>
+                                <property name="resultSetColumn">du</property>
+                            </data>
+                        </cell>
+                        <cell id="190">
+                            <property name="drop">detail</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="textAlign">center</property>
+                            <data id="71">
+                                <property name="fontFamily">"Arial"</property>
+                                <property name="resultSetColumn">matier_num</property>
+                            </data>
+                        </cell>
+                        <cell id="193">
+                            <property name="drop">detail</property>
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="textAlign">center</property>
+                            <data id="210">
+                                <property name="fontFamily">"Arial"</property>
+                                <property name="fontSize">12pt</property>
+                                <property name="fontWeight">bold</property>
+                                <property name="textAlign">center</property>
+                                <property name="resultSetColumn">salle_num</property>
+                            </data>
+                        </cell>
+                        <cell id="194"/>
+                        <cell id="291"/>
+                    </row>
+                </header>
+            </group>
+            <detail>
+                <row id="28">
+                    <cell id="4644">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="textAlign">center</property>
+                    </cell>
+                    <cell id="4665">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="textAlign">center</property>
+                    </cell>
+                    <cell id="29">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="textAlign">center</property>
+                    </cell>
+                    <cell id="31">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="textAlign">center</property>
+                    </cell>
+                    <cell id="33">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="textAlign">center</property>
+                    </cell>
+                    <cell id="39">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="textAlign">center</property>
+                    </cell>
+                    <cell id="41">
+                        <property name="colSpan">2</property>
+                        <property name="rowSpan">1</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="textAlign">center</property>
+                        <data id="70">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="resultSetColumn">profnum</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="49">
+                    <cell id="4645"/>
+                    <cell id="4666"/>
+                    <cell id="50"/>
+                    <cell id="51"/>
+                    <cell id="52"/>
+                    <cell id="55"/>
+                    <cell id="56"/>
+                    <cell id="297"/>
+                </row>
+            </footer>
+        </table>
+    </body>
+</report>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+  <form name="register-form" title="register" model="com.axelor.auth.db.User" width="mini" canNew="false" canSave="false" canArchive="false" canDelete="false" canAttach="false" canCopy="false" canEdit="false" onLoad="action-load-register" onNew="action-load-register">
+      <panel colSpan="12" itemSpan="12">
+          <label name="messageFr"
+                 title=" Entrez votre adresse e-mail (Lettres miniscules) si vous avez oublié le mot de passe ou souhaitez créer un nouveau compte puis cliquez sur Suivant"
+                 css="label-bold bold large"/>
+          <label name="messageAr"
+                 title="(الحروف الصغيرة)أدخل عنوان بريدك الإلكتروني إذا نسيت كلمة المرور أو ترغب في إنشاء حساب جديد ، ثم انقر فوق التالي"
+                 css="label-bold bold large"/>
+          <field name="email" widget="email" required="true" placeholder="Écrivez votre email"
+                 css="label-bold bold large"/>
+          <button name="btn-send-code"  title="Suivant" colSpan="3" onClick="action-send-Email"/>
+
+          <label name="ErrorEmailFr"
+                 title="Votre email est invalide" css="btn-danger label-bold bold large" hidden="true"/>
+          <label name="ErrorEmailAr"
+                 title="بريدك الإلكتروني غير صحيح" css="btn-danger label-bold bold large" hidden="true"/>
+          <panel name="panalEnregistre" hidden="true" showTitle="false" colSpan="12" itemSpan="12">
+              <label name="LabelEmailFr"
+                     title="Le code d'activation et le lien ont été envoyés à votre e-mail, entrez le code d'activation et le mot de passe, puis cliquez sur Suivant ou cliquez sur le lien dans votre e-mail"
+                     css="label-bold bold large" />
+              <label name="LabelEmailAr"
+                     title="تم إرسال رمز التفعيل والرابط إلى بريدك الإلكتروني ، أدخل رمز التفعيل وكلمة المرور ثم انقر فوق التالي ، أو انقر فوق الرابط الموجود في بريدك الإلكتروني"
+                     css="label-bold bold large"/>
+
+              <field name="codeActivation" title="Code D'activation" placeholder="Tapez le code  D'activation"
+                     requiredIf="true"  css="label-bold bold large"/>
+
+              <field name="MotdePasse" title="mot de passe" placeholder="Tapez votre mot de passe" widget="password"
+                     requiredIf="true"   css="label-bold bold large" hideIf="!codeActivation" />
+
+              <field name="confirmerMotdePasse" title="Confirmer le mot de passe" placeholder="Répétez votre mot de passe"
+                     widget="password"  requiredIf="true"  css="label-bold bold large" hideIf="!codeActivation" />
+
+              <button name="btn-register"  onClick="action-register" title="Suivant" colSpan="3" hideIf="!codeActivation"/>
+          </panel>
+          <label name="successFr"  title="L'opération a réussi, cliquez sur Connexion pour continuer" css="label-bold bold larg" hidden="true"/>
+          <label name="successAr"  title="تمت العملية بنجاح ، انقر فوق اتصال  للمتابعة" css="label-bold bold large" hidden="true"/>
+
+          <label name="dangerFr"
+                 title="Erreur ! Vérifiez l'e-mail, le code de confirmation ou le mot de passe" css="btn-danger label-bold bold larg" hidden="true"/>
+          <label name="dangerAr"
+                 title="خطأ ! تحقق من البريد الإلكتروني أو رمز التأكيد أو كلمة المرور" css="btn-danger label-bold bold larg" hidden="true"/>
+<!--          <button name="btn-quite-register" hidden="true" onClick="action-quitte-register" title="Suivant" colSpan="3"/>-->
+          <field name="sendredirect" title="sendredirect" hidden="true"/>
+          <field name="sendredirectConnecte" showTitle="false" widget="boolean-switch" readonly="true" colSpan="12 " hidden="true">
+              <viewer depends="sendredirect">
+                  <![CDATA[
+         <div class="text-left">
+           <a class="btn btn-primary" href='{{record.sendredirect}}'><span x-translate>Connexion</span></a>
+         </div>
+              ]]>
+              </viewer>
+          </field>
+      </panel>
+  </form>
+
+  <action-method name="action-register">
+    <call class="com.setting.web.UserController" method="register"/>
+  </action-method>
+    <action-method name="action-send-Email">
+        <call class="com.setting.web.UserController" method="SendEmail"/>
+    </action-method>
+    <action-method name="action-verification-Email">
+        <call class="com.setting.web.UserController" method="verificationEmail"/>
+    </action-method>
+    <action-method name="action-verification-password">
+        <call class="com.setting.web.UserController" method="verificationPassword"/>
+    </action-method>
+    <action-method name="action-verification-conf-password">
+        <call class="com.setting.web.UserController" method="verificationConfPassword"/>
+    </action-method>
+
+    <action-method name="action-quitte-register">
+        <call class="com.setting.web.UserController" method="quitteRegister"/>
+    </action-method>
+<action-method name="action-load-register">
+    <call class="com.setting.web.UserController" method="onloadRegister"/>
+</action-method>
+
+</object-views>

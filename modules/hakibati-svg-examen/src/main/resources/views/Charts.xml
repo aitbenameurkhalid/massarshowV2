@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+  <chart name="chart.prof.per.sexe" title="Les surveillants par sexe" >
+    <dataset type="jpql">
+    <![CDATA[
+  SELECT
+    Count(self.name) AS amount,
+    _sexe.name AS sexeProf,
+    _etablissement.name AS etablissement
+
+FROM
+    Prof self
+LEFT JOIN
+    self.etablissement AS _etablissement
+LEFT JOIN
+    self.sexe AS _sexe
+WHERE
+      self.etablissement = :_etablissement AND self.fonctionExaman.code =1
+GROUP BY
+    _etablissement.name,
+    _sexe.name
+  ]]></dataset>
+    <category key="sexeProf" type="text"/>
+    <series key="amount" type="donut"/>
+<!--    <series key="amount" groupBy="etablissement" type="bar"/>-->
+  </chart>
+
+
+
+
+  <chart name="chart.prof.per.cycle" title="Les surveillants par cycle">
+    <dataset type="jpql">
+      <![CDATA[
+    SELECT
+     Count(self.name) AS amount,
+      _cycle.name AS cycleProf,
+      _etablissement.name AS etablissement
+
+  FROM
+      Prof self
+  LEFT JOIN
+      self.etablissement AS _etablissement
+  LEFT JOIN
+      self.cycle AS _cycle
+  WHERE
+        self.etablissement = :_etablissement AND self.fonctionExaman.code =1
+  GROUP BY
+      _etablissement.name,
+      _cycle.name
+
+  ]]></dataset>
+    <category key="cycleProf" type="text"/>
+    <series key="amount" type="donut"/>
+  </chart>
+
+
+  <chart name="chart.prof.per.fonction" title="Les professeurs par fonction" >
+    <dataset type="jpql">
+      <![CDATA[
+    SELECT
+     Count(self.name) AS amount,
+      _fonctionExaman.name AS fonctionExamanProf,
+      _etablissement.name AS etablissement
+
+  FROM
+      Prof self
+  LEFT JOIN
+      self.etablissement AS _etablissement
+  LEFT JOIN
+      self.fonctionExaman AS _fonctionExaman
+  WHERE
+        self.etablissement = :_etablissement
+  GROUP BY
+      _etablissement.name,
+      _fonctionExaman.name
+
+  ]]></dataset>
+    <category key="fonctionExamanProf" type="text"/>
+    <series key="amount" type="donut"/>
+  </chart>
+
+  <chart name="chart.prof.per.matiere" title="Les surveillants par matières">
+    <dataset type="jpql">
+      <![CDATA[
+    SELECT
+      Count(self.name) AS amount,
+      _matiere.name AS matiereProf,
+      _etablissement.name AS etablissement
+
+  FROM
+      Prof self
+  LEFT JOIN
+      self.etablissement AS _etablissement
+  LEFT JOIN
+      self.matiere AS _matiere
+  WHERE
+        self.etablissement = :_etablissement AND self.fonctionExaman.code =1
+  GROUP BY
+      _etablissement.name,
+      _matiere.name
+
+  ]]></dataset>
+    <category key="matiereProf" type="text"/>
+    <series key="amount" type="bar"/>
+  </chart>
+  <chart name="chart.fillier.per.salles" title="nomber salles par filière">
+    <dataset type="jpql"><![CDATA[
+    SELECT
+      Count(self.salles.name) AS amount,
+      _fillier.name AS fillierName
+
+  FROM
+      SalleFillier self
+  LEFT JOIN
+      self.etablissement AS _etablissement
+  LEFT JOIN
+      self.fillier AS _fillier
+  WHERE
+        self.etablissement = :_etablissement
+  GROUP BY
+     _etablissement.name,
+     _fillier.name
+
+  ]]></dataset>
+    <category key="fillierName" type="text"/>
+    <series key="amount" type="bar"/>
+  </chart>
+</object-views>

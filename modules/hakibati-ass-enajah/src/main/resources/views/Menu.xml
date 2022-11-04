@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+  <menuitem name="menu-ass-enajah" title="ASS-ENNAJAH" icon="fa-exchange"/>
+  <menuitem name="menu-ass-enajah-budget" title="BUDGET" icon="fa-compress" icon-background="green"
+            parent="menu-ass-enajah"/>
+  <menuitem name="menu-ass-enajah-Administratif" title="ADMINISTRATIF" icon="fa-expand" icon-background="red"
+            parent="menu-ass-enajah"/>
+  <menuitem name="menu-ass-enajah-print" title="Imprimés" icon="fa-print" icon-background="orange"
+            parent="menu-ass-enajah" action="action-ass-enajah-imprimes"/>
+  <action-view name="action-ass-enajah-imprimes" title="Imprimés"
+               model="com.hakibati.ass.enajah.db.AssEnajahInfo">
+    <view type="form" name="print-ass-enajah-form"/>
+  </action-view>
+
+  <menuitem name="menu-ass-enajah-budget-depenses" title="DEPENSES" icon="fa-expand" icon-background="red"
+            parent="menu-ass-enajah-budget"/>
+  <menuitem name="menu-ass-enajah-budget-recettes" title="RECETTES" icon="fa-expand" icon-background="red"
+            parent="menu-ass-enajah-budget"/>
+  <menuitem name="menu-ass-enajah-budget-transSolde" title="TRANS DE SOLDE" icon="fa-expand" icon-background="red"
+            parent="menu-ass-enajah-budget" action="action-menu-ass-enajah-budget-transSolde"/>
+
+  <action-view name="action-menu-ass-enajah-budget-transSolde" title="Transfert De Solde"
+               model="com.hakibati.ass.enajah.db.TransfertDeSolde">
+    <view type="grid" name="TransfertDeSolde-grid"/>
+    <view type="form" name="TransfertDeSolde-form"/>
+  </action-view>
+
+  <menuitem name="menu-ass-enajah-budget-depenses-nouveau" title="nouvelle opération" icon="fa-plus"
+            icon-background="green" parent="menu-ass-enajah-budget-depenses"
+            action="action-menu-ass-enajah-budget-depenses-nouveau"/>
+  <action-view name="action-menu-ass-enajah-budget-depenses-nouveau" title="Les opérations"
+               model="com.hakibati.ass.enajah.db.OperationDepense">
+    <view type="form" name="OperationDepense-form"/>
+  </action-view>
+
+  <menuitem name="menu-ass-enajah-budget-depenses-Operations" title="Les opération" icon="fa-plus"
+            icon-background="green" parent="menu-ass-enajah-budget-depenses"
+            action="action-menu-ass-enajah-budget-depenses-Operations"/>
+  <action-view name="action-menu-ass-enajah-budget-depenses-Operations" title="Les opérations"
+               model="com.hakibati.ass.enajah.db.OperationDepense">
+    <view type="grid" name="OperationDepense-grid"/>
+    <view type="form" name="OperationDepense-form"/>
+  </action-view>
+
+  <menuitem name="menu-ass-enajah-budget-recettes-nouveau" title="nouvelle opération" icon="fa-plus"
+            icon-background="green" parent="menu-ass-enajah-budget-recettes"
+            action="action-menu-ass-enajah-budget-recettes-nouveau"/>
+  <action-view name="action-menu-ass-enajah-budget-recettes-nouveau" title="Les opérations"
+               model="com.hakibati.ass.enajah.db.TableRecettes">
+    <view type="form" name="TableRecettes-form"/>
+  </action-view>
+
+  <menuitem name="menu-ass-enajah-budget-recettes-Operations" title="Les opération" icon="fa-plus"
+            icon-background="green" parent="menu-ass-enajah-budget-recettes"
+            action="action-menu-ass-enajah-budget-recettes-Operations"/>
+  <action-view name="action-menu-ass-enajah-budget-recettes-Operations" title="Les opérations"
+               model="com.hakibati.ass.enajah.db.TableRecettes">
+    <view type="grid" name="TableRecettes-grid"/>
+    <view type="form" name="TableRecettes-form"/>
+  </action-view>
+
+  <menuitem name="menu-ass-enajah-setting" title="PARAMETRES" icon="fa-compress" icon-background="green"
+            parent="menu-ass-enajah"/>
+  <menuitem name="menu-ass-enajah-setting-domaine-depense" title="domaine depense" icon="fa-plus"
+            icon-background="green" parent="menu-ass-enajah-setting"
+            action="action-ass-enajah-setting-domaine-depense"/>
+  <action-view name="action-ass-enajah-setting-domaine-depense" title="domaine depense"
+               model="com.hakibati.ass.enajah.db.DomaineDepens">
+    <view type="grid" name="DomaineDepens-grid"/>
+    <view type="form" name="DomaineDepens-form"/>
+  </action-view>
+  <menuitem name="menu-ass-enajah-setting-Domaine-Recette" title="Domaine Recette" icon="fa-plus"
+            icon-background="green" parent="menu-ass-enajah-setting"
+            action="action-ass-enajah-setting-Domaine-Recette"/>
+  <action-view name="action-ass-enajah-setting-Domaine-Recette" title="Domaine Recette"
+               model="com.hakibati.ass.enajah.db.DomaineRecette">
+    <view type="grid" name="DomaineRecette-grid"/>
+    <view type="form" name="DomaineRecette-form"/>
+  </action-view>
+
+  <menuitem name="menu-ass-enajah-Administratif-info" title="INFORMATION ASS" icon="fa-ban"
+            icon-background="green" parent="menu-ass-enajah-Administratif"
+            action="action-ass-enajah-Administratif-info"/>
+  <action-method name="action-ass-enajah-Administratif-info">
+    <call class="com.ass.enajah.web.OperationDepensController" method="OpenAssEnajahInfo"/>
+  </action-method>
+</object-views>

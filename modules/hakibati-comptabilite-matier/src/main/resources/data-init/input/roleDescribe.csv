@@ -1,0 +1,2 @@
+code;indexGroupe;name;namear;roleRead;roleWrite;roleDelete;language;key
+1;1;APPLICATION COMPTABILITE MATIERE;تطبيق المحاسبة المادية;role.hakibati.comptabilite.matier.read;role.hakibati.comptabilite.matier.write;role.hakibati.comptabilite.matier.delete;ar;value:APPLICATION COMPTABILITE MATIERE

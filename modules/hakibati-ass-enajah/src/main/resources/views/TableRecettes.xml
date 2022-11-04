@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+  <grid name="TableRecettes-grid" title="Piece Joindre" model="com.hakibati.ass.enajah.db.TableRecettes"
+        canDelete="false" orderBy="id">
+    <field name="dateDeRecette"/>
+    <field name="donateur"/>
+    <field name="montant" />
+    <field  name="typeMontant"/>
+    <field  name="numeroCheque"/>
+    <field name="domaineRecette"/>
+  </grid>
+
+  <form name="TableRecettes-form" title="Piece Joindre" model="com.hakibati.ass.enajah.db.TableRecettes" >
+    <panel  >
+      <field name="dateDeRecette"/>
+      <field name="donateur"/>
+      <field name="montant" />
+      <field  name="typeMontant"/>
+      <field  name="numeroCheque"/>
+      <field name="domaineRecette"/>
+    </panel>
+    <panel title="Piece Joindre" showTitle="true">
+      <panel-related colSpan="12" field="tablesPieceJoindre" form-view="PieceJoindreRecette-form"
+                     grid-view="PieceJoindreRecette-grid" canSelect="false" canNew="true" canView="true"
+                     canEdit="true" canRemove="true"/>
+    </panel>
+  </form>
+
+  <selection name="select.montant.type">
+    <option value="1">virement à compte bancaire</option>
+    <option value="2">chèque</option>
+    <option value="3">espèces</option>
+  </selection>
+</object-views>

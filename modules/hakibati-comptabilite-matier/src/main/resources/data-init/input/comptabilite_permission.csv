@@ -1,0 +1,38 @@
+"name";"object";"can_read";"can_write";"can_create";"can_remove";"can_export";"condition";"conditionParams";"roleName"
+
+
+"perm.comptabilite.matier.DateDepart.select.etab.r";"com.hakibati.comptabilite.matier.db.DateDepart";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.comptabilite.matier.DateDepart.select.etab.rwc";"com.hakibati.comptabilite.matier.db.DateDepart";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.comptabilite.matier.DateDepart.select.etab.rwcde";"com.hakibati.comptabilite.matier.db.DateDepart";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.comptabilite.matier.DestinataireM.select.etab.r";"com.hakibati.comptabilite.matier.db.DestinataireM";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.comptabilite.matier.DestinataireM.select.etab.rwc";"com.hakibati.comptabilite.matier.db.DestinataireM";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.comptabilite.matier.DestinataireM.select.etab.rwcde";"com.hakibati.comptabilite.matier.db.DestinataireM";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.comptabilite.matier.Mconsommable.select.etab.r";"com.hakibati.comptabilite.matier.db.Mconsommable";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.comptabilite.matier.Mconsommable.select.etab.rwc";"com.hakibati.comptabilite.matier.db.Mconsommable";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.comptabilite.matier.Mconsommable.select.etab.rwcde";"com.hakibati.comptabilite.matier.db.Mconsommable";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.comptabilite.matier.OperationE.select.etab.r";"com.hakibati.comptabilite.matier.db.OperationE";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.comptabilite.matier.OperationE.select.etab.rwc";"com.hakibati.comptabilite.matier.db.OperationE";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.comptabilite.matier.OperationE.select.etab.rwcde";"com.hakibati.comptabilite.matier.db.OperationE";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.comptabilite.matier.OperationS.select.etab.r";"com.hakibati.comptabilite.matier.db.OperationS";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.comptabilite.matier.OperationS.select.etab.rwc";"com.hakibati.comptabilite.matier.db.OperationS";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.comptabilite.matier.OperationS.select.etab.rwcde";"com.hakibati.comptabilite.matier.db.OperationS";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.comptabilite.matier.SourcesM.select.etab.r";"com.hakibati.comptabilite.matier.db.SourcesM";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.comptabilite.matier.SourcesM.select.etab.rwc";"com.hakibati.comptabilite.matier.db.SourcesM";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.comptabilite.matier.SourcesM.select.etab.rwcde";"com.hakibati.comptabilite.matier.db.SourcesM";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.comptabilite.matier.TableE.select.etab.r";"com.hakibati.comptabilite.matier.db.TableE";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.comptabilite.matier.TableE.select.etab.rwc";"com.hakibati.comptabilite.matier.db.TableE";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.comptabilite.matier.TableE.select.etab.rwcde";"com.hakibati.comptabilite.matier.db.TableE";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.comptabilite.matier.TableS.select.etab.r";"com.hakibati.comptabilite.matier.db.TableS";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.comptabilite.matier.TableS.select.etab.rwc";"com.hakibati.comptabilite.matier.db.TableS";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.comptabilite.matier.TableS.select.etab.rwcde";"com.hakibati.comptabilite.matier.db.TableS";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.comptabilite.matier.TypeMatiereC.select.etab.r";"com.hakibati.comptabilite.matier.db.TypeMatiereC";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.comptabilite.matier.TypeMatiereC.select.etab.rwc";"com.hakibati.comptabilite.matier.db.TypeMatiereC";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.comptabilite.matier.TypeMatiereC.select.etab.rwcde";"com.hakibati.comptabilite.matier.db.TypeMatiereC";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";

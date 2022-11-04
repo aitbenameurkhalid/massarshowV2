@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_5.3.xsd">
+
+  <module name="hakibati-etab-inventaire" package="com.hakibati.etab.inventaire.db"/>
+  <entity name="Inventaire" cacheable="true">
+    <binary name="image" title="Photo" help="Max size 4MB." image="true"/>
+    <many-to-one name="type" ref="MaterielType"/>
+    <many-to-one name="name" title="Désignation" ref="MaterielListe"/>
+    <date name="dateReception" title="Date recéption"/>
+    <string name="inventairePrincipale" title="Inventaire principale"/>
+    <string name="inventaireType" title="Inventaire de type"/>
+    <string name="marqueModele" title="Marque / Modèle"/>
+    <string name="fournisseur"/>
+    <string name="nSerie" title="N° serie"/>
+    <string name="prixUni" title="Prix unitaire"/>
+    <string name="locale"/>
+    <many-to-one name="pvDesignation" ref="com.axelor.meta.db.MetaFile" title="pvDesignation"
+                 index="idx_fiche_designation"/>
+    <many-to-one name="pvReception" ref="com.axelor.meta.db.MetaFile" title="pvReception" index="idx_fiche_reception"/>
+    <date name="dateRadiation" title="Date radiation"/>
+    <string name="motifRadiation" translatable="true"/>
+    <many-to-one name="pvScane" ref="com.axelor.meta.db.MetaFile" title="pvRadiation" index="idx_fiche_radiation"/>
+
+    <string name="commentaire" title="Commentaire"/>
+
+    <one-to-many name="suivi" ref="SuiviMateriel" title="Suivi" mappedBy="inventaire"/>
+
+    <many-to-one name="etablissement" ref="com.app.application.db.Etablissement"  >
+      <![CDATA[
+    if (etablissement == null)
+   return createdBy.getEtablissementSelectionnee() ;
+   return etablissement;
+      ]]>
+    </many-to-one>
+    <many-to-one name="createdBy" ref="com.axelor.auth.db.User"/>
+    <track>
+      <field name="type"/>
+      <field name="name"/>
+      <field name="inventairePrincipale"/>
+      <field name="dateReception"/>
+      <field name="dateRadiation"/>
+    </track>
+
+  </entity>
+</domain-models>

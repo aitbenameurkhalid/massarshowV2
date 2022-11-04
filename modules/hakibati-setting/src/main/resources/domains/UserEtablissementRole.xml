@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_5.3.xsd">
+
+  <module name="hakibati-setting" package="com.hakibati.setting.db" />
+  <entity name="UserEtablissementRole" cacheable="true" >
+    <many-to-one name="userEtablissement" title="les utilisateurs d établissement" ref="com.app.application.db.UserEtablissement"/>
+    <many-to-one name="roleDescribe" title="les roles" ref="com.hakibati.setting.db.RoleDescribe"/>
+    <boolean name="readRole" title="aperçu"/>
+    <boolean name="writeRole" title="modifier"/>
+    <boolean name="deleteRole" title="Supprimer"/>
+    <unique-constraint columns="userEtablissement,roleDescribe"/>
+  </entity>
+</domain-models>

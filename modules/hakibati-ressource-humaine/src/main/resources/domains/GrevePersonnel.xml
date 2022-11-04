@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_5.3.xsd">
+
+    <module name="hakibati-ressource-humaine" package="com.hakibati.ressource.humaine.db"/>
+    <entity name="GrevePersonnel" cacheable="true">
+        <many-to-one name="greveRH" ref="GreveRH" />
+        <many-to-one name="personnelRh" ref="PersonnelRh" />
+
+        <boolean name="isGreve" title="en grève" />
+        <string name="observation" title="Observation" default="  "/>
+
+        <many-to-one name="gestionRH" ref="GestionRH" title="Gestion RH"/>
+        <many-to-one name="etablissement" ref="com.app.application.db.Etablissement">
+            <![CDATA[
+    if (etablissement == null)
+   return createdBy.getEtablissementSelectionnee() ;
+   return etablissement;
+      ]]>
+        </many-to-one>
+        <many-to-one name="createdBy" ref="com.axelor.auth.db.User"/>
+    </entity>
+</domain-models>

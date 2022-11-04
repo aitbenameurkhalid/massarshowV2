@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_5.3.xsd">
+
+  <module name="hakibati-ass-enajah" package="com.hakibati.ass.enajah.db"  />
+
+  <entity name="AssEnajahInfo" cacheable="true" >
+    <string name="name" title="Nom de association" default="جمعية دعم مدرسة النجاح"/>
+    <string name="tel" title="Telephone"/>
+    <string name="fax" title="Fax"/>
+    <string name="email" title="Email" default=" "/>
+    <string name="web" title="Web" default=" "/>
+    <string name="addres" title="Addres" default=" "/>
+    <date name="dateCreation" title="Date de creatoion"/>
+    <one-to-one name="etablissement" ref="com.app.application.db.Etablissement">
+      <![CDATA[
+    if (etablissement == null)
+   return createdBy.getEtablissementSelectionnee() ;
+   return etablissement;
+      ]]>
+    </one-to-one>
+    <many-to-one name="createdBy" ref="com.axelor.auth.db.User" />
+    <many-to-one name="logoEnTete" ref="com.axelor.meta.db.MetaFile" title="Logo En Tete" initParam="true"/>
+    <finder-method name="findByEtab" using="etablissement" cacheable="true" />
+
+<!--    <unique-constraint columns="name,etablissement"/>-->
+  </entity>
+</domain-models>

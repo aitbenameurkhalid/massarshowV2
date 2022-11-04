@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
+
+  <grid name="TransfertDeSolde-grid" title="Transfert De Solde" model="com.hakibati.ass.enajah.db.TransfertDeSolde"
+        canDelete="false" orderBy="id">
+    <field name="typeDeTransfert" />
+    <field name="dateDeTransfert"/>
+    <field name="montant"  />
+    <field name="motifDeTransfert"/>
+  </grid>
+
+  <form name="TransfertDeSolde-form" title="Transfert De Solde" model="com.hakibati.ass.enajah.db.TransfertDeSolde"  >
+    <panel  >
+      <field name="typeDeTransfert" colSpan="7"/>
+      <field name="dateDeTransfert" colSpan="2"/>
+      <field name="montant" colSpan="3" />
+      <field name="motifDeTransfert" colSpan="12"/>
+    </panel>
+    <panel title="Piece Joindre" showTitle="true">
+      <panel-related colSpan="12" field="tablesPieceJoindre" form-view="PieceJoindreTransfertSolde-form"
+                     grid-view="PieceJoindreTransfertSolde-grid" canSelect="false" canNew="true" canView="true"
+                     canEdit="true" canRemove="true"/>
+    </panel>
+  </form>
+  <selection name="select.transfert.type">
+    <option value="1">Alimentation de la caisse</option>
+    <option value="2">Transfert à la banque depuis la caisse </option>
+  </selection>
+</object-views>

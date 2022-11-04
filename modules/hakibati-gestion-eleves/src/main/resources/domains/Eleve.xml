@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_5.3.xsd">
+
+    <module name="hakibati-gestion-eleves" package="com.hakibati.gestion.eleves.db"/>
+    <entity name="Eleve" cacheable="true">
+        <boolean name="enArchive" title="Archive" default="false"/>
+        <boolean name="isMassar" default="false"/>
+        <string name="cdMassar" title="code Massar" required="true" default="0"/>
+        <long name="idEleve" title="id_eleve"/>
+        <binary name="image" title="Photo" help="Max size 4MB." image="true"/>
+        <date name="dateNaissance" title="Date de naissance"/>
+        <string name="nomAr" title="Nom en Arab"/>
+        <string name="prenomAr" title="Prénom arab"/>
+        <string name="nomFr" title="Nom en Français"/>
+        <string name="prenomFr" title="Prénom enFrançais"/>
+        <integer name="idclasse" title="N°"/>
+        <integer name="idgroupe" selection="selection-groupe-eleve" title="Groupe" default="1"/>
+        <integer name="sexe" selection="selection-sexe-eleve" title="Genre"/>
+        <string name="lieuNaissanceAr" title="Lieu de Naissance arab"/>
+        <string name="lieuNaissanceFr" title="Lieu Naissance français"/>
+        <string name="urlPhoto"/>
+        <many-to-one name="classe" ref="Classe"/>
+        <string name="niveauNom"/>
+        // situation initiale
+        <integer name="situationInitiale" required="true" default="0" title="situation initiale"
+                 selection="selection-situation-initiale"/>
+        <date name="datesituationInitiale" title="Date de situation Depart"/>
+        // La situation actuelle
+        <integer name="situationActuelle" required="true" default="0" title="La situation actuelle"
+                 selection="selection-situation-actuelle"/>
+        <date name="dateLaSituationActuelle" title="Date  situation actuelle"/>
+        // année scolaire
+        <many-to-one name="anneeScolaire" ref="AnneScolaire" title="Année scolaire" required="true" default="0"/>
+        // information tuteur
+        <integer name="typetuteur" selection="selection-type-tuteur" title="Type tuteur"/>
+        <string name="cinTuteur" title="CIN Tuteur"/>
+        <string name="nomarTuteur" title="Nom En arab"/>
+        <string name="prenomarTuteur" title="Prénom en Arab"/>
+        <string name="nomfrTuteur" title="Nom En Français"/>
+        <string name="prenomfrTuteur" title="Prénom En Français"/>
+        <string name="fonctionTuteur"/>
+        <string name="telTuteur" title="Telephone Tuteur"/>
+        <string name="adresseTuteur"/>
+        <string name="cinPere" title="CIN Père"/>
+        <string name="nomarPere" title="Nom En arab"/>
+        <string name="prenomarPere" title="Prénom en Arab"/>
+        <string name="nomfrPere" title="Nom En Français"/>
+        <string name="prenomfrPere" title="Prénom En Français"/>
+        <string name="fonctionPere"/>
+        <string name="telPere" title="Telephone Père"/>
+        <string name="adressePere"/>
+        <string name="cinMere" title="CIN Mère"/>
+        <string name="nomarMere" title="Nom En arab"/>
+        <string name="prenomarMere" title="Prénom en Arab"/>
+        <string name="nomfrMere" title="Nom En Français"/>
+        <string name="prenomfrMere" title="Prénom En Français"/>
+        <string name="fonctionMere"/>
+        <string name="telMere"/>
+        <string name="adresseMere"/>
+        //cas Arrivée
+        <string name="etablissementOrigine"/>
+        <string name="directionOrigine"/>
+        <date name="dateArrivee"/>
+        <string name="numerocertificatarr" title="numéro Certificat"/>
+        <string name="anneescolairArrive" title="L'année scolaire arrive"/>
+        <string name="numeroCertificat" title="numéro Certificat"/>
+        <date name="datePrDemande" title="date Première Demande"/>
+        <string name="numeroEnvPrDemande" title="numéro envoyer Première Demande"/>
+        <date name="dateDeDemande" title="date Deuxième Demande"/>
+        <string name="numeroEnvDeDemande" title="numéro envoyer Deuxième Demande"/>
+        <date name="dateTrDemande" title="date troisième Demande"/>
+        <string name="numeroEnvDemande" title="numéro envoyer troisième Demande"/>
+        <date name="datemsgIntervention" title="date  Message d'intervention"/>
+        <string name="numeromsgIntervention" title="numéro envoyer  Message d'intervention"/>
+
+
+        <date name="dateReception" title="date réception dossier"/>
+        <string name="observationReption"/>
+        //cas quittant
+        <string name="etablissementreception" title="Etablissement de réception"/>
+        <string name="directionreception" title="Direction de réception"/>
+        <date name="dateQuittant"/>
+        <string name="numeroCertificatQuittant"/>
+        <string name="numeroDemandQuittant"/>
+        <date name="dateDemandQuittant"/>
+        <string name="numeroEnvDemandQuittant"/>
+        <date name="dateEnvDemandQuittant"/>
+
+        // avis absence
+        <one-to-many name="avisabsences" ref="Avisabsence" mappedBy="eleve"/>
+        // CONVOCATION
+        <one-to-many name="convocationtuteurs" ref="Convocationtuteur" mappedBy="eleve"/>
+        // suive medical
+        <one-to-many name="suiviMedicals" ref="SuiviMedical" mappedBy="eleve"/>
+<!--        notes-->
+        <one-to-many name="notes" ref="NotesEleve" mappedBy="eleve"/>
+        // PieceJointEleve
+        <one-to-many name="pieceJointEleves" ref="PieceJointEleve" mappedBy="eleve"/>
+        <many-to-one name="gestioneleves" ref="Gestioneleves"/>
+        <many-to-one name="etablissement" ref="com.app.application.db.Etablissement">
+            <![CDATA[
+    if (etablissement == null)
+   return createdBy.getEtablissementSelectionnee() ;
+   return etablissement;
+      ]]>
+        </many-to-one>
+        <many-to-one name="createdBy" ref="com.axelor.auth.db.User"/>
+        <!--        <boolean name="archived" default="false"/>-->
+        <unique-constraint columns="cdMassar,etablissement,anneeScolaire"/>
+        <finder-method name="findBycdMassar" using="cdMassar" cacheable="true"/>
+        <finder-method name="findByEtablissemntAndMassar" using="Long:etablissemntId,String:cdMassar"
+                       filter="self.etablissement[].id = :etablissemntId AND self.cdMassar= :cdMassar" cacheable="true"
+                       all="false"/>
+        <finder-method name="findByEtablissemntAndMassarAndAnnee" using="Long:etablissemntId,String:cdMassar,String:anneeScolaireName"
+                       filter="self.etablissement[].id = :etablissemntId AND self.cdMassar= :cdMassar AND self.anneeScolaire.name = :anneeScolaireName" cacheable="true"
+                       all="false"/>
+
+    </entity>
+</domain-models>

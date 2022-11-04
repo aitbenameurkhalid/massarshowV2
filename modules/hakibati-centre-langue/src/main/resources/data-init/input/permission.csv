@@ -1,0 +1,31 @@
+"name";"object";"can_read";"can_write";"can_create";"can_remove";"can_export";"condition";"conditionParams";"roleName"
+
+"perm.hakibati.centre.langue.EleveCentre.select.etab.r";"com.hakibati.centre.langue.db.EleveCentre";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.centre.langue.EleveCentre.select.etab.rwc";"com.hakibati.centre.langue.db.EleveCentre";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.centre.langue.EleveCentre.select.etab.rwcde";"com.hakibati.centre.langue.db.EleveCentre";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.hakibati.centre.langue.GroupeCentre.select.etab.r";"com.hakibati.centre.langue.db.GroupeCentre";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.centre.langue.GroupeCentre.select.etab.rwc";"com.hakibati.centre.langue.db.GroupeCentre";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.centre.langue.GroupeCentre.select.etab.rwcde";"com.hakibati.centre.langue.db.GroupeCentre";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.hakibati.centre.langue.InfoCentreLangue.select.etab.r";"com.hakibati.centre.langue.db.InfoCentreLangue";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.centre.langue.InfoCentreLangue.select.etab.rwc";"com.hakibati.centre.langue.db.InfoCentreLangue";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.centre.langue.InfoCentreLangue.select.etab.rwcde";"com.hakibati.centre.langue.db.InfoCentreLangue";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.hakibati.centre.langue.MatiereCentre.select.etab.r";"com.hakibati.centre.langue.db.MatiereCentre";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.centre.langue.MatiereCentre.select.etab.rwc";"com.hakibati.centre.langue.db.MatiereCentre";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.centre.langue.MatiereCentre.select.etab.rwcde";"com.hakibati.centre.langue.db.MatiereCentre";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.hakibati.centre.langue.NiveauCentre.select.etab.r";"com.hakibati.centre.langue.db.NiveauCentre";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.centre.langue.NiveauCentre.select.etab.rwc";"com.hakibati.centre.langue.db.NiveauCentre";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.centre.langue.NiveauCentre.select.etab.rwcde";"com.hakibati.centre.langue.db.NiveauCentre";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.hakibati.centre.langue.ProfCentre.select.etab.r";"com.hakibati.centre.langue.db.ProfCentre";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.centre.langue.ProfCentre.select.etab.rwc";"com.hakibati.centre.langue.db.ProfCentre";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.centre.langue.ProfCentre.select.etab.rwcde";"com.hakibati.centre.langue.db.ProfCentre";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+"perm.hakibati.centre.langue.SuiviFinancierCentre.select.etab.r";"com.hakibati.centre.langue.db.SuiviFinancierCentre";"x";;;;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.centre.langue.SuiviFinancierCentre.select.etab.rwc";"com.hakibati.centre.langue.db.SuiviFinancierCentre";"x";"x";"x";;;"self.etablissement = ?";"__user__.etablissementSelectionnee";
+"perm.hakibati.centre.langue.SuiviFinancierCentre.select.etab.rwcde";"com.hakibati.centre.langue.db.SuiviFinancierCentre";"x";"x";"x";"x";"x";"self.etablissement = ?";"__user__.etablissementSelectionnee";
+
+

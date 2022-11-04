@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_5.3.xsd">
+
+  <module name="hakibati-eau-electricite" package="com.hakibati.eau.electricite.db"/>
+  <entity name="ConsommationElectricite" cacheable="true">
+    <date name="dateDu"  title="date début"/>
+    <integer name="compteurDu"  title="Compteur Du"/>
+    <date name="dateFin"  title="date Fin"/>
+    <integer name="compteurFin"  title="Compteur Fin"/>
+    <integer name="montantConsommation" title="Montant de consommation"/>
+    <integer name="quantiteConsommation" title="Quantité de consommation"/>
+    <many-to-one name="etablissement" ref="com.app.application.db.Etablissement" required="true"  />
+    <string name="codeGresa" title="Gresa"/>
+    <string name="numeroContratElectricite" title="contrat d'électricité"/>
+    <many-to-one name="createdBy" ref="com.axelor.auth.db.User" />
+    <track>
+      <field name="dateDu" />
+      <field name="montantConsommation" />
+      <field name="quantiteConsommation" />
+      <field name="etablissement" />
+    </track>
+
+  </entity>
+</domain-models>
