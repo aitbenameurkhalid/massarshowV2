@@ -8,7 +8,7 @@
     <field name="code" />
   </grid>
 
-  <form name="Sexe-form" title="Typse sexe" cols="2" model="com.hakibati.setting.db.Sexe">
+  <form name="Sexe-form" title="Typse sexe"  model="com.hakibati.setting.db.Sexe">
     <panel >
       <field name="name" />
       <field name="code" />

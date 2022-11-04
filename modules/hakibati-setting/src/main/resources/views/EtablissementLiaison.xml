@@ -9,7 +9,7 @@
         <field name="autorise"/>
     </grid>
 
-    <form name="EtablissementPrincipal-form" title="EtablissementLiaison" cols="2"
+    <form name="EtablissementPrincipal-form" title="EtablissementLiaison"
           model="com.app.application.db.EtablissementLiaison">
         <panel showTitle="true" showIf="etablissementPrincipal==nulls">
             <field name="codeEtab" colSpan="2" title="code d'etablissement"/>
@@ -29,7 +29,7 @@
         <field name="accepter"/>
     </grid>
 
-    <form name="EtablissementAnnexe-form" title="EtablissementLiaison" cols="2"
+    <form name="EtablissementAnnexe-form" title="EtablissementLiaison"
           model="com.app.application.db.EtablissementLiaison" canNew="false" >
         <panel>
             <field name="etablissement" colSpan="4" readonly="true" form-view="zero"/>

@@ -1,8 +1,13 @@
-apply plugin: 'com.axelor.app-module'
-apply plugin: 'kotlin'
+plugins {
+  id 'com.axelor.app'
+}
+//apply plugin: 'kotlin'
 
 axelor {
   title = "Axelor :: HAKIBATI SETTING"
-  removable = true
+//  removable = true
 
+}
+dependencies {
+  implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.11'
 }

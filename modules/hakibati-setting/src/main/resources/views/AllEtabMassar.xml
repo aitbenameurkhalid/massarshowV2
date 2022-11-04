@@ -26,7 +26,7 @@
     <field name="ensCPGE" title="ensCPGE"/>
   </grid>
 
-  <form name="AllEtabMassar-form" title="AllEtabMassar" cols="2" model="com.hakibati.setting.db.AllEtabMassar">
+  <form name="AllEtabMassar-form" title="AllEtabMassar"  model="com.hakibati.setting.db.AllEtabMassar">
     <panel title="Overview">
       <field name="cdETAB" title="Gresa"  />
       <field name="nnomA" title="nOM_ETABA "/>

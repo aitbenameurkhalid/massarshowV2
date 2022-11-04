@@ -1,9 +1,11 @@
-apply plugin: 'com.axelor.app-module'
-apply plugin: 'kotlin'
+plugins {
+    id 'com.axelor.app'
+}
+//apply plugin: 'kotlin'
 
 axelor {
     title = "Axelor ::HAKIBATI SVG EXAMEN"
-    removable = true
+//    removable = true
 }
 
 

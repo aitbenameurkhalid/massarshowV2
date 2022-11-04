@@ -21,7 +21,8 @@ public class UserController {
   public void register(ActionRequest request, ActionResponse response) {
     Map<String, Object> userData = request.getContext();
     Integer NUMBRE_TEST = 10;
-    String callbackUrl = AuthPac4jModule.getCallbackUrl();
+//    String callbackUrl = AuthPac4jModule.getCallbackUrl();
+    String callbackUrl = "AuthPac4jModule.getCallbackUrl()";
     String username = userData.get("email").toString();
     String password = userData.get("MotdePasse").toString();
 

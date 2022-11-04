@@ -10,7 +10,7 @@
     <field name="createdOn"/>
   </grid>
 
-  <form name="RegistreObservation-form" title="observation ou remarque" cols="1" model="com.hakibati.setting.db.RegistreObservation" width="mini">
+  <form name="RegistreObservation-form" title="observation ou remarque"  model="com.hakibati.setting.db.RegistreObservation" width="mini">
     <panel itemSpan="12" >
       <label title="votre remarques et observations"/>
       <field name="name" required="true" />

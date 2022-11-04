@@ -19,9 +19,9 @@ import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
-import wslite.json.JSONArray;
-import wslite.json.JSONException;
-import wslite.json.JSONObject;
+//import wslite.json.JSONArray;
+//import wslite.json.JSONException;
+//import wslite.json.JSONObject;
 
 @Singleton
 public class EtablissementController {
@@ -80,58 +80,58 @@ public class EtablissementController {
   }
 
   public void TestConnectionMassar(ActionRequest request, ActionResponse response)
-      throws JSONException, IOException {
-    String loginMassar = (String) request.getContext().get("loginMassar");
-    String passwordMassar = (String) request.getContext().get("passwordMassar");
+      throws  IOException {
+//    String loginMassar = (String) request.getContext().get("loginMassar");
+//    String passwordMassar = (String) request.getContext().get("passwordMassar");
+//
+//    String cookie = getCookieMassar(loginMassar, passwordMassar);
+//    if (cookie == null) {
+//      response.setAlert(I18n.get("A server error occurred. Please contact the administrator."));
+//    } else {
+//      String responseIngoLoginMassar0 = getInfoLoginMassar(cookie);
+//      byte[] byteResponseInfoLogin = responseIngoLoginMassar0.getBytes(StandardCharsets.UTF_8);
+//      String responseIngoLoginMassar = new String(byteResponseInfoLogin, "UTF-8");
+//      //        response.setAlert(responseIngoLoginMassar);
+//      JSONArray array = new JSONArray(responseIngoLoginMassar);
+//      JSONObject object = array.getJSONObject(0);
+//      response.setValue("Login", object.getString("Login"));
+//      response.setValue("UserType", object.getString("UserType"));
+//      response.setValue("Application", object.getString("Application"));
+//      response.setValue("NomArabe", object.getString("NomArabe"));
+//      response.setValue("NomLatine", object.getString("NomLatine"));
+//      response.setValue("CodeProfile", object.getString("CodeProfile"));
+//      //            response.setValue("CodeEtablissement", object.getString("CodeEtablissement"));
+//      String data = getMassarListEleve(cookie);
+//      byte[] byteData = data.getBytes(StandardCharsets.UTF_8);
+//      data = new String(byteData, "UTF-8");
 
-    String cookie = getCookieMassar(loginMassar, passwordMassar);
-    if (cookie == null) {
-      response.setAlert(I18n.get("A server error occurred. Please contact the administrator."));
-    } else {
-      String responseIngoLoginMassar0 = getInfoLoginMassar(cookie);
-      byte[] byteResponseInfoLogin = responseIngoLoginMassar0.getBytes(StandardCharsets.UTF_8);
-      String responseIngoLoginMassar = new String(byteResponseInfoLogin, "UTF-8");
-      //        response.setAlert(responseIngoLoginMassar);
-      JSONArray array = new JSONArray(responseIngoLoginMassar);
-      JSONObject object = array.getJSONObject(0);
-      response.setValue("Login", object.getString("Login"));
-      response.setValue("UserType", object.getString("UserType"));
-      response.setValue("Application", object.getString("Application"));
-      response.setValue("NomArabe", object.getString("NomArabe"));
-      response.setValue("NomLatine", object.getString("NomLatine"));
-      response.setValue("CodeProfile", object.getString("CodeProfile"));
-      //            response.setValue("CodeEtablissement", object.getString("CodeEtablissement"));
-      String data = getMassarListEleve(cookie);
-      byte[] byteData = data.getBytes(StandardCharsets.UTF_8);
-      data = new String(byteData, "UTF-8");
-
-      response.setValue("CodeEtablissement", data);
-    }
+//      response.setValue("CodeEtablissement", data);
+//    }
   }
 
   public void ImportationDataMassar(ActionRequest request, ActionResponse response)
-      throws JSONException, IOException {
-    String loginMassar = (String) request.getContext().get("loginMassar");
-    String passwordMassar = (String) request.getContext().get("passwordMassar");
-
-    String infoLoginMassar = MassarMenGovService.InfoLoginMassar(loginMassar, passwordMassar);
-    if (infoLoginMassar == null) {
-      response.setAlert(I18n.get("A server error occurred. Please contact the administrator."));
-    } else {
-      //            String responseIngoLoginMassar0 = getInfoLoginMassar(cookie);
-      //            byte[] byteResponseInfoLogin =
-      // responseIngoLoginMassar0.getBytes(StandardCharsets.UTF_8);
-      //            String responseIngoLoginMassar = new String(byteResponseInfoLogin, "UTF-8");
-      JSONArray array = new JSONArray(infoLoginMassar);
-      JSONObject object = array.getJSONObject(0);
-      response.setValue("Login", object.getString("Login"));
-      response.setValue("UserType", object.getString("UserType"));
-      response.setValue("Application", object.getString("Application"));
-      response.setValue("NomArabe", object.getString("NomArabe"));
-      response.setValue("NomLatine", object.getString("NomLatine"));
-      response.setValue("CodeProfile", object.getString("CodeProfile"));
-      response.setValue("CodeEtablissement", object.getString("CodeEtablissement"));
-    }
+      throws  IOException {
+//    String loginMassar = (String) request.getContext().get("loginMassar");
+//    String passwordMassar = (String) request.getContext().get("passwordMassar");
+//
+//    String infoLoginMassar = MassarMenGovService.InfoLoginMassar(loginMassar, passwordMassar);
+//    if (infoLoginMassar == null) {
+//      response.setAlert(I18n.get("A server error occurred. Please contact the administrator."));
+//    } else {
+//      //            String responseIngoLoginMassar0 = getInfoLoginMassar(cookie);
+//      //            byte[] byteResponseInfoLogin =
+//      // responseIngoLoginMassar0.getBytes(StandardCharsets.UTF_8);
+//      //            String responseIngoLoginMassar = new String(byteResponseInfoLogin, "UTF-8");
+//      JSONArray array = new JSONArray(infoLoginMassar);
+//      JSONObject object = array.getJSONObject(0);
+//      response.setValue("Login", object.getString("Login"));
+//      response.setValue("UserType", object.getString("UserType"));
+//      response.setValue("Application", object.getString("Application"));
+//      response.setValue("NomArabe", object.getString("NomArabe"));
+//      response.setValue("NomLatine", object.getString("NomLatine"));
+//      response.setValue("CodeProfile", object.getString("CodeProfile"));
+//      response.setValue("CodeEtablissement", object.getString("CodeEtablissement"));
+//    }
   }
 
   @Transactional
