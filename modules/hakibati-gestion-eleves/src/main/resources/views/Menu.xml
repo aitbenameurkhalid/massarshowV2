@@ -57,13 +57,6 @@
     <call class="com.gestion.eleves.web.GestionelevesController" method="OpenGestionEleveInternat"/>
   </action-method>
 
-<!--  <menuitem name="menu-gestion-eleves-internat-nouveau" parent="menu-gestion-eleves-internat" title="Nouvel élève"-->
-<!--            action="action-gestion-eleves-internat-nouveau"  icon="fa-plus"-->
-<!--            icon-background="#FFC300"/>-->
-<!--  <action-view name="action-gestion-eleves-internat-nouveau" title="Nouvel élève"-->
-<!--               model="com.hakibati.gestion.eleves.db.EleveInternat">-->
-<!--    <view type="form" name="EleveInternat-form"/>-->
-<!--  </action-view>-->
   <menuitem name="menu-gestion-eleves-internat-absence" parent="menu-gestion-eleves-internat" title="Suivi des élèves"
             action="action-gestion-eleves-internat-suivi"/>
   <action-method name="action-gestion-eleves-internat-suivi">
@@ -143,10 +136,5 @@
     <view type="grid" name="Article-grid"/>
     <view type="form" name="Article-form"/>
   </action-view>
-<!--    <menuitem name="menu-import-export-eleves-massar-men-gov-ma" parent="menu-gestion-eleves-exterieur" title="Import/Export de Massar"-->
-<!--              action="action-open-mport-export-eleves-massar-men-gov-ma" icon="fa-database"-->
-<!--              icon-background="#DE3163"/>-->
-<!--    <action-method name="action-open-mport-export-eleves-massar-men-gov-ma">-->
-<!--        <call class="com.gestion.eleves.web.ImportExDataMassarController" method="OpenImportExportMassarMenGovMa"/>-->
-<!--    </action-method>-->
+
 </object-views>

@@ -5,12 +5,10 @@
 
 
     <grid name="Classe-grid" title="Classes" model="com.hakibati.gestion.eleves.db.Classe">
-        <!--    <field name="etablissement"/>-->
         <field name="name"/>
         <field name="niveau"/>
         <field name="niveau.code"/>
         <field name="anneeScolaire"/>
-        <!--    <field name="archived" title="archived"/>-->
     </grid>
 
     <form name="Classe-form" title="Classe" model="com.hakibati.gestion.eleves.db.Classe">

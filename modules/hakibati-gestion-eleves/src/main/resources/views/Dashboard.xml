@@ -9,7 +9,6 @@
     <dashlet action="chart:chart.eleves.exterieur.depart.sexe"/>
     <dashlet action="chart:chart.eleves.exterieur.actuelle.sexe"/>
     <dashlet action="chart:chart.eleves.exterieur.actuelle.age.sexe" colSpan="12"/>
-
   </dashboard>
 
 </object-views>

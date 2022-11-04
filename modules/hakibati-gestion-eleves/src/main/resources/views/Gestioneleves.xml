@@ -21,44 +21,8 @@
                        placeholder="Sélectionner une classe" widget="SuggestBox"
                        onChange="action.refresh.eleve.exterieur.recherche"
                        target="com.hakibati.gestion.eleves.db.Classe" domain="self.niveau = :_niveau"/>
-<!--              depart-->
-<!--                <spacer colSpan="1"/>-->
-<!--                <button name="btn-new-eleve" title="Nouvel élève" colSpan="2"-->
-<!--                        css="btn btn-warning label-bold bold large center"-->
-<!--                        onClick="action-gestion-eleves-exterieur-nouveau"/>-->
-<!--                <button name="btn-import" title="Import" colSpan="2" css="btn btn-warning label-bold bold large center"-->
-<!--                        onClick="action.import.eleves.exterieur.massar"/>-->
-<!--                <field name="sans_initial" title="sans" colSpan="2" css="inline-checkbox" widget="inline-checkbox"-->
-<!--                       onChange="action.refresh.eleve.exterieur.recherche"/>-->
-<!--                <field name="Depart" title="Départ" colSpan="2" css="inline-checkbox" widget="inline-checkbox"-->
-<!--                       onChange="action.refresh.eleve.exterieur.recherche"/>-->
-<!--                <field name="Receptionne" title="Rèceptionne" colSpan="2" css="inline-checkbox" widget="inline-checkbox"-->
-<!--                       onChange="action.refresh.eleve.exterieur.recherche"/>-->
-<!--                <field name="Reintegration" title="Réintégration" colSpan="2" css="inline-checkbox"-->
-<!--                       widget="inline-checkbox" onChange="action.refresh.eleve.exterieur.recherche"/>-->
-<!--                <field name="Reorientation" title="Réorientation" colSpan="2" css="inline-checkbox"-->
-<!--                       widget="inline-checkbox" onChange="action.refresh.eleve.exterieur.recherche"/>-->
-<!--                <field name="Repetition" title="Répétition" colSpan="2" css="inline-checkbox" widget="inline-checkbox"-->
-<!--                       onChange="action.refresh.eleve.exterieur.recherche"/>-->
-<!--                <field name="sans_actuel" title="sans" colSpan="2" css="inline-checkbox" widget="inline-checkbox"-->
-<!--                       onChange="action.refresh.eleve.exterieur.recherche"/>-->
-<!--                <label title="Affiche les eleve exerce selement"/>-->
                 <field name="Exerce" title="Afficher uniquement  les élèves exerce"  colSpan="6" css="inline-checkbox" widget="inline-checkbox"
                        onChange="action.refresh.eleve.exterieur.recherche"/>
-<!--                <field name="Quitte" title="Quitte" colSpan="2" css="inline-checkbox" widget="inline-checkbox"-->
-<!--                       onChange="action.refresh.eleve.exterieur.recherche"/>-->
-<!--                <field name="Abandonne" title="Abandonné" colSpan="2" css="inline-checkbox" widget="inline-checkbox"-->
-<!--                       onChange="action.refresh.eleve.exterieur.recherche"/>-->
-<!--                <field name="Non_inscrit" title="Non inscrit" colSpan="2" css="inline-checkbox" widget="inline-checkbox"-->
-<!--                       onChange="action.refresh.eleve.exterieur.recherche"/>-->
-<!--                <field name="Exclus" title="Exclus" colSpan="2" css="inline-checkbox" widget="inline-checkbox"-->
-<!--                       onChange="action.refresh.eleve.exterieur.recherche"/>-->
-<!--             fin-->
-<!--                <field name="$_situationInitiale" showTitle="false" widget="CheckboxSelect"-->
-<!--                       selection="selection-situation-initiale" colSpan="12"/>-->
-<!--                <field name="$_situationActuelle" showTitle="false" widget="CheckboxSelect"-->
-<!--                       selection="selection-situation-actuelle" colSpan="12"/>-->
-
             </panel>
             <panel colSpan="2" sidebar="true">
                 <button name="btn-new-eleve" title="Nouvel élève" onClick="action-gestion-eleves-exterieur-nouveau"
@@ -143,8 +107,6 @@
           canSave="false" helpLink="false">
         <panel colSpan="12" showTitle="false">
             <label title="Gestion des  eleves archive" css="label-bold bold large center" colSpan="9"/>
-<!--            <button name="btn-export-archive" onClick="action.import.export.archive" title="Export/ Import" colSpan="3"-->
-<!--                    css="btn btn-warning label-bold bold large center"/>-->
         </panel>
         <panel-dashlet name="panel-dashlet-archive-eleve" action="action-dashlet-archive-eleve" height="350"
                        canSearch="true" colSpan="12" showTitle="false"/>
@@ -202,7 +164,6 @@
         <panel name="info-login" readonly="true"  hidden="true" title="Information de Login Massar" colSpan="12">
             <field name="NomArabe" title="اسم المستخدم"/>
             <field name="NomLatine" title="nom utilisateur"/>
-<!--            <field name="CodeProfile" title="Profile"/>-->
             <field name="CodeEtablissement" title="Gresa" colSpan="12"/>
             <field name="nOM_ETABA" title="اسم المؤسسة"/>
             <field name="nOM_ETABL" title="Nom Etablissement"/>
@@ -226,9 +187,7 @@
             <button name="importBlockBtn" title="Import" onClick="action-import-list-eleves-massar"
                     readonlyIf="$imporelevetFile == null || typeListImport== null" colSpan="2"/>
         </panel>
-        <!--        <panel colSpan="4" sidebar="true">-->
-        <!--            <label title="Lors de l'importation des listes des eleves  de massar, les eleves de l'année dernière qui n'étaient pas inclus dans les listes seront transférés dans les archives"/>-->
-        <!--        </panel>-->
+
         <panel name="mainPanel2" title="Importer la liste tuteur (MASSAR) arabe">
             <field name="$importuteurtFile" title="selectionner une Fichier" type="many-to-one" widget="binary-link"
                    target="com.axelor.meta.db.MetaFile" colSpan="10"/>
@@ -352,13 +311,6 @@
             <button name="print-list-document-eleves-all" title="Telecharger" readonlyIf="listfeuilleImprime==null"
                     colSpan="2" onClick="action-print-all-document-eleves-internat"/>
         </panel>
-<!--        <panel title="Télécharger les statistiques" showTitle="true" colSpan="8">-->
-<!--            <field name="liststatistiques" showTitle="false" colSpan="6"-->
-<!--                   selection="selection-list-statistiques-internat"-->
-<!--                   default="0" placeholder="Sélectionner la liste"/>-->
-<!--            <button name="print-list-statistiques-eleves-all" title="Telecharger" readonlyIf="liststatistiques==null"-->
-<!--                    colSpan="2" onClick="action-print-all-statistiques-eleves-internat"/>-->
-<!--        </panel>-->
     </form>
 
 
@@ -367,21 +319,9 @@
         <view type="form" name="Eleve-form"/>
         <view-param name="popup" value="reload"/>
         <view-param name="popup-save" value="true"/>
-        <!--        <view-param name="popup.maximized" value="true"/>-->
         <view-param name="show-toolbar" value="false"/>
         <view-param name="show-confirm" value="true"/>
     </action-view>
-<!--    <action-view name="action-gestion-eleves-exterieur-nouveau-archive" title="Nouvel élève"-->
-<!--                 model="com.hakibati.gestion.eleves.db.Eleve">-->
-<!--        <view type="form" name="Eleve-archive-form"/>-->
-<!--        <view-param name="popup" value="reload"/>-->
-<!--        <view-param name="popup-save" value="true"/>-->
-<!--        &lt;!&ndash;        <view-param name="popup.maximized" value="true"/>&ndash;&gt;-->
-<!--        <view-param name="show-toolbar" value="false"/>-->
-<!--        <view-param name="show-confirm" value="true"/>-->
-
-<!--    </action-view>-->
-
 
     <action-view name="action.import.eleves.exterieur.massar" title="Import"
                  model="com.hakibati.gestion.eleves.db.Gestioneleves">
@@ -451,9 +391,6 @@
         <call class="com.gestion.eleves.web.GestionelevesController" method="ImportTuteurMassar"/>
     </action-method>
 
-<!--    <action-method name="dashlet.eleve.exterieur.recherche0">-->
-<!--        <call class="com.gestion.eleves.web.GestionelevesController" method="DashletEleveExterieurRecherche"/>-->
-<!--    </action-method>-->
 
     <action-view name="dashlet.eleve.exterieur.recherche" title=""
                  model="com.hakibati.gestion.eleves.db.Eleve">
@@ -563,7 +500,6 @@
         <view-param name="showArchived" value="true"/>
         <view-param name="popup" value="reload"/>
         <view-param name="popup-save" value="true"/>
-        <!--        <view-param name="popup.maximized" value="true"/>-->
         <view-param name="show-toolbar" value="false"/>
         <view-param name="show-confirm" value="true"/>
         <view-param name="forceEdit" value="true"/>
@@ -576,7 +512,6 @@
         <view type="form" name="EleveInternat-form"/>
         <view-param name="popup" value="reload"/>
         <view-param name="popup-save" value="true"/>
-        <!--        <view-param name="popup.maximized" value="true"/>-->
         <view-param name="show-toolbar" value="false"/>
         <view-param name="show-confirm" value="true"/>
         <view-param name="forceEdit" value="true"/>
@@ -645,18 +580,6 @@
     <action-method name="action-import-eleve-internat">
         <call class="com.gestion.eleves.web.EleveInternatController" method="importListInternatExcel"/>
     </action-method>
-<!--    <action-attrs name="action-attr-default-choix">-->
-<!--        <attribute name="value" expr="eval:true"-->
-<!--                   for="sans_initial,Depart,Receptionne,Reintegration,Reorientation,Repetition"/>-->
-<!--        <attribute name="value" expr="eval:true" for="sans_actuel,Exerce,Quitte,Abandonne,Non_inscrit,Exclus"/>-->
-<!--    </action-attrs>-->
-    <!--    <action-view name="action-dashlet-archive-eleve" title=""-->
-    <!--                 model="com.hakibati.gestion.eleves.db.Eleve">-->
-    <!--        <view type="grid" name="Eleve-grid"/>-->
-    <!--        <view type="form" name="Eleve-form"/>-->
-    <!--        <view-param name="showArchived" value="true"/>-->
-    <!--        <domain>self.archived = 'true'</domain>-->
-    <!--    </action-view>-->
     <action-method name="action-change-date-absence-internat">
         <call class="com.gestion.eleves.web.EleveInternatController" method="MiseAjouteDateAbsence"/>
     </action-method>
@@ -703,34 +626,15 @@
 
     <selection name="selection-list-eleves-internat">
         <option value="0">Listes initiales des élèves Internat</option>
-        <!--        <option value="1">Listes actuels des élèves Internat</option>-->
-        <!--        <option value="2">Listes actuels (groupe)des élèves Internat</option>-->
-        <!--        <option value="3">Listes des élèves Internat Transferès</option>-->
-        <!--        <option value="4">listes des élèves Internat abandon</option>-->
-        <!--        <option value="5">listes des élèves Internat Réceptionnés</option>-->
-        <!--        <option value="6">listes des élèves Internat Réintégration</option>-->
-        <!--        <option value="7">listes des élèves Internat Non inscrit</option>-->
     </selection>
     <selection name="selection-feuille-eleves-internat">
         <option value="0">feuille d'absence hebdomadaire (paysage)</option>
-        <!--        <option value="1">feuille d'absence hebdomadaire (portrait)</option>-->
-        <!--        <option value="2">Feuille d'absences demi-hebdomadaire 1/2</option>-->
-        <!--        <option value="3">Feuille d'absences demi-hebdomadaire 2/2</option>-->
-        <!--        <option value="4">feuille d'absence hebdomadaire par groupe (paysage)</option>-->
-        <!--        <option value="5">feuille des notes(2 evaluations)</option>-->
-        <!--        <option value="6">feuille des notes(3 evaluations)</option>-->
-        <!--        <option value="7">feuille des notes(4 evaluations)</option>-->
-
     </selection>
     <selection name="selection-list-statistiques-internat">
-
         <option value="2">mouvement élèves</option>
         <option value="3">Statistiques par classe et sexe</option>
         <option value="4">Statistiques par âge et sexe</option>
-
     </selection>
-
-
 
 
 </object-views>

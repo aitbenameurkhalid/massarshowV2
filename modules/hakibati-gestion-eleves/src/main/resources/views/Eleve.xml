@@ -163,69 +163,6 @@
             <field name="prenomAr" readonly="true" colSpan="3"/>
         </panel>
     </form>
-<!--    <form name="Eleve-archive-form" title="Information d'un élève" model="com.hakibati.gestion.eleves.db.Eleve"-->
-<!--          width="large" onNew="action-new-eleve-archive">-->
-<!--        <panel-tabs colSpan="12">-->
-<!--            <panel title="information ُEleve" colSpan="12">-->
-<!--                <field name="cdMassar" colSpan="3"/>-->
-<!--                <field name="classe" colSpan="3"/>-->
-<!--                <field name="idclasse" colSpan="3"/>-->
-<!--                <field name="anneeScolaire" colSpan="3"/>-->
-<!--                &lt;!&ndash;                <field name="situationInitiale" colSpan="3"/>&ndash;&gt;-->
-<!--                &lt;!&ndash;                <field name="datesituationInitiale" colSpan="3"/>&ndash;&gt;-->
-<!--                &lt;!&ndash;                <field name="situationActuelle" colSpan="3"/>&ndash;&gt;-->
-<!--                &lt;!&ndash;                <field name="dateLaSituationActuelle" colSpan="3"/>&ndash;&gt;-->
-<!--                <field name="nomAr" colSpan="6"/>-->
-<!--                <field name="prenomAr" colSpan="6"/>-->
-<!--                <field name="nomFr" colSpan="6"/>-->
-<!--                <field name="prenomFr" colSpan="6"/>-->
-<!--                <field name="sexe" colSpan="2"/>-->
-<!--                <field name="dateNaissance" colSpan="2"/>-->
-<!--                <field name="lienNaissanceAr" colSpan="4"/>-->
-<!--                <field name="lienNaissanceFr" colSpan="4"/>-->
-<!--            </panel>-->
-<!--            <panel title="information tuteur" colSpan="12">-->
-<!--                <field name="nomAr" readonly="true" showTitle="false" css="label-bold bold large center"/>-->
-<!--                <field name="prenomAr" readonly="true" showTitle="false" css="label-bold bold large center"/>-->
-<!--                <field name="typetuteur"/>-->
-<!--                <panel title="tuteur" colSpan="12">-->
-<!--                    <field name="cinTuteur"/>-->
-<!--                    <field name="nomarTuteur"/>-->
-<!--                    <field name="prenomarTuteur"/>-->
-<!--                    <field name="nomfrTuteur"/>-->
-<!--                    <field name="prenomfrTuteur"/>-->
-<!--                    <field name="fonctionTuteur"/>-->
-<!--                    <field name="telTuteur"/>-->
-<!--                    <field name="adresseTuteur"/>-->
-<!--                </panel>-->
-<!--                <panel title="Pere" colSpan="12">-->
-<!--                    <field name="cinPere"/>-->
-<!--                    <field name="nomarPere"/>-->
-<!--                    <field name="prenomarPere"/>-->
-<!--                    <field name="nomfrPere"/>-->
-<!--                    <field name="prenomfrPere"/>-->
-<!--                    <field name="fonctionPere"/>-->
-<!--                    <field name="telPere"/>-->
-<!--                    <field name="adressePere"/>-->
-<!--                </panel>-->
-<!--                <panel title="Mere" colSpan="12">-->
-<!--                    <field name="cinMere"/>-->
-<!--                    <field name="nomarMere"/>-->
-<!--                    <field name="prenomarMere"/>-->
-<!--                    <field name="nomfrMere"/>-->
-<!--                    <field name="prenomfrMere"/>-->
-<!--                    <field name="fonctionMere"/>-->
-<!--                    <field name="telMere"/>-->
-<!--                    <field name="adresseMere"/>-->
-<!--                </panel>-->
-<!--            </panel>-->
-<!--        </panel-tabs>-->
-<!--        <panel>-->
-<!--            <spacer colSpan="8"/>-->
-<!--            <button name="btn-print-certificat-archive" title="Imprimer Certificat" colSpan="4"-->
-<!--                    onClick="action-print-certificat-archive"/>-->
-<!--        </panel>-->
-<!--    </form>-->
     <action-record name="action-new-eleve-exterieur" model="com.hakibati.gestion.eleves.db.Eleve">
         <field name="gestioneleves"
                expr="call:com.gestion.eleves.service.GestionelevesService:getCurretGestioneleves()"/>
@@ -259,10 +196,6 @@
         <attribute for="classe" name="refresh" expr="true"/>
         <attribute for="classe" name="value" expr="eval:null"/>
     </action-attrs>
-    <!--<action-record name="action.eleve.change.anneScolaireActuele" model="com.hakibati.gestion.eleves.db.Eleve">-->
-    <!--    <field name="classe" expr="eval:null"/>-->
-    <!--</action-record>-->
-
     <selection name="selection-situation-initiale">
         <option value="-1">sans</option>
         <option value="0">Départ</option>

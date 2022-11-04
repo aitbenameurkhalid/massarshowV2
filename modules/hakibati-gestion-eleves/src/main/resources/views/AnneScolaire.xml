@@ -5,7 +5,6 @@
 
 
   <grid name="AnneScolaire-grid" title="Anne Scolaire" model="com.hakibati.gestion.eleves.db.AnneScolaire">
-<!--    <field name="gestioneleves.etablissement" />-->
     <field name="name" />
     <field name="anneeMax"/>
     <field name="anneeMin"/>
