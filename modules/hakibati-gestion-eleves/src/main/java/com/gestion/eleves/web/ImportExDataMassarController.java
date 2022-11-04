@@ -21,14 +21,14 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.stream.Collectors;
-import wslite.json.JSONException;
+//import wslite.json.JSONException;
 
 @Transactional
 public class ImportExDataMassarController {
   @Inject GestionelevesRepository gestionelevesRepository;
 
   public void TestConnectionMassar(ActionRequest request, ActionResponse response)
-      throws JSONException, IOException {
+      throws  IOException {
     //          convertit json to java class :  https://json2csharp.com/json-to-pojo
     //        response.setHidden("info-login", false);
     //        response.setHidden("panel-import", false);
@@ -110,7 +110,7 @@ public class ImportExDataMassarController {
   }
 
   public void ImportAllDataMassar(ActionRequest request, ActionResponse response)
-      throws JSONException, IOException {
+      throws  IOException {
     User user = AuthUtils.getUser();
     if (!PermissionEtablissemntService.getvalideModuleEtablissement(
         IReport.CODE_OF_MODULE_ELEVE_EXTERIEUR_PERMISSION)) {
@@ -736,7 +736,7 @@ public class ImportExDataMassarController {
   }
 
   public void ExportAllDataMassar(ActionRequest request, ActionResponse response)
-      throws JSONException, IOException {
+      throws  IOException {
     response.setAlert("export");
   }
 }

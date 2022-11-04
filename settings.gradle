@@ -50,12 +50,13 @@ include 'modules:demo-custom'
 include 'modules:demo-data'
 
 include "modules:hakibati-setting"
-//include "modules:hakibati-etab-inventaire"
-//include "modules:hakibati-eau-electricite"
-//include "modules:hakibati-ass-enajah"
-//include "modules:hakibati-comptabilite-matier"
 include "modules:hakibati-svg-examen"
-//include "modules:hakibati-emploi-temps"
-//include "modules:hakibati-gestion-eleves"
-//include "modules:hakibati-centre-langue"
-//include "modules:hakibati-ressource-humaine"
+include "modules:hakibati-gestion-eleves"
+
+include "modules:hakibati-etab-inventaire"
+include "modules:hakibati-eau-electricite"
+include "modules:hakibati-ass-enajah"
+include "modules:hakibati-comptabilite-matier"
+include "modules:hakibati-emploi-temps"
+include "modules:hakibati-centre-langue"
+include "modules:hakibati-ressource-humaine"

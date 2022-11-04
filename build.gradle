@@ -3,7 +3,7 @@ plugins {
 }
 
 axelor {
-  title = 'Axelor :: DEMO'
+  title = 'Axelor :: MASSARSHOW'
 }
 
 allprojects {
@@ -41,16 +41,18 @@ dependencies {
   implementation project(':modules:demo-sale')
   implementation project(':modules:demo-project')
   implementation project(':modules:demo-custom')
+
   implementation project(":modules:hakibati-setting")
-//  implementation project(":modules:hakibati-etab-inventaire")
-//  implementation project(":modules:hakibati-eau-electricite")
-//  implementation project(":modules:hakibati-ass-enajah")
-//  implementation project(":modules:hakibati-comptabilite-matier")
   implementation project(":modules:hakibati-svg-examen")
-//  implementation project(":modules:hakibati-emploi-temps")
-//  implementation project(":modules:hakibati-gestion-eleves")
-//  implementation project(":modules:hakibati-centre-langue")
-//  implementation project(":modules:hakibati-ressource-humaine")
+  implementation project(":modules:hakibati-gestion-eleves")
+
+  implementation project(":modules:hakibati-etab-inventaire")
+  implementation project(":modules:hakibati-eau-electricite")
+  implementation project(":modules:hakibati-ass-enajah")
+  implementation project(":modules:hakibati-comptabilite-matier")
+  implementation project(":modules:hakibati-emploi-temps")
+  implementation project(":modules:hakibati-centre-langue")
+  implementation project(":modules:hakibati-ressource-humaine")
 
 }
 
