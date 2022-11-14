@@ -3,7 +3,7 @@
               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
               xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.3.xsd">
 
-  <menuitem name="menu-gestion-eleves-exterieur" parent="menu-gestion-eleves" title="Fiches élèves" icon="fa-graduation-cap"/>
+  <menuitem name="menu-gestion-eleves-exterieur"  title="Fiches élèves" icon="fa-graduation-cap"/>
   <menuitem name="menu-gestion-eleves-exterieur-dashboard" parent="menu-gestion-eleves-exterieur" title="Statistiques" icon="fa-line-chart" icon-background="#FFBF00" action="action-gestion-eleves-exterieur-dashboard" />
   <action-view name="action-gestion-eleves-exterieur-dashboard" title="Statistiques" home="true">
     <view type="dashboard" name="dashboard-gestion-eleves-exterieur" />
@@ -49,7 +49,7 @@
   </action-method>
 
   <!-- menu internat-->
-  <menuitem name="menu-gestion-eleves-internat" parent="menu-gestion-eleves" title="Fiches élèves Internat" icon="fa-american-sign-language-interpreting" icon-background="#FFC300"/>
+  <menuitem name="menu-gestion-eleves-internat"  title="Fiches élèves Internat" icon="fa-american-sign-language-interpreting" icon-background="#FFC300"/>
   <menuitem name="menu-gestion-eleves-internat-donnees" parent="menu-gestion-eleves-internat" title="Données des élèves"
             action="action-gestion-eleves-internat-donnees" icon="fa-database"
             icon-background="#FFC300"/>

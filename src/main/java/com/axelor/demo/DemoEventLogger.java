@@ -18,7 +18,7 @@
  */
 package com.axelor.demo;
 
-import com.axelor.contact.db.Contact;
+//import com.axelor.contact.db.Contact;
 import com.axelor.event.Observes;
 import com.axelor.events.PostAction;
 import com.axelor.events.PostLogin;
@@ -60,10 +60,10 @@ public class DemoEventLogger {
     log.trace("ON SAVE ALL: {}", event.getRequest().getBeanClass());
   }
 
-  public void onSaveContact(
-      @Observes @Named(RequestEvent.SAVE) @EntityType(Contact.class) PreRequest event) {
-    log.trace("ON SAVE CONTACT: {}", event.getRequest().getBeanClass());
-  }
+//  public void onSaveContact(
+//      @Observes @Named(RequestEvent.SAVE) @EntityType(Contact.class) PreRequest event) {
+//    log.trace("ON SAVE CONTACT: {}", event.getRequest().getBeanClass());
+//  }
 
   public void onPreRequest(@Observes PreRequest event) {
     log.trace("PRE REQUEST: {} -> {}", event.getSource(), event.getRequest().getModel());

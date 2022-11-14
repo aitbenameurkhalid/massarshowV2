@@ -19,8 +19,8 @@
 package com.axelor.demo;
 
 import com.axelor.db.JpaSequence;
-import com.axelor.sale.db.Order;
-import com.axelor.sale.service.SaleOrderService;
+//import com.axelor.sale.db.Order;
+//import com.axelor.sale.service.SaleOrderService;
 import java.lang.invoke.MethodHandles;
 import java.util.Map;
 import javax.inject.Inject;
@@ -33,20 +33,20 @@ public class Validators {
   private static final Logger logger =
       LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
 
-  @Inject private SaleOrderService service;
-
-  @SuppressWarnings("rawtypes")
-  public Object validateSaleOrder(Object bean, Map context) {
-    Order so = (Order) bean;
-
-    try {
-      service.validate(so);
-    } catch (ValidationException e) {
-      logger.error("Validation error on SO '{}': {}", so.getName(), e.getMessage());
-    }
-    service.calculate(so);
-    JpaSequence.nextValue("sale.order.seq");
-
-    return so;
-  }
+//  @Inject private SaleOrderService service;
+//
+//  @SuppressWarnings("rawtypes")
+//  public Object validateSaleOrder(Object bean, Map context) {
+//    Order so = (Order) bean;
+//
+//    try {
+//      service.validate(so);
+//    } catch (ValidationException e) {
+//      logger.error("Validation error on SO '{}': {}", so.getName(), e.getMessage());
+//    }
+//    service.calculate(so);
+//    JpaSequence.nextValue("sale.order.seq");
+//
+//    return so;
+//  }
 }

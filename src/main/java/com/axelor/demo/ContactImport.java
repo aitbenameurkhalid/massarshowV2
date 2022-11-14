@@ -18,7 +18,7 @@
  */
 package com.axelor.demo;
 
-import com.axelor.contact.db.Contact;
+//import com.axelor.contact.db.Contact;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -28,37 +28,37 @@ import java.util.Map;
 public class ContactImport {
 
   private static final String CONTACT_IMAGES_DIR = "contact_images";
-
-  public Object importContact(Object bean, Map context) {
-    Contact contact = (Contact) bean;
-
-    final Path path = (Path) context.get("__path__");
-
-    try {
-      final Path image =
-          ImportUtils.findByFileName(
-              path.resolve(CONTACT_IMAGES_DIR),
-              String.join("-", contact.getFirstName(), contact.getLastName()));
-      if (image != null && image.toFile().exists()) {
-        contact.setImage(readFileToBytes(image));
-      }
-    } catch (Exception e) {
-      // ignore
-    }
-
-    return contact;
-  }
-
-  @SuppressWarnings("ResultOfMethodCallIgnored")
-  private byte[] readFileToBytes(Path path) throws IOException {
-
-    File file = path.toFile();
-    byte[] bytes = new byte[(int) file.length()];
-
-    try (FileInputStream fis = new FileInputStream(file)) {
-      fis.read(bytes);
-    }
-
-    return bytes;
-  }
+//
+//  public Object importContact(Object bean, Map context) {
+//    Contact contact = (Contact) bean;
+//
+//    final Path path = (Path) context.get("__path__");
+//
+//    try {
+//      final Path image =
+//          ImportUtils.findByFileName(
+//              path.resolve(CONTACT_IMAGES_DIR),
+//              String.join("-", contact.getFirstName(), contact.getLastName()));
+//      if (image != null && image.toFile().exists()) {
+//        contact.setImage(readFileToBytes(image));
+//      }
+//    } catch (Exception e) {
+//      // ignore
+//    }
+//
+//    return contact;
+//  }
+//
+//  @SuppressWarnings("ResultOfMethodCallIgnored")
+//  private byte[] readFileToBytes(Path path) throws IOException {
+//
+//    File file = path.toFile();
+//    byte[] bytes = new byte[(int) file.length()];
+//
+//    try (FileInputStream fis = new FileInputStream(file)) {
+//      fis.read(bytes);
+//    }
+//
+//    return bytes;
+//  }
 }

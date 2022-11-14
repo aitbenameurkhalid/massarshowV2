@@ -43,11 +43,11 @@ dependencyResolutionManagement {
 
 rootProject.name = 'massarshow'
 
-include 'modules:demo-contact'
-include 'modules:demo-sale'
-include 'modules:demo-project'
-include 'modules:demo-custom'
-include 'modules:demo-data'
+//include 'modules:demo-contact'
+//include 'modules:demo-sale'
+//include 'modules:demo-project'
+//include 'modules:demo-custom'
+//include 'modules:demo-data'
 
 include "modules:hakibati-setting"
 include "modules:hakibati-svg-examen"
