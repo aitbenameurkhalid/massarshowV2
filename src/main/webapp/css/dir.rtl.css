@@ -1,0 +1,976 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+*:not(i){
+  font-family: "Cairo" !important;
+}
+.header .navbar .brand-logo {
+    float: right;
+  border-right: none;
+}
+
+.header .nav-menu-bar li.empty > a,
+.header .navbar .nav-shortcuts > li > a {
+  padding: 9px 2px 10px 5px;
+}
+
+.header .navbar .nav-shortcuts > .divider-vertical {
+  margin-right:4px;
+  margin-top: 0px;
+}
+
+.header .navbar .nav-shortcuts .nav-link-tasks .badge {
+    left: -3px;
+}
+
+#offcanvas-toggle {
+    margin-right: 4px;
+}
+
+#sidebar{
+  float: right;
+  border-right: none;
+}
+
+#offcanvas.hidden-menu {
+  right: -250px;
+}
+
+#view-tabs {
+  right: 250px;
+  left: 0px;
+}
+
+@media screen and (min-width: 169px) {
+  #offcanvas:not(.hidden-menu) {
+    right: 0;
+  }
+  #offcanvas.inactive {
+    right: -250px;
+  }
+  #offcanvas.active {
+    right:-250px;
+  }}
+
+@media screen and (max-width: 768px) {
+  #offcanvas {
+    right: -250px !important;
+  }
+
+  #offcanvas.active {
+    right : 0 !important;
+  }
+}
+
+.navigation-tabs ul.nav-tabs-main {
+  right: 0px !important;
+}
+
+.navigation-tabs > .nav-tabs-wrap li.dirty a:before,
+.navigation-tabs > .nav-tabs li.dirty a:before {
+  margin-left: 2px;
+}
+
+.navigation-tabs > .nav-tabs-wrap li.notclosable a {
+  padding-left: 12px;
+}
+
+/*.grid-view.has-details-view > .slickgrid {*/
+/*  left: 50%;*/
+/*  border-left: 1px solid #ddd;*/
+/*}*/
+
+/*.grid-view > .details-view {*/
+/*  top: 40px; right: 50%; left: 0px; bottom: 0px;*/
+/*}*/
+
+.record-toolbar .view-title {
+  padding-right: 8px;
+}
+
+.record-toolbar .dropdown a.dropdown-toggle {
+  padding: 4px 8px 4px;
+  padding-right: 8px;
+  padding-left: inherit;
+}
+
+.record-toolbar-right {
+  left: 6px;
+  right:unset;
+}
+
+
+@media (max-width: 767px) {
+  .view-toolbar-mobile > li > .dropdown-menu,
+  .view-menubar-mobile > li > .dropdown-menu {
+    right: auto;
+    left: 0;
+  }
+  .view-toolbar-mobile > li > .dropdown-menu:before,
+  .view-menubar-mobile > li > .dropdown-menu:before {
+    right: auto !important;
+    left: 12px;
+  }
+  .view-toolbar-mobile > li > .dropdown-menu:after,
+  .view-menubar-mobile > li > .dropdown-menu:after {
+    right: auto !important;
+    left: 13px;
+  }
+}
+
+
+.record-pager-change {
+  margin-left: 4px;
+  margin-left:inherit;
+}
+
+.stackbar .navbar .navbar-inner .brand {
+  margin: 0;
+  margin-left: -10px;
+}
+
+.nav-tabs > li > a > i.prefix-icon {
+  margin-left: 2px;
+  margin-right: 0px;
+}
+
+.record-toolbar .button-menu a.btn {
+  padding: 4px 8px;
+}
+
+.record-toolbar .button-menu a.btn {
+  border-left-width: 0;
+}
+
+.record-toolbar .button-menu:last-child a.btn {
+  border-left-width: 1px;
+  border-right-width: 0px;
+}
+
+.system-page dt {
+  text-align: right;
+}
+
+.view-tabs-single .navigation-tabs > .nav-tabs > li > i {
+    float: left;
+}
+
+.nav-tree li > a > .nav-image,
+.nav-tree li > a > .nav-icon {
+    margin-left: 6px;
+  margin-right: 0px;
+    float: right;
+}
+
+.nav-tree > li.open {
+  border-right: 4px solid #0275d8;
+  border-left:none !important;
+}
+
+.nav-tree li.folder > a::after {
+  content: "\f053";
+  left: 16px;
+  right: unset;
+    border-left: 0;
+}
+
+.nav-tree li > a > .nav-label {
+  margin-right: 25px;
+}
+
+/* 2nd level */
+.nav-tree > li > ul > li > a {
+  padding-right: 32px;
+}
+
+/* 3rd level */
+.nav-tree > li > ul > li > ul > li > a {
+  padding-right: 52px;
+}
+
+/* 4th level and beyond */
+.nav-tree > li > ul > li > ul > li > ul li > a {
+  padding-right: 62px;
+}
+
+/* from slickgrid.css */
+.slickgrid .slick-header-columns {
+  right: 0px !important;;
+  left:-1000px !important;;
+}
+
+.slick-headerrow-column {
+  border: none !important;
+  border-left: 1px solid #ddd !important;
+}
+
+[dir=rtl] .slick-header-column {
+ float:right;
+ right: 0px !important;
+  max-width: 800px;
+}
+
+.slickgrid .slick-header-column:first-child {
+    border-right: none;
+}
+
+[dir=rtl] .slick-headerrow-column,
+[dir=rtl] .slick-cell{
+ float: right;
+  /*right: 0px !important;*/
+  /*left: unset !important;*/
+  /*position: relative;*/
+}
+
+[dir=rtl] .slick-headerrow i.combo-icon {
+  left: 6px;
+  right:unset;
+}
+
+.slick-sort-indicator {
+  margin-right: 0px;
+  float:right;
+  position: absolute;
+  right: 4px;
+  top: 7px;
+}
+
+.slick-header-menubutton{
+  left:0;
+  right: unset;
+  border-right: thin ridge silver;
+   border-left: none;
+}
+
+[dir=rtl] [ui-slick-editors] {
+  right: 0px !important;
+  padding-right: 30px !important;
+  padding-left:unset !important;
+}
+
+.slickgrid .slick-header-column:last-child {
+  border-left: 1px solid #ddd;
+  border-right-color:#ddd;
+}
+
+/* tabs.css */
+.nav-tabs-strip .nav-tabs {
+  width: auto;
+}
+
+.nav-tabs-closable li > a {
+  padding-left: 18px;
+  padding-right: 8px;
+}
+
+.nav-tabs-closable li > i {
+  left: 6px;
+  right: unset;
+}
+
+/* view.dms.css */
+.dms-file-list .dms-folder-tree {
+  right: 0;
+  border-left: 1px solid #d3d3d3;
+}
+
+.dms-file-list .dms-details {
+  left: -1px;
+}
+
+.dms-file-list .dms-details.ng-hide {
+  left: -261px;
+}
+
+.dms-file-list .dms-details > .panel-body {
+  left: 0;
+  right: 0;
+}
+
+.dms-file-list .dms-details .tags > .label {
+  float: right;
+  margin-left: 5px;
+}
+
+.dms-file-list .dms-details .tags a {
+  float: right;
+  margin-left: 5px;
+}
+
+.dms-file-list > .slickgrid {
+  right: 250px;
+  left:unset;
+}
+
+.dms-file-list.has-no-tree .dms-folder-tree {
+  right: -251px;
+}
+
+.dms-file-list.has-no-tree > .slickgrid {
+  right: 0 !important;
+}
+
+.dms-file-upload .upload-dropzone {
+  right: calc(50% - 125px);
+}
+
+.dms-file-upload .upload-list-item > div {
+  float: right;
+  text-align: left;
+}
+
+.dms-folder-tree li > a span.highlight {
+  right: 0;
+}
+
+.dms-folder-tree li.dms-tree-more > a > span.title {
+  padding-right: 20px;
+}
+
+.grid-dnd-proxy .badge {
+  right: calc(100% - 6px);
+}
+
+.dms-permission-popup [x-field="user"] input,
+.dms-permission-popup [x-field="group"] input {
+  border-left: none;
+}
+
+.dms-folder-tree i.fa-folder {
+    margin-left: 4px;
+}
+
+/* view.form.checkbox.css */
+.ibox .box {
+  float: right;
+}
+
+.ibox input {
+  margin-right: -14px !important;
+}
+
+.ibox .title {
+
+}
+
+ibox input:checked + .box::after {
+    border: 2px solid #fff;
+        border-top-color: rgb(255, 255, 255);
+        border-top-style: solid;
+        border-top-width: 2px;
+        border-right-color: rgb(255, 255, 255);
+        border-right-style: solid;
+        border-right-width: 2px;
+        border-left-color: rgb(255, 255, 255);
+        border-left-style: solid;
+        border-left-width: 2px;
+    border-top: 0;
+    border-right: 0;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.iswitch input:checked + .box:before {
+    left: 5px;
+    right: 50%;
+}
+
+.iswitch input:checked + .box:after {
+    margin-right: 16px
+}
+
+.iswitch .box:after {
+    transition: margin-right .3s
+}
+
+.form-item-container > .ibox,
+.form-item-container > .iswitch {
+  float: right;
+}
+
+
+/* view.form.css */
+.picker-input > .picker-icons {
+  right: unset !important;
+  left: 0px;
+}
+
+.picker-icons-3 > input {
+  padding-left: 54px !important;
+  padding-right: unset !important;
+}
+
+.picker-icons-4 > input {
+  padding-left: 72px !important;
+}
+
+.picker-input > input, .picker-icons-1 > input {
+    padding-left: 18px !important;
+  padding-right: unset !important;
+}
+
+.form-item ul.radio-select > li,
+.form-item ul.checkbox-select > li,
+.form-item-container ul.boolean-radio > li {
+  float: right;
+}
+
+.subtotal {
+  float: left;
+}
+
+.nav-select li.nav-step {
+  float: left;
+}
+
+.nav-select li.dropdown a.nav-label > span {
+  float: right;
+}
+
+.tag-select li,
+.tag-select .label {
+  float: right;
+}
+
+/* view.form.panels.css */
+.bar-side {
+  margin-left: unset;
+  margin-right: 14px;
+}
+
+.panel .panel-header .panel-icon {
+  margin-right: unset;
+    margin-left: 8px;
+}
+
+.panel .panel-header .panel-image {
+  margin-right: unset;
+    margin-left: 8px;
+}
+
+.panel .panel-header .panel-icons {
+  margin-right: unset;
+  margin-right: 4px;
+}
+
+.panel .panel-header .dropdown-menu {
+  right: inherit;
+  left: 0;
+}
+
+.panel .row-fluid > .form-item-hidden:first-child + .form-item {
+  margin-right: 0;
+}
+
+.panel-layout .form-item-container.readonly > a,
+.panel-layout .form-item-container.readonly > input,
+.panel-layout .form-item-container.readonly > span.display-text {
+  padding-right: 0;
+}
+
+.panel-layout .form-item-container.editable input[type="text"],
+.panel-layout .form-item-container.editable input[type="password"],
+.panel-layout .form-item-container.editable input[type="number"],
+.panel-layout .form-item-container.editable input[type="email"],
+.panel-layout .form-item-container.editable input[type="url"],
+.panel-layout .form-item-container.editable input[type="tel"],
+.panel-layout .form-item-container.editable .tag-select {
+  padding-right: 0;
+}
+
+.panel-layout .slick-editor .form-item-container.editable input[type="text"],
+.panel-layout .slick-editor .form-item-container.editable input[type="password"],
+.panel-layout .slick-editor .form-item-container.editable input[type="number"],
+.panel-layout .slick-editor .form-item-container.editable input[type="email"],
+.panel-layout .slick-editor .form-item-container.editable input[type="url"],
+.panel-layout .slick-editor .form-item-container.editable .tag-select {
+  border-right-width: 1px;
+  border-left-width: 1px;
+  padding-right: 6px;
+}
+.panel-layout .slick-editor .form-item-container.editable .tag-select {
+  padding-right: 0;
+}
+
+.bar-layout .portlet-header .divider-vertical {
+  border-right: 1px solid #D3D3D3;
+}
+
+.panel-layout .m2o-editor-controls {
+  left: 0;
+  right:unset;
+}
+
+.address-list .o2m-list-row {
+  width: 48.71%;
+  float: right;
+  margin-right: 0;
+  margin-left:unset;
+}
+
+.address-list .o2m-list-add {
+  width: 100%;
+  margin-right: 0;
+  margin-left:unset;
+}
+.address-list .o2m-list-row.even {
+  margin-right: 2.56%;
+  margin-left:unset;
+}
+
+@media (max-width: 767px) {
+  .address-list .o2m-list-row {
+    margin-right: 0 !important;
+    margin-left: unset !important;
+  }
+}
+
+.panel-layout .order-subtotal dl {
+  float: left;
+}
+
+.panel-layout .order-subtotal dt {
+  padding-left: 8px;
+  padding-right:unset;
+}
+
+.panel-layout .order-subtotal dd {
+  margin-right: 0;
+  margin-left:unset;
+  text-align: left;
+}
+
+@media (max-width: 767px) {
+  .panel-layout .order-subtotal dt {
+    float: right;
+    text-align: left;
+  }
+}
+
+.help-item:after {
+  font: normal normal normal 14px/1 FontAwesome;
+  margin-right: 6px;
+  margin-left: unset;
+}
+
+.help-item:before {
+  font: normal normal normal 14px/1 FontAwesome;
+  margin-left: 6px;
+  margin-right: unset;
+}
+
+.info-button > i,
+.info-button > img {
+  float: right;
+}
+
+.info-button-data {
+  float: right;
+  padding-right: 8px;
+  padding-left:unset;
+  text-align: right;
+}
+
+/* view.gantt.css */
+.view-container .gantt-view > div:last-child {
+  left: 0px; right: 4px;
+}
+
+.gantt_task_progress{
+  text-align:right;
+  padding-right:10px;
+  padding-left:unset;
+}
+
+.kanban-column .input-group .input-group-btn > .btn {
+  margin-right: -1px;
+  margin-left: unset;
+}
+
+.kanban-card img {
+  left: 2px;
+  right:unset;
+}
+
+.kanban-card-menu {
+  left: 2px;
+  right: unset;
+}
+
+/* view.mail.css */
+.mail-thread {
+  margin-right: 20px;
+  margin-left: unset;
+  border-right: 2px solid #ddd;
+  border-left: unset;
+}
+
+.mail-composer .btn {
+  margin-left: 8px;
+  margin-right:unset;
+}
+
+.mail-files i {
+  margin-left: 4px;
+  margin-right: unset;
+}
+
+.mail-thread .avatar {
+  margin-right: -21px;
+  margin-left: unset;
+}
+
+.mail-thread .mail-message-indent {
+  padding-right: 40px;
+  padding-left: unset;
+}
+
+.mail-thread .mail-message {
+  margin-right: 30px;
+  margin-left: unset;
+}
+
+.mail-thread .mail-message > .arrow {
+  right: -7px;
+  left: unset;
+  border-left: 0;
+  border-right: unset;
+  -webkit-transform: rotate(45deg);
+     -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.mail-thread .mail-message > .star {
+  right: 8px;
+  left: unset;
+}
+
+.mail-thread .mail-message-icons {
+  float: left;
+}
+
+.mail-thread .mail-message-icons i {
+  margin-right: 4px;
+  margin-left: unset;
+}
+
+.mail-thread-more {
+  margin-right: -2px;
+  margin-left: unset;
+  border-right: 2px solid #fff;
+  border-left: unset;
+}
+
+.mail-thread-view .mail-thread-more {
+  border-right: 2px solid #f3f3f4;
+  border-left: unset;
+}
+
+.mail-followers .panel-icons i {
+  margin-right: 8px;
+  margin-left: unset;
+}
+
+.mail-followers .links i.fa-remove {
+  margin-left: 4px;
+  margin-right: unset;
+}
+
+
+.mail-message .track-tags .label {
+  margin-left: 2px;
+  margin-right: unset;
+}
+
+.grid-cards .grid-card-right {
+  margin-right: 4px;
+  margin-left: unset;
+}
+
+/* view.popup.css */
+.ui-dialog .ui-dialog-title {
+    float: right;
+}
+
+.btn-group .btn[ng-click="onPrev()"]{
+  float:left;
+}
+
+.ui-dialog .ui-dialog-titlebar-close {
+  left: .5em;
+  right: unset;
+}
+
+.ui-dialog .ui-dialog-titlebar-close .ui-icon {
+  float: left;
+}
+
+.ui-dialog .ui-dialog-titlebar-max,
+.ui-dialog .ui-dialog-titlebar-collapse {
+  left: 1.6em;
+  right: unset;
+}
+
+.ui-dialog .ui-dialog-titlebar-collapse {
+    left: 2.6em;
+}
+
+.ui-dialog-buttonpane .btn-group > .btn:first-child {
+  margin-right: 0;
+}
+
+.ui-dialog-buttonpane .btn-group > .btn:last-child {
+  margin-right: -1px;
+}
+
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset-right button {
+  margin-right: 0.4em;
+  margin-left: unset;
+}
+
+.ui-dialog-titlebar .record-pager {
+  left: 76px;
+  right: unset;
+}
+
+@media screen and (max-width: 768px) {
+  .ui-dialog {
+    right: 0 !important;
+  left: unset !important;
+  }
+}
+
+.ui-dialog.maximized {
+  right: 0 !important;
+  left: unset !important;
+}
+
+.ui-dialog .translation-form i.fa-times {
+  margin-left: -12px;
+  margin-right: unset;
+  float: left;
+}
+
+.ui-dialog .translation-form i.fa-plus {
+  margin-left: 4px;
+  margin-right: unset;
+}
+.ui-dialog .translation-form form {
+  margin-left: 8px;
+  margin-right: 0px;
+}
+.ui-dialog .translation-form form label {
+  margin-right: 6px;
+  margin-left: unset;
+}
+.ui-dialog .translation-form form input {
+  margin-right: 6px;
+  margin-left: unset;
+}
+
+/* view.portal.css */
+.portal > .portal-tabs,
+.portal > .portlet {
+  float: right;
+}
+
+.dashboard .dashlet-pager {
+  margin-left: 8px;
+  margin-right: unset;
+}
+
+.dashboard ul.dashlet-buttons > li {
+  float: right;
+}
+
+.dashboard .dashlet-buttons > a,
+.dashboard .dashlet-pager > a {
+  padding-right: 8px;
+  padding-left: unset;
+}
+
+[class*="dashlet-cs"] {
+  float: right;
+}
+
+.chart-controls .span6 {
+  float: right !important;
+}
+
+.chart-controls .span6:first-child {
+  margin-right: 0 !important;
+  margin-left: unset;
+}
+
+.chart-controls .span6:last-child {
+  margin-left: 0 !important;
+  margin-right: unset;
+}
+
+.report-box .report-tags {
+    left: 36px;
+  right: unset;
+}
+
+/* view.tree.css */
+table.treetable .tree-button i,
+table.treetable .tree-button img {
+  margin-right: 4px;
+  margin-left: unset;
+}
+
+.tree-view-container .tree-header th {
+  padding-left: 4px;
+  padding-right: 6px;
+  border-right: 1px solid #e7e7e7;
+  border-left: unset;
+  text-align: right;
+}
+
+.tree-view-container .tree-header th:first-of-type {
+  border-right: none;
+}
+
+/* wysiwyg.css */
+/** normalize bootstrap css for content */
+.html-item .html-content blockquote {
+  margin: 0 40px 9px 0px;
+}
+
+/** force same style on chrome */
+.html-item .html-content blockquote[style*='margin: 0 0 0 40px'] {
+  margin: 0 40px 9px 0px !important;
+}
+
+.pull-left{
+  float:right !important;
+}
+
+.pull-right{
+  float: left !important;
+}
+
+.picker-icons-2 > input {
+  padding-left: unset !important;
+  padding-right: unset !important;
+}
+
+.kanban-card.danger {
+    border-right: 3px solid #d9534f;
+   border-left: 1px solid #e7eaec;
+}
+
+.kanban-card.primary {
+  border-right: 3px solid #428bca;
+  border-left: 1px solid #e7eaec;
+}
+
+.kanban-card.warning {
+  border-right: 3px solid #f0ad4e;
+  border-left: 1px solid #e7eaec;
+}
+
+.kanban-card.info {
+  border-right: 3px solid #5bc0de;
+  border-left: 1px solid #e7eaec;
+}
+
+.kanban-card.success {
+  border-right: 3px solid #5cb85c;
+  border-left: 1px solid #e7eaec;
+}
+
+.notify-stack{
+  left:10px !important;
+  right:unset !important;;
+}
+
+.ui-spinner-button {
+    right: unset;
+  left:0;
+}
+
+input.hasDatepicker,
+input.ui-mask{
+  direction: ltr;
+  text-align: right;
+}
+
+.panel-related .panel-header .icons-bar > a,
+.one2many-item .navbar .icons-bar > a,
+.many2many-item .navbar .icons-bar > a {
+  float:right;
+}
+
+.nav-select a.nav-label::after {
+    transform: scale(-0.72) rotate(45deg);
+    left: -16px;
+    right:unset;
+}
+
+.nav-select a.nav-label {
+    padding: 0 32px 0 16px;
+}
+
+.nav-select li.nav-step:first-child a.nav-label {
+    padding-right: 18px;
+}
+
+.form-item-container > .translate-icon {
+    right: unset;
+    left:0;
+}
+
+.tag-select ul {
+    margin-right: unset;
+    margin-left: 16px;
+}
+
+.slickgrid, .slickgrid * {
+
+    box-sizing: border-box;
+
+}
+#offcanvas.inactive #view-tabs {
+  right: 0px !important;
+  position: fixed;
+}
+/* on hover */
+#offcanvas #sidebar:hover{
+  min-width: 249px;
+  max-width: 249px;
+  position: absolute;
+  z-index: 2;
+}
+#offcanvas:hover{
+  right:0px;
+}
+#offcanvas .nav-tree li.folder > a::after:hover {
+  display:inline-block;
+}
+#offcanvas .nav-tree li > a .nav-title{
+  max-width: 250px;
+  min-width: 250px;
+}
+#offcanvas #view-tabs {
+  left : 0px !important;
+  right: 48px !important;
+  position: fixed;
+}
+.nav-icon.ng-scope{
+  padding-left: 5px;
+}
+.nav-tree li > a > .nav-label{
+  margin-right: 38px;
+}
+.nav-tree ul li > a > .nav-image, .nav-tree ul li > a > .nav-icon{
+  margin-right: 0px;
+  margin-left: 4px;
+}
+.nav-tree > li > ul > li > a{
+  padding-right: 41px;
+}
+.nav-tree ul li > a > .nav-icon{
+  padding-right: 13px!important;
+}

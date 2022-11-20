@@ -45,11 +45,13 @@ dependencies {
   implementation project(":modules:hakibati-setting")
   implementation project(":modules:hakibati-svg-examen")
   implementation project(":modules:hakibati-gestion-eleves")
-
+//
   implementation project(":modules:hakibati-etab-inventaire")
-  implementation project(":modules:hakibati-eau-electricite")
+//  implementation project(":modules:hakibati-eau-electricite")
+
   implementation project(":modules:hakibati-ass-enajah")
   implementation project(":modules:hakibati-comptabilite-matier")
+
   implementation project(":modules:hakibati-emploi-temps")
   implementation project(":modules:hakibati-centre-langue")
   implementation project(":modules:hakibati-ressource-humaine")
@@ -57,7 +59,7 @@ dependencies {
 }
 
 war {
-  archiveFileName = 'open-platform-demo.war'
+  archiveFileName = 'ROOT.war'
 }
 
 apply from: 'gradle/style.gradle'
