@@ -23,6 +23,7 @@ public class ExternalReportSettings extends ReportSettings {
     super(rptdesign, outputName);
 
     this.addAxelorReportPath(rptdesign).addParam("__locale", AppFilter.getLocale().toString());
+//    this.addAxelorReportPath(rptdesign).addParam("__locale", "fr");
   }
 
   @Override
