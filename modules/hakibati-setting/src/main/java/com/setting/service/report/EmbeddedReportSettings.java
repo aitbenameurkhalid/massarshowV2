@@ -4,6 +4,8 @@ import com.axelor.app.internal.AppFilter;
 import com.axelor.inject.Beans;
 import com.axelor.report.ReportGenerator;
 import java.io.IOException;
+import java.util.Locale;
+
 import org.eclipse.birt.core.exception.BirtException;
 
 public class EmbeddedReportSettings extends ReportSettings {
@@ -22,7 +24,8 @@ public class EmbeddedReportSettings extends ReportSettings {
 
       final ReportGenerator generator = Beans.get(ReportGenerator.class);
 
-      this.output = generator.generate(rptdesign, format, params, AppFilter.getLocale());
+//      this.output = generator.generate(rptdesign, format, params, AppFilter.getLocale());
+      this.output = generator.generate(rptdesign, format, params, Locale.FRANCE);
 
       this.attach();
 
